@@ -1,0 +1,15 @@
+/Archived/
+/Data_Preparation/Elsevier_Attacks/config.json
+/Data_Preparation/Elsevier_PTs/config.json
+/Data_Preparation/Elsevier_PTs/exampleProg.py
+/Data_Preparation/Elsevier_Attacks/dump.json
+/Data_Preparation/Elsevier_Attacks/geckodriver.log
+/Data_Preparation/Elsevier_PTs/geckodriver.log
+/Data_Preparation/Elsevier_PTs/dump.json
+/Data_Preparation/cookies.py
+/Data_Preparation/scopus_cookies.pkl
+/geckodriver.log
+/Multi-Agent/rag_storage
+/Multi-Agent/lightrag.log
+/Multi-Agent/prompts_kor.py
+/Multi-Agent/test_environment.py
