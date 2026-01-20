@@ -21,18 +21,3 @@ The directory **Comparative_Evaluation** contains experiments for evaluating the
 
 ## Multi-Agent Cybersecurity Analysis
 The **Multi-Agent** directory contains a multi-agent collaborative framework based on B-MTGNN model prediction data. Six agents—Attacker, Defender, Mediator, Technical Expert, Regional Expert, and Finance-Business Expert—collaborate to develop comprehensive cybersecurity strategies. Built on LangGraph, it integrates RAG technology to leverage the latest cybersecurity knowledge and prediction data. It operates through a 4-phase process: data loading, collaborative discussion, expert analysis, and final report generation. For more information, please refer to the README file in the corresponding directory.
-
-## Citation
-```
-@article{ALMAHMOUD2025123836,
-title = {Forecasting Cyber Threats and Pertinent Mitigation Technologies},
-journal = {Technological Forecasting and Social Change},
-volume = {210},
-pages = {123836},
-year = {2025},
-issn = {0040-1625},
-doi = {https://doi.org/10.1016/j.techfore.2024.123836},
-url = {https://www.sciencedirect.com/science/article/pii/S0040162524006346},
-author = {Zaid Almahmoud and Paul D. Yoo and Ernesto Damiani and Kim-Kwang Raymond Choo and Chan Yeob Yeun}
-}
-```
