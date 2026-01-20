@@ -49,7 +49,6 @@ Implementation of 6 agents:
 #### 6. Prompt Management (`prompts.py`)
 - Specialized prompt definition for each agent
 - Role-based behavior guidelines and output format specification
-- Multi-language support (English/Korean)
 
 ## Operation Process
 
