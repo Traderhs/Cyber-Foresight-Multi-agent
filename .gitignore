@@ -13,3 +13,5 @@
 /Multi-Agent/lightrag.log
 /Multi-Agent/prompts_kor.py
 /Multi-Agent/test_environment.py
+/.idea/
+/.jbeval/
