@@ -34,7 +34,7 @@ async def get_rag_context(query_text):
 def load_data_node(state: AgentState) -> AgentState:
     """Data Load Node - Load core threat data from TXT file"""
     cti_list = cyber_rag.cti_list
-    data_dir = "./data"
+    data_dir = "../B-MTGNN/model/Bayesian/forecast/data/"
     for filename in cti_list:
         cti_name = filename.replace('-ALL.txt', '')
         filepath = os.path.join(data_dir, filename)
@@ -67,7 +67,6 @@ async def attacker_node(state: AgentState) -> AgentState:
     llm = get_llm()
     iteration_count = state["iteration_count"]
 
-    # RAG-based attack trend search - Fixed asyncio.run() issue
     rag_context = ""
     try:
         # Simply await the async function directly

@@ -18,26 +18,24 @@ async def main():  # Changed to async
     result = {"messages": []}
 
     log_dir = "./Log"
-    result_dir = "./Report"
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
         print("-Create Log Directory.")
-    if not os.path.exists(result_dir):
-        os.makedirs(result_dir)
-        print("-Create Report Directory.")
         
     print("Successfully Run Ready")
 
     try:
-        # Initialize RAG system (NEW!)
+        # Initialize RAG system
         print("Initializing RAG system...")
         await cyber_rag.initialize()
         await cyber_rag.load_cyber_data()
 
-        #forecast_data = await cyber_rag.get_forecast_data() # Calling forecast_data in RAG. Working on LLM.
-        with open("./data/DDoS-ALL.txt", 'r', encoding='utf-8') as f:
+        cti_list = cyber_rag.cti_list
+        # forecast_data = await cyber_rag.get_forecast_data()
+        # Calling forecast_data in RAG. Working on LLM.
+        with open("../B-MTGNN/model/Bayesian/forecast/data/",cti_list, 'r', encoding='utf-8') as f:
             cti_data = f.read().strip()
-        print("RAG system ready!")
+        print("RAG system ready.")
 
         # Execute existing Agent workflow
         app = create_graph()
@@ -81,7 +79,7 @@ async def main():  # Changed to async
         print(f"Total run time: {minutes}min {seconds:.2f}sec")
 
     finally:
-        # Clean up RAG (NEW!)
+        # Clean up RAG
         if cyber_rag.rag:
             await cyber_rag.finalize()
 

@@ -12,9 +12,9 @@ class CyberRAG:
         self.rag = None
         self.working_dir = "./rag_storage"
         self.cti_list = [
+#           "Ransomware-ALL.txt",
+#           "Malware-ALL.txt",
             "DDoS-ALL.txt"
-#            "Ransomware-ALL.txt"
-#            "Malware-ALL.txt"
         ]
 
     async def initialize(self):
@@ -33,7 +33,7 @@ class CyberRAG:
 
     async def load_cyber_data(self):
         """Load exchange rate prediction data"""
-        data_dir = "./data"
+        data_dir = "../B-MTGNN/model/Bayesian/forecast/data"
         cti_list = self.cti_list
 
         # Process data
