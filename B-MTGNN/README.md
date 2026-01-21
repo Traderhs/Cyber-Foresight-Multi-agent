@@ -15,9 +15,9 @@ The file **smoothing.py** performs double exponential smoothing on the data (**d
 ## Hyper-parameter Optimisation
 The hyper-parameter optimisation is performed in the file **train_test.py**. This script performs random search to produce the optimal set of hyper-parameters. These hyper-parameters are finally saved as an output in the file called **hp.txt**, which is in the directory **model/Bayesian**. The output also includes validation and testing results when using the optimal set of hyper-parameters. These results include plots for the predicted curves against the actual curves. These are saved in the directories called **Validation** and **Testing** within the directory **model/Bayesian**. For the evaluation, 2 metrics are used namely the Root Relative Squared Error (RSE) and the Relative Absolute Error (RAE). These metrics are saved in the same directories (Validation and Testing), and the average values of these metrics across 142 nodes are also displayed on the console as a final output. 
 
-Below is an example for the model validation results, where the forecast of the Password Attack node is validated. The Relative Absolute Error (RAE) is 0.37.
+Below is an example for the model validation results, where the forecast of the Malware node is validated. The Relative Absolute Error (RAE) is 0.46.
 <p align="center">
-<a href="url"><img src="./model/Bayesian/Validation/Password Attack_Validation.png" align="centre"  width="600"   ></a>
+<a href="url"><img src="./model/Bayesian/Validation/Malware_Validation.png" align="centre"  width="600"></a>
 </p>
 
 
@@ -30,8 +30,8 @@ The script in the file **forecast.py** uses the operational model **o_model.pt**
 
 Additionally, the script in the file **pt_plots.py** produces plots for the past and future data of each pertinent technology separately, which can be useful for the purpose of visualisation and producing a unified trend cycle. These plots are saved in the directory **model/Bayesian/forecast/pt_plots**.
 
-Below is an example for the past and predicted future data for the Password Attack and its pertinent technologies, with the gaps highlighted in distinct colours.
+Below is an example for the past and predicted future data for the Malware and its pertinent technologies, with the gaps highlighted in distinct colours.
 
 <p align="center">
-<a href="url"><img src="./model/Bayesian/forecast/plots/Password_Attack.png" align="centre"  width="600"   ></a>
+<a href="url"><img src="./model/Bayesian/forecast/plots/Malware.png" align="centre"  width="600"></a>
 </p>
