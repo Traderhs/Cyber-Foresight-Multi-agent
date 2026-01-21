@@ -14,18 +14,18 @@ which extract the feature **NoI**. The script in the file **NoI_daily.py**
 reads [Hackmageddon](https://www.hackmageddon.com/) dataset in the file 
 **Hackmageddon.csv**, and transforms textual Hackmageddon data to numerical 
 format by counting the number of incidents (NoI) for each attack type and for 
-each country. The output is the daily NoI between July 2011 and December 2022. 
+each country. The output is the daily NoI between July 2011 and December 2025. 
 The output is saved to the file **NoI_daily.csv**. The script in the file 
 **NoI_monthly.py** reads the daily NoI in the file **NoI_daily.csv** and 
 transforms it to the monthly NoI. The output is saved to the file 
-**NoI_monthly.csv**.  
+**NoI_monthly.csv**.
 
 ## Elsevier Attacks
 This directory contains the script **A_NoM.py**, which extracts the feature 
 **A_NoM** using Elsevier API. The input to the script is the list of attack 
 types hardcoded at the beginning of the script (please see the script for the 
 detailed format). The output is the monthly mentions of each attack type in 
-Elsevier research abstracts between July 2011 and December 2022. The output is 
+Elsevier research abstracts between July 2011 and June 2025. The output is 
 saved to the file **Attacks_NoM.txt**, where each column in the file corresponds 
 to a single attack type, according to the order provided, and each row 
 corresponds to the month starting from July 2011.
@@ -35,7 +35,7 @@ This directory contains the script **PT_NoM.py**, which extracts the feature
 **PT_NoM** using Elsevier API. The input to the script is the list of PTs 
 hardcoded at the beginning of the script (please see the script for the 
 detailed format). The output is the monthly mentions of each PT in Elsevier 
-research abstracts between July 2011 and December 2022. The output is saved to 
+research abstracts between July 2011 and June 2025. The output is saved to 
 the file **PTs_NoM.txt**, where each column in the file corresponds to a single 
 PT, according to the order provided, and each row corresponds to the month 
 starting from July 2011.
@@ -51,7 +51,7 @@ This directory contains the script **ACA.py**, which extracts the feature
 **ACA** using Twitter API. The script in the file **ACA.py** counts for each 
 country the number of tweets about wars and political conflicts related to 
 that country. The output is the monthly count of these tweets for each country 
-in the period between July 2011 and December 2022. The output is saved to the 
+in the period between July 2011 and January 2025. The output is saved to the 
 file **ACA.csv**. The output dataset is no longer useful for the updated 
 version as Twitter API is not free anymore.
 
@@ -65,7 +65,7 @@ The resultant dataset is used to replace Twitter data.
 This directory contains the script **PH.py**, which extracts the feature **PH** 
 using the Python Holidays package. This script produces the csv file **PH.csv** 
 with the monthly number of public holidays in 36 countries in the period 
-between July 2011 until December 2022. Holidays package version: 0.34.
+between July 2011 until March 2025. Holidays package version: 0.34.
 
 
 ## Notes / Requirements

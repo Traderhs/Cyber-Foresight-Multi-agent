@@ -126,6 +126,6 @@ if __name__ == "__main__":
         all_data.append(country_data)
         print("Added holidays of", country)
 
-    with open("PH_v2.csv", "w", newline="") as f:
+    with open("PH.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(list(map(list, zip(*all_data))))

@@ -424,7 +424,7 @@ for index, row in enumerate(search_results_list):
     data.append(data_list)  
 
     # save data to file
-    file_object = open("PTs_NoM_V2.txt", "a")
+    file_object = open("PTs_NoM.txt", "a")
     for ii, item in enumerate(data_list):
         file_object.write(str(item))
         if ii < len(data_list) - 1:
