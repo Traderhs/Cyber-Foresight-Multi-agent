@@ -1,8 +1,12 @@
 # Cyber trend forecasting
 
-This is a Python implementation of the framework proposed in the paper: "An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies".
+This is a Python implementation of the framework proposed in the paper: **"An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies"**.
 
 This repository contains an end-to-end framework for forecasting the trend of cyber-attacks and pertinent alleviation technologies using graph neural network. This includes data preparation, model development, and future forecast.
+
+<p align="center">
+<img src="./framework.png" width="auto" height="auto" style="object-fit: cover;">
+</p>
 
 ## Dataset
 The full constructed dataset can be found in the directory [**Dataset**](https://github.com/seongilhan/Multi-agent-AI-Framework-cyber-trend-forecasting/tree/main/Dataset). More information about each feature can be found in the same directory.
@@ -19,5 +23,5 @@ The directory [**B-MTGNN**](https://github.com/seongilhan/Multi-agent-AI-Framewo
 ## Comparative Evaluation
 The directory [**Comparative_Evaluation**](https://github.com/seongilhan/Multi-agent-AI-Framework-cyber-trend-forecasting/tree/main/Comparative_Evaluation) contains experiments for evaluating the performance of the B-MTGNN model against the MTGNN model as well as against four baseline models. Performance is assessed using two evaluation metrics: the Root Relative Squared Error (RSE) and the Relative Absolute Error (RAE). The baseline models include ARIMA, VAR, LSTM, and Transformer. For the LSTM and Transformer architectures, the evaluation covers both univariate and multivariate models. The evaluation of the B-MTGNN model includes evaluating five variations of the model. Each variation employs a different number of iterations, ranging from 10 to 50, to approximate the Bayesian model. The evaluation results show that the B-MTGNN model using 30 iterations outperforms all other models. For more information, please refer to the README file in the corresponding directory.
 
-## Multi-Agent Cybersecurity Analysis
+## Multi-Agent AI System 
 The directory [**Multi-Agent**](https://github.com/seongilhan/Multi-agent-AI-Framework-cyber-trend-forecasting/tree/main/Multi-Agent) contains a multi-agent collaborative framework based on B-MTGNN model prediction data. Six agents—Attacker, Defender, Mediator, Technical Expert, Regional Expert, and Finance-Business Expert—collaborate to develop comprehensive cybersecurity strategies. Built on LangGraph, it integrates RAG technology to leverage the latest cybersecurity knowledge and prediction data. It operates through a 4-phase process: data loading, collaborative discussion, expert analysis, and final report generation. For more information, please refer to the README file in the corresponding directory.

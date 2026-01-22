@@ -91,7 +91,7 @@ Technical Agent → Regional Agent → Finance-Business Agent
 
 ## Technology Stack
 
-- **Framework**: LangChain, LangGraph, LightRAG
+- **Agent Framework**: LangChain, LangGraph, LightRAG
 - **Language Model**: Ollama (Llama 3.1 8B)
 - **Programming Language**: Python 3.10+
 - **Asynchronous Processing**: asyncio
@@ -128,23 +128,3 @@ Technical Agent → Regional Agent → Finance-Business Agent
 - **Role**: Chief Financial Officer / Operating Officer
 - **Responsibility**: Financial planning and organizational change management
 - **Output**: ROI analysis and execution strategy
-
-## Research Contributions and Applications
-
-### Academic Contributions
-- Application of multi-agent systems to cybersecurity strategy development
-- Verification of RAG technology's security analysis enhancement effects
-- Proactive security strategy development methodology using prediction data
-
-### Practical Applications
-- Enterprise cybersecurity strategy formulation
-- Security investment priority determination
-- Regulatory compliance strategy development
-- Crisis response planning
-
-## Future Research Directions
-
-- **Scalability Enhancement**: Addition of more agent roles
-- **Real-time Adaptation**: Real-time response to dynamic threat environments
-- **Multi-modal Integration**: Integration of various data sources
-- **Human-AI Collaboration**: Development of collaboration interfaces with security experts

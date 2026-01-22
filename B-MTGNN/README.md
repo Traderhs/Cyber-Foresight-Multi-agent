@@ -29,8 +29,8 @@ These metrics are saved in the same directories (Validation and Testing), and th
 
 Below is an example for the model testing results, where the forecasts of the Malware and DDoS nodes are tested. The Relative Absolute Errors (RAE) are 0.46 for Malware and 0.57 for DDoS.
 <p align="center">
-<img src="./model/Bayesian/Testing/Malware_Testing.png" width="300" height="auto" style="object-fit: cover;">
-<img src="./model/Bayesian/Testing/DDoS_Testing.png" width="300" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/Testing/Malware_Testing.png" width="49.8%" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/Testing/DDoS_Testing.png" width="49.8%" height="auto" style="object-fit: cover;">
 </p>
 
 ###
@@ -55,6 +55,6 @@ These plots are saved in the directory **model/Bayesian/forecast/pt_plots**.
 
 Below is an example for the past and predicted future data for the Malware and DDoS attacks along with their pertinent technologies, with the gaps highlighted in distinct colours.
 <p align="center">
-<img src="./model/Bayesian/forecast/plots/Malware.png" width="317" height="auto" style="object-fit: cover;">
-<img src="./model/Bayesian/forecast/plots/DDoS.png" width="300" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/forecast/plots/Malware.png" width="50.8%" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/forecast/plots/DDoS.png" width="48.1%" height="auto" style="object-fit: cover;">
 </p>
