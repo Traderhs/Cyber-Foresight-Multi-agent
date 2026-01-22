@@ -1,6 +1,12 @@
 # Multi-Agent Cybersecurity Analysis System
 
-This system is a multi-agent collaborative framework for developing cyber threat prediction and response strategies. Based on B-MTGNN model prediction data, attacker, defender, mediator, and expert agents collaborate to establish comprehensive cybersecurity strategies.
+This repository contains a multi-agent collaborative framework for developing cyber threat prediction and response strategies. Six specialized agents collaborate through Retrieval-Augmented Generation (RAG) technology to establish comprehensive cybersecurity strategies. The system operates through a structured 4-phase process: data loading, collaborative discussion, expert analysis, and final report generation.
+
+## Background and Related Work
+
+Cybersecurity strategy development often relies on siloed expert analysis, which may overlook complex interdependencies. Multi-agent systems enable collaborative decision-making, with applications in cybersecurity for balanced threat analysis. Retrieval-Augmented Generation (RAG) enhances knowledge-intensive tasks, which we adapt for real-time cybersecurity insights.
+
+Our framework uniquely combines role-based agent specialization with RAG-enhanced collaborative analysis.
 
 ## System Overview
 
@@ -12,75 +18,50 @@ The Multi-Agent system is a collaborative AI agent network built on LangGraph. E
 - **Role-based Specialization**: Analysis by each agent's specialized field
 - **Dynamic Workflow**: Iterative discussion mechanism for consensus building
 
-## System Architecture
+## Methodology
 
-### Core Components
+### System Architecture
 
-#### 1. Main Execution File (`main.py`)
-- Responsible for system initialization and execution
-- RAG system initialization
-- Log and result storage management
-- Asynchronous execution environment configuration
+#### Core Components
 
-#### 2. Graph Workflow (`graph.py`)
-- Agent interaction definition using LangGraph
-- Node connection and conditional routing setup
-- Maximum iteration count and consensus logic implementation
+1. **Main Execution File (`main.py`)**: Responsible for system initialization and execution, RAG system initialization, prediction data loading, log management, and asynchronous environment configuration.
 
-#### 3. Agent Nodes (`nodes.py`)
-Implementation of 6 agents:
-- **Attacker**: Attack scenario development and vulnerability analysis
-- **Defender**: Defense strategy formulation and mitigation technology application
-- **Mediator**: Discussion mediation and consensus building
-- **Technical Agent**: Technical implementation planning
-- **Regional Agent**: Regional regulatory compliance strategy
-- **Finance-Business Agent**: Financial and business strategy development
+2. **Graph Workflow (`graph.py`)**: Defines agent interactions using LangGraph, including node connections, conditional routing, maximum iteration limits, and consensus logic.
 
-#### 4. State Management (`state.py`)
-- LangGraph state schema definition
-- Data sharing and state tracking between agents
-- Message history and iteration count management
+3. **Agent Nodes (`nodes.py`)**: Implements six specialized agents:
+   - **Attacker**: Develops attack scenarios and analyzes vulnerabilities
+   - **Defender**: Formulates defense strategies and applies mitigation technologies
+   - **Mediator**: Mediates discussions and builds consensus
+   - **Technical Agent**: Plans technical implementations
+   - **Regional Agent**: Develops regional compliance strategies
+   - **Finance-Business Agent**: Analyzes financial and business impacts
 
-#### 5. RAG System (`rag.py`)
-- Knowledge retrieval and augmentation based on LightRAG
-- Storage of cyber threat data and conversation content
-- Support for hybrid search mode
+4. **State Management (`state.py`)**: Defines LangGraph state schema, manages data sharing between agents, and tracks message history and iteration counts.
 
-#### 6. Prompt Management (`prompts.py`)
-- Specialized prompt definition for each agent
-- Role-based behavior guidelines and output format specification
+5. **RAG System (`rag.py`)**: Implements knowledge retrieval and augmentation using [LightRAG](https://github.com/HKUDS/LightRAG), storing cyber threat data and conversation content with hybrid search capabilities.
 
-## Operation Process
+6. **Prompt Management (`prompts.py`)**: Defines role-specific prompts and behavior guidelines for each agent.
 
-### Phase 1: Data Loading and Initialization
-```
-Load Data Node → RAG System Initialization → Prediction Data Loading
-```
+### Operation Process
 
-### Phase 2: Collaborative Discussion
-```
-Attacker → Defender → Mediator
-```
-- Attacker: Analyzes prediction data to develop attack scenarios
-- Defender: Formulates defense strategies against attacks
-- Mediator: Evaluates both strategies and determines consensus
+The system operates through four phases:
 
-### Phase 3: Expert Analysis
-```
-Technical Agent → Regional Agent → Finance-Business Agent
-```
-- Technical Agent: Technical implementation planning from CTO perspective
-- Regional Agent: Regional regulatory compliance strategy
-- Finance-Business Agent: Financial and business strategy from CFO/COO perspective
+#### Phase 1: Data Loading and Initialization
+Load prediction data, initialize RAG system, and configure environment settings.
 
-### Phase 4: Final Report Generation
-- Synthesizes all agent analysis results
-- Presents actionable cybersecurity strategy
+#### Phase 2: Collaborative Discussion
+Attacker analyzes prediction data to develop attack scenarios. Defender formulates defense strategies. Mediator evaluates both perspectives and determines consensus.
+
+#### Phase 3: Expert Analysis
+Technical Agent provides implementation planning. Regional Agent addresses compliance requirements. Finance-Business Agent evaluates financial and organizational impacts.
+
+#### Phase 4: Final Report Generation
+Synthesizes all agent analyses into a comprehensive cybersecurity strategy.
 
 ## Data Flow
 
 ### Input Data
-- **B-MTGNN Prediction Data**: Cyber threat and mitigation technology trend predictions
+- **Prediction Data**: Cyber threat and mitigation technology trend predictions
 - **RAG Knowledge Base**: Latest cybersecurity knowledge and research materials
 - **Environment Configuration**: Ollama model, LLM model, API keys, etc.
 
@@ -128,3 +109,7 @@ Technical Agent → Regional Agent → Finance-Business Agent
 - **Role**: Chief Financial Officer / Operating Officer
 - **Responsibility**: Financial planning and organizational change management
 - **Output**: ROI analysis and execution strategy
+
+## Conclusion
+
+This multi-agent framework provides a novel approach to cybersecurity strategy development by integrating role-based specialization with RAG-enhanced collaborative analysis. The system's dynamic workflow enables comprehensive threat mitigation strategies.
