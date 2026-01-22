@@ -33,10 +33,6 @@ Below is an example for the model testing results, where the forecasts of the Ma
 <img src="./model/Bayesian/Testing/DDoS_Testing.png" width="49%" height="auto" style="object-fit: cover;">
 </p>
 
-###
-
-
-
 ## Operational Model
 The script in the file **train.py** trains the final model on the full data using the optimal hyper-parameters stored in the file **hp.txt**. 
 The output is the operational model called **o_model.pt**, which can be used to forecast the graph up to 3 years in advance. 
