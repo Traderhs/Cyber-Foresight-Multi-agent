@@ -29,8 +29,8 @@ These metrics are saved in the same directories (Validation and Testing), and th
 
 Below is an example for the model testing results, where the forecasts of the Malware and DDoS nodes are tested. The Relative Absolute Errors (RAE) are 0.46 for Malware and 0.57 for DDoS.
 <p align="center">
-<img src="./model/Bayesian/Testing/Malware_Testing.png" width="49.8%" height="auto" style="object-fit: cover;">
-<img src="./model/Bayesian/Testing/DDoS_Testing.png" width="49.8%" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/Testing/Malware_Testing.png" width="49%" height="auto" style="object-fit: cover;">
+<img src="./model/Bayesian/Testing/DDoS_Testing.png" width="49%" height="auto" style="object-fit: cover;">
 </p>
 
 ###
