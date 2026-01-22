@@ -2,7 +2,7 @@
 
 This is a Python implementation of the framework proposed in the paper: **"An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies"**.
 
-This repository contains an end-to-end framework for forecasting the trend of cyber-attacks and pertinent alleviation technologies using graph neural network. This includes data preparation, model development, and future forecast.
+This repository contains an end-to-end framework for forecasting the trend of cyber-attacks and pertinent mitigation technologies using graph neural network. This includes data preparation, model development, and future forecast.
 
 <p align="center">
 <img src="./framework.png" width="auto" height="auto" style="object-fit: cover;">
