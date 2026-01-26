@@ -1,7 +1,7 @@
 # B-MTGNN
-This is a PyTorch implementation of the Bayesian model proposed in the paper: "[Forecasting Cyber Threats and Pertinent Mitigation Technologies](https://www.sciencedirect.com/science/article/pii/S0040162524006346)".
+This is a PyTorch implementation of the Bayesian model proposed in the paper: **"An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies"**.
 The model forecasts the graph of cyber-attacks and pertinent technologies 3 years in advance, 
-while extending the [MTGNN](https://dl.acm.org/doi/abs/10.1145/3394486.3403118) model proposed by Wu et al. 
+while extending the **MTGNN** model. 
 The graph includes 26 rapidly increasing and emerging attacks and 98 pertinent technologies, 
 each represented by a single node. The value of the node represents the trend.
 

@@ -38,7 +38,7 @@ The Multi-Agent system is a collaborative AI agent network built on LangGraph. E
 
 4. **State Management (`state.py`)**: Defines LangGraph state schema, manages data sharing between agents, and tracks message history and iteration counts.
 
-5. **RAG System (`rag.py`)**: Implements knowledge retrieval and augmentation using [LightRAG](https://github.com/HKUDS/LightRAG), storing cyber threat data and conversation content with hybrid search capabilities.
+5. **RAG System (`rag.py`)**: Implements knowledge retrieval and augmentation using **LightRAG**, storing cyber threat data and conversation content with hybrid search capabilities.
 
 6. **Prompt Management (`prompts.py`)**: Defines role-specific prompts and behavior guidelines for each agent.
 
