@@ -38,7 +38,6 @@ The script in the file **train.py** trains the final model on the full data usin
 The output is the operational model called **o_model.pt**, which can be used to forecast the graph up to 3 years in advance. 
 The operational model is saved in the directory **model/Bayesian**. 
 
-
 ## Future Forecast
 The script in the file **forecast.py** uses the operational model **o_model.pt** in the directory **model/Bayesian** to produce 3 years forecast for the trend of cyber-attacks and the pertinent technologies (graph). 
 The results include numerical forecasts of each node, stored in the directory **model/Bayesian/forecast/data**. 
@@ -53,4 +52,17 @@ Below is an example for the past and predicted future data for the Malware and D
 <p align="center">
 <img src="./model/Bayesian/forecast/plots/Malware.png" width="50.8%" height="auto" style="object-fit: cover;">
 <img src="./model/Bayesian/forecast/plots/DDoS.png" width="48.1%" height="auto" style="object-fit: cover;">
+</p>
+
+## Gap Quantification
+To provide a more precise analysis of the disparity between cyber threats and defense mechanisms, we quantified the "Gap" for the **top 5 pertinent mitigation technologies** associated with each attack vector. 
+These technologies were selected based on their critical relevance and the significant magnitude of the observed lag relative to the attack trends.  
+The bar charts below illustrate the forecasted gap values for the years 2025, 2026, and 2027. 
+In these figures, the numerical value represents the extent of the divergence between the evolving attack vectors (Malware and DDoS) and the specific defense solutions. 
+**A higher gap value indicates a wider divergence**, suggesting that the development of that specific technology is not keeping pace with the rapid evolution of the threat.  
+This quantitative insight highlights areas that require prioritized technological advancement. 
+For instance, technologies showing larger gaps (e.g., *Game Theory* for Malware) signal an urgent need for concentrated research and development to effectively bridge the security vulnerability window. 
+<p align="center">
+<img src="figure/figure_Malware.png" width="49%" height="auto" style="object-fit: cover;">
+<img src="figure/figure_DDoS.png" width="49%" height="auto" style="object-fit: cover;">
 </p>
