@@ -11,7 +11,7 @@ dataset. The features include monthly records for the following:
 ## Hackmageddon Attacks
 This directory contains the scripts **NoI_daily.py** and **NoI_monthly.py**, 
 which extract the feature **NoI**. The script in the file **NoI_daily.py** 
-reads [Hackmageddon](https://www.hackmageddon.com/) dataset in the file 
+reads **Hackmageddon** dataset in the file 
 **Hackmageddon.csv**, and transforms textual Hackmageddon data to numerical 
 format by counting the number of incidents (NoI) for each attack type and for 
 each country. The output is the daily NoI between July 2011 and December 2025. 
