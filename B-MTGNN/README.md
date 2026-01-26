@@ -63,6 +63,6 @@ In these figures, the numerical value represents the extent of the divergence be
 This quantitative insight highlights areas that require prioritized technological advancement. 
 For instance, technologies showing larger gaps (e.g., *Game Theory* for Malware) signal an urgent need for concentrated research and development to effectively bridge the security vulnerability window. 
 <p align="center">
-<img src="figure/figure_Malware.png" width="49%" height="auto" style="object-fit: cover;">
-<img src="figure/figure_DDoS.png" width="49%" height="auto" style="object-fit: cover;">
+<img src="./figure/figure_Malware.png" width="49%" height="auto" style="object-fit: cover;">
+<img src="./figure/figure_DDoS.png" width="49%" height="auto" style="object-fit: cover;">
 </p>
