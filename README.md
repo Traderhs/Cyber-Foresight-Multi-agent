@@ -5,7 +5,7 @@ This is a Python implementation of the framework proposed in the paper: **"An Ex
 This repository contains an end-to-end framework for forecasting the trend of cyber-attacks and pertinent mitigation technologies using graph neural network. This includes data preparation, model development, and future forecast.
 
 <p align="center">
-<img src="./framework.png" width="auto" height="auto" style="object-fit: cover;">
+<img src="figure/framework.png" width="auto" height="auto" style="object-fit: cover;">
 </p>
 
 ## Dataset
