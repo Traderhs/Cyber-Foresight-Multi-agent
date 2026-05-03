@@ -1,4 +1,4 @@
-# An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies
+# Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty
 
 > This repository is organized for reproducible research, with module-specific environments, frozen experiment artifacts, and explicit data/agent contracts.
 
@@ -31,7 +31,7 @@ pip install -r Multi-Agent/requirements.txt
 
 ## Dataset
 
-The complete dataset (including raw and normalized data) used in this paper is directly included in this supplementary material package. No external downloads are required for anonymous review.
+The complete dataset (including raw and normalized data) used in this paper is directly included in this supplementary material package.
 
 - `Dataset/`: Contains the final integrated dataset (`CT-0711-0125.csv`).
 - `Data_Preparation/`: Contains intermediate outputs and raw sources.
