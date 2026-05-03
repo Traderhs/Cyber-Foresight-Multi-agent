@@ -1,27 +1,107 @@
-# Cyber trend forecasting
+# An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies
 
-This is a Python implementation of the framework proposed in the paper: **"An Explainable Multi-agent AI Framework for Forecasting Asymmetric Evolution Between Cyber Threats and Pertinent Mitigation Technologies"**.
-
-This repository contains an end-to-end framework for forecasting the trend of cyber-attacks and pertinent mitigation technologies using graph neural network. This includes data preparation, model development, and future forecast.
+> This repository is organized for reproducible research, with module-specific environments, frozen experiment artifacts, and explicit data/agent contracts.
 
 <p align="center">
 <img src="figure/framework.png" width="auto" height="auto" style="object-fit: cover;">
 </p>
 
+## Requirements
+
+We provide two ways to set up the environment:
+
+**1. Unified Installation (Recommended for exploring the whole project)**\
+To install all required dependencies across all modules into a single environment, run:
+```setup
+pip install -r requirements.txt
+```
+
+**2. Module-Specific Installation (Recommended for strict reproducibility)**\
+Each module has its own `requirements.txt` to prevent potential version mismatches. If you only want to run a specific component:
+```setup
+# For Data Preparation
+pip install -r Data_Preparation/requirements.txt
+
+# For Modeling (B-MTGNN)
+pip install -r B-MTGNN/requirements.txt
+
+# For Multi-Agent Framework
+pip install -r Multi-Agent/requirements.txt
+```
+
 ## Dataset
-The full constructed dataset can be found in the directory [**Dataset**](./Dataset). More information about each feature can be found in the same directory.
 
-## Pertinent Technologies Extraction/Graph Construction
-The directory [**PT_Extractor**](./PT_Extractor) contains scripts for extracting the pertinent technologies (PTs) related to each attack type. This results in the graph construction, where each attack will be represented as a node linked through edges to its PT nodes. This is referred to as the threats and pertinent technologies graph (TPT graph). The graph includes 26 rapidly increasing and emerging attacks and 98 pertinent technologies, each represented by a single node. The value of the node represents the trend. The PT extraction is achieved using two algorithms and the output from both algorithms is combined as the final output. The first algorithm (E-GPT) utilises Elsevier API along with the GPT model to obtain the PTs for each attack type. The second algorithm (D-GPT) utilises the GPT model only. For more information, please refer to the README file within the same directory.
- 
-## Data Preparation
-The directory [**Data_Preparation**](./Data_Preparation) contains 5 scripts for extracting the features of our dataset. These features include the number of incidents for each attack type (NoI), the number of attack mentions in Elsevier abstracts (A_NoM), the number of pertinent technology mentions in Elsevier abstracts (PT_NoM), the number of tweets about armed conflict areas or wars (ACA), and the number of public holidays in each country (PH). The features are extracted and recorded on a monthly basis from July 2011 to Jan 2025. They can be combined to form the final dataset. For more details, please refer to the README file within the same directory.
+The complete dataset (including raw and normalized data) used in this paper is directly included in this supplementary material package. No external downloads are required for anonymous review.
 
-## Modelling and Future Forecast
-The directory [**B-MTGNN**](./B-MTGNN) contains a Python project for building the graph neural network model used for forecasting the TPT graph. Some of the scripts in this directory perform hyper-parameter optimisation, followed by training the final model using the optimal set of hyper-parameters. The final model can be used to predict the graph up to 3 years in advance. The rest of scripts utilise the built model to forecast the graph including the forecast of the attack trends, the pertinent technology trends, and the gap between them until the end of 2027. For more information, please refer to the README file in the same directory.
+- `Dataset/`: Contains the final integrated dataset (`CT-0711-0125.csv`).
+- `Data_Preparation/`: Contains intermediate outputs and raw sources.
+- `B-MTGNN/data/`: Contains graph adjacency matrices and inputs for the B-MTGNN model.
 
-## Comparative Evaluation
-The directory [**Comparative_Evaluation**](./Comparative_Evaluation) contains experiments for evaluating the performance of the B-MTGNN model against the MTGNN model as well as against four baseline models. Performance is assessed using two evaluation metrics: the Root Relative Squared Error (RSE) and the Relative Absolute Error (RAE). The baseline models include ARIMA, VAR, LSTM, and Transformer. For the LSTM and Transformer architectures, the evaluation covers both univariate and multivariate models. The evaluation of the B-MTGNN model includes evaluating five variations of the model. Each variation employs a different number of iterations, ranging from 10 to 50, to approximate the Bayesian model. The evaluation results show that the B-MTGNN model using 30 iterations outperforms all other models. For more information, please refer to the README file in the corresponding directory.
+## Training
 
-## Multi-Agent AI System 
-The directory [**Multi-Agent**](./Multi-Agent) contains a multi-agent collaborative framework based on B-MTGNN model prediction data. Six agents—Attacker, Defender, Mediator, Technical Expert, Regional Expert, and Finance-Business Expert—collaborate to develop comprehensive cybersecurity strategies. Built on LangGraph, it integrates RAG technology to leverage the latest cybersecurity knowledge and prediction data. It operates through a 4-phase process: data loading, collaborative discussion, expert analysis, and final report generation. For more information, please refer to the README file in the corresponding directory.
+To train the core B-MTGNN model on the dataset, navigate to the `B-MTGNN` directory and run the training script:
+
+```train
+cd B-MTGNN
+python train.py --data ./data/sm_data.txt --save model/Bayesian/o_model.pt
+```
+
+*For hyper-parameter optimization using random search, run:*
+```bash
+python train_test.py
+```
+
+## Evaluation
+
+To evaluate the trained model and compare it against the baseline models, navigate to the `Comparative_Evaluation` directory and execute the respective evaluation scripts.
+
+**Evaluate B-MTGNN (Example with 30 iterations):**
+```eval
+cd Comparative_Evaluation/BMTGNN
+python BMTGNN.py
+```
+
+**Evaluate Baseline Models (Example: ARIMA):**
+```eval
+cd Comparative_Evaluation/Baselines/ARIMA
+python ARIMA.py
+```
+
+## Pre-trained Models
+
+To facilitate reproducibility without requiring full training, we provide pre-trained model checkpoints:
+
+- **B-MTGNN Checkpoints**: Located in `Comparative_Evaluation/BMTGNN/` (e.g., `modelb10.pt`, `modelb30.pt`).
+- **MTGNN Checkpoint**: Located in `Comparative_Evaluation/MTGNN/modelb1.pt`.
+
+## Results
+
+Our proposed B-MTGNN model outperforms the baseline models in forecasting 142 cyber trends (predicting 36 time-steps ahead).
+
+## Multi-Agent System
+
+Building upon the predictions made by the B-MTGNN model, our framework employs a sophisticated multi-agent system built on **LangGraph** to translate raw forecasts into actionable cybersecurity strategies.
+**Multi Agents**
+Our collaborative workflow coordinates specialized personas to ensure balanced and comprehensive analysis:
+- **Attacker & Defender**: The Attacker develops vulnerability exploitation scenarios, while the Defender formulates corresponding Defense-in-Depth strategies.
+- **Mediator**: Evaluates conflicting perspectives and builds an objective consensus.
+- **Technical, Regional, & Finance-Business Agents**: Provide specialized roadmaps covering architecture, regulatory compliance, and ROI analysis.
+
+**RAG-Enhanced Explainability**
+To ensure data privacy and maintain high explainability, the entire multi-agent framework is driven by the local SLM. 
+The system integrates **LightRAG** to retrieve the latest cybersecurity reports and prior analysis history in real-time. 
+This Retrieval-Augmented Generation approach significantly mitigates hallucination and grounds the agents' discussions in concrete, explainable evidence.
+
+**Used Language Model**: **`ministral-3:8b`** (served via Ollama)
+
+---
+
+## Detailed Project Structure
+
+For a deeper dive into the individual components of our framework, please refer to the documentation within each directory:
+
+*   **[`PT_Extractor`](./PT_Extractor)**: Scripts for extracting Pertinent Technologies (PTs) using E-GPT and D-GPT, forming the Threats and Pertinent Technologies (TPT) graph.
+*   **[`Data_Preparation`](./Data_Preparation)**: Scripts for extracting time-series features (NoI, A_NoM, PT_NoM, ACA, PH).
+*   **[`B-MTGNN`](./B-MTGNN)**: The core implementation of the Bayesian Graph Neural Network, including data smoothing and future forecasting scripts (`forecast.py`, `pt_plots.py`).
+*   **[`Comparative_Evaluation`](./Comparative_Evaluation)**: Extensive evaluation logic against baseline models.
+*   **[`Multi-Agent`](./Multi-Agent)**: A multi-agent collaborative framework built on LangGraph that leverages the prediction data to develop cybersecurity strategies.
