@@ -31,7 +31,7 @@ pip install -r Multi-Agent/requirements.txt
 
 ## Dataset
 
-The complete dataset (including raw and normalized data) used in this paper is directly included in this supplementary material package. No external downloads are required for anonymous review.
+The complete dataset (including raw and normalized data) used in this paper is directly included in this supplementary material package.
 
 - `Dataset/`: Contains the final integrated dataset (`CT-0711-0125.csv`).
 - `Data_Preparation/`: Contains intermediate outputs and raw sources.
