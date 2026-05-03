@@ -2,9 +2,7 @@
 
 > This repository is organized for reproducible research, with module-specific environments, frozen experiment artifacts, and explicit data/agent contracts.
 
-<p align="center">
-<img src="figure/framework.png" width="auto" height="auto" style="object-fit: cover;">
-</p>
+![Framework Architecture](figure/framework.png)
 
 ## Requirements
 
@@ -12,13 +10,13 @@ We provide two ways to set up the environment:
 
 **1. Unified Installation (Recommended for exploring the whole project)**\
 To install all required dependencies across all modules into a single environment, run:
-```setup
+```bash
 pip install -r requirements.txt
 ```
 
 **2. Module-Specific Installation (Recommended for strict reproducibility)**\
 Each module has its own `requirements.txt` to prevent potential version mismatches. If you only want to run a specific component:
-```setup
+```bash
 # For Data Preparation
 pip install -r Data_Preparation/requirements.txt
 
@@ -41,7 +39,7 @@ The complete dataset (including raw and normalized data) used in this paper is d
 
 To train the core B-MTGNN model on the dataset, navigate to the `B-MTGNN` directory and run the training script:
 
-```train
+```bash
 cd B-MTGNN
 python train.py --data ./data/sm_data.txt --save model/Bayesian/o_model.pt
 ```
@@ -56,13 +54,13 @@ python train_test.py
 To evaluate the trained model and compare it against the baseline models, navigate to the `Comparative_Evaluation` directory and execute the respective evaluation scripts.
 
 **Evaluate B-MTGNN (Example with 30 iterations):**
-```eval
+```bash
 cd Comparative_Evaluation/BMTGNN
 python BMTGNN.py
 ```
 
 **Evaluate Baseline Models (Example: ARIMA):**
-```eval
+```bash
 cd Comparative_Evaluation/Baselines/ARIMA
 python ARIMA.py
 ```
@@ -81,6 +79,7 @@ Our proposed B-MTGNN model outperforms the baseline models in forecasting 142 cy
 ## Multi-Agent System
 
 Building upon the predictions made by the B-MTGNN model, our framework employs a sophisticated multi-agent system built on **LangGraph** to translate raw forecasts into actionable cybersecurity strategies.
+
 **Multi Agents**
 Our collaborative workflow coordinates specialized personas to ensure balanced and comprehensive analysis:
 - **Attacker & Defender**: The Attacker develops vulnerability exploitation scenarios, while the Defender formulates corresponding Defense-in-Depth strategies.
