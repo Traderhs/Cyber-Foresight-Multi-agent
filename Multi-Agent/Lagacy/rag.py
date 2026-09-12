@@ -11,11 +11,6 @@ class CyberRAG:
     def __init__(self):
         self.rag = None
         self.working_dir = "./rag_storage"
-        self.cti_list = [
-#           "Ransomware-ALL.txt",
-#           "Malware-ALL.txt",
-            "DDoS-ALL.txt"
-        ]
 
     async def initialize(self):
         """Initialize RAG system"""
@@ -30,42 +25,6 @@ class CyberRAG:
         )
         await self.rag.initialize_storages()
         print("RAG system initialization.")
-
-    async def load_cyber_data(self):
-        """Load exchange rate prediction data"""
-        data_dir = "../B-MTGNN/model/Bayesian/forecast/data"
-        cti_list = self.cti_list
-
-        # Process data
-        for filename in cti_list:
-            filepath = os.path.join(data_dir, filename)
-            if os.path.exists(filepath):
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read().strip()
-                    cti_name = filename.replace('-ALL.txt', '')
-                    formatted_data = f"""
-**{cti_name} Forecast Data**
-{content}"""
-
-                    # Save each file's data individually to RAG
-                    await self.rag.ainsert(formatted_data)
-                    print(f"{"="*10}\nRAG loaded {filename} exchange rate data")
-                    print(f"Load Data & ainsert to RAG:\n{formatted_data}\n{"="*10}")
-
-    async def get_forecast_data(self):
-        """Get forecast data from RAG for agent use"""
-
-        if not self.rag:
-            return "RAG not initialized."
-
-        cti_list = self.cti_list
-        for filename in cti_list:
-            cti_name = filename.replace('-ALL.txt', '')
-            result = await self.rag.aquery(
-                f"Extract {cti_name} Forecast Data",  # Data Extraction Query
-                param=QueryParam(mode="hybrid")
-            )
-        return result
 
     async def query(self, question, mode="hybrid"):
         """RAG search"""
