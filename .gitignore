@@ -14,3 +14,5 @@
 /Multi-Agent/test_environment.py
 /.idea/
 /.jbeval/
+__pycache__/
+*.pyc
