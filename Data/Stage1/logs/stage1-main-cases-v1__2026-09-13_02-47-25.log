@@ -1,0 +1,139 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\logs\stage1-main-cases-v1__2026-09-13_02-47-25.log
+--- Stage 1 Main Case Set: batch execution ---
+Stage 1 runtime profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\case_sets\stage1-main-cases-v1.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\runs\stage1-main-cases-v1__seed-42__progress.json
+Resume is automatic: exact final artifacts are reused; if a case stopped after one critic, that critic's exact checkpoint is reused and only the missing critic is generated.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (6 evidence records)
+
+Stage 1 artifact not found for fingerprint c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True prompt_tokens=2048 task=4
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True prompt_tokens=7762 task=4
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True prompt_tokens=8262 task=4
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True prompt_tokens=8704 task=4
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True prompt_tokens=8700 task=4
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True prompt_tokens=8700 task=4
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True prompt_tokens=8700 task=4
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True prompt_tokens=8700 task=4
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True prompt_tokens=8740 task=4
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True prompt_tokens=9159 task=4
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True prompt_tokens=9456 task=4
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True prompt_tokens=9715 task=4
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True prompt_tokens=10071 task=4
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True prompt_tokens=10444 task=4
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True prompt_tokens=10818 task=4
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True prompt_tokens=11156 task=4
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True prompt_tokens=11440 task=4
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True prompt_tokens=11440 task=4
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True prompt_tokens=11440 task=4
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True prompt_tokens=11440 task=4
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True prompt_tokens=11440 task=4
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True prompt_tokens=11445 task=4
+[QWEN][Stage1A-AttackFeasibility][+230s] state=True prompt_tokens=11798 task=4
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True prompt_tokens=12224 task=4
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True prompt_tokens=12695 task=4
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True prompt_tokens=13030 task=4
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True prompt_tokens=13463 task=4
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True prompt_tokens=13828 task=4
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True prompt_tokens=14189 task=4
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True prompt_tokens=14543 task=4
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True prompt_tokens=14900 task=4
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True prompt_tokens=15262 task=4
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True prompt_tokens=15624 task=4
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True prompt_tokens=16077 task=4
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True prompt_tokens=16488 task=4
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True prompt_tokens=16843 task=4
+[QWEN][Stage1A-AttackFeasibility][+371s] state=True prompt_tokens=17217 task=4
+[QWEN][Stage1A-AttackFeasibility][+381s] state=True prompt_tokens=17663 task=4
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=381.3s prompt_tokens=7613 completion_tokens=10058 total_tokens=17671 reasoning_chars=37388
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 381.3s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1A-AttackFeasibility:repair-1] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True prompt_tokens=7758 task=3585
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True prompt_tokens=8172 task=3585
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True prompt_tokens=8619 task=3585
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True prompt_tokens=8958 task=3585
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True prompt_tokens=9328 task=3585
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True prompt_tokens=9708 task=3585
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True prompt_tokens=10072 task=3585
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True prompt_tokens=10173 task=3585
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True prompt_tokens=10408 task=3585
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True prompt_tokens=10677 task=3585
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True prompt_tokens=11040 task=3585
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True prompt_tokens=11136 task=3585
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True prompt_tokens=11136 task=3585
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True prompt_tokens=11440 task=3585
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True prompt_tokens=11781 task=3585
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True prompt_tokens=12107 task=3585
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True prompt_tokens=12190 task=3585
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True prompt_tokens=12190 task=3585
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True prompt_tokens=12190 task=3585
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True prompt_tokens=12274 task=3585
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True prompt_tokens=12727 task=3585
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True prompt_tokens=13176 task=3585
+[QWEN][Stage1B-DefenseRobustness][+230s] state=True prompt_tokens=13563 task=3585
+[QWEN][Stage1B-DefenseRobustness][+240s] state=True prompt_tokens=14003 task=3585
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True prompt_tokens=14375 task=3585
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True prompt_tokens=14966 task=3585
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=266.1s prompt_tokens=7654 completion_tokens=7664 total_tokens=15318 reasoning_chars=25702
+[QWEN][Stage1A-AttackFeasibility:repair-1] inference slot acquired after 266.1s queue wait.
+[QWEN][Stage1A-AttackFeasibility:repair-1] generation started (reasoning=xhigh, seed=42).
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\checkpoints\main__ddos__nlp_llm\c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c\defense_robustness.json
+[QWEN][Stage1A-AttackFeasibility:repair-1][+10s] state=True prompt_tokens=8665 task=6193
+[QWEN][Stage1A-AttackFeasibility:repair-1][+20s] state=True prompt_tokens=9006 task=6193
+[QWEN][Stage1A-AttackFeasibility:repair-1][+30s] state=True prompt_tokens=9280 task=6193
+[QWEN][Stage1A-AttackFeasibility:repair-1][+40s] state=True prompt_tokens=9670 task=6193
+[QWEN][Stage1A-AttackFeasibility:repair-1][+50s] state=True prompt_tokens=10146 task=6193
+[QWEN][Stage1A-AttackFeasibility:repair-1] completed elapsed=54.4s prompt_tokens=8378 completion_tokens=2052 total_tokens=10430 reasoning_chars=6015
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\checkpoints\main__ddos__nlp_llm\c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c\attack_feasibility.json
+[MAIN SET][1/7] COMPLETE in 702.8s | action=generated_or_resumed_and_frozen | evidence=6 | slots=3/6 | families=3 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Data\Stage1\artifacts\main__ddos__nlp_llm\c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c.json
+
+====================================================================================================
+[MAIN SET][2/7] main__malware__anomaly_detection
+Threat=Malware | PMT=ANOMALY DETECTION
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__malware__anomaly_detection (17 evidence records)
+
+Stage 1 artifact not found for fingerprint 8c0d9081492c13e2eb82177412d4f9e4b23c0cc0d42abc4d6958ab635d705a31; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True prompt_tokens=8192 task=6878
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True prompt_tokens=14113 task=6878
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True prompt_tokens=14501 task=6878
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True prompt_tokens=14592 task=6878
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True prompt_tokens=14592 task=6878
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True prompt_tokens=14673 task=6878
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True prompt_tokens=15079 task=6878
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True prompt_tokens=15381 task=6878
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True prompt_tokens=15704 task=6878
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True prompt_tokens=15982 task=6878
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True prompt_tokens=16052 task=6878
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True prompt_tokens=16052 task=6878
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True prompt_tokens=16052 task=6878
+[QWEN][Stage1A-AttackFeasibility][+141s] state=True prompt_tokens=16052 task=6878
+[QWEN][Stage1A-AttackFeasibility][+151s] state=True prompt_tokens=16052 task=6878
+[QWEN][Stage1A-AttackFeasibility][+161s] state=True prompt_tokens=16299 task=6878
+[QWEN][Stage1A-AttackFeasibility][+171s] state=True prompt_tokens=16649 task=6878
+[QWEN][Stage1A-AttackFeasibility][+181s] state=True prompt_tokens=16961 task=6878
+[QWEN][Stage1A-AttackFeasibility][+191s] state=True prompt_tokens=17287 task=6878
