@@ -1,0 +1,88 @@
+{
+  "gap_generation": {
+    "gap_relation_count": 303,
+    "gap_row_count": 909,
+    "per_threat_relation_count": {
+      "Account Hijacking": 13,
+      "Advanced persistent threat": 14,
+      "Adversarial Attack": 15,
+      "Backdoor": 6,
+      "Botnet": 17,
+      "Brute Force Attack": 10,
+      "Cryptojacking": 4,
+      "DDoS": 11,
+      "DNS Spoofing": 7,
+      "Data Poisoning": 9,
+      "Deepfake": 7,
+      "Disinformation/Misinformation": 11,
+      "Dropper": 8,
+      "Insider Threat": 15,
+      "IoT Device Attack": 11,
+      "MITM": 11,
+      "Malware": 27,
+      "Password Attack": 15,
+      "Phishing": 10,
+      "Ransomware": 16,
+      "Session Hijacking": 11,
+      "Supply Chain": 10,
+      "Targeted Attack": 13,
+      "Trojan": 11,
+      "Vulnerability": 11,
+      "Zero-day": 10
+    },
+    "source": "canonical paper-aligned 124-node state forecast",
+    "status": "PASS",
+    "threat_count": 26
+  },
+  "known_legacy_issues": [
+    {
+      "detail": "B-MTGNN/data/data.csv has 138 months ending Dec-22; study artifacts use 162 months.",
+      "id": "LEGACY_STALE_BMTGNN_DATA",
+      "severity": "high"
+    },
+    {
+      "detail": "Legacy variance inverse scaling uses scale rather than scale^2 and is not silently reinterpreted.",
+      "id": "LEGACY_VARIANCE_RESCALE",
+      "severity": "high"
+    }
+  ],
+  "node_state_selection": {
+    "selected_by_modality": {
+      "NoI": 16,
+      "NoP": 108
+    },
+    "selected_series_count": 124,
+    "selection_source": "B-MTGNN/data/graph.csv",
+    "status": "PASS"
+  },
+  "paper_contract": {
+    "feature_availability_node_counts": {
+      "ACA": 124,
+      "NoI": 16,
+      "NoP": 98,
+      "PH": 124
+    },
+    "feature_dim": 4,
+    "forecast_months": 36,
+    "historical_months": 162,
+    "node_count": 124
+  },
+  "source_match": {
+    "historical_points_checked_per_series": 162,
+    "max_abs_error": 4.883304427494295e-07,
+    "series_by_source_type": {
+      "incident": 16,
+      "paper_threat": 10,
+      "solution": 98
+    },
+    "series_count": 124,
+    "status": "PASS",
+    "tolerance": 1e-05,
+    "worst_match": {
+      "forecast_file": "Malware-ALL.txt",
+      "max_abs_error": 4.883304427494295e-07,
+      "source_column": "Malware-ALL"
+    }
+  },
+  "status": "PASS"
+}

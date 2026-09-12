@@ -1,0 +1,746 @@
+[
+  {
+    "canonical_name": "Phishing",
+    "graph_name": "Phishing",
+    "node_id": "THREAT_PHISHING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Password Attack",
+    "graph_name": "Password Attack",
+    "node_id": "THREAT_PASSWORD_ATTACK",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Trojan",
+    "graph_name": "Trojan",
+    "node_id": "THREAT_TROJAN",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Vulnerability",
+    "graph_name": "Vulnerability",
+    "node_id": "THREAT_VULNERABILITY",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Advanced persistent threat",
+    "graph_name": "Advanced persistent threat",
+    "node_id": "THREAT_ADVANCED_PERSISTENT_THREAT",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Disinformation/Misinformation",
+    "graph_name": "Disinformation/Misinformation",
+    "node_id": "THREAT_DISINFORMATION_MISINFORMATION",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Targeted Attack",
+    "graph_name": "Targeted Attack",
+    "node_id": "THREAT_TARGETED_ATTACK",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Backdoor",
+    "graph_name": "Backdoor",
+    "node_id": "THREAT_BACKDOOR",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Cryptojacking",
+    "graph_name": "Cryptojacking",
+    "node_id": "THREAT_CRYPTOJACKING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "DNS Spoofing",
+    "graph_name": "DNS Spoofing",
+    "node_id": "THREAT_DNS_SPOOFING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Insider Threat",
+    "graph_name": "Insider Threat",
+    "node_id": "THREAT_INSIDER_THREAT",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Data Poisoning",
+    "graph_name": "Data Poisoning",
+    "node_id": "THREAT_DATA_POISONING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Session Hijacking",
+    "graph_name": "Session Hijacking",
+    "node_id": "THREAT_SESSION_HIJACKING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "DDoS",
+    "graph_name": "DDoS",
+    "node_id": "THREAT_DDOS",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Ransomware",
+    "graph_name": "Ransomware",
+    "node_id": "THREAT_RANSOMWARE",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Account Hijacking",
+    "graph_name": "Account Hijacking",
+    "node_id": "THREAT_ACCOUNT_HIJACKING",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Zero-day",
+    "graph_name": "Zero-day",
+    "node_id": "THREAT_ZERO_DAY",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Malware",
+    "graph_name": "Malware",
+    "node_id": "THREAT_MALWARE",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Brute Force Attack",
+    "graph_name": "Brute Force Attack",
+    "node_id": "THREAT_BRUTE_FORCE_ATTACK",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Botnet",
+    "graph_name": "Botnet",
+    "node_id": "THREAT_BOTNET",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "MITM",
+    "graph_name": "MITM",
+    "node_id": "THREAT_MITM",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Dropper",
+    "graph_name": "Dropper",
+    "node_id": "THREAT_DROPPER",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Adversarial Attack",
+    "graph_name": "Adversarial Attack",
+    "node_id": "THREAT_ADVERSARIAL_ATTACK",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Deepfake",
+    "graph_name": "Deepfake",
+    "node_id": "THREAT_DEEPFAKE",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "Supply Chain",
+    "graph_name": "Supply Chain",
+    "node_id": "THREAT_SUPPLY_CHAIN",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "IoT Device Attack",
+    "graph_name": "IoT Device Attack",
+    "node_id": "THREAT_IOT_DEVICE_ATTACK",
+    "node_type": "threat"
+  },
+  {
+    "canonical_name": "CRYPTOGRAPHY",
+    "graph_name": "CRYPTOGRAPHY",
+    "node_id": "PMT_CRYPTOGRAPHY",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PUBLIC KEY INFRASTRUCTURE",
+    "graph_name": "PUBLIC KEY INFRASTRUCTURE",
+    "node_id": "PMT_PUBLIC_KEY_INFRASTRUCTURE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "BLACKLISTING",
+    "graph_name": "BLACKLISTING",
+    "node_id": "PMT_BLACKLISTING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ENCRYPTION",
+    "graph_name": "ENCRYPTION",
+    "node_id": "PMT_ENCRYPTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DECEPTION TECHNOLOGY",
+    "graph_name": "DECEPTION TECHNOLOGY",
+    "node_id": "PMT_DECEPTION_TECHNOLOGY",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ACCESS CONTROL",
+    "graph_name": "ACCESS CONTROL",
+    "node_id": "PMT_ACCESS_CONTROL",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ML/DL",
+    "graph_name": "ML/DL",
+    "node_id": "PMT_ML_DL",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "MULTI FACTOR AUTHENTICATION",
+    "graph_name": "MULTI FACTOR AUTHENTICATION",
+    "node_id": "PMT_MULTI_FACTOR_AUTHENTICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "MUTUAL AUTHENTICATION",
+    "graph_name": "MUTUAL AUTHENTICATION",
+    "node_id": "PMT_MUTUAL_AUTHENTICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "NLP/LLM",
+    "graph_name": "NLP/LLM",
+    "node_id": "PMT_NLP_LLM",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PASSWORD STRENGTH METERS",
+    "graph_name": "PASSWORD STRENGTH METERS",
+    "node_id": "PMT_PASSWORD_STRENGTH_METERS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PASSWORD HASHING",
+    "graph_name": "PASSWORD HASHING",
+    "node_id": "PMT_PASSWORD_HASHING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PASSWORD MANAGEMENT",
+    "graph_name": "PASSWORD MANAGEMENT",
+    "node_id": "PMT_PASSWORD_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PASSWORD POLICY",
+    "graph_name": "PASSWORD POLICY",
+    "node_id": "PMT_PASSWORD_POLICY",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "GRAPHICAL AUTHENTICATION",
+    "graph_name": "GRAPHICAL AUTHENTICATION",
+    "node_id": "PMT_GRAPHICAL_AUTHENTICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "IDS/IPS",
+    "graph_name": "IDS/IPS",
+    "node_id": "PMT_IDS_IPS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ONE TIME PASSWORD",
+    "graph_name": "ONE TIME PASSWORD",
+    "node_id": "PMT_ONE_TIME_PASSWORD",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PENETRATION TESTING",
+    "graph_name": "PENETRATION TESTING",
+    "node_id": "PMT_PENETRATION_TESTING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "CAPTCHA",
+    "graph_name": "CAPTCHA",
+    "node_id": "PMT_CAPTCHA",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "BEHAVIOR BASED DETECTION",
+    "graph_name": "BEHAVIOR BASED DETECTION",
+    "node_id": "PMT_BEHAVIOR_BASED_DETECTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "FORMAL VERIFICATION",
+    "graph_name": "FORMAL VERIFICATION",
+    "node_id": "PMT_FORMAL_VERIFICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SPLIT MANUFACTURING",
+    "graph_name": "SPLIT MANUFACTURING",
+    "node_id": "PMT_SPLIT_MANUFACTURING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "GAME THEORY",
+    "graph_name": "GAME THEORY",
+    "node_id": "PMT_GAME_THEORY",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ANOMALY DETECTION",
+    "graph_name": "ANOMALY DETECTION",
+    "node_id": "PMT_ANOMALY_DETECTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "VULNERABILITY ASSESSMENT",
+    "graph_name": "VULNERABILITY ASSESSMENT",
+    "node_id": "PMT_VULNERABILITY_ASSESSMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PATCH MANAGEMENT",
+    "graph_name": "PATCH MANAGEMENT",
+    "node_id": "PMT_PATCH_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "VULNERABILITY MANAGEMENT",
+    "graph_name": "VULNERABILITY MANAGEMENT",
+    "node_id": "PMT_VULNERABILITY_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SIEM",
+    "graph_name": "SIEM",
+    "node_id": "PMT_SIEM",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "STANDARDIZED COMMUNICATION",
+    "graph_name": "STANDARDIZED COMMUNICATION",
+    "node_id": "PMT_STANDARDIZED_COMMUNICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "Control Flow Integrity",
+    "graph_name": "Control Flow Integrity",
+    "node_id": "PMT_CONTROL_FLOW_INTEGRITY",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "VULNERABILITY SCANNER",
+    "graph_name": "VULNERABILITY SCANNER",
+    "node_id": "PMT_VULNERABILITY_SCANNER",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "USER BEHAVIOR ANALYTICS",
+    "graph_name": "USER BEHAVIOR ANALYTICS",
+    "node_id": "PMT_USER_BEHAVIOR_ANALYTICS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA LOSS PREVENTION",
+    "graph_name": "DATA LOSS PREVENTION",
+    "node_id": "PMT_DATA_LOSS_PREVENTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "NETWORK SEGMENTATION",
+    "graph_name": "NETWORK SEGMENTATION",
+    "node_id": "PMT_NETWORK_SEGMENTATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "RISK ASSESSMENT",
+    "graph_name": "RISK ASSESSMENT",
+    "node_id": "PMT_RISK_ASSESSMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DYNAMIC RESOURCE MANAGEMENT",
+    "graph_name": "DYNAMIC RESOURCE MANAGEMENT",
+    "node_id": "PMT_DYNAMIC_RESOURCE_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "LEAST PRIVILEGE",
+    "graph_name": "LEAST PRIVILEGE",
+    "node_id": "PMT_LEAST_PRIVILEGE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "CONTINUOUS AUTHENTICATION",
+    "graph_name": "CONTINUOUS AUTHENTICATION",
+    "node_id": "PMT_CONTINUOUS_AUTHENTICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DISTRIBUTED LEDGERS",
+    "graph_name": "DISTRIBUTED LEDGERS",
+    "node_id": "PMT_DISTRIBUTED_LEDGERS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "BLOCKCHAIN",
+    "graph_name": "BLOCKCHAIN",
+    "node_id": "PMT_BLOCKCHAIN",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA PROVENANCE",
+    "graph_name": "DATA PROVENANCE",
+    "node_id": "PMT_DATA_PROVENANCE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SOURCE IDENTIFICATION",
+    "graph_name": "SOURCE IDENTIFICATION",
+    "node_id": "PMT_SOURCE_IDENTIFICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "IMAGE RECOGNITION",
+    "graph_name": "IMAGE RECOGNITION",
+    "node_id": "PMT_IMAGE_RECOGNITION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "HYPERGAME",
+    "graph_name": "HYPERGAME",
+    "node_id": "PMT_HYPERGAME",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "STATIC ANALYSIS",
+    "graph_name": "STATIC ANALYSIS",
+    "node_id": "PMT_STATIC_ANALYSIS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DYNAMIC ANALYSIS",
+    "graph_name": "DYNAMIC ANALYSIS",
+    "node_id": "PMT_DYNAMIC_ANALYSIS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "TAINT ANALYSIS",
+    "graph_name": "TAINT ANALYSIS",
+    "node_id": "PMT_TAINT_ANALYSIS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DNSSEC",
+    "graph_name": "DNSSEC",
+    "node_id": "PMT_DNSSEC",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA LEAKAGE DETECTION/PREVENTION",
+    "graph_name": "DATA LEAKAGE DETECTION/PREVENTION",
+    "node_id": "PMT_DATA_LEAKAGE_DETECTION_PREVENTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ACTIVITY MONITORING",
+    "graph_name": "ACTIVITY MONITORING",
+    "node_id": "PMT_ACTIVITY_MONITORING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "MOVING TARGET DEFENSE",
+    "graph_name": "MOVING TARGET DEFENSE",
+    "node_id": "PMT_MOVING_TARGET_DEFENSE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "KEYSTROKE DYNAMICS",
+    "graph_name": "KEYSTROKE DYNAMICS",
+    "node_id": "PMT_KEYSTROKE_DYNAMICS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ATTACK TREE",
+    "graph_name": "ATTACK TREE",
+    "node_id": "PMT_ATTACK_TREE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA SANITIZATION",
+    "graph_name": "DATA SANITIZATION",
+    "node_id": "PMT_DATA_SANITIZATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "OUTLIER DETECTION",
+    "graph_name": "OUTLIER DETECTION",
+    "node_id": "PMT_OUTLIER_DETECTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "ADVERSARIAL TRAINING",
+    "graph_name": "ADVERSARIAL TRAINING",
+    "node_id": "PMT_ADVERSARIAL_TRAINING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "TRUSTWORTHY AI",
+    "graph_name": "TRUSTWORTHY AI",
+    "node_id": "PMT_TRUSTWORTHY_AI",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "Bayesian Network",
+    "graph_name": "Bayesian Network",
+    "node_id": "PMT_BAYESIAN_NETWORK",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "STRONG AUTHENTICATION",
+    "graph_name": "STRONG AUTHENTICATION",
+    "node_id": "PMT_STRONG_AUTHENTICATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SSL/TLS",
+    "graph_name": "SSL/TLS",
+    "node_id": "PMT_SSL_TLS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "HTTPS",
+    "graph_name": "HTTPS",
+    "node_id": "PMT_HTTPS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "Identity-Based Encryption (IBE)",
+    "graph_name": "Identity-Based Encryption (IBE)",
+    "node_id": "PMT_IDENTITY_BASED_ENCRYPTION_IBE",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SESSION MANAGEMENT",
+    "graph_name": "SESSION MANAGEMENT",
+    "node_id": "PMT_SESSION_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "RATE LIMITING",
+    "graph_name": "RATE LIMITING",
+    "node_id": "PMT_RATE_LIMITING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "TRAFFIC SHAPING",
+    "graph_name": "TRAFFIC SHAPING",
+    "node_id": "PMT_TRAFFIC_SHAPING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PACKET FILTERING",
+    "graph_name": "PACKET FILTERING",
+    "node_id": "PMT_PACKET_FILTERING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "BLACKHOLING",
+    "graph_name": "BLACKHOLING",
+    "node_id": "PMT_BLACKHOLING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "RANK CORRELATION",
+    "graph_name": "RANK CORRELATION",
+    "node_id": "PMT_RANK_CORRELATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "APPLICATION WHITELISTING",
+    "graph_name": "APPLICATION WHITELISTING",
+    "node_id": "PMT_APPLICATION_WHITELISTING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA BACKUPS",
+    "graph_name": "DATA BACKUPS",
+    "node_id": "PMT_DATA_BACKUPS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "HIDDEN MARKOV MODEL",
+    "graph_name": "HIDDEN MARKOV MODEL",
+    "node_id": "PMT_HIDDEN_MARKOV_MODEL",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "IDENTITY MANAGEMENT",
+    "graph_name": "IDENTITY MANAGEMENT",
+    "node_id": "PMT_IDENTITY_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "FILE INTEGRITY MONITORING",
+    "graph_name": "FILE INTEGRITY MONITORING",
+    "node_id": "PMT_FILE_INTEGRITY_MONITORING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "VPN",
+    "graph_name": "VPN",
+    "node_id": "PMT_VPN",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "PRIVACY PRESERVING",
+    "graph_name": "PRIVACY PRESERVING",
+    "node_id": "PMT_PRIVACY_PRESERVING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SANDBOXING",
+    "graph_name": "SANDBOXING",
+    "node_id": "PMT_SANDBOXING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "HONEYPOT",
+    "graph_name": "HONEYPOT",
+    "node_id": "PMT_HONEYPOT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DARKNET MONITORING",
+    "graph_name": "DARKNET MONITORING",
+    "node_id": "PMT_DARKNET_MONITORING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "VIRTUAL KEYBOARDS",
+    "graph_name": "VIRTUAL KEYBOARDS",
+    "node_id": "PMT_VIRTUAL_KEYBOARDS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SECURE BOOT",
+    "graph_name": "SECURE BOOT",
+    "node_id": "PMT_SECURE_BOOT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "CODE SIGNING",
+    "graph_name": "CODE SIGNING",
+    "node_id": "PMT_CODE_SIGNING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DYNAMIC BINARY INSTRUMENTATION",
+    "graph_name": "DYNAMIC BINARY INSTRUMENTATION",
+    "node_id": "PMT_DYNAMIC_BINARY_INSTRUMENTATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "GRAPHICAL MODEL",
+    "graph_name": "GRAPHICAL MODEL",
+    "node_id": "PMT_GRAPHICAL_MODEL",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SOFTWARE DEFINED NETWORK",
+    "graph_name": "SOFTWARE DEFINED NETWORK",
+    "node_id": "PMT_SOFTWARE_DEFINED_NETWORK",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "CERTIFICATE PINNING",
+    "graph_name": "CERTIFICATE PINNING",
+    "node_id": "PMT_CERTIFICATE_PINNING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SECURE SIMPLE PAIRING",
+    "graph_name": "SECURE SIMPLE PAIRING",
+    "node_id": "PMT_SECURE_SIMPLE_PAIRING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DATA AUGMENTATION",
+    "graph_name": "DATA AUGMENTATION",
+    "node_id": "PMT_DATA_AUGMENTATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DIMENSIONALITY REDUCTION",
+    "graph_name": "DIMENSIONALITY REDUCTION",
+    "node_id": "PMT_DIMENSIONALITY_REDUCTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DEFENSIVE DISTILLATION",
+    "graph_name": "DEFENSIVE DISTILLATION",
+    "node_id": "PMT_DEFENSIVE_DISTILLATION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "RRAM",
+    "graph_name": "RRAM",
+    "node_id": "PMT_RRAM",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SPATIAL SMOOTHING",
+    "graph_name": "SPATIAL SMOOTHING",
+    "node_id": "PMT_SPATIAL_SMOOTHING",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "NOISE INJECTION",
+    "graph_name": "NOISE INJECTION",
+    "node_id": "PMT_NOISE_INJECTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "LIVENESS DETECTION",
+    "graph_name": "LIVENESS DETECTION",
+    "node_id": "PMT_LIVENESS_DETECTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "3D FACE RECONSTRUCTION",
+    "graph_name": "3D FACE RECONSTRUCTION",
+    "node_id": "PMT_3D_FACE_RECONSTRUCTION",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "BIOMETRICS",
+    "graph_name": "BIOMETRICS",
+    "node_id": "PMT_BIOMETRICS",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "DIGITAL WATERMARK",
+    "graph_name": "DIGITAL WATERMARK",
+    "node_id": "PMT_DIGITAL_WATERMARK",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "SUPPLY CHAIN RISK MANAGEMENT",
+    "graph_name": "SUPPLY CHAIN RISK MANAGEMENT",
+    "node_id": "PMT_SUPPLY_CHAIN_RISK_MANAGEMENT",
+    "node_type": "pmt"
+  },
+  {
+    "canonical_name": "MERKLE SIGNATURE",
+    "graph_name": "MERKLE SIGNATURE",
+    "node_id": "PMT_MERKLE_SIGNATURE",
+    "node_type": "pmt"
+  }
+]
