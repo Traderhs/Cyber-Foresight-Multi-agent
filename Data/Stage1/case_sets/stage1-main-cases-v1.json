@@ -1,0 +1,101 @@
+{
+  "analysis_cutoff_date": "2024-12-31",
+  "case_set_version": "stage1-main-cases-v1",
+  "cases": [
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "coverage_rule": "anchor_exempt_from_regime_coverage_filter",
+      "pmt": "NLP/LLM",
+      "regime": null,
+      "selection_class": "predeclared_anchor",
+      "selection_reason": "Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.",
+      "threat": "DDoS"
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "coverage_rule": "anchor_exempt_from_regime_coverage_filter",
+      "pmt": "ANOMALY DETECTION",
+      "regime": null,
+      "selection_class": "predeclared_anchor",
+      "selection_reason": "Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.",
+      "threat": "Malware"
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "coverage_rule": "at_least_5_of_6_slots_and_4_source_families",
+      "pmt": "CRYPTOGRAPHY",
+      "regime": "large_gap_steep_slope",
+      "selection_class": "regime_representative",
+      "selection_reason": "Coverage-qualified representative of the large-gap/steep-slope regime. Selected before Stage 1 generation using only frozen Stage 0 forecast/evidence metadata.",
+      "threat": "Ransomware"
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "coverage_rule": "at_least_5_of_6_slots_and_4_source_families",
+      "pmt": "CRYPTOGRAPHY",
+      "regime": "large_gap_moderate_slope",
+      "selection_class": "regime_representative",
+      "selection_reason": "Coverage-qualified representative of the large-gap/moderate-slope regime, included to separate persistent structural imbalance from rapidly accelerating imbalance.",
+      "threat": "Insider Threat"
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "coverage_rule": "at_least_5_of_6_slots_and_4_source_families",
+      "pmt": "IDS/IPS",
+      "regime": "moderate_gap_steep_slope",
+      "selection_class": "regime_representative",
+      "selection_reason": "Coverage-qualified representative of the moderate-gap/steep-slope regime, included to test whether agents distinguish emerging escalation from already-large gaps.",
+      "threat": "Brute Force Attack"
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "coverage_rule": "at_least_5_of_6_slots_and_4_source_families",
+      "pmt": "ACCESS CONTROL",
+      "regime": "moderate_gap_low_slope",
+      "selection_class": "regime_representative",
+      "selection_reason": "Coverage-qualified representative of the moderate-gap/low-slope regime, included as a managed/stable trajectory rather than another escalation-heavy example.",
+      "threat": "Targeted Attack"
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "coverage_rule": "at_least_5_of_6_slots_and_4_source_families",
+      "pmt": "HTTPS",
+      "regime": "small_gap_low_or_negative_slope",
+      "selection_class": "regime_representative",
+      "selection_reason": "Coverage-qualified representative of the small-gap/low-or-negative-slope regime, included as a low-risk alignment control against high-gap and accelerating cases.",
+      "threat": "Session Hijacking"
+    }
+  ],
+  "evaluation_mode": "ex_ante_replay",
+  "gap_quantiles": {
+    "q25": -0.49900797901303073,
+    "q50": -0.09899536871089283,
+    "q75": 0.5164884419030555
+  },
+  "population_relation_count": 303,
+  "regime_definitions": {
+    "large_gap_moderate_slope": "mean_gap >= gap_Q75 and slope_Q25 <= slope < slope_Q75",
+    "large_gap_steep_slope": "mean_gap >= gap_Q75 and slope >= slope_Q75",
+    "moderate_gap_low_slope": "gap_Q25 < mean_gap < gap_Q75 and slope_Q25 <= slope < slope_Q50",
+    "moderate_gap_steep_slope": "gap_Q25 < mean_gap < gap_Q75 and slope >= slope_Q75",
+    "small_gap_low_or_negative_slope": "mean_gap <= gap_Q25 and slope < slope_Q50"
+  },
+  "regime_evidence_requirements": {
+    "min_covered_evidence_slots": 5,
+    "min_source_families": 4,
+    "total_evidence_slots": 6
+  },
+  "selection_constraints": [
+    "Stage 1 outputs are never used for case selection.",
+    "Two predeclared anchors are always retained, including low-evidence cases.",
+    "Five additional cases cover five distinct gap/slope regimes.",
+    "Regime representatives must cover at least 5 of 6 evidence slots and at least 4 source families.",
+    "The case set is frozen before main Stage 1 generation and is not re-selected from downstream results."
+  ],
+  "slope_quantiles": {
+    "q25": -0.11273098490753453,
+    "q50": 0.059498037847772245,
+    "q75": 0.2248009525173117
+  },
+  "snapshot_id": "stage0-2026-09-12-v2"
+}

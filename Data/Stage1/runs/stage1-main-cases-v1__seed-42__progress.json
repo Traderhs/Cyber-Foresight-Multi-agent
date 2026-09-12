@@ -1,0 +1,50 @@
+{
+  "analysis_cutoff_date": "2024-12-31",
+  "case_set_version": "stage1-main-cases-v1",
+  "cases": {
+    "main__ddos__nlp_llm": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Data\\Stage1\\artifacts\\main__ddos__nlp_llm\\c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-12T17:59:08.090573+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "exploitation_signal",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 702.793,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 1,
+      "input_fingerprint": "c24d18131be97fd733a9a6f9321e49904f968364d0a8e772e9b967fd45c9b00c",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "threat_capability_or_mechanism"
+      ],
+      "pmt": "NLP/LLM",
+      "regime": null,
+      "retrieved_evidence_count": 6,
+      "selection_class": "predeclared_anchor",
+      "source_family_count": 3,
+      "started_at": "2026-09-12T17:47:25.314517+00:00",
+      "status": "complete",
+      "threat": "DDoS"
+    },
+    "main__malware__anomaly_detection": {
+      "index": 2,
+      "pmt": "ANOMALY DETECTION",
+      "regime": null,
+      "selection_class": "predeclared_anchor",
+      "started_at": "2026-09-12T17:59:08.092054+00:00",
+      "status": "running",
+      "threat": "Malware"
+    }
+  },
+  "evaluation_mode": "ex_ante_replay",
+  "last_updated_at": "2026-09-12T17:59:08.092060+00:00",
+  "resume_contract": "Exact final artifacts are reused first. If a final artifact is absent, exact-fingerprint per-critic checkpoints are reused independently. Progress metadata never authorizes fallback.",
+  "seed": 42,
+  "snapshot_id": "stage0-2026-09-12-v2"
+}
