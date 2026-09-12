@@ -1,0 +1,4 @@
+requests>=2.32,<3
+beautifulsoup4>=4.13,<5
+PyMuPDF>=1.26,<2
+PyYAML>=6,<7
