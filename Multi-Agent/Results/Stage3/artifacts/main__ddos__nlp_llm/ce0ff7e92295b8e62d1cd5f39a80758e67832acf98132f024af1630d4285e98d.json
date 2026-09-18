@@ -1,0 +1,356 @@
+{
+  "artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__ddos__nlp_llm",
+  "created_at": "2026-09-15T09:17:19.001730+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__ddos__nlp_llm",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_NLP_LLM",
+          "action_name": "NLP/LLM",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_29_CD092D34A1331D02",
+            "E_33_ADC8BC66D812799F"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__ddos__nlp_llm",
+        "contradictory_evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_066AFE8300EDCEBB",
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA",
+          "E_04_892BBCAA3CE5CC92",
+          "E_08_3453329306E149CB",
+          "E_29_CD092D34A1331D02",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": -4.059099932537577,
+            "2026": -2.1582478095178823,
+            "2027": -2.847335460377081
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.6058822360802478,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.17610075047846324,
+            "direction": "decreasing",
+            "forecast_field_ids": [
+              "YF_PMT_NLP_LLM_2025-01",
+              "YF_PMT_NLP_LLM_2025-02",
+              "YF_PMT_NLP_LLM_2025-03",
+              "YF_PMT_NLP_LLM_2025-04",
+              "YF_PMT_NLP_LLM_2025-05",
+              "YF_PMT_NLP_LLM_2025-06",
+              "YF_PMT_NLP_LLM_2025-07",
+              "YF_PMT_NLP_LLM_2025-08",
+              "YF_PMT_NLP_LLM_2025-09",
+              "YF_PMT_NLP_LLM_2025-10",
+              "YF_PMT_NLP_LLM_2025-11",
+              "YF_PMT_NLP_LLM_2025-12",
+              "YF_PMT_NLP_LLM_2026-01",
+              "YF_PMT_NLP_LLM_2026-02",
+              "YF_PMT_NLP_LLM_2026-03",
+              "YF_PMT_NLP_LLM_2026-04",
+              "YF_PMT_NLP_LLM_2026-05",
+              "YF_PMT_NLP_LLM_2026-06",
+              "YF_PMT_NLP_LLM_2026-07",
+              "YF_PMT_NLP_LLM_2026-08",
+              "YF_PMT_NLP_LLM_2026-09",
+              "YF_PMT_NLP_LLM_2026-10",
+              "YF_PMT_NLP_LLM_2026-11",
+              "YF_PMT_NLP_LLM_2026-12",
+              "YF_PMT_NLP_LLM_2027-01",
+              "YF_PMT_NLP_LLM_2027-02",
+              "YF_PMT_NLP_LLM_2027-03",
+              "YF_PMT_NLP_LLM_2027-04",
+              "YF_PMT_NLP_LLM_2027-05",
+              "YF_PMT_NLP_LLM_2027-06",
+              "YF_PMT_NLP_LLM_2027-07",
+              "YF_PMT_NLP_LLM_2027-08",
+              "YF_PMT_NLP_LLM_2027-09",
+              "YF_PMT_NLP_LLM_2027-10",
+              "YF_PMT_NLP_LLM_2027-11",
+              "YF_PMT_NLP_LLM_2027-12"
+            ],
+            "forecast_mean_z": 3.0159703371547573,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.13940518516109757,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_DDOS_2025-01",
+              "YF_THREAT_DDOS_2025-02",
+              "YF_THREAT_DDOS_2025-03",
+              "YF_THREAT_DDOS_2025-04",
+              "YF_THREAT_DDOS_2025-05",
+              "YF_THREAT_DDOS_2025-06",
+              "YF_THREAT_DDOS_2025-07",
+              "YF_THREAT_DDOS_2025-08",
+              "YF_THREAT_DDOS_2025-09",
+              "YF_THREAT_DDOS_2025-10",
+              "YF_THREAT_DDOS_2025-11",
+              "YF_THREAT_DDOS_2025-12",
+              "YF_THREAT_DDOS_2026-01",
+              "YF_THREAT_DDOS_2026-02",
+              "YF_THREAT_DDOS_2026-03",
+              "YF_THREAT_DDOS_2026-04",
+              "YF_THREAT_DDOS_2026-05",
+              "YF_THREAT_DDOS_2026-06",
+              "YF_THREAT_DDOS_2026-07",
+              "YF_THREAT_DDOS_2026-08",
+              "YF_THREAT_DDOS_2026-09",
+              "YF_THREAT_DDOS_2026-10",
+              "YF_THREAT_DDOS_2026-11",
+              "YF_THREAT_DDOS_2026-12",
+              "YF_THREAT_DDOS_2027-01",
+              "YF_THREAT_DDOS_2027-02",
+              "YF_THREAT_DDOS_2027-03",
+              "YF_THREAT_DDOS_2027-04",
+              "YF_THREAT_DDOS_2027-05",
+              "YF_THREAT_DDOS_2027-06",
+              "YF_THREAT_DDOS_2027-07",
+              "YF_THREAT_DDOS_2027-08",
+              "YF_THREAT_DDOS_2027-09",
+              "YF_THREAT_DDOS_2027-10",
+              "YF_THREAT_DDOS_2027-11",
+              "YF_THREAT_DDOS_2027-12"
+            ],
+            "forecast_mean_z": -0.005590730322755747,
+            "state_modality": "NoI"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of NLP/LLM for the frozen DDoS forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "NLP/LLM",
+        "pmt_or_mitigation_id": "PMT_NLP_LLM",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.17610075047846324,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.13940518516109757
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "A direct GAP_DIRECTION assessment remains unavailable because direct evidence for both forecast-state modalities is absent.",
+            "No surfaced evidence directly reports a temporal change in DDoS incident count or frequency (NoI), so the forecasted increasing NoI threat state cannot be confirmed or challenged.",
+            "The increasing 2021-2024 NLP/LLM security publication trend and the forecasted decreasing PMT NoP trajectory remain unreconciled, but this does not determine the Attack stance.",
+            "The missing threat_capability_or_mechanism, mitigation_relation_or_control, and mitigation_implementation evidence slots remain unresolved, limiting operational interpretation of the threat-PMT gap."
+          ],
+          "defense_post_stance": -1,
+          "defense_post_unresolved_questions": [
+            "What direct evidence exists for a 2025-2027 decline in NLP/LLM security publication activity (NoP) that would reconcile the forecast PMT direction of decreasing with the observed 2021-2024 increasing Crossref trend?",
+            "What direct evidence exists for the threat NoI incident-count/frequency direction, because the surfaced DDoS evidence mainly reports attack bandwidth, vector growth, exploitation signal, or contextual hacktivist activity rather than NoI counts?",
+            "What mitigation-implementation or mitigation-relation/control evidence exists for NLP/LLM-based DDoS controls, and how would it affect the operational interpretation of the Threat-PMT gap?",
+            "What threat-capability or mechanism evidence links the observed DDoS activity specifically to NLP/LLM as the forecasted PMT, given the missing threat_capability_or_mechanism slot?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ_001",
+              "attack_claim_ids": [
+                "AF_C1"
+              ],
+              "defense_claim_ids": [
+                "D3"
+              ],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_02_066AFE8300EDCEBB supports the factual DBIR statements about DDoS attack-size growth and the conditional mitigation framing that a contracted service can absorb much of the impact. However, the surfaced evidence reports attack bandwidth/percentile growth, not a temporal change in DDoS incident count or frequency. The frozen threat-state modality is NoI, so AF_C1 is better grounded as operational interpretation/context rather than direct support for the forecasted increasing NoI threat state.",
+              "required_revision": "Revise AF_C1 to limit its forecast relation to NEUTRAL_CONTEXT or observed operational interpretation, explicitly stating that E_02_066AFE8300EDCEBB supports DDoS attack-size/bandwidth trend and mitigation-readiness context only, and does not establish the direction of NoI incident count/frequency."
+            },
+            {
+              "adjudication_id": "ADJ_002",
+              "attack_claim_ids": [
+                "AF_C2"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_02_066AFE8300EDCEBB supports the observed growth of distributed DNS Water Torture as a resource-exhaustion DDoS-like vector against shared DNS infrastructure. The source does not provide incident-count or frequency data for the NoI threat-state modality. Therefore AF_C2 is supported as an observed attack-vector/context claim, but its SUPPORTS_FORECAST relation overstates what the claim-local evidence establishes.",
+              "required_revision": "Revise AF_C2 to NEUTRAL_CONTEXT or observed_attack_vector context, stating that E_02_066AFE8300EDCEBB supports growth in distributed DNS Water Torture as an observed vector/resource-exhaustion pattern, but not direct NoI incident-count/frequency support."
+            },
+            {
+              "adjudication_id": "ADJ_003",
+              "attack_claim_ids": [
+                "AF_C3"
+              ],
+              "defense_claim_ids": [
+                "D4"
+              ],
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_08_3453329306E149CB supports the factual statement that CISA KEV records CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability allowing DDoS and provides mitigation guidance. The evidence contract permits confirmed exploitation only and prohibits prevalence magnitude and vulnerability severity. It does not establish a temporal NoI incident-count/frequency trend. D4's neutral-context framing is better grounded for the current frozen state modalities.",
+              "required_revision": "Revise AF_C3 to NEUTRAL_CONTEXT or exploitation-signal/mechanism context, explicitly stating that E_08_3453329306E149CB supports confirmed exploitation and mitigation guidance only, and does not establish NoI direction, prevalence magnitude, or vulnerability severity."
+            },
+            {
+              "adjudication_id": "ADJ_004",
+              "attack_claim_ids": [
+                "AF_C6"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_ADC8BC66D812799F explicitly supports the cutoff-constrained 2021-2024 NLP/LLM security publication counts, OLS slope, first-to-last delta, and its own limitation that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because the frozen PMT state modality is NoP and the forecast PMT direction is decreasing, this increasing publication-activity trend is a legitimate challenge to the forecasted PMT NoP trajectory. Both critics are correctly bounded to publication-activity validation rather than deployment or effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_005",
+              "attack_claim_ids": [
+                "AF_C4"
+              ],
+              "defense_claim_ids": [
+                "D6"
+              ],
+              "evidence_ids": [
+                "E_03_06E6ABC42DA3AC77",
+                "E_03_F13F996D181217BA"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_03_06E6ABC42DA3AC77 and E_03_F13F996D181217BA support DDoS as an example of destructive operations and reported hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations. These are neutral observed-threat context records and do not establish the frozen NoI incident-count/frequency direction.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_006",
+              "attack_claim_ids": [
+                "AF_C5"
+              ],
+              "defense_claim_ids": [
+                "D5"
+              ],
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_04_892BBCAA3CE5CC92 supports the observed hacktivism context related to the Israel-Hamas conflict and the X-Force recommendations for DDoS mitigation readiness, including contacting a DDoS mitigation provider and maintaining incident-response readiness. This is defense-readiness and threat-context evidence, not direct evidence for NoI direction or for NLP/LLM PMT deployment/effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_007",
+              "attack_claim_ids": [],
+              "defense_claim_ids": [
+                "D2"
+              ],
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "outcome": "ACCEPT_DEFENSE",
+              "rationale": "E_33_ADC8BC66D812799F explicitly states that the Crossref record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. D2 correctly limits the evidentiary role of the publication trend.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ_001",
+              "attack_claim_ids": [
+                "AF_C1"
+              ],
+              "defense_claim_ids": [
+                "D3"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise AF_C1 to limit its forecast relation to NEUTRAL_CONTEXT or observed operational interpretation, explicitly stating that E_02_066AFE8300EDCEBB supports DDoS attack-size/bandwidth trend and mitigation-readiness context only, and does not establish the direction of NoI incident count/frequency."
+            },
+            {
+              "adjudication_id": "ADJ_002",
+              "attack_claim_ids": [
+                "AF_C2"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise AF_C2 to NEUTRAL_CONTEXT or observed_attack_vector context, stating that E_02_066AFE8300EDCEBB supports growth in distributed DNS Water Torture as an observed vector/resource-exhaustion pattern, but not direct NoI incident-count/frequency support."
+            },
+            {
+              "adjudication_id": "ADJ_003",
+              "attack_claim_ids": [
+                "AF_C3"
+              ],
+              "defense_claim_ids": [
+                "D4"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise AF_C3 to NEUTRAL_CONTEXT or exploitation-signal/mechanism context, explicitly stating that E_08_3453329306E149CB supports confirmed exploitation and mitigation guidance only, and does not establish NoI direction, prevalence magnitude, or vulnerability severity."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [],
+        "threat": "DDoS",
+        "threat_id": "THREAT_DDOS",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_NLP_LLM",
+        "action_name": "NLP/LLM",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_29_CD092D34A1331D02",
+          "E_33_ADC8BC66D812799F"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": []
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "4f1aa58c04997eccedea420ef31d14ec049d0dbdf6841d449ca8dcbde8e6f1f5",
+  "stage2_artifact_sha256": "7cb3391e413c846fc442ed1be0c46cd0090f43fa8ea8cbc9a3905b8c8fb13343",
+  "stage2_output_sha256": "f553c642a02e1309f966333242f66cf4569756c033db6e6c5af01f2102c804b2",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "NLP/LLM",
+    "region": null,
+    "threat": "DDoS"
+  },
+  "stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2"
+}

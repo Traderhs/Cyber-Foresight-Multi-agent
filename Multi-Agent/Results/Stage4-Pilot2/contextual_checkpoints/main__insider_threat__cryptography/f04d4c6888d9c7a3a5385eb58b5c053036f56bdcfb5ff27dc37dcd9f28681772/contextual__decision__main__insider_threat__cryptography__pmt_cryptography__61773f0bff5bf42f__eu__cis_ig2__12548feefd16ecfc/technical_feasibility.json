@@ -1,0 +1,84 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied decision evidence treats cryptography/encryption as an actionable technical control: properly configured and up-to-date SSL/TLS is utilized to protect data in transit when technically feasible, and organizations should plan to identify and update outdated or weak encryption to sufficiently strong algorithms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "E_25_172BD812783415C9",
+          "E_25_A1044C34BD8DBDFA"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied decision evidence describes integrable cryptographic mechanisms for network and access-control contexts: cryptographic encapsulation between organization-controlled endpoints provides the same effect at least regarding confidentiality and integrity, and authorization information can be transmitted securely using cryptographic mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "E_26_A710FE8084614182",
+          "E_26_B2995F657787797A",
+          "E_26_31F09DD7BB81D0F1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Operational use of cryptography in the supplied assessment records requires defining cryptographic uses and types, implementing the selected cryptography, maintaining cryptographic key-management mechanisms, and testing or assessing cryptographic mechanisms, including cryptographic protection of audit information where applicable.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied guidance conditions encryption deployment on technical feasibility and states that, for OT communications, encryption is used when feasible, usually for OT communications connecting with remote or external assets, to minimize impact to latency and availability.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-5",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied publication-trend record reports increasing Crossref publication activity for CRYPTOGRAPHY from 2021 to 2024, but explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Confirm that the intended data flows or systems are technically feasible for SSL/TLS or the selected cryptographic mechanism before deployment. (TF-1; E_23_534489D29C38B327)",
+      "Define the cryptographic uses and types, implement the selected cryptography, and establish key-management and audit-protection mechanisms where cryptography is used. (TF-3; E_26_A710FE8084614182, E_26_B2995F657787797A)",
+      "Evaluate latency and availability impact for OT or similar sensitive communications and apply encryption only where feasible, typically remote or external communications if performance constraints exist. (TF-4; E_23_534489D29C38B327)",
+      "Obtain deployment-specific architecture, protocol, performance, and key-management context before converting the general feasibility assessment into a deployment-specific conclusion."
+    ],
+    "constraints": [
+      "General feasibility is conditional on the target system being technically capable of supporting the intended SSL/TLS or other cryptographic mechanism, as reflected by the 'when technically feasible' condition in the supplied CPG record. (TF-1; E_23_534489D29C38B327)",
+      "Operational burden is constrained by the need for defined cryptographic uses and types, key-management controls, and assessment/testing of cryptographic mechanisms, including protection of audit information where applicable. (TF-3; E_26_A710FE8084614182, E_26_B2995F657787797A, E_26_31F09DD7BB81D0F1)",
+      "In OT or latency/availability-sensitive contexts, the supplied record limits encryption to feasible uses, usually remote or external OT communications, to avoid impact to latency and availability. (TF-4; E_23_534489D29C38B327)"
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__12548feefd16ecfc",
+    "evidence_gaps": [
+      "No supplied record provides the concrete architecture, protocol inventory, endpoint/system compatibility, or network segmentation needed to conclude deployment-specific integration compatibility.",
+      "No supplied record provides the current key-management/PKI or cryptographic inventory, data classification, or traffic performance requirements for the frozen reference environment.",
+      "No supplied record provides a measured deployment-maturity observation, exact implementation timeline, or operational-effectiveness result for CRYPTOGRAPHY against the 2025-2027 forecast horizon."
+    ],
+    "evidence_sufficiency": "SUFFICIENT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The frozen CRYPTOGRAPHY action is generally technically feasible under the supplied decision evidence. Stage-4 decision records describe actionable encryption/TLS practices, integrable cryptographic mechanisms for confidentiality, integrity, and authorization transmission, and key-management/assessment requirements. The evidence also conditions deployment on technical feasibility, performance, and OT constraints. Because the supplied records do not provide deployment-specific architecture, protocol, performance, or key-management details, deployment-specific operability remains conditional and indeterminate.",
+    "stance": 1
+  },
+  "assessment_sha256": "1b613848d2a9211dc7fd28fc033c1b527912933fc84f71337e2efc351d9f7dce",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "7964ebeb42c70ceb1b1edf1572d9c6d8b34e3f6e1144e1c7b46607862b10ed3e",
+  "created_at": "2026-09-14T12:54:17.301304+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__12548feefd16ecfc",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "technical_feasibility",
+  "scenario_id": "EU__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

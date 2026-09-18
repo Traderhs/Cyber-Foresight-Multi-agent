@@ -1,0 +1,78 @@
+{
+  "decision_architecture_variants": [
+    {
+      "description": "Current contextual Stage 4 information-isolated three-lens evaluation with the frozen upstream Stage 1-3 chain and deterministic downstream policy held fixed.",
+      "variant_id": "FULL_REDESIGNED_PIPELINE"
+    },
+    {
+      "description": "Joint three-lens Stage 4 single-agent baseline over the same frozen contextual DecisionObjects/evidence and the same deterministic downstream policy.",
+      "variant_id": "SINGLE_AGENT_BASELINE"
+    }
+  ],
+  "decision_policy_variants": [
+    {
+      "description": "Technical and Institutional are critical feasibility gates; Financial is the adoption gate.",
+      "policy_id": "MAIN_ROLE_BASED_GATE_V1"
+    },
+    {
+      "description": "Critical gates retain the main semantics, but unresolved Financial/Adoption yields HOLD instead of RECOMMEND_PILOT.",
+      "policy_id": "ALT_STRICT_ADOPTION_V1"
+    },
+    {
+      "description": "If both critical gates are supported, Financial/Adoption challenge or unresolved status is limited to RECOMMEND_PILOT rather than HOLD.",
+      "policy_id": "ALT_PERMISSIVE_PILOT_V1"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "A",
+      "name": "Robustness",
+      "requires": [
+        "prompt_paraphrase_variant_artifacts"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Decision architecture and cost",
+      "requires": [
+        "single_agent_baseline",
+        "main_artifacts",
+        "run_logs"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Context contribution",
+      "requires": [
+        "main_artifacts",
+        "context_free_variant_artifacts"
+      ]
+    }
+  ],
+  "harness_version": "stage7-validation-harness-v10",
+  "manifest_version": "stage7-experiment-manifest-v11",
+  "manual_audit_per_stratum": 2,
+  "manual_audit_selection_seed": 20260916,
+  "mediator_audit_include_all_followup_rounds": true,
+  "mediator_audit_per_case_outcome_stratum": 1,
+  "mediator_audit_selection_seed": 20260916,
+  "prompt_paraphrase_variants": [
+    {
+      "description": "Canonical main prompt wording used by the frozen Stage 1-6 run.",
+      "variant_id": "P1_CANONICAL"
+    },
+    {
+      "description": "Semantically equivalent wording that asks for evidence inventory and boundaries before role judgment while preserving the same output contract and evidence access.",
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "description": "Semantically equivalent wording that states the role decision question first and then the same evidence, modality, temporal, and provenance constraints.",
+      "variant_id": "P3_DECISION_FIRST"
+    }
+  ],
+  "sensitivity_case_ids": [
+    "main__ddos__nlp_llm",
+    "main__malware__anomaly_detection",
+    "main__session_hijacking__https"
+  ]
+}

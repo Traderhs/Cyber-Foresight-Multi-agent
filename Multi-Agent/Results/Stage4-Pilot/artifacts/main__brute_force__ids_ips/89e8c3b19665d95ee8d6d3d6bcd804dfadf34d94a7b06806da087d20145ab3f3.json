@@ -1,0 +1,374 @@
+{
+  "artifact_sha256": "0b1a4d640818597b3653239bd0f06c9e84410ed2d233bc7da51eccff40822d93",
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_output_schema_sha256": {
+    "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c": {
+      "financial_adoption": "b3c00c2f63cd7ec581c44e9a10294c5ccb6f85baca61e8cfb763bc9cfd081833",
+      "institutional_regional": "1867503adffd55536b85c5e76d1166165ba709f144b93d6ad3d0a5ae49756455",
+      "technical_feasibility": "9199067a2d6048ca220bd816ac5da55674ad3100083c0f77e41b9323304bbe9a"
+    }
+  },
+  "created_at": "2026-09-14T05:01:30.411812+00:00",
+  "decision_object_payload_sha256": {
+    "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c": "c3b1ed875d0c95091f9378d8e033bdb252bd8e2271a6aca9f71201c11c7e17b6"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__brute_force__ids_ips",
+    "evaluations": [
+      {
+        "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "F1",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained record reports annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14, and states that this is a publication-activity signal that does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F2",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The MITRE ATT&CK mitigation record describes implementation measures for remote data storage that include forwarding logs from IDS/IPS systems to a remote security information system, centralized log management, remote file storage, immutable backup configurations, and encryption/access-control measures; it does not provide cost, staffing, budget, opportunity-cost, or implementation-timing data for adopting IDS/IPS.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F3",
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA Cybersecurity Performance Goals and NIST SP 800-53 Rev.5 records describe brute-force-relevant recommended controls, including MFA prioritization, alerting after consecutive unsuccessful login attempts, unique credential provisioning, and automatic lockout or delay mechanisms; these records do not provide IDS/IPS adoption cost, staffing, budget, opportunity-cost, or implementation-timing data.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F4",
+              "evidence_ids": [
+                "E_02_669F59880AF52688",
+                "E_03_C54C5F099169E020",
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DBIR and Mandiant records describe brute force as observed threat context or observed adversary behavior, including password guessing and brute forcing of credentials, but they do not provide financial or organizational adoption data for IDS/IPS.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "F5",
+              "evidence_ids": [
+                "E_04_02D425B67E57F32D",
+                "E_29_8E495DC2A98305B1",
+                "E_29_BAD6581A8E96027C",
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "scope": "GENERAL",
+              "statement": "The IBM X-Force record and the academic metadata records are threat-context or IDS/IPS publication-metadata records and do not provide cost, staffing, budget, opportunity-cost, or implementation-timing data for IDS/IPS adoption.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption feasibility conclusion requires explicit budget, organization type, infrastructure, staffing, contract/licensing, and implementation-timing context.",
+            "If existing IDS/IPS, SIEM, log management, or network monitoring capabilities are present, the assessment must state whether they can be extended without additional resources; current evidence does not establish this.",
+            "If no existing capability exists, the assessment must state the required configuration, integration, tuning, and operational staffing; current evidence does not provide that detail.",
+            "A deployment-specific judgment should include cost/staffing data for IDS/IPS and relevant alternative brute-force controls; current records do not contain such data.",
+            "Any deployment-specific conclusion must distinguish between initial implementation burden and ongoing operational burden; current evidence does not quantify either."
+          ],
+          "constraints": [
+            "The Crossref publication trend is limited to publication activity and cannot be treated as evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "The official control records are to be treated as control context, not as evidence of exact control effectiveness or product ROI.",
+            "No supplied record provides exact cost, budget, staffing, ROI, TCO, opportunity-cost, or implementation-timing values for IDS/IPS adoption.",
+            "Deployment-specific financial or adoption feasibility cannot be inferred without budget, organization type, infrastructure, staffing, contract, and implementation-timing context."
+          ],
+          "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+          "evidence_gaps": [
+            "Missing budget_context: no budget size, funding constraints, capital or operational expenditure limits, or procurement constraints are supplied.",
+            "Missing organization_type: no sector, size, existing security maturity, or operational risk posture is supplied.",
+            "Missing infrastructure_context: no existing network architecture, existing IDS/IPS, SIEM, log-management, or monitoring capability is supplied.",
+            "Missing staffing_context: no available personnel, skills, roles, operational burden, or vendor support is supplied.",
+            "Missing contract or licensing context: no procurement, licensing, vendor, or operational maintenance obligations are supplied.",
+            "Missing implementation-timing context beyond the frozen 2025-2027 window: no deployment schedule, lead time, integration window, or operational readiness deadline is supplied.",
+            "Missing opportunity-cost context: no alternative controls, resource trade-offs, or comparative cost/staffing data are supplied."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "Under the Financial / Adoption Feasibility lens, the frozen IDS/IPS action cannot be judged as realistically adoptable or unadoptable. The supplied evidence contains some general context relevant to adoption burden, but it does not contain the financial, staffing, budget, opportunity-cost, or implementation-timing information needed to make a deployment-specific feasibility judgment. E_33_A707006877BFD1C2 reports an increasing Crossref publication-activity trend for IDS/IPS from 2021 to 2024, but the record explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. E_12_D8076704AE363FE2 describes implementation measures that can include forwarding IDS/IPS logs to a remote security information system and using centralized log management, which indicates a possible operational integration dimension, but it does not provide cost, staffing, budget, or timeline data. The CISA and NIST records describe brute-force-relevant controls such as MFA prioritization, failed-login alerting, unique credential provisioning, and lockout or delay mechanisms, but they do not quantify the cost or staffing burden of adopting IDS/IPS. The DBIR and Mandiant records describe brute force as observed threat context or an observed initial infection vector, not as financial or organizational adoption evidence. The remaining supplied records are threat-context or academic metadata records and also do not provide adoption cost, staffing, budget, opportunity-cost, or timing data. Because the frozen deployment context has null budget, organization type, infrastructure, and region fields, a deployment-specific conclusion would require guessing. Therefore, the direction of feasibility is indeterminate under this lens.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF-C1",
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied CISA Cybersecurity Performance Goals record presents MFA as a recommended control for IT and OT accounts, with prioritization of higher-risk accounts, and maps the practice to Brute Force, Valid Accounts, and External Remote Services techniques.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C2",
+              "evidence_ids": [
+                "E_23_B21FAA9377991F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied CISA Cybersecurity Performance Goals record describes alerting after consecutive unsuccessful login attempts and system-enforced login prevention for IT assets, mapped to Brute Force subtechniques T1110.001 through T1110.004.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C3",
+              "evidence_ids": [
+                "E_23_EBCAB9508641E703"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied CISA Cybersecurity Performance Goals record describes provisioning unique and separate credentials for IT and OT asset access, mapped to Valid Accounts and Brute Force subtechniques.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C4",
+              "evidence_ids": [
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53 Rev.5 record discusses automatic account lockout or execution of a delay algorithm, with alternative actions when those are not implemented, to help prevent brute force attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C5",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied MITRE ATT&CK record associated with PMT_IDS_IPS describes an intrusion detection log-forwarding measure, including forwarding logs from IDS/IPS systems to a remote security information system.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C6",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same supplied MITRE ATT&CK record includes remote data storage data-protection language, including encryption at rest, TLS in transit, access control policies, and immutable backup settings.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-C7",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied Crossref trend record reports IDS/IPS annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14, and explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-C8",
+              "evidence_ids": [
+                "E_29_8E495DC2A98305B1",
+                "E_29_BAD6581A8E96027C",
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied Crossref academic metadata records reference IDS/IPS-related works associated with named venues/institutions including Scientific Journals of Rzeszów University of Technology, the Institute of Physics of the National Academy of Sciences of Azerbaijan, and Indonesian Journal of Computer Science; these records establish publication metadata only.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If deployment-specific institutional feasibility is to be assessed, evidence must identify the target region's applicable regulatory and institutional regime for IDS/IPS, including whether IDS/IPS is permitted, prohibited, or mandated.",
+            "If IDS/IPS logs are forwarded to remote or centralized storage, evidence must identify the target organization's data governance constraints for log residency, cross-border transfer, retention, encryption, access control, and recipient authorization.",
+            "If CISA CPG or NIST SP 800-53 adoption is relevant, evidence must identify whether the organization is required to implement the referenced controls and what compliance documentation would be needed.",
+            "Evidence of organizational implementation capacity, procurement authority, and integration constraints is required to distinguish general feasibility from deployment-specific institutional feasibility."
+          ],
+          "constraints": [
+            "The supplied official guidance records provide recommended control or control-discussion language, not evidence of a target-region legal mandate, prohibition, or compliance obligation.",
+            "The supplied Crossref records establish publication metadata or publication trend only, and do not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, or regional regulatory feasibility.",
+            "The supplied MITRE ATT&CK record describes technical log-forwarding and data-protection language, but it does not establish target-region data sovereignty, cross-border transfer, or institutional data-governance constraints."
+          ],
+          "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+          "evidence_gaps": [
+            "The frozen deployment_context has region, organization_type, infrastructure_context, and budget_context all null, so deployment-specific regional regulatory and institutional feasibility cannot be assessed.",
+            "No supplied record identifies the target jurisdiction, sector, or institutional regime applicable to IDS/IPS deployment.",
+            "No supplied record identifies whether IDS/IPS log collection, storage, or forwarding would trigger data residency, cross-border transfer, retention, privacy, or security-oversight requirements.",
+            "No supplied record quantifies compliance, procurement, staffing, maintenance, or integration burden specific to IDS/IPS in the target institution.",
+            "No supplied record establishes whether the academic venues or publication trend indicate regional regulatory acceptance or institutional feasibility."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the institutional/regional lens, the frozen IDS/IPS action cannot be judged materially supported or challenged because the deployment context does not identify a target region, organization type, infrastructure context, or budget context. The supplied records provide only general institutional context: CISA CPG and NIST SP 800-53 records describe brute-force-related control practices; a MITRE ATT&CK record associated with PMT_IDS_IPS describes IDS/IPS log forwarding and data-protection language; and Crossref records establish IDS/IPS publication metadata and a positive publication trend. These records support the general recognizability of IDS/IPS in security governance and academic literature, but they do not establish regulatory compatibility, data sovereignty, cross-border constraints, compliance burden, or institution-specific implementation barriers. Because the target jurisdiction and institutional setting are absent, region-specific feasibility cannot be inferred from the supplied evidence.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-1",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "Crossref records show IDS/IPS publication activity of 44 works in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, but the record explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-2",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The MITRE ATT&CK M1029 record describes forwarding logs from IDS/IPS systems, such as Zeek or Suricata, to a remote security information system, including an example Suricata syslog-over-TLS output configuration.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-3",
+              "evidence_ids": [
+                "E_29_BAD6581A8E96027C"
+              ],
+              "scope": "GENERAL",
+              "statement": "A Crossref academic metadata record includes an abstract describing testing of Suricata in both IDS and IPS modes for a computing cluster, including installation, configuration, CPU utilization and load average monitoring, and optimization of operating modes based on hardware resources such as core count.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-4",
+              "evidence_ids": [
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "scope": "GENERAL",
+              "statement": "A Crossref academic metadata record includes an abstract describing implementation and configuration of IDS/IPS with Telegram notification, intended to detect potential intrusions, actively prevent attacks, and provide real-time alerts for administrator response.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-5",
+              "evidence_ids": [
+                "E_23_B21FAA9377991F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance describes notifying security teams after a defined number of consecutive unsuccessful login attempts and system-enforced login prevention for IT assets, mapped to Brute Force subtechniques T1110.001 through T1110.004.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-6",
+              "evidence_ids": [
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 discusses automatic account lockout or delay algorithms in the context of helping prevent brute force attacks, and describes alternative actions if automatic lockout or delay is not implemented.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-7",
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DBIR record reports that threat actors brute force default, simplistic, or easily guessable credentials, and lists relevant ATT&CK techniques including Brute Force T1110 and its subtechniques.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-8",
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "scope": "GENERAL",
+              "statement": "Mandiant M-Trends reports observed password guessing attacks against cloud sign-in portals aimed at identifying accounts without MFA configured.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-9",
+              "evidence_ids": [
+                "E_29_8E495DC2A98305B1"
+              ],
+              "scope": "GENERAL",
+              "statement": "A Crossref academic metadata record identifies a publication titled 'Efficiency test of IDS/IPS systems against DOS and DDOS attacks'.",
+              "status": "SUPPORTS_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "The feasibility conclusion must remain GENERAL until deployment_context is supplied.",
+            "A deployment-specific conclusion would require infrastructure_context details such as network topology, IDS/IPS placement, passive versus inline capability, traffic volume, hardware/software constraints, latency/availability requirements, and existing authentication/log/SIEM integration points.",
+            "For brute-force technical fit, the evaluation should consider authentication event alerting, consecutive failed-login alerting, and account lockout or delay controls described in the supplied CISA and NIST records, without asserting exact effectiveness.",
+            "For integration feasibility, the evaluation should consider IDS/IPS log forwarding to a remote security information system as described in the supplied MITRE ATT&CK M1029 record.",
+            "For operational tuning, the evaluation should consider hardware-resource-based mode optimization and CPU load monitoring as described in the supplied Suricata academic metadata record.",
+            "For notification and response integration, the evaluation should consider real-time IDS/IPS notification options as described in the supplied Telegram-notification academic metadata record."
+          ],
+          "constraints": [
+            "TF-1 limits the Crossref publication-trend evidence to publication activity; it cannot be used to establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "TF-2 supports log-forwarding integration but does not establish that IDS/IPS prevents or detects brute force attacks.",
+            "TF-3 and TF-4 are academic metadata/abstract descriptions; they support implementation and configuration considerations but do not establish deployment maturity or operational effectiveness.",
+            "TF-5 and TF-6 support authentication-related alerting and lockout/delay controls, but they do not establish exact control effectiveness.",
+            "TF-7 and TF-8 describe observed brute force/password guessing behavior; they provide threat-context fit but do not establish IDS/IPS-specific technical effectiveness against brute force.",
+            "Deployment-specific compatibility cannot be concluded because the frozen DecisionObject leaves budget_context, infrastructure_context, organization_type, and region unspecified."
+          ],
+          "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+          "evidence_gaps": [
+            "No supplied evidence directly establishes brute-force-specific IDS/IPS detection or prevention effectiveness.",
+            "No supplied evidence provides deployment-specific network placement, inline IPS capability, throughput, latency, availability, or hardware constraints.",
+            "No supplied evidence details the target organization's existing authentication systems, log sources, SIEM, or alerting pipelines.",
+            "No supplied evidence provides exact implementation timelines, vendor/product selection, product versions, budget, or jurisdiction-specific obligations.",
+            "No supplied evidence establishes scalability of IDS/IPS under the unknown deployment's traffic volume or operational profile."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the Technical Feasibility lens, the supplied evidence supports general technical implementation, integration, and tuning examples for IDS/IPS, including log forwarding, academic IDS/IPS configuration examples, and alerting or lockout controls relevant to brute-force authentication abuse. However, the frozen deployment context lacks infrastructure details, and the supplied evidence does not establish brute-force-specific IDS/IPS detection or prevention effectiveness. Therefore technical feasibility is indeterminate under this lens: general implementability is supported, but deployment-specific feasibility cannot be concluded.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "89e8c3b19665d95ee8d6d3d6bcd804dfadf34d94a7b06806da087d20145ab3f3",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "2b0f1c988b6e69eca684aa58af4845709b9606c1462e619f9eb69ccfbd3e650d",
+    "institutional_regional_system_prompt_sha256": "4642d85804f50bd8e077aec1f9f5de89854abbd00d9c1e0fae16f7e20cb431f4",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "42292179008af427c77e9fe5294c40ff49f4108912f5959f33b0c1fdca2fa1ad"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage4-artifact-v1",
+  "semantic_validation_version": "stage4-semantic-validation-v1",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "6058219ac145f10e6a0a2cc48eb12c0a6bfed8f0e9e82ee3bf0f427a64e738b0",
+  "stage3_artifact_sha256": "e478df3ca50cb1cbf0cb6192c3c1bf4129451a4cfd082e0feadd10f39a944eae",
+  "stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+  "stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+  "stage4_output_sha256": "385bf4f7f3dd8f5ff68a24fc13b9e0a3726ea2512b241f6ba65d11958ca385cc"
+}

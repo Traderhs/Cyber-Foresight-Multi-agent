@@ -1,0 +1,131 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CL1",
+        "evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied action-specific record supports a general technical-enablement direction for HTTPS/TLS by reporting that a 2024 session-hijacking study treats encrypted web communication and related secure-session practices as concrete countermeasures against interception-oriented hijacking and supports HTTPS/TLS as an important transport-layer control within a broader session-protection strategy.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CL2",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied action-specific record provides a general technical-limitation direction by reporting that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists and that HTTPS alone cannot cover all session-hijacking paths, including scenarios in which existing session protections are ineffective against user-level malware.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CL3",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied SSL VPN case study is eligible only as deployment_maturity context: it describes planning, design, and prototype implementation of an SSL VPN solution using commonly available equipment and software, but it does not by itself establish a directional feasibility conclusion for HTTPS under the grounding contract.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC technical feasibility conclusion would require exact supplied evidence on local network/application architecture and whether the environment can support the HTTPS/TLS session protections under evaluation.",
+      "A sufficiency conclusion for session-hijacking mitigation would require supplied evidence on residual token-theft paths in the local environment and the availability of complementary session controls, without assuming exact products, versions, or vendors."
+    ],
+    "constraints": [
+      "HTTPS/TLS is supported as a transport-layer control within a broader session-protection strategy, not as a complete solution for every session-hijacking path.",
+      "The challenge evidence limits the threat-mitigation fit of HTTPS alone where session tokens can be exposed after transport encryption, such as through XSS or malicious browser extensions.",
+      "No deployment-specific compatibility conclusion can be drawn from the supplied records because the frozen infrastructure context does not report local architecture, TLS termination points, application session-management design, certificate infrastructure, or client/browser environment."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No supplied record establishes whether HTTPS has been deployed, enforced, or operationally effective in the frozen enterprise by the cutoff or within the 2025-2027 horizon.",
+      "No supplied record provides post-cutoff session-hijacking exploitation signal or effectiveness measurements for HTTPS against the frozen threat.",
+      "The region is masked and no jurisdiction-specific technical evidence is supplied, so no region-driven technical feasibility direction can be inferred."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The grounded general technical_enablement record supports HTTPS/TLS as a relevant transport-layer countermeasure for interception-oriented session hijacking, while the grounded general technical_limitation record shows that HTTPS alone does not cover all session-hijacking paths. The eligible deployment_maturity record supplies only non-directional implementation context. Because the frozen infrastructure context does not report exact local architecture or operational-effectiveness detail, the technical feasibility direction remains mixed at GENERAL scope rather than decisively supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "f568cbfbc7ba446958f2b519b356b3120448de582298bdce769a888e623fa643",
+  "checkpoint_sha256": "bf97ee8157db538230d91eef2bf94743102196d693eb41b3496fba869be71b37",
+  "created_at": "2026-09-16T13:41:23.558475+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE07C_9CBF5980D3BA474A",
+        "AE07S_C1EF15B9628497F0",
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "596d39dce8495a26c4d523701e1e57ab0de8cfefc397b8ebfdfa0cc81a4a634f",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "25d733ad81d08637efd5f2461ac855920126361a00f6bfe21672a66335e3fdba",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "861f8378e4d0c581dc1985dfd63b54984fc8f42accb084ab13c3a73c8240202e",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "7e12d4d15ecef41e25aca5d492db5b0eaa8c749d0b2d1a3efcfc1b738a4e9b23",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

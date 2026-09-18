@@ -1,0 +1,168 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IRF-C1",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev. 5 provides assessment objectives and potential methods for SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection, including examination of policies/procedures, system audit records, cryptographic module validation certificates, interviews, and testing of mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-C2",
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST CSF 2.0 describes organizational-profile steps—scoping, gathering information, creating the profile, gap analysis, action planning, implementation, and continual improvement—and gives an example profile scoped to countering ransomware threats and handling ransomware incidents involving financial systems.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-C3",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG excerpt describes the Cross-Sector Cybersecurity Performance Goals as an approachable common set of IT and OT cybersecurity protections that are clearly defined, straightforward to implement, and aimed at common and impactful cyber risks, while referencing ransomware among unprecedented cyber threats.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-C4",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG excerpt reports that small- and medium-sized hospitals and utilities ask how they can make progress with limited budgets, staffing, and expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IRF-C5",
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST SP 800-53 Rev. 5 excerpt lists ransomware attacks that encrypt organizational data on servers as an example of actual threat events in a contingency-planning context.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IRF-C6",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied EU NIS2 recital states that Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IRF-C7",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 describes cryptographic hashes/checksums and digital signatures as mechanisms for metadata linkage, tamper-evidence, and attribution, including assurance that the claimed signatory signed and the information was not modified after signature generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the deployment region is the EU, re-evaluate institutional/regional feasibility using EU legal requirements and region-specific data-sovereignty/cross-border evidence; current E_31 only provides ransomware policy context.",
+      "If the deployment organization adopts NIST SP 800-53A or NIST CSF 2.0, the cited records provide assessment and governance pathways, but they do not by themselves prove adoption or sufficiency.",
+      "If cryptographic key management involving external service providers is in scope, E_26 provides relevant SC-12(06) assessment context, but no deployment-specific requirement is established.",
+      "If resource constraints are material to the deployment, budget, staffing, and expertise evidence specific to the organization and region is required."
+    ],
+    "constraints": [
+      "The cited enablement claims are general governance/auditability context, not evidence that the frozen organization will adopt or can implement the action (IRF-C1, IRF-C2, IRF-C3, IRF-C7).",
+      "The cited regional regulatory record is IRF-C6, an EU NIS2 recital; because the frozen region is null, it is not a deployment-specific constraint.",
+      "The resource-constraint claim from CISA is general organizational context, not a deployment-specific barrier because organization_type and budget_context are null (IRF-C4).",
+      "Deployment-specific institutional/regional constraints are not established by the cited claims due to missing frozen deployment context."
+    ],
+    "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+    "evidence_gaps": [
+      "Target region is absent in deployment_context; jurisdiction-specific regulatory compatibility, data sovereignty, and cross-border constraints cannot be assessed.",
+      "organization_type, infrastructure_context, and budget_context are absent; deployment-specific institutional capacity, governance capacity, and compliance burden cannot be assessed.",
+      "No supplied evidence addresses mandatory regional obligations for CRYPTOGRAPHY in the unknown target region.",
+      "No supplied evidence addresses data sovereignty or cross-border data/key-management constraints for the frozen deployment.",
+      "No supplied evidence connects the EU NIS2 recital to specific cryptographic compliance obligations, and the frozen region is not established as EU.",
+      "No supplied evidence connects the Crossref publication trend or static Crossref metadata to institutional/regional feasibility, regulatory compatibility, or deployment readiness.",
+      "No supplied evidence quantifies compliance burden or provides deployment-specific implementation barriers beyond the general resource-constraint context in E_23."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen deployment context leaves region, organization_type, infrastructure_context, and budget_context null, so jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and deployment-specific institutional capacity cannot be judged. The supplied records provide general institutional enablement context: NIST SP 800-53A describes assessment objectives/methods for cryptographic key physical control and cryptographic protection (IRF-C1); NIST CSF 2.0 describes organizational profiling and gap-analysis governance with a ransomware-scoped example (IRF-C2); CISA CPGs are presented as common, straightforward IT/OT protections with ransomware context (IRF-C3); NIST AI 100-4 describes cryptographic provenance/tamper-evidence mechanisms relevant to auditability (IRF-C7). The EU NIS2 recital provides only EU regional regulatory context about ransomware policy expectations and cannot be applied to the unknown frozen region (IRF-C6). The CISA excerpt also contains general resource-constraint context, but not deployment-specific barriers (IRF-C4). The evidence gaps identify that no supplied record establishes jurisdiction-specific obligations, data-sovereignty constraints, cross-border constraints, or compliance burden for this action. Therefore institutional/regional feasibility is indeterminate under this lens: neither materially supported nor materially challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "be67dbc5d2255823916a615eddf20d4236aefda81a8db01773b8b8b68432bb9c",
+  "checkpoint_sha256": "256a07a98c7e977a05cd36c4f7481222f09b9b79c1316bf7ef5439bd47874b38",
+  "created_at": "2026-09-16T17:06:39.431628+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "04c731c00caa0211d483c4689c68454d8e1ec1eb0db6d9329a3eba2d1db25fcb",
+    "base_stage3_input_fingerprint": "958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e",
+    "base_stage3_output_sha256": "67e2fd7b9d1272554191bb08d631aaf42f25353977ff79b29c9e232a9a910d98",
+    "case_id": "main__ransomware__cryptography",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_0BAA7B22596028F4",
+      "E_04_270A1E7C47ACC4FF",
+      "E_08_510579F0D776F3BE",
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_23_AC2A498B747552DF",
+      "E_24_223CAC714FDE427B",
+      "E_25_95744996E05BA6E9",
+      "E_26_A710FE8084614182",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "d39960ade16c93ec9029f92d12c7ae34d7cc93be1366f51293b8b7b4904ba33d",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "796a060bfbe0c2a9adf4650a6d03735de5768ae80223099a066d1d1d7ca88212",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "95d457baffb25f988cc8692ee2698c8310aa20a0d537cacdcbb56a0e44911f54",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

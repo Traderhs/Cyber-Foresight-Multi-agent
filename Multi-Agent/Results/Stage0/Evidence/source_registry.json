@@ -1,0 +1,650 @@
+{
+  "entries": [
+    {
+      "allowed_claim_types": [
+        "forecast_trajectory",
+        "threat_pmt_gap",
+        "predictive_uncertainty",
+        "forecast_provenance"
+      ],
+      "family": "A",
+      "ingestion_kind": "internal_canonical",
+      "name": "Canonical B-MTGNN Forecast Dataset",
+      "official_domains": [],
+      "prohibited_claim_types": [
+        "causal_effect",
+        "real_world_effectiveness"
+      ],
+      "registry_id": "01"
+    },
+    {
+      "allowed_claim_types": [
+        "observed_threat_pattern",
+        "directional_threat_trend",
+        "observed_attack_vector",
+        "observed_adversary_behavior"
+      ],
+      "family": "B",
+      "ingestion_kind": "annual_report",
+      "name": "Verizon Data Breach Investigations Report (DBIR)",
+      "official_domains": [
+        "verizon.com"
+      ],
+      "prohibited_claim_types": [
+        "exact_future_probability",
+        "product_roi",
+        "product_tco",
+        "universal_control_effectiveness"
+      ],
+      "registry_id": "02"
+    },
+    {
+      "allowed_claim_types": [
+        "observed_threat_pattern",
+        "directional_threat_trend",
+        "observed_attack_vector",
+        "observed_adversary_behavior"
+      ],
+      "family": "B",
+      "ingestion_kind": "annual_report",
+      "name": "Mandiant M-Trends",
+      "official_domains": [
+        "cloud.google.com",
+        "mandiant.com"
+      ],
+      "prohibited_claim_types": [
+        "exact_future_probability",
+        "product_roi",
+        "product_tco",
+        "universal_control_effectiveness"
+      ],
+      "registry_id": "03"
+    },
+    {
+      "allowed_claim_types": [
+        "observed_threat_pattern",
+        "directional_threat_trend",
+        "observed_attack_vector",
+        "observed_adversary_behavior"
+      ],
+      "family": "B",
+      "ingestion_kind": "annual_report",
+      "name": "IBM X-Force Threat Intelligence Index",
+      "official_domains": [
+        "ibm.com"
+      ],
+      "prohibited_claim_types": [
+        "exact_future_probability",
+        "product_roi",
+        "product_tco",
+        "universal_control_effectiveness"
+      ],
+      "registry_id": "04"
+    },
+    {
+      "allowed_claim_types": [
+        "observed_threat_pattern",
+        "directional_threat_trend",
+        "observed_attack_vector",
+        "observed_adversary_behavior",
+        "identity_cloud_ai_threat_trend"
+      ],
+      "family": "B",
+      "ingestion_kind": "annual_report",
+      "name": "Microsoft Digital Defense Report",
+      "official_domains": [
+        "microsoft.com"
+      ],
+      "prohibited_claim_types": [
+        "exact_future_probability",
+        "product_roi",
+        "product_tco",
+        "universal_control_effectiveness"
+      ],
+      "registry_id": "05"
+    },
+    {
+      "allowed_claim_types": [
+        "cve_program_provenance",
+        "cve_record_schema_reference"
+      ],
+      "family": "C",
+      "ingestion_kind": "source_reference",
+      "name": "CVE Program / cvelistV5 Source Reference",
+      "official_domains": [
+        "cve.org",
+        "github.com",
+        "raw.githubusercontent.com"
+      ],
+      "prohibited_claim_types": [
+        "vulnerability_identity",
+        "affected_product_version",
+        "confirmed_exploitation",
+        "prevalence_magnitude"
+      ],
+      "registry_id": "06"
+    },
+    {
+      "allowed_claim_types": [
+        "vulnerability_identity",
+        "affected_product_version",
+        "public_reference",
+        "vulnerability_severity",
+        "cwe_mapping",
+        "cpe_mapping",
+        "vulnerability_enrichment"
+      ],
+      "family": "C",
+      "ingestion_kind": "structured_feed",
+      "name": "NIST National Vulnerability Database (NVD)",
+      "official_domains": [
+        "nvd.nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "confirmed_exploitation",
+        "business_impact"
+      ],
+      "registry_id": "07"
+    },
+    {
+      "allowed_claim_types": [
+        "confirmed_exploitation"
+      ],
+      "family": "C",
+      "ingestion_kind": "structured_feed",
+      "name": "CISA Known Exploited Vulnerabilities (KEV)",
+      "official_domains": [
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "vulnerability_severity"
+      ],
+      "registry_id": "08"
+    },
+    {
+      "allowed_claim_types": [
+        "exploitation_probability"
+      ],
+      "family": "C",
+      "ingestion_kind": "structured_feed",
+      "name": "FIRST Exploit Prediction Scoring System (EPSS)",
+      "official_domains": [
+        "first.org",
+        "epss.cyentia.com"
+      ],
+      "prohibited_claim_types": [
+        "confirmed_exploitation",
+        "business_impact"
+      ],
+      "registry_id": "09"
+    },
+    {
+      "allowed_claim_types": [
+        "observed_ttp",
+        "campaign_evidence",
+        "malware_behavior",
+        "official_mitigation"
+      ],
+      "family": "C",
+      "ingestion_kind": "official_advisory",
+      "name": "CISA Cybersecurity Advisories / Malware Analysis Reports",
+      "official_domains": [
+        "cisa.gov",
+        "github.com",
+        "codeload.github.com",
+        "raw.githubusercontent.com"
+      ],
+      "prohibited_claim_types": [
+        "product_roi"
+      ],
+      "registry_id": "10"
+    },
+    {
+      "allowed_claim_types": [
+        "vulnerability_note_discovery",
+        "certcc_source_reference"
+      ],
+      "family": "C",
+      "ingestion_kind": "source_reference",
+      "name": "CERT/CC Vulnerability Notes Index",
+      "official_domains": [
+        "kb.cert.org",
+        "github.com"
+      ],
+      "prohibited_claim_types": [
+        "vulnerability_mechanics",
+        "affected_vendor",
+        "official_remediation",
+        "prevalence_magnitude",
+        "product_roi"
+      ],
+      "registry_id": "11"
+    },
+    {
+      "allowed_claim_types": [
+        "adversary_tactic",
+        "adversary_technique",
+        "adversary_procedure"
+      ],
+      "family": "D",
+      "ingestion_kind": "knowledge_base",
+      "name": "MITRE ATT&CK",
+      "official_domains": [
+        "attack.mitre.org",
+        "raw.githubusercontent.com"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "causal_effectiveness"
+      ],
+      "registry_id": "12"
+    },
+    {
+      "allowed_claim_types": [
+        "attack_defense_relation",
+        "defensive_technique_mapping"
+      ],
+      "family": "D",
+      "ingestion_kind": "knowledge_base",
+      "name": "MITRE D3FEND",
+      "official_domains": [
+        "d3fend.mitre.org"
+      ],
+      "prohibited_claim_types": [
+        "proven_effectiveness",
+        "priority",
+        "deployment_maturity"
+      ],
+      "registry_id": "13"
+    },
+    {
+      "allowed_claim_types": [
+        "adversarial_ml_mechanism",
+        "ai_attack_technique",
+        "ai_case_mapping"
+      ],
+      "family": "D",
+      "ingestion_kind": "knowledge_base",
+      "name": "MITRE ATLAS",
+      "official_domains": [
+        "atlas.mitre.org",
+        "raw.githubusercontent.com"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "causal_effectiveness"
+      ],
+      "registry_id": "14"
+    },
+    {
+      "allowed_claim_types": [
+        "adversarial_ml_taxonomy",
+        "ai_mitigation_class"
+      ],
+      "family": "E",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST AI 100-2 Adversarial Machine Learning Taxonomy",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "deployment_effectiveness"
+      ],
+      "registry_id": "15"
+    },
+    {
+      "allowed_claim_types": [
+        "synthetic_content_risk",
+        "deepfake_detection_class",
+        "provenance_approach"
+      ],
+      "family": "E",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST AI 100-4 Synthetic Content Risk / Technical Approaches",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "deployment_effectiveness"
+      ],
+      "registry_id": "16"
+    },
+    {
+      "allowed_claim_types": [
+        "deepfake_threat_mechanism",
+        "deepfake_mitigation_guidance"
+      ],
+      "family": "E",
+      "ingestion_kind": "official_guidance",
+      "name": "NSA/FBI/CISA Deepfake Threat Guidance",
+      "official_domains": [
+        "cisa.gov",
+        "nsa.gov",
+        "fbi.gov",
+        "media.defense.gov"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "exact_effectiveness"
+      ],
+      "registry_id": "17"
+    },
+    {
+      "allowed_claim_types": [
+        "information_manipulation_mechanism",
+        "critical_infrastructure_risk_framing"
+      ],
+      "family": "E",
+      "ingestion_kind": "official_guidance",
+      "name": "CISA Misinformation / Disinformation / Malinformation Guidance",
+      "official_domains": [
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "prevalence_magnitude",
+        "deployment_effectiveness"
+      ],
+      "registry_id": "18"
+    },
+    {
+      "allowed_claim_types": [
+        "iot_security_capability",
+        "iot_manufacturer_support_baseline"
+      ],
+      "family": "F",
+      "ingestion_kind": "official_guidance",
+      "name": "NISTIR 8259 Series IoT Device Cybersecurity",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "19"
+    },
+    {
+      "allowed_claim_types": [
+        "supply_chain_risk_control",
+        "supply_chain_governance"
+      ],
+      "family": "F",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST SP 800-161 Rev.1 Cybersecurity Supply Chain Risk Management",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "20"
+    },
+    {
+      "allowed_claim_types": [
+        "software_dependency_transparency",
+        "sbom_practice"
+      ],
+      "family": "F",
+      "ingestion_kind": "official_guidance",
+      "name": "CISA Software Bill of Materials (SBOM) Resources",
+      "official_domains": [
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "21"
+    },
+    {
+      "allowed_claim_types": [
+        "insider_threat_control",
+        "insider_detection_mitigation"
+      ],
+      "family": "F",
+      "ingestion_kind": "official_guidance",
+      "name": "CISA Insider Threat Mitigation Resources",
+      "official_domains": [
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "22"
+    },
+    {
+      "allowed_claim_types": [
+        "recommended_control",
+        "organizational_applicability",
+        "prioritized_defensive_practice"
+      ],
+      "family": "G",
+      "ingestion_kind": "official_guidance",
+      "name": "CISA Cybersecurity Performance Goals (CPG)",
+      "official_domains": [
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "23"
+    },
+    {
+      "allowed_claim_types": [
+        "organizational_security_outcome",
+        "cyber_governance"
+      ],
+      "family": "G",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "24"
+    },
+    {
+      "allowed_claim_types": [
+        "security_control",
+        "privacy_control"
+      ],
+      "family": "G",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST SP 800-53 Rev.5",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "25"
+    },
+    {
+      "allowed_claim_types": [
+        "control_assessment_procedure",
+        "implementation_assessment"
+      ],
+      "family": "G",
+      "ingestion_kind": "official_guidance",
+      "name": "NIST SP 800-53A Rev.5",
+      "official_domains": [
+        "nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "26"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to"
+      ],
+      "family": "G",
+      "ingestion_kind": "reference_implementation",
+      "name": "NIST NCCoE SP 1800 Series",
+      "official_domains": [
+        "nccoe.nist.gov",
+        "nvlpubs.nist.gov"
+      ],
+      "prohibited_claim_types": [
+        "universal_production_effectiveness",
+        "product_roi"
+      ],
+      "registry_id": "27"
+    },
+    {
+      "allowed_claim_types": [
+        "scholarly_work_discovery",
+        "preprint_metadata",
+        "academic_topic_metadata"
+      ],
+      "family": "H",
+      "ingestion_kind": "academic_index",
+      "name": "arXiv",
+      "official_domains": [
+        "arxiv.org",
+        "export.arxiv.org"
+      ],
+      "prohibited_claim_types": [
+        "deployment_maturity",
+        "operational_effectiveness"
+      ],
+      "registry_id": "28"
+    },
+    {
+      "allowed_claim_types": [
+        "doi_verification",
+        "publisher_metadata",
+        "publication_metadata"
+      ],
+      "family": "H",
+      "ingestion_kind": "academic_metadata",
+      "name": "Crossref",
+      "official_domains": [
+        "crossref.org"
+      ],
+      "prohibited_claim_types": [
+        "deployment_maturity",
+        "operational_effectiveness"
+      ],
+      "registry_id": "29"
+    },
+    {
+      "allowed_claim_types": [
+        "legal_requirement",
+        "regulatory_scope",
+        "korea_control_requirement"
+      ],
+      "family": "I",
+      "ingestion_kind": "primary_law",
+      "name": "Korea Primary Sources: law.go.kr + PIPC + KISA ISMS-P",
+      "official_domains": [
+        "law.go.kr",
+        "pipc.go.kr",
+        "kisa.or.kr",
+        "isms-p.or.kr"
+      ],
+      "prohibited_claim_types": [
+        "cross_jurisdiction_generalization"
+      ],
+      "registry_id": "30"
+    },
+    {
+      "allowed_claim_types": [
+        "legal_requirement",
+        "regulatory_scope",
+        "eu_legal_requirement"
+      ],
+      "family": "I",
+      "ingestion_kind": "primary_law",
+      "name": "European Union Primary Source: EUR-Lex",
+      "official_domains": [
+        "eur-lex.europa.eu"
+      ],
+      "prohibited_claim_types": [
+        "cross_jurisdiction_generalization"
+      ],
+      "registry_id": "31"
+    },
+    {
+      "allowed_claim_types": [
+        "legal_requirement",
+        "regulatory_scope",
+        "us_legal_requirement"
+      ],
+      "family": "I",
+      "ingestion_kind": "primary_law",
+      "name": "United States Primary Sources: eCFR + Federal Register + CISA Directives",
+      "official_domains": [
+        "ecfr.gov",
+        "federalregister.gov",
+        "cisa.gov"
+      ],
+      "prohibited_claim_types": [
+        "cross_jurisdiction_generalization"
+      ],
+      "registry_id": "32"
+    },
+    {
+      "allowed_claim_types": [
+        "directional_publication_trend"
+      ],
+      "family": "H",
+      "ingestion_kind": "academic_trend_aggregate",
+      "name": "Crossref Cutoff-Constrained PMT Publication Trend",
+      "official_domains": [
+        "crossref.org"
+      ],
+      "prohibited_claim_types": [
+        "deployment_maturity",
+        "operational_effectiveness",
+        "causal_effectiveness"
+      ],
+      "registry_id": "33"
+    }
+  ],
+  "source_registry_version": "stage0-registry-v3",
+  "validation": {
+    "entry_count": 33,
+    "excluded_source_classes": [
+      "agent_generated_reasoning",
+      "generic_web_search_result",
+      "reddit_forum_social_media",
+      "generic_vendor_marketing",
+      "generic_vendor_pricing_roi",
+      "exploit_poc_repository",
+      "cloudflare_ddos_annual_report",
+      "crowdstrike_annual_threat_report"
+    ],
+    "families": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "family_count": 9,
+    "held_out_sources": [
+      "WEF Global Cybersecurity Outlook",
+      "ENISA Foresight / Delphi-based expert assessment"
+    ],
+    "registry_version": "stage0-registry-v3"
+  }
+}

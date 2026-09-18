@@ -1,0 +1,322 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Long-term zero-trust access-control maturation may enable a more prudent allocation of security investments.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC development, deployment, and maintenance can exceed its benefits, and retrofit or attribute/policy maintenance costs can offset savings.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_2",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Transitioning access-control or zero-trust provider solutions can involve switching costs, transition overhead, and disruption risk to core business functions.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHALLENGE_3",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Initial zero-trust implementation can add cost and require an incremental organizational transition.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "Adoption fit depends on workflow, asset placement, logging, protocol support, and possible subject behavior changes.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "FIN_CONSTRAINT_2",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC is more viable where subjects and objects carry rich attributes and access decisions involve complex relationships among attributes.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Adoption should be treated as conditional on evaluating retrofit, attribute/policy maintenance, transition, and switching costs before committing.",
+        "Benefit realization is conditional on reaching a mature zero-trust/access-control state rather than on initial control installation alone."
+      ],
+      "constraints": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed in the frozen scenario.",
+        "Financial feasibility is conditional on evaluating transition, retrofit, maintenance, and switching costs against long-term prudent investment allocation."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No eligible supplied evaluation evidence provides exact financial quantities for the candidate action.",
+        "No eligible supplied evaluation evidence provides measured adoption cost or benefit outcomes for the frozen scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Eligible evidence grounds both an adoption benefit from long-term prudent investment allocation and multiple adoption burdens from transition, retrofit, maintenance, and switching costs. Because no exact financial quantities or measured adoption outcomes are supplied, the financial stance remains mixed and conditional.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "ABAC governance guidance enables enterprise-governed access control through consistent attribute values, lifecycle management, documented attribute meanings, and access-failure procedures.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust policy engines can incorporate an industry compliance system as a governance input for maintaining compliance with applicable regulatory regimes.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUPPORT_3",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust governance supports feasibility by defining and enforcing enterprise cybersecurity policies, procedures, and processes to manage risk.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session and token handling imposes compliance constraints, including secure-channel, timeout, cookie-attribute, and session-verification requirements.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "Attribute-based access governance requires defined valid attribute values, lifecycle management by the provisioning organization, and documented context-dependent meaning.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "INST_CONSTRAINT_2",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust governance must define and enforce policies, procedures, and processes across enterprise risk management activities.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Access-control governance must include attribute lifecycle management, documented attribute meaning, and exception handling for access failures.",
+        "Deployment-specific regional feasibility is conditional on supplying jurisdiction-specific regulatory applicability evidence for the frozen enterprise."
+      ],
+      "constraints": [
+        "The frozen scenario intentionally masks jurisdiction and supplies no lens-specific regulatory applicability evidence.",
+        "Any deployment-specific regional compliance judgment requires evidence that the frozen enterprise profile is subject to a specific regulatory regime."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No eligible supplied evaluation evidence establishes regulatory_applicability for the frozen masked jurisdiction.",
+        "No eligible supplied evaluation evidence ties the frozen enterprise profile to a specific regional legal regime."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Eligible evidence provides grounded governance enablement for enterprise access-control policy, attribute governance, and compliance integration, but also a grounded compliance constraint for session and token handling. Because the frozen scenario has no jurisdiction-specific regulatory applicability evidence, deployment-specific regional feasibility remains conditional.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUPPORT_1",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "ATT&CK-informed, centralized, adaptive access-control decisions can improve response to sophisticated multi-stage targeted threats.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHALLENGE_1",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior, because effective access control depends on continuously updated threat and risk context.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE12_6509E7A6D8467E38"
+          ],
+          "scope": "GENERAL",
+          "statement": "Candidate access-control or zero-trust solution fit depends on asset location, logging capability, protocol support, and whether subject behavior must change.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "TECH_CONSTRAINT_2",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Zero-trust and access-control maturation is an incremental process that can require organizational and cultural change.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "The candidate action should be implemented as continuously updated, threat- and risk-informed adaptive access control rather than as a static control category."
+      ],
+      "constraints": [
+        "Access control should not be treated as a static category alone; it depends on continuously updated threat and risk context.",
+        "Deployment maturity affects feasibility through workflow, asset placement, logging, protocol support, and subject behavior requirements."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "evidence_gaps": [
+        "No supplied evaluation evidence reports deployment-specific operational effectiveness of access control for the frozen scenario.",
+        "No supplied evaluation evidence establishes a measured targeted-attack incident reduction from the candidate action."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "There is a grounded technical enablement for adaptive, threat-informed access control, but also a grounded technical limitation for static or perimeter-only access control. The mixed grounding prevents a one-way feasibility stance.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "851da336f53f7b20bd832d47ba885e0661ebb9ecf8ef6702e3acf3216c687115",
+  "checkpoint_sha256": "c668e3f2ab794177fdb44db082a47702828ba62b2bfcbf918b9e1427d23a58fd",
+  "created_at": "2026-09-16T16:10:53.766035+00:00",
+  "identity": {
+    "axis": "B_STAGE4_ARCHITECTURE_BASELINE",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "6e74c1886d93cf63e35fa2bf3f9516cfcde14986636b267d8d2efec4a807a0c7",
+    "jurisdiction_neutral": true,
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "f78bafdfc0daaf41fa5bea213fcdc01a8a4e7068b6515ff97bc37974d642af4a",
+    "response_schema_sha256": "f55b0c72527076bd86b88f0bf818c7b85e0ee11faf23d78cec5b1dddd9f82fb7",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "13aa455f3d0d846588ad5e6b0f5b2546d2cdf66b77fce3503174ad2e994eca25",
+    "variant_id": "SINGLE_AGENT_BASELINE"
+  }
+}

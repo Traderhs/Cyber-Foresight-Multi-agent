@@ -1,0 +1,71 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL technical feasibility is supported because CISA CPG guidance recommends using properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL technical operability is supported because NIST SP 800-53A Rev.5 defines assessment objectives and methods for cryptographic protection, implementation of defined cryptographic uses and types, and testing of mechanisms supporting cryptographic protection and key establishment and management, including physical control of cryptographic keys when stored information is encrypted by external service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_26_B2995F657787797A"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL technical operability is supported for audit-integrity protection because NIST SP 800-53A Rev.5 specifies testing cryptographic mechanisms protecting the integrity of audit information and tools.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If the deployment includes OT or latency/availability-sensitive communications, encryption should be applied only where technically feasible after assessing latency and availability impact.",
+      "If external service providers encrypt stored information, physical control of cryptographic keys must be maintained.",
+      "If FIPS-validated cryptography is within scope, validation certificates and FIPS-validated module listings would be relevant assessment objects.",
+      "If audit information integrity is in scope, cryptographic mechanisms protecting audit information and tools should be implemented and testable.",
+      "If authorization decisions and access enforcement are separated, cryptographic mechanisms should be used to transmit authorization information securely.",
+      "If metadata authentication is in scope, digital signatures require key management, signature generation, and signature verification capabilities."
+    ],
+    "constraints": [
+      "Encryption is recommended only when technically feasible; for OT, encryption should be used when feasible to minimize impact to latency and availability.",
+      "Outdated or weak encryption must be identified and updated to sufficiently strong algorithms, with post-quantum implications considered.",
+      "Cryptographic uses and types of cryptography must be defined and implemented for each specified use.",
+      "Cryptographic key establishment and management mechanisms must be operable and assessable, including physical control of cryptographic keys when stored information is encrypted by external service providers.",
+      "Audit information integrity may require cryptographic mechanisms protecting the integrity of audit information and tools.",
+      "Authorization information may need to be transmitted securely using cryptographic mechanisms when authorization decisions and enforcement are separated.",
+      "The CIS IG2 reference profile indicates that some safeguards may depend on enterprise-grade technology and specialized expertise, but no exact burden, staffing count, budget, or timeline is established."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+    "evidence_gaps": [
+      "No supplied record provides the actual endpoint, network, application, protocol, traffic-flow, or cryptography inventory needed to confirm deployment-specific integration of SSL/TLS, cryptographic encapsulation, or key management.",
+      "No supplied record quantifies operational burden, staffing, skills, cost, budget, ROI, TCO, or exact implementation timeline for cryptography in the frozen 2025-2027 horizon.",
+      "No supplied record establishes deployment maturity, operational effectiveness, or causal insider-threat mitigation effectiveness for the CRYPTOGRAPHY action.",
+      "No supplied record resolves whether specific insider-threat pathways, such as exfiltration through authorized access, are technically addressed by the frozen cryptography action.",
+      "No supplied record provides external-provider key-control arrangements, FIPS-validated module status, post-quantum algorithm readiness, or OT/latency/availability compatibility details."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The frozen CRYPTOGRAPHY action is technically implementable in a GENERAL sense because the supplied action-specific Stage-4 decision-evidence records recommend cryptographic protection of data in transit and define assessable cryptographic protection and key-management operations. E_23_534489D29C38B327 supports general implementability by recommending properly configured and up-to-date SSL/TLS when technically feasible, identifying outdated or weak encryption, updating to stronger algorithms, and considering post-quantum implications. E_26_A710FE8084614182 supports general operability by defining assessment objectives and methods for SC-13 cryptographic protection and SC-12(06) physical control of cryptographic keys when external providers are involved. E_26_B2995F657787797A supports operability related to audit integrity by specifying testing of cryptographic mechanisms protecting audit information and tools. E_25_A1044C34BD8DBDFA and E_25_172BD812783415C9 support general integration into access-control authorization flows and endpoint-to-endpoint confidentiality/integrity paths by referring to cryptographic mechanisms and cryptographic encapsulation between organization-controlled endpoints. The CIS IG2 reference profile in CTX_CIS_IG2_9F94838146D9C3A4 confirms a multi-department enterprise IT context with personnel managing and protecting infrastructure, but it does not by itself establish implementation burden, cost, staffing, or deployment-specific compatibility. The deployment-specific conclusion is not supportable because the supplied context does not identify the actual endpoints, network boundaries, application protocols, existing cryptography inventory, key-management architecture, audit-logging systems, OT/latency/availability constraints, or external provider key arrangements. The supplied records also do not establish deployment maturity, operational effectiveness, causal insider-threat mitigation effectiveness, exact implementation timelines, cost, staffing, or vendor/product details. Therefore, under this lens, the action is supported for GENERAL technical feasibility and conditionally implementable, but DEPLOYMENT_SPECIFIC integrability and operability remain indeterminate due to missing infrastructure context.",
+    "stance": 1
+  },
+  "assessment_sha256": "e1d73a240de5bf02977f0275b82bdae96345ceb1ef201da7b015514d9fe8d70d",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "dc84b093e4465f0b34b23bedc0089abfa5f05d25ecffece4efb9105a403ad6bf",
+  "created_at": "2026-09-14T14:17:49.965714+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "technical_feasibility",
+  "scenario_id": "US__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

@@ -1,0 +1,2259 @@
+{
+  "artifact_sha256": "d5af34e14ceb0564cb5540e872aa957c82c42f809666bf8b12ae4a71e6c57434",
+  "case_id": "main__targeted_attack__access_control",
+  "constrained_narrative_schema_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9": "82c25e0def80573dd0ee79c7fe5239d4cce296fc0874319f20017626d3d013fc",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1": "296d0be08ea869bf7715115a5318d3843076b66bb0bf2c0cfda333ea6bec19e7",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606": "a651581f9897397ccef77fc39a46e084178eeb62840edeb0c6764965073f5192"
+  },
+  "created_at": "2026-09-16T07:11:29.360203+00:00",
+  "decision_policy_version": "stage6-decision-policy-v1",
+  "frame_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9": "2cfb006179afcb948f861d04e3c665ba93749e2eab17d0b3cd09cf210cc358ef",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1": "a17d7db6f16aeab77d53076b014cfdaf35019854d3d781f3a568537f9b253bb7",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606": "fc2a61cc0b47a8e268ce16956245845875efa29f4de89eb23ab02b323b6da96e"
+  },
+  "generation_contract_version": "policy-conditional-evidence-grounded-strategic-report-v5",
+  "input_fingerprint": "c683450f74a36d00fd92aa61a795eddda7ac350676946b50dd0c669f5e2f7745",
+  "narrative_schema_sha256": "90c3f41a059fadb03bf517404e61f75203cee936324cc9d1925a1942069c5b6e",
+  "output_schema_sha256": "151aaf5b8f2ea7ae51de0c269d13b03b5596c84dca0889acba40123874352a2c",
+  "prompt_hashes": {
+    "system_prompt_sha256": "a59721faa1b0e23230ac2eee07159eb74d7e8d92cde1bfcee856805e2f96be4e",
+    "user_prompt_sha256": "37f3e1a3fd642cf049b90d181d6a59db96dcf09586471167a31b3ab3c63febba"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "server_total_context_size": 131072,
+    "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage6-artifact-v5",
+  "semantic_validation_version": "stage6-semantic-validation-v11",
+  "stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+  "stage3_context_output_sha256": "93c6e92b6712ca3c2ad6360c30c5e50ecdb72c430e707d7954b17ed2251dcb51",
+  "stage4_context_artifact_sha256": "b197de3415acc19c31e3f821ed025c29e9bf15b3b293e7c0ad5f6b35b1ef2cee",
+  "stage4_context_output_sha256": "2fb7ae814e0baa5bb4493c12bfcda62de9e5fd4c505fb8858608665b030ac89f",
+  "stage5_artifact_sha256": "f33b3c4296fd820cb26a9525899ee8fc2a36c30f0775e3ce10ae5de1aa804127",
+  "stage5_output_sha256": "a11eb51d61e6d77a2d7028c1d3577e990163fc742a18964b2d7cf9c6605c9975",
+  "stage6_output_sha256": "42028b1a71def9a16a18d0a61476d6a7c11951e1011c5cd5620e7f0167890c36",
+  "synthesis_bundle": {
+    "case_id": "main__targeted_attack__access_control",
+    "syntheses": [
+      {
+        "candidate_action_id": "PMT_ACCESS_CONTROL",
+        "candidate_action_name": "ACCESS CONTROL",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?",
+            "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?",
+            "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?",
+            "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?",
+            "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness.",
+            "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed.",
+            "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input.",
+            "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ_R1_01",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_POSITIVE"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 directly supports the annual Crossref publication counts, the positive OLS slope, and the first-to-last delta for PMT_ACCESS_CONTROL. Both Attack and Defense correctly limit this to directional publication activity and do not extend it to deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_02",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_NONMONOTONIC"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 shows that the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase. Accepting the Defense challenge is consistent with the Attack agreement and merely limits the interpretation of the same publication-activity trend.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The two CISA/Siemens Mendix advisories support the factual description of improper access-control handling and potential authenticated-remote impacts. They do not, however, report realized targeted-attack incident frequency, a trend in NoI, or measured mitigation effectiveness. The Attack claim should therefore be narrowed from forecast-support language to point-specific operational vulnerability context.",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_B4F773BEC65685CC"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_10_B4F773BEC65685CC supports both the potential Kastle capability to access sensitive information and the point-in-time statement that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA. Neither statement establishes a broader exploitation_signal, a generalized absence of exploitation, or direct movement in targeted-attack incident count or frequency. Both Attack claims should therefore be narrowed to product-specific, point-in-time context.",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_03_F0CD4F1DE74CC7AD"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_03_F0CD4F1DE74CC7AD supports the reported Mandiant percentages for opportunistic compromise being leveraged into targeted attack activity: 6% in 2022, 4% in 2021, and 3% in 2020. The evidence, however, reports shares of intrusions, not direct targeted-attack incident counts or frequency. The Defense revision is therefore justified: the factual content is supported, but the forecast-support framing overstates the evidentiary modality.",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_06",
+              "attack_claim_ids": [
+                "ATK_C7"
+              ],
+              "defense_claim_ids": [
+                "C_DBIR_ACCESS_CONTROL_CONTEXT"
+              ],
+              "evidence_ids": [
+                "E_02_BE48A23ABD77A19C"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_02_BE48A23ABD77A19C supports the DBIR description of the IG1 System Intrusion pattern mapping, including Control 5, Access Control Management, at 67%. Both claims are properly treated as control-association context rather than direct evidence of control effectiveness, deployment maturity, or future incident movement.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_07",
+              "attack_claim_ids": [
+                "ATK_C8"
+              ],
+              "defense_claim_ids": [
+                "C_AC_TTP_MITIGATION"
+              ],
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_12_F6120325C44B5EA9 supports the described MITRE ATT&CK M1015 Active Directory configuration measures and their stated purpose of securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement. The evidence is appropriately treated as mitigation context, not as measured NoI/NoP trajectory or causal effectiveness.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            }
+          ]
+        },
+        "d_lens": 0.888889,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "HOLD",
+        "decision_rule_id": "ADOPTION_GATE_CHALLENGED",
+        "dissenting_lenses": [
+          "financial_adoption"
+        ],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 8,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.08085583245823885,
+            "2026": -0.02823516110352381,
+            "2027": 0.00902899855482564
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.044942415506532246,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1386505407970026,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_ACCESS_CONTROL_2025-01",
+              "YF_PMT_ACCESS_CONTROL_2025-02",
+              "YF_PMT_ACCESS_CONTROL_2025-03",
+              "YF_PMT_ACCESS_CONTROL_2025-04",
+              "YF_PMT_ACCESS_CONTROL_2025-05",
+              "YF_PMT_ACCESS_CONTROL_2025-06",
+              "YF_PMT_ACCESS_CONTROL_2025-07",
+              "YF_PMT_ACCESS_CONTROL_2025-08",
+              "YF_PMT_ACCESS_CONTROL_2025-09",
+              "YF_PMT_ACCESS_CONTROL_2025-10",
+              "YF_PMT_ACCESS_CONTROL_2025-11",
+              "YF_PMT_ACCESS_CONTROL_2025-12",
+              "YF_PMT_ACCESS_CONTROL_2026-01",
+              "YF_PMT_ACCESS_CONTROL_2026-02",
+              "YF_PMT_ACCESS_CONTROL_2026-03",
+              "YF_PMT_ACCESS_CONTROL_2026-04",
+              "YF_PMT_ACCESS_CONTROL_2026-05",
+              "YF_PMT_ACCESS_CONTROL_2026-06",
+              "YF_PMT_ACCESS_CONTROL_2026-07",
+              "YF_PMT_ACCESS_CONTROL_2026-08",
+              "YF_PMT_ACCESS_CONTROL_2026-09",
+              "YF_PMT_ACCESS_CONTROL_2026-10",
+              "YF_PMT_ACCESS_CONTROL_2026-11",
+              "YF_PMT_ACCESS_CONTROL_2026-12",
+              "YF_PMT_ACCESS_CONTROL_2027-01",
+              "YF_PMT_ACCESS_CONTROL_2027-02",
+              "YF_PMT_ACCESS_CONTROL_2027-03",
+              "YF_PMT_ACCESS_CONTROL_2027-04",
+              "YF_PMT_ACCESS_CONTROL_2027-05",
+              "YF_PMT_ACCESS_CONTROL_2027-06",
+              "YF_PMT_ACCESS_CONTROL_2027-07",
+              "YF_PMT_ACCESS_CONTROL_2027-08",
+              "YF_PMT_ACCESS_CONTROL_2027-09",
+              "YF_PMT_ACCESS_CONTROL_2027-10",
+              "YF_PMT_ACCESS_CONTROL_2027-11",
+              "YF_PMT_ACCESS_CONTROL_2027-12"
+            ],
+            "forecast_mean_z": 0.5591148721080367,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.144812121401182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_TARGETED_ATTACK_2025-01",
+              "YF_THREAT_TARGETED_ATTACK_2025-02",
+              "YF_THREAT_TARGETED_ATTACK_2025-03",
+              "YF_THREAT_TARGETED_ATTACK_2025-04",
+              "YF_THREAT_TARGETED_ATTACK_2025-05",
+              "YF_THREAT_TARGETED_ATTACK_2025-06",
+              "YF_THREAT_TARGETED_ATTACK_2025-07",
+              "YF_THREAT_TARGETED_ATTACK_2025-08",
+              "YF_THREAT_TARGETED_ATTACK_2025-09",
+              "YF_THREAT_TARGETED_ATTACK_2025-10",
+              "YF_THREAT_TARGETED_ATTACK_2025-11",
+              "YF_THREAT_TARGETED_ATTACK_2025-12",
+              "YF_THREAT_TARGETED_ATTACK_2026-01",
+              "YF_THREAT_TARGETED_ATTACK_2026-02",
+              "YF_THREAT_TARGETED_ATTACK_2026-03",
+              "YF_THREAT_TARGETED_ATTACK_2026-04",
+              "YF_THREAT_TARGETED_ATTACK_2026-05",
+              "YF_THREAT_TARGETED_ATTACK_2026-06",
+              "YF_THREAT_TARGETED_ATTACK_2026-07",
+              "YF_THREAT_TARGETED_ATTACK_2026-08",
+              "YF_THREAT_TARGETED_ATTACK_2026-09",
+              "YF_THREAT_TARGETED_ATTACK_2026-10",
+              "YF_THREAT_TARGETED_ATTACK_2026-11",
+              "YF_THREAT_TARGETED_ATTACK_2026-12",
+              "YF_THREAT_TARGETED_ATTACK_2027-01",
+              "YF_THREAT_TARGETED_ATTACK_2027-02",
+              "YF_THREAT_TARGETED_ATTACK_2027-03",
+              "YF_THREAT_TARGETED_ATTACK_2027-04",
+              "YF_THREAT_TARGETED_ATTACK_2027-05",
+              "YF_THREAT_TARGETED_ATTACK_2027-06",
+              "YF_THREAT_TARGETED_ATTACK_2027-07",
+              "YF_THREAT_TARGETED_ATTACK_2027-08",
+              "YF_THREAT_TARGETED_ATTACK_2027-09",
+              "YF_THREAT_TARGETED_ATTACK_2027-10",
+              "YF_THREAT_TARGETED_ATTACK_2027-11",
+              "YF_THREAT_TARGETED_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 0.525760873772391,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [],
+        "jurisdiction_code": "KR",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA_CLAIM_01",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied CISA Zero Trust Maturity Model record provides a potential adoption benefit: long-term zero-trust implementation is described as enabling a more prudent allocation of security investments and providing visibility for security-policy development, implementation, enforcement, and evolution.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_02",
+                "evidence_ids": [
+                  "DE_DE11_1ECA9795EEF89DFA",
+                  "DE_DE17_429D17A4E11A72C3",
+                  "DE_DE12_CBF6FBB1313D37AF"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied decision evidence documents direct financial and adoption burdens for advanced access-control transitions: ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings; zero-trust implementation can take years and initially add costs; and service-provider migration can involve extreme cost or a long transition program.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_03",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied zero-trust deployment guidance describes implementation considerations such as client-installation constraints, resource location, logging, protocol support, subject behavior changes, and pilot programs, but it does not by itself establish a financial or adoption direction.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario.",
+              "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA).",
+              "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38).",
+              "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+            ],
+            "constraints": [
+              "ABAC-based access control is constrained by potential costs for development, deployment, maintenance, application retrofitting, and attribute/policy management; the guidance states that ABAC is not the right solution for every access-control problem (DE_DE11_1ECA9795EEF89DFA).",
+              "Zero-trust/access-control adoption is constrained by the possibility of multi-year implementation, initial additional costs, and organizational culture or philosophy change (DE_DE17_429D17A4E11A72C3).",
+              "Adoption choices that depend on external service providers are constrained by switching costs, long transition programs, and possible disruption to core business functions (DE_DE12_CBF6FBB1313D37AF).",
+              "Candidate-solution selection is constrained by implementation fit factors such as client installation, on-premises versus cloud resource location, logging, protocol support, and subject behavior change (DE_DE12_6509E7A6D8467E38)."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+            "evidence_gaps": [
+              "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied.",
+              "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied.",
+              "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied.",
+              "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The GENERAL financial/adoption feasibility direction is assessed because the frozen scenario does not provide exact budget, price, TCO, ROI, payback, staffing count, or procurement timing. The supplied decision evidence contains one grounded adoption benefit: DE_DE17_429D17A4E11A72C3 states that zero-trust implementation may require cultural/philosophical change and can take years, but in the long term can enable a more prudent allocation of security investments. It also documents an adoption burden: initial implementation often leads to additional costs. Additional grounded burdens are supplied by DE_DE11_1ECA9795EEF89DFA, which states that ABAC development, deployment, and maintenance may exceed benefits, that retrofitting applications is a separate cost, and that maintenance savings may be offset by attribute and policy management costs, and by DE_DE12_CBF6FBB1313D37AF, which describes extreme cost or long transition programs when migrating away from a service provider. DE_DE12_6509E7A6D8467E38 is deployment-maturity context about candidate-solution fit and pilot programs, but it cannot carry direction by itself. On balance, the direct cost, transition, and maintenance burdens outweigh the more generic long-term investment-allocation benefit. Therefore, the supplied records materially challenge the GENERAL financial/adoption feasibility of the frozen access-control action, without establishing that deployment-specific infeasibility is proven.",
+            "stance": -1
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR_CLAIM_1",
+                "evidence_ids": [
+                  "DE_DE12_E6F93E4AB8722379",
+                  "DE_DE17_567DDA7CFBC62829",
+                  "DE_DE11_1E4AAE06CC3795D7"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied governance-enablement records describe institutional pathways that can support access-control implementation: policy enforcement points and an industry compliance system as inputs to access-policy decisions; governance of cybersecurity policies, procedures, and processes with monitoring and assessment of security capabilities; and ABAC policy alignment, consistent attribute values, attribute lifecycle management, and access-failure procedures.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR_CLAIM_2",
+                "evidence_ids": [
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied compliance-constraint record imposes specific requirements on access-control session and token handling, including secure storage and transport, session timeout and invalidation, prohibition of insecure fallback, session-identifier verification, cookie restrictions, and limits on interpreting access tokens as subscriber presence.",
+                "status": "CHALLENGES_FEASIBILITY"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific institutional/regional feasibility judgment would require supplied jurisdiction-specific regulatory-applicability evidence eligible under the grounding contract and applicable to the frozen masked deployment.",
+              "A deployment-specific judgment would require supplied evidence identifying the organization's governance pathway, accountability/auditability mechanisms, and the specific session/token controls subject to compliance constraints.",
+              "If the frozen deployment is subject to additional regulatory regimes, those regimes and their obligations must be supplied as evidence before regulatory compatibility can be assessed."
+            ],
+            "constraints": [
+              "Institutional governance enablement is present in the supplied evidence through policy-enforcement/compliance-system inputs, governance and monitoring of policies/procedures, and ABAC policy/attribute lifecycle and failure procedures (DE_DE12_E6F93E4AB8722379, DE_DE17_567DDA7CFBC62829, DE_DE11_1E4AAE06CC3795D7).",
+              "A compliance constraint exists for access-control implementation through mandatory session and token handling requirements (DE_DE13_055FC5E35FA61DD5).",
+              "The frozen region is masked and no eligible jurisdiction-specific regulatory-applicability evidence is present in the supplied directional grounding contract, so deployment-specific regional or legal feasibility is not directionally assessed."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+            "evidence_gaps": [
+              "No eligible jurisdiction-specific regulatory-applicability record for the masked region is supplied in the directional grounding contract, so deployment-specific regulatory compatibility, data sovereignty, or cross-border constraints cannot be assessed.",
+              "No supplied record reports the frozen enterprise's actual governance ownership, audit mechanisms, or implemented access-control session/token controls, so deployment-specific institutional feasibility remains conditional.",
+              "No supplied record quantifies the compliance burden, staffing, budget, or architecture required for the access-control action."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under the Institutional / Regional lens, the supplied action-specific decision evidence supports GENERAL institutional feasibility for ACCESS CONTROL. The eligible governance_enablement records describe institutional mechanisms that can enable implementation: policy enforcement and compliance-system inputs for access decisions, governance of cybersecurity policies, procedures, and processes with monitoring/assessment, and ABAC policy, attribute lifecycle, and access-failure procedures. A compliance_constraint record is also present, describing mandatory session and token handling requirements that create implementation/compliance constraints. On balance, the governance enablement pathway is more directly supportive of institutional feasibility than the single compliance-constraint record is challenging; the compliance constraint does not by itself establish material infeasibility. Because the region is intentionally masked and no eligible jurisdiction-specific regulatory_applicability evidence is supplied in the directional grounding contract for the masked region, no DEPLOYMENT_SPECIFIC regional/legal direction is drawn. Sufficiency is PARTIAL because deployment-specific jurisdictional applicability, actual governance ownership, auditability mechanisms, and organizational compliance context are not supplied.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF_CLM_1",
+                "evidence_ids": [
+                  "AE06S_407DDF87C86BB41B"
+                ],
+                "scope": "GENERAL",
+                "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, providing an action-specific technical enablement for adaptive access control as a Targeted Attack defense.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_2",
+                "evidence_ids": [
+                  "AE06C_8C41709C0D8EE834"
+                ],
+                "scope": "GENERAL",
+                "statement": "Conventional perimeter and static access-control assumptions may be insufficient for evolving APT behavior, and existing risk assessment can miss dynamic attack progression; effective access control depends on continuously updated threat/risk context rather than the control category alone.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_3",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "Zero-trust deployment guidance identifies candidate-solution factors such as client-asset installation, resource location, logging for analysis, broad protocol/application support, and changes to subject behavior, and suggests pilot-based initial deployment and monitoring.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF_CLM_4",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "CISA zero-trust maturity guidance describes the path to zero trust as incremental, potentially taking years, with initial implementation costs and a shift in cybersecurity philosophy and culture.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics.",
+              "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834].",
+              "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38].",
+              "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+            ],
+            "constraints": [
+              "Static or perimeter-only access-control assumptions are technically limited for evolving APTs because continuously updated threat/risk context is required [AE06C_8C41709C0D8EE834].",
+              "Deployment options must account for client-side installation, resource location, logging and analytics, protocol/application breadth, and subject-behavior changes [DE_DE12_6509E7A6D8467E38].",
+              "Zero-trust-related implementation is described as incremental and potentially taking years, with initial additional costs; no exact timeline, budget, or product detail is supplied [DE_DE17_429D17A4E11A72C3]."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+            "evidence_gaps": [
+              "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied.",
+              "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied.",
+              "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise.",
+              "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "On balance, the supplied records support the technical feasibility of ACCESS CONTROL for the Targeted Attack horizon at GENERAL scope. The eligible technical_enablement record reports an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions and an improved ability to respond to sophisticated multi-stage threats, giving a direct action-specific technical pathway for adaptive access control as a targeted-attack defense [AE06S_407DDF87C86BB41B]. The eligible technical_limitation record challenges a static or perimeter-only implementation by stating that evolving APT behavior can make conventional assumptions insufficient and that effective access control depends on continuously updated threat/risk context [AE06C_8C41709C0D8EE834]. This limitation is treated as a design and operability constraint, not as proof that the control category is technically impossible. Deployment-maturity records identify implementation factors and incremental rollout, but they cannot by themselves create direction [DE_DE12_6509E7A6D8467E38, DE_DE17_429D17A4E11A72C3]. Exact local architecture, product/version, identity infrastructure, and 2025-2027 implementation/effectiveness data are not supplied, so deployment-specific feasibility remains unresolved; the GENERAL direction is preserved and sufficiency is PARTIAL. The masked jurisdiction does not change the technical direction because no jurisdiction-specific technical evidence is supplied.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1386505407970026,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.144812121401182
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "DE_DE11_1ECA9795EEF89DFA",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE12_CBF6FBB1313D37AF",
+              "DE_DE17_429D17A4E11A72C3"
+            ],
+            "institutional_regional": [
+              "DE_DE11_1E4AAE06CC3795D7",
+              "DE_DE12_E6F93E4AB8722379",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE17_567DDA7CFBC62829"
+            ],
+            "technical_feasibility": [
+              "AE06C_8C41709C0D8EE834",
+              "AE06S_407DDF87C86BB41B",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE17_429D17A4E11A72C3"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE06C_8C41709C0D8EE834",
+            "AE06S_407DDF87C86BB41B",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE17_429D17A4E11A72C3",
+            "DE_DE17_567DDA7CFBC62829",
+            "E_02_BE48A23ABD77A19C",
+            "E_03_B4E8A797813EC72F",
+            "E_03_F0CD4F1DE74CC7AD",
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_B4F773BEC65685CC",
+            "E_10_CEB460BC4092B2D3",
+            "E_12_F6120325C44B5EA9",
+            "E_15_195FD353ADC8E8B0",
+            "E_20_4D81D3799E4826F0",
+            "E_20_7FC83A095DEEBF69",
+            "E_23_42E9198B388BAA83",
+            "E_25_8F4D567857A97316",
+            "E_26_22D6C8ED91C81D37",
+            "E_29_4ED97777A686537A",
+            "E_29_951AF8A7281A822E",
+            "E_29_A8790308F8A745BD",
+            "E_31_96F42990F3AEAC86",
+            "E_33_F4FC25CE90264812"
+          ],
+          "jurisdiction_code": "KR",
+          "scenario_id": "KR__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE17_567DDA7CFBC62829",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_33_F4FC25CE90264812"
+        ],
+        "scenario_id": "KR__CIS_IG2",
+        "strategic_intelligence_report": "The frozen Stage 6 recommendation for PMT_ACCESS_CONTROL (ACCESS CONTROL) is HOLD: the candidate should not advance at present under the frozen scenario and evidence. This is a policy-conditional strategic direction, not a guarantee that a later deployment would fail, and it does not assert causal optimality or universal stakeholder preference.\n\nWhy the frozen policy fires: the direct trigger is the CHALLENGED financial/adoption stance, and the SUPPORTED technical feasibility and institutional/regional stances are required prerequisites for that rule to apply. Missing budget, architecture, jurisdiction-specific, and effectiveness evidence qualify scope and define reassessment conditions; they are not separate policy gates. The financial/adoption challenge is therefore preserved as a substantive dissent rather than being flattened by the supported technical and institutional dimensions.\n\nFinancial/adoption lens (CHALLENGED): the evidence directly challenges the candidate’s general financial/adoption feasibility. ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings [EVIDENCE:DE_DE11_1ECA9795EEF89DFA]. Zero-trust implementation may require cultural or philosophical change, can take years, and can initially add costs, even though long-term security-investment allocation may improve [EVIDENCE:DE_DE17_429D17A4E11A72C3]. Migration away from an external service provider can involve extreme cost or a long transition program [EVIDENCE:DE_DE12_CBF6FBB1313D37AF]. Deployment guidance identifies candidate-solution fit factors and pilot-based rollout, but does not by itself establish a financial or adoption direction [EVIDENCE:DE_DE12_6509E7A6D8467E38]. On balance, the direct burdens outweigh the more generic long-term benefit. Exact budget, price, TCO, ROI, staffing, procurement, current maturity, legacy retrofit scope, and 2025-2027 cost-outcome data are missing, so the evidence remains partial and does not prove deployment-specific infeasibility.\n\nTechnical feasibility lens (SUPPORTED): the evidence supports the candidate’s general technical feasibility. An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, giving an action-specific pathway for adaptive access control [EVIDENCE:AE06S_407DDF87C86BB41B]. The main technical challenge is that conventional perimeter and static access-control assumptions may be insufficient for evolving APT behavior, and effective access control depends on continuously updated threat/risk context rather than the control category alone [EVIDENCE:AE06C_8C41709C0D8EE834]. This limitation is a design and operability constraint, not proof that the control category is technically impossible. Zero-trust deployment guidance identifies client installation, resource location, logging, protocol/application support, subject behavior change, and pilot-based deployment as neutral implementation context [EVIDENCE:DE_DE12_6509E7A6D8467E38] [EVIDENCE:DE_DE17_429D17A4E11A72C3]. Exact local architecture, identity infrastructure, current deployment maturity, integration points, and 2025-2027 effectiveness evidence are missing, so deployment-specific technical feasibility remains unresolved.\n\nInstitutional/regional lens (SUPPORTED): the evidence supports the candidate’s general institutional feasibility. The records describe governance enablement through policy-enforcement points and compliance-system inputs to access-policy decisions, governance and monitoring of cybersecurity policies, procedures, and processes, and ABAC policy alignment, consistent attribute values, attribute lifecycle management, and access-failure procedures [EVIDENCE:DE_DE12_E6F93E4AB8722379] [EVIDENCE:DE_DE17_567DDA7CFBC62829] [EVIDENCE:DE_DE11_1E4AAE06CC3795D7]. A compliance constraint imposes mandatory session and token handling requirements, including secure storage and transport, timeout and invalidation, prohibition of insecure fallback, session-identifier verification, cookie restrictions, and limits on treating access tokens as subscriber presence [EVIDENCE:DE_DE13_055FC5E35FA61DD5]. On balance, the governance-enablement pathway is more directly supportive than the single compliance-constraint record is challenging, and the constraint does not by itself establish material infeasibility. No eligible jurisdiction-specific regulatory-applicability evidence is supplied, and actual governance ownership, audit mechanisms, and implemented session/token controls are not reported; therefore deployment-specific regional/legal feasibility is not directionally assessed.\n\nForecast and context: the frozen forecast outputs are model outputs, not external confirmations. The threat state and the access-control state are both forecast to increase. The signed threat-minus-access-control gap is forecast to move from a negative value in the early horizon to a slight positive crossing by 2027; this describes signed gap movement, not absolute-distance widening or narrowing. The slight 2027 positive crossing may not be distinguishable from zero given the reported confidence half-widths. Supplied context provides partial related context only. DBIR maps the System Intrusion pattern to Access Control Management at 67% [EVIDENCE:E_02_BE48A23ABD77A19C]. MITRE ATT&CK describes Active Directory configuration measures intended to secure accounts, control access, restrict logons, and reduce unauthorized access and lateral movement [EVIDENCE:E_12_F6120325C44B5EA9]. Crossref publication activity for the PMT access-control candidate shows a positive trend, but the 2024 count of 1070 is lower than the 2023 count of 1115, so it supports directional publication activity rather than deployment maturity or operational effectiveness [EVIDENCE:E_33_F4FC25CE90264812]. Mandiant reports that opportunistic compromise was leveraged into targeted attack activity as shares of intrusions: 6% in 2022, 4% in 2021, and 3% in 2020; these are not incident counts or frequency evidence [EVIDENCE:E_03_F0CD4F1DE74CC7AD]. Mendix advisories provide point-specific context for improper access-control handling and potential authenticated-remote impacts [EVIDENCE:E_10_5C0B9AC35F2420B3] [EVIDENCE:E_10_CEB460BC4092B2D3]. A Kastle advisory provides point-specific context for potential access to sensitive information and a point-in-time statement that no known public exploitation of those specific vulnerabilities had been reported; it does not establish a broader exploitation trend [EVIDENCE:E_10_B4F773BEC65685CC].\n\nBoundaries and reassessment: key unresolved limitations include no supplied exploitation-signal evidence connecting the cited access-control advisories to realized targeted-attack exploitation; no supplied 2025-2027 deployment, adoption, or operational-effectiveness evidence for access-control controls in the frozen enterprise; no supplied evidence directly reporting temporal change in targeted-attack incident count or frequency rather than intrusion share, detection source, or vulnerability availability; and frozen forecast fields that do not expose monthly access-control state values, so the relationship between the latest historical access-control z-score and the forecast mean z-score cannot be independently verified from the frozen input. Deployment-specific reassessment should require exact budget, staffing, TCO, ROI, payback, and procurement data; quantified ABAC attribute/policy management, retrofit, and maintenance costs against benefit; an incremental zero-trust or pilot-based plan with initial-cost accounting; provider switching-cost and core-business disruption evaluation; exact architecture and integration details; current maturity and integration points; governance, audit, and session/token control evidence; and jurisdiction-specific regulatory applicability.\n\nDecision implication: HOLD remains the frozen recommendation. To move the candidate forward, the deployment case must resolve the adoption/financial challenge and supply the missing deployment-specific evidence while maintaining the technical and institutional prerequisites. This report does not claim causal optimality, guaranteed utility, practitioner validation, or production success.",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?"
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?"
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?"
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?"
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness."
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input."
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          },
+          {
+            "gap_id": "G10",
+            "source": "technical_feasibility",
+            "text": "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied."
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+          },
+          {
+            "gap_id": "G14",
+            "source": "institutional_regional",
+            "text": "No eligible jurisdiction-specific regulatory-applicability record for the masked region is supplied in the directional grounding contract, so deployment-specific regulatory compatibility, data sovereignty, or cross-border constraints cannot be assessed."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "No supplied record reports the frozen enterprise's actual governance ownership, audit mechanisms, or implemented access-control session/token controls, so deployment-specific institutional feasibility remains conditional."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "No supplied record quantifies the compliance burden, staffing, budget, or architecture required for the access-control action."
+          },
+          {
+            "gap_id": "G17",
+            "source": "financial_adoption",
+            "text": "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied."
+          },
+          {
+            "gap_id": "G18",
+            "source": "financial_adoption",
+            "text": "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834]."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38]."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "technical_feasibility",
+            "text": "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "A deployment-specific institutional/regional feasibility judgment would require supplied jurisdiction-specific regulatory-applicability evidence eligible under the grounding contract and applicable to the frozen masked deployment."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "A deployment-specific judgment would require supplied evidence identifying the organization's governance pathway, accountability/auditability mechanisms, and the specific session/token controls subject to compliance constraints."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "institutional_regional",
+            "text": "If the frozen deployment is subject to additional regulatory regimes, those regimes and their obligations must be supplied as evidence before regulatory compatibility can be assessed."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "financial_adoption",
+            "text": "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA)."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38)."
+          },
+          {
+            "condition_id": "C11",
+            "source_lens": "financial_adoption",
+            "text": "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+          }
+        ]
+      },
+      {
+        "candidate_action_id": "PMT_ACCESS_CONTROL",
+        "candidate_action_name": "ACCESS CONTROL",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?",
+            "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?",
+            "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?",
+            "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?",
+            "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness.",
+            "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed.",
+            "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input.",
+            "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ_R1_01",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_POSITIVE"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 directly supports the annual Crossref publication counts, the positive OLS slope, and the first-to-last delta for PMT_ACCESS_CONTROL. Both Attack and Defense correctly limit this to directional publication activity and do not extend it to deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_02",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_NONMONOTONIC"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 shows that the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase. Accepting the Defense challenge is consistent with the Attack agreement and merely limits the interpretation of the same publication-activity trend.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The two CISA/Siemens Mendix advisories support the factual description of improper access-control handling and potential authenticated-remote impacts. They do not, however, report realized targeted-attack incident frequency, a trend in NoI, or measured mitigation effectiveness. The Attack claim should therefore be narrowed from forecast-support language to point-specific operational vulnerability context.",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_B4F773BEC65685CC"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_10_B4F773BEC65685CC supports both the potential Kastle capability to access sensitive information and the point-in-time statement that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA. Neither statement establishes a broader exploitation_signal, a generalized absence of exploitation, or direct movement in targeted-attack incident count or frequency. Both Attack claims should therefore be narrowed to product-specific, point-in-time context.",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_03_F0CD4F1DE74CC7AD"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_03_F0CD4F1DE74CC7AD supports the reported Mandiant percentages for opportunistic compromise being leveraged into targeted attack activity: 6% in 2022, 4% in 2021, and 3% in 2020. The evidence, however, reports shares of intrusions, not direct targeted-attack incident counts or frequency. The Defense revision is therefore justified: the factual content is supported, but the forecast-support framing overstates the evidentiary modality.",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_06",
+              "attack_claim_ids": [
+                "ATK_C7"
+              ],
+              "defense_claim_ids": [
+                "C_DBIR_ACCESS_CONTROL_CONTEXT"
+              ],
+              "evidence_ids": [
+                "E_02_BE48A23ABD77A19C"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_02_BE48A23ABD77A19C supports the DBIR description of the IG1 System Intrusion pattern mapping, including Control 5, Access Control Management, at 67%. Both claims are properly treated as control-association context rather than direct evidence of control effectiveness, deployment maturity, or future incident movement.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_07",
+              "attack_claim_ids": [
+                "ATK_C8"
+              ],
+              "defense_claim_ids": [
+                "C_AC_TTP_MITIGATION"
+              ],
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_12_F6120325C44B5EA9 supports the described MITRE ATT&CK M1015 Active Directory configuration measures and their stated purpose of securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement. The evidence is appropriately treated as mitigation context, not as measured NoI/NoP trajectory or causal effectiveness.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            }
+          ]
+        },
+        "d_lens": 0.888889,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "HOLD",
+        "decision_rule_id": "ADOPTION_GATE_CHALLENGED",
+        "dissenting_lenses": [
+          "financial_adoption"
+        ],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 8,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.08085583245823885,
+            "2026": -0.02823516110352381,
+            "2027": 0.00902899855482564
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.044942415506532246,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1386505407970026,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_ACCESS_CONTROL_2025-01",
+              "YF_PMT_ACCESS_CONTROL_2025-02",
+              "YF_PMT_ACCESS_CONTROL_2025-03",
+              "YF_PMT_ACCESS_CONTROL_2025-04",
+              "YF_PMT_ACCESS_CONTROL_2025-05",
+              "YF_PMT_ACCESS_CONTROL_2025-06",
+              "YF_PMT_ACCESS_CONTROL_2025-07",
+              "YF_PMT_ACCESS_CONTROL_2025-08",
+              "YF_PMT_ACCESS_CONTROL_2025-09",
+              "YF_PMT_ACCESS_CONTROL_2025-10",
+              "YF_PMT_ACCESS_CONTROL_2025-11",
+              "YF_PMT_ACCESS_CONTROL_2025-12",
+              "YF_PMT_ACCESS_CONTROL_2026-01",
+              "YF_PMT_ACCESS_CONTROL_2026-02",
+              "YF_PMT_ACCESS_CONTROL_2026-03",
+              "YF_PMT_ACCESS_CONTROL_2026-04",
+              "YF_PMT_ACCESS_CONTROL_2026-05",
+              "YF_PMT_ACCESS_CONTROL_2026-06",
+              "YF_PMT_ACCESS_CONTROL_2026-07",
+              "YF_PMT_ACCESS_CONTROL_2026-08",
+              "YF_PMT_ACCESS_CONTROL_2026-09",
+              "YF_PMT_ACCESS_CONTROL_2026-10",
+              "YF_PMT_ACCESS_CONTROL_2026-11",
+              "YF_PMT_ACCESS_CONTROL_2026-12",
+              "YF_PMT_ACCESS_CONTROL_2027-01",
+              "YF_PMT_ACCESS_CONTROL_2027-02",
+              "YF_PMT_ACCESS_CONTROL_2027-03",
+              "YF_PMT_ACCESS_CONTROL_2027-04",
+              "YF_PMT_ACCESS_CONTROL_2027-05",
+              "YF_PMT_ACCESS_CONTROL_2027-06",
+              "YF_PMT_ACCESS_CONTROL_2027-07",
+              "YF_PMT_ACCESS_CONTROL_2027-08",
+              "YF_PMT_ACCESS_CONTROL_2027-09",
+              "YF_PMT_ACCESS_CONTROL_2027-10",
+              "YF_PMT_ACCESS_CONTROL_2027-11",
+              "YF_PMT_ACCESS_CONTROL_2027-12"
+            ],
+            "forecast_mean_z": 0.5591148721080367,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.144812121401182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_TARGETED_ATTACK_2025-01",
+              "YF_THREAT_TARGETED_ATTACK_2025-02",
+              "YF_THREAT_TARGETED_ATTACK_2025-03",
+              "YF_THREAT_TARGETED_ATTACK_2025-04",
+              "YF_THREAT_TARGETED_ATTACK_2025-05",
+              "YF_THREAT_TARGETED_ATTACK_2025-06",
+              "YF_THREAT_TARGETED_ATTACK_2025-07",
+              "YF_THREAT_TARGETED_ATTACK_2025-08",
+              "YF_THREAT_TARGETED_ATTACK_2025-09",
+              "YF_THREAT_TARGETED_ATTACK_2025-10",
+              "YF_THREAT_TARGETED_ATTACK_2025-11",
+              "YF_THREAT_TARGETED_ATTACK_2025-12",
+              "YF_THREAT_TARGETED_ATTACK_2026-01",
+              "YF_THREAT_TARGETED_ATTACK_2026-02",
+              "YF_THREAT_TARGETED_ATTACK_2026-03",
+              "YF_THREAT_TARGETED_ATTACK_2026-04",
+              "YF_THREAT_TARGETED_ATTACK_2026-05",
+              "YF_THREAT_TARGETED_ATTACK_2026-06",
+              "YF_THREAT_TARGETED_ATTACK_2026-07",
+              "YF_THREAT_TARGETED_ATTACK_2026-08",
+              "YF_THREAT_TARGETED_ATTACK_2026-09",
+              "YF_THREAT_TARGETED_ATTACK_2026-10",
+              "YF_THREAT_TARGETED_ATTACK_2026-11",
+              "YF_THREAT_TARGETED_ATTACK_2026-12",
+              "YF_THREAT_TARGETED_ATTACK_2027-01",
+              "YF_THREAT_TARGETED_ATTACK_2027-02",
+              "YF_THREAT_TARGETED_ATTACK_2027-03",
+              "YF_THREAT_TARGETED_ATTACK_2027-04",
+              "YF_THREAT_TARGETED_ATTACK_2027-05",
+              "YF_THREAT_TARGETED_ATTACK_2027-06",
+              "YF_THREAT_TARGETED_ATTACK_2027-07",
+              "YF_THREAT_TARGETED_ATTACK_2027-08",
+              "YF_THREAT_TARGETED_ATTACK_2027-09",
+              "YF_THREAT_TARGETED_ATTACK_2027-10",
+              "YF_THREAT_TARGETED_ATTACK_2027-11",
+              "YF_THREAT_TARGETED_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 0.525760873772391,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [],
+        "jurisdiction_code": "EU",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA_CLAIM_01",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied CISA Zero Trust Maturity Model record provides a potential adoption benefit: long-term zero-trust implementation is described as enabling a more prudent allocation of security investments and providing visibility for security-policy development, implementation, enforcement, and evolution.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_02",
+                "evidence_ids": [
+                  "DE_DE11_1ECA9795EEF89DFA",
+                  "DE_DE17_429D17A4E11A72C3",
+                  "DE_DE12_CBF6FBB1313D37AF"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied decision evidence documents direct financial and adoption burdens for advanced access-control transitions: ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings; zero-trust implementation can take years and initially add costs; and service-provider migration can involve extreme cost or a long transition program.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_03",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied zero-trust deployment guidance describes implementation considerations such as client-installation constraints, resource location, logging, protocol support, subject behavior changes, and pilot programs, but it does not by itself establish a financial or adoption direction.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario.",
+              "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA).",
+              "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38).",
+              "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+            ],
+            "constraints": [
+              "ABAC-based access control is constrained by potential costs for development, deployment, maintenance, application retrofitting, and attribute/policy management; the guidance states that ABAC is not the right solution for every access-control problem (DE_DE11_1ECA9795EEF89DFA).",
+              "Zero-trust/access-control adoption is constrained by the possibility of multi-year implementation, initial additional costs, and organizational culture or philosophy change (DE_DE17_429D17A4E11A72C3).",
+              "Adoption choices that depend on external service providers are constrained by switching costs, long transition programs, and possible disruption to core business functions (DE_DE12_CBF6FBB1313D37AF).",
+              "Candidate-solution selection is constrained by implementation fit factors such as client installation, on-premises versus cloud resource location, logging, protocol support, and subject behavior change (DE_DE12_6509E7A6D8467E38)."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+            "evidence_gaps": [
+              "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied.",
+              "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied.",
+              "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied.",
+              "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The GENERAL financial/adoption feasibility direction is assessed because the frozen scenario does not provide exact budget, price, TCO, ROI, payback, staffing count, or procurement timing. The supplied decision evidence contains one grounded adoption benefit: DE_DE17_429D17A4E11A72C3 states that zero-trust implementation may require cultural/philosophical change and can take years, but in the long term can enable a more prudent allocation of security investments. It also documents an adoption burden: initial implementation often leads to additional costs. Additional grounded burdens are supplied by DE_DE11_1ECA9795EEF89DFA, which states that ABAC development, deployment, and maintenance may exceed benefits, that retrofitting applications is a separate cost, and that maintenance savings may be offset by attribute and policy management costs, and by DE_DE12_CBF6FBB1313D37AF, which describes extreme cost or long transition programs when migrating away from a service provider. DE_DE12_6509E7A6D8467E38 is deployment-maturity context about candidate-solution fit and pilot programs, but it cannot carry direction by itself. On balance, the direct cost, transition, and maintenance burdens outweigh the more generic long-term investment-allocation benefit. Therefore, the supplied records materially challenge the GENERAL financial/adoption feasibility of the frozen access-control action, without establishing that deployment-specific infeasibility is proven.",
+            "stance": -1
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR_C1",
+                "evidence_ids": [
+                  "DE_DE11_1E4AAE06CC3795D7"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied ABAC/attribute-based access-control guidance provides an institutional governance pathway for access-control policy administration, including enterprise-aligned local access policies, most-restrictive protection for shared ownership/control objects, consistent attribute values, assigned attribute lifecycle management, documented attribute meanings, and procedures for access denials or failures.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR_C2",
+                "evidence_ids": [
+                  "DE_DE12_E6F93E4AB8722379"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied zero-trust architecture guidance describes enabling governance and accountability structures for access decisions, including policy enforcement points, policy-decision data sources, and an industry compliance system that can supply compliance policy rules to the policy engine.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR_C3",
+                "evidence_ids": [
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied digital-identity guidance imposes additional technical compliance constraints on access-control/session implementations, including secure HTTPS-only session cookies, minimum practical hostname/path scoping, authenticated protected channels, prohibition on fallback from HTTPS to HTTP, and restrictions on interpreting OAuth access tokens as proof of subscriber presence.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR_C4",
+                "evidence_ids": [
+                  "E_31_96F42990F3AEAC86",
+                  "E_31_52DCE9554453ADEF"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "EU primary-law records provide jurisdiction-specific context for the frozen EU scenario: the eu-nis2 record states that essential and important entities should address human resources security and have appropriate access control policies as part of cybersecurity risk-management measures, and another EU primary-law record states that access policy and access management should be promoted for providers of public electronic communications networks or publicly available electronic communications services.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "IR_C5",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen deployment context is a CIS IG2 reference-enterprise profile characterized by personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, possible regulatory burdens, tolerance for short service interruptions, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "If the organization is an essential or important entity under the eu-nis2 record, implementation should include appropriate access control policies as part of cybersecurity risk-management measures.",
+              "If ABAC/attribute-based or federated access-control policies are used, the organization should maintain enterprise-aligned policies, consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure or exception-handling procedures.",
+              "If session/token-based access control is deployed, the implementation should satisfy the supplied session and token requirements, including secure HTTPS handling, protected channels, no insecure fallback, and appropriate token-interpretation limits.",
+              "If zero-trust-style access decisions are deployed, the organization should maintain policy enforcement points and policy-decision data sources, including compliance inputs that can be used for access decisions.",
+              "If the organization falls within the EU public electronic communications network/service provider scope, access policy and access management should be considered as part of the broader data-centric security context described in the EU primary-law record."
+            ],
+            "constraints": [
+              "The institutional governance pathway for access-control policy administration is conditional on enterprise policy alignment, most-restrictive shared-object protection, consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure procedures.",
+              "The zero-trust-style governance/accountability structure depends on policy enforcement points and policy-decision data sources, including compliance inputs available to the policy engine.",
+              "Session- and token-based access-control implementations are subject to the supplied technical compliance constraints for secure session handling and token interpretation.",
+              "EU regulatory relevance is conditional on the organization falling within the scopes described in the EU primary-law records, such as essential/important entity status or public electronic communications network/service provider status; the supplied CIS IG2 profile does not confirm that status."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+            "evidence_gaps": [
+              "The supplied records do not establish whether the frozen CIS IG2 reference enterprise in the EU scenario is an essential or important entity under the eu-nis2 record or a provider of public electronic communications networks or publicly available electronic communications services; therefore, direct EU regulatory applicability to the frozen deployment remains unresolved.",
+              "The supplied records do not provide deployment-specific evidence of current institutional governance capacity, auditability/accountability mechanisms, or organization-specific implementation barriers for access-control governance in the frozen scenario.",
+              "The supplied EU records are regulatory applicability context and do not, by themselves, identify a concrete EU compliance burden, cross-border constraint, or data-sovereignty requirement specific to the frozen access-control action."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under the Institutional / Regional Feasibility lens, the supplied records provide a qualified GENERAL institutional support signal for ACCESS CONTROL. The ABAC/attribute-based access-control guidance and zero-trust architecture guidance describe concrete governance, policy-administration, accountability, and compliance-integration pathways relevant to access-control implementation. The supplied digital-identity guidance does present additional session/token compliance constraints, but these are technical compliance requirements rather than evidence of a material institutional/regional barrier. The EU primary-law records provide jurisdiction-specific regulatory context for access-control policies and access-management concepts, but they do not resolve whether the frozen CIS IG2 reference enterprise falls within the essential/important entity or public-communications-provider scopes described in those records. Therefore, deployment-specific EU legal applicability remains conditional and unresolved, while the GENERAL institutional direction remains supported rather than materially challenged.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF_CLM_1",
+                "evidence_ids": [
+                  "AE06S_407DDF87C86BB41B"
+                ],
+                "scope": "GENERAL",
+                "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, providing an action-specific technical enablement for adaptive access control as a Targeted Attack defense.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_2",
+                "evidence_ids": [
+                  "AE06C_8C41709C0D8EE834"
+                ],
+                "scope": "GENERAL",
+                "statement": "Conventional perimeter and static access-control assumptions may be insufficient for evolving APT behavior, and existing risk assessment can miss dynamic attack progression; effective access control depends on continuously updated threat/risk context rather than the control category alone.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_3",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "Zero-trust deployment guidance identifies candidate-solution factors such as client-asset installation, resource location, logging for analysis, broad protocol/application support, and changes to subject behavior, and suggests pilot-based initial deployment and monitoring.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF_CLM_4",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "CISA zero-trust maturity guidance describes the path to zero trust as incremental, potentially taking years, with initial implementation costs and a shift in cybersecurity philosophy and culture.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics.",
+              "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834].",
+              "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38].",
+              "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+            ],
+            "constraints": [
+              "Static or perimeter-only access-control assumptions are technically limited for evolving APTs because continuously updated threat/risk context is required [AE06C_8C41709C0D8EE834].",
+              "Deployment options must account for client-side installation, resource location, logging and analytics, protocol/application breadth, and subject-behavior changes [DE_DE12_6509E7A6D8467E38].",
+              "Zero-trust-related implementation is described as incremental and potentially taking years, with initial additional costs; no exact timeline, budget, or product detail is supplied [DE_DE17_429D17A4E11A72C3]."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+            "evidence_gaps": [
+              "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied.",
+              "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied.",
+              "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise.",
+              "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "On balance, the supplied records support the technical feasibility of ACCESS CONTROL for the Targeted Attack horizon at GENERAL scope. The eligible technical_enablement record reports an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions and an improved ability to respond to sophisticated multi-stage threats, giving a direct action-specific technical pathway for adaptive access control as a targeted-attack defense [AE06S_407DDF87C86BB41B]. The eligible technical_limitation record challenges a static or perimeter-only implementation by stating that evolving APT behavior can make conventional assumptions insufficient and that effective access control depends on continuously updated threat/risk context [AE06C_8C41709C0D8EE834]. This limitation is treated as a design and operability constraint, not as proof that the control category is technically impossible. Deployment-maturity records identify implementation factors and incremental rollout, but they cannot by themselves create direction [DE_DE12_6509E7A6D8467E38, DE_DE17_429D17A4E11A72C3]. Exact local architecture, product/version, identity infrastructure, and 2025-2027 implementation/effectiveness data are not supplied, so deployment-specific feasibility remains unresolved; the GENERAL direction is preserved and sufficiency is PARTIAL. The masked jurisdiction does not change the technical direction because no jurisdiction-specific technical evidence is supplied.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1386505407970026,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.144812121401182
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "DE_DE11_1ECA9795EEF89DFA",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE12_CBF6FBB1313D37AF",
+              "DE_DE17_429D17A4E11A72C3"
+            ],
+            "institutional_regional": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE11_1E4AAE06CC3795D7",
+              "DE_DE12_E6F93E4AB8722379",
+              "DE_DE13_055FC5E35FA61DD5",
+              "E_31_52DCE9554453ADEF",
+              "E_31_96F42990F3AEAC86"
+            ],
+            "technical_feasibility": [
+              "AE06C_8C41709C0D8EE834",
+              "AE06S_407DDF87C86BB41B",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE17_429D17A4E11A72C3"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE06C_8C41709C0D8EE834",
+            "AE06S_407DDF87C86BB41B",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE17_429D17A4E11A72C3",
+            "DE_DE17_567DDA7CFBC62829",
+            "E_02_BE48A23ABD77A19C",
+            "E_03_B4E8A797813EC72F",
+            "E_03_F0CD4F1DE74CC7AD",
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_B4F773BEC65685CC",
+            "E_10_CEB460BC4092B2D3",
+            "E_12_F6120325C44B5EA9",
+            "E_15_195FD353ADC8E8B0",
+            "E_20_4D81D3799E4826F0",
+            "E_20_7FC83A095DEEBF69",
+            "E_23_42E9198B388BAA83",
+            "E_25_8F4D567857A97316",
+            "E_26_22D6C8ED91C81D37",
+            "E_29_4ED97777A686537A",
+            "E_29_951AF8A7281A822E",
+            "E_29_A8790308F8A745BD",
+            "E_31_52DCE9554453ADEF",
+            "E_31_96F42990F3AEAC86",
+            "E_33_F4FC25CE90264812"
+          ],
+          "jurisdiction_code": "EU",
+          "scenario_id": "EU__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_31_52DCE9554453ADEF",
+          "E_31_96F42990F3AEAC86",
+          "E_33_F4FC25CE90264812"
+        ],
+        "scenario_id": "EU__CIS_IG2",
+        "strategic_intelligence_report": "FROZEN RECOMMENDATION: HOLD. Interpretation: the ACCESS CONTROL candidate should not advance at present under the frozen EU / CIS IG2 targeted-attack scenario and evidence set. This is a policy-conditional strategic recommendation, not a statement that access control is technically unsound, institutionally impossible, or that any future pilot or production deployment would necessarily fail.\n\nDECISION BASIS IN DECISION-MAKER TERMS: The frozen recommendation fires because the financial and adoption dimension challenges the candidate action's feasibility, while the technical feasibility dimension and the institutional/regional dimension support it. Under the frozen policy logic, the challenged financial/adoption state is the direct trigger, but it operates only together with the supported technical and institutional prerequisites. Missing evidence, unresolved forecast questions, and deployment-specific unknowns are scope qualifiers and reassessment conditions; they do not independently cause the HOLD.\n\nFORECAST CONTEXT AND EVIDENTIARY STATUS: The frozen forecast is a model output, not externally confirmed observation. It projects the threat state and the PMT/access-control protection state to increase over 2025-2027. The signed threat-minus-PMT gap moves from negative in 2025 to less negative in 2026 to slightly positive in 2027, described as increasing in the signed-gap sense. The reported confidence half-widths are wide enough that the small 2027 positive crossing is not robustly distinguishable from zero on the supplied confidence information. The adversarial forecast trace leaves the challenge side unresolved and retains the defense support, but both sides accept modality limits.\n\nThe supplied external evidence provides context, not direct confirmation of the frozen forecast modalities. The Crossref record supports a positive publication-activity trend for access control, including annual counts and a positive trend slope, but the adjudicated trace limits this to directional publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness [EVIDENCE:E_33_F4FC25CE90264812]. The trend is also nonmonotonic because the 2024 count of 1070 is lower than the 2023 count of 1115. The Mandiant record supports reported shares of intrusions being leveraged into targeted-attack activity, but those are shares of intrusions, not targeted-attack incident counts or frequency [EVIDENCE:E_03_F0CD4F1DE74CC7AD]. The DBIR record supports control-association context in which Access Control Management is linked to the IG1 System Intrusion pattern at 67%; it is not evidence of control effectiveness or future incident movement [EVIDENCE:E_02_BE48A23ABD77A19C]. The CISA/Siemens Mendix advisories provide point-specific access-control vulnerability context, not realized targeted-attack exploitation or a broader 2025-2027 threat trajectory [EVIDENCE:E_10_5C0B9AC35F2420B3], [EVIDENCE:E_10_CEB460BC4092B2D3]. The Kastle advisory provides product-specific potential exploitation context and a point-in-time statement that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA; that statement does not establish a broader exploitation signal [EVIDENCE:E_10_B4F773BEC65685CC]. The MITRE ATT&CK M1015 Active Directory configuration measures are mitigation context for securing accounts, controlling access, restricting logons, and reducing lateral movement, not measured threat or protection trajectory evidence [EVIDENCE:E_12_F6120325C44B5EA9].\n\nTECHNICAL FEASIBILITY: SUPPORTED AT GENERAL SCOPE. The technical dimension supports the general feasibility of access control for the targeted-attack horizon. An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, giving an action-specific technical pathway for adaptive access control [EVIDENCE:AE06S_407DDF87C86BB41B]. A material technical challenge remains: conventional perimeter or static access-control assumptions may be insufficient for evolving APT behavior, and effective access control depends on continuously updated threat or risk context rather than the control category alone [EVIDENCE:AE06C_8C41709C0D8EE834]. This is treated as a design and operability constraint, not as proof that the control category is technically impossible. Deployment guidance adds neutral implementation context: candidate solutions must be assessed for client installation, resource location, logging and analytics, protocol and application support, subject behavior changes, and pilot-based monitoring [EVIDENCE:DE_DE12_6509E7A6D8467E38]; the zero-trust path is described as incremental, potentially taking years, with initial costs and cybersecurity culture change [EVIDENCE:DE_DE17_429D17A4E11A72C3]. Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied, so deployment-specific technical feasibility remains unresolved while the general technical direction remains supported.\n\nINSTITUTIONAL / REGIONAL FEASIBILITY: SUPPORTED AT GENERAL SCOPE. The institutional/regional dimension supports the general feasibility of access-control governance in the frozen scenario. ABAC/attribute-based guidance provides an institutional pathway for policy administration, including enterprise-aligned local policies, most-restrictive protection for shared ownership/control objects, consistent attribute values, attribute lifecycle management, documented attribute meanings, and procedures for access denials or failures [EVIDENCE:DE_DE11_1E4AAE06CC3795D7]. Zero-trust architecture guidance adds governance and accountability structures for access decisions, including policy enforcement points, policy-decision data sources, and compliance inputs that can feed a policy engine [EVIDENCE:DE_DE12_E6F93E4AB8722379]. Digital-identity guidance does impose additional technical compliance constraints on session and token implementations, including secure HTTPS-only session cookies, practical hostname/path scoping, authenticated protected channels, no fallback from HTTPS to HTTP, and limits on interpreting OAuth access tokens as proof of subscriber presence [EVIDENCE:DE_DE13_055FC5E35FA61DD5]; these are implementation requirements rather than a material institutional/regional barrier. EU primary-law records provide jurisdiction-specific context: one states that essential and important entities should address human-resources security and have appropriate access-control policies as part of cybersecurity risk management, and another promotes access policy and access management for providers of public electronic communications networks or publicly available electronic communications services [EVIDENCE:E_31_96F42990F3AEAC86], [EVIDENCE:E_31_52DCE9554453ADEF]. However, the supplied records do not establish whether the frozen CIS IG2 reference enterprise falls within those EU scopes, so direct regulatory applicability remains conditional and unresolved. The frozen deployment context is a CIS IG2 reference enterprise with multi-department IT infrastructure and possible regulatory burdens [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4].\n\nFINANCIAL / ADOPTION FEASIBILITY: CHALLENGED AT GENERAL SCOPE. This is the substantive dissent that drives the frozen HOLD. The strongest supported benefit is generic and long-term: zero-trust implementation may require cultural or philosophical change and can take years, but in the long term it can enable a more prudent allocation of security investments and provide visibility for security-policy development, implementation, enforcement, and evolution [EVIDENCE:DE_DE17_429D17A4E11A72C3]. The direct financial and adoption burdens are more concrete. ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings, and ABAC is not the right solution for every access-control problem [EVIDENCE:DE_DE11_1ECA9795EEF89DFA]. Service-provider migration can involve extreme cost or a long transition program, with switching costs, transition duration, and possible core-business disruption [EVIDENCE:DE_DE12_CBF6FBB1313D37AF]. Zero-trust deployment guidance adds neutral deployment-fit context, including client-installation constraints, resource location, logging, protocol support, subject behavior changes, and pilot programs, but it does not by itself establish a financial direction [EVIDENCE:DE_DE12_6509E7A6D8467E38]. Exact budget, price, TCO, ROI, payback period, staffing count, procurement ceiling, current access-control maturity, ABAC or zero-trust capabilities, legacy retrofit scope, attribute complexity, vendor and contract details, and 2025-2027 cost-outcome or benefit-realization data are not supplied. Therefore, the financial/adoption stance is a challenged general feasibility direction, not a proven deployment-specific infeasibility conclusion.\n\nMATERIAL LIMITATIONS AND UNRESOLVED QUESTIONS: The report must not be read as having established that the 2025-2027 forecast is externally confirmed. The threat-minus-PMT gap movement, including the slight 2027 positive crossing, cannot be robustly distinguished from zero on the supplied confidence information, and no supplied evidence reports the threat state in incident-count or frequency terms. The Mandiant intrusion-share figures do not resolve whether changes in opportunistic-compromise share or external notification are driven by incident frequency, investigation mix, reporting, or detection. The Crossref publication trend does not resolve whether access-control publication activity reflects actual deployment or operational effectiveness. The CISA advisories do not connect cited access-control vulnerabilities to realized targeted-attack exploitation, and the supplied evidence base lacks a broader exploitation signal. The frozen forecast fields also do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score and the PMT forecast mean z cannot be independently verified from the frozen input. Deployment-specific unknowns also remain across all dimensions: exact architecture, current maturity, integration points, 2025-2027 implementation/effectiveness evidence, EU regulatory scope, governance capacity, and budget/staffing/procurement data.\n\nREASSESSMENT CONDITIONS: Reassessment can proceed when the financial/adoption challenge is directly addressed while the supported technical and institutional prerequisites remain intact. Technically, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics; ensure the design uses continuously updated threat or risk context rather than static perimeter rules only; and evaluate zero-trust or advanced access-control candidates for client installation, resource location, logging, protocol/application support, and subject behavior changes with an initial pilot or monitoring approach. Institutionally, determine whether the organization is an essential or important entity under the relevant EU record or within public-communications-provider scope; maintain enterprise-aligned ABAC or federated policies, consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure or exception-handling procedures; satisfy session/token security constraints; and maintain policy enforcement points and policy-decision data sources, including compliance inputs. Financially, quantify budget, staffing, infrastructure, procurement, TCO, ROI, payback, retrofit, attribute/policy management, initial and ongoing implementation costs, provider switching costs, transition duration, business disruption, and benefit realization against the long-term benefit of more precise access decisions and prudent investment allocation.\n\nDECISION IMPLICATION: The frozen HOLD preserves the substantive technical and institutional support for access control while withholding strategic advancement because the financial/adoption evidence materially challenges feasibility in the frozen scenario. The unresolved forecast questions and deployment-specific gaps are not additional independent gates; they define the evidence that would need to be supplied before the candidate can be reconsidered.",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?"
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?"
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?"
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?"
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness."
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input."
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          },
+          {
+            "gap_id": "G10",
+            "source": "technical_feasibility",
+            "text": "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied."
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+          },
+          {
+            "gap_id": "G14",
+            "source": "institutional_regional",
+            "text": "The supplied records do not establish whether the frozen CIS IG2 reference enterprise in the EU scenario is an essential or important entity under the eu-nis2 record or a provider of public electronic communications networks or publicly available electronic communications services; therefore, direct EU regulatory applicability to the frozen deployment remains unresolved."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "The supplied records do not provide deployment-specific evidence of current institutional governance capacity, auditability/accountability mechanisms, or organization-specific implementation barriers for access-control governance in the frozen scenario."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "The supplied EU records are regulatory applicability context and do not, by themselves, identify a concrete EU compliance burden, cross-border constraint, or data-sovereignty requirement specific to the frozen access-control action."
+          },
+          {
+            "gap_id": "G17",
+            "source": "financial_adoption",
+            "text": "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied."
+          },
+          {
+            "gap_id": "G18",
+            "source": "financial_adoption",
+            "text": "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834]."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38]."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "technical_feasibility",
+            "text": "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "If the organization is an essential or important entity under the eu-nis2 record, implementation should include appropriate access control policies as part of cybersecurity risk-management measures."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "If ABAC/attribute-based or federated access-control policies are used, the organization should maintain enterprise-aligned policies, consistent attribute values, attribute lifecycle management, attribute documentation, and access-failure or exception-handling procedures."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "institutional_regional",
+            "text": "If session/token-based access control is deployed, the implementation should satisfy the supplied session and token requirements, including secure HTTPS handling, protected channels, no insecure fallback, and appropriate token-interpretation limits."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "institutional_regional",
+            "text": "If zero-trust-style access decisions are deployed, the organization should maintain policy enforcement points and policy-decision data sources, including compliance inputs that can be used for access decisions."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "institutional_regional",
+            "text": "If the organization falls within the EU public electronic communications network/service provider scope, access policy and access management should be considered as part of the broader data-centric security context described in the EU primary-law record."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario."
+          },
+          {
+            "condition_id": "C11",
+            "source_lens": "financial_adoption",
+            "text": "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA)."
+          },
+          {
+            "condition_id": "C12",
+            "source_lens": "financial_adoption",
+            "text": "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38)."
+          },
+          {
+            "condition_id": "C13",
+            "source_lens": "financial_adoption",
+            "text": "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+          }
+        ]
+      },
+      {
+        "candidate_action_id": "PMT_ACCESS_CONTROL",
+        "candidate_action_name": "ACCESS CONTROL",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?",
+            "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?",
+            "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?",
+            "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?",
+            "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness.",
+            "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed.",
+            "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input.",
+            "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "ADJ_R1_01",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_POSITIVE"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 directly supports the annual Crossref publication counts, the positive OLS slope, and the first-to-last delta for PMT_ACCESS_CONTROL. Both Attack and Defense correctly limit this to directional publication activity and do not extend it to deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_02",
+              "attack_claim_ids": [
+                "ATK_C5"
+              ],
+              "defense_claim_ids": [
+                "C_PMT_TREND_NONMONOTONIC"
+              ],
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_F4FC25CE90264812 shows that the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase. Accepting the Defense challenge is consistent with the Attack agreement and merely limits the interpretation of the same publication-activity trend.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The two CISA/Siemens Mendix advisories support the factual description of improper access-control handling and potential authenticated-remote impacts. They do not, however, report realized targeted-attack incident frequency, a trend in NoI, or measured mitigation effectiveness. The Attack claim should therefore be narrowed from forecast-support language to point-specific operational vulnerability context.",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "evidence_ids": [
+                "E_10_B4F773BEC65685CC"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_10_B4F773BEC65685CC supports both the potential Kastle capability to access sensitive information and the point-in-time statement that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA. Neither statement establishes a broader exploitation_signal, a generalized absence of exploitation, or direct movement in targeted-attack incident count or frequency. Both Attack claims should therefore be narrowed to product-specific, point-in-time context.",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "evidence_ids": [
+                "E_03_F0CD4F1DE74CC7AD"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_03_F0CD4F1DE74CC7AD supports the reported Mandiant percentages for opportunistic compromise being leveraged into targeted attack activity: 6% in 2022, 4% in 2021, and 3% in 2020. The evidence, however, reports shares of intrusions, not direct targeted-attack incident counts or frequency. The Defense revision is therefore justified: the factual content is supported, but the forecast-support framing overstates the evidentiary modality.",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_06",
+              "attack_claim_ids": [
+                "ATK_C7"
+              ],
+              "defense_claim_ids": [
+                "C_DBIR_ACCESS_CONTROL_CONTEXT"
+              ],
+              "evidence_ids": [
+                "E_02_BE48A23ABD77A19C"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_02_BE48A23ABD77A19C supports the DBIR description of the IG1 System Intrusion pattern mapping, including Control 5, Access Control Management, at 67%. Both claims are properly treated as control-association context rather than direct evidence of control effectiveness, deployment maturity, or future incident movement.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "ADJ_R1_07",
+              "attack_claim_ids": [
+                "ATK_C8"
+              ],
+              "defense_claim_ids": [
+                "C_AC_TTP_MITIGATION"
+              ],
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_12_F6120325C44B5EA9 supports the described MITRE ATT&CK M1015 Active Directory configuration measures and their stated purpose of securing accounts, controlling access, restricting logons, and reducing unauthorized access and lateral movement. The evidence is appropriately treated as mitigation context, not as measured NoI/NoP trajectory or causal effectiveness.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "ADJ_R1_03",
+              "attack_claim_ids": [
+                "ATK_C2"
+              ],
+              "defense_claim_ids": [
+                "C_MENDIX_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C2 so that it is presented as point-specific advisory context for Mendix access-control vulnerabilities, without claiming that the advisories directly support the 2025-2027 targeted-attack incident count, frequency, trend, or mitigation effectiveness."
+            },
+            {
+              "adjudication_id": "ADJ_R1_04",
+              "attack_claim_ids": [
+                "ATK_C3",
+                "ATK_C4"
+              ],
+              "defense_claim_ids": [
+                "C_KASTLE_ACCESS_CONTROL_VULN"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory."
+            },
+            {
+              "adjudication_id": "ADJ_R1_05",
+              "attack_claim_ids": [
+                "ATK_C1"
+              ],
+              "defense_claim_ids": [],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "Revise ATK_C1 to specify that the Mandiant figures are shares of intrusions and to reclassify the claim as operational context rather than direct SUPPORTS_FORECAST evidence for targeted-attack incident count, frequency, or the 2025-2027 NoI trajectory."
+            }
+          ]
+        },
+        "d_lens": 0.888889,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "HOLD",
+        "decision_rule_id": "ADOPTION_GATE_CHALLENGED",
+        "dissenting_lenses": [
+          "financial_adoption"
+        ],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 8,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.08085583245823885,
+            "2026": -0.02823516110352381,
+            "2027": 0.00902899855482564
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.044942415506532246,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1386505407970026,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_ACCESS_CONTROL_2025-01",
+              "YF_PMT_ACCESS_CONTROL_2025-02",
+              "YF_PMT_ACCESS_CONTROL_2025-03",
+              "YF_PMT_ACCESS_CONTROL_2025-04",
+              "YF_PMT_ACCESS_CONTROL_2025-05",
+              "YF_PMT_ACCESS_CONTROL_2025-06",
+              "YF_PMT_ACCESS_CONTROL_2025-07",
+              "YF_PMT_ACCESS_CONTROL_2025-08",
+              "YF_PMT_ACCESS_CONTROL_2025-09",
+              "YF_PMT_ACCESS_CONTROL_2025-10",
+              "YF_PMT_ACCESS_CONTROL_2025-11",
+              "YF_PMT_ACCESS_CONTROL_2025-12",
+              "YF_PMT_ACCESS_CONTROL_2026-01",
+              "YF_PMT_ACCESS_CONTROL_2026-02",
+              "YF_PMT_ACCESS_CONTROL_2026-03",
+              "YF_PMT_ACCESS_CONTROL_2026-04",
+              "YF_PMT_ACCESS_CONTROL_2026-05",
+              "YF_PMT_ACCESS_CONTROL_2026-06",
+              "YF_PMT_ACCESS_CONTROL_2026-07",
+              "YF_PMT_ACCESS_CONTROL_2026-08",
+              "YF_PMT_ACCESS_CONTROL_2026-09",
+              "YF_PMT_ACCESS_CONTROL_2026-10",
+              "YF_PMT_ACCESS_CONTROL_2026-11",
+              "YF_PMT_ACCESS_CONTROL_2026-12",
+              "YF_PMT_ACCESS_CONTROL_2027-01",
+              "YF_PMT_ACCESS_CONTROL_2027-02",
+              "YF_PMT_ACCESS_CONTROL_2027-03",
+              "YF_PMT_ACCESS_CONTROL_2027-04",
+              "YF_PMT_ACCESS_CONTROL_2027-05",
+              "YF_PMT_ACCESS_CONTROL_2027-06",
+              "YF_PMT_ACCESS_CONTROL_2027-07",
+              "YF_PMT_ACCESS_CONTROL_2027-08",
+              "YF_PMT_ACCESS_CONTROL_2027-09",
+              "YF_PMT_ACCESS_CONTROL_2027-10",
+              "YF_PMT_ACCESS_CONTROL_2027-11",
+              "YF_PMT_ACCESS_CONTROL_2027-12"
+            ],
+            "forecast_mean_z": 0.5591148721080367,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.144812121401182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_TARGETED_ATTACK_2025-01",
+              "YF_THREAT_TARGETED_ATTACK_2025-02",
+              "YF_THREAT_TARGETED_ATTACK_2025-03",
+              "YF_THREAT_TARGETED_ATTACK_2025-04",
+              "YF_THREAT_TARGETED_ATTACK_2025-05",
+              "YF_THREAT_TARGETED_ATTACK_2025-06",
+              "YF_THREAT_TARGETED_ATTACK_2025-07",
+              "YF_THREAT_TARGETED_ATTACK_2025-08",
+              "YF_THREAT_TARGETED_ATTACK_2025-09",
+              "YF_THREAT_TARGETED_ATTACK_2025-10",
+              "YF_THREAT_TARGETED_ATTACK_2025-11",
+              "YF_THREAT_TARGETED_ATTACK_2025-12",
+              "YF_THREAT_TARGETED_ATTACK_2026-01",
+              "YF_THREAT_TARGETED_ATTACK_2026-02",
+              "YF_THREAT_TARGETED_ATTACK_2026-03",
+              "YF_THREAT_TARGETED_ATTACK_2026-04",
+              "YF_THREAT_TARGETED_ATTACK_2026-05",
+              "YF_THREAT_TARGETED_ATTACK_2026-06",
+              "YF_THREAT_TARGETED_ATTACK_2026-07",
+              "YF_THREAT_TARGETED_ATTACK_2026-08",
+              "YF_THREAT_TARGETED_ATTACK_2026-09",
+              "YF_THREAT_TARGETED_ATTACK_2026-10",
+              "YF_THREAT_TARGETED_ATTACK_2026-11",
+              "YF_THREAT_TARGETED_ATTACK_2026-12",
+              "YF_THREAT_TARGETED_ATTACK_2027-01",
+              "YF_THREAT_TARGETED_ATTACK_2027-02",
+              "YF_THREAT_TARGETED_ATTACK_2027-03",
+              "YF_THREAT_TARGETED_ATTACK_2027-04",
+              "YF_THREAT_TARGETED_ATTACK_2027-05",
+              "YF_THREAT_TARGETED_ATTACK_2027-06",
+              "YF_THREAT_TARGETED_ATTACK_2027-07",
+              "YF_THREAT_TARGETED_ATTACK_2027-08",
+              "YF_THREAT_TARGETED_ATTACK_2027-09",
+              "YF_THREAT_TARGETED_ATTACK_2027-10",
+              "YF_THREAT_TARGETED_ATTACK_2027-11",
+              "YF_THREAT_TARGETED_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 0.525760873772391,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [],
+        "jurisdiction_code": "US",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA_CLAIM_01",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied CISA Zero Trust Maturity Model record provides a potential adoption benefit: long-term zero-trust implementation is described as enabling a more prudent allocation of security investments and providing visibility for security-policy development, implementation, enforcement, and evolution.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_02",
+                "evidence_ids": [
+                  "DE_DE11_1ECA9795EEF89DFA",
+                  "DE_DE17_429D17A4E11A72C3",
+                  "DE_DE12_CBF6FBB1313D37AF"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied decision evidence documents direct financial and adoption burdens for advanced access-control transitions: ABAC development, deployment, and maintenance may exceed benefits; application retrofitting and attribute/policy management can offset maintenance savings; zero-trust implementation can take years and initially add costs; and service-provider migration can involve extreme cost or a long transition program.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA_CLAIM_03",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied zero-trust deployment guidance describes implementation considerations such as client-installation constraints, resource location, logging, protocol support, subject behavior changes, and pilot programs, but it does not by itself establish a financial or adoption direction.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario.",
+              "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA).",
+              "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38).",
+              "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+            ],
+            "constraints": [
+              "ABAC-based access control is constrained by potential costs for development, deployment, maintenance, application retrofitting, and attribute/policy management; the guidance states that ABAC is not the right solution for every access-control problem (DE_DE11_1ECA9795EEF89DFA).",
+              "Zero-trust/access-control adoption is constrained by the possibility of multi-year implementation, initial additional costs, and organizational culture or philosophy change (DE_DE17_429D17A4E11A72C3).",
+              "Adoption choices that depend on external service providers are constrained by switching costs, long transition programs, and possible disruption to core business functions (DE_DE12_CBF6FBB1313D37AF).",
+              "Candidate-solution selection is constrained by implementation fit factors such as client installation, on-premises versus cloud resource location, logging, protocol support, and subject behavior change (DE_DE12_6509E7A6D8467E38)."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+            "evidence_gaps": [
+              "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied.",
+              "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied.",
+              "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied.",
+              "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The GENERAL financial/adoption feasibility direction is assessed because the frozen scenario does not provide exact budget, price, TCO, ROI, payback, staffing count, or procurement timing. The supplied decision evidence contains one grounded adoption benefit: DE_DE17_429D17A4E11A72C3 states that zero-trust implementation may require cultural/philosophical change and can take years, but in the long term can enable a more prudent allocation of security investments. It also documents an adoption burden: initial implementation often leads to additional costs. Additional grounded burdens are supplied by DE_DE11_1ECA9795EEF89DFA, which states that ABAC development, deployment, and maintenance may exceed benefits, that retrofitting applications is a separate cost, and that maintenance savings may be offset by attribute and policy management costs, and by DE_DE12_CBF6FBB1313D37AF, which describes extreme cost or long transition programs when migrating away from a service provider. DE_DE12_6509E7A6D8467E38 is deployment-maturity context about candidate-solution fit and pilot programs, but it cannot carry direction by itself. On balance, the direct cost, transition, and maintenance burdens outweigh the more generic long-term investment-allocation benefit. Therefore, the supplied records materially challenge the GENERAL financial/adoption feasibility of the frozen access-control action, without establishing that deployment-specific infeasibility is proven.",
+            "stance": -1
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR_CLAIM_1",
+                "evidence_ids": [
+                  "DE_DE12_E6F93E4AB8722379",
+                  "DE_DE17_567DDA7CFBC62829",
+                  "DE_DE11_1E4AAE06CC3795D7"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied governance-enablement records describe institutional pathways that can support access-control implementation: policy enforcement points and an industry compliance system as inputs to access-policy decisions; governance of cybersecurity policies, procedures, and processes with monitoring and assessment of security capabilities; and ABAC policy alignment, consistent attribute values, attribute lifecycle management, and access-failure procedures.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR_CLAIM_2",
+                "evidence_ids": [
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "statement": "The supplied compliance-constraint record imposes specific requirements on access-control session and token handling, including secure storage and transport, session timeout and invalidation, prohibition of insecure fallback, session-identifier verification, cookie restrictions, and limits on interpreting access tokens as subscriber presence.",
+                "status": "CHALLENGES_FEASIBILITY"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific institutional/regional feasibility judgment would require supplied jurisdiction-specific regulatory-applicability evidence eligible under the grounding contract and applicable to the frozen masked deployment.",
+              "A deployment-specific judgment would require supplied evidence identifying the organization's governance pathway, accountability/auditability mechanisms, and the specific session/token controls subject to compliance constraints.",
+              "If the frozen deployment is subject to additional regulatory regimes, those regimes and their obligations must be supplied as evidence before regulatory compatibility can be assessed."
+            ],
+            "constraints": [
+              "Institutional governance enablement is present in the supplied evidence through policy-enforcement/compliance-system inputs, governance and monitoring of policies/procedures, and ABAC policy/attribute lifecycle and failure procedures (DE_DE12_E6F93E4AB8722379, DE_DE17_567DDA7CFBC62829, DE_DE11_1E4AAE06CC3795D7).",
+              "A compliance constraint exists for access-control implementation through mandatory session and token handling requirements (DE_DE13_055FC5E35FA61DD5).",
+              "The frozen region is masked and no eligible jurisdiction-specific regulatory-applicability evidence is present in the supplied directional grounding contract, so deployment-specific regional or legal feasibility is not directionally assessed."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+            "evidence_gaps": [
+              "No eligible jurisdiction-specific regulatory-applicability record for the masked region is supplied in the directional grounding contract, so deployment-specific regulatory compatibility, data sovereignty, or cross-border constraints cannot be assessed.",
+              "No supplied record reports the frozen enterprise's actual governance ownership, audit mechanisms, or implemented access-control session/token controls, so deployment-specific institutional feasibility remains conditional.",
+              "No supplied record quantifies the compliance burden, staffing, budget, or architecture required for the access-control action."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under the Institutional / Regional lens, the supplied action-specific decision evidence supports GENERAL institutional feasibility for ACCESS CONTROL. The eligible governance_enablement records describe institutional mechanisms that can enable implementation: policy enforcement and compliance-system inputs for access decisions, governance of cybersecurity policies, procedures, and processes with monitoring/assessment, and ABAC policy, attribute lifecycle, and access-failure procedures. A compliance_constraint record is also present, describing mandatory session and token handling requirements that create implementation/compliance constraints. On balance, the governance enablement pathway is more directly supportive of institutional feasibility than the single compliance-constraint record is challenging; the compliance constraint does not by itself establish material infeasibility. Because the region is intentionally masked and no eligible jurisdiction-specific regulatory_applicability evidence is supplied in the directional grounding contract for the masked region, no DEPLOYMENT_SPECIFIC regional/legal direction is drawn. Sufficiency is PARTIAL because deployment-specific jurisdictional applicability, actual governance ownership, auditability mechanisms, and organizational compliance context are not supplied.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF_CLM_1",
+                "evidence_ids": [
+                  "AE06S_407DDF87C86BB41B"
+                ],
+                "scope": "GENERAL",
+                "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats, providing an action-specific technical enablement for adaptive access control as a Targeted Attack defense.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_2",
+                "evidence_ids": [
+                  "AE06C_8C41709C0D8EE834"
+                ],
+                "scope": "GENERAL",
+                "statement": "Conventional perimeter and static access-control assumptions may be insufficient for evolving APT behavior, and existing risk assessment can miss dynamic attack progression; effective access control depends on continuously updated threat/risk context rather than the control category alone.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF_CLM_3",
+                "evidence_ids": [
+                  "DE_DE12_6509E7A6D8467E38"
+                ],
+                "scope": "GENERAL",
+                "statement": "Zero-trust deployment guidance identifies candidate-solution factors such as client-asset installation, resource location, logging for analysis, broad protocol/application support, and changes to subject behavior, and suggests pilot-based initial deployment and monitoring.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF_CLM_4",
+                "evidence_ids": [
+                  "DE_DE17_429D17A4E11A72C3"
+                ],
+                "scope": "GENERAL",
+                "statement": "CISA zero-trust maturity guidance describes the path to zero trust as incremental, potentially taking years, with initial implementation costs and a shift in cybersecurity philosophy and culture.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics.",
+              "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834].",
+              "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38].",
+              "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+            ],
+            "constraints": [
+              "Static or perimeter-only access-control assumptions are technically limited for evolving APTs because continuously updated threat/risk context is required [AE06C_8C41709C0D8EE834].",
+              "Deployment options must account for client-side installation, resource location, logging and analytics, protocol/application breadth, and subject-behavior changes [DE_DE12_6509E7A6D8467E38].",
+              "Zero-trust-related implementation is described as incremental and potentially taking years, with initial additional costs; no exact timeline, budget, or product detail is supplied [DE_DE17_429D17A4E11A72C3]."
+            ],
+            "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606",
+            "evidence_gaps": [
+              "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied.",
+              "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied.",
+              "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise.",
+              "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "On balance, the supplied records support the technical feasibility of ACCESS CONTROL for the Targeted Attack horizon at GENERAL scope. The eligible technical_enablement record reports an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions and an improved ability to respond to sophisticated multi-stage threats, giving a direct action-specific technical pathway for adaptive access control as a targeted-attack defense [AE06S_407DDF87C86BB41B]. The eligible technical_limitation record challenges a static or perimeter-only implementation by stating that evolving APT behavior can make conventional assumptions insufficient and that effective access control depends on continuously updated threat/risk context [AE06C_8C41709C0D8EE834]. This limitation is treated as a design and operability constraint, not as proof that the control category is technically impossible. Deployment-maturity records identify implementation factors and incremental rollout, but they cannot by themselves create direction [DE_DE12_6509E7A6D8467E38, DE_DE17_429D17A4E11A72C3]. Exact local architecture, product/version, identity infrastructure, and 2025-2027 implementation/effectiveness data are not supplied, so deployment-specific feasibility remains unresolved; the GENERAL direction is preserved and sufficiency is PARTIAL. The masked jurisdiction does not change the technical direction because no jurisdiction-specific technical evidence is supplied.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1386505407970026,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.144812121401182
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "DE_DE11_1ECA9795EEF89DFA",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE12_CBF6FBB1313D37AF",
+              "DE_DE17_429D17A4E11A72C3"
+            ],
+            "institutional_regional": [
+              "DE_DE11_1E4AAE06CC3795D7",
+              "DE_DE12_E6F93E4AB8722379",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE17_567DDA7CFBC62829"
+            ],
+            "technical_feasibility": [
+              "AE06C_8C41709C0D8EE834",
+              "AE06S_407DDF87C86BB41B",
+              "DE_DE12_6509E7A6D8467E38",
+              "DE_DE17_429D17A4E11A72C3"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE06C_8C41709C0D8EE834",
+            "AE06S_407DDF87C86BB41B",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE11_1E4AAE06CC3795D7",
+            "DE_DE11_1ECA9795EEF89DFA",
+            "DE_DE12_6509E7A6D8467E38",
+            "DE_DE12_CBF6FBB1313D37AF",
+            "DE_DE12_E6F93E4AB8722379",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE17_429D17A4E11A72C3",
+            "DE_DE17_567DDA7CFBC62829",
+            "E_02_BE48A23ABD77A19C",
+            "E_03_B4E8A797813EC72F",
+            "E_03_F0CD4F1DE74CC7AD",
+            "E_10_5C0B9AC35F2420B3",
+            "E_10_B4F773BEC65685CC",
+            "E_10_CEB460BC4092B2D3",
+            "E_12_F6120325C44B5EA9",
+            "E_15_195FD353ADC8E8B0",
+            "E_20_4D81D3799E4826F0",
+            "E_20_7FC83A095DEEBF69",
+            "E_23_42E9198B388BAA83",
+            "E_25_8F4D567857A97316",
+            "E_26_22D6C8ED91C81D37",
+            "E_29_4ED97777A686537A",
+            "E_29_951AF8A7281A822E",
+            "E_29_A8790308F8A745BD",
+            "E_31_96F42990F3AEAC86",
+            "E_33_F4FC25CE90264812"
+          ],
+          "jurisdiction_code": "US",
+          "scenario_id": "US__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE17_567DDA7CFBC62829",
+          "E_02_BE48A23ABD77A19C",
+          "E_03_F0CD4F1DE74CC7AD",
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_B4F773BEC65685CC",
+          "E_10_CEB460BC4092B2D3",
+          "E_12_F6120325C44B5EA9",
+          "E_33_F4FC25CE90264812"
+        ],
+        "scenario_id": "US__CIS_IG2",
+        "strategic_intelligence_report": "The frozen Stage 6 recommendation is HOLD for the ACCESS CONTROL candidate action in the US CIS IG2 targeted-attack scenario. This means the candidate should not advance at present as a strategic candidate action. It is not a prediction that deployment would fail, not a claim that the control category is universally infeasible, and not a guarantee of future effectiveness. The HOLD is conditional on the frozen decision policy and the supplied evidence.\n\nWhy the frozen rule fired: The financial/adoption dimension challenged the candidate's adoption feasibility, while the technical and institutional dimensions supported their assigned feasibility dimensions. Under the frozen policy, the financial/adoption challenge is the direct trigger for holding the candidate; the supported technical and institutional states are prerequisites. Evidence gaps and upstream conditions qualify scope and define reassessment; they did not independently create an extra policy gate.\n\nTechnical feasibility is SUPPORTED at GENERAL scope. The strongest technical support is the reported ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions, which provides an action-specific pathway for responding to sophisticated multi-stage threats [EVIDENCE:AE06S_407DDF87C86BB41B]. The main technical challenge is that conventional perimeter and static access-control assumptions may be insufficient for evolving APT behavior, so effective access control depends on continuously updated threat/risk context rather than the control category alone [EVIDENCE:AE06C_8C41709C0D8EE834]. Deployment guidance adds neutral constraints: client installation, resource location, logging, protocol/application support, subject behavior changes, and pilot-based rollout [EVIDENCE:DE_DE12_6509E7A6D8467E38]; the zero-trust path is also described as incremental and potentially multi-year [EVIDENCE:DE_DE17_429D17A4E11A72C3]. Deployment-specific technical feasibility remains unresolved because exact identity, directory, application, network segmentation, cloud/on-prem, logging, and 2025-2027 effectiveness data are absent.\n\nInstitutional/regional feasibility is SUPPORTED at GENERAL scope. Governance-enablement records support implementation pathways: policy enforcement and compliance-system inputs for access decisions, governance of cybersecurity policies/procedures/processes with monitoring and assessment, and ABAC policy alignment, attribute lifecycle management, and access-failure procedures [EVIDENCE:DE_DE12_E6F93E4AB8722379] [EVIDENCE:DE_DE17_567DDA7CFBC62829] [EVIDENCE:DE_DE11_1E4AAE06CC3795D7]. A compliance-constraint record challenges by imposing session and token handling requirements, including secure storage and transport, timeout and invalidation, no insecure fallback, session-identifier verification, cookie restrictions, and limits on interpreting access tokens as subscriber presence [EVIDENCE:DE_DE13_055FC5E35FA61DD5]. On balance, the governance pathway is treated as more directly supportive than the single compliance constraint is challenging. Deployment-specific institutional/regional feasibility is unresolved because no eligible jurisdiction-specific regulatory applicability evidence is supplied for the frozen deployment, and no record reports actual governance ownership, audit mechanisms, or implemented session/token controls.\n\nFinancial/adoption feasibility is CHALLENGED at GENERAL scope. The challenge is grounded in direct adoption burdens: ABAC development, deployment, maintenance, application retrofitting, and attribute/policy management may exceed benefits, and ABAC is not the right solution for every access-control problem [EVIDENCE:DE_DE11_1ECA9795EEF89DFA]; zero-trust or advanced access-control transition can be incremental, require cultural/philosophical change, take years, and initially add costs [EVIDENCE:DE_DE17_429D17A4E11A72C3]; and external provider migration can involve extreme cost or long transition programs [EVIDENCE:DE_DE12_CBF6FBB1313D37AF]. The financial-side benefit is more generic: long-term zero-trust implementation is described as enabling a more prudent allocation of security investments and visibility for security-policy development, implementation, enforcement, and evolution [EVIDENCE:DE_DE17_429D17A4E11A72C3]. In the frozen scenario, without exact budget, price, TCO, ROI, payback, staffing, procurement, current maturity, legacy retrofit scope, vendor/contract timing, or 2025-2027 benefit-realization data, the supplied adoption burdens materially challenge feasibility, though they do not prove deployment-specific infeasibility.\n\nForecast context: The forecast fields are frozen model outputs, not externally verified observations. The threat targeted-attack state and the access-control PMT state are both forecast as increasing. The signed threat-minus-PMT gap moves from negative in 2025 to negative in 2026 and to a slight positive crossing in 2027. Because the 2027 crossing is small relative to the reported confidence half-widths, it cannot be distinguished from zero in the supplied trace. External evidence does not directly confirm or challenge the forecasted NoI or NoP movements. The adjudicated external evidence supports only directional or contextual facts: Crossref publication counts for access control show a positive OLS slope but a nonmonotonic 2024 decline, with the 2024 count lower than the 2023 count [EVIDENCE:E_33_F4FC25CE90264812]; Mandiant reports opportunistic-compromise shares of intrusions, not targeted-attack incident counts or frequency [EVIDENCE:E_03_F0CD4F1DE74CC7AD]; CISA/Siemens Mendix and Kastle advisories are point-specific access-control vulnerability context, not realized exploitation or 2025-2027 incident trends [EVIDENCE:E_10_5C0B9AC35F2420B3] [EVIDENCE:E_10_CEB460BC4092B2D3] [EVIDENCE:E_10_B4F773BEC65685CC]; DBIR maps an intrusion pattern to Access Control Management as control-association context [EVIDENCE:E_02_BE48A23ABD77A19C]; ATT&CK Active Directory configuration measures are mitigation context [EVIDENCE:E_12_F6120325C44B5EA9]. After critique, the forecast-confirmation question remains unresolved: the external records are properly treated as context, not as proof of deployment, operational effectiveness, or incident-frequency movement.\n\nMaterial limitations: (1) Forecast modalities are not independently evidenced. No supplied record reports 2025-2027 targeted-attack incident count or frequency, a broader exploitation signal connecting the cited access-control vulnerabilities to realized targeted-attack exploitation, or access-control deployment/adoption/operational effectiveness in the frozen enterprise. The publication trend is academic publication activity, not control maturity [EVIDENCE:E_33_F4FC25CE90264812]. Mandiant figures are intrusion shares, not incident counts [EVIDENCE:E_03_F0CD4F1DE74CC7AD]. Advisories are product-specific and point-in-time [EVIDENCE:E_10_5C0B9AC35F2420B3] [EVIDENCE:E_10_CEB460BC4092B2D3] [EVIDENCE:E_10_B4F773BEC65685CC]. (2) Deployment-specific facts are missing: exact architecture, current maturity, integration points, 2025-2027 implementation plan, budget/TCO/staffing/vendor/procurement timing, benefit realization, governance ownership, audit mechanisms, implemented session/token controls, and eligible jurisdiction-specific regulatory applicability. (3) The three lenses are predeclared functional dimensions, not a statistical sample; the divergence is substantive disagreement, not population uncertainty or a vote.\n\nReassessment conditions: Technical reassessment requires exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics; it must also show that the design uses continuously updated threat/risk context rather than static perimeter rules [EVIDENCE:AE06C_8C41709C0D8EE834], and, if zero-trust is selected, evaluate client installation, resource location, logging, protocol/application support, subject behavior, and pilot/monitoring [EVIDENCE:DE_DE12_6509E7A6D8467E38]. Institutional/regional reassessment requires eligible jurisdiction-specific regulatory applicability evidence for the frozen deployment, plus evidence of the organization's actual governance pathway, accountability/auditability, and the specific session/token controls subject to compliance constraints [EVIDENCE:DE_DE13_055FC5E35FA61DD5]. Financial/adoption reassessment requires deployment-specific budget, staffing, infrastructure, procurement, TCO/ROI/payback, current ABAC/zero-trust maturity, legacy retrofit scope, vendor/contract timing, and measured or projected cost-outcome data. If ABAC is selected, quantify attribute/policy management, retrofit, and maintenance costs against benefits [EVIDENCE:DE_DE11_1ECA9795EEF89DFA]. If zero-trust or advanced access-control transition is selected, account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment [EVIDENCE:DE_DE17_429D17A4E11A72C3] [EVIDENCE:DE_DE12_6509E7A6D8467E38]. If external provider dependency is introduced, evaluate switching costs, transition duration, and core-business disruption [EVIDENCE:DE_DE12_CBF6FBB1313D37AF].\n\nDecision implication: The frozen outcome is HOLD because the adoption gate is challenged while the technical and institutional prerequisites are supported. This preserves the substantive dissent: financial/adoption challenges the candidate's adoption feasibility, while technical and institutional support their respective feasibility dimensions. The candidate is not rejected as technically impossible or institutionally unsuitable. It is held because, under the frozen evidence, the adoption challenge is material and the forecast and deployment-specific evidence limitations remain unresolved. If new deployment-specific evidence shows an affordable, implementable, governance-compliant access-control path with measurable benefit, the candidate should be reassessed; absent that, it should not advance at present.",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Are the Mandiant changes in opportunistic-compromise share or external notification likely driven by changes in investigation mix, reporting, or detection rather than by a change in incident frequency?"
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "Can the forecasted 2025-2027 threat-minus-PMT gap movement, including the slight 2027 positive crossing, be distinguished from zero given the reported confidence half-widths?"
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "Does the access-control publication trend reflect actual control deployment or operational effectiveness, or only academic publication activity?"
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "Is there cutoff-compliant evidence reporting a temporal change in the count or frequency of targeted-attack incidents, rather than intrusion share, detection source, or vulnerability-mechanism availability?"
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "What missing exploitation-signal evidence would be needed to connect the cited access-control vulnerability advisories to realized targeted-attack exploitation?"
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports 2025-2027 deployment, adoption, or operational effectiveness of access-control controls, so the Crossref publication trend cannot establish realized mitigation effectiveness."
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "No supplied evidence directly reports the threat NoI direction in incident count or frequency terms; Mandiant percentages, DBIR control mapping, and advisory records do not establish the NoI modality, so the Threat-PMT gap direction cannot be independently assessed."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "The frozen forecast fields do not expose monthly PMT NoP values, so the relationship between the latest historical NoP z-score of 1.365 and the PMT forecast mean z of 0.559 cannot be independently verified from the frozen input."
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "The supplied evidence base is missing the exploitation_signal slot; the CISA advisories only describe product-specific potential exploitation and one point-in-time absence-of-exploitation statement, not a broader targeted-attack exploitation trend."
+          },
+          {
+            "gap_id": "G10",
+            "source": "technical_feasibility",
+            "text": "Exact local identity, directory, application, network segmentation, cloud/on-prem, east-west/north-south, and client/server architecture details are not supplied."
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "Current deployment maturity, existing access-control components, and integration points for logging, policy enforcement, or threat/risk context are not supplied."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence reports 2025-2027 deployment, adoption, or operational effectiveness of access control in the frozen enterprise."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "Jurisdiction is masked and no jurisdiction-specific technical evidence is present, preventing any region-specific technical conclusion while leaving the GENERAL technical direction unchanged."
+          },
+          {
+            "gap_id": "G14",
+            "source": "institutional_regional",
+            "text": "No eligible jurisdiction-specific regulatory-applicability record for the masked region is supplied in the directional grounding contract, so deployment-specific regulatory compatibility, data sovereignty, or cross-border constraints cannot be assessed."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "No supplied record reports the frozen enterprise's actual governance ownership, audit mechanisms, or implemented access-control session/token controls, so deployment-specific institutional feasibility remains conditional."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "No supplied record quantifies the compliance burden, staffing, budget, or architecture required for the access-control action."
+          },
+          {
+            "gap_id": "G17",
+            "source": "financial_adoption",
+            "text": "Exact budget, price, TCO, ROI, payback period, staffing count, and procurement ceiling for access-control implementation in the frozen scenario are not supplied."
+          },
+          {
+            "gap_id": "G18",
+            "source": "financial_adoption",
+            "text": "Current access-control maturity, existing ABAC or zero-trust capabilities, legacy application retrofit scope, and attribute complexity are not supplied."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "Vendor, procurement, contract, and implementation-timing details for the 2025-2027 window are not supplied."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "Measured or projected cost-outcome or benefit-realization data within the 2025-2027 timing window are not supplied."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a deployment-specific conclusion, supply exact architecture and integration details for identity providers, policy engines, enforcement points, applications, network zones, and logging/analytics."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "To address the technical limitation, the access-control design must use continuously updated threat/risk context or adaptive decisioning rather than rely solely on static perimeter rules [AE06C_8C41709C0D8EE834]."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "If a zero-trust-based implementation is selected, candidate solutions should be evaluated for client installation, resource location, logging, protocol/application support, and subject-behavior changes, with an initial pilot/monitoring approach [DE_DE12_6509E7A6D8467E38]."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "technical_feasibility",
+            "text": "To assess horizon realization, obtain evidence or assumptions specific to the 2025-2027 implementation plan, without inventing exact timelines, budgets, staffing counts, or effectiveness metrics."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "A deployment-specific institutional/regional feasibility judgment would require supplied jurisdiction-specific regulatory-applicability evidence eligible under the grounding contract and applicable to the frozen masked deployment."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "A deployment-specific judgment would require supplied evidence identifying the organization's governance pathway, accountability/auditability mechanisms, and the specific session/token controls subject to compliance constraints."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "institutional_regional",
+            "text": "If the frozen deployment is subject to additional regulatory regimes, those regimes and their obligations must be supplied as evidence before regulatory compatibility can be assessed."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific financial feasibility conclusion requires explicit budget, staffing, infrastructure, and procurement data for the frozen CIS IG2 reference-enterprise scenario."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "financial_adoption",
+            "text": "If ABAC is selected, the decision should explicitly quantify attribute/policy management, retrofit, and maintenance costs against the benefit of more precise access decisions (DE_DE11_1ECA9795EEF89DFA)."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "If zero-trust or advanced access-control transition is selected, the plan should account for incremental implementation, initial costs, long-term investment allocation, and pilot-based deployment before broader transition (DE_DE17_429D17A4E11A72C3, DE_DE12_6509E7A6D8467E38)."
+          },
+          {
+            "condition_id": "C11",
+            "source_lens": "financial_adoption",
+            "text": "If external provider dependency is introduced, switching costs, transition duration, and core-business disruption should be evaluated before adoption (DE_DE12_CBF6FBB1313D37AF)."
+          }
+        ]
+      }
+    ],
+    "synthesis_contract_version": "stage6-synthesis-v5"
+  },
+  "synthesis_contract_version": "stage6-synthesis-v5"
+}

@@ -1,0 +1,23 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\logs\stage1-main-cases-v1__2026-09-15_20-30-10.log
+--- Stage 0 -> Stage 1 -> Stage 2 -> Stage 3 base -> Stage 3 context v4 -> Stage 4 v4: batch execution ---
+Shared model/sampling profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Context profiles: frozen Stage 1/2=131072 tokens; active contextual Stage 4=131072 total tokens / 2 slots = 65536 tokens per slot (stage4-context-runtime-128k-total-2slot-v3).
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Decision-evidence preflight: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\preflight\stage1-main-cases-v1__de-83662ff07d.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\runs\stage1-main-cases-v1__stage3-context-scenarios-v1__stage4-artifact-v4__stage4-context-runtime-128k-total-2slot-v3__de-83662ff07d__seed-42__progress.json
+Resume is automatic: exact Stage 1/2/base-Stage3/contextual-Stage3/Stage4-v4 artifacts are reused; interrupted Stage 1 critics, Stage 2 debate steps, and contextual Stage 4 lenses resume only from exact-fingerprint checkpoints, while both Stage 3 layers remain deterministic.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json
+
+[MAIN SET][1/7] FAILED: llama.cpp runtime does not match the fixed Stage 4 contextual 128K-total / 2-slot profile: total_slots=1 (expected 2 for Stage 4 contextual 128K-total / 2-slot); slots=1 (expected 2 inference slots)
+Run interrupted/failed. Re-run the same command after fixing the cause; exact Stage 1/2/3/4 artifacts and exact Stage 1/2/4 checkpoints resume without fallback or overwrite.

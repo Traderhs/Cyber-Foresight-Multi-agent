@@ -1,0 +1,141 @@
+{
+  "context_evidence_record": {
+    "allowed_claim_types": [
+      "organizational_context",
+      "resource_profile",
+      "infrastructure_context",
+      "adoption_context"
+    ],
+    "available_at": "2019-03-30",
+    "content": "CIS Implementation Group 2 describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles. Such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions. IG2 safeguards address increased operational complexity; some depend on enterprise-grade technology and specialized expertise to install and configure.",
+    "content_hash": "9c328ea88f926ac924dbfcd9341fce81b5e32e53d4cc42e9fe0939b5cb9be82e",
+    "evidence_chain_id": "CIS_CONTROLS_V7_1_IG2",
+    "evidence_date": "2019-03-30",
+    "evidence_id": "CTX_CIS_IG2_9F94838146D9C3A4",
+    "evidence_type": "context_standard_profile",
+    "pmt_ids": [],
+    "prohibited_claim_types": [
+      "exact_budget",
+      "exact_staffing_count",
+      "product_roi",
+      "product_tco",
+      "universal_control_effectiveness"
+    ],
+    "publication_date": "2019-03-30",
+    "retrieval_role": "context_definition",
+    "source": "Center for Internet Security - CIS Controls v7.1, Implementation Group 2",
+    "source_content_sha256": "ae55cb37c6e5ed108601fc159e9c5e1e66d68d0f599499472cbddd14ed2fd984",
+    "source_document_id": "cis-ig2-reference-v1",
+    "source_family": "CONTEXT_STANDARD",
+    "source_locator": "page 9, Implementation Group 2",
+    "source_registry_id": "CTX_CIS_IG2",
+    "source_snapshot_id": "stage3-context-scenarios-v1",
+    "source_uri": "https://downloads.cisecurity.org/controls/CIS-Controls-Version-7-1.pdf",
+    "threat_ids": []
+  },
+  "context_selection_rule": "cis-ig2-fixed-enterprise-jurisdiction-sweep-v1",
+  "context_source": {
+    "available_at": "2019-03-30",
+    "content": "CIS Implementation Group 2 describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles. Such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions. IG2 safeguards address increased operational complexity; some depend on enterprise-grade technology and specialized expertise to install and configure.",
+    "methodological_reference": {
+      "publication_date": "2024-11-25",
+      "role": "Confirms that CIS Controls v8.1 continues to use IG1/IG2/IG3 and selects IGs using factors including size/complexity, data types, resources/technology, threat types, and risk. It is design provenance, not a substitute for the frozen IG2 profile evidence above.",
+      "source": "CIS Guide to Implementation Groups (IG): CIS Critical Security Controls v8.1",
+      "source_uri": "https://www.cisecurity.org/insights/white-papers/guide-implementation-groups-ig-cis-critical-security-controls-v8-1"
+    },
+    "publication_date": "2019-03-30",
+    "source": "Center for Internet Security - CIS Controls v7.1, Implementation Group 2",
+    "source_content_sha256": "ae55cb37c6e5ed108601fc159e9c5e1e66d68d0f599499472cbddd14ed2fd984",
+    "source_id": "CTX_CIS_IG2_V1",
+    "source_locator": "page 9, Implementation Group 2",
+    "source_uri": "https://downloads.cisecurity.org/controls/CIS-Controls-Version-7-1.pdf"
+  },
+  "main_estimand": "Within each frozen threat-PMT case and identical CIS IG2 reference enterprise, vary only jurisdictional context (KR/EU/US) and jurisdiction-specific primary-law evidence before independent Stage 4 lens evaluation.",
+  "manifest_sha256": "20d774e9f5695553ca4647c0831ec8978e4639ecb4aa89c6eeaf4a57a6a9e65c",
+  "reference_profile_version": "cis-ig2-reference-v1",
+  "resource_profile_sensitivity": [
+    "CIS_IG1",
+    "CIS_IG3"
+  ],
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "scenarios": [
+    {
+      "assumptions": [
+        "The reference enterprise profile is fixed before Stage 4 lens evaluation.",
+        "Jurisdiction is an experimental scenario parameter, not an observed property of a real organization.",
+        "The same CIS IG2 reference-enterprise profile is used in KR, EU, and US scenarios."
+      ],
+      "budget_context": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+      "context_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "context_selection_rule": "cis-ig2-fixed-enterprise-jurisdiction-sweep-v1",
+      "infrastructure_context": "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+      "jurisdiction_code": "KR",
+      "jurisdiction_source_registry_id": "30",
+      "non_assumptions": [
+        "No exact employee count or security-team size is assumed.",
+        "No exact budget, price, ROI, TCO, or payback period is assumed.",
+        "No vendor, product, product version, sector, or deployment architecture is assumed unless evidence supplies it."
+      ],
+      "organization_type": "CIS_IG2_REFERENCE_ENTERPRISE",
+      "reference_enterprise_profile": "CIS_IG2",
+      "reference_profile_version": "cis-ig2-reference-v1",
+      "region": "Republic of Korea",
+      "scenario_id": "KR__CIS_IG2",
+      "scenario_set_version": "stage3-context-scenarios-v1"
+    },
+    {
+      "assumptions": [
+        "The reference enterprise profile is fixed before Stage 4 lens evaluation.",
+        "Jurisdiction is an experimental scenario parameter, not an observed property of a real organization.",
+        "The same CIS IG2 reference-enterprise profile is used in KR, EU, and US scenarios."
+      ],
+      "budget_context": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+      "context_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "context_selection_rule": "cis-ig2-fixed-enterprise-jurisdiction-sweep-v1",
+      "infrastructure_context": "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+      "jurisdiction_code": "EU",
+      "jurisdiction_source_registry_id": "31",
+      "non_assumptions": [
+        "No exact employee count or security-team size is assumed.",
+        "No exact budget, price, ROI, TCO, or payback period is assumed.",
+        "No vendor, product, product version, sector, or deployment architecture is assumed unless evidence supplies it."
+      ],
+      "organization_type": "CIS_IG2_REFERENCE_ENTERPRISE",
+      "reference_enterprise_profile": "CIS_IG2",
+      "reference_profile_version": "cis-ig2-reference-v1",
+      "region": "European Union",
+      "scenario_id": "EU__CIS_IG2",
+      "scenario_set_version": "stage3-context-scenarios-v1"
+    },
+    {
+      "assumptions": [
+        "The reference enterprise profile is fixed before Stage 4 lens evaluation.",
+        "Jurisdiction is an experimental scenario parameter, not an observed property of a real organization.",
+        "The same CIS IG2 reference-enterprise profile is used in KR, EU, and US scenarios."
+      ],
+      "budget_context": "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+      "context_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "context_selection_rule": "cis-ig2-fixed-enterprise-jurisdiction-sweep-v1",
+      "infrastructure_context": "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+      "jurisdiction_code": "US",
+      "jurisdiction_source_registry_id": "32",
+      "non_assumptions": [
+        "No exact employee count or security-team size is assumed.",
+        "No exact budget, price, ROI, TCO, or payback period is assumed.",
+        "No vendor, product, product version, sector, or deployment architecture is assumed unless evidence supplies it."
+      ],
+      "organization_type": "CIS_IG2_REFERENCE_ENTERPRISE",
+      "reference_enterprise_profile": "CIS_IG2",
+      "reference_profile_version": "cis-ig2-reference-v1",
+      "region": "United States",
+      "scenario_id": "US__CIS_IG2",
+      "scenario_set_version": "stage3-context-scenarios-v1"
+    }
+  ]
+}

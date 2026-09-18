@@ -1,0 +1,127 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_1",
+        "evidence_ids": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SSL VPN guidance provides institutional governance and auditability practices for secure transport deployment, including logging successful and failed login attempts, pilot before enterprise-wide deployment, phased migration, technical documentation, ongoing monitoring/upgrading/securing, certificate renewal, and policy adaptation; the DHS control systems primer provides an SSL/TLS retrofitting pathway involving trusted CA deployment, DNS security considerations, and vulnerability analysis.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_2",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-63B imposes session/authentication constraints on HTTPS-aligned operation: sessions shall use authenticated protected channels, authenticated sessions shall not fall back from HTTPS to HTTP after authentication, browser cookies shall be tagged accessible only on secure HTTPS sessions, cookies should be tagged HttpOnly and timeout, and URLs/POST content must contain session identifiers verified by the relying party; NIST TLS implementation guidance imposes configuration constraints, including support for Encrypt-then-MAC when CBC cipher suites are negotiated and support for TLS 1.3 Pre-Shared Key Exchange Modes when the PSK extension is supported.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility claim would require jurisdiction-specific regulatory applicability evidence for the actual frozen jurisdiction.",
+      "To strengthen the support direction, evidence that the organization can operate the cited lifecycle controls, including logging, pilot, phased migration, documentation, monitoring, certificate renewal, and policy adaptation, would be needed.",
+      "To treat the challenge direction as materially infeasible, evidence of a jurisdiction-specific legal restriction, data sovereignty conflict, or demonstrably prohibitive compliance/configuration burden would be needed."
+    ],
+    "constraints": [
+      "Institutional feasibility under this lens is not established by HTTPS enablement alone; the supplied control guidance requires session-level protections, secure-only cookie tagging, timeout behavior, and no fallback from HTTPS to HTTP after authentication.",
+      "Institutional feasibility is constrained by TLS implementation configuration requirements, including extension support conditions for CBC cipher suites and TLS 1.3 PSK exchange modes.",
+      "The supplied governance pathway for secure transport deployment includes institutional lifecycle controls such as logging, pilot, phased migration, technical documentation, ongoing monitoring/upgrading/securing, certificate renewal, and policy adaptation."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "Jurisdiction-specific regulatory applicability for the frozen masked region is absent, so a DEPLOYMENT_SPECIFIC regional/legal feasibility conclusion is not supported.",
+      "No supplied record establishes data sovereignty, cross-border transfer constraints, or jurisdiction-specific legal obligations for HTTPS/session controls in the frozen scenario.",
+      "No supplied record establishes the reference enterprise's current deployment maturity, existing accountability/audit arrangements, exact compliance burden, or capacity to execute the cited lifecycle controls.",
+      "No numeric budget, staffing count, procurement ceiling, or exact resource capacity details are supplied beyond the frozen CIS IG2 reference profile."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The assigned lens asks whether the supplied records support or challenge the institutional/regional feasibility of the frozen HTTPS action under the frozen masked-jurisdiction CIS IG2 scenario. Under the GENERAL institutional scope, the supplied decision-evidence provides two grounded directions. Governance_enablement records supply institutional implementation and auditability pathways for secure transport deployment: logging, pilot before enterprise-wide rollout, phased migration, technical documentation, ongoing monitoring/upgrading/securing, certificate renewal, policy adaptation, and SSL/TLS retrofitting with trusted CA and DNS security considerations. Compliance_constraint records supply institutional constraints: NIST session requirements that sessions use authenticated protected channels, that authenticated sessions not fall back from HTTPS to HTTP after authentication, that browser cookies be tagged for secure HTTPS sessions, and that TLS implementation meet protocol configuration requirements. The support direction is grounded in institutional lifecycle enablement; the challenge direction is grounded in control-compliance and configuration burden. No supplied record establishes jurisdiction-specific regulatory applicability, legal compatibility, data sovereignty, cross-border constraints, or exact compliance burden for the frozen masked region. Because both GENERAL directions are grounded and neither clearly outweighs the other on the supplied institutional/regional material, the overall stance is mixed rather than decisively supportive or challenging.",
+    "stance": 0
+  },
+  "assessment_sha256": "9213d3458e9ab58e702c40096c8f177dd27149d1e31d35b4b366e2022451802a",
+  "checkpoint_sha256": "1406d9430b0736dbf536f8369b57c0ee473ea724bfa161b98096a45706f0c98b",
+  "created_at": "2026-09-16T13:41:06.266869+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_4BE87A62A6676C99",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE14_575D613F0598EF5E",
+        "DE_DE18_20A979A3238D1DE6"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "5b7680af61a4b2ea7af91b5079e801e97e2bcc207c60c9ac097094d1399cba85",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "c1cf5c69175c60e5dcb4a8f6d97116aad5f23cac868608b21ee566b381ad9825",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "97f8c458eaa0e68f3f93c07b0bb2cbb2e813715c199b81a479238bc03a1bc2c5",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "ace280aed5a0aec529a6926e92a97e9dafe711280aef74f9273a8f3dc2c6f4e9",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

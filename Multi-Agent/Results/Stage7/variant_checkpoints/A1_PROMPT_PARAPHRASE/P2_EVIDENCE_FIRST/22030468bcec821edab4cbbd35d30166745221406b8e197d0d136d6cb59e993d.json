@@ -1,0 +1,164 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_1",
+        "evidence_ids": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL SUPPORTS_FEASIBILITY: The supplied governance_enablement records provide institutional enablement pathways for SSL/TLS-related deployment, including logging for troubleshooting and incident response, pilot deployment before enterprise-wide rollout, phased migration, technical documentation during deployment, ongoing monitoring and upgrading, and SSL/TLS retrofitting guidance involving trusted CA deployment, DNS security considerations, and analysis of underlying vulnerabilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_2",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL CHALLENGES_FEASIBILITY: The supplied compliance_constraint records impose standards-based session and TLS configuration constraints relevant to HTTPS, including session cookies accessible only on secure HTTPS sessions, authenticated protected channels, prohibition on authenticated-session fallback to insecure transport, session timeout requirements, and TLS extension requirements for certain cipher suites.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_3",
+        "evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "NEUTRAL_CONTEXT: The 2024 session-hijacking countermeasure finding describes HTTPS/TLS as an important transport-layer control within a broader session-protection strategy.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_CLM_4",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "NEUTRAL_CONTEXT: The OIPM finding states that session tokens can still be stolen through XSS or malicious browser extensions after a secure transport channel exists, and that HTTPS alone cannot cover all session-hijacking paths.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_CLM_5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "NEUTRAL_CONTEXT: The frozen CIS IG2 reference profile is described as an enterprise with multi-department IT infrastructure responsibility, possible sensitive information processing, possible regulatory burdens, and some safeguards that depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_CLM_6",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NEUTRAL_CONTEXT: NIST SP 800-53 Rev.5 describes a session-authenticity control related to protection against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To assess DEPLOYMENT_SPECIFIC direction, supply exact regulatory_applicability evidence for the frozen jurisdiction together with direction-carrying governance_enablement or compliance_constraint evidence.",
+      "To make a jurisdiction-specific legal/regional claim, supply jurisdiction-specific obligations, data sovereignty, or cross-border rules applicable to HTTPS/TLS session controls.",
+      "To convert GENERAL enablement into observed institutional feasibility, supply evidence of actual logging, pilot, documentation, monitoring, or assessment practices for HTTPS/TLS in the organization."
+    ],
+    "constraints": [
+      "Only GENERAL institutional/regional direction is grounded; DEPLOYMENT_SPECIFIC direction is unavailable because the supplied grounding contract requires regulatory_applicability for the frozen masked jurisdiction and no such record is cited as directionally eligible.",
+      "The compliance constraints used for the challenge direction are standards-based session/TLS configuration requirements; they do not, in the supplied records, establish jurisdiction-specific legal obligation, data sovereignty, or cross-border restriction.",
+      "Technical limitation and countermeasure records are treated as neutral context for this institutional/regional lens and are not used to reverse the grounded GENERAL direction.",
+      "The frozen scenario introduces no numeric budget, staffing count, vendor, product version, or architecture assumption."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No regulatory_applicability evidence for the frozen masked jurisdiction is supplied, so DEPLOYMENT_SPECIFIC institutional/regional feasibility cannot be grounded.",
+      "No jurisdiction-specific primary-law, legal obligation, data sovereignty, or cross-border constraint evidence is supplied for HTTPS/session-control deployment.",
+      "No supplied evidence establishes that HTTPS/TLS session controls are already deployed, enforced, or operationally audited in the frozen CIS IG2 reference organization.",
+      "No supplied evidence quantifies compliance burden, staffing, budget, or organizational capacity for the HTTPS/TLS governance requirements."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The evidence-first inventory shows that only four records are directionally eligible for the institutional/regional lens under the supplied directional_grounding_contract. At GENERAL scope, DE_DE14_575D613F0598EF5E and DE_DE18_20A979A3238D1DE6 are eligible support_slots governance_enablement records. They describe governance and lifecycle pathways for SSL/TLS-related deployment, including logging for troubleshooting and incident response, pilot deployment, phased migration, technical documentation, ongoing monitoring, and retrofitting guidance for SSL/TLS. DE_DE13_055FC5E35FA61DD5 and DE_DE10_4BE87A62A6676C99 are eligible challenge_slots compliance_constraint records. They impose standards-based session and TLS configuration constraints, including secure HTTPS session-cookie requirements, authenticated protected channels, no fallback to insecure transport, session timeouts, and TLS extension constraints for certain cipher suites. The support records directly address institutional enablement, auditability, and governance pathways. The challenge records identify compliance and configuration burden, but the supplied records do not establish a prohibition, jurisdiction-specific legal inapplicability, data-sovereignty barrier, cross-border restriction, or material institutional obstacle to HTTPS. Because the frozen jurisdiction is masked and no regulatory_applicability record is supplied, DEPLOYMENT_SPECIFIC institutional/regional direction cannot be grounded. Neutral records, including AE07S_C1EF15B9628497F0 and AE07C_9CBF5980D3BA474A, provide technical relevance and limitation context but are not directionally eligible for this lens. On balance, the surviving GENERAL direction supports institutional/regional feasibility, while sufficiency remains PARTIAL because jurisdiction-specific legal applicability, data-sovereignty, cross-border, and observed deployment information are missing.",
+    "stance": 1
+  },
+  "assessment_sha256": "d992323131493ccacfac6662f31d47b13183a6f23a8da1e10612cc3bef000878",
+  "checkpoint_sha256": "ee931eaaf2be5d4c4bd44d9015d916afd11bd6b1fc46effce7da7b3b3dfa3a1a",
+  "created_at": "2026-09-16T12:51:56.702874+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_4BE87A62A6676C99",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE14_575D613F0598EF5E",
+        "DE_DE18_20A979A3238D1DE6"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "22030468bcec821edab4cbbd35d30166745221406b8e197d0d136d6cb59e993d",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "c1cf5c69175c60e5dcb4a8f6d97116aad5f23cac868608b21ee566b381ad9825",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "97f8c458eaa0e68f3f93c07b0bb2cbb2e813715c199b81a479238bc03a1bc2c5",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "6208e49da56712226cf28f67fa688361779134001c0ab7e725f5c74b8a9a1a6a",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

@@ -1,0 +1,1069 @@
+{
+  "axis": "A1_PROMPT_PARAPHRASE",
+  "payload_sha256": "ad29c62e96903feab24a65eaf1be6cb1900933ac674f9cccd149f4fdd3ddc8c1",
+  "provenance": {
+    "by_case": {
+      "main__ddos__nlp_llm": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN"
+      },
+      "main__malware__anomaly_detection": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN"
+      },
+      "main__session_hijacking__https": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN"
+      }
+    },
+    "case_ids": [
+      "main__ddos__nlp_llm",
+      "main__malware__anomaly_detection",
+      "main__session_hijacking__https"
+    ]
+  },
+  "records": [
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_007F05150CB46131",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "AE01C_A6798E23EEB1E487",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "technical_feasibility": [
+          "AE01S_6E6099FA4C2D13D4",
+          "AE01C_A6798E23EEB1E487",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "9263eebfe0442590d1a5acfdf3cae933c5193b489eddb35f84ffa0990921b9a1",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "source_stage6_artifact_sha256": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      },
+      "recommendation": "HOLD",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 0
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_007F05150CB46131",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "AE01C_A6798E23EEB1E487",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "technical_feasibility": [
+          "AE01S_6E6099FA4C2D13D4",
+          "AE01C_A6798E23EEB1E487",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "9263eebfe0442590d1a5acfdf3cae933c5193b489eddb35f84ffa0990921b9a1",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "source_stage6_artifact_sha256": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      },
+      "recommendation": "HOLD",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 0
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__ddos__nlp_llm",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_007F05150CB46131",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "AE01C_A6798E23EEB1E487",
+          "E_33_ADC8BC66D812799F"
+        ],
+        "technical_feasibility": [
+          "AE01S_6E6099FA4C2D13D4",
+          "AE01C_A6798E23EEB1E487",
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "9263eebfe0442590d1a5acfdf3cae933c5193b489eddb35f84ffa0990921b9a1",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+        "source_stage6_artifact_sha256": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed"
+      },
+      "recommendation": "HOLD",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "US__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 0
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.0,
+      "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE16_E455D97291B61E2A",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE06_0380E777894ACF9A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE04_0B77B88875745973",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "technical_feasibility": [
+          "AE02S_61C8065AA576E7C5",
+          "AE02C_E333FEC17F65B4E1",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "63382cc9db9e6390149e5a83bfb334eb6a04cb0d820b27339e7b4bff2166fcd6",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "source_stage6_artifact_sha256": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      },
+      "recommendation": "RECOMMEND",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.0,
+      "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE16_E455D97291B61E2A",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE06_0380E777894ACF9A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE04_0B77B88875745973",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "technical_feasibility": [
+          "AE02S_61C8065AA576E7C5",
+          "AE02C_E333FEC17F65B4E1",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "63382cc9db9e6390149e5a83bfb334eb6a04cb0d820b27339e7b4bff2166fcd6",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "source_stage6_artifact_sha256": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      },
+      "recommendation": "RECOMMEND",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__malware__anomaly_detection",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.0,
+      "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE16_E455D97291B61E2A",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE06_0380E777894ACF9A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE04_0B77B88875745973",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_14CCCEB6F82351D5",
+          "DE_DE16_CEA1C38E613068F8",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "technical_feasibility": [
+          "AE02S_61C8065AA576E7C5",
+          "AE02C_E333FEC17F65B4E1",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "63382cc9db9e6390149e5a83bfb334eb6a04cb0d820b27339e7b4bff2166fcd6",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+        "source_stage6_artifact_sha256": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f"
+      },
+      "recommendation": "RECOMMEND",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "US__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 1,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__session_hijacking__https",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE14_5FC183B8D7DD961A",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "E_25_99857C4681E8FEE5"
+        ],
+        "technical_feasibility": [
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "DE_DE14_5FC183B8D7DD961A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "ce5e87cbd6d3bd5090b42f5ac8cc7ff82dd300ccf3b3d8b8e52c34d6571921bc",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "source_stage6_artifact_sha256": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "KR__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__session_hijacking__https",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE14_5FC183B8D7DD961A",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "E_25_99857C4681E8FEE5"
+        ],
+        "technical_feasibility": [
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "DE_DE14_5FC183B8D7DD961A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "ce5e87cbd6d3bd5090b42f5ac8cc7ff82dd300ccf3b3d8b8e52c34d6571921bc",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "source_stage6_artifact_sha256": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "EU__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    },
+    {
+      "axis": "A1_PROMPT_PARAPHRASE",
+      "case_id": "main__session_hijacking__https",
+      "claim_directions_by_lens": {
+        "financial_adoption": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "institutional_regional": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT",
+          "NEUTRAL_CONTEXT"
+        ],
+        "technical_feasibility": [
+          "SUPPORTS_FEASIBILITY",
+          "CHALLENGES_FEASIBILITY",
+          "NEUTRAL_CONTEXT"
+        ]
+      },
+      "d_lens": 0.222222,
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051",
+      "evidence_ids_by_lens": {
+        "financial_adoption": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE14_5FC183B8D7DD961A",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "institutional_regional": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99",
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "E_25_99857C4681E8FEE5"
+        ],
+        "technical_feasibility": [
+          "AE07S_C1EF15B9628497F0",
+          "AE07C_9CBF5980D3BA474A",
+          "DE_DE14_5FC183B8D7DD961A"
+        ]
+      },
+      "prompt_hashes": {
+        "canonical_job_prompt_set_sha256": "ce5e87cbd6d3bd5090b42f5ac8cc7ff82dd300ccf3b3d8b8e52c34d6571921bc",
+        "prompt_variant": "P2_EVIDENCE_FIRST"
+      },
+      "provenance": {
+        "canonical_job_count": 3,
+        "jurisdiction_equivalence_dedup": true,
+        "prompt_variant": "P2_EVIDENCE_FIRST",
+        "raw_scenario_lens_count": 9,
+        "runner_version": "stage7-decision-variant-runner-v1",
+        "runtime_variant": "MAIN",
+        "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+        "source_stage6_artifact_sha256": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3"
+      },
+      "recommendation": "RECOMMEND_PILOT",
+      "repeat_index": null,
+      "runtime": {
+        "batch_size": 2048,
+        "client_request_concurrency": 2,
+        "draft_kv_type": "q8_0",
+        "draft_v_type": "q8_0",
+        "expected_context_size": 65536,
+        "expected_gpu_layers": "all",
+        "expected_llama_build": "b10919",
+        "expected_llama_commit": "d3146f2b5",
+        "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+        "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+        "expected_model_size_bytes": 24958908128,
+        "expected_parallel_slots": 2,
+        "flash_attention": true,
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "model": "Qwen3.8-27B-Q6_K_L",
+        "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+        "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+        "mtp_draft_n_max": 4,
+        "mtp_draft_p_min": 0.05,
+        "mtp_enabled": true,
+        "presence_penalty": 0.0,
+        "quantization": "Q6_K_L",
+        "reasoning_budget": -1,
+        "reasoning_effort": "xhigh",
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "server_total_context_size": 131072,
+        "structured_validation_retries": 1,
+        "target_kv_type": "q8_0",
+        "target_v_type": "q8_0",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95,
+        "ubatch_size": 512,
+        "variant_runner_version": "stage7-decision-variant-runner-v1"
+      },
+      "scenario_id": "US__CIS_IG2",
+      "schema_version": "stage7-variant-result-v1",
+      "stance_by_lens": {
+        "financial_adoption": 0,
+        "institutional_regional": 1,
+        "technical_feasibility": 1
+      },
+      "variant_id": "P2_EVIDENCE_FIRST"
+    }
+  ],
+  "repeat_index": null,
+  "runner_version": "stage7-decision-variant-runner-v1",
+  "schema_version": "stage7-variant-result-v1",
+  "variant_id": "P2_EVIDENCE_FIRST"
+}

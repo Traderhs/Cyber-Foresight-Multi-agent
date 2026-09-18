@@ -1,0 +1,225 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_25_746173685B235ED2 contains NIST SP 800-53 Rev.5 SC-13 control text stating that the organization must implement organization-defined types of cryptography for each specified cryptographic use.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_25_746173685B235ED2 states that cryptography can support protection of classified information, controlled unclassified information, digital signatures, information separation when authorized individuals lack formal access approvals, and random number/hash generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_25_746173685B235ED2 states that generally applicable cryptographic standards include FIPS-validated cryptography and NSA-approved cryptography, and that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_22_C239828119FC69CD describes an insider threat mitigation program as spanning the entire organization, helping individuals, using training and awareness, policy and procedure, management practices, detect and identify / assess / manage practices, and protecting civil liberties and maintaining confidentiality.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_22_C239828119FC69CD states that some mitigation measures are cost prohibitive and that projected cost savings may be a significant determinant of an insider threat mitigation program's ROI.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_26_92664A4339CF24C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_26_92664A4339CF24C9 provides assessment references to personnel responsible for the insider threat program, members of the cross-discipline insider threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_16_E7BB108A85B71262 states that metadata on its own is neither tamper-evident nor reliably attributable, that a fingerprint such as a cryptographic hash or checksum can be recomputed and overwritten if content or metadata is modified, and that digital signatures are a more robust solution providing assurance that the claimed signatory signed and that the information was not modified after signature generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_20_913B6F999A0F1458 provides supplemental C-SCRM guidance that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_19_4E69D255F61736DB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_19_4E69D255F61736DB references NIST SP 800-128 and NIST SP 800-56A Rev. 3, and states that ETSI is currently developing ETSI European Standard 303 645, similar to but not identical to the 103 645 Technical Specification cited there, and that the 303 645 version is not used in that publication because it is still a draft.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C10",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_33_CDE0F421E4D797ED reports a Crossref cutoff-constrained publication trend for PMT_CRYPTOGRAPHY with annual counts 2021=210, 2022=254, 2023=272, 2024=330, OLS_slope=37.800000 works/year, first_to_last_delta=120, total_results=1066, and states that this trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C11",
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_15_0A98378FC609EF7E states that, unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms, and that information-theoretic impossibility results have appeared that set limits on the effectiveness of widely used mitigation techniques.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C12",
+        "evidence_ids": [
+          "E_23_A793FAF5B393EFE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_23_A793FAF5B393EFE3 defines encryption as any procedure used in cryptography to convert plain text into cipher text to prevent anyone but the intended recipient from reading that data, and defines hashing as a process of applying a mathematical algorithm against a set of data to produce a numeric hash value representing the data.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C13",
+        "evidence_ids": [
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_29_185B62FFF51926EC, E_29_3C1B7B4F9532A5F2, and E_29_7C01F6CA0D982DFF are Crossref academic metadata records for Cryptography journal reviewer-acknowledgment articles with DOIs 10.3390/cryptography5010005, 10.3390/cryptography7010003, and 10.3390/cryptography2010002, respectively.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If a target region/jurisdiction is specified, assess whether its laws, executive orders, directives, regulations, policies, standards, and guidelines apply to the cryptographic implementation, consistent with E_25_746173685B235ED2.",
+      "If the organization processes classified or controlled unclassified information, or requires digital signatures, evaluate whether NSA-approved or FIPS-validated cryptography is required under the governing control implementation, as described in E_25_746173685B235ED2.",
+      "If an insider threat program is in scope, establish governance for program personnel, cross-discipline incident handling, legal counsel, and information security/privacy responsibilities, per E_26_92664A4339CF24C9.",
+      "If budget_context is supplied, evaluate cost-prohibitive mitigation measures and ROI considerations described in E_22_C239828119FC69CD.",
+      "If supply chain component inventory is in scope, consider less predictable predefined data-collection frequencies and inventory maintenance practices per E_20_913B6F999A0F1458.",
+      "If metadata/authentication controls are in scope, evaluate digital signatures as a more robust tamper-evidence and attribution method than hashes/checksums, per E_16_E7BB108A85B71262.",
+      "If infrastructure_context is supplied, evaluate implementation barriers for cryptographic use, information separation, digital signatures, and related controls, using E_25_746173685B235ED2 and E_23_A793FAF5B393EFE3 as general control context."
+    ],
+    "constraints": [
+      "Cryptographic implementation must be aligned to organization-defined cryptographic uses and to applicable laws, executive orders, directives, regulations, policies, standards, and guidelines (E_25_746173685B235ED2).",
+      "Standards references in the supplied records include FIPS-validated and NSA-approved cryptography as examples, but their applicability to the target deployment cannot be determined without target-region, information-classification, and control-framework context (E_25_746173685B235ED2).",
+      "Insider threat mitigation programs require organizational tailoring, training and awareness, policy and procedure, management practices, and protection of civil liberties and confidentiality (E_22_C239828119FC69CD).",
+      "Some mitigation measures can be cost prohibitive, making budget context relevant to feasibility assessment (E_22_C239828119FC69CD).",
+      "Accountability and assessment references include legal counsel, cross-discipline insider threat incident handling, and information security/privacy responsibilities (E_26_92664A4339CF24C9).",
+      "Metadata authentication via digital signatures is more robust than recomputable hashes/checksums for tamper-evidence and attribution (E_16_E7BB108A85B71262).",
+      "Supply chain inventory guidance includes updating inventory, automated maintenance, and less predictable predefined data-collection frequencies to reduce insider bypass risk (E_20_913B6F999A0F1458).",
+      "The supplied publication trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness (E_33_CDE0F421E4D797ED)."
+    ],
+    "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+    "evidence_gaps": [
+      "Target region/jurisdiction is absent from the frozen deployment context; supplied Stage 0 records do not permit assessment of region-specific legal, regulatory, data-sovereignty, or cross-border constraints.",
+      "Organization_type, infrastructure_context, and budget_context are absent; deployment-specific compliance burden, cost, and implementation barriers cannot be assessed.",
+      "No supplied Stage 0 record specifies target-region data sovereignty, cross-border data transfer, or jurisdiction-specific cryptographic obligations.",
+      "No supplied Stage 0 record provides measured operational effectiveness or deployment maturity for cryptography as an insider-threat mitigation.",
+      "No supplied Stage 0 record establishes which specific cryptographic controls, standards, or regulatory regimes apply to the frozen deployment."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied Stage 0 records provide general institutional and governance context for cryptographic controls and insider-threat mitigation, including control text for organization-defined cryptographic uses, alignment with applicable laws/regulations/standards, insider-threat program design, legal/privacy/incident-handling accountability references, and digital-signature provenance. However, the frozen deployment context does not identify region, organization type, budget, or infrastructure, and the supplied records do not resolve target-jurisdiction legal obligations, data-sovereignty, cross-border constraints, or deployment-specific cost/implementation barriers. E_33_CDE0F421E4D797ED reports only an external publication-activity trend and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore, under the institutional/regional lens, the frozen CRYPTOGRAPHY action is not materially challenged by the supplied records, but its regional feasibility cannot be affirmatively assessed without target-region and deployment context.",
+    "stance": 0
+  },
+  "assessment_sha256": "3c12c455fc0cf7206e39a7339f2cef0228c0f26c222c446b453ba3c98b4bdb04",
+  "checkpoint_sha256": "771795013d058a815613c7e9e8787af88028c58bc45a62f62ba31d9cdf4eb1a5",
+  "created_at": "2026-09-16T17:20:03.351898+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+    "base_stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+    "base_stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+    "case_id": "main__insider_threat__cryptography",
+    "evidence_ids": [
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_20_913B6F999A0F1458",
+      "E_22_C239828119FC69CD",
+      "E_23_A793FAF5B393EFE3",
+      "E_25_746173685B235ED2",
+      "E_26_92664A4339CF24C9",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "2acaa394482982e6a1dfcac7324d54e8a092bdc5821609150bef406cffc3e768",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "2ecf6fc7e50581bea1e45d377a99ecb6e6306114da0d7b0135b6b6ff0b094d4d",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "2979e95dbc0a89bc95a1f7e067f16756040c4592be3eab46558d7ce0d74f8150",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

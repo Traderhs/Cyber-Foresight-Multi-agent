@@ -1,0 +1,636 @@
+{
+  "artifact_sha256": "ac1ce2306ff1d33a46db5c463889ce13e272e351d8c5dbcbc97f9564fe6648a2",
+  "case_id": "main__ransomware__cryptography",
+  "created_at": "2026-09-15T15:27:04.991653+00:00",
+  "diagnostic_bundle": {
+    "case_id": "main__ransomware__cryptography",
+    "critique_diagnostic": {
+      "attack_post_stance": 0,
+      "attack_pre_stance": 0,
+      "d_critique_change": 0.0,
+      "d_critique_post": 0.25,
+      "d_critique_pre": 0.25,
+      "defense_post_stance": 1,
+      "defense_pre_stance": 1,
+      "evidence_gap_count": 0,
+      "unresolved_claim_count": 0
+    },
+    "diagnostic_contract_version": "stage5-diagnostics-v1",
+    "jurisdiction_sensitivity": {
+      "any_evidence_sensitivity": true,
+      "any_stance_sensitivity": false,
+      "by_lens": {
+        "financial_adoption": {
+          "available_lens_relevant_evidence_changed": false,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ],
+            "KR": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ],
+            "US": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "E_23_534489D29C38B327"
+            ],
+            "KR": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "E_23_534489D29C38B327"
+            ],
+            "US": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE18_CDC975345637E009",
+              "E_23_534489D29C38B327"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": false,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B",
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B",
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B",
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": false,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "financial_adoption",
+          "sensitivity_sources": [],
+          "stance_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "stance_variance": 0.0
+        },
+        "institutional_regional": {
+          "available_lens_relevant_evidence_changed": true,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327",
+              "E_31_6BBE82F2BAC198B3",
+              "E_31_A0893427DD4F5B04",
+              "E_31_C1CFA326F0420DCA"
+            ],
+            "KR": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327"
+            ],
+            "US": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327"
+            ],
+            "KR": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327"
+            ],
+            "US": [
+              "DE_DE08_031120C53EF050F3",
+              "DE_DE09_6719137897848A9E",
+              "E_23_534489D29C38B327"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": true,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "DE_DE09_6719137897848A9E"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE08_031120C53EF050F3",
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "DE_DE09_6719137897848A9E"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE08_031120C53EF050F3"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "DE_DE09_6719137897848A9E"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE08_031120C53EF050F3"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "E_23_534489D29C38B327"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": true,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "E_31_6BBE82F2BAC198B3",
+              "E_31_A0893427DD4F5B04",
+              "E_31_C1CFA326F0420DCA"
+            ],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "institutional_regional",
+          "sensitivity_sources": [
+            "AVAILABLE_LENS_RELEVANT_EVIDENCE",
+            "DIRECTIONAL_CLAIM_SIGNATURE",
+            "JURISDICTION_SPECIFIC_EVIDENCE_AVAILABLE"
+          ],
+          "stance_by_jurisdiction": {
+            "EU": 1,
+            "KR": 1,
+            "US": 1
+          },
+          "stance_variance": 0.0
+        },
+        "technical_feasibility": {
+          "available_lens_relevant_evidence_changed": false,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ],
+            "KR": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ],
+            "US": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2",
+              "DE_DE18_CDC975345637E009",
+              "DE_DE18_EAA59A9B7CEAD276",
+              "E_23_534489D29C38B327"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2"
+            ],
+            "KR": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2"
+            ],
+            "US": [
+              "AE03C_E5522A35F4981027",
+              "AE03S_C5AF41A880A404C2"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": false,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "AE03C_E5522A35F4981027"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE03S_C5AF41A880A404C2"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "AE03C_E5522A35F4981027"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE03S_C5AF41A880A404C2"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "AE03C_E5522A35F4981027"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE03S_C5AF41A880A404C2"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": false,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "technical_feasibility",
+          "sensitivity_sources": [],
+          "stance_by_jurisdiction": {
+            "EU": 1,
+            "KR": 1,
+            "US": 1
+          },
+          "stance_variance": 0.0
+        }
+      },
+      "evidence_sensitive_lenses": [
+        "institutional_regional"
+      ],
+      "stance_sensitive_lenses": []
+    },
+    "model_reported_confidence_used": false,
+    "predictive_uncertainty_claimed_from_d_lens": false,
+    "scenario_diagnostics": [
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "institutional_regional": [
+            "DE_DE08_031120C53EF050F3",
+            "DE_DE09_6719137897848A9E",
+            "E_23_534489D29C38B327"
+          ],
+          "technical_feasibility": [
+            "AE03C_E5522A35F4981027",
+            "AE03S_C5AF41A880A404C2",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276",
+            "E_23_534489D29C38B327"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "KR",
+        "nonzero_stance_lens_count": 2,
+        "scenario_id": "KR__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 2,
+          "technical_feasibility": 1
+        }
+      },
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "institutional_regional": [
+            "DE_DE08_031120C53EF050F3",
+            "DE_DE09_6719137897848A9E",
+            "E_23_534489D29C38B327",
+            "E_31_6BBE82F2BAC198B3",
+            "E_31_A0893427DD4F5B04",
+            "E_31_C1CFA326F0420DCA"
+          ],
+          "technical_feasibility": [
+            "AE03C_E5522A35F4981027",
+            "AE03S_C5AF41A880A404C2",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276",
+            "E_23_534489D29C38B327"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "EU",
+        "nonzero_stance_lens_count": 2,
+        "scenario_id": "EU__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        }
+      },
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "institutional_regional": [
+            "DE_DE08_031120C53EF050F3",
+            "DE_DE09_6719137897848A9E",
+            "E_23_534489D29C38B327"
+          ],
+          "technical_feasibility": [
+            "AE03C_E5522A35F4981027",
+            "AE03S_C5AF41A880A404C2",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276",
+            "E_23_534489D29C38B327"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "US",
+        "nonzero_stance_lens_count": 2,
+        "scenario_id": "US__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 2,
+          "technical_feasibility": 1
+        }
+      }
+    ],
+    "system_evidence_diagnostic": {
+      "claim_evidence_audit_pass_rate": null,
+      "claim_evidence_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+      "claim_evidence_reference_pass_rate": 1.0,
+      "covered_evidence_slots": [
+        "exploitation_signal",
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "observed_threat_reality",
+        "technical_literature",
+        "threat_capability_or_mechanism"
+      ],
+      "evidence_slot_coverage_ratio": 1.0,
+      "independent_evidence_chain_count": 14,
+      "missing_evidence_slots": [],
+      "required_evidence_slots": [
+        "exploitation_signal",
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "observed_threat_reality",
+        "technical_literature",
+        "threat_capability_or_mechanism"
+      ],
+      "source_contract_violation_count": 0,
+      "source_family_count": 7,
+      "stage0_evidence_sufficiency": "SUFFICIENT",
+      "stage4_claim_count": 30,
+      "stage4_directional_claim_count": 20,
+      "stage4_sufficiency_counts": {
+        "INSUFFICIENT_CONTEXT": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "PARTIAL": 9,
+        "SUFFICIENT": 0
+      },
+      "temporal_violation_count": 0
+    }
+  },
+  "diagnostic_contract_version": "stage5-diagnostics-v1",
+  "input_fingerprint": "dd627ae3649ea914df5e2a85afaa65e6b751337b6f5bdb427356b70a814fdbb8",
+  "output_schema_sha256": "3efba0bbc7f46bbf535ac97b3010f0b927b18ebad518be5b684528fc8057e4e8",
+  "schema_version": "stage5-artifact-v1",
+  "stage0_evidence_pack_sha256": "db2e665ae71d97282a4b48a4abd6396098c789528cfee3fecd69e225b52cf4af",
+  "stage2_artifact_sha256": "2b11b2e8602383019f91269dfe22924ee5af7508740c86f98469b121acc6dfe7",
+  "stage2_output_sha256": "6cc0702364372bc993fcff1e578356bdb48859bc96d2d25548a17a6fb90361c5",
+  "stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+  "stage3_context_output_sha256": "d2c360753f501ce885de49e2a6d170da4cc23ace9f3e9b7ac4b06fd9e1a2f400",
+  "stage4_context_artifact_sha256": "ff0ec12c9de88cbc847efca3b53ed42203291a0328982a0ea9a947ed72b5d423",
+  "stage4_context_output_sha256": "1b4be5cb2425bf5b0a7ae52056d4cbe8aefe87719bc0714b3e95318a12a58daa",
+  "stage5_output_sha256": "b67b9af9db9fc06c2ba5f18a1bb2f015c3947a657f98da4a1a855d38c8761e26"
+}

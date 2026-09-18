@@ -1,0 +1,152 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLM_1",
+        "evidence_ids": [
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NLP/LLM decision-guidance records support a general financial/adoption feasibility pathway through resource-saving and efficiency effects: automated vulnerability-detection methods lower effort and resources, and secure-by-design practices can improve development efficiency and support standardized security features/services rather than proprietary implementations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLM_2",
+        "evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NLP/LLM decision-guidance records also challenge financial/adoption feasibility by grounding general resource burdens: secure-by-design AI development requires significant resources throughout the lifecycle, and AI risk management involves gauging staffing and funding resources in a cost-effective, prioritized manner.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLM_3",
+        "evidence_ids": [
+          "DE_DE15_7C1849B1FD93975C",
+          "DE_DE02_CFF4EAB2C4BEC522"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied deployment-maturity records describe ongoing secure operation, monitoring, feedback, provenance, update, and incident-disclosure expectations; they qualify the adoption feasibility judgment but do not by themselves establish a financial/adoption direction under the supplied grounding contract.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLM_4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied CIS IG2 reference profile describes a multi-department enterprise deployment context with personnel responsible for managing and protecting infrastructure, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise; this is context only and does not by itself establish financial benefit, burden, cost, or legal obligation.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial/adoption conclusion would require exact budget, staffing, infrastructure, procurement, and vendor/contract conditions for the NLP/LLM DDoS use case.",
+      "A nonzero stance would require evidence that the resource-saving/efficiency pathway outweighs the lifecycle resource burden, or that the burden outweighs the efficiency pathway, under actual deployment conditions.",
+      "If DDoS-specific operational deployment or cost data become available, the action-specific benchmark finding would need to be re-examined within the financial/adoption lens (AE01C_A6798E23EEB1E487, AE01S_6E6099FA4C2D13D4).",
+      "If jurisdiction-specific financial, procurement, or regulatory obligations are later supplied, they must be assessed separately; none are present in this lens's supplied evidence."
+    ],
+    "constraints": [
+      "The SUPPORTS_FEASIBILITY direction is limited to general resource-saving and efficiency guidance; it does not establish exact cost savings, ROI, TCO, payback period, budget fit, or DDoS-specific operational benefit (DE_DE03_6786A7AB93821D48, DE_DE03_912FC8A63179A943).",
+      "The CHALLENGES_FEASIBILITY direction is limited to general secure-development and AI risk-management resourcing guidance; it does not establish exact staffing counts, budget shortfall, procurement timing, or DDoS-specific cost burden (DE_DE15_1AEC6DDD669756FF, DE_DE01_E85CB6412740EF20).",
+      "Deployment-maturity records are supplementary context for operational readiness and cannot create a financial/adoption direction by themselves (DE_DE15_7C1849B1FD93975C, DE_DE02_CFF4EAB2C4BEC522).",
+      "Action-specific DDoS/LLM records are benchmark-based and do not establish enterprise operational deployment or cost study; they therefore do not supply exact financial feasibility direction (AE01C_A6798E23EEB1E487, AE01S_6E6099FA4C2D13D4).",
+      "The reference-enterprise profile supplies deployment context only and cannot establish exact financial quantities, implementation burden, or legal obligation by itself (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "Exact budget, price, ROI, TCO, payback period, staffing count, vendor/product version, procurement timing, and implementation timeline are not present in the supplied evaluation_evidence.",
+      "DDoS-specific enterprise operational deployment or cost data for NLP/LLM are absent; the supplied action-specific finding states the DDoS study is benchmark-based rather than an enterprise operational deployment or cost study (AE01C_A6798E23EEB1E487).",
+      "Exact CIS IG2 staffing, budget, infrastructure, or specialized-expertise quantities are not present; the context record provides only a standardized reference-enterprise profile (CTX_CIS_IG2_9F94838146D9C3A4).",
+      "No supplied record quantifies the net offset between the cited resource-saving/efficiency pathways and the cited secure-development lifecycle resource burden (DE_DE03_6786A7AB93821D48, DE_DE03_912FC8A63179A943, DE_DE15_1AEC6DDD669756FF, DE_DE01_E85CB6412740EF20).",
+      "No jurisdiction-specific financial, procurement, or regulatory evidence is supplied for this lens in the frozen masked equivalence class."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records provide both a direction-eligible resource-saving/efficiency signal and a direction-eligible lifecycle/resource-burden signal for NLP/LLM adoption. The support records ground general efficiency and lower-effort pathways; the burden records ground significant secure-development resourcing and AI risk-management resource considerations. Deployment-maturity records add operational/maturity conditions but cannot create a separate financial direction under the supplied grounding contract. Because exact affordability, budget fit, ROI, TCO, payback, staffing counts, procurement timing, and DDoS-specific operational deployment/cost data are absent, the general direction remains mixed rather than decisively supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "468cc80a265c4c40495702773b2680425b2961bca89f1983f3d59d96d5863673",
+  "checkpoint_sha256": "577fc251a02bfe6ac72de293361632afa4788b5da6cabb49c9e473e23eb628a2",
+  "created_at": "2026-09-16T11:48:27.903816+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_E85CB6412740EF20",
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE03_6786A7AB93821D48",
+        "DE_DE03_912FC8A63179A943",
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "fc9c0c7ba1718a21a79dad10ebc31069cfc9ffcb023754c1398eef718d310316",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "c766f34af179cb5226e01ecd12767a63f0793d57cbc720d5e4f1d05d86b7f389",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "893b19395ed63dd6e2cd8426e9fb08b77dad407ac78a44fdc9d85a1f97627789",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "b597193c5d26a46dc1f0e608db0e545e588d93b3182e25d05ad1f83abdc6aa64",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

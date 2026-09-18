@@ -1,0 +1,101 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied CISA CPG record recommends strong and agile encryption: properly configured and up-to-date SSL/TLS is utilized to protect data in transit when technically feasible; organizations should plan to identify outdated or weak encryption, update these to sufficiently strong algorithms, and consider managing implications of post-quantum cryptography.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST SP 800-53A Rev.5 assessment guidance defines assessment objectives for cryptographic protection and key management: cryptographic uses are defined; types of cryptography for each specified cryptographic use are defined; those uses are identified and implemented; and physical control of cryptographic keys is maintained when stored information is encrypted by external service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "E_25_A1044C34BD8DBDFA"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST SP 800-53 Rev.5 record describes transmitting access authorization information securely, for example using cryptographic mechanisms, where authorization processes and access enforcement occur in separate parts of systems or in separate systems.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST SP 800-53 Rev.5 record states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-5",
+        "evidence_ids": [
+          "E_26_B2995F657787797A"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST SP 800-53A Rev.5 record for AU-09(03) includes a potential assessment test of cryptographic mechanisms protecting the integrity of audit information and tools.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-6",
+        "evidence_ids": [
+          "E_25_172BD812783415C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST SP 800-53 Rev.5 record defines insider, insider threat, and insider threat program, and states that cryptographic encapsulation or similar security technology implemented between organization-controlled endpoints provides the same internal-network effect, at least regarding confidentiality and integrity.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-7",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions; some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To determine KR-specific institutional/regional feasibility, supplied Republic of Korea regulatory or legal applicability records for PMT_CRYPTOGRAPHY are required.",
+      "If stored information is encrypted by external service providers, physical control of cryptographic keys is an assessment objective described in the supplied NIST SP 800-53A guidance (IR-2).",
+      "If the reference-enterprise profile's sensitive client or enterprise information and regulatory-burden context applies, KR-specific data-governance and cross-border constraint records are required (IR-7).",
+      "Supplied evidence is required to establish whether the supplied CISA/NIST guidance is binding, adopted, or only reference guidance in the KR scenario before it can be used to determine institutional compatibility (IR-1, IR-4)."
+    ],
+    "constraints": [
+      "Supplied NIST SP 800-53 Rev.5 states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines (IR-4).",
+      "Supplied NIST SP 800-53A describes assessment objectives for cryptographic protection and key management, including physical control of cryptographic keys when external service providers encrypt stored information (IR-2).",
+      "Supplied NIST SP 800-53A includes assessment of cryptographic mechanisms protecting audit information integrity (IR-5).",
+      "The frozen CIS IG2 reference-enterprise profile describes possible regulatory burdens and specialized-expertise dependencies, but does not establish a KR-specific legal or regulatory obligation (IR-7)."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+    "evidence_gaps": [
+      "No supplied evaluation_evidence record establishes Republic of Korea legal or regulatory applicability for PMT_CRYPTOGRAPHY.",
+      "No supplied evaluation_evidence record establishes KR-specific data-sovereignty, cross-border data-transfer, external-service key-custody, or data-governance obligations for PMT_CRYPTOGRAPHY.",
+      "No supplied evaluation_evidence record establishes KR-specific institutional implementation barriers, governance roles, approvals, or compliance burden for PMT_CRYPTOGRAPHY.",
+      "The decision_evidence_pack retrieval_metadata lists regulatory_applicability and reference_deployment_limitation as missing slots."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional / Regional Feasibility lens, the frozen action PMT_CRYPTOGRAPHY is indeterminate. Supplied decision evidence provides neutral institutional and regulatory-context guidance for cryptography, including recommended encryption practices, secure transmission of access authorization information, assessment objectives for cryptographic protection and key management, and implementation in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. However, no supplied record establishes Republic of Korea-specific legal, regulatory, data-sovereignty, cross-border, or institutional implementation requirements for PMT_CRYPTOGRAPHY. The frozen CIS IG2 reference-enterprise profile can describe the reference enterprise context but cannot by itself establish KR regulatory applicability or legal obligation. Because no supplied decision evidence from the required regulatory_applicability slot supports a directional institutional/regional feasibility judgment, the directional claims are treated as neutral context and the overall stance remains mixed or indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "4af9118bf0d764d2a3f0b61967e262fbc273ad86873d506d7aa35687bd95f057",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "9ddb9dd1f3e85aac8ac997121284616ccf87070886c343403f9d1a37c4e92ce7",
+  "created_at": "2026-09-14T12:23:32.314127+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "institutional_regional",
+  "scenario_id": "KR__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

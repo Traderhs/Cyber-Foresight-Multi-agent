@@ -1,0 +1,139 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "E_31_52DCE9554453ADEF"
+        ],
+        "scope": "GENERAL",
+        "statement": "The EU primary-law text states that, to safeguard public electronic communications networks and publicly available electronic communications services, the use of encryption technologies, in particular end-to-end encryption and data-centric security concepts, should be promoted; where necessary, use of encryption, in particular end-to-end encryption, should be mandatory for providers of such networks or services.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_31_6BBE82F2BAC198B3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The EU primary-law text references processing special categories of personal data in accordance with Article 9 of Regulation (EU) 2016/679 and identifies state-of-the-art security and privacy-preserving measures, such as pseudonymisation or encryption, as safeguards where anonymisation may significantly affect the purpose pursued.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "E_31_C1CFA326F0420DCA"
+        ],
+        "scope": "GENERAL",
+        "statement": "The EU primary-law text requires Member States, as part of their national cybersecurity strategy, to adopt policies on cybersecurity-related requirements for ICT products and ICT services in public procurement, including encryption, and policies addressing ICT supply-chain cybersecurity, vulnerability management, incident readiness, and cybersecurity awareness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG recommends strong and agile encryption: properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, planning to identify and update outdated or weak encryption to sufficiently strong algorithms, considering post-quantum implications, and using OT encryption when feasible to limit latency and availability impact.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-5",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A assessment procedures for cryptographic protection include determining whether cryptographic uses and types of cryptography are defined and implemented, and examining cryptographic module validation certificates, FIPS-validated cryptographic module lists, key-management procedures, and related documentation; for SC-12(06), they include determining whether physical control of cryptographic keys is maintained when stored information is encrypted by external service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-6",
+        "evidence_ids": [
+          "E_26_31F09DD7BB81D0F1",
+          "E_26_B2995F657787797A"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A includes assessment methods for cryptographic protection of audit information, including examining procedures and documentation, interviewing responsible personnel, and testing cryptographic mechanisms that protect the integrity of audit information and tools.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-7",
+        "evidence_ids": [
+          "E_25_A1044C34BD8DBDFA"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 states that when authorization processes and access control decisions may occur in separate parts of systems or in separate systems, authorization information may be transmitted securely, for example using cryptographic mechanisms.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-8",
+        "evidence_ids": [
+          "E_25_172BD812783415C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 defines insider threat and states that cryptographic encapsulation or similar security technology implemented between organization-controlled endpoints provides the same effect for an internal network, at least regarding confidentiality and integrity.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-9",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, which often processes sensitive information, may face regulatory burdens, can tolerate short service interruptions, and whose safeguards can involve increased operational complexity, enterprise-grade technology, and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-10",
+        "evidence_ids": [
+          "E_31_52DCE9554453ADEF",
+          "E_31_6BBE82F2BAC198B3",
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied records do not establish whether the reference enterprise is an essential or important entity under the EU primary-law text, a provider of public electronic communications networks or publicly available electronic communications services, or an entity processing special categories of personal data under Regulation (EU) 2016/679; therefore exact legal applicability, supervisory regime, and documentation burden are not established.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the enterprise is a provider of public electronic communications networks or publicly available electronic communications services, it should assess whether encryption, in particular end-to-end encryption, is mandatory where necessary and implement encryption consistent with security and privacy by default and by design. [E_31_52DCE9554453ADEF]",
+      "If the enterprise processes special categories of personal data under Regulation (EU) 2016/679 Article 9, it should use appropriate state-of-the-art security and privacy-preserving measures, including pseudonymisation or encryption where anonymisation may significantly affect the purpose pursued. [E_31_6BBE82F2BAC198B3]",
+      "If the enterprise is an essential entity under the EU primary-law text, a comprehensive ex ante and ex post supervisory regime applies; if it is an important entity, a lighter ex post regime applies and systematic documentation of cybersecurity risk-management compliance is not required. [E_31_6BBE82F2BAC198B3]",
+      "If external service providers store encrypted information, physical control of cryptographic keys should be maintained and key establishment, management, and recovery procedures should be documented and assessable. [E_26_A710FE8084614182]",
+      "If cryptographic protection controls are assessed under NIST SP 800-53A, the organization should define cryptographic uses and types of cryptography, implement them, and be prepared to examine cryptographic module validation certificates, FIPS-validated cryptographic module lists, and related documentation. [E_26_A710FE8084614182]",
+      "If audit information is in scope, cryptographic mechanisms protecting the integrity of audit information and tools should be implemented and supportable through examination, interview, and testing. [E_26_31F09DD7BB81D0F1, E_26_B2995F657787797A]",
+      "If the enterprise participates in public procurement of ICT products or ICT services, encryption-related cybersecurity requirements should be considered in line with national cybersecurity strategy policies. [E_31_C1CFA326F0420DCA]",
+      "If long-lived cryptographic deployments are planned, post-quantum implications should be considered as recommended by CISA CPG. [E_23_534489D29C38B327]",
+      "If the multi-department IG2 environment uses safeguards that depend on enterprise-grade technology or specialized expertise, availability of that technology and expertise should be confirmed before deployment. [CTX_CIS_IG2_9F94838146D9C3A4]"
+    ],
+    "constraints": [
+      "EU regional applicability is conditional: the supplied EU text ties encryption promotion or mandatory use to public electronic communications networks/services and to privacy-preserving processing of special categories of personal data. [E_31_52DCE9554453ADEF, E_31_6BBE82F2BAC198B3]",
+      "The EU text distinguishes supervisory regimes: essential entities are subject to a comprehensive ex ante and ex post supervisory regime, while important entities are subject to a lighter ex post regime and should not be required to systematically document compliance with cybersecurity risk-management measures. [E_31_6BBE82F2BAC198B3]",
+      "Institutional control frameworks require defined cryptographic uses, defined types of cryptography, key-management documentation, and, where relevant, cryptographic module validation artifacts; audit information protection may require cryptographic integrity mechanisms that can be examined, interviewed about, and tested. [E_26_A710FE8084614182, E_26_31F09DD7BB81D0F1, E_26_B2995F657787797A]",
+      "CISA CPG treats encryption as feasible-conditional: use is recommended when technically feasible, and OT encryption is to be used when feasible to avoid excessive latency or availability impact. [E_23_534489D29C38B327]",
+      "The CIS IG2 profile indicates possible dependence on enterprise-grade technology and specialized expertise, but it is organizational context only and does not itself provide exact staffing, budget, or procurement quantities. [CTX_CIS_IG2_9F94838146D9C3A4]"
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__12548feefd16ecfc",
+    "evidence_gaps": [
+      "Whether the frozen reference enterprise is an essential entity or important entity under the EU primary-law text, and which supervisory regime applies.",
+      "Whether the reference enterprise provides public electronic communications networks or publicly available electronic communications services, which is needed to assess the conditional encryption mandate in the supplied EU text.",
+      "Whether the reference enterprise processes special categories of personal data under Regulation (EU) 2016/679 Article 9, which is needed to assess the privacy-preserving encryption/pseudonymisation context in the supplied EU text.",
+      "Applicable Member State implementation, sector-specific Union legal acts, public-procurement role, or cross-border data-transfer / data-sovereignty constraints.",
+      "Exact cryptographic standard, cryptographic module validation regime, key custody model, external-service-provider arrangements, or post-quantum transition requirements applicable to this deployment.",
+      "Resource capacity beyond the CIS IG2 profile, including staffing, expertise, budget, and implementation schedule."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional / Regional Feasibility lens, the frozen CRYPTOGRAPHY action has general feasibility support: the supplied EU primary-law records describe encryption as a promoted or conditionally mandatory measure for certain EU communications-service providers, identify encryption as a privacy-preserving measure for special categories of personal data under Regulation (EU) 2016/679, and include encryption in national cybersecurity strategy and public-procurement policy areas. The supplied CISA and NIST records further show that cryptography is institutionally recognized as a recommended control and that its deployment is subject to defined uses, key management, audit-protection, and assessment procedures. However, the frozen CIS IG2 profile and deployment context do not establish whether this enterprise is an essential or important entity under the EU text, a provider of public electronic communications networks or services, or an entity processing special categories of personal data. Because those deployment-specific applicability facts are missing, exact EU legal burden, supervision regime, data-governance obligations, and cross-border constraints cannot be established. The available records do not support a material institutional or regional challenge, but they also do not provide enough context for a fully supported deployment-specific feasibility judgment; therefore the lens outcome is mixed/indeterminate rather than directionally supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "e551b6355be7d6ca4a409242fe06c3fd300add730dc0131d7e85151fa0a4be48",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "2ca9e40269cbdb4daa5ad353555ebbf5172dd4236a350996ad5350ca6c4f1936",
+  "created_at": "2026-09-14T13:00:12.892031+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__12548feefd16ecfc",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "institutional_regional",
+  "scenario_id": "EU__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

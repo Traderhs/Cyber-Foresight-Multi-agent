@@ -1,0 +1,357 @@
+{
+  "artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__session_hijacking__https",
+  "created_at": "2026-09-15T14:40:26.910232+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__session_hijacking__https",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_HTTPS",
+          "action_name": "HTTPS",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_02_3AE1561299B667F5",
+            "E_03_6B1B12ABFD14313F",
+            "E_10_AC5A58AF5E015229",
+            "E_12_9B8ECD82AD844621",
+            "E_12_CFEC6517865F0563",
+            "E_19_A61B74B0F1435639",
+            "E_19_E896356AEE4DB2CD",
+            "E_20_88F8C63B0AC62BEC",
+            "E_22_808618C790A7133A",
+            "E_23_6C42FC29A05ADCAE",
+            "E_26_2A6B7965607F1AAF",
+            "E_29_2B4FE56914E3B676",
+            "E_29_5608502338822397",
+            "E_29_B82ABFE7422C38D1",
+            "E_33_13A684B424C1D15B"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__session_hijacking__https",
+        "contradictory_evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_02_3AE1561299B667F5",
+          "E_03_6B1B12ABFD14313F",
+          "E_04_B9A3190D9CA152A3",
+          "E_10_AC5A58AF5E015229",
+          "E_12_9B8ECD82AD844621",
+          "E_12_CFEC6517865F0563",
+          "E_19_A61B74B0F1435639",
+          "E_19_E896356AEE4DB2CD",
+          "E_20_88F8C63B0AC62BEC",
+          "E_22_808618C790A7133A",
+          "E_23_6C42FC29A05ADCAE",
+          "E_25_99857C4681E8FEE5",
+          "E_26_2A6B7965607F1AAF",
+          "E_29_2B4FE56914E3B676",
+          "E_29_5608502338822397",
+          "E_29_B82ABFE7422C38D1",
+          "E_33_13A684B424C1D15B"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": -0.41660001395464175,
+            "2026": -0.8772933883332025,
+            "2027": -0.9511286268829613
+          },
+          "gap_direction": "threat_minus_pmt_decreasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": -0.2672643064641598,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.08550819833028443,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_HTTPS_2025-01",
+              "YF_PMT_HTTPS_2025-02",
+              "YF_PMT_HTTPS_2025-03",
+              "YF_PMT_HTTPS_2025-04",
+              "YF_PMT_HTTPS_2025-05",
+              "YF_PMT_HTTPS_2025-06",
+              "YF_PMT_HTTPS_2025-07",
+              "YF_PMT_HTTPS_2025-08",
+              "YF_PMT_HTTPS_2025-09",
+              "YF_PMT_HTTPS_2025-10",
+              "YF_PMT_HTTPS_2025-11",
+              "YF_PMT_HTTPS_2025-12",
+              "YF_PMT_HTTPS_2026-01",
+              "YF_PMT_HTTPS_2026-02",
+              "YF_PMT_HTTPS_2026-03",
+              "YF_PMT_HTTPS_2026-04",
+              "YF_PMT_HTTPS_2026-05",
+              "YF_PMT_HTTPS_2026-06",
+              "YF_PMT_HTTPS_2026-07",
+              "YF_PMT_HTTPS_2026-08",
+              "YF_PMT_HTTPS_2026-09",
+              "YF_PMT_HTTPS_2026-10",
+              "YF_PMT_HTTPS_2026-11",
+              "YF_PMT_HTTPS_2026-12",
+              "YF_PMT_HTTPS_2027-01",
+              "YF_PMT_HTTPS_2027-02",
+              "YF_PMT_HTTPS_2027-03",
+              "YF_PMT_HTTPS_2027-04",
+              "YF_PMT_HTTPS_2027-05",
+              "YF_PMT_HTTPS_2027-06",
+              "YF_PMT_HTTPS_2027-07",
+              "YF_PMT_HTTPS_2027-08",
+              "YF_PMT_HTTPS_2027-09",
+              "YF_PMT_HTTPS_2027-10",
+              "YF_PMT_HTTPS_2027-11",
+              "YF_PMT_HTTPS_2027-12"
+            ],
+            "forecast_mean_z": 0.5607410536886053,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.03541426654327573,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_SESSION_HIJACKING_2025-01",
+              "YF_THREAT_SESSION_HIJACKING_2025-02",
+              "YF_THREAT_SESSION_HIJACKING_2025-03",
+              "YF_THREAT_SESSION_HIJACKING_2025-04",
+              "YF_THREAT_SESSION_HIJACKING_2025-05",
+              "YF_THREAT_SESSION_HIJACKING_2025-06",
+              "YF_THREAT_SESSION_HIJACKING_2025-07",
+              "YF_THREAT_SESSION_HIJACKING_2025-08",
+              "YF_THREAT_SESSION_HIJACKING_2025-09",
+              "YF_THREAT_SESSION_HIJACKING_2025-10",
+              "YF_THREAT_SESSION_HIJACKING_2025-11",
+              "YF_THREAT_SESSION_HIJACKING_2025-12",
+              "YF_THREAT_SESSION_HIJACKING_2026-01",
+              "YF_THREAT_SESSION_HIJACKING_2026-02",
+              "YF_THREAT_SESSION_HIJACKING_2026-03",
+              "YF_THREAT_SESSION_HIJACKING_2026-04",
+              "YF_THREAT_SESSION_HIJACKING_2026-05",
+              "YF_THREAT_SESSION_HIJACKING_2026-06",
+              "YF_THREAT_SESSION_HIJACKING_2026-07",
+              "YF_THREAT_SESSION_HIJACKING_2026-08",
+              "YF_THREAT_SESSION_HIJACKING_2026-09",
+              "YF_THREAT_SESSION_HIJACKING_2026-10",
+              "YF_THREAT_SESSION_HIJACKING_2026-11",
+              "YF_THREAT_SESSION_HIJACKING_2026-12",
+              "YF_THREAT_SESSION_HIJACKING_2027-01",
+              "YF_THREAT_SESSION_HIJACKING_2027-02",
+              "YF_THREAT_SESSION_HIJACKING_2027-03",
+              "YF_THREAT_SESSION_HIJACKING_2027-04",
+              "YF_THREAT_SESSION_HIJACKING_2027-05",
+              "YF_THREAT_SESSION_HIJACKING_2027-06",
+              "YF_THREAT_SESSION_HIJACKING_2027-07",
+              "YF_THREAT_SESSION_HIJACKING_2027-08",
+              "YF_THREAT_SESSION_HIJACKING_2027-09",
+              "YF_THREAT_SESSION_HIJACKING_2027-10",
+              "YF_THREAT_SESSION_HIJACKING_2027-11",
+              "YF_THREAT_SESSION_HIJACKING_2027-12"
+            ],
+            "forecast_mean_z": -0.1875996227016633,
+            "state_modality": "NoP"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of HTTPS for the frozen Session Hijacking forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "HTTPS",
+        "pmt_or_mitigation_id": "PMT_HTTPS",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.08550819833028443,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.03541426654327573
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Historical threat NoI and NoP fields are unavailable or masked, limiting independent verification of the latest observed threat-state direction.",
+            "No supplied evidence reports a temporal publication-activity trend for THREAT_SESSION_HIJACKING NoP, so the forecast's stated NoP increasing direction for the threat state is not directly confirmed by the evidence.",
+            "Static advisories, control guidance, observed risk patterns, and bibliographic metadata do not establish deployment maturity, operational effectiveness, control effectiveness, or causal mitigation effectiveness, so they cannot independently confirm the future threat trajectory.",
+            "The missing exploitation_signal slot leaves unresolved whether realized session-hijacking exploitation against HTTPS increased, decreased, or persisted at a measurable level after the cutoff.",
+            "The supplied PMT_HTTPS publication trend, including its small first-to-last delta, supports PMT-side publication activity only and does not resolve the relative movement between threat NoP and PMT NoP required to confirm the forecast gap direction."
+          ],
+          "defense_post_stance": 0,
+          "defense_post_unresolved_questions": [
+            "Can the threat-minus-PMT gap direction be confirmed directly without supplied temporal threat NoP/NoI trajectory or another forecast-state modality evidence?",
+            "Does any supplied evidence establish that PMT_HTTPS was deployed, enforced, or implemented in relevant environments by the 2024-12-31 cutoff?",
+            "Should the PMT_NoP directional support be treated as too weak to be decisive because the first-to-last publication delta is one and the annual sequence is non-monotonic?",
+            "What evidence would directly link PMT_HTTPS or session-authenticity controls to reduced session-hijacking success for the reported XSS cookie-stealing and web-application misconfiguration mechanisms?",
+            "What is the direction of actual session-hijacking exploitation after the cutoff, given that the exploitation_signal evidence slot is missing?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA_C4_D1",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_13A684B424C1D15B supports the factual PMT_HTTPS publication trend reported by C4 and the directional support asserted by D1. The supported direction is limited to publication activity; the same evidence explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA_C4_D2",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "D2"
+              ],
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_33_13A684B424C1D15B reports both the positive OLS slope and the small first-to-last delta of one publication. C4 and D2 are therefore compatible: C4 is supported as a factual publication-activity trend, while D2 is supported as a challenge to the strength or magnitude of that support rather than as a direct contradiction of the reported positive direction.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA_C3_D3",
+              "attack_claim_ids": [
+                "C3"
+              ],
+              "defense_claim_ids": [
+                "D3"
+              ],
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "E_25_99857C4681E8FEE5 supports the factual description of a session-authenticity control and its relation to session hijacking and man-in-the-middle protection. However, it is static official control guidance and does not establish PMT_HTTPS deployment, enforcement, operational effectiveness, or a future PMT_NoP trajectory. It should be treated as neutral mitigation context rather than direct forecast support.",
+              "required_revision": "Reclassify D3 as NEUTRAL_CONTEXT or mitigation-control context. State that E_25 supports the existence and relevance of a session-authenticity control, but not PMT_HTTPS deployment, NoP trajectory, operational effectiveness, or direct support for the forecast."
+            },
+            {
+              "adjudication_id": "MA_C1_C2_D4",
+              "attack_claim_ids": [
+                "C1",
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "D4"
+              ],
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229",
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3 support the reported session-hijacking mechanisms and web-application risk context. They do not provide a supplied temporal threat NoP or NoI trajectory, nor a session-hijacking exploitation_signal, sufficient to directly challenge the forecast direction or the threat-minus-PMT gap direction. The 29% public-facing application figure in E_04 is at most weak directional context for a broader attack vector, not a session-hijacking NoP trend.",
+              "required_revision": "Reclassify D4 as NEUTRAL_CONTEXT. Limit it to reported session-hijacking mechanisms and risk context. Do not assert a direct CHALLENGES_FORECAST trajectory without a supplied exploitation_signal or threat NoP/NoI trend. If referencing E_04_B9A3190D9CA152A3, explicitly note that the 29% public-facing application comparison is not a session-hijacking NoP trend."
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "MA_C3_D3",
+              "attack_claim_ids": [
+                "C3"
+              ],
+              "defense_claim_ids": [
+                "D3"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "Reclassify D3 as NEUTRAL_CONTEXT or mitigation-control context. State that E_25 supports the existence and relevance of a session-authenticity control, but not PMT_HTTPS deployment, NoP trajectory, operational effectiveness, or direct support for the forecast."
+            },
+            {
+              "adjudication_id": "MA_C1_C2_D4",
+              "attack_claim_ids": [
+                "C1",
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "D4"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "Reclassify D4 as NEUTRAL_CONTEXT. Limit it to reported session-hijacking mechanisms and risk context. Do not assert a direct CHALLENGES_FORECAST trajectory without a supplied exploitation_signal or threat NoP/NoI trend. If referencing E_04_B9A3190D9CA152A3, explicitly note that the 29% public-facing application comparison is not a session-hijacking NoP trend."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "threat": "Session Hijacking",
+        "threat_id": "THREAT_SESSION_HIJACKING",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_HTTPS",
+        "action_name": "HTTPS",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_02_3AE1561299B667F5",
+          "E_03_6B1B12ABFD14313F",
+          "E_10_AC5A58AF5E015229",
+          "E_12_9B8ECD82AD844621",
+          "E_12_CFEC6517865F0563",
+          "E_19_A61B74B0F1435639",
+          "E_19_E896356AEE4DB2CD",
+          "E_20_88F8C63B0AC62BEC",
+          "E_22_808618C790A7133A",
+          "E_23_6C42FC29A05ADCAE",
+          "E_26_2A6B7965607F1AAF",
+          "E_29_2B4FE56914E3B676",
+          "E_29_5608502338822397",
+          "E_29_B82ABFE7422C38D1",
+          "E_33_13A684B424C1D15B"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_RISK_ASSESSMENT",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_VPN",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "6a4b7cb10d09f6b120e2783bf1bb0957dd7cd53c66243135af329756876c5170",
+  "stage2_artifact_sha256": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+  "stage2_output_sha256": "a0867e46d39020baed0378cb057158c2367161643e6eb4717d43b954aba0df4e",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "HTTPS",
+    "region": null,
+    "threat": "Session Hijacking"
+  },
+  "stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd"
+}

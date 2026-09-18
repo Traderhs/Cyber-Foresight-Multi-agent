@@ -1,0 +1,203 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 describes cryptography as a security and privacy control that can support protection of classified and controlled unclassified information, the provision and implementation of digital signatures, enforcement of information separation when authorized individuals have necessary clearances but lack necessary formal access approvals, and random number and hash generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 describes digital signatures as a more robust metadata authentication approach than a recomputable cryptographic hash or checksum, with signature generation using a private key and a verification process that gives confidence about signer association and non-modification after signature generation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2 contrasts widely used machine learning algorithms with cryptography by stating that widely used machine learning algorithms lack information-theoretic security proofs, that many mitigation advances are empirical and limited in nature, and that information-theoretic impossibility results have begun to appear that set limits on the effectiveness of widely-used mitigation techniques.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "E_23_A793FAF5B393EFE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Cybersecurity Performance Goals defines Encrypt as cryptographically transforming data to produce cipher text, Encryption as a cryptography procedure converting plain text into cipher text to prevent unauthorized reading, and Hashing as applying a mathematical algorithm to data to produce a hash value.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-5",
+        "evidence_ids": [
+          "E_19_4E69D255F61736DB"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NISTIR 8259 IoT Device Cybersecurity chunk includes a reference to NIST SP 800-56A Rev.3 for pairwise key-establishment schemes using discrete logarithm cryptography.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-6",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref cutoff-constrained publication metadata for PMT_CRYPTOGRAPHY reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with OLS slope 37.8 works/year, first-to-last delta 120, total results 1066, and an explicit boundary that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-7",
+        "evidence_ids": [
+          "E_29_7C01F6CA0D982DFF",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Three Crossref records provide DOI, venue, and publication metadata for acknowledgments to reviewers of the Cryptography journal for 2017, 2020, and 2022, respectively, supporting static publication metadata only.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-8",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 C-SCRM supplemental guidance states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-9",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Insider Threat Mitigation Resources describes an insider threat mitigation program as organization-wide and spanning individuals, with detect/assess/manage practices, training and awareness, policy and procedure, management practices, and multidisciplinary capabilities enabled by technologies and/or dedicated personnel.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-10",
+        "evidence_ids": [
+          "E_26_92664A4339CF24C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 references personnel responsible for the insider threat program, members of a cross-discipline insider threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-11",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 states that generally applicable cryptographic standards include FIPS-validated cryptography and NSA-approved cryptography, gives examples of organizations specifying NSA-approved cryptography for classified information and FIPS-validated cryptography for digital signatures, and states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific technical feasibility conclusion requires infrastructure_context and organization_type for the target environment.",
+      "If metadata authentication or tamper-evidence is intended, a digital signature scheme with signature generation and verification processes and associated key management is required, per E_16_E7BB108A85B71262.",
+      "If information separation is intended, the deployment must define the cryptographic uses and access conditions for individuals who have clearances but lack formal access approvals, per E_25_746173685B235ED2.",
+      "If classified or controlled unclassified information is in scope, the deployment must confirm the required cryptographic standard class, such as NSA-approved or FIPS-validated as specified in E_25_746173685B235ED2, and applicable policy compliance.",
+      "If predictable data-collection frequencies are used in insider-threat operations, less predictable frequencies should be evaluated as an operational control, per E_20_913B6F999A0F1458.",
+      "Operability should be assessed against an organization-wide insider-threat program and cross-discipline incident handling personnel, per E_22_C239828119FC69CD and E_26_92664A4339CF24C9."
+    ],
+    "constraints": [
+      "Deployment-specific technical compatibility cannot be asserted because the frozen deployment_context has null infrastructure_context, organization_type, region, and budget_context.",
+      "The supplied cryptography records are official guidance, academic metadata, or a publication trend; they do not establish measured deployment effectiveness, exact effectiveness, deployment maturity, or causal mitigation effectiveness for THREAT_INSIDER_THREAT.",
+      "E_25_746173685B235ED2 indicates that cryptography implementation must align with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines, and that organizations may specify NSA-approved or FIPS-validated cryptography for different uses.",
+      "E_20_913B6F999A0F1458 provides neutral operational-control guidance that predefined data-collection frequencies should be less predictable to reduce insider-threat bypass risk; it does not establish measured effectiveness or a threat trajectory.",
+      "E_22_C239828119FC69CD and E_26_92664A4339CF24C9 indicate that insider-threat mitigation is programmatic and involves multidisciplinary personnel and assessment context, not cryptography-specific operational effectiveness."
+    ],
+    "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+    "evidence_gaps": [
+      "Missing infrastructure_context details such as existing cryptographic controls, key management/PKI, digital signature support, encryption in storage or transit, data classification, access authorization and clearance model, information separation boundaries, monitoring/data-collection systems, and system inventory or configuration baseline.",
+      "Missing deployment, adoption, implementation, integration, scalability, maintainability, or operational-effectiveness observations for cryptography as an insider-threat mitigation during the 2025-2027 forecast horizon.",
+      "Missing a direct insider-threat exploitation signal or mechanism that ties a specific insider act to a cryptography-controlled data flow, metadata, access boundary, or key-management process.",
+      "Missing post-2024 technical availability or deployment evidence within the forecast horizon; the supplied records are cutoff-constrained or available before 2025-2027.",
+      "Missing reconciliation between the frozen forecast state directions and the supplied pre-cutoff technical or publication evidence if that reconciliation is needed for threat-mitigation fit."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied Stage 0 records support general technical feasibility of cryptography as a control family, but they do not support a deployment-specific feasibility conclusion for the frozen Insider Threat action. E_25_746173685B235ED2 states that cryptography can support protection of classified and controlled unclassified information, digital signatures, information separation for authorized individuals lacking formal access approvals, and random number/hash generation. E_16_E7BB108A85B71262 describes digital signatures as a more robust metadata authentication mechanism than recomputable hashes/checksums. E_23_A793FAF5B393EFE3 provides baseline definitions for encryption and hashing. E_19_4E69D255F61736DB references a NIST key-establishment standard, and E_33_CDE0F421E4D797ED provides a cutoff-constrained increasing publication trend for PMT_CRYPTOGRAPHY from 2021 to 2024, explicitly without establishing deployment maturity or operational effectiveness. These records establish general technical enablers, not measured insider-threat mitigation effectiveness. Conversely, the records do not materially challenge technical feasibility: no supplied record identifies a technical barrier to cryptography itself. The limitation is context and effectiveness evidence: deployment_context infrastructure, organization type, region, and budget are null; there is no deployment, adoption, integration, scalability, maintainability, or measured operational-effectiveness evidence for cryptography against THREAT_INSIDER_THREAT in the 2025-2027 horizon. The insider-threat records E_20_913B6F999A0F1458, E_22_C239828119FC69CD, and E_26_92664A4339CF24C9 provide programmatic, C-SCRM, and assessment-personnel context rather than cryptography-specific effectiveness. Therefore the technical feasibility lens yields a mixed/indeterminate stance: general feasibility is supported, deployment-specific feasibility is indeterminate, and evidence sufficiency is limited by missing deployment context rather than by a directional technical challenge.",
+    "stance": 0
+  },
+  "assessment_sha256": "b248776f415e7c6c380235f26ff1f769c470fc96622290b0345135bc69db95a4",
+  "checkpoint_sha256": "b382042996fdf7e506ef82659acb4fbbc44b7ad1c25229417906a48cee5fb292",
+  "created_at": "2026-09-16T17:21:28.926122+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+    "base_stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+    "base_stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+    "case_id": "main__insider_threat__cryptography",
+    "evidence_ids": [
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_20_913B6F999A0F1458",
+      "E_22_C239828119FC69CD",
+      "E_23_A793FAF5B393EFE3",
+      "E_25_746173685B235ED2",
+      "E_26_92664A4339CF24C9",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "58b4aad007ab11b133215ca134d14062194546d416a52dab7b7bf74fdadd02b9",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "80f827647ba2de51aa301e2ec50215fb3fec1d56baa5259d52460cc0533d5e34",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "2979e95dbc0a89bc95a1f7e067f16756040c4592be3eab46558d7ce0d74f8150",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

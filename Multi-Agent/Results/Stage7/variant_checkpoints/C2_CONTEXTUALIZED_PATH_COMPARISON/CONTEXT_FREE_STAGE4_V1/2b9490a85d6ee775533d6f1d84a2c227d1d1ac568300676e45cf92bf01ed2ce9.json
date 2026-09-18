@@ -1,0 +1,201 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IFR_C01",
+        "evidence_ids": [
+          "E_02_BE48A23ABD77A19C"
+        ],
+        "scope": "GENERAL",
+        "statement": "DBIR reports that organizations commonly face the System Intrusion pattern and maps IG1 Control 5 Access Control Management to that pattern at 67%; it describes Control 5 as using processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C02",
+        "evidence_ids": [
+          "E_25_8F4D567857A97316",
+          "E_23_42E9198B388BAA83"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 defines access control as the process of granting or denying requests for obtaining and using information and related processing services, and to enter specific physical facilities; CISA CPG describes NIST SP 800-53 as a comprehensive and flexible control catalog and gives operational technology examples that include physical access control mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C03",
+        "evidence_ids": [
+          "E_26_22D6C8ED91C81D37"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A describes a Test assessment method whose typical assessor actions may include testing access control, identification and authentication, and audit mechanisms; testing security and privacy configuration settings; and testing physical access control devices.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C04",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK M1015 describes Active Directory configuration measures, including domain accounts, interactive logon restrictions, RDP restrictions, dedicated administrative accounts, and authentication silos, as measures to secure accounts, control access, and reduce unauthorized access and lateral movement.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C05",
+        "evidence_ids": [
+          "E_20_7FC83A095DEEBF69",
+          "E_20_4D81D3799E4826F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-161 records include access-control-related supply-chain governance content: one chunk lists AC-24 Access Control Decisions, and another discusses authorization boundaries for federal information systems and defines operational technology to include physical access control mechanisms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C06",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied EU NIS2 record states that cybersecurity risk-management measures for essential and important entities should include appropriate access control policies and should address the security of stored, transmitted, and processed data; this is a supplied regional regulatory context, not an established target-region requirement.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C07",
+        "evidence_ids": [
+          "E_10_5C0B9AC35F2420B3",
+          "E_10_CEB460BC4092B2D3",
+          "E_10_B4F773BEC65685CC"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA advisories report access-control-related product vulnerabilities: Siemens Mendix Workflow Commons improper access-control handling that could allow authenticated remote attackers to read or delete sensitive information; Siemens Mendix Email Connector improper access-control handling that could allow authenticated remote attackers to read and manipulate sensitive information; and Kastle Systems Access Control System Firmware vulnerabilities that could allow an attacker to access sensitive information. The advisories recommend vendor updates, impact analysis, and risk assessment; the Siemens Mendix advisories also recommend minimizing network exposure, firewall isolation, and secure remote access where required. The Kastle advisory states no known public exploitation specifically targeting those vulnerabilities had been reported to CISA at that time.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C08",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained publication trend for ACCESS CONTROL reports publication counts and a positive OLS slope but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IFR_C09",
+        "evidence_ids": [
+          "E_29_4ED97777A686537A",
+          "E_29_951AF8A7281A822E",
+          "E_29_A8790308F8A745BD"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref academic metadata records for access-control topics provide publication metadata only and do not establish deployment maturity or operational effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If the target organization is an EU essential or important entity within NIS2 scope, appropriate access control policies should be included in cybersecurity risk-management measures, including security of stored, transmitted, and processed data (E_31_96F42990F3AEAC86).",
+      "If the organization has limited resources or lower maturity, control selection should be based on security maturity/resources and customized/prioritized to the organization's risk profile, with IG1 as a DBIR scenario starting point (E_02_BE48A23ABD77A19C).",
+      "If Siemens Mendix Workflow Commons, Siemens Mendix Email Connector, or Kastle Systems Access Control System Firmware are in scope, apply vendor updates and perform impact analysis/risk assessment; for the Siemens Mendix advisories, also minimize network exposure, place control systems behind firewalls, and use secure remote access when required (E_10_5C0B9AC35F2420B3, E_10_CEB460BC4092B2D3, E_10_B4F773BEC65685CC).",
+      "If Active Directory is the operational environment, M1015 measures such as domain accounts, interactive logon restrictions, RDP restrictions, dedicated administrative accounts, and authentication silos may be relevant (E_12_F6120325C44B5EA9).",
+      "If accountability/auditability is required, assessment procedures should include testing access control, identification and authentication, audit mechanisms, security/privacy configuration settings, and physical access control devices as described in NIST 800-53A (E_26_22D6C8ED91C81D37).",
+      "If supply-chain risk management is in scope, AC-24 Access Control Decisions and authorization-boundary considerations from NIST SP 800-161 should be considered (E_20_7FC83A095DEEBF69, E_20_4D81D3799E4826F0).",
+      "Before a region-specific feasibility conclusion, obtain target region, sector, entity status, data-flow obligations, and applicable law evidence."
+    ],
+    "constraints": [
+      "Region-specific regulatory compatibility cannot be established for the unknown target; the only region-specific legal record supplied is EU NIS2, which cannot be generalized beyond its EU scope (E_31_96F42990F3AEAC86).",
+      "Compliance burden is not quantified; the EU record indicates that EU essential/important entities should implement risk-management measures, including appropriate access control policies, but target entity status is unknown (E_31_96F42990F3AEAC86).",
+      "Data-sovereignty and cross-border obligations are not established; the EU record mentions security of stored, transmitted, and processed data but does not provide target-region data-sovereignty or cross-border rules (E_31_96F42990F3AEAC86).",
+      "Implementation barriers may include vulnerability management and vendor remediation because supplied CISA advisories identify access-control vulnerabilities and recommend impact analysis/risk assessment before deploying defensive measures (E_10_5C0B9AC35F2420B3, E_10_CEB460BC4092B2D3, E_10_B4F773BEC65685CC).",
+      "Resource and maturity barriers are acknowledged in the DBIR limited-resource startup example and its recommendation to customize and prioritize controls by risk profile (E_02_BE48A797813EC72F? no, E_02_BE48A23ABD77A19C).",
+      "Institutional adoption trend for 2025-2027 is not supported by the supplied Crossref trend, which is publication activity only and explicitly excludes deployment maturity and operational effectiveness (E_33_F4FC25CE90264812).",
+      "Auditability is supported only as a general assessment method, not as a target-specific accountability regime; NIST 800-53A describes test methods but no target audit authority or policy is supplied (E_26_22D6C8ED91C81D37)."
+    ],
+    "decision_object_id": "decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567",
+    "evidence_gaps": [
+      "Target legal jurisdiction(s) / region are absent; cannot determine which regional legal or regulatory rules apply.",
+      "Organization type, size, sector, maturity, and current access-control baseline are absent.",
+      "Regulatory status, such as whether the organization is an EU essential or important entity under NIS2 or subject to another regime, is unknown.",
+      "Data sovereignty, privacy, and cross-border data-flow obligations for identity, credentials, and audit logs are absent.",
+      "Budget and infrastructure context are absent, preventing assessment of implementation cost, architecture, and operational burden.",
+      "Whether the organization uses Active Directory, operational technology, physical access control systems, or the specific Mendix/Kastle products is unknown.",
+      "No supplied evidence reports 2025-2027 deployment, adoption, or institutional mandates for ACCESS CONTROL in the target region.",
+      "No supplied evidence reports current policies, procurement, vendor management, incident response, or audit responsibilities for ACCESS CONTROL."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records provide GENERAL institutional enablement for ACCESS CONTROL as a governance-recognized control family: it is defined in NIST SP 800-53, described in DBIR as Control 5 Access Control Management, assessable under NIST SP 800-53A, referenced in CISA CPG and NIST SP 800-161 supply-chain governance material, and described as an Active Directory mitigation in MITRE ATT&CK M1015. The supplied EU NIS2 record shows one REGIONAL regulatory compatibility example for EU essential/important entities, but the frozen deployment_context leaves region, organization_type, infrastructure_context, and budget_context absent. No supplied record establishes target-region law, data sovereignty, cross-border constraints, target compliance burden, current institutional adoption, or 2025-2027 deployment. The Crossref publication trend is publication-activity only and explicitly does not establish deployment maturity or operational effectiveness. Therefore, under this lens, institutional/regional feasibility is mixed/indeterminate: generally supportable as a governance-aligned control family, but deployment-specific institutional/regional feasibility cannot be affirmed or challenged without target context.",
+    "stance": 0
+  },
+  "assessment_sha256": "6069ae6b2a9e8c481272aa248731b8a7466ee072bab89fc18a6c12eb1d4c9fc8",
+  "checkpoint_sha256": "f5a105f24823aaf44f0ffad4d3265c2f884429d511a14b6d7cc0cf5e78a68fab",
+  "created_at": "2026-09-16T17:57:30.351479+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "8dc45948c9a5fafa1e072407edadc9b50e058ecc7304cbda3de1064da4f8ea8a",
+    "base_stage3_input_fingerprint": "d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13",
+    "base_stage3_output_sha256": "52a43d3a673cc8ab023b4726616257c27608a8e654371c0d22375d8ba68a4d2a",
+    "case_id": "main__targeted_attack__access_control",
+    "evidence_ids": [
+      "E_02_BE48A23ABD77A19C",
+      "E_03_B4E8A797813EC72F",
+      "E_03_F0CD4F1DE74CC7AD",
+      "E_10_5C0B9AC35F2420B3",
+      "E_10_B4F773BEC65685CC",
+      "E_10_CEB460BC4092B2D3",
+      "E_12_F6120325C44B5EA9",
+      "E_15_195FD353ADC8E8B0",
+      "E_20_4D81D3799E4826F0",
+      "E_20_7FC83A095DEEBF69",
+      "E_23_42E9198B388BAA83",
+      "E_25_8F4D567857A97316",
+      "E_26_22D6C8ED91C81D37",
+      "E_29_4ED97777A686537A",
+      "E_29_951AF8A7281A822E",
+      "E_29_A8790308F8A745BD",
+      "E_31_96F42990F3AEAC86",
+      "E_33_F4FC25CE90264812"
+    ],
+    "input_fingerprint": "2b9490a85d6ee775533d6f1d84a2c227d1d1ac568300676e45cf92bf01ed2ce9",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "3261bb53c98651aef1a21f2949ebd62cb255a3e49e1482e4ed0249381a35219d",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "0bd2c056117d5f8bb31b9615b69b28d706a79120a11cb2b0ed48c3a8e88cba95",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

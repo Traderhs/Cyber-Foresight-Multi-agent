@@ -1,0 +1,84 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA Cybersecurity Performance Goals record recommends strong and agile encryption, including properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, identifying and updating outdated or weak encryption, and considering post-quantum cryptography implications.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-53 Rev. 5 record frames cryptography as a security control and states that generally applicable cryptographic standards include FIPS-validated and NSA-approved cryptography, with implementation in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-53A Rev. 5 record defines assessment objectives for cryptographic protection and key management, including defined cryptographic uses and types, implementation of defined types, examination of FIPS-validated cryptographic modules, and physical control of cryptographic keys when stored information is encrypted by external service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_26_B2995F657787797A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-53A Rev. 5 record lists AU-09(03) cryptographic protection assessment methods, including testing cryptographic mechanisms protecting the integrity of audit information and tools.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure that may face regulatory burdens and for which some safeguards may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If the deployment involves external service providers that encrypt stored information, key-management and physical key-control procedures must be present and assessable.",
+      "If audit-information integrity is in scope, cryptographic mechanisms protecting audit information and audit tools must be implemented and assessable.",
+      "If applicable regulatory or contractual context later requires specific cryptographic standards, the implementation must align with those standards and retain appropriate validation or configuration evidence.",
+      "If technical feasibility limits encryption in some segments, the action should be scoped to feasible communications and residual risk should be addressed under the supplied guidance."
+    ],
+    "constraints": [
+      "Encryption feasibility is bounded by technical feasibility in the cited CPG record, including data-in-transit protection and OT latency/availability considerations.",
+      "Key-management and physical key-control procedures are assessable where external service providers encrypt stored information.",
+      "Audit-information integrity may require cryptographic mechanisms that can be assessed through examination, interview, and testing of cryptographic mechanisms protecting audit information and tools.",
+      "The CIS IG2 context notes possible regulatory burdens and possible need for enterprise-grade technology or specialized expertise, but it does not supply exact staffing, budget, capability, or compliance-burden quantities.",
+      "No exact budget, price, ROI, TCO, staffing count, vendor, product version, sector, or procurement ceiling is introduced by the frozen scenario."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+    "evidence_gaps": [
+      "No supplied record establishes the specific legal, regulatory, sector-specific, or data-protection obligations applicable to the frozen CIS IG2 enterprise in the United States.",
+      "No supplied record establishes data-residency, data-sovereignty, cross-border transfer, or cross-border cloud constraints for this deployment.",
+      "No supplied record quantifies compliance burden, implementation cost, staffing requirement, budget, timeline, or procurement constraints.",
+      "No supplied record establishes whether classified information, national-security obligations, or NSA-approved cryptography are required for this frozen enterprise profile."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+    "lens_type": "institutional_regional",
+    "rationale": "After correction, all cited claims are NEUTRAL_CONTEXT. The supplied records provide general control-guidance and institutional assessment context for CRYPTOGRAPHY, but they do not provide an eligible regulatory_applicability decision-evidence record for a directional institutional/regional feasibility judgment under this lens. The action is therefore indeterminate under this lens, with context and evidence gaps recorded.",
+    "stance": 0
+  },
+  "assessment_sha256": "64683766648b0cb895ed6ab29435034f98297df8ecdb2b6b97d98ee4bd4717b9",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "cedc697061050d2661e108468b61685951969fa9656a8263e92a514e4cae226e",
+  "created_at": "2026-09-14T14:00:15.127207+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "institutional_regional",
+  "scenario_id": "US__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

@@ -1,0 +1,107 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG presents strong and agile encryption as a recommended action: properly configured and up-to-date SSL/TLS is utilized to protect data in transit when technically feasible, organizations should identify outdated or weak encryption, update it to sufficiently strong algorithms, and consider post-quantum cryptography implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_26_A710FE8084614182",
+          "E_26_B2995F657787797A",
+          "E_26_31F09DD7BB81D0F1"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A provides assessment objectives and methods for cryptographic protection, including defining cryptographic uses and types, implementing specified cryptographic types, testing mechanisms supporting cryptographic protection, and assessing key establishment and management controls.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_25_A1044C34BD8DBDFA",
+          "E_25_172BD812783415C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 references secure transmission of access-authorization information using cryptographic mechanisms in distributed or separated authorization architectures, and defines cryptographic encapsulation between organization-controlled endpoints as providing the same effect as an internal network at least for confidentiality and integrity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG qualifies OT encryption use by feasibility, stating that to minimize latency and availability impact, encryption is used when feasible, usually for OT communications connecting with remote or external assets.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, and states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication-trend record for CRYPTOGRAPHY reports increasing annual publication counts but explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_25_172BD812783415C9",
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied insider-threat guidance describes insider threat as the threat that an insider will use authorized access to do harm, and describes insider-threat mitigation as an organization-wide program to deter, detect, and manage insider acts.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If OT/ICS communications are in scope, encryption must be applied only when technically feasible and must be evaluated against latency and availability impact (E_23_534489D29C38B327).",
+      "If access-control decisions and enforcement are separated, secure transmission of authorization information, including cryptographic mechanisms, must be implemented (E_25_A1044C34BD8DBDFA).",
+      "If external service providers store encrypted information, physical control of cryptographic keys must be maintained (E_26_A710FE8084614182).",
+      "If audit information protection is required, cryptographic mechanisms protecting audit information and tools must be implemented and testable (E_26_B2995F657787797A, E_26_31F09DD7BB81D0F1).",
+      "A deployment-specific feasibility conclusion would require exact infrastructure inventory, current cryptographic state, OT constraints, and the specific insider-threat data flows to be protected."
+    ],
+    "constraints": [
+      "C4: OT/ICS integration is feasibility-constrained; encryption may need to be limited or tuned to avoid latency and availability degradation (E_23_534489D29C38B327).",
+      "C2: Deployment requires defined cryptographic uses, selected algorithm types, key-management controls, and assessable mechanisms (E_26_A710FE8084614182, E_26_B2995F657787797A, E_26_31F09DD7BB81D0F1).",
+      "C5: The reference enterprise profile may require enterprise-grade technology and specialized expertise for some safeguards, increasing operational complexity (CTX_CIS_IG2_9F94838146D9C3A4).",
+      "C6: Publication activity cannot be used as evidence of deployment maturity or operational effectiveness (E_33_CDE0F421E4D797ED)."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+    "evidence_gaps": [
+      "No supplied record specifies the exact target systems, network segments, OT/ICS assets, protocols, or application dependencies in the frozen KR/CIS IG2 deployment.",
+      "No supplied record establishes whether current infrastructure already supports TLS/SSL termination, certificate management, key storage, or HSM/PKI integration.",
+      "No supplied record quantifies performance, latency, throughput, or availability constraints that would determine whether encryption is technically feasible for all in-scope traffic.",
+      "No supplied record identifies the specific insider-threat data flows, exfiltration channels, or insider exploitation mechanisms that CRYPTOGRAPHY is expected to mitigate.",
+      "No supplied record provides deployment-specific implementation effort, staffing, skills, or resource constraints beyond the generic CIS IG2 profile."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "Under the technical-feasibility lens, the frozen CRYPTOGRAPHY action is generally implementable but not conclusively integrable or operable for this specific deployment context. General feasibility is supported because CISA CPG treats strong and agile encryption as a recommended action with concrete technical scope, including SSL/TLS for data in transit, identification and update of outdated or weak encryption, and consideration of post-quantum implications (E_23_534489D29C38B327). NIST SP 800-53A provides assessment objectives and methods for cryptographic protection, key management, and protection of audit information, but these are treated as neutral control-assessment context rather than a directional feasibility conclusion (E_26_A710FE8084614182, E_26_B2995F657787797A, E_26_31F09DD7BB81D0F1). Integration-relevant references also exist for secure transmission of access-authorization information and for cryptographic encapsulation between organization-controlled endpoints (E_25_A1044C34BD8DBDFA, E_25_172BD812783415C9). However, the supplied records do not establish deployment-specific compatibility, performance impact, exact integration paths, or operational burden in the frozen KR/CIS IG2 enterprise scenario. The CIS IG2 profile indicates a multi-department enterprise IT environment that may require enterprise-grade technology and specialized expertise for some safeguards, but it does not supply the exact infrastructure, OT constraints, key-management state, or insider-threat data flows needed for a deployment-specific conclusion (CTX_CIS_IG2_9F94838146D9C3A4). Therefore stance is 0 (mixed/indeterminate) rather than +1 or -1, and evidence sufficiency is INSUFFICIENT_CONTEXT for a deployment-specific technical-feasibility judgment.",
+    "stance": 0
+  },
+  "assessment_sha256": "4580e3add64468fc1ff415e034994a88693cf51ae552282c605dd24968feb422",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "cb4b773f87e422a7546454e327de0737542b58ebe0d23c1356f55a306701717f",
+  "created_at": "2026-09-14T12:26:06.892666+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "technical_feasibility",
+  "scenario_id": "KR__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

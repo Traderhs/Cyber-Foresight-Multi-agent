@@ -1,0 +1,258 @@
+{
+  "artifact_sha256": "8613aa49174eb4de5e6130cffe03f8659beebe2837c1ffb30ddb60293d883194",
+  "case_id": "main__ddos__nlp_llm",
+  "constrained_output_schema_sha256": {
+    "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272": {
+      "financial_adoption": "1d2b184b04de946d65073a9256efeda00258ab4be387145a7b8a591ff22ed379",
+      "institutional_regional": "b9ff7f38654b572f83ffefb2ff11a0d05a71b74d04f66434aa2995feb74e595f",
+      "technical_feasibility": "f671b032f680892315f21f053855534fd8fc872e8d5aea6b35f9bc79c001696f"
+    }
+  },
+  "created_at": "2026-09-14T03:47:54.538012+00:00",
+  "decision_object_payload_sha256": {
+    "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272": "b519003c37da312a4c4bdb6bf6ac6e2f16d22179cf0fea9a1b23fdd235dc1f44"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ddos__nlp_llm",
+    "evaluations": [
+      {
+        "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+        "financial_adoption": {
+          "claims": [],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion requires explicit budget_context, organization_type, infrastructure_context, and region.",
+            "A deployment-specific feasibility conclusion requires NLP/LLM-specific evidence on cost, staffing, organizational burden, opportunity cost, and implementation timing.",
+            "If adoption depends on existing infrastructure or contracted DDoS mitigation services, the relevant infrastructure and contract details must be supplied."
+          ],
+          "constraints": [
+            "No exact cost, ROI, TCO, budget, payback period, vendor product version, or exact implementation timeline can be inferred from the supplied evidence.",
+            "Publication-activity evidence for NLP/LLM cannot be treated as evidence of deployment maturity, operational burden, or adoption feasibility.",
+            "DDoS mitigation-readiness statements are general context and do not establish that NLP/LLM specifically is financially or operationally adoptable."
+          ],
+          "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+          "evidence_gaps": [
+            "Missing NLP/LLM-specific implementation cost evidence.",
+            "Missing NLP/LLM-specific staffing or skill-availability evidence.",
+            "Missing NLP/LLM-specific organizational-burden evidence.",
+            "Missing NLP/LLM-specific opportunity-cost evidence.",
+            "Missing NLP/LLM-specific implementation-timing evidence relative to the 2025-2027 window.",
+            "Missing budget_context.",
+            "Missing organization_type.",
+            "Missing infrastructure_context.",
+            "Missing region."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence does not establish the direction of cost or adoption burden for NLP/LLM. The DDoS records provide threat and mitigation-readiness context, but no NLP/LLM-specific cost, staffing, organizational-burden, opportunity-cost, or implementation-timing data. The NLP/LLM records are publication or metadata records, and the Crossref record explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because budget_context, organization_type, infrastructure_context, and region are missing in the frozen deployment context, deployment-specific financial/adoption feasibility cannot be assessed. Therefore the stance is indeterminate rather than supported or materially challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR_C1",
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "scope": "GENERAL",
+              "statement": "The X-Force record states that, for organizations located in the region, recommended DDoS readiness actions include reviewing network security posture for DDoS, contacting a DDoS mitigation provider, having and practicing a DDoS incident-response plan, and ensuring incident responders have up-to-date contact information for DDoS mitigation and internet service providers.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR_C2",
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DBIR record advises checking that a contracted DDoS mitigation service can handle observed attack bandwidth, checking DNS infrastructure resiliency, and checking mitigation-service options for distributed DNS Water Torture attacks.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR_C3",
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA KEV record for CVE-2023-44487 provides mitigation guidance to apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR_C4",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref NLP/LLM publication-trend record states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If deployment-specific institutional/regional feasibility is to be assessed, the target region, jurisdiction, organization type, and deployment environment must be specified.",
+            "If data governance or cross-border constraints are to be assessed, the data sources, processing locations, retention requirements, access controls, and cross-border transfer paths for the NLP/LLM system must be specified.",
+            "If the X-Force regional readiness conditions in IR_C1 are applicable, the organization must confirm availability of a DDoS mitigation provider, a practiced DDoS incident-response plan, and current DDoS/ISP contact information.",
+            "If the DBIR readiness conditions in IR_C2 are applicable, the organization must confirm contracted DDoS mitigation-service capacity and DNS infrastructure resiliency options.",
+            "If CVE-2023-44487 is relevant to the deployment, applicability of the vendor-instruction and BOD 22-01 cloud-services mitigation guidance in IR_C3 must be confirmed for the specific product and environment."
+          ],
+          "constraints": [
+            "Deployment-specific institutional or regional feasibility cannot be established because the frozen deployment context does not specify region, organization type, infrastructure, or budget.",
+            "Publication activity for NLP/LLM does not by itself establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "The supplied DDoS records provide general mitigation-readiness guidance but do not connect NLP/LLM to a specific institutional implementation path, data-governance regime, regulatory approval, or cross-border constraint."
+          ],
+          "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+          "evidence_gaps": [
+            "No supplied evidence identifies the target region or legal jurisdiction, so region-specific regulatory or data-sovereignty feasibility cannot be assessed.",
+            "No supplied evidence identifies the organization type, sector, governance structure, or deployment environment for NLP/LLM.",
+            "No supplied evidence addresses data governance, data residency, cross-border data transfer, model access controls, retention, or regulatory approval requirements for NLP/LLM-based DDoS controls.",
+            "No supplied evidence links NLP/LLM to an institutional implementation path, responsible owner, provider contract, or operational integration with DDoS mitigation services."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied records provide limited general DDoS mitigation-readiness guidance and one vulnerability-specific mitigation guidance reference, but they do not establish regulatory compatibility, data sovereignty, compliance burden, cross-border constraints, or an institutional implementation path for NLP/LLM as a DDoS mitigation. The frozen deployment context does not specify region, organization type, infrastructure, or budget, so deployment-specific institutional/regional feasibility cannot be assessed. The Crossref publication-trend record explicitly limits its evidentiary value to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore, feasibility under this lens is indeterminate rather than supported or materially challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "T1",
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat evidence reports growth in DDoS attack size/bandwidth and frames contracted DDoS mitigation service readiness as relevant to absorbing impact.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "T2",
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat evidence reports distributed DNS Water Torture as an observed resource-exhaustion attack vector against shared DNS infrastructure.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "T3",
+              "evidence_ids": [
+                "E_03_06E6ABC42DA3AC77",
+                "E_03_F13F996D181217BA"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat evidence reports DDoS as an example of destructive cyber operations and hacktivist cyber activity context.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "T4",
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat evidence includes DDoS mitigation-readiness guidance such as contacting a DDoS mitigation provider, maintaining and practicing a DDoS incident response plan, and ensuring responders have up-to-date mitigation and ISP contact information.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "T5",
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat evidence includes a confirmed-exploitation record for an HTTP/2 Rapid Reset DDoS vulnerability with mitigation guidance to apply vendor mitigations or discontinue use if mitigations are unavailable.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "T6",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NLP/LLM evidence is a Crossref publication metadata record for an LLM/NLP literature-review work associated with PMT_NLP_LLM, and its record metadata prohibits deployment_maturity and operational_effectiveness claims.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "T7",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NLP/LLM publication trend reports cutoff-constrained 2021-2024 NLP/LLM security publication counts of 14, 18, 33, and 87, with OLS slope 23.4 works/year, and explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "To assess DEPLOYMENT_SPECIFIC technical feasibility, the deployment_context must supply infrastructure details relevant to DDoS mitigation, such as network/edge/DNS/HTTP infrastructure, monitoring and telemetry sources, incident-response tooling, DDoS mitigation provider or service integration points, and deployment environment constraints.",
+            "To support a positive technical feasibility stance for NLP/LLM, evidence must demonstrate that NLP/LLM-based DDoS controls are implementable, integrable, and operable within the 2025-2027 forecast horizon.",
+            "To support threat-mitigation technical fit, evidence must link NLP/LLM functionality to the specific DDoS threat patterns, vectors, or mitigation workflows present in the supplied threat context."
+          ],
+          "constraints": [
+            "The DDoS threat evidence supports threat context and conventional DDoS mitigation-readiness or vulnerability-mitigation guidance only; it does not provide an NLP/LLM-specific technical control, integration mechanism, or operational deployment model.",
+            "The NLP/LLM evidence is publication-activity evidence only and is expressly not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "Because deployment_context is unknown, no deployment-specific technical compatibility, integration, scalability, or operational burden conclusion can be drawn."
+          ],
+          "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+          "evidence_gaps": [
+            "No supplied record provides evidence that NLP/LLM can be implemented as a DDoS mitigation control.",
+            "No supplied record provides evidence that NLP/LLM can be integrated with DDoS detection, mitigation, traffic scrubbing, DNS, HTTP/2, monitoring, incident response, or provider workflows.",
+            "No supplied record provides evidence of NLP/LLM technical maturity for DDoS operations, including operational readiness, model/data requirements, inference workload, latency, accuracy, failure modes, or maintainability.",
+            "No supplied record links the observed DDoS threat context or DDoS mitigation guidance to a specific NLP/LLM mechanism.",
+            "Deployment context is missing, including infrastructure_context, budget_context, organization_type, and region, so deployment-specific technical feasibility cannot be assessed."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the technical feasibility lens, the frozen NLP/LLM action is neither affirmatively supported as technically implementable, integrable, and operable within the 2025-2027 horizon, nor materially challenged as technically infeasible. The supplied DDoS threat evidence provides observed threat context and conventional mitigation-readiness or vulnerability-mitigation guidance, but no evidence establishes that NLP/LLM functions are an implementable DDoS control, an integrable component of DDoS mitigation operations, or an operable mitigation within the forecast window. The supplied NLP/LLM evidence is limited to publication metadata and a publication-activity trend, and that trend explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because deployment context is unknown, deployment-specific technical compatibility, integration, scalability, and operational burden cannot be assessed. Evidence insufficiency is therefore treated as indeterminate rather than as a positive or negative feasibility judgment.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "2dbfe8558ccbef97ecf9a3fed323886664f160f624e8dd5b76e9774b498153b8",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "2b0f1c988b6e69eca684aa58af4845709b9606c1462e619f9eb69ccfbd3e650d",
+    "institutional_regional_system_prompt_sha256": "4642d85804f50bd8e077aec1f9f5de89854abbd00d9c1e0fae16f7e20cb431f4",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "42292179008af427c77e9fe5294c40ff49f4108912f5959f33b0c1fdca2fa1ad"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage4-artifact-v1",
+  "semantic_validation_version": "stage4-semantic-validation-v1",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "4f1aa58c04997eccedea420ef31d14ec049d0dbdf6841d449ca8dcbde8e6f1f5",
+  "stage3_artifact_sha256": "b4e4f5a7952e74f6f8a6e8fab479662c81fe93c48a737f0205cf2e0fa4fcb8e4",
+  "stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+  "stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+  "stage4_output_sha256": "9dfb89008897ce613b0e49beac3e4780a3cfb5f730cdff4e764da50ed73f6eb1"
+}

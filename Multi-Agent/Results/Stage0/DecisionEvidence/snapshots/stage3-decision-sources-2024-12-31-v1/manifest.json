@@ -1,0 +1,713 @@
+{
+  "artifact_count": 14,
+  "artifacts": [
+    {
+      "available_at": "2023-01-26",
+      "content_hash": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "publication_date": "2023-01-26",
+      "record_count": 68,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "snapshot_path": "artifacts/DE01_nist-ai-rmf-1-0_7576edb531d9.pdf",
+      "source_document_id": "nist-ai-rmf-1-0",
+      "source_id": "DE01",
+      "source_name": "NIST Artificial Intelligence Risk Management Framework 1.0",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "version": "NIST-AI-100-1"
+    },
+    {
+      "available_at": "2024-07-26",
+      "content_hash": "6e73620ab6b64e90ef2c04bf0e0d6246185a2f4b1b13cab0df494496cff89b6a",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "publication_date": "2024-07-26",
+      "record_count": 103,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "snapshot_path": "artifacts/DE02_nist-ai-600-1_6e73620ab6b6.pdf",
+      "source_document_id": "nist-ai-600-1",
+      "source_id": "DE02",
+      "source_name": "NIST Artificial Intelligence Risk Management Framework: Generative AI Profile",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "version": "NIST-AI-600-1"
+    },
+    {
+      "available_at": "2024-07-26",
+      "content_hash": "e088c8bc75716824dae7c36a987f408364638561d381ed001b5c12254a7b10d8",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "publication_date": "2024-07-26",
+      "record_count": 46,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+      "snapshot_path": "artifacts/DE03_nist-sp-800-218a_e088c8bc7571.pdf",
+      "source_document_id": "nist-sp-800-218a",
+      "source_id": "DE03",
+      "source_name": "NIST Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+      "version": "NIST-SP-800-218A"
+    },
+    {
+      "available_at": "2007-02-20",
+      "content_hash": "289c2ed27f7e3aac41624bf2e6fad268642bad2dabe352a5ab28fa169824a96e",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION",
+        "PMT_IDS_IPS"
+      ],
+      "publication_date": "2007-02-20",
+      "record_count": 212,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-94.pdf",
+      "snapshot_path": "artifacts/DE04_nist-sp-800-94_289c2ed27f7e.pdf",
+      "source_document_id": "nist-sp-800-94",
+      "source_id": "DE04",
+      "source_name": "NIST Guide to Intrusion Detection and Prevention Systems",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-94.pdf",
+      "version": "NIST-SP-800-94"
+    },
+    {
+      "available_at": "2020-07-16",
+      "content_hash": "7247853e3246fcf8e9a7e8ca9b892fc93f93c41d1de42937608d4f6272430898",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION"
+      ],
+      "publication_date": "2020-07-16",
+      "record_count": 107,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8219.pdf",
+      "snapshot_path": "artifacts/DE05_nist-ir-8219_7247853e3246.pdf",
+      "source_document_id": "nist-ir-8219",
+      "source_id": "DE05",
+      "source_name": "NIST Securing Manufacturing ICS: Behavioral Anomaly Detection",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8219.pdf",
+      "version": "NIST-IR-8219"
+    },
+    {
+      "available_at": "2022-03-16",
+      "content_hash": "1b90f60aaea0d4aeca46c78328e4cf6490d94aa9147101f9b74597e50ffc4bbc",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION",
+        "PMT_IDS_IPS"
+      ],
+      "publication_date": "2022-03-16",
+      "record_count": 409,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-10.pdf",
+      "snapshot_path": "artifacts/DE06_nist-sp-1800-10_1b90f60aaea0.pdf",
+      "source_document_id": "nist-sp-1800-10",
+      "source_id": "DE06",
+      "source_name": "NIST Protecting Information and System Integrity in Industrial Control System Environments",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-10.pdf",
+      "version": "NIST-SP-1800-10"
+    },
+    {
+      "available_at": "2011-09-30",
+      "content_hash": "2d1c0bf459f5e1bfd41ceb5eac83bf62e4c34bf08e2e7088b37cb73a11442b98",
+      "pmt_ids": [
+        "PMT_IDS_IPS"
+      ],
+      "publication_date": "2011-09-30",
+      "record_count": 136,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf",
+      "snapshot_path": "artifacts/DE07_nist-sp-800-137_2d1c0bf459f5.pdf",
+      "source_document_id": "nist-sp-800-137",
+      "source_id": "DE07",
+      "source_name": "NIST Information Security Continuous Monitoring",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf",
+      "version": "NIST-SP-800-137"
+    },
+    {
+      "available_at": "2020-05-04",
+      "content_hash": "cc32391022c1382ac7c91490f6bcc8838e0f889925270da23ef4e800e2ecb7ad",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY"
+      ],
+      "publication_date": "2020-05-04",
+      "record_count": 299,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+      "snapshot_path": "artifacts/DE08_nist-sp-800-57pt1r5_cc32391022c1.pdf",
+      "source_document_id": "nist-sp-800-57pt1r5",
+      "source_id": "DE08",
+      "source_name": "NIST Recommendation for Key Management Part 1 Rev. 5",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+      "version": "NIST-SP-800-57PT1R5"
+    },
+    {
+      "available_at": "2019-03-21",
+      "content_hash": "5c81a1095e0eee35ce0e627b8cc672c1c2239367b0de9bb53d7271c9ab9d7d27",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY"
+      ],
+      "publication_date": "2019-03-21",
+      "record_count": 45,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf",
+      "snapshot_path": "artifacts/DE09_nist-sp-800-131ar2_5c81a1095e0e.pdf",
+      "source_document_id": "nist-sp-800-131ar2",
+      "source_id": "DE09",
+      "source_name": "NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths Rev. 2",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf",
+      "version": "NIST-SP-800-131AR2"
+    },
+    {
+      "available_at": "2019-08-29",
+      "content_hash": "f9a4dbb9cc6ac6778bb9f4e6be9272c2f14d113f3ad241a295684ac6bd71f257",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY",
+        "PMT_HTTPS"
+      ],
+      "publication_date": "2019-08-29",
+      "record_count": 112,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
+      "snapshot_path": "artifacts/DE10_nist-sp-800-52r2_f9a4dbb9cc6a.pdf",
+      "source_document_id": "nist-sp-800-52r2",
+      "source_id": "DE10",
+      "source_name": "NIST Guidelines for TLS Implementations Rev. 2",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
+      "version": "NIST-SP-800-52R2"
+    },
+    {
+      "available_at": "2014-01-31",
+      "content_hash": "ea90ee967a7011c8de5cfaffe0820d157167edefdea5fc2a84af730af4295cd7",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL"
+      ],
+      "publication_date": "2014-01-31",
+      "record_count": 78,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-162.pdf",
+      "snapshot_path": "artifacts/DE11_nist-sp-800-162_ea90ee967a70.pdf",
+      "source_document_id": "nist-sp-800-162",
+      "source_id": "DE11",
+      "source_name": "NIST Guide to Attribute Based Access Control",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-162.pdf",
+      "version": "NIST-SP-800-162"
+    },
+    {
+      "available_at": "2020-08-11",
+      "content_hash": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL"
+      ],
+      "publication_date": "2020-08-11",
+      "record_count": 94,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "snapshot_path": "artifacts/DE12_nist-sp-800-207_0290d6ece248.pdf",
+      "source_document_id": "nist-sp-800-207",
+      "source_id": "DE12",
+      "source_name": "NIST Zero Trust Architecture",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "version": "NIST-SP-800-207"
+    },
+    {
+      "available_at": "2017-06-22",
+      "content_hash": "ccfce7510a1267933f912d023306c6e7d485f21be63d271108b61aad6139127e",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL",
+        "PMT_HTTPS"
+      ],
+      "publication_date": "2017-06-22",
+      "record_count": 130,
+      "resolved_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf",
+      "snapshot_path": "artifacts/DE13_nist-sp-800-63b_ccfce7510a12.pdf",
+      "source_document_id": "nist-sp-800-63b",
+      "source_id": "DE13",
+      "source_name": "NIST Digital Identity Guidelines: Authentication and Lifecycle Management",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf",
+      "version": "NIST-SP-800-63B"
+    },
+    {
+      "available_at": "2020-12-03",
+      "content_hash": "423a464c8f6d47e6879e1b5300c889683fa4bcc22ba95efed1da4c31be21b57b",
+      "pmt_ids": [
+        "PMT_HTTPS"
+      ],
+      "publication_date": "2020-12-03",
+      "record_count": 7,
+      "resolved_uri": "https://www.cisa.gov/sites/default/files/publications/CISAInsights-Cyber-EnhanceEmailandWebSecurity_S508C-a.pdf",
+      "snapshot_path": "artifacts/DE14_cisa-insights-enhance-email-web-security_423a464c8f6d.pdf",
+      "source_document_id": "cisa-insights-enhance-email-web-security",
+      "source_id": "DE14",
+      "source_name": "CISA Insights: Enhance Email and Web Security",
+      "source_uri": "https://www.cisa.gov/sites/default/files/publications/CISAInsights-Cyber-EnhanceEmailandWebSecurity_S508C-a.pdf",
+      "version": "CISA-INSIGHTS-EMAIL-WEB"
+    }
+  ],
+  "cutoff": "2024-12-31",
+  "document_coverage_by_pmt": {
+    "PMT_ACCESS_CONTROL": [
+      "nist-sp-800-162",
+      "nist-sp-800-207",
+      "nist-sp-800-63b"
+    ],
+    "PMT_ANOMALY_DETECTION": [
+      "nist-ir-8219",
+      "nist-sp-1800-10",
+      "nist-sp-800-94"
+    ],
+    "PMT_CRYPTOGRAPHY": [
+      "nist-sp-800-131ar2",
+      "nist-sp-800-52r2",
+      "nist-sp-800-57pt1r5"
+    ],
+    "PMT_HTTPS": [
+      "cisa-insights-enhance-email-web-security",
+      "nist-sp-800-52r2",
+      "nist-sp-800-63b"
+    ],
+    "PMT_IDS_IPS": [
+      "nist-sp-1800-10",
+      "nist-sp-800-137",
+      "nist-sp-800-94"
+    ],
+    "PMT_NLP_LLM": [
+      "nist-ai-600-1",
+      "nist-ai-rmf-1-0",
+      "nist-sp-800-218a"
+    ]
+  },
+  "immutable": true,
+  "manifest_sha256": "4c5b9f5272b1dfaf67cba7682b65cadc04195393a58aef8fcf0f67bd347a0a84",
+  "minimum_documents_per_pmt": 3,
+  "record_count": 1846,
+  "records_sha256": "3ddb8986a75b7c36d36c7c3d4056c4359c998345990563608c660825082cfff2",
+  "registry_version": "stage3-decision-source-registry-v1",
+  "snapshot_id": "stage3-decision-sources-2024-12-31-v1",
+  "specs": [
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2023-01-26",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2023-01-26",
+      "source_document_id": "nist-ai-rmf-1-0",
+      "source_id": "DE01",
+      "source_name": "NIST Artificial Intelligence Risk Management Framework 1.0",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "version": "NIST-AI-100-1"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2024-07-26",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2024-07-26",
+      "source_document_id": "nist-ai-600-1",
+      "source_id": "DE02",
+      "source_name": "NIST Artificial Intelligence Risk Management Framework: Generative AI Profile",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "version": "NIST-AI-600-1"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2024-07-26",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_NLP_LLM"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2024-07-26",
+      "source_document_id": "nist-sp-800-218a",
+      "source_id": "DE03",
+      "source_name": "NIST Secure Software Development Practices for Generative AI and Dual-Use Foundation Models",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+      "version": "NIST-SP-800-218A"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2007-02-20",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION",
+        "PMT_IDS_IPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2007-02-20",
+      "source_document_id": "nist-sp-800-94",
+      "source_id": "DE04",
+      "source_name": "NIST Guide to Intrusion Detection and Prevention Systems",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-94.pdf",
+      "version": "NIST-SP-800-94"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2020-07-16",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2020-07-16",
+      "source_document_id": "nist-ir-8219",
+      "source_id": "DE05",
+      "source_name": "NIST Securing Manufacturing ICS: Behavioral Anomaly Detection",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8219.pdf",
+      "version": "NIST-IR-8219"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2022-03-16",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ANOMALY_DETECTION",
+        "PMT_IDS_IPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2022-03-16",
+      "source_document_id": "nist-sp-1800-10",
+      "source_id": "DE06",
+      "source_name": "NIST Protecting Information and System Integrity in Industrial Control System Environments",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-10.pdf",
+      "version": "NIST-SP-1800-10"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2011-09-30",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_IDS_IPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2011-09-30",
+      "source_document_id": "nist-sp-800-137",
+      "source_id": "DE07",
+      "source_name": "NIST Information Security Continuous Monitoring",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf",
+      "version": "NIST-SP-800-137"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2020-05-04",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2020-05-04",
+      "source_document_id": "nist-sp-800-57pt1r5",
+      "source_id": "DE08",
+      "source_name": "NIST Recommendation for Key Management Part 1 Rev. 5",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+      "version": "NIST-SP-800-57PT1R5"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2019-03-21",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2019-03-21",
+      "source_document_id": "nist-sp-800-131ar2",
+      "source_id": "DE09",
+      "source_name": "NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths Rev. 2",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf",
+      "version": "NIST-SP-800-131AR2"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2019-08-29",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_CRYPTOGRAPHY",
+        "PMT_HTTPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2019-08-29",
+      "source_document_id": "nist-sp-800-52r2",
+      "source_id": "DE10",
+      "source_name": "NIST Guidelines for TLS Implementations Rev. 2",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf",
+      "version": "NIST-SP-800-52R2"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2014-01-31",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2014-01-31",
+      "source_document_id": "nist-sp-800-162",
+      "source_id": "DE11",
+      "source_name": "NIST Guide to Attribute Based Access Control",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-162.pdf",
+      "version": "NIST-SP-800-162"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2020-08-11",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2020-08-11",
+      "source_document_id": "nist-sp-800-207",
+      "source_id": "DE12",
+      "source_name": "NIST Zero Trust Architecture",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "version": "NIST-SP-800-207"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2017-06-22",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_ACCESS_CONTROL",
+        "PMT_HTTPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2017-06-22",
+      "source_document_id": "nist-sp-800-63b",
+      "source_id": "DE13",
+      "source_name": "NIST Digital Identity Guidelines: Authentication and Lifecycle Management",
+      "source_uri": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf",
+      "version": "NIST-SP-800-63B"
+    },
+    {
+      "allowed_claim_types": [
+        "implementation_feasibility",
+        "reference_architecture",
+        "implementation_how_to",
+        "organizational_applicability",
+        "cyber_governance",
+        "recommended_control",
+        "prioritized_defensive_practice",
+        "security_control"
+      ],
+      "available_at": "2020-12-03",
+      "parser": "pdf_chunks",
+      "pmt_ids": [
+        "PMT_HTTPS"
+      ],
+      "prohibited_claim_types": [
+        "exact_effectiveness",
+        "universal_control_effectiveness",
+        "product_roi",
+        "product_tco",
+        "exact_budget",
+        "exact_staffing_count"
+      ],
+      "publication_date": "2020-12-03",
+      "source_document_id": "cisa-insights-enhance-email-web-security",
+      "source_id": "DE14",
+      "source_name": "CISA Insights: Enhance Email and Web Security",
+      "source_uri": "https://www.cisa.gov/sites/default/files/publications/CISAInsights-Cyber-EnhanceEmailandWebSecurity_S508C-a.pdf",
+      "version": "CISA-INSIGHTS-EMAIL-WEB"
+    }
+  ]
+}

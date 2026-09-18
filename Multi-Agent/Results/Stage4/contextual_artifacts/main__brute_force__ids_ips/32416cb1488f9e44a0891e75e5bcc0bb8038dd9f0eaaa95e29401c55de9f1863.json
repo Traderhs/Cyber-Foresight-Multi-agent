@@ -1,0 +1,729 @@
+{
+  "artifact_sha256": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7": {
+      "financial_adoption": "55292506370560e9df8b37e034c08568cc7a81f62bf7f241177eb3ba59268f55",
+      "institutional_regional": "005bb3b4657561676f37eb61a50abb520d191bf589acbed4295614bc2425d31b",
+      "technical_feasibility": "3666d3141901773125523f2d6cfdb58d5dfd6ed10db4413730561fcc63bc4da2"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6": {
+      "financial_adoption": "95da4d471c7a2cfc6cd40f7d1987f6294d78f335fc73780b58c4181c8165b2aa",
+      "institutional_regional": "f919d58ebf19a1b5cd8d90fed05bc3320305728280e2bed77441f7d31fa7251c",
+      "technical_feasibility": "a5bc38dba748704b816ed86ab8cc3814ad8b678917eb8dfc246970f754932358"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf": {
+      "financial_adoption": "356fa0b628923fe24e18b05eaf6ffce3951391ca636a116a23d5bae57dc6e5be",
+      "institutional_regional": "2128a35cd3ef49d5aa4f1b7b230bbd0aec2588d1cdd9e39ec25aba1aef2527fd",
+      "technical_feasibility": "922a608f9d755a2bc5230b2bb262003bbadeb4efcafa686d39234a8b4a208a20"
+    }
+  },
+  "created_at": "2026-09-15T14:23:48.163319+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7": {
+      "financial_adoption": "f0176c4bec92157303c424bcd2b23da946c345f9e98a1600728214d12b2d438a",
+      "institutional_regional": "b07bb5d02800e8c1eb6da56728e76b78326a2d65352740e3432bf40e951e97bf",
+      "technical_feasibility": "269f99f82a868d76780f9c606d595017866c3c3db0788b5a0d772f4c45634bf2"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6": {
+      "financial_adoption": "4f00d9fd6475d483c1b2f1822178af9accac361935d994e6f10e03b527942820",
+      "institutional_regional": "61dc5d7a70c013272a08f614fa842144c21312f3ee7802ed42870377b6e1c896",
+      "technical_feasibility": "cc40181b85a607487ee754b1b79017d0a2009491338ecbf32d062045949a5261"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf": {
+      "financial_adoption": "fe0cfa938c7bf9917aaa12f123053e921f5175d818bec04733e7ae674b2c138a",
+      "institutional_regional": "e84c5641f57a9adda51d0f37ae1eed4ae7e24f4e452e7f6397defa61a448adde",
+      "technical_feasibility": "b7b66aed85df7c8136e56ecdde2418bb279eda6d8830d7a58e6d2b8aa7af6000"
+    }
+  },
+  "evaluation_bundle": {
+    "case_id": "main__brute_force__ids_ips",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-CLM-1",
+              "evidence_ids": [
+                "DE_DE07_86DF83870E0A768D"
+              ],
+              "scope": "GENERAL",
+              "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-2",
+              "evidence_ids": [
+                "DE_DE16_E455D97291B61E2A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-3",
+              "evidence_ids": [
+                "DE_DE04_DB6B29C9BE1B0F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-4",
+              "evidence_ids": [
+                "DE_DE04_C6F46FCDE66BFAC7"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-5",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-CLM-6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+            "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+            "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+            "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          ],
+          "constraints": [
+            "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+            "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+            "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+            "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+            "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+          "evidence_gaps": [
+            "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+            "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+            "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+            "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-G1",
+              "evidence_ids": [
+                "DE_DE07_E2C403C2FF05BA09"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-G2",
+              "evidence_ids": [
+                "DE_DE04_0B77B88875745973"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-N1",
+              "evidence_ids": [
+                "DE_DE16_CEA1C38E613068F8"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-D1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+            "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+            "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          ],
+          "constraints": [
+            "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+            "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+            "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+          "evidence_gaps": [
+            "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+            "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+            "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+            "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "AE05S_CCD7CA4B2AE10DC9"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "AE05C_2D35A464AD6F0FAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+            "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+            "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          ],
+          "constraints": [
+            "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+            "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+          "evidence_gaps": [
+            "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+            "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+            "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-CLM-1",
+              "evidence_ids": [
+                "DE_DE07_86DF83870E0A768D"
+              ],
+              "scope": "GENERAL",
+              "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-2",
+              "evidence_ids": [
+                "DE_DE16_E455D97291B61E2A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-3",
+              "evidence_ids": [
+                "DE_DE04_DB6B29C9BE1B0F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-4",
+              "evidence_ids": [
+                "DE_DE04_C6F46FCDE66BFAC7"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-5",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-CLM-6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+            "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+            "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+            "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          ],
+          "constraints": [
+            "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+            "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+            "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+            "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+            "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+          "evidence_gaps": [
+            "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+            "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+            "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+            "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-G1",
+              "evidence_ids": [
+                "DE_DE07_E2C403C2FF05BA09"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-G2",
+              "evidence_ids": [
+                "DE_DE04_0B77B88875745973"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-N1",
+              "evidence_ids": [
+                "DE_DE16_CEA1C38E613068F8"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-D1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+            "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+            "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          ],
+          "constraints": [
+            "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+            "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+            "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+          "evidence_gaps": [
+            "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+            "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+            "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+            "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "AE05S_CCD7CA4B2AE10DC9"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "AE05C_2D35A464AD6F0FAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+            "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+            "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          ],
+          "constraints": [
+            "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+            "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+          "evidence_gaps": [
+            "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+            "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+            "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FA-CLM-1",
+              "evidence_ids": [
+                "DE_DE07_86DF83870E0A768D"
+              ],
+              "scope": "GENERAL",
+              "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-2",
+              "evidence_ids": [
+                "DE_DE16_E455D97291B61E2A"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-3",
+              "evidence_ids": [
+                "DE_DE04_DB6B29C9BE1B0F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-4",
+              "evidence_ids": [
+                "DE_DE04_C6F46FCDE66BFAC7"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FA-CLM-5",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FA-CLM-6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+            "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+            "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+            "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          ],
+          "constraints": [
+            "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+            "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+            "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+            "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+            "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+          "evidence_gaps": [
+            "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+            "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+            "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+            "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-G1",
+              "evidence_ids": [
+                "DE_DE07_E2C403C2FF05BA09"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-G2",
+              "evidence_ids": [
+                "DE_DE04_0B77B88875745973"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IR-N1",
+              "evidence_ids": [
+                "DE_DE16_CEA1C38E613068F8"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-D1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+            "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+            "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          ],
+          "constraints": [
+            "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+            "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+            "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+          "evidence_gaps": [
+            "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+            "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+            "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+            "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "AE05S_CCD7CA4B2AE10DC9"
+              ],
+              "scope": "GENERAL",
+              "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "AE05C_2D35A464AD6F0FAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "DE_DE04_0B017D64401987E4"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+            "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+            "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          ],
+          "constraints": [
+            "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+            "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+          "evidence_gaps": [
+            "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+            "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+            "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+            "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "generation_contract_version": "jurisdiction-neutral-equivalence-dedup-v1",
+  "input_fingerprint": "32416cb1488f9e44a0891e75e5bcc0bb8038dd9f0eaaa95e29401c55de9f1863",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "institutional_regional_system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882"
+  },
+  "prompt_format_migration": {
+    "kind": "numbering_only_prompt_format_migration",
+    "previous_input_fingerprint": "6cd2c369f1df77f56d1649afeaa5f98cd70385cb94a6292748d386099df60acd",
+    "previous_prompt_hashes": {
+      "financial_adoption_system_prompt_sha256": "9690d96a1c6c3549ea29d4494003005ebe3994b979ab54503b04f652cc52af6e",
+      "institutional_regional_system_prompt_sha256": "51baa3d7adb40828958bc540987e4082a899b5ba08d675bf28f690cf5033cde9",
+      "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+      "technical_feasibility_system_prompt_sha256": "56f3d96367443f2bd6df0adf8da6faa37d5566697fa9f76f72c20d6876a418be"
+    },
+    "reason": "Renumbered contextual Stage 4 rules to continue the inherited base Stage 4 list (11-26); rule text and evaluation outputs are unchanged."
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "server_total_context_size": 131072,
+    "stage4_context_runtime_profile_version": "stage4-context-runtime-128k-total-2slot-v3",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v4",
+  "semantic_validation_version": "stage4-semantic-validation-v6",
+  "stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+  "stage3_context_input_fingerprint": "263aa93bcccab54f5551ce1bf443244e4816079e1d8d190025bd3d78e10deb65",
+  "stage3_context_output_sha256": "c173707adbef64b495df00a02c6bcf6292f1e9dc65ebd13960cd0b90798c41a7",
+  "stage4_output_sha256": "3a5c00d94511443a3d3f537b769b45aecd8e2fe68ca5d65ac4d298ebf3aa914b"
+}

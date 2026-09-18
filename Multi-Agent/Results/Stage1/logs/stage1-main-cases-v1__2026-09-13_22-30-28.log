@@ -1,0 +1,740 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\logs\stage1-main-cases-v1__2026-09-13_22-30-28.log
+--- Stage 1 Main Case Set: batch execution ---
+Stage 1 runtime profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\runs\stage1-main-cases-v1__seed-42__progress.json
+Resume is automatic: exact final artifacts are reused; if a case stopped after one critic, that critic's exact checkpoint is reused and only the missing critic is generated.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 artifact not found for fingerprint 8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=9250 generated_tokens=167 context_tokens=9416 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=9250 generated_tokens=641 context_tokens=9895 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=9250 generated_tokens=1043 context_tokens=10292 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=9250 generated_tokens=1400 context_tokens=10654 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=9250 generated_tokens=1786 context_tokens=11040 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=9250 generated_tokens=2157 context_tokens=11411 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=9250 generated_tokens=2514 context_tokens=11768 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=9250 generated_tokens=2870 context_tokens=12119 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=9250 generated_tokens=3226 context_tokens=12480 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=9250 generated_tokens=3552 context_tokens=12801 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=9250 generated_tokens=3945 context_tokens=13199 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=9250 generated_tokens=4298 context_tokens=13552 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=9250 generated_tokens=4657 context_tokens=13911 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=9250 generated_tokens=5041 context_tokens=14290 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=9250 generated_tokens=5405 context_tokens=14659 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=9250 generated_tokens=5752 context_tokens=15006 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=9250 generated_tokens=6185 context_tokens=15439 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=9250 generated_tokens=6578 context_tokens=15832 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=9250 generated_tokens=6957 context_tokens=16211 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=9250 generated_tokens=7292 context_tokens=16546 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=9250 generated_tokens=7778 context_tokens=17032 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=9250 generated_tokens=8272 context_tokens=17526 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+230s] state=True input_tokens=9250 generated_tokens=8698 context_tokens=17952 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=9250 generated_tokens=9074 context_tokens=18328 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=9250 generated_tokens=9456 context_tokens=18710 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=9250 generated_tokens=9995 context_tokens=19249 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=9250 generated_tokens=10463 context_tokens=19717 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=9250 generated_tokens=10798 context_tokens=20052 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=9250 generated_tokens=11118 context_tokens=20367 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=9250 generated_tokens=11607 context_tokens=20861 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=9250 generated_tokens=12018 context_tokens=21272 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=9250 generated_tokens=12375 context_tokens=21624 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=9250 generated_tokens=12849 context_tokens=22103 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=9250 generated_tokens=13511 context_tokens=22765 remaining=-1 task=311612
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=348.6s prompt_tokens=9250 completion_tokens=13874 total_tokens=23124 reasoning_chars=52287
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 348.0s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8\attack_feasibility.json
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=9262 generated_tokens=172 context_tokens=9438 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=9262 generated_tokens=681 context_tokens=9947 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=9262 generated_tokens=1086 context_tokens=10352 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=9262 generated_tokens=1541 context_tokens=10802 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=9262 generated_tokens=1898 context_tokens=11159 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=9262 generated_tokens=2258 context_tokens=11524 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=9262 generated_tokens=2635 context_tokens=11901 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=9262 generated_tokens=3027 context_tokens=12293 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=9262 generated_tokens=3417 context_tokens=12678 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=9262 generated_tokens=3782 context_tokens=13048 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=9262 generated_tokens=4226 context_tokens=13487 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=9262 generated_tokens=4609 context_tokens=13875 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=9262 generated_tokens=5083 context_tokens=14349 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=9262 generated_tokens=5572 context_tokens=14838 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=9262 generated_tokens=5987 context_tokens=15253 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=9262 generated_tokens=6325 context_tokens=15591 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=9262 generated_tokens=6721 context_tokens=15987 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=9262 generated_tokens=7138 context_tokens=16399 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=9262 generated_tokens=7788 context_tokens=17054 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=9262 generated_tokens=8274 context_tokens=17540 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=9262 generated_tokens=8656 context_tokens=17922 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=9262 generated_tokens=9018 context_tokens=18284 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+230s] state=True input_tokens=9262 generated_tokens=9388 context_tokens=18654 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+241s] state=True input_tokens=9262 generated_tokens=9844 context_tokens=19110 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True input_tokens=9262 generated_tokens=10281 context_tokens=19547 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=9262 generated_tokens=10623 context_tokens=19889 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=9262 generated_tokens=10977 context_tokens=20243 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=9262 generated_tokens=11506 context_tokens=20772 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=9262 generated_tokens=12142 context_tokens=21408 remaining=-1 task=316402
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=297.7s prompt_tokens=9262 completion_tokens=12496 total_tokens=21758 reasoning_chars=43952
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8\defense_robustness.json
+[MAIN SET][1/7] COMPLETE in 647.3s | action=generated_or_resumed_and_frozen | evidence=7 | slots=3/6 | families=3 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+====================================================================================================
+[MAIN SET][2/7] main__malware__anomaly_detection
+Threat=Malware | PMT=ANOMALY DETECTION
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__malware__anomaly_detection (17 evidence records)
+
+Stage 1 artifact not found for fingerprint 6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=15011 generated_tokens=12 context_tokens=15027 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=15011 generated_tokens=513 context_tokens=15523 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=15011 generated_tokens=892 context_tokens=15907 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=15011 generated_tokens=1212 context_tokens=16227 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=15011 generated_tokens=1602 context_tokens=16617 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=15011 generated_tokens=2029 context_tokens=17039 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=15011 generated_tokens=2372 context_tokens=17382 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=15011 generated_tokens=2795 context_tokens=17810 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=15011 generated_tokens=3170 context_tokens=18180 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=15011 generated_tokens=3492 context_tokens=18507 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=15011 generated_tokens=3817 context_tokens=18832 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=15011 generated_tokens=4145 context_tokens=19160 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=15011 generated_tokens=4468 context_tokens=19483 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=15011 generated_tokens=4792 context_tokens=19807 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=15011 generated_tokens=5209 context_tokens=20224 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=15011 generated_tokens=5595 context_tokens=20610 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=15011 generated_tokens=5969 context_tokens=20984 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=15011 generated_tokens=6311 context_tokens=21326 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=15011 generated_tokens=6667 context_tokens=21682 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=15011 generated_tokens=7036 context_tokens=22051 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=15011 generated_tokens=7544 context_tokens=22554 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=15011 generated_tokens=8149 context_tokens=23159 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+231s] state=True input_tokens=15011 generated_tokens=8579 context_tokens=23594 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=15011 generated_tokens=8964 context_tokens=23979 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=15011 generated_tokens=9332 context_tokens=24342 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=15011 generated_tokens=9720 context_tokens=24735 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=15011 generated_tokens=10111 context_tokens=25126 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=15011 generated_tokens=10483 context_tokens=25498 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=15011 generated_tokens=10847 context_tokens=25857 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=15011 generated_tokens=11270 context_tokens=26285 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=15011 generated_tokens=11720 context_tokens=26735 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=15011 generated_tokens=12008 context_tokens=27018 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=15011 generated_tokens=12340 context_tokens=27355 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=15011 generated_tokens=12761 context_tokens=27776 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=15011 generated_tokens=13212 context_tokens=28227 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True input_tokens=15011 generated_tokens=13637 context_tokens=28652 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+371s] state=True input_tokens=15011 generated_tokens=13994 context_tokens=29009 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+381s] state=True input_tokens=15011 generated_tokens=14346 context_tokens=29361 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+391s] state=True input_tokens=15011 generated_tokens=14685 context_tokens=29700 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+401s] state=True input_tokens=15011 generated_tokens=15077 context_tokens=30092 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+411s] state=True input_tokens=15011 generated_tokens=15509 context_tokens=30524 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+421s] state=True input_tokens=15011 generated_tokens=15876 context_tokens=30891 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+431s] state=True input_tokens=15011 generated_tokens=16251 context_tokens=31261 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+441s] state=True input_tokens=15011 generated_tokens=16879 context_tokens=31894 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility][+451s] state=True input_tokens=15011 generated_tokens=17504 context_tokens=32519 remaining=-1 task=320496
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=458.2s prompt_tokens=15011 completion_tokens=17786 total_tokens=32797 reasoning_chars=67938
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 457.8s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1A-AttackFeasibility:repair-1] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=15023 generated_tokens=13 context_tokens=15040 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=15023 generated_tokens=467 context_tokens=15494 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=15023 generated_tokens=964 context_tokens=15986 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=15023 generated_tokens=1323 context_tokens=16345 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=15023 generated_tokens=1646 context_tokens=16673 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=15023 generated_tokens=2007 context_tokens=17034 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=15023 generated_tokens=2387 context_tokens=17409 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=15023 generated_tokens=2756 context_tokens=17783 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=15023 generated_tokens=3112 context_tokens=18139 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=15023 generated_tokens=3415 context_tokens=18442 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=15023 generated_tokens=3792 context_tokens=18819 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=15023 generated_tokens=4105 context_tokens=19132 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=15023 generated_tokens=4432 context_tokens=19459 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=15023 generated_tokens=4806 context_tokens=19828 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=15023 generated_tokens=5184 context_tokens=20211 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=15023 generated_tokens=5605 context_tokens=20632 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=15023 generated_tokens=6003 context_tokens=21030 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=15023 generated_tokens=6319 context_tokens=21346 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=15023 generated_tokens=6715 context_tokens=21742 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=15023 generated_tokens=7146 context_tokens=22173 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=15023 generated_tokens=7541 context_tokens=22563 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+221s] state=True input_tokens=15023 generated_tokens=7900 context_tokens=22927 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+231s] state=True input_tokens=15023 generated_tokens=8389 context_tokens=23416 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+241s] state=True input_tokens=15023 generated_tokens=8911 context_tokens=23938 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True input_tokens=15023 generated_tokens=9334 context_tokens=24361 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=15023 generated_tokens=9755 context_tokens=24777 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=15023 generated_tokens=10373 context_tokens=25400 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=15023 generated_tokens=10963 context_tokens=25990 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=15023 generated_tokens=11326 context_tokens=26353 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+301s] state=True input_tokens=15023 generated_tokens=11674 context_tokens=26701 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+311s] state=True input_tokens=15023 generated_tokens=12018 context_tokens=27045 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+321s] state=True input_tokens=15023 generated_tokens=12470 context_tokens=27497 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+331s] state=True input_tokens=15023 generated_tokens=12920 context_tokens=27947 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+341s] state=True input_tokens=15023 generated_tokens=13361 context_tokens=28383 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+351s] state=True input_tokens=15023 generated_tokens=13770 context_tokens=28797 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+361s] state=True input_tokens=15023 generated_tokens=14299 context_tokens=29326 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+371s] state=True input_tokens=15023 generated_tokens=14935 context_tokens=29962 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness][+381s] state=True input_tokens=15023 generated_tokens=15444 context_tokens=30466 remaining=-1 task=326548
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=381.6s prompt_tokens=15023 completion_tokens=15482 total_tokens=30505 reasoning_chars=57251
+[QWEN][Stage1A-AttackFeasibility:repair-1] inference slot acquired after 381.6s queue wait.
+[QWEN][Stage1A-AttackFeasibility:repair-1] generation started (reasoning=xhigh, seed=42).
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7\defense_robustness.json
+[QWEN][Stage1A-AttackFeasibility:repair-1][+10s] state=True input_tokens=16895 generated_tokens=318 context_tokens=17217 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+20s] state=True input_tokens=16895 generated_tokens=723 context_tokens=17622 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+30s] state=True input_tokens=16895 generated_tokens=1150 context_tokens=18049 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+40s] state=True input_tokens=16895 generated_tokens=1525 context_tokens=18419 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+50s] state=True input_tokens=16895 generated_tokens=1908 context_tokens=18807 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+60s] state=True input_tokens=16895 generated_tokens=2306 context_tokens=19205 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+70s] state=True input_tokens=16895 generated_tokens=2707 context_tokens=19606 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+80s] state=True input_tokens=16895 generated_tokens=3087 context_tokens=19986 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+90s] state=True input_tokens=16895 generated_tokens=3432 context_tokens=20331 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+100s] state=True input_tokens=16895 generated_tokens=3794 context_tokens=20693 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+110s] state=True input_tokens=16895 generated_tokens=4234 context_tokens=21133 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+120s] state=True input_tokens=16895 generated_tokens=4622 context_tokens=21516 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+130s] state=True input_tokens=16895 generated_tokens=5010 context_tokens=21909 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+140s] state=True input_tokens=16895 generated_tokens=5381 context_tokens=22280 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+150s] state=True input_tokens=16895 generated_tokens=5923 context_tokens=22822 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+160s] state=True input_tokens=16895 generated_tokens=6275 context_tokens=23174 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+170s] state=True input_tokens=16895 generated_tokens=6666 context_tokens=23565 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+180s] state=True input_tokens=16895 generated_tokens=7007 context_tokens=23906 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+190s] state=True input_tokens=16895 generated_tokens=7670 context_tokens=24569 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1][+200s] state=True input_tokens=16895 generated_tokens=8328 context_tokens=25227 remaining=-1 task=331601
+[QWEN][Stage1A-AttackFeasibility:repair-1] completed elapsed=205.4s prompt_tokens=16895 completion_tokens=8577 total_tokens=25472 reasoning_chars=31634
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7\attack_feasibility.json
+[MAIN SET][2/7] COMPLETE in 1046.2s | action=generated_or_resumed_and_frozen | evidence=17 | slots=6/6 | families=7 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7.json
+
+====================================================================================================
+[MAIN SET][3/7] main__ransomware__cryptography
+Threat=Ransomware | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_steep_slope
+Reason=Coverage-qualified representative of the large-gap/steep-slope regime. Selected before Stage 1 generation using only frozen Stage 0 forecast/evidence metadata.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ransomware__cryptography (16 evidence records)
+
+Stage 1 artifact not found for fingerprint af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=14838 generated_tokens=23 context_tokens=14865 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=14838 generated_tokens=525 context_tokens=15367 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=14838 generated_tokens=938 context_tokens=15780 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=14838 generated_tokens=1263 context_tokens=16105 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=14838 generated_tokens=1678 context_tokens=16520 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=14838 generated_tokens=2028 context_tokens=16870 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=14838 generated_tokens=2358 context_tokens=17200 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=14838 generated_tokens=2676 context_tokens=17518 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=14838 generated_tokens=3027 context_tokens=17869 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=14838 generated_tokens=3400 context_tokens=18242 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=14838 generated_tokens=3688 context_tokens=18530 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=14838 generated_tokens=4103 context_tokens=18945 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=14838 generated_tokens=4474 context_tokens=19316 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=14838 generated_tokens=4845 context_tokens=19687 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=14838 generated_tokens=5205 context_tokens=20047 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=14838 generated_tokens=5543 context_tokens=20380 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=14838 generated_tokens=5913 context_tokens=20750 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=14838 generated_tokens=6327 context_tokens=21169 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=14838 generated_tokens=6731 context_tokens=21573 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=14838 generated_tokens=7162 context_tokens=22004 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=14838 generated_tokens=7599 context_tokens=22441 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+221s] state=True input_tokens=14838 generated_tokens=7938 context_tokens=22780 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+231s] state=True input_tokens=14838 generated_tokens=8330 context_tokens=23172 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=14838 generated_tokens=8819 context_tokens=23656 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=14838 generated_tokens=9201 context_tokens=24043 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=14838 generated_tokens=9592 context_tokens=24434 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=14838 generated_tokens=9938 context_tokens=24780 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=14838 generated_tokens=10456 context_tokens=25298 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=14838 generated_tokens=11002 context_tokens=25844 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=14838 generated_tokens=11378 context_tokens=26220 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=14838 generated_tokens=11835 context_tokens=26677 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=14838 generated_tokens=12212 context_tokens=27054 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=14838 generated_tokens=12613 context_tokens=27450 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=14838 generated_tokens=13162 context_tokens=28004 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=14838 generated_tokens=13812 context_tokens=28654 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True input_tokens=14838 generated_tokens=14417 context_tokens=29259 remaining=-1 task=334382
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=366.2s prompt_tokens=14838 completion_tokens=14693 total_tokens=29531 reasoning_chars=53697
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 365.9s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1A-AttackFeasibility:repair-1] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=14850 generated_tokens=22 context_tokens=14871 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=14850 generated_tokens=580 context_tokens=15434 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=14850 generated_tokens=1164 context_tokens=16018 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=14850 generated_tokens=1733 context_tokens=16587 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=14850 generated_tokens=2228 context_tokens=17082 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=14850 generated_tokens=2682 context_tokens=17536 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=14850 generated_tokens=3080 context_tokens=17934 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=14850 generated_tokens=3541 context_tokens=18395 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=14850 generated_tokens=4064 context_tokens=18918 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=14850 generated_tokens=4489 context_tokens=19338 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=14850 generated_tokens=4925 context_tokens=19779 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=14850 generated_tokens=5394 context_tokens=20248 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=14850 generated_tokens=5859 context_tokens=20713 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=14850 generated_tokens=6321 context_tokens=21175 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=14850 generated_tokens=6839 context_tokens=21693 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=14850 generated_tokens=7320 context_tokens=22174 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=14850 generated_tokens=7803 context_tokens=22657 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=14850 generated_tokens=8228 context_tokens=23082 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=14850 generated_tokens=8737 context_tokens=23586 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=14850 generated_tokens=9245 context_tokens=24099 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=14850 generated_tokens=9761 context_tokens=24610 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=14850 generated_tokens=10266 context_tokens=25120 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+230s] state=True input_tokens=14850 generated_tokens=10870 context_tokens=25724 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+240s] state=True input_tokens=14850 generated_tokens=11458 context_tokens=26312 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness][+250s] state=True input_tokens=14850 generated_tokens=11920 context_tokens=26774 remaining=-1 task=339243
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=257.0s prompt_tokens=14850 completion_tokens=12212 total_tokens=27062 reasoning_chars=39944
+[QWEN][Stage1A-AttackFeasibility:repair-1] inference slot acquired after 257.0s queue wait.
+[QWEN][Stage1A-AttackFeasibility:repair-1] generation started (reasoning=xhigh, seed=42).
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4\defense_robustness.json
+[QWEN][Stage1A-AttackFeasibility:repair-1][+10s] state=True input_tokens=16915 generated_tokens=435 context_tokens=17354 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+20s] state=True input_tokens=16915 generated_tokens=874 context_tokens=17788 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+30s] state=True input_tokens=16915 generated_tokens=1424 context_tokens=18343 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+40s] state=True input_tokens=16915 generated_tokens=1978 context_tokens=18897 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+50s] state=True input_tokens=16915 generated_tokens=2575 context_tokens=19494 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+60s] state=True input_tokens=16915 generated_tokens=3004 context_tokens=19923 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+70s] state=True input_tokens=16915 generated_tokens=3567 context_tokens=20486 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+80s] state=True input_tokens=16915 generated_tokens=4147 context_tokens=21066 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+90s] state=True input_tokens=16915 generated_tokens=4820 context_tokens=21739 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1][+100s] state=True input_tokens=16915 generated_tokens=5440 context_tokens=22359 remaining=-1 task=342626
+[QWEN][Stage1A-AttackFeasibility:repair-1] completed elapsed=105.2s prompt_tokens=16915 completion_tokens=5727 total_tokens=22642 reasoning_chars=15387
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4\attack_feasibility.json
+[MAIN SET][3/7] COMPLETE in 729.5s | action=generated_or_resumed_and_frozen | evidence=16 | slots=6/6 | families=7 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4.json
+
+====================================================================================================
+[MAIN SET][4/7] main__insider_threat__cryptography
+Threat=Insider Threat | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_moderate_slope
+Reason=Coverage-qualified representative of the large-gap/moderate-slope regime, included to separate persistent structural imbalance from rapidly accelerating imbalance.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__insider_threat__cryptography (12 evidence records)
+
+Stage 1 artifact not found for fingerprint 9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=11481 generated_tokens=92 context_tokens=11577 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=11481 generated_tokens=567 context_tokens=12047 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=11481 generated_tokens=966 context_tokens=12451 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=11481 generated_tokens=1411 context_tokens=12896 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=11481 generated_tokens=1755 context_tokens=13240 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=11481 generated_tokens=2131 context_tokens=13616 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=11481 generated_tokens=2481 context_tokens=13961 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=11481 generated_tokens=2907 context_tokens=14392 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=11481 generated_tokens=3257 context_tokens=14742 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=11481 generated_tokens=3584 context_tokens=15069 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=11481 generated_tokens=3943 context_tokens=15428 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=11481 generated_tokens=4293 context_tokens=15778 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=11481 generated_tokens=4625 context_tokens=16110 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=11481 generated_tokens=5096 context_tokens=16581 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=11481 generated_tokens=5493 context_tokens=16978 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=11481 generated_tokens=5855 context_tokens=17340 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=11481 generated_tokens=6294 context_tokens=17779 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=11481 generated_tokens=6727 context_tokens=18212 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=11481 generated_tokens=7121 context_tokens=18601 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=11481 generated_tokens=7562 context_tokens=19047 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=11481 generated_tokens=7906 context_tokens=19391 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=11481 generated_tokens=8288 context_tokens=19773 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+230s] state=True input_tokens=11481 generated_tokens=8682 context_tokens=20167 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+240s] state=True input_tokens=11481 generated_tokens=9075 context_tokens=20560 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=11481 generated_tokens=9527 context_tokens=21012 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=11481 generated_tokens=9920 context_tokens=21405 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=11481 generated_tokens=10240 context_tokens=21725 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=11481 generated_tokens=10573 context_tokens=22058 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=11481 generated_tokens=10921 context_tokens=22406 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=11481 generated_tokens=11413 context_tokens=22898 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=11481 generated_tokens=12066 context_tokens=23551 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=11481 generated_tokens=12440 context_tokens=23925 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=11481 generated_tokens=12838 context_tokens=24318 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=11481 generated_tokens=13165 context_tokens=24650 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=11481 generated_tokens=13543 context_tokens=25028 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True input_tokens=11481 generated_tokens=14050 context_tokens=25535 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+371s] state=True input_tokens=11481 generated_tokens=14487 context_tokens=25972 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+381s] state=True input_tokens=11481 generated_tokens=14868 context_tokens=26353 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+391s] state=True input_tokens=11481 generated_tokens=15245 context_tokens=26730 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+401s] state=True input_tokens=11481 generated_tokens=15637 context_tokens=27122 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+411s] state=True input_tokens=11481 generated_tokens=16128 context_tokens=27613 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility][+421s] state=True input_tokens=11481 generated_tokens=16747 context_tokens=28232 remaining=-1 task=344047
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=424.8s prompt_tokens=11481 completion_tokens=16964 total_tokens=28445 reasoning_chars=66963
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 424.8s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3\attack_feasibility.json
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=11493 generated_tokens=112 context_tokens=11609 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=11493 generated_tokens=601 context_tokens=12098 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=11493 generated_tokens=959 context_tokens=12456 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=11493 generated_tokens=1341 context_tokens=12838 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=11493 generated_tokens=1757 context_tokens=13254 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=11493 generated_tokens=2064 context_tokens=13561 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=11493 generated_tokens=2434 context_tokens=13931 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=11493 generated_tokens=2844 context_tokens=14341 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=11493 generated_tokens=3296 context_tokens=14793 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=11493 generated_tokens=3677 context_tokens=15174 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=11493 generated_tokens=4111 context_tokens=15608 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=11493 generated_tokens=4539 context_tokens=16036 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=11493 generated_tokens=4877 context_tokens=16374 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=11493 generated_tokens=5219 context_tokens=16716 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=11493 generated_tokens=5579 context_tokens=17071 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=11493 generated_tokens=5975 context_tokens=17472 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=11493 generated_tokens=6374 context_tokens=17871 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=11493 generated_tokens=6762 context_tokens=18259 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=11493 generated_tokens=7285 context_tokens=18782 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=11493 generated_tokens=7653 context_tokens=19150 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=11493 generated_tokens=8066 context_tokens=19563 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=11493 generated_tokens=8513 context_tokens=20010 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+230s] state=True input_tokens=11493 generated_tokens=8882 context_tokens=20379 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+240s] state=True input_tokens=11493 generated_tokens=9363 context_tokens=20860 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+250s] state=True input_tokens=11493 generated_tokens=9797 context_tokens=21294 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=11493 generated_tokens=10228 context_tokens=21725 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=11493 generated_tokens=10548 context_tokens=22040 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=11493 generated_tokens=11170 context_tokens=22662 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=11493 generated_tokens=11794 context_tokens=23291 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+301s] state=True input_tokens=11493 generated_tokens=12178 context_tokens=23675 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+311s] state=True input_tokens=11493 generated_tokens=12540 context_tokens=24037 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+321s] state=True input_tokens=11493 generated_tokens=12892 context_tokens=24389 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+331s] state=True input_tokens=11493 generated_tokens=13227 context_tokens=24724 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+341s] state=True input_tokens=11493 generated_tokens=13535 context_tokens=25032 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+351s] state=True input_tokens=11493 generated_tokens=13913 context_tokens=25410 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+361s] state=True input_tokens=11493 generated_tokens=14446 context_tokens=25943 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness][+371s] state=True input_tokens=11493 generated_tokens=15100 context_tokens=26597 remaining=-1 task=349800
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=380.2s prompt_tokens=11493 completion_tokens=15534 total_tokens=27027 reasoning_chars=60560
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3\defense_robustness.json
+[MAIN SET][4/7] COMPLETE in 806.0s | action=generated_or_resumed_and_frozen | evidence=12 | slots=5/6 | families=4 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3.json
+
+====================================================================================================
+[MAIN SET][5/7] main__brute_force__ids_ips
+Threat=Brute Force Attack | PMT=IDS/IPS
+Selection=regime_representative | Regime=moderate_gap_steep_slope
+Reason=Coverage-qualified representative of the moderate-gap/steep-slope regime, included to test whether agents distinguish emerging escalation from already-large gaps.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__brute_force__ids_ips (13 evidence records)
+
+Stage 1 artifact not found for fingerprint ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=13194 generated_tokens=64 context_tokens=13262 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=13194 generated_tokens=561 context_tokens=13759 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=13194 generated_tokens=942 context_tokens=14140 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=13194 generated_tokens=1307 context_tokens=14505 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=13194 generated_tokens=1691 context_tokens=14889 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=13194 generated_tokens=2047 context_tokens=15245 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=13194 generated_tokens=2437 context_tokens=15630 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=13194 generated_tokens=2811 context_tokens=16009 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=13194 generated_tokens=3206 context_tokens=16404 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=13194 generated_tokens=3583 context_tokens=16781 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=13194 generated_tokens=4048 context_tokens=17241 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=13194 generated_tokens=4443 context_tokens=17641 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=13194 generated_tokens=4803 context_tokens=18001 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=13194 generated_tokens=5200 context_tokens=18398 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=13194 generated_tokens=5579 context_tokens=18777 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=13194 generated_tokens=5962 context_tokens=19160 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=13194 generated_tokens=6374 context_tokens=19572 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=13194 generated_tokens=6798 context_tokens=19996 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=13194 generated_tokens=7258 context_tokens=20456 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=13194 generated_tokens=7670 context_tokens=20868 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=13194 generated_tokens=8151 context_tokens=21349 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=13194 generated_tokens=8487 context_tokens=21685 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+230s] state=True input_tokens=13194 generated_tokens=8862 context_tokens=22055 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=13194 generated_tokens=9386 context_tokens=22584 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=13194 generated_tokens=9915 context_tokens=23113 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=13194 generated_tokens=10484 context_tokens=23682 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=13194 generated_tokens=10996 context_tokens=24189 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=13194 generated_tokens=11531 context_tokens=24729 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=13194 generated_tokens=12057 context_tokens=25255 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=13194 generated_tokens=12595 context_tokens=25793 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=13194 generated_tokens=13113 context_tokens=26311 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=13194 generated_tokens=13597 context_tokens=26795 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=13194 generated_tokens=14074 context_tokens=27272 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=13194 generated_tokens=14432 context_tokens=27630 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=13194 generated_tokens=14916 context_tokens=28114 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True input_tokens=13194 generated_tokens=15299 context_tokens=28497 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+371s] state=True input_tokens=13194 generated_tokens=15834 context_tokens=29032 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+381s] state=True input_tokens=13194 generated_tokens=16189 context_tokens=29387 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+391s] state=True input_tokens=13194 generated_tokens=16533 context_tokens=29731 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+401s] state=True input_tokens=13194 generated_tokens=17013 context_tokens=30206 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+411s] state=True input_tokens=13194 generated_tokens=17621 context_tokens=30819 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility][+421s] state=True input_tokens=13194 generated_tokens=18089 context_tokens=31282 remaining=-1 task=354955
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=421.4s prompt_tokens=13194 completion_tokens=18105 total_tokens=31299 reasoning_chars=59707
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 421.4s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d\attack_feasibility.json
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=13206 generated_tokens=64 context_tokens=13274 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=13206 generated_tokens=592 context_tokens=13802 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=13206 generated_tokens=954 context_tokens=14164 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=13206 generated_tokens=1315 context_tokens=14520 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=13206 generated_tokens=1731 context_tokens=14941 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=13206 generated_tokens=2099 context_tokens=15309 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=13206 generated_tokens=2439 context_tokens=15649 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=13206 generated_tokens=2780 context_tokens=15990 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=13206 generated_tokens=3230 context_tokens=16440 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=13206 generated_tokens=3602 context_tokens=16812 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=13206 generated_tokens=3981 context_tokens=17191 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=13206 generated_tokens=4374 context_tokens=17579 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=13206 generated_tokens=4789 context_tokens=17999 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=13206 generated_tokens=5122 context_tokens=18332 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=13206 generated_tokens=5485 context_tokens=18695 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=13206 generated_tokens=5896 context_tokens=19106 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=13206 generated_tokens=6274 context_tokens=19484 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=13206 generated_tokens=6647 context_tokens=19857 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=13206 generated_tokens=7122 context_tokens=20332 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=13206 generated_tokens=7573 context_tokens=20783 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=13206 generated_tokens=7985 context_tokens=21195 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=13206 generated_tokens=8353 context_tokens=21563 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+231s] state=True input_tokens=13206 generated_tokens=8809 context_tokens=22019 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+241s] state=True input_tokens=13206 generated_tokens=9198 context_tokens=22408 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True input_tokens=13206 generated_tokens=9545 context_tokens=22755 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=13206 generated_tokens=9937 context_tokens=23147 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=13206 generated_tokens=10497 context_tokens=23707 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=13206 generated_tokens=10946 context_tokens=24156 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=13206 generated_tokens=11282 context_tokens=24492 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+301s] state=True input_tokens=13206 generated_tokens=11633 context_tokens=24843 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+311s] state=True input_tokens=13206 generated_tokens=12069 context_tokens=25274 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+321s] state=True input_tokens=13206 generated_tokens=12684 context_tokens=25894 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+331s] state=True input_tokens=13206 generated_tokens=13315 context_tokens=26520 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+341s] state=True input_tokens=13206 generated_tokens=13744 context_tokens=26954 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+351s] state=True input_tokens=13206 generated_tokens=14065 context_tokens=27275 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+361s] state=True input_tokens=13206 generated_tokens=14453 context_tokens=27663 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+371s] state=True input_tokens=13206 generated_tokens=14985 context_tokens=28195 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+381s] state=True input_tokens=13206 generated_tokens=15446 context_tokens=28656 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+391s] state=True input_tokens=13206 generated_tokens=15802 context_tokens=29012 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+401s] state=True input_tokens=13206 generated_tokens=16246 context_tokens=29456 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+411s] state=True input_tokens=13206 generated_tokens=16622 context_tokens=29827 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+421s] state=True input_tokens=13206 generated_tokens=17042 context_tokens=30252 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+431s] state=True input_tokens=13206 generated_tokens=17390 context_tokens=30600 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+441s] state=True input_tokens=13206 generated_tokens=17805 context_tokens=31010 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+451s] state=True input_tokens=13206 generated_tokens=18210 context_tokens=31420 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+461s] state=True input_tokens=13206 generated_tokens=18543 context_tokens=31753 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+471s] state=True input_tokens=13206 generated_tokens=18930 context_tokens=32140 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+481s] state=True input_tokens=13206 generated_tokens=19340 context_tokens=32550 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+491s] state=True input_tokens=13206 generated_tokens=19941 context_tokens=33146 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+501s] state=True input_tokens=13206 generated_tokens=20567 context_tokens=33777 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness][+511s] state=True input_tokens=13206 generated_tokens=21141 context_tokens=34346 remaining=-1 task=360573
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=517.8s prompt_tokens=13206 completion_tokens=21425 total_tokens=34631 reasoning_chars=76362
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d\defense_robustness.json
+[MAIN SET][5/7] COMPLETE in 940.2s | action=generated_or_resumed_and_frozen | evidence=13 | slots=5/6 | families=4 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d.json
+
+====================================================================================================
+[MAIN SET][6/7] main__targeted_attack__access_control
+Threat=Targeted Attack | PMT=ACCESS CONTROL
+Selection=regime_representative | Regime=moderate_gap_low_slope
+Reason=Coverage-qualified representative of the moderate-gap/low-slope regime, included as a managed/stable trajectory rather than another escalation-heavy example.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__targeted_attack__access_control (18 evidence records)
+
+Stage 1 artifact not found for fingerprint b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=17053 generated_tokens=416 context_tokens=17473 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=17053 generated_tokens=812 context_tokens=17869 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=17053 generated_tokens=1150 context_tokens=18207 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=17053 generated_tokens=1493 context_tokens=18550 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=17053 generated_tokens=1837 context_tokens=18894 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=17053 generated_tokens=2277 context_tokens=19334 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=17053 generated_tokens=2610 context_tokens=19662 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=17053 generated_tokens=2937 context_tokens=19994 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=17053 generated_tokens=3335 context_tokens=20392 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=17053 generated_tokens=3678 context_tokens=20735 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=17053 generated_tokens=4056 context_tokens=21113 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=17053 generated_tokens=4399 context_tokens=21451 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=17053 generated_tokens=4783 context_tokens=21840 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=17053 generated_tokens=5136 context_tokens=22193 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=17053 generated_tokens=5547 context_tokens=22604 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=17053 generated_tokens=5897 context_tokens=22954 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=17053 generated_tokens=6204 context_tokens=23261 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=17053 generated_tokens=6631 context_tokens=23688 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=17053 generated_tokens=7040 context_tokens=24097 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=17053 generated_tokens=7434 context_tokens=24491 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=17053 generated_tokens=7812 context_tokens=24869 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+231s] state=True input_tokens=17053 generated_tokens=8138 context_tokens=25190 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=17053 generated_tokens=8476 context_tokens=25533 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=17053 generated_tokens=8852 context_tokens=25909 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=17053 generated_tokens=9166 context_tokens=26218 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=17053 generated_tokens=9568 context_tokens=26620 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=17053 generated_tokens=9899 context_tokens=26956 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=17053 generated_tokens=10358 context_tokens=27415 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=17053 generated_tokens=10785 context_tokens=27837 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=17053 generated_tokens=11226 context_tokens=28283 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=17053 generated_tokens=11570 context_tokens=28627 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=17053 generated_tokens=12048 context_tokens=29105 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=17053 generated_tokens=12505 context_tokens=29562 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=17053 generated_tokens=12917 context_tokens=29974 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+361s] state=True input_tokens=17053 generated_tokens=13496 context_tokens=30553 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+371s] state=True input_tokens=17053 generated_tokens=14095 context_tokens=31152 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility][+381s] state=True input_tokens=17053 generated_tokens=14564 context_tokens=31621 remaining=-1 task=367442
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=383.7s prompt_tokens=17053 completion_tokens=14697 total_tokens=31750 reasoning_chars=55922
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 383.3s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3\attack_feasibility.json
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=17065 generated_tokens=350 context_tokens=17419 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=17065 generated_tokens=728 context_tokens=17797 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=17065 generated_tokens=1067 context_tokens=18131 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=17065 generated_tokens=1425 context_tokens=18494 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=17065 generated_tokens=1779 context_tokens=18843 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=17065 generated_tokens=2191 context_tokens=19255 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=17065 generated_tokens=2605 context_tokens=19674 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=17065 generated_tokens=2990 context_tokens=20054 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=17065 generated_tokens=3402 context_tokens=20471 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=17065 generated_tokens=3710 context_tokens=20779 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=17065 generated_tokens=4054 context_tokens=21123 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=17065 generated_tokens=4374 context_tokens=21443 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=17065 generated_tokens=4688 context_tokens=21752 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=17065 generated_tokens=5099 context_tokens=22168 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=17065 generated_tokens=5576 context_tokens=22645 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=17065 generated_tokens=6057 context_tokens=23126 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=17065 generated_tokens=6420 context_tokens=23489 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=17065 generated_tokens=6847 context_tokens=23916 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=17065 generated_tokens=7266 context_tokens=24330 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=17065 generated_tokens=7625 context_tokens=24689 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=17065 generated_tokens=8005 context_tokens=25074 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+231s] state=True input_tokens=17065 generated_tokens=8457 context_tokens=25526 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+241s] state=True input_tokens=17065 generated_tokens=9075 context_tokens=26144 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True input_tokens=17065 generated_tokens=9652 context_tokens=26721 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=17065 generated_tokens=10092 context_tokens=27161 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=17065 generated_tokens=10444 context_tokens=27508 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=17065 generated_tokens=11024 context_tokens=28093 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=17065 generated_tokens=11674 context_tokens=28743 remaining=-1 task=372458
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=299.9s prompt_tokens=17065 completion_tokens=12147 total_tokens=29212 reasoning_chars=41362
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3\defense_robustness.json
+[MAIN SET][6/7] COMPLETE in 684.7s | action=generated_or_resumed_and_frozen | evidence=18 | slots=5/6 | families=8 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3.json
+
+====================================================================================================
+[MAIN SET][7/7] main__session_hijacking__https
+Threat=Session Hijacking | PMT=HTTPS
+Selection=regime_representative | Regime=small_gap_low_or_negative_slope
+Reason=Coverage-qualified representative of the small-gap/low-or-negative-slope regime, included as a low-risk alignment control against high-gap and accelerating cases.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__session_hijacking__https (17 evidence records)
+
+Stage 1 artifact not found for fingerprint 51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35; critics will run.
+
+--- Stage 1A: Attack Feasibility Critic ---
+
+--- Stage 1B: Defense Robustness Critic ---
+
+[QWEN][Stage1A-AttackFeasibility] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness] waiting for the single pinned inference slot; another independent critic is currently generating.
+[QWEN][Stage1A-AttackFeasibility][+10s] state=True input_tokens=15210 generated_tokens=13 context_tokens=15227 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+20s] state=True input_tokens=15210 generated_tokens=493 context_tokens=15702 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+30s] state=True input_tokens=15210 generated_tokens=918 context_tokens=16132 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+40s] state=True input_tokens=15210 generated_tokens=1268 context_tokens=16482 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+50s] state=True input_tokens=15210 generated_tokens=1638 context_tokens=16852 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+60s] state=True input_tokens=15210 generated_tokens=1942 context_tokens=17156 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+70s] state=True input_tokens=15210 generated_tokens=2272 context_tokens=17481 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+80s] state=True input_tokens=15210 generated_tokens=2628 context_tokens=17842 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+90s] state=True input_tokens=15210 generated_tokens=2939 context_tokens=18153 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+100s] state=True input_tokens=15210 generated_tokens=3315 context_tokens=18529 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+110s] state=True input_tokens=15210 generated_tokens=3724 context_tokens=18938 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+120s] state=True input_tokens=15210 generated_tokens=4118 context_tokens=19332 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+130s] state=True input_tokens=15210 generated_tokens=4521 context_tokens=19730 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+140s] state=True input_tokens=15210 generated_tokens=4865 context_tokens=20079 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+150s] state=True input_tokens=15210 generated_tokens=5233 context_tokens=20447 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+160s] state=True input_tokens=15210 generated_tokens=5621 context_tokens=20830 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+170s] state=True input_tokens=15210 generated_tokens=6010 context_tokens=21224 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+180s] state=True input_tokens=15210 generated_tokens=6407 context_tokens=21621 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+190s] state=True input_tokens=15210 generated_tokens=6732 context_tokens=21941 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+200s] state=True input_tokens=15210 generated_tokens=7119 context_tokens=22333 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+210s] state=True input_tokens=15210 generated_tokens=7484 context_tokens=22693 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+220s] state=True input_tokens=15210 generated_tokens=7818 context_tokens=23032 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+231s] state=True input_tokens=15210 generated_tokens=8170 context_tokens=23384 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+241s] state=True input_tokens=15210 generated_tokens=8548 context_tokens=23762 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+251s] state=True input_tokens=15210 generated_tokens=9162 context_tokens=24376 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+261s] state=True input_tokens=15210 generated_tokens=9563 context_tokens=24777 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+271s] state=True input_tokens=15210 generated_tokens=9969 context_tokens=25178 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+281s] state=True input_tokens=15210 generated_tokens=10284 context_tokens=25498 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+291s] state=True input_tokens=15210 generated_tokens=10684 context_tokens=25898 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+301s] state=True input_tokens=15210 generated_tokens=11011 context_tokens=26225 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+311s] state=True input_tokens=15210 generated_tokens=11334 context_tokens=26548 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+321s] state=True input_tokens=15210 generated_tokens=11636 context_tokens=26850 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+331s] state=True input_tokens=15210 generated_tokens=12012 context_tokens=27226 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+341s] state=True input_tokens=15210 generated_tokens=12615 context_tokens=27829 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility][+351s] state=True input_tokens=15210 generated_tokens=13118 context_tokens=28332 remaining=-1 task=376369
+[QWEN][Stage1A-AttackFeasibility] completed elapsed=351.4s prompt_tokens=15210 completion_tokens=13151 total_tokens=28361 reasoning_chars=50064
+[QWEN][Stage1B-DefenseRobustness] inference slot acquired after 351.1s queue wait.
+[QWEN][Stage1B-DefenseRobustness] generation started (reasoning=xhigh, seed=42).
+Stage 1A checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35\attack_feasibility.json
+[QWEN][Stage1B-DefenseRobustness][+10s] state=True input_tokens=15222 generated_tokens=12 context_tokens=15233 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+20s] state=True input_tokens=15222 generated_tokens=470 context_tokens=15691 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+30s] state=True input_tokens=15222 generated_tokens=846 context_tokens=16067 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+40s] state=True input_tokens=15222 generated_tokens=1176 context_tokens=16402 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+50s] state=True input_tokens=15222 generated_tokens=1428 context_tokens=16654 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+60s] state=True input_tokens=15222 generated_tokens=1806 context_tokens=17032 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+70s] state=True input_tokens=15222 generated_tokens=2148 context_tokens=17369 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+80s] state=True input_tokens=15222 generated_tokens=2512 context_tokens=17738 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+90s] state=True input_tokens=15222 generated_tokens=2842 context_tokens=18063 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+100s] state=True input_tokens=15222 generated_tokens=3172 context_tokens=18398 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+110s] state=True input_tokens=15222 generated_tokens=3597 context_tokens=18823 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+120s] state=True input_tokens=15222 generated_tokens=3938 context_tokens=19159 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+130s] state=True input_tokens=15222 generated_tokens=4231 context_tokens=19452 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+140s] state=True input_tokens=15222 generated_tokens=4557 context_tokens=19783 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+150s] state=True input_tokens=15222 generated_tokens=5005 context_tokens=20231 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+160s] state=True input_tokens=15222 generated_tokens=5393 context_tokens=20614 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+170s] state=True input_tokens=15222 generated_tokens=5742 context_tokens=20968 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+180s] state=True input_tokens=15222 generated_tokens=6110 context_tokens=21336 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+190s] state=True input_tokens=15222 generated_tokens=6481 context_tokens=21707 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+200s] state=True input_tokens=15222 generated_tokens=6908 context_tokens=22134 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+210s] state=True input_tokens=15222 generated_tokens=7288 context_tokens=22514 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+220s] state=True input_tokens=15222 generated_tokens=7643 context_tokens=22869 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+230s] state=True input_tokens=15222 generated_tokens=7953 context_tokens=23179 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+241s] state=True input_tokens=15222 generated_tokens=8317 context_tokens=23543 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+251s] state=True input_tokens=15222 generated_tokens=8617 context_tokens=23843 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+261s] state=True input_tokens=15222 generated_tokens=9205 context_tokens=24426 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+271s] state=True input_tokens=15222 generated_tokens=9654 context_tokens=24880 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+281s] state=True input_tokens=15222 generated_tokens=9981 context_tokens=25207 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+291s] state=True input_tokens=15222 generated_tokens=10399 context_tokens=25625 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+301s] state=True input_tokens=15222 generated_tokens=10720 context_tokens=25946 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+311s] state=True input_tokens=15222 generated_tokens=11093 context_tokens=26319 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+321s] state=True input_tokens=15222 generated_tokens=11734 context_tokens=26960 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+331s] state=True input_tokens=15222 generated_tokens=12225 context_tokens=27451 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+341s] state=True input_tokens=15222 generated_tokens=12772 context_tokens=27993 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness][+351s] state=True input_tokens=15222 generated_tokens=13286 context_tokens=28512 remaining=-1 task=380982
+[QWEN][Stage1B-DefenseRobustness] completed elapsed=354.6s prompt_tokens=15222 completion_tokens=13446 total_tokens=28668 reasoning_chars=52047
+[QWEN][Stage1B-DefenseRobustness:repair-1] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage1B-DefenseRobustness:repair-1][+10s] state=True input_tokens=16576 generated_tokens=323 context_tokens=16903 remaining=-1 task=385614
+[QWEN][Stage1B-DefenseRobustness:repair-1][+20s] state=True input_tokens=16576 generated_tokens=728 context_tokens=17308 remaining=-1 task=385614
+[QWEN][Stage1B-DefenseRobustness:repair-1][+30s] state=True input_tokens=16576 generated_tokens=1059 context_tokens=17639 remaining=-1 task=385614
+[QWEN][Stage1B-DefenseRobustness:repair-1][+40s] state=True input_tokens=16576 generated_tokens=1524 context_tokens=18104 remaining=-1 task=385614
+[QWEN][Stage1B-DefenseRobustness:repair-1][+50s] state=True input_tokens=16576 generated_tokens=2145 context_tokens=18725 remaining=-1 task=385614
+[QWEN][Stage1B-DefenseRobustness:repair-1] completed elapsed=52.6s prompt_tokens=16576 completion_tokens=2313 total_tokens=18889 reasoning_chars=5575
+Stage 1B checkpoint saved immediately: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\checkpoints\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35\defense_robustness.json
+[MAIN SET][7/7] COMPLETE in 759.7s | action=generated_or_resumed_and_frozen | evidence=17 | slots=5/6 | families=6 | artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35.json
+
+====================================================================================================
+MAIN SET COMPLETE: 7/7 cases | generated/resumed=7 | reused=0 | total=93.6 min
+Progress file: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\runs\stage1-main-cases-v1__seed-42__progress.json
+====================================================================================================

@@ -1,0 +1,109 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\logs\stage1-main-cases-v1__2026-09-14_11-41-36.log
+--- Stage 0 -> Stage 1 -> Stage 2 -> Stage 3 Main Case Set: batch execution ---
+Stage 1/2 shared runtime profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\runs\stage1-main-cases-v1__seed-42__progress.json
+Resume is automatic: exact Stage 1/2/3 artifacts are reused; interrupted Stage 1 critics and Stage 2 debate steps resume only from exact-fingerprint checkpoints, while Stage 3 remains deterministic.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json
+
+[MAIN SET][1/7] COMPLETE in 1.7s | action=generated_stage3_from_frozen_stage2 | evidence=7 | slots=3/6 | families=3 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__ddos__nlp_llm\ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d.json
+
+====================================================================================================
+[MAIN SET][2/7] main__malware__anomaly_detection
+Threat=Malware | PMT=ANOMALY DETECTION
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__malware__anomaly_detection (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__malware__anomaly_detection\52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20.json
+
+[MAIN SET][2/7] COMPLETE in 1.0s | action=generated_stage3_from_frozen_stage2 | evidence=17 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__malware__anomaly_detection\52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__malware__anomaly_detection\85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3.json
+
+====================================================================================================
+[MAIN SET][3/7] main__ransomware__cryptography
+Threat=Ransomware | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_steep_slope
+Reason=Coverage-qualified representative of the large-gap/steep-slope regime. Selected before Stage 1 generation using only frozen Stage 0 forecast/evidence metadata.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ransomware__cryptography (16 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ransomware__cryptography\ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f.json
+
+[MAIN SET][3/7] COMPLETE in 1.0s | action=generated_stage3_from_frozen_stage2 | evidence=16 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ransomware__cryptography\ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__ransomware__cryptography\958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e.json
+
+====================================================================================================
+[MAIN SET][4/7] main__insider_threat__cryptography
+Threat=Insider Threat | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_moderate_slope
+Reason=Coverage-qualified representative of the large-gap/moderate-slope regime, included to separate persistent structural imbalance from rapidly accelerating imbalance.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__insider_threat__cryptography (12 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__insider_threat__cryptography\34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d.json
+
+[MAIN SET][4/7] COMPLETE in 0.9s | action=generated_stage3_from_frozen_stage2 | evidence=12 | slots=5/6 | families=4 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__insider_threat__cryptography\34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__insider_threat__cryptography\15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68.json
+
+====================================================================================================
+[MAIN SET][5/7] main__brute_force__ids_ips
+Threat=Brute Force Attack | PMT=IDS/IPS
+Selection=regime_representative | Regime=moderate_gap_steep_slope
+Reason=Coverage-qualified representative of the moderate-gap/steep-slope regime, included to test whether agents distinguish emerging escalation from already-large gaps.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__brute_force__ids_ips (13 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__brute_force__ids_ips\0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f.json
+
+[MAIN SET][5/7] COMPLETE in 0.9s | action=generated_stage3_from_frozen_stage2 | evidence=13 | slots=5/6 | families=4 | rounds=2 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__brute_force__ids_ips\0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__brute_force__ids_ips\40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815.json
+
+====================================================================================================
+[MAIN SET][6/7] main__targeted_attack__access_control
+Threat=Targeted Attack | PMT=ACCESS CONTROL
+Selection=regime_representative | Regime=moderate_gap_low_slope
+Reason=Coverage-qualified representative of the moderate-gap/low-slope regime, included as a managed/stable trajectory rather than another escalation-heavy example.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__targeted_attack__access_control (18 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__targeted_attack__access_control\c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086.json
+
+[MAIN SET][6/7] COMPLETE in 1.0s | action=generated_stage3_from_frozen_stage2 | evidence=18 | slots=5/6 | families=8 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__targeted_attack__access_control\c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__targeted_attack__access_control\d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13.json
+
+====================================================================================================
+[MAIN SET][7/7] main__session_hijacking__https
+Threat=Session Hijacking | PMT=HTTPS
+Selection=regime_representative | Regime=small_gap_low_or_negative_slope
+Reason=Coverage-qualified representative of the small-gap/low-or-negative-slope regime, included as a low-risk alignment control against high-gap and accelerating cases.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__session_hijacking__https (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__session_hijacking__https\250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f.json
+
+[MAIN SET][7/7] COMPLETE in 1.1s | action=generated_stage3_from_frozen_stage2 | evidence=17 | slots=5/6 | families=6 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__session_hijacking__https\250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__session_hijacking__https\13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589.json
+
+====================================================================================================
+MAIN SET COMPLETE: 7/7 cases | generated/resumed=7 | reused=0 | total=0.1 min
+Progress file: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\runs\stage1-main-cases-v1__seed-42__progress.json
+====================================================================================================

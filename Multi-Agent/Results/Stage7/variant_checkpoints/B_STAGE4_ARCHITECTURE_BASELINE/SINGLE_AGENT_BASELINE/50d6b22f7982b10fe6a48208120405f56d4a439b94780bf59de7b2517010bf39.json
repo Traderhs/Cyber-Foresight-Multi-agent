@@ -1,0 +1,278 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_001",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "In the long term, zero trust is reported to enable a more prudent allocation of security investments, providing grounded adoption_benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_001",
+          "evidence_ids": [
+            "DE_DE11_1ECA9795EEF89DFA"
+          ],
+          "scope": "GENERAL",
+          "statement": "Development, deployment, and maintenance of ABAC may exceed its benefits, application retrofitting adds separate cost, and managing subject attributes and policies may offset savings, providing grounded adoption_burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_002",
+          "evidence_ids": [
+            "DE_DE12_CBF6FBB1313D37AF"
+          ],
+          "scope": "GENERAL",
+          "statement": "Provider disruption or switching may impose extreme cost, asset replacement, or long transition programs, and non-person entity administration adds management complexity, providing grounded adoption_burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_003",
+          "evidence_ids": [
+            "DE_DE17_429D17A4E11A72C3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Initial implementation of required capabilities and services often leads to additional costs, and the path to zero trust may take years and require cultural change, providing grounded adoption_burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "ABAC adoption should be justified only for environments where subjects and objects carry rich attributes and access decisions involve complex relationships, per DE_DE11_1ECA9795EEF89DFA.",
+        "Provider switching costs, service disruption, and non-person entity administration must be evaluated, per DE_DE12_CBF6FBB1313D37AF.",
+        "Rollout must be planned incrementally with allowance for initial costs and cultural change, per DE_DE17_429D17A4E11A72C3.",
+        "Candidate workflows should be piloted before broader transition, per DE_DE12_6509E7A6D8467E38."
+      ],
+      "constraints": [
+        "DE_DE12_6509E7A6D8467E38 indicates that candidate solutions may require client installation, changes to subject behavior, logging capability, and pilot programs before broader transition.",
+        "DE_DE11_1ECA9795EEF89DFA requires quantifying benefits and balancing cost of risk against cost of security before selecting ABAC.",
+        "CTX_CIS_IG2_9F94838146D9C3A4 describes CIS IG2 safeguards as addressing increased operational complexity, with some safeguards potentially depending on enterprise-grade technology and specialized expertise."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence record reports numeric budget, price, ROI, TCO, staffing count, or procurement ceiling for the frozen scenario.",
+        "No supplied evaluation_evidence record reports measured adoption cost, procurement cost, or adoption effectiveness for access control in the frozen EU CIS IG2 scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The only grounded adoption_benefit is a long-term improvement in prudent allocation of security investments. The supplied evidence also contains multiple grounded adoption_burden constraints, including development and maintenance costs, retrofit costs, attribute and policy management overhead, provider switching costs, service disruption, initial implementation costs, and long incremental change. Because no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, the financial direction remains qualitative, but the balance of grounded benefit and burden is adverse for adoption feasibility.",
+      "stance": -1
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_001",
+          "evidence_ids": [
+            "DE_DE12_E6F93E4AB8722379"
+          ],
+          "scope": "GENERAL",
+          "statement": "An industry compliance system that helps an enterprise remain compliant with a regulatory regime and encodes policy rules for access decisions provides grounded governance_enablement.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_SUPPORT_002",
+          "evidence_ids": [
+            "DE_DE11_1E4AAE06CC3795D7"
+          ],
+          "scope": "GENERAL",
+          "statement": "Local access policies, consistent attribute definitions and lifecycle management, and exception-handling procedures for ABAC provide grounded governance_enablement.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_SUPPORT_003",
+          "evidence_ids": [
+            "DE_DE17_567DDA7CFBC62829"
+          ],
+          "scope": "GENERAL",
+          "statement": "Governance as the definition and enforcement of cybersecurity policies, procedures, and processes to manage enterprise risk in support of zero trust provides grounded governance_enablement, although the record references federal requirements and its transfer to the EU scenario remains conditional.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_001",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session-management and token-handling requirements, including HTTPS-only cookies, secure channels, and restrictions on insecure transport fallback, provide grounded compliance_constraint.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Access-control policies must be aligned with enterprise policy, consistent attribute definitions, lifecycle management, and exception handling, per DE_DE11_1E4AAE06CC3795D7.",
+        "Compliance-system inputs and policy rules must be maintained to support regulatory-regime compliance, per DE_DE12_E6F93E4AB8722379.",
+        "Session and token mechanisms must satisfy the cited compliance requirements, per DE_DE13_055FC5E35FA61DD5.",
+        "In the experimental EU scenario, appropriate access control policies are required as part of cybersecurity risk-management measures for essential and important entities, per E_31_96F42990F3AEAC86."
+      ],
+      "constraints": [
+        "E_31_96F42990F3AEAC86 supplies the contractual regulatory_applicability slot for the experimental EU scenario by stating that essential and important entities should have appropriate access control policies as part of cybersecurity risk-management measures.",
+        "CTX_CIS_IG2_9F94838146D9C3A4 describes the CIS IG2 reference enterprise as potentially facing regulatory burdens and operating across multiple departments with differing risk profiles."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence record directly establishes institutional adoption, enforcement maturity, or operational effectiveness of access-control governance in the frozen EU CIS IG2 scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "There is grounded governance_enablement from compliance-system inputs, ABAC governance practices, and policy-enforcement governance. There is also grounded compliance_constraint from session-management and token-handling requirements. EU primary-law material supplies regulatory_applicability context for the experimental EU scenario but is not itself a support or challenge slot under the supplied directional contract, so the institutional/regional lens remains balanced.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_001",
+          "evidence_ids": [
+            "AE06S_407DDF87C86BB41B"
+          ],
+          "scope": "GENERAL",
+          "statement": "An ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve the ability to respond to sophisticated multi-stage threats, providing grounded technical_enablement for access control as a targeted-attack defense mechanism.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_001",
+          "evidence_ids": [
+            "AE06C_8C41709C0D8EE834"
+          ],
+          "scope": "GENERAL",
+          "statement": "Conventional perimeter and static access-control assumptions are reported to be insufficient for evolving APT behavior, and effective access control is reported to depend on continuously updated threat and risk context, providing grounded technical_limitation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Effective access control requires continuously updated threat and risk context rather than reliance on the control category alone, per AE06C_8C41709C0D8EE834.",
+        "Candidate solutions should be evaluated for workflow fit, logging capability, protocol breadth, subject-behavior impact, and initial deployment monitoring, per DE_DE12_6509E7A6D8467E38.",
+        "Implementation should be planned as an incremental maturation process with organizational change, per DE_DE17_429D17A4E11A72C3."
+      ],
+      "constraints": [
+        "DE_DE12_6509E7A6D8467E38 indicates that candidate ZTA/access-control solutions must be fit to workflows, resource location, logging, protocol support, and subject behavior, and may require pilot deployment and initial monitoring.",
+        "DE_DE17_429D17A4E11A72C3 indicates that zero-trust/access-control maturation is incremental, may take years, and may require organizational cybersecurity philosophy and culture change.",
+        "CTX_CIS_IG2_9F94838146D9C3A4 describes the CIS IG2 reference enterprise as having personnel responsible for managing and protecting IT infrastructure, with some safeguards potentially depending on enterprise-grade technology and specialized expertise."
+      ],
+      "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence record directly establishes deployment-specific technical maturity, operational effectiveness, or measured mitigation effectiveness for access control in the frozen EU CIS IG2 scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "There is grounded technical_enablement from adaptive, threat-context-aware access-control integration, but also grounded technical_limitation because static or conventional access-control assumptions are insufficient for evolving APT behavior. The evidence does not establish deployment-specific technical maturity or operational effectiveness in the frozen EU CIS IG2 context, so the lens remains balanced rather than decisively favorable or adverse.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "c48a240f8af166605a31a186a4e5ade2515e04827fdf6eab08561e74b94568ac",
+  "checkpoint_sha256": "cf700222015a169b3cd3737d79e0513f0d8517e8221c0fda4023201ccd637436",
+  "created_at": "2026-09-16T16:17:22.238038+00:00",
+  "identity": {
+    "axis": "B_STAGE4_ARCHITECTURE_BASELINE",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE06C_8C41709C0D8EE834",
+          "AE06S_407DDF87C86BB41B",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_BOUND",
+        "EU",
+        [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE17_567DDA7CFBC62829",
+          "E_31_52DCE9554453ADEF",
+          "E_31_96F42990F3AEAC86"
+        ],
+        [
+          "E_31_52DCE9554453ADEF",
+          "E_31_96F42990F3AEAC86"
+        ],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE12_CBF6FBB1313D37AF",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "50d6b22f7982b10fe6a48208120405f56d4a439b94780bf59de7b2517010bf39",
+    "jurisdiction_neutral": false,
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9"
+    ],
+    "payload_sha256": "e21bc5703ec157514f890ac92f7fff795f45289eb31acdb2c0dd3d402130b7ba",
+    "response_schema_sha256": "cf94a7d1736722eb9509ba31a6a85b744df01052ea7c75858f59db6f9a9fbeaa",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "cd9a3043030b89f2aba0d5cad1125ad99ca8a29e73d89ca60042660098b53e3a",
+    "variant_id": "SINGLE_AGENT_BASELINE"
+  }
+}

@@ -1,0 +1,1715 @@
+{
+  "include_all_followup_rounds": true,
+  "items": [
+    {
+      "adjudication_id": "MA_2",
+      "attack_claims": [
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Mandiant M-Trends report states that intrusions involving ransomware had a median dwell time of 9 days in 2022, compared with 5 days reported in M-Trends 2022, and credits ransomware attacks as a driving factor in reducing overall dwell time."
+        }
+      ],
+      "audit_id": "06fce663c181dd2c26ec63ca",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2023-12-31",
+          "content": "The lines separating the real world and the cyber realm have never been hazier. We’re seeing\nRussia engage in information operations in an attempt to influence the narrative surrounding\ntheir invasion of Ukraine, and attempt to disrupt critical infrastructure through both physical and\ncyber attacks. We’re seeing the invasion have an influence on the broader cybercrime ecosystem,\nnotably in Europe, where actors are choosing sides or shutting down operations altogether. And\nwe’re seeing actors engage in cybercrime to fund espionage to support the North Korean regime,\ntargeting information on topics ranging from nuclear to COVID-19.\nEvery day Mandiant responders are investigating and analyzing the latest attacks and threats,\nand understanding how best to respond to and mitigate them. We pass these learnings on to\nour customers through our various services, helping them to stay ahead of a constantly evolving\nthreat landscape.\nIn releasing our annual M-Trends report, we aim to provide some of that same critical intelligence\nto the greater security community. M-Trends 2023 continues our tradition of offering details\non the evolving cyber landscape, mitigation recommendations, and a wide variety of security\nincident-related metrics.\nLet’s start with answering one of the biggest questions from our “By the Numbers” section.\nThe answer is yes, attacks are being detected faster than ever before. From January 1, 2022,\nto December 31, 2022, the global median dwell time is now 16 days, down from 21 days in our\nM-Trends 2022 report. This may demonstrate an improved ability to detect attacks, but we\nalso credit ransomware attacks to be a driving factor in reducing dwell time. Intrusions\ninvolving ransomware had a median dwell time of 9 days in 2022, compared to 5 days reported\nin M-Trends 2022.\nThe topics of M-Trends 2023 include:\nBy the Numbers: Organizations were notified of breaches by external entities in 63% of incidents\ncompared to 47% in M-Trends 2022, which brings the global detection rates closer to what\ndefenders experienced in 2014. We have many more signature metrics on targeted industries,\nattack types, threat groups, and malware use, along with new breakdowns based on trends\nand observations.\nThe Invasion of Ukraine: Russia’s invasion of Ukraine has consumed almost every aspect of",
+          "content_hash": "0baa7b22596028f46ec66a4bec8273a022eba1d95bf60104785e53661e13c574",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_03_0BAA7B22596028F4",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2023-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Mandiant M-Trends",
+          "source_document_id": "mtrends-2023",
+          "source_family": "B",
+          "source_locator": "page:4:chunk:1",
+          "source_registry_id": "03",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_MALWARE",
+            "THREAT_RANSOMWARE"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C04",
+          "evidence_ids": [
+            "E_03_0BAA7B22596028F4"
+          ],
+          "forecast_component": "THREAT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2023 reports that the global median dwell time decreased from 21 days in 2021 to 16 days in 2022, with ransomware intrusions at a 9-day median dwell time in 2022, and credits ransomware attacks as a driving factor in the reduction."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_DEFENSE",
+      "rationale": "The surfaced Mandiant text supports a 2022 global median dwell time of 16 days, a prior baseline of 21 days in the M-Trends 2022 report, a 9-day median dwell time for ransomware intrusions in 2022, and a prior comparison of 5 days reported in M-Trends 2022. It also credits ransomware as a driving factor in reducing dwell time. However, the surfaced text does not explicitly label the prior 21-day baseline as 2021, and dwell-time change is an operational detection-speed metric rather than direct NoI incident-count or frequency evidence. Attack C4 is adequately bounded; Defense C04 over-specifies the 2021 baseline.",
+      "required_revision": "Defense C04 should remove the explicit '2021' attribution for the 21-day baseline and state only that M-Trends 2023 reports a global median dwell time of 16 days in 2022, down from 21 days in the M-Trends 2022 report, and a 9-day median dwell time for ransomware intrusions in 2022 compared with 5 days reported in M-Trends 2022. It should remain framed as operational detection-speed context, not direct NoI incident-count or frequency trajectory support.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_C4_D1",
+      "attack_claims": [
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The cutoff-constrained Crossref trend for PMT_HTTPS reports annual HTTPS security publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024, with an OLS slope of 0.3 works per year."
+        }
+      ],
+      "audit_id": "2ba09cae97008eb49621c84f",
+      "case_id": "main__session_hijacking__https",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=HTTPS; query.title='HTTPS'; query.bibliographic='security'; annual publication counts: 2021=14, 2022=8, 2023=8, 2024=15; OLS_slope=0.300000 works/year; first_to_last_delta=1; total_results=45. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "13a684b424c1d15b7452c447cdd0e09a24c3eb61c90e30c8fbb5ec4fe87246f5",
+          "evidence_chain_id": "crossref-publication-trend:PMT_HTTPS",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_13A684B424C1D15B",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_HTTPS"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_HTTPS:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_13A684B424C1D15B"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref HTTPS publication trend reports a positive OLS slope of 0.30 works/year, with annual publication counts of 14 in 2021, 8 in 2022, 8 in 2023, and 15 in 2024."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "E_33_13A684B424C1D15B supports the factual PMT_HTTPS publication trend reported by C4 and the directional support asserted by D1. The supported direction is limited to publication activity; the same evidence explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_8",
+      "attack_claims": [
+        {
+          "claim_id": "C6",
+          "evidence_ids": [
+            "E_25_95744996E05BA6E9"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The NIST SP 800-53 text cites ransomware attacks that encrypt organizational data on servers as examples of actual threat events relevant to contingency planning."
+        }
+      ],
+      "audit_id": "379dfc9a87341a7a77cfdfc6",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "security_control",
+            "privacy_control"
+          ],
+          "available_at": "2020-09-23",
+          "content": "actual threat events, including cyber-attacks that disable websites, ransomware attacks that\nencrypt organizational data on servers, hurricanes that damage or destroy organizational\nfacilities, or hardware or software failures.\nRelated Controls: None.\n(2) CONTINGENCY TRAINING | MECHANISMS USED IN TRAINING ENVIRONMENTS\nEmploy mechanisms used in operations to provide a more thorough and realistic\ncontingency training environment.\nDiscussion: Operational mechanisms refer to processes that have been established to\naccomplish an organizational goal or a system that supports a particular organizational\nmission or business objective. Actual mission and business processes, systems, and/or\nfacilities may be used to generate simulated events and enhance the realism of simulated\nevents during contingency training.\nRelated Controls: None.\nReferences: [SP 800-50].\nCP-4\nCONTINGENCY PLAN TESTING\nControl:\na. Test the contingency plan for the system [Assignment: organization-defined frequency] using\nthe following tests to determine the effectiveness of the plan and the readiness to execute\nthe plan: [Assignment: organization-defined tests].\nb. Review the contingency plan test results; and",
+          "content_hash": "95744996e05ba6e9540eb8c003850af2a080f6b8ce0d2e7d2d33119a7e678423",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_25_95744996E05BA6E9",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2020-09-23",
+          "retrieval_role": "neutral_candidate",
+          "source": "NIST SP 800-53 Rev.5",
+          "source_document_id": "nist-sp-800-53r5",
+          "source_family": "G",
+          "source_locator": "page:146:chunk:2",
+          "source_registry_id": "25",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_RANSOMWARE"
+          ]
+        }
+      ],
+      "defense_claims": [],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_ATTACK",
+      "rationale": "The NIST SP 800-53 excerpt explicitly cites ransomware attacks that encrypt organizational data on servers as actual threat events relevant to contingency planning. The claim is accurately bounded as control and contingency-planning context and does not assert trajectory or effectiveness.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ-1-A2-D4",
+      "attack_claims": [
+        {
+          "claim_id": "A2",
+          "evidence_ids": [
+            "E_04_58956777A1075C28"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "IBM X-Force reports that infostealers comprised 17.8% of the most unique Windows malware samples in 2023, that ransomware-linked groups distributed Vidar, LummaC2, Nemesis, and Rhadamanthys, and that infostealer investment is expected to affect defenders' detection timelines."
+        }
+      ],
+      "audit_id": "3b17b963bdca41bf629be7d5",
+      "case_id": "main__malware__anomaly_detection",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2024-12-31",
+          "content": "The success of infostealers has not\ngone unnoticed by other players in\nthe cybercrime marketplace. Threat\ngroups who have largely specialized\nin ransomware, such as ITG23, also\nknown as TrickBot and Conti, and LockBit\nhave both been linked to infostealers.\nCampaigns linked to ITG23 have been\nobserved distributing the Vidar infostealer\nin late 2022. In 2023, ITG23’s interest in\ninfostealers grew to include campaigns\ninvolving the LummaC2 and Nemesis\nstealers during the first half of the year\nfollowed by the Rhadamanthys stealer in\nNovember. Meanwhile, LockBit announced\nits desire to purchase the Raccoon Stealer\nsource code.\nResearch contributions by Intezer\nfurther highlight the increasing value of\ninfostealers to the criminal ecosystem.\nBy performing an analysis on how much a\nmalware family’s source code is changing\nbased on uniqueness of code versus code\nrecycling, Intezer found that infostealers\ntopped the list in 2023 for most unique\n24\nNext chapter\nPrevious chapter\n05\nTop impacts\nmalware samples targeting Microsoft\nWindows. It made up 17.8% of samples,\nindicating continued investment in\ninfostealer innovation.\nAs threat actors invest in infostealers\nand X-Force observes a developing trend\naround identity abuse—through credential\nharvesting or abuse of valid accounts—\nwe expect it to impact defenders’\ndetection timelines.",
+          "content_hash": "58956777a1075c28f416dba2c93c1f05ef6389229368ccbb4fd62a736dbf6e6f",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_04_58956777A1075C28",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "IBM X-Force Threat Intelligence Index",
+          "source_document_id": "xforce-2024",
+          "source_family": "B",
+          "source_locator": "page:24:chunk:1",
+          "source_registry_id": "04",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_MALWARE",
+            "THREAT_RANSOMWARE"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_04_58956777A1075C28"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "X-Force reports that infostealers were the most unique malware samples targeting Microsoft Windows in 2023 and that threat-actor investment in infostealers and identity abuse is expected to impact defenders' detection timelines."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "The evidence in E_04_58956777A1075C28 attributes distribution of Vidar, LummaC2, Nemesis, and Rhadamanthys specifically to ITG23 (TrickBot/Conti), described as a threat group 'largely specialized in ransomware.' LockBit is mentioned separately in relation to its desire to purchase Raccoon Stealer source code, not in relation to distributing those four families. The Attack's phrasing 'ransomware-linked groups distributed Vidar, LummaC2, Nemesis, and Rhadamanthys' overstates the attribution scope beyond what the surfaced evidence supports. The Defense's D4 claim, which focuses on infostealer uniqueness and the expected impact on detection timelines, is accurately grounded. The Defense's REVISE of A2 is valid.",
+      "required_revision": "Narrow the attribution of Vidar, LummaC2, Nemesis, and Rhadamanthys distribution to ITG23 (TrickBot/Conti) specifically, as the surfaced evidence does not support the broader 'ransomware-linked groups' phrasing for those four families. Note separately that LockBit is mentioned in relation to Raccoon Stealer source code purchase, not distribution of the four named families.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ_007",
+      "attack_claims": [],
+      "audit_id": "4d29333001c02c2bf9dd89d1",
+      "case_id": "main__ddos__nlp_llm",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=NLP/LLM; query.title='NLP/LLM'; query.bibliographic='security'; annual publication counts: 2021=14, 2022=18, 2023=33, 2024=87; OLS_slope=23.400000 works/year; first_to_last_delta=73; total_results=152. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "adc8bc66d812799fa9ab86238ae550dfedcb7519ba9dfd9b6ec9f854734cfd28",
+          "evidence_chain_id": "crossref-publication-trend:PMT_NLP_LLM",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_ADC8BC66D812799F",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_NLP_LLM"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_NLP_LLM:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The Crossref PMT publication-trend record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_DEFENSE",
+      "rationale": "E_33_ADC8BC66D812799F explicitly states that the Crossref record is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. D2 correctly limits the evidentiary role of the publication trend.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ-4-A3-D3",
+      "attack_claims": [
+        {
+          "claim_id": "A3",
+          "evidence_ids": [
+            "E_03_F1CA4CD00581F628"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Mandiant reports an observed trend in which China-nexus attackers gain access to edge devices through vulnerabilities, including zero-days, and deploy custom malware ecosystems, and that such malware may remain undetected for long periods."
+        }
+      ],
+      "audit_id": "53848e1152f9cf0863edeaea",
+      "case_id": "main__malware__anomaly_detection",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Chinese Espionage Operations\nTargeting The Visibility Gap\nCustom Malware for\nEdge Devices\nSecurity and networking devices that sit at the logical\nperimeter of a network and host services on the internet are\noften referred to as “edge devices.” Mandiant has observed\na trend in which China-nexus attackers have gained access\nto edge devices via exploitation of vulnerabilities, particularly\nzero-days, and subsequently deployed custom malware\necosystems. These malware ecosystems have typically\nconsisted of several distinct code families that attackers\noperate in unison, and are usually custom developed or tailored\nfor the target edge device and underlying operating system.\nDeveloping malware for these managed appliances is a non-\ntrivial task. Vendors typically do not enable direct access to\nthe operating system or filesystem for appliance device\nowners or users. In order to operationalize attacks within this\nclass of platform, attackers must maintain a resource intensive\nmalware development lifecycle that, by necessity, maintains\nflexibility and a high degree of technical acumen. While this\nprocess requires a substantial investment, it also produces\nclear results when leveraged successfully by attackers.\nRemaining Undetected\nIn general, custom malware may go undetected for long\nperiods of time since there is unlikely to be specific detections\nin place for the malware. This is particularly true for edge\ndevices, where network defenders may have little to no means\nfor monitoring and detection of malware activity. Malware\nauthors may also take special care to ensure that the malware\nhinders forensic investigation by circumventing or clearing\nlogging systems in place on the device. Even after the malware\nhas been discovered and exposed by the security community,\nit is often a non-trivial task for a device owner to identify if\nthey have been impacted, since off-the-shelf security products\ntypically will not support edge devices. Furthermore, it is\nsometimes the case that exploitation attempts of zero-day\nvulnerabilities leave little or no reliable evidence behind.\nThis is often exacerbated by the fact that the attack may have\noccurred months or even years prior to detection. Additionally,\nthere are often challenges with traditional forensic techniques\nas these devices are typically kept under tight control by\nmanufacturers, adding to the already complex nature of",
+          "content_hash": "f1ca4cd00581f62889df77c3fb59500e939761a4a830448413a1753c88436a40",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_03_F1CA4CD00581F628",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Mandiant M-Trends",
+          "source_document_id": "mtrends-2024",
+          "source_family": "B",
+          "source_locator": "page:61:chunk:2",
+          "source_registry_id": "03",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_MALWARE",
+            "THREAT_ZERO_DAY"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_03_F1CA4CD00581F628"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Mandiant reports that China-nexus attackers have deployed custom malware ecosystems on edge devices and that such malware may go undetected for long periods, with off-the-shelf security products typically not supporting edge devices."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_DEFENSE",
+      "rationale": "Both claims accurately report the Mandiant observations from E_03_F1CA4CD00581F628: China-nexus attackers exploiting edge devices via vulnerabilities including zero-days, deploying custom malware ecosystems, long undetected persistence, and limited off-the-shelf security product support for edge devices. The Defense's revision that A3 should be treated as operational context rather than direct threat-minus-PMT gap evidence is consistent with the evidence, which reports an observed trend and visibility gap but does not measure malware incident count/frequency or directly quantify the gap between the THREAT_MALWARE NoI state and the PMT_ANOMALY_DETECTION NoP state. The interpretive narrowing is appropriate.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_12",
+      "attack_claims": [],
+      "audit_id": "5452a4d072b0a06b52897c90",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "adversarial_ml_taxonomy",
+            "ai_mitigation_class"
+          ],
+          "available_at": "2024-01-04",
+          "content": "small task. Unlike cryptography, there are no information-theoretic security proofs for the\nwidely used machine learning algorithms. Moreover, information-theoretic impossibility\nresults have started to appear in the literature [102, 116] that set limits on the effectiveness\nof widely-used mitigation techniques. As a result, many of the advances in developing\nmitigations against different classes of attacks tend to be empirical and limited in nature.\nThis report offers guidance for the development of the following:\n• Standardized terminology in AML to be used by the ML and cybersecurity commu\nnities;\n• A taxonomy of the most widely studied and effective attacks in AML, including\n– evasion, poisoning, and privacy attacks for PredAI systems,\n– evasion, poisoning, privacy, and abuse attacks for GenAI systems;\n4",
+          "content_hash": "0a98378fc609ef7e737d948c9ab9311d141a3f1b2bacab5829faddfb5f667606",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_15_0A98378FC609EF7E",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [
+            "PMT_CRYPTOGRAPHY"
+          ],
+          "prohibited_claim_types": [
+            "prevalence_magnitude",
+            "deployment_effectiveness"
+          ],
+          "publication_date": "2024-01-04",
+          "retrieval_role": "neutral_candidate",
+          "source": "NIST AI 100-2 Adversarial Machine Learning Taxonomy",
+          "source_document_id": "nist-ai-100-2-e2023",
+          "source_family": "E",
+          "source_locator": "page:12:chunk:2",
+          "source_registry_id": "15",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C06",
+          "evidence_ids": [
+            "E_15_0A98378FC609EF7E"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST AI 100-2 notes that, unlike cryptography, widely used machine learning algorithms lack information-theoretic security proofs, and that information-theoretic impossibility results have started to appear in the literature setting limits on the effectiveness of widely-used mitigation techniques against adversarial ML attacks."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_DEFENSE",
+      "rationale": "The NIST AI 100-2 excerpt supports the contrast between cryptography and widely used machine learning algorithms lacking information-theoretic security proofs, and mentions impossibility results limiting mitigation effectiveness. This is neutral adversarial-ML context and does not establish cryptography deployment maturity or ransomware-specific effectiveness.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA-1",
+      "attack_claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref PMT publication trend reports that PMT_CRYPTOGRAPHY security-related cryptography annual publication counts increased from 210 in 2021 to 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works/year."
+        }
+      ],
+      "audit_id": "5dd99123975234587c24a98a",
+      "case_id": "main__insider_threat__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=CRYPTOGRAPHY; query.title='CRYPTOGRAPHY'; query.bibliographic='security'; annual publication counts: 2021=210, 2022=254, 2023=272, 2024=330; OLS_slope=37.800000 works/year; first_to_last_delta=120; total_results=1066. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "cde0f421e4d797ed58030703912f770977ec98610b21db7b1279b6b859292ba2",
+          "evidence_chain_id": "crossref-publication-trend:PMT_CRYPTOGRAPHY",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_CDE0F421E4D797ED",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_CRYPTOGRAPHY"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_CRYPTOGRAPHY:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_33_CDE0F421E4D797ED"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained PMT publication trend for CRYPTOGRAPHY reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works/year."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "Both critics identify the same cutoff-constrained Crossref PMT_CRYPTOGRAPHY publication trend. E_33 directly states the 2021-2024 annual counts and OLS slope, and both responses correctly limit the claim to external directional publication activity rather than deployment maturity, operational effectiveness, or threat-side trajectory evidence.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_3",
+      "attack_claims": [
+        {
+          "claim_id": "C3",
+          "evidence_ids": [
+            "E_08_510579F0D776F3BE"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The CISA KEV record confirms that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign."
+        }
+      ],
+      "audit_id": "742a140c4a6e541d9e5b3cfa",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "confirmed_exploitation"
+          ],
+          "available_at": "2022-09-08",
+          "content": "CVE-2022-27593 | QNAP | Photo Station | QNAP Photo Station Externally Controlled Reference Vulnerability | Certain QNAP NAS running Photo Station with internet exposure contain an externally controlled reference to a resource vulnerability which can allow an attacker to modify system files. This vulnerability was observed being utilized in a Deadbolt ransomware campaign. | Apply updates per vendor instructions. | Known",
+          "content_hash": "510579f0d776f3be15264f24551ac5eec7e9d7f58f27cb415851263700c9ff6e",
+          "evidence_chain_id": "CVE-2022-27593",
+          "evidence_date": "2022-09-08",
+          "evidence_id": "E_08_510579F0D776F3BE",
+          "evidence_type": "confirmed_exploitation_record",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "prevalence_magnitude",
+            "vulnerability_severity"
+          ],
+          "publication_date": "2022-09-08",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Known Exploited Vulnerabilities (KEV)",
+          "source_document_id": "cisa-kev",
+          "source_family": "C",
+          "source_locator": "KEV:CVE-2022-27593",
+          "source_registry_id": "08",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_RANSOMWARE",
+            "THREAT_VULNERABILITY"
+          ]
+        }
+      ],
+      "defense_claims": [],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "The CISA KEV record supports only that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. Its source contract permits confirmed_exploitation only and prohibits prevalence-magnitude and vulnerability-severity claims. The factual core of Attack C3 is supported, but its SUPPORTS_FORECAST framing is broader than the evidence contract allows and should be narrowed to confirmed exploitation context.",
+      "required_revision": "Attack C3 should narrow the KEV record to confirmed exploitation context: CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign. Remove any implication of prevalence, severity, or directional NoI trajectory support; the source contract permits confirmed_exploitation only.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA-R2-3",
+      "attack_claims": [
+        {
+          "claim_id": "A5",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        }
+      ],
+      "audit_id": "7db22c94471bfcd934c0e0fc",
+      "case_id": "main__brute_force__ids_ips",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=IDS/IPS; query.title='IDS/IPS'; query.bibliographic='security'; annual publication counts: 2021=44, 2022=43, 2023=52, 2024=58; OLS_slope=5.100000 works/year; first_to_last_delta=14; total_results=197. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "a707006877bfd1c280b7642b73881eb64fb6c8c77efd56df4b740676679f47a4",
+          "evidence_chain_id": "crossref-publication-trend:PMT_IDS_IPS",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_A707006877BFD1C2",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_IDS_IPS"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_IDS_IPS:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref record reports IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 2
+    },
+    {
+      "adjudication_id": "MA-R2-1",
+      "attack_claims": [
+        {
+          "claim_id": "A1",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 Verizon DBIR reports 1,997 basic web application attack incidents and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials by brute forcing, buying, or reusing them from previous breaches."
+        }
+      ],
+      "audit_id": "8d9dbd1b5ee7951ecbd81be1",
+      "case_id": "main__brute_force__ids_ips",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2024-12-31",
+          "content": "42\nBasic Web\nApplication Attacks\nFrequency\n1,997 incidents,\n881 with confirmed\ndata disclosure\nThreat actors\nExternal (100%),\nInternal (1%),\nMultiple (1%)\n(breaches)\nActor motives\nFinancial (85%),\nEspionage (15%)\n(breaches)\nData\ncompromised\nCredentials (71%),\nPersonal (58%),\nOther (29%),\nInternal (17%)\n(breaches)\nSummary\nThreat actors continue to take\nadvantage of assets with default,\nsimplistic and easily guessable\ncredentials via brute forcing\nthem, buying them or reusing\nthem from previous breaches.\nWhat is the same?\nFinancially motivated external\nactors continue to target credentials\nand personal information.\nRelevant ATT&CK\ntechniques\nBrute Force: T1110\n– \u0007Credential Stuffing:\nT1110.004\n– \u0007Password Cracking:\nT1110.002\n– \u0007Password Guessing:\nT1110.001\n– \u0007Password Spraying:\nT1110.003\nCompromise Accounts: T1586\n– \u0007Email Accounts: T1586.002\nExploit Public-Facing Application:\nT1190\nExternal Remote Services: T1133\nValid Accounts: T1078\n– \u0007Default Accounts:\nT1078.001\n– \u0007Domain Accounts:\nT1078.002\nUse Alternate Authentication\nMaterial: T1550\n– \u0007Application Access Token:\nT1550.001\nActive Scanning: T1595\n– \u0007Vulnerability Scanning:\nT1595.002\n2024 DBIR Incident Classification Patterns",
+          "content_hash": "669f59880af52688e8039537b6f49f63d59dd96496d727294a141c81b8a06b30",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_02_669F59880AF52688",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Verizon Data Breach Investigations Report (DBIR)",
+          "source_document_id": "dbir-2024",
+          "source_family": "B",
+          "source_locator": "page:42:chunk:1",
+          "source_registry_id": "02",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK",
+            "THREAT_VULNERABILITY"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "THREAT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 DBIR reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to brute force default, simplistic, or guessable credentials."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_DEFENSE",
+      "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+      "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal.",
+      "round_action": "STOP",
+      "round_index": 2
+    },
+    {
+      "adjudication_id": "ADJ_003",
+      "attack_claims": [
+        {
+          "claim_id": "AF_C3",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "CISA KEV records CVE-2023-44487 as an HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack and is represented in the payload as a confirmed exploitation record."
+        }
+      ],
+      "audit_id": "95cb6893fb0ae685662ef8ce",
+      "case_id": "main__ddos__nlp_llm",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "confirmed_exploitation"
+          ],
+          "available_at": "2023-10-10",
+          "content": "CVE-2023-44487 | IETF | HTTP/2 | HTTP/2 Rapid Reset Attack Vulnerability | HTTP/2 contains a rapid reset vulnerability that allows for a distributed denial-of-service attack (DDoS). | Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable. | Unknown",
+          "content_hash": "3453329306e149cbe05c50695e426161c43cb9d984ad5d0005eb826ddf777953",
+          "evidence_chain_id": "CVE-2023-44487",
+          "evidence_date": "2023-10-10",
+          "evidence_id": "E_08_3453329306E149CB",
+          "evidence_type": "confirmed_exploitation_record",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "prevalence_magnitude",
+            "vulnerability_severity"
+          ],
+          "publication_date": "2023-10-10",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Known Exploited Vulnerabilities (KEV)",
+          "source_document_id": "cisa-kev",
+          "source_family": "C",
+          "source_locator": "KEV:CVE-2023-44487",
+          "source_registry_id": "08",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_DDOS",
+            "THREAT_VULNERABILITY"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_08_3453329306E149CB"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability that allows a distributed denial-of-service attack and provides mitigation guidance to apply vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "E_08_3453329306E149CB supports the factual statement that CISA KEV records CVE-2023-44487 as an HTTP/2 Rapid Reset vulnerability allowing DDoS and provides mitigation guidance. The evidence contract permits confirmed exploitation only and prohibits prevalence magnitude and vulnerability severity. It does not establish a temporal NoI incident-count/frequency trend. D4's neutral-context framing is better grounded for the current frozen state modalities.",
+      "required_revision": "Revise AF_C3 to NEUTRAL_CONTEXT or exploitation-signal/mechanism context, explicitly stating that E_08_3453329306E149CB supports confirmed exploitation and mitigation guidance only, and does not establish NoI direction, prevalence magnitude, or vulnerability severity.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA-R2-2",
+      "attack_claims": [
+        {
+          "claim_id": "A2",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Mandiant M-Trends 2024 reports that in 2023 exploit was the most prevalent identified initial infection vector at 38%, a six percentage point increase from 2022; phishing was 17%, down from 22% in 2022; prior compromise was 15%; and brute force is listed among the identified initial infection vectors with a 6% value in the provided chart data."
+        }
+      ],
+      "audit_id": "9f783176ff6a9899eed3094d",
+      "case_id": "main__brute_force__ids_ips",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Special Report: Mandiant M-Trends 2024\n13\nTargeted Attacks\nInitial Infection Vector\nIn 2023, Mandiant experts once again saw exploits used as the most prevalent adversary\ninitial infection vector. In intrusions where the initial intrusion vector was identified, 38%\nof intrusions started with an exploit. This is a six percentage point increase from 2022,\nconsistent with what defenders faced in 2021. For more information, please see “Attacker\nOperations Involving Zero-Days Vary Depending on Motivation”.\nPhishing remained the second most common intrusion vector. However it declined in 2023,\nwith 17% of intrusions, compared to 22% in 2022. Phishing remains an effective method to\nestablish an initial foothold and a popular threat vector for adversaries. Full analysis can be\nfound in “Evolution of Phishing Among Shifting Security Controls”.\nPrior compromises were the third most significant intrusion vector used by attackers in\n2023. Mandiant investigators noted a three percentage point increase in 2023 compared\nto what was observed in 2022 with 15% of intrusions beginning with access provided by\na prior compromise. This increase is likely related to the ransomware ecosystem and the\ncontinued partnership between ransomware affiliates and various malware operators\nselling initial access.\nExploit\nPhishing\nPrior Compromise\nStolen Credentials\nBrute Force\nWeb\nCompromise\nServer\nCompromise\nThird-Party\nCompromise\nPhishing\n(Social Media)\nSIM Swap\nOther\n38\n%17\n% 10\n%\n6\n%\n3\n% 2\n%\n1\n%\n1\n%\n2\n%\n15\n%\n5\n%\nInitial Infection Vector (When Identified)",
+          "content_hash": "f2b2eba86beefdc53cb52021f5efe9b42db17059929a2c00041cc4a27748a418",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_03_F2B2EBA86BEEFDC5",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Mandiant M-Trends",
+          "source_document_id": "mtrends-2024",
+          "source_family": "B",
+          "source_locator": "page:13:chunk:1",
+          "source_registry_id": "03",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK",
+            "THREAT_MALWARE",
+            "THREAT_PHISHING",
+            "THREAT_RANSOMWARE"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 includes brute force in its 2023 initial infection vector list, alongside exploit, phishing, prior compromise, and stolen credentials."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+      "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend.",
+      "round_action": "STOP",
+      "round_index": 2
+    },
+    {
+      "adjudication_id": "ADJ_R1_02",
+      "attack_claims": [
+        {
+          "claim_id": "ATK_C5",
+          "evidence_ids": [
+            "E_33_F4FC25CE90264812"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "Crossref cutoff-constrained publication-trend data for access-control topics reports annual publication counts of 1040 in 2021, 1005 in 2022, 1115 in 2023, and 1070 in 2024, with an OLS slope of 20.0 works per year."
+        }
+      ],
+      "audit_id": "a13f7cca3d31abbbbe9e7726",
+      "case_id": "main__targeted_attack__access_control",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=ACCESS CONTROL; query.title='ACCESS CONTROL'; query.bibliographic='security'; annual publication counts: 2021=1040, 2022=1005, 2023=1115, 2024=1070; OLS_slope=20.000000 works/year; first_to_last_delta=30; total_results=4230. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "f4fc25ce90264812233fd7f22b8e5d5febdba28d8cfe532da3e6239df1a9578f",
+          "evidence_chain_id": "crossref-publication-trend:PMT_ACCESS_CONTROL",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_F4FC25CE90264812",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_ACCESS_CONTROL"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_ACCESS_CONTROL:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C_PMT_TREND_NONMONOTONIC",
+          "evidence_ids": [
+            "E_33_F4FC25CE90264812"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The same Crossref trend shows the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "E_33_F4FC25CE90264812 shows that the 2024 count of 1070 is lower than the 2023 count of 1115, so the positive OLS slope does not imply a monotonic year-over-year increase. Accepting the Defense challenge is consistent with the Attack agreement and merely limits the interpretation of the same publication-activity trend.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA-R2-4",
+      "attack_claims": [
+        {
+          "claim_id": "A6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG and NIST SP 800-53 Rev.5 describe MFA, unique credential provisioning, account lockout, and alerting after unsuccessful logons as controls relevant to brute force techniques, without stating exact control effectiveness."
+        }
+      ],
+      "audit_id": "a9130069a74fe21a91528007",
+      "case_id": "main__brute_force__ids_ips",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "recommended_control",
+            "organizational_applicability",
+            "prioritized_defensive_practice"
+          ],
+          "available_at": "2023-03-01",
+          "content": "method for that asset (see below for scope). MFA options sorted by strength, high to\nlow, are as follows:\n1. Hardware-based, phishing-resistant MFA (e.g., FIDO/WebAuthn or public\nkey infrastructure (PKI) based - see CISA guidance in”Resources”);\n2. If such hardware-based MFA is not available, then mobile app-based soft tokens\n(preferably push notification with number matching) or emerging technology such as\nFIDO passkeys are used;\n3. MFA via short message service (SMS) or voice only used when no other options are\npossible.\nIT: All IT accounts leverage MFA to access organizational resources. Prioritize accounts\nwith highest risk, such as privileged administrative accounts for key IT systems.\nOT: Within OT environments, MFA is enabled on all accounts and systems that can be\naccessed remotely, including vendors/maintenance accounts, remotely accessible user\nand engineering workstations, and remotely accessible HMIs.\nIT and OT assets\nwith remote access,\nsuch as workstations\nand human-machine\ninterfaces (HMIs),\nwhere safe and\ntechnically capable\n• Brute Force (T1110)\n• Remote Services - Remote Desktop Protocol\n(T1021.001)\n• Remote Services - SSH (T1021.004)\n• Valid Accounts (T1078, ICS T0859)\n• External Remote Services (ICS T0822)\nPR.AC-7, PR.AC-1\n2",
+          "content_hash": "312b9513bcee9b9d4b7231f34ca4ede6013c0a7c2a0c671d264f5366a34a2ce4",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_23_312B9513BCEE9B9D",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2023-03-01",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Performance Goals (CPG)",
+          "source_document_id": "cisa-cpg",
+          "source_family": "G",
+          "source_locator": "page:14:chunk:2",
+          "source_registry_id": "23",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK",
+            "THREAT_PHISHING"
+          ]
+        },
+        {
+          "allowed_claim_types": [
+            "recommended_control",
+            "organizational_applicability",
+            "prioritized_defensive_practice"
+          ],
+          "available_at": "2023-03-01",
+          "content": "logging system. Security teams are notified (e.g., by an alert) after a specific number of\nconsecutive, unsuccessful login attempts in a short period (e.g., five failed attempts in\ntwo minutes). This alert is logged and stored in the relevant security or ticketing system\nfor retroactive analysis.\nFor IT assets, a system-enforced policy prevents future logins for the suspicious account.\nFor example, this could be for some minimum time, or until the account is re-enabled by\na privileged user. This configuration is enabled when available on an asset. For example,\nWindows 11 can automatically lock out accounts for 10-minutes after 10 incorrect logins\nover a 10-minute period.\nPassword-protected\nIT and OT assets,\nwhere safe and\ntechnically capable\n• Brute Force - Password Guessing (T1110.001)\n• Brute Force - Password Cracking (T1110.002)\n• Brute Force - Password Spraying (T1110.003)\n• Brute Force - Credential Stuffing (T1110.004)\nPR.AC-7",
+          "content_hash": "b21faa9377991f05d26cf73430d98afadb535d26fd51068906548a20a9759817",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_23_B21FAA9377991F05",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2023-03-01",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Performance Goals (CPG)",
+          "source_document_id": "cisa-cpg",
+          "source_family": "G",
+          "source_locator": "page:13:chunk:2",
+          "source_registry_id": "23",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK"
+          ]
+        },
+        {
+          "allowed_claim_types": [
+            "recommended_control",
+            "organizational_applicability",
+            "prioritized_defensive_practice"
+          ],
+          "available_at": "2023-03-01",
+          "content": "** OT assets that use a central authentication mechanism (such as Active Directory) are\nmost important to address. Examples of low-risk OT assets that may not be technically\nfeasible include those in remote locations, such as those on offshore rigs or wind\nturbines.\nPassword-protected\nIT assets and newly\nacquired OT assets.\nPassword-protected\nIT and Windows-\nbased OT assets\n• Valid Accounts - Default Accounts\n(T1078.001)\n• Valid Accounts (ICS T0859)\n• Brute Force - Password Guessing (T1110.001)\n• Brute Force - Password Cracking (T1110.002)\n• Brute Force - Password Spraying (T1110.003)\n• Brute Force - Credential Stuffing (T1110.004)\nPR.AC-1\nPR.AC-1\nUNIQUE CREDENTIALS\nRECOMMENDED ACTION\nOUTCOME\nTTP or RISK ADDRESSED\nSCOPE\nAttackers are unable to reuse compromised credentials to move laterally\nacross the organization, particularly between IT and OT networks.\nOrganizations provision unique and separate credentials for similar services and asset\naccess on IT and OT networks. Users do not (or cannot) reuse passwords for accounts,\napplications, services, etc. Service accounts/machine accounts have passwords that are\nunique from all member user accounts.\nIT and OT assets\n• Valid Accounts (T1078, ICS T0859)\n• Brute Force - Password Guessing\n(T1110.001)\nPR.AC-1",
+          "content_hash": "ebcab9508641e70313f93cb8507107064fccd6c67e17dee38be2a625e74ca71f",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_23_EBCAB9508641E703",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2023-03-01",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Performance Goals (CPG)",
+          "source_document_id": "cisa-cpg",
+          "source_family": "G",
+          "source_locator": "page:12:chunk:2",
+          "source_registry_id": "23",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK"
+          ]
+        },
+        {
+          "allowed_claim_types": [
+            "security_control",
+            "privacy_control"
+          ],
+          "available_at": "2020-09-23",
+          "content": "address. If automatic system lockout or execution of a delay algorithm is not implemented in\nsupport of the availability objective, organizations consider a combination of other actions to\nhelp prevent brute force attacks. In addition to the above, organizations can prompt users to\nrespond to a secret question before the number of allowed unsuccessful logon attempts is\nexceeded. Automatically unlocking an account after a specified period of time is generally not\npermitted. However, exceptions may be required based on operational mission or need.\nRelated Controls: AC-2, AC-9, AU-2, AU-6, IA-5.\nControl Enhancements:\n(1) UNSUCCESSFUL LOGON ATTEMPTS | AUTOMATIC ACCOUNT LOCK\n[Withdrawn: Incorporated into AC-7.]\n(2) UNSUCCESSFUL LOGON ATTEMPTS | PURGE OR WIPE MOBILE DEVICE\nPurge or wipe information from [Assignment: organization-defined mobile devices] based\non [Assignment: organization-defined purging or wiping requirements and techniques]\nafter [Assignment: organization-defined number] consecutive, unsuccessful device logon\nattempts.\nDiscussion: A mobile device is a computing device that has a small form factor such that it\ncan be carried by a single individual; is designed to operate without a physical connection;\npossesses local, non-removable or removable data storage; and includes a self-contained\npower source. Purging or wiping the device applies only to mobile devices for which the\norganization-defined number of unsuccessful logons occurs. The logon is to the mobile",
+          "content_hash": "fe58e4fcf044ede3217c6dde2dad61040825e6e3333151cadf8a3d9072e02c2a",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_25_FE58E4FCF044EDE3",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2020-09-23",
+          "retrieval_role": "neutral_candidate",
+          "source": "NIST SP 800-53 Rev.5",
+          "source_document_id": "nist-sp-800-53r5",
+          "source_family": "G",
+          "source_locator": "page:66:chunk:2",
+          "source_registry_id": "25",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BRUTE_FORCE_ATTACK"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_23_B21FAA9377991F05"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG describes alerting after consecutive unsuccessful login attempts and system-enforced login prevention for IT assets, mapped to brute-force subtechniques T1110.001, T1110.002, T1110.003, and T1110.004."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends MFA for IT accounts and remotely accessible OT assets, ranks hardware-based phishing-resistant MFA highest, and maps the control to brute force, valid accounts, and external remote services."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_23_EBCAB9508641E703"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends unique and separate credentials for similar services and asset access on IT and OT networks, mapped to valid accounts and brute-force password guessing."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev 5 discusses automatic account lock or delay after unsuccessful logons and, when automatic lockout is not implemented, alternative actions to help prevent brute force."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 2
+    },
+    {
+      "adjudication_id": "MA-2",
+      "attack_claims": [
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_20_913B6F999A0F1458"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "NIST SP 800-161r1 C-SCRM guidance identifies insider threat bypass of security mechanisms as a risk and recommends less predictable predefined frequencies for automated component-inventory data collection."
+        }
+      ],
+      "audit_id": "b6c75f33beb101d292255e0f",
+      "case_id": "main__insider_threat__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "supply_chain_risk_control",
+            "supply_chain_governance"
+          ],
+          "available_at": "2022-05-05",
+          "content": "information system component, or network component, the enterprise needs to update the inventory to\nensure traceability for tracking critical components. In addition, the information system’s configuration\nneeds to be updated to ensure an accurate inventory of supply chain protections and then re-baselined\naccordingly.\nLevel(s): 3\n(2)\nSYSTEM COMPONENT INVENTORY | AUTOMATED MAINTENANCE\nSupplemental C-SCRM Guidance: The enterprise should implement automated maintenance\nmechanisms to ensure that changes to component inventory for the information systems and networks\nare monitored for installation, update, and removal. When automated maintenance is performed with a\npredefined frequency and with the automated collation of relevant inventory information about each\ndefined component, the enterprise should ensure that updates are available to relevant stakeholders for\nevaluation. Predefined frequencies for data collection should be less predictable in order to reduce the\nrisk of an insider threat bypassing security mechanisms.\nLevel(s): 3",
+          "content_hash": "913b6f999a0f1458f89481a64e483eb407127cc6e341a8bbd06e7bd53c5d9d31",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_20_913B6F999A0F1458",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2022-05-05",
+          "retrieval_role": "neutral_candidate",
+          "source": "NIST SP 800-161 Rev.1 Cybersecurity Supply Chain Risk Management",
+          "source_document_id": "nist-sp-800-161r1",
+          "source_family": "F",
+          "source_locator": "page:104:chunk:2",
+          "source_registry_id": "20",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_INSIDER_THREAT",
+            "THREAT_SUPPLY_CHAIN"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C4",
+          "evidence_ids": [
+            "E_20_913B6F999A0F1458"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-161 Rev.1 C-SCRM guidance links insider-threat risk reduction to automated component-inventory maintenance with predefined data-collection frequencies that are less predictable."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "E_20 supports the factual statement that NIST SP 800-161 Rev.1 C-SCRM guidance recommends less predictable predefined data-collection frequencies to reduce the risk of an insider threat bypassing security mechanisms. However, the record is control guidance, not measured risk reduction and not direct directional evidence for a THREAT_INSIDER_THREAT NoP/NoI trajectory or PMT trajectory. The defense revision is better grounded in the surfaced evidence boundary.",
+      "required_revision": "In the final post-assessment, recast Attack C2 as NEUTRAL_CONTEXT operational-control guidance and explicitly state that E_20 does not establish a directional THREAT_INSIDER_THREAT NoP/NoI trajectory or PMT trajectory.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ_004",
+      "attack_claims": [
+        {
+          "claim_id": "AF_C6",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The cutoff-constrained Crossref trend reports NLP/LLM security publication counts increasing from 14 in 2021 to 87 in 2024, with an OLS slope of 23.4 works/year."
+        }
+      ],
+      "audit_id": "c7341b6e66b59b916432b0d8",
+      "case_id": "main__ddos__nlp_llm",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=NLP/LLM; query.title='NLP/LLM'; query.bibliographic='security'; annual publication counts: 2021=14, 2022=18, 2023=33, 2024=87; OLS_slope=23.400000 works/year; first_to_last_delta=73; total_results=152. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "adc8bc66d812799fa9ab86238ae550dfedcb7519ba9dfd9b6ec9f854734cfd28",
+          "evidence_chain_id": "crossref-publication-trend:PMT_NLP_LLM",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_ADC8BC66D812799F",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_NLP_LLM"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_NLP_LLM:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_ADC8BC66D812799F"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Crossref cutoff-constrained publication-trend records for PMT_NLP_LLM, restricted to records first deposited on or before 2024-12-31, report security-related NLP/LLM annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works/year and a first-to-last delta of 73 works."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "E_33_ADC8BC66D812799F explicitly supports the cutoff-constrained 2021-2024 NLP/LLM security publication counts, OLS slope, first-to-last delta, and its own limitation that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because the frozen PMT state modality is NoP and the forecast PMT direction is decreasing, this increasing publication-activity trend is a legitimate challenge to the forecasted PMT NoP trajectory. Both critics are correctly bounded to publication-activity validation rather than deployment or effectiveness.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA-3",
+      "attack_claims": [
+        {
+          "claim_id": "A5",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        }
+      ],
+      "audit_id": "d1d1dc5b91f418e25caea3f9",
+      "case_id": "main__brute_force__ids_ips",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "directional_publication_trend"
+          ],
+          "available_at": "2024-12-31",
+          "content": "Crossref cutoff-constrained PMT publication trend. PMT=IDS/IPS; query.title='IDS/IPS'; query.bibliographic='security'; annual publication counts: 2021=44, 2022=43, 2023=52, 2024=58; OLS_slope=5.100000 works/year; first_to_last_delta=14; total_results=197. The query is restricted to Crossref records first deposited on or before 2024-12-31, so post-cutoff deposits of older publications are excluded. This is an external publication-activity validation axis independent of the Scopus-derived NoP model input. It does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+          "content_hash": "a707006877bfd1c280b7642b73881eb64fb6c8c77efd56df4b740676679f47a4",
+          "evidence_chain_id": "crossref-publication-trend:PMT_IDS_IPS",
+          "evidence_date": "2024-12-31",
+          "evidence_id": "E_33_A707006877BFD1C2",
+          "evidence_type": "academic_publication_trend",
+          "pmt_ids": [
+            "PMT_IDS_IPS"
+          ],
+          "prohibited_claim_types": [
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "Crossref Cutoff-Constrained PMT Publication Trend",
+          "source_document_id": "crossref-pmt-publication-trends",
+          "source_family": "H",
+          "source_locator": "Crossref:publication-trend:PMT_IDS_IPS:2021-2024:created<=2024-12-31",
+          "source_registry_id": "33",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref record reports IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year."
+        }
+      ],
+      "next_round_focus": [
+        {
+          "attack_claim_ids": [
+            "A1"
+          ],
+          "defense_claim_ids": [
+            "D9"
+          ],
+          "focus_id": "NR-1",
+          "instruction": "Re-examine whether D9 should be treated as direct THREAT_TRAJECTORY support for a brute-force NoI increase. Align D9 to neutral observed threat context supported by the surfaced DBIR record, and do not infer a future increase from the word 'continue' without a surfaced temporal brute-force NoI signal."
+        },
+        {
+          "attack_claim_ids": [
+            "A2"
+          ],
+          "defense_claim_ids": [
+            "D10"
+          ],
+          "focus_id": "NR-2",
+          "instruction": "Re-examine whether A2 should be framed as CHALLENGES_FORECAST. Align A2 to neutral observed initial-infection-vector context supported by the surfaced Mandiant record, and treat the 6% Brute Force value as chart-data-only if retained."
+        }
+      ],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "The surfaced Crossref cutoff-constrained publication-trend record directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year. Both critics agree that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The claim is therefore well grounded within the surfaced evidence boundary.",
+      "required_revision": null,
+      "round_action": "CONTINUE",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_1",
+      "attack_claims": [
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The IBM X-Force report states that ransomware, which held the top spot since at least 2020, constituted 17% of incidents remediated in 2022, reinforcing the enduring threat this malware poses."
+        }
+      ],
+      "audit_id": "d1df3b584ebaa0b054fd4c63",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2023-12-31",
+          "content": "5\nTop actions on objectives observed:\nIn almost one-quarter of all incidents\nremediated in 2022, the deployment of\nbackdoors at 21% was the top action on\nobjective. Notably, an early year spike\nin Emotet, a multipurpose malware,\ncontributed significantly to the jump in\nbackdoor activity observed year over year.\nDespite this spike in backdoor activity,\nransomware, which held the top spot since\nat least 2020, constituted a large share\nof the incidents at 17%, reinforcing the\nenduring threat this malware poses.\nExtortion was the most common attack\nimpact on organizations: At 27%, extortion\nwas the clear impact of choice by threat\nactors. Victims in manufacturing accounted\nfor 30% of incidents that resulted in\nextortion, as cybercriminals continued the\ntrend of exploiting a strained industry.\nPhishing was the top initial access vector:\nPhishing remains the leading infection\nvector, identified in 41% of incidents,\nfollowed by exploitation of public-facing\napplications in 26%. Infections by\nmalicious macros have fallen out of favor,\nlikely due to Microsoft’s decision to block\nmacros by default. Malicious ISO and LNK\nfiles use escalated as the primary tactic to\ndeliver malware through spam in 2022.\nIncrease in hacktivism and destructive\nmalware: Russia’s war in Ukraine\nopened the door to what many in the\ncybersecurity community expected to\nbe a showcase of how cyber enables\n5\nNext chapter\nPrevious chapter\nReport highlights\n02\nmodern warfare. Although the direst\ncyberspace predictions haven’t come to\nfruition as of this publication, there was\na notable resurgence of hacktivism and\ndestructive malware. X-Force also observed\nunprecedented shifts in the cybercriminal\nworld with increased cooperation between\ncybercriminal groups, and Trickbot gangs\ntargeting Ukrainian organizations.",
+          "content_hash": "270a1e7c47acc4ffaee7f2d67a72e0263bf3d443370c590e026941d633ee4a25",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_04_270A1E7C47ACC4FF",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2023-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "IBM X-Force Threat Intelligence Index",
+          "source_document_id": "xforce-2023",
+          "source_family": "B",
+          "source_locator": "page:5:chunk:1",
+          "source_registry_id": "04",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_BACKDOOR",
+            "THREAT_MALWARE",
+            "THREAT_PHISHING",
+            "THREAT_RANSOMWARE"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C03",
+          "evidence_ids": [
+            "E_04_270A1E7C47ACC4FF"
+          ],
+          "forecast_component": "THREAT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that ransomware constituted 17% of remediated incidents in 2022 and had held the top action-on-objective position since at least 2020, while extortion was the most common attack impact at 27% and phishing remained the leading initial access vector at 41%."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_BOTH",
+      "rationale": "Both Attack C2 and Defense C03 rest on the same surfaced IBM X-Force excerpt, which reports ransomware at 17% of remediated incidents in 2022 and as having held the top action-on-objective position since at least 2020. The surfaced text is an incident-share and enduring-threat observation, not a direct temporal measurement of ransomware incident count or frequency. The round responses converge on the need to treat this as operational threat-pattern or contextual threat-reality support rather than direct NoI trajectory support.",
+      "required_revision": "Both critics should recast the E_04 X-Force observation as observed threat-pattern or contextual threat-reality support: ransomware was a top action-on-objective and accounted for 17% of remediated incidents in 2022, with extortion and phishing as reported context. Remove or downgrade any reading that directly supports a NoI incident-count or frequency trajectory; if a forecast relation is retained, it should be neutral context rather than direct SUPPORTS_FORECAST for threat trajectory.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ_R1_04",
+      "attack_claims": [
+        {
+          "claim_id": "ATK_C3",
+          "evidence_ids": [
+            "E_10_B4F773BEC65685CC"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The CISA ICS advisory for Kastle access-control system firmware states that successful exploitation of the listed vulnerabilities could allow an attacker to access sensitive information on the affected product."
+        },
+        {
+          "claim_id": "ATK_C4",
+          "evidence_ids": [
+            "E_10_B4F773BEC65685CC"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "The CISA ICS advisory for Kastle access-control system firmware states that no known public exploitation specifically targeting the listed vulnerabilities had been reported to CISA at that time."
+        }
+      ],
+      "audit_id": "d8a25c7957d9f55712affe68",
+      "case_id": "main__targeted_attack__access_control",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_ttp",
+            "campaign_evidence",
+            "malware_behavior",
+            "official_mitigation"
+          ],
+          "available_at": "2024-09-19",
+          "content": "ICSA-24-263-05 | CVEs=CVE-2024-45861,CVE-2024-45862 | products=Kastle Systems; Access Control System Firmware; <May_1_2024; Kastle Systems Access Control System Firmware: <May_1_2024 | All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/. | Successful exploitation of these vulnerabilities could allow an attacker to access sensitive information on the affected product. | Commercial Facilities, Government Facilities | Worldwide | United States | CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. | CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. | CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. | Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. | Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. | No known public exploitation specifically targeting these vulnerabilities have been reported to CISA at this time.",
+          "content_hash": "b4f773bec65685cc9d22b1eb2334bdd379dded7a583a8503e0cd4e5f7555f3fe",
+          "evidence_chain_id": "ICSA-24-263-05",
+          "evidence_date": "2024-09-19",
+          "evidence_id": "E_10_B4F773BEC65685CC",
+          "evidence_type": "official_advisory_record",
+          "pmt_ids": [
+            "PMT_ACCESS_CONTROL",
+            "PMT_HTTPS",
+            "PMT_RISK_ASSESSMENT"
+          ],
+          "prohibited_claim_types": [
+            "product_roi"
+          ],
+          "publication_date": "2024-09-19",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Advisories / Malware Analysis Reports",
+          "source_document_id": "cisa-csaf",
+          "source_family": "C",
+          "source_locator": "CISA-CSAF:ICSA-24-263-05",
+          "source_registry_id": "10",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": []
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C_KASTLE_ACCESS_CONTROL_VULN",
+          "evidence_ids": [
+            "E_10_B4F773BEC65685CC"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA advisory ICSA-24-263-05 states that successful exploitation of Kastle Systems Access Control System Firmware vulnerabilities could allow an attacker to access sensitive information and that no known public exploitation specifically targeting these vulnerabilities had been reported to CISA at that time."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_ATTACK",
+      "rationale": "E_10_B4F773BEC65685CC supports both the potential Kastle capability to access sensitive information and the point-in-time statement that no known public exploitation specifically targeting those vulnerabilities had been reported to CISA. Neither statement establishes a broader exploitation_signal, a generalized absence of exploitation, or direct movement in targeted-attack incident count or frequency. Both Attack claims should therefore be narrowed to product-specific, point-in-time context.",
+      "required_revision": "Revise ATK_C3 to limit the Kastle capability statement to product-specific potential exploitation context. Revise ATK_C4 to limit the no-known-public-exploitation statement to the specific vulnerabilities and the reporting point in time, without presenting it as a broader missing exploitation_signal or as direct evidence about the 2025-2027 threat trajectory.",
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_7",
+      "attack_claims": [
+        {
+          "claim_id": "C8",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The CISA CPG text mentions ransomware as an example of unprecedented cyber threats and frames the CPGs as aimed at the most common and impactful cyber risks."
+        }
+      ],
+      "audit_id": "da873ce13ccc7041c82ad194",
+      "case_id": "main__ransomware__cryptography",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "recommended_control",
+            "organizational_applicability",
+            "prioritized_defensive_practice"
+          ],
+          "available_at": "2023-03-01",
+          "content": "1\nA LETTER FROM OUR DIRECTOR\nAs the nation’s cyber defense agency, one of CISA’s most important roles is to understand the challenges facing\norganizations, both large and small, in order to make progress on the shared goal of reducing cyber risk to the critical\ninfrastructure Americans rely on every day. Over the past several years, as our nation has faced unprecedented cyber\nthreats from ransomware to nation-state espionage, we have heard a common refrain from organizations across the\nspectrum, from the largest multinational corporations to state and local governments, to critical infrastructure entities of\nall sizes: How can we focus investment toward the most impactful security outcomes?\nWe hear small- and medium-sized hospitals and utilities ask how they can make progress with limited budgets, staffing,\nand expertise. We hear organizations with mature cyber programs ask what more they can do to prevent attacks from\nadvanced threat actors, manage risks to less mature organizations in their supply chain, and help reduce broader risk to\nthe nation. We hear the global Operational Technology and Industrial Control Systems (OT/ICS) community clamor to be\nseen and recognized alongside traditional IT security and supported in their essential role of defending our increasingly\nconnected electric grids, hospitals, water facilities, and other critical infrastructure.\nIt became clear that even with comprehensive guidance from sources like the NIST Cybersecurity Framework, many\norganizations would benefit from help identifying and prioritizing the most important cybersecurity practices along with\nsupport in making a compelling argument to ensure adequate resources for driving down risk. Ultimately, prioritized\ninvestment will help meaningfully address serious risks to the safety, health, and livelihoods of the American people.\nThe Cross-Sector Cybersecurity Performance Goals (CPGs) strive to address this need by providing an approachable\ncommon set of IT and OT cybersecurity protections that are clearly defined, straightforward to implement, and aimed\nat addressing some of the most common and impactful cyber risks. The CPGs are written and designed to be easy to\nunderstand and relatively easy to communicate with non-technical audiences, including senior business leadership.",
+          "content_hash": "ac2a498b747552df9765b185028770a44731e983cd42c33423210ff834309127",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_23_AC2A498B747552DF",
+          "evidence_type": "official_guidance_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_effectiveness",
+            "product_roi"
+          ],
+          "publication_date": "2023-03-01",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Performance Goals (CPG)",
+          "source_document_id": "cisa-cpg",
+          "source_family": "G",
+          "source_locator": "page:2:chunk:1",
+          "source_registry_id": "23",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_RANSOMWARE",
+            "THREAT_SUPPLY_CHAIN"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "C08",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA's Cross-Sector Cybersecurity Performance Goals (CPG) address the challenge of prioritizing security investments against risks including ransomware, targeting organizations across the size spectrum including critical infrastructure, state and local government, and healthcare."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "The CISA CPG excerpt references ransomware among unprecedented cyber threats and frames the CPGs as aimed at common and impactful cyber risks across organizations of different sizes. Both claims are supported as neutral organizational and risk-prioritization context, not direct NoI or NoP trajectory evidence.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "ADJ-6-A5-D8",
+      "attack_claims": [
+        {
+          "claim_id": "A5",
+          "evidence_ids": [
+            "E_08_197B243FDF3AA15A",
+            "E_08_FEE46219AABDA967"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records confirmed exploitation of CVE-2017-8540 in Microsoft Malware Protection Engine and confirmed exploitation of CVE-2013-7331 in Internet Explorer, the latter allowing detection of anti-malware applications."
+        }
+      ],
+      "audit_id": "e00d31ea3df6fd3e0837bd91",
+      "case_id": "main__malware__anomaly_detection",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "confirmed_exploitation"
+          ],
+          "available_at": "2022-03-03",
+          "content": "CVE-2017-8540 | Microsoft | Malware Protection Engine | Microsoft Malware Protection Engine Improper Restriction of Operations Vulnerability | The Microsoft Malware Protection Engine running on Microsoft Forefront and Microsoft Defender on Microsoft Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8.1, Windows Server 2012 Gold and R2, Windows RT 8.1, Windows 10 Gold, 1511, 1607, and 1703, and Windows Server 2016, Microsoft Exchange Server 2013 and 2016, does not properly scan a specially crafted file leading to memory corruption. aka \"Microsoft Malware Protection Engine Remote Code Execution Vulnerability\". | Apply updates per vendor instructions. | Unknown",
+          "content_hash": "197b243fdf3aa15aa3f4379498396b49b231c3f4f3a92273272ab96e7f7a0e5e",
+          "evidence_chain_id": "CVE-2017-8540",
+          "evidence_date": "2022-03-03",
+          "evidence_id": "E_08_197B243FDF3AA15A",
+          "evidence_type": "confirmed_exploitation_record",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "prevalence_magnitude",
+            "vulnerability_severity"
+          ],
+          "publication_date": "2022-03-03",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Known Exploited Vulnerabilities (KEV)",
+          "source_document_id": "cisa-kev",
+          "source_family": "C",
+          "source_locator": "KEV:CVE-2017-8540",
+          "source_registry_id": "08",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_MALWARE",
+            "THREAT_VULNERABILITY"
+          ]
+        },
+        {
+          "allowed_claim_types": [
+            "confirmed_exploitation"
+          ],
+          "available_at": "2022-05-25",
+          "content": "CVE-2013-7331 | Microsoft | Internet Explorer | Microsoft Internet Explorer Information Disclosure Vulnerability | An information disclosure vulnerability exists in Internet Explorer which allows resources loaded into memory to be queried. This vulnerability could allow an attacker to detect anti-malware applications. | Apply updates per vendor instructions. | Unknown",
+          "content_hash": "fee46219aabda9675a3a1704c838d201ca43d512b92255889e25d2c8846a5e1d",
+          "evidence_chain_id": "CVE-2013-7331",
+          "evidence_date": "2022-05-25",
+          "evidence_id": "E_08_FEE46219AABDA967",
+          "evidence_type": "confirmed_exploitation_record",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "prevalence_magnitude",
+            "vulnerability_severity"
+          ],
+          "publication_date": "2022-05-25",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Known Exploited Vulnerabilities (KEV)",
+          "source_document_id": "cisa-kev",
+          "source_family": "C",
+          "source_locator": "KEV:CVE-2013-7331",
+          "source_registry_id": "08",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_MALWARE",
+            "THREAT_VULNERABILITY"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_08_197B243FDF3AA15A",
+            "E_08_FEE46219AABDA967"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA KEV records identify CVE-2017-8540 in Microsoft Malware Protection Engine and CVE-2013-7331 in Internet Explorer as known exploited vulnerabilities."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "ACCEPT_BOTH",
+      "rationale": "Both claims accurately identify CVE-2017-8540 (Microsoft Malware Protection Engine) and CVE-2013-7331 (Internet Explorer, information disclosure allowing anti-malware detection) as confirmed exploited vulnerabilities per CISA KEV records. The evidence directly supports both identifications. No substantive dispute exists.",
+      "required_revision": null,
+      "round_action": "STOP",
+      "round_index": 1
+    },
+    {
+      "adjudication_id": "MA_C1_C2_D4",
+      "attack_claims": [
+        {
+          "claim_id": "C1",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied CISA/Siemens advisory records a cross-site scripting vulnerability in SCALANCE switches that, if used by a threat actor, could result in stealing session cookies and session hijacking."
+        },
+        {
+          "claim_id": "C2",
+          "evidence_ids": [
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2024 reports security misconfigurations as the most observed OWASP web risk in penetration testing findings, including concurrent user sessions described as able to weaken MFA through session hijacking, and reports public-facing application exploitation in 29% of incidents, slightly higher than 2022."
+        }
+      ],
+      "audit_id": "f3fb636349af9354752a5404",
+      "case_id": "main__session_hijacking__https",
+      "cited_evidence_records": [
+        {
+          "allowed_claim_types": [
+            "observed_ttp",
+            "campaign_evidence",
+            "malware_behavior",
+            "official_mitigation"
+          ],
+          "available_at": "2022-11-08",
+          "content": "ICSA-22-286-15 | CVEs=CVE-2022-40631 | products=Siemens; SCALANCE X200-4P IRT (6GK5200-4AH00-2BA3); <V5.5.0; SCALANCE X200-4P IRT (6GK5200-4AH00-2BA3); SCALANCE X201-3P IRT (6GK5201-3BH00-2BA3); <V5.5.0; SCALANCE X201-3P IRT (6GK5201-3BH00-2BA3); SCALANCE X201-3P IRT PRO (6GK5201-3JR00-2BA6); <V5.5.0; SCALANCE X201-3P IRT PRO (6GK5201-3JR00-2BA6); SCALANCE X202-2IRT (6GK5202-2BB10-2BA3); <V5.5.0; SCALANCE X202-2IRT (6GK5202-2BB10-2BA3); SCALANCE X202-2P IRT (6GK5202-2BH00-2BA3); <V5.5.0; SCALANCE X202-2P IRT (6GK5202-2BH00-2BA3); SCALANCE X202-2P IRT PRO (6GK5202-2JR00-2BA6); <V5.5.0; SCALANCE X202-2P IRT PRO (6GK5202-2JR00-2BA6); SCALANCE X204-2 (6GK5204-2BB10-2AA3); <V5.2.5; SCALANCE X204-2 (6GK5204-2BB10-2AA3); SCALANCE X204-2FM (6GK5204-2BB11-2AA3); <V5.2.5; SCALANCE X204-2FM (6GK5204-2BB11-2AA3); SCALANCE X204-2LD (6GK5204-2BC10-2AA3); <V5.2.5; SCALANCE X204-2LD (6GK5204-2BC10-2AA3); SCALANCE X204-2LD TS (6GK5204-2BC10-2CA2); <V5.2.5; SCALANCE X204-2LD TS (6GK5204-2BC10-2CA2); SCALANCE X204-2TS (6GK5204-2BB10-2CA2); <V5.2.5; SCALANCE X204-2TS (6GK5204-2BB10-2CA2); SCALANCE X204IRT (6GK5204-0BA00-2BA3); <V5.5.0; SCALANCE X204IRT (6GK5204-0BA00-2BA3); SCALANCE X204IRT PRO (6GK5204-0JA00-2BA6); <V5.5.0; SCALANCE X204IRT PRO (6GK5204-0JA00-2BA6) | There is a cross-site scripting vulnerability that affects the SCALANCE switches. This vulnerability if used by a threat actor could result in the stealing of session cookies and session hijacking.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions. | As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: \nhttps://www.siemens.com/industrialsecurity | For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories | Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use. | All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/. | This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory. | Multiple | Worldwide | Germany | CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. | Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. | Locate control system networks and remote devices behind firewalls and isolate them from business networks. | When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. | CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. | CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. | CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. | Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+          "content_hash": "ac5a58af5e0152291b70d1a5cfc61436769c711039313ae6b9d9bd0d3127ae08",
+          "evidence_chain_id": "ICSA-22-286-15",
+          "evidence_date": "2022-10-11",
+          "evidence_id": "E_10_AC5A58AF5E015229",
+          "evidence_type": "official_advisory_record",
+          "pmt_ids": [
+            "PMT_HTTPS",
+            "PMT_RISK_ASSESSMENT",
+            "PMT_VPN"
+          ],
+          "prohibited_claim_types": [
+            "product_roi"
+          ],
+          "publication_date": "2022-10-11",
+          "retrieval_role": "neutral_candidate",
+          "source": "CISA Cybersecurity Advisories / Malware Analysis Reports",
+          "source_document_id": "cisa-csaf",
+          "source_family": "C",
+          "source_locator": "CISA-CSAF:ICSA-22-286-15",
+          "source_registry_id": "10",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_SESSION_HIJACKING",
+            "THREAT_VULNERABILITY"
+          ]
+        },
+        {
+          "allowed_claim_types": [
+            "observed_threat_pattern",
+            "directional_threat_trend",
+            "observed_attack_vector",
+            "observed_adversary_behavior"
+          ],
+          "available_at": "2024-12-31",
+          "content": "10\nNext chapter\nPrevious chapter\n03\nTop initial access vectors\nNew to the 2024 IBM X-Force Threat\nIntelligence Index, X-Force reviewed\nhundreds of findings from our penetration\ntesting data to reveal the top Open\nWorldwide Application Security Project\n(OWASP) web application security risks.\nThe most observed risk across client\nenvironments globally was security\nmisconfigurations, accounting for\n30% of total findings. Of this category,\npenetration testers found more than\n140 findings of ways that attackers\ncan exploit misconfigurations. Of these\nmisconfigurations, the top offenses\nincluded allowing concurrent user sessions\nin the application at 15%, which could\nweaken MFA through session hijacking,\nverbose error messages at 12% and\nexcessive session timeouts at 8%.\nSecurity misconfigurations top web\napplication risk\nIn third place, exploitation of public-facing\napplications—defined as adversaries taking\nadvantage of a weakness in an internet-\nfacing computer or program—was identified\nin 29% of incidents, which is slightly higher\nthan what we observed in 2022.\nIn 2023, numerous organizations\nexperienced cyberattacks as a result of\nwidespread exploitation of managed file\ntransfer (MFT) tools, such as MOVEit and\nGoAnywhere. MFT exploitation poses a\nhigh risk, as these internet-connected file\ntransfer services facilitate the immediate\naccess of sensitive enterprise data by\nattackers. Until 2023, many defenders\noverlooked the high-risk nature of MFT\ntools, leading to inadequately protected\ndeployments without proper detection\nand response strategies. This lack of\nconsideration provided threat actors with\na significant time advantage, allowing\nthem to scale their attacks undetected.\nLast year’s mass exploitation of MFTs, and\nthe ongoing efforts of ransomware groups\nfocusing on data extortion, underscore the\nneed for organizations to fully understand\ntheir enterprise architecture. To facilitate\nthis understanding, organizations should\ndevelop threat models that map out their\nsystems and the associated attack paths to\ntheir sensitive data stored on premises, in\nthe cloud, or through third parties.",
+          "content_hash": "b9a3190d9ca152a37175f1b5c4d8b920986bf753759f291505ec6cbc9248ef3a",
+          "evidence_chain_id": null,
+          "evidence_date": null,
+          "evidence_id": "E_04_B9A3190D9CA152A3",
+          "evidence_type": "annual_report_chunk",
+          "pmt_ids": [],
+          "prohibited_claim_types": [
+            "exact_future_probability",
+            "product_roi",
+            "product_tco",
+            "universal_control_effectiveness"
+          ],
+          "publication_date": "2024-12-31",
+          "retrieval_role": "neutral_candidate",
+          "source": "IBM X-Force Threat Intelligence Index",
+          "source_document_id": "xforce-2024",
+          "source_family": "B",
+          "source_locator": "page:10:chunk:1",
+          "source_registry_id": "04",
+          "source_snapshot_id": "stage0-2026-09-13-v4",
+          "threat_ids": [
+            "THREAT_RANSOMWARE",
+            "THREAT_SESSION_HIJACKING"
+          ]
+        }
+      ],
+      "defense_claims": [
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_10_AC5A58AF5E015229",
+            "E_04_B9A3190D9CA152A3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Supplied threat records report session-hijacking mechanisms that include XSS-based session cookie stealing in SCALANCE switches and web-application misconfigurations, such as allowing concurrent user sessions, that could weaken MFA through session hijacking."
+        }
+      ],
+      "next_round_focus": [],
+      "outcome": "REVISE_DEFENSE",
+      "rationale": "E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3 support the reported session-hijacking mechanisms and web-application risk context. They do not provide a supplied temporal threat NoP or NoI trajectory, nor a session-hijacking exploitation_signal, sufficient to directly challenge the forecast direction or the threat-minus-PMT gap direction. The 29% public-facing application figure in E_04 is at most weak directional context for a broader attack vector, not a session-hijacking NoP trend.",
+      "required_revision": "Reclassify D4 as NEUTRAL_CONTEXT. Limit it to reported session-hijacking mechanisms and risk context. Do not assert a direct CHALLENGES_FORECAST trajectory without a supplied exploitation_signal or threat NoP/NoI trend. If referencing E_04_B9A3190D9CA152A3, explicitly note that the 29% public-facing application comparison is not a session-hijacking NoP trend.",
+      "round_action": "STOP",
+      "round_index": 1
+    }
+  ],
+  "per_case_outcome_stratum": 1,
+  "population_count": 51,
+  "sample_count": 23,
+  "schema_version": "stage7-mediator-audit-sample-v1",
+  "selection_rule": "one deterministic hash-selected adjudication per (case_id,outcome) stratum; plus every round_index>1 adjudication; no verifier output or Stage 6 recommendation used",
+  "selection_seed": 20260916
+}

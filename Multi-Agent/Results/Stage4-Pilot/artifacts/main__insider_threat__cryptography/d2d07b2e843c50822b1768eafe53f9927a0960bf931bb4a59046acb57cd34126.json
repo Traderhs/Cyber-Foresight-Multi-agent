@@ -1,0 +1,450 @@
+{
+  "artifact_sha256": "6ac94104e637e1c21ddc419872573e023aa19286799b888875a1cd310a5e72f8",
+  "case_id": "main__insider_threat__cryptography",
+  "constrained_output_schema_sha256": {
+    "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f": {
+      "financial_adoption": "3f28bab6ee54ad96693b1fc36c1dccbca821bd51ac662edf312849a0e6374372",
+      "institutional_regional": "2ecf6fc7e50581bea1e45d377a99ecb6e6306114da0d7b0135b6b6ff0b094d4d",
+      "technical_feasibility": "80f827647ba2de51aa301e2ec50215fb3fec1d56baa5259d52460cc0533d5e34"
+    }
+  },
+  "created_at": "2026-09-14T04:43:01.007593+00:00",
+  "decision_object_payload_sha256": {
+    "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f": "bded00bf6d77a0ac530bf57c6fd8088f7e05b4320b5034277ccbf0c8dede166d"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__insider_threat__cryptography",
+    "evaluations": [
+      {
+        "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FAC-1",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 describes cryptography as usable for security solutions, including protection of classified information and controlled unclassified information, digital signatures, information separation, and random number/hash generation, and states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FAC-2",
+              "evidence_ids": [
+                "E_26_92664A4339CF24C9"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment context references personnel responsible for the insider threat program, members of a cross-discipline insider threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FAC-3",
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA Insider Threat Mitigation Guide describes an insider threat mitigation program as spanning the entire organization and employing multi-disciplinary capabilities enabled by technologies and/or dedicated personnel based on organization type, size, culture, nature, business value, and risk tolerance.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FAC-4",
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA Insider Threat Mitigation Guide states that some mitigation measures are cost prohibitive and that projected cost savings may be a significant determinant of an insider threat mitigation program’s ROI; it cites a 2019 Ponemon Institute report concluding that organizations with active threat management programs in place averaged a cost savings of $1.2 million per incident prevented.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FAC-5",
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST AI 100-4 describes digital signatures as a more robust solution than recomputable content/metadata fingerprints for metadata authentication, with a digital signature algorithm including generation and verification processes and signatory use of a private key.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FAC-6",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained publication trend for PMT_CRYPTOGRAPHY reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, and explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific cost feasibility judgment requires explicit budget authority, cost estimates, funding limits, and payback or cost-savings data for the selected cryptography scope.",
+            "A staffing/adoption burden judgment requires evidence of organization type, size, existing security/cryptography expertise, available dedicated personnel, and cross-functional roles relevant to insider-threat program responsibilities.",
+            "An infrastructure readiness judgment requires evidence of existing cryptographic systems, key-management or digital-signature capabilities, integration points, and deployment prerequisites.",
+            "A timing feasibility judgment requires implementation-duration evidence, resource-loading estimates, and readiness dates within the frozen 2025-2027 window.",
+            "If the adopting organization lacks sufficient budget, staffing, or infrastructure, the general cost-prohibitive warning in E_22_C239828119FC69CD should be treated as a material conditional barrier."
+          ],
+          "constraints": [
+            "Cryptography deployment may require defining types of cryptography for each specified cryptographic use and implementing cryptography in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines (E_25_746173685B235ED2).",
+            "Insider-threat-related assessment context indicates reliance on personnel responsible for the insider threat program, a cross-discipline incident handling team, legal counsel, and information security/privacy responsibilities (E_26_92664A4339CF24C9).",
+            "Insider threat mitigation is described as organization-wide and tailored to organization type, size, culture, nature, business value, and risk tolerance, with multi-disciplinary capabilities enabled by technologies and/or dedicated personnel (E_22_C239828119FC69CD).",
+            "The insider threat mitigation guide identifies cost-prohibitive mitigation measures and cites a non-cryptography-specific cost-savings example of $1.2 million per incident prevented for organizations with active threat management programs (E_22_C239828119FC69CD)."
+          ],
+          "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+          "evidence_gaps": [
+            "Missing deployment-specific budget, cost estimates, funding limits, payback period, or opportunity-cost data for PMT_CRYPTOGRAPHY; frozen budget_context is null.",
+            "Missing organization type, size, staffing capacity, existing cryptography/insider-threat program maturity, and available cross-functional roles; frozen organization_type is null.",
+            "Missing infrastructure context, including existing cryptographic systems, key-management capability, integration points, and deployment prerequisites; frozen infrastructure_context is null.",
+            "Missing region-specific or jurisdiction-specific legal/regulatory obligations; frozen region is null, while E_25_746173685B235ED2 indicates implementation follows applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+            "Missing implementation timing evidence such as deployment duration, resource loading, project phases, contract/vendor lead times, or readiness dates within the frozen 2025-2027 window."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The frozen decision object leaves budget_context, organization_type, infrastructure_context, and region null. The supplied evidence provides general cryptography control context and insider-threat program context, including a warning that some mitigation measures can be cost prohibitive and a non-cryptography-specific cost-savings citation, but it does not provide deployment-specific cost, staffing capacity, infrastructure readiness, opportunity cost, or implementation timing for adopting PMT_CRYPTOGRAPHY. Therefore, financial/adoption feasibility is indeterminate rather than supported or materially challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "C-IR-001",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 record describes cryptography as usable to support security solutions, including protection of classified information and controlled unclassified information, digital signatures, enforcement of information separation, and random number/hash generation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-002",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 record states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-003",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 record describes organization-defined types of cryptography for each specified cryptographic use and mentions FIPS-validated and NSA-approved cryptography as generally applicable examples, with possible organizational specification for classified information or digital signatures.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-004",
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA insider-threat mitigation record describes an insider threat mitigation program as spanning the entire organization, using training and awareness, policy and procedure, management practices, multidisciplinary capabilities, and a detect/assess/manage framework.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-005",
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA insider-threat mitigation record states that effective insider threat mitigation programs should protect civil liberties, maintain confidentiality, and balance focus, policy, processes, and messaging.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-006",
+              "evidence_ids": [
+                "E_26_92664A4339CF24C9"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A Rev. 5 record references personnel responsible for the insider threat program, members of a cross-discipline insider threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-007",
+              "evidence_ids": [
+                "E_20_913B6F999A0F1458"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-161 Rev. 1 record recommends that predefined frequencies for data collection be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-008",
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST AI 100-4 record describes digital signatures as a more robust solution than recomputable hashes or checksums for authenticating metadata through cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-009",
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NISTIR 8259 Series IoT Device Cybersecurity record references a NIST Special Publication recommendation for pairwise key-establishment schemes using discrete logarithm cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-010",
+              "evidence_ids": [
+                "E_23_A793FAF5B393EFE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA Cybersecurity Performance Goals record defines encryption as converting plain text into cipher text to prevent unauthorized reading and defines hashing as applying a mathematical algorithm to data to produce a hash value.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-011",
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST AI 100-2 AML record distinguishes cryptography from widely used machine learning algorithms by stating that, unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C-IR-012",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref cutoff-constrained publication trend for CRYPTOGRAPHY reports 2021-2024 annual publication counts of 210, 254, 272, and 330, an OLS slope of 37.8 works/year, and states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C-IR-013",
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref academic metadata records for CRYPTOGRAPHY are static publication acknowledgment records with DOIs and dates, and their evidence metadata prohibit deployment-maturity and operational-effectiveness claims.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If a region or jurisdiction is provided, evaluate compatibility with the applicable laws, regulations, policies, standards, and data-governance rules for cryptography and insider-threat data handling.",
+            "If an organization type is provided, evaluate the ability to establish or integrate the required organization-wide insider-threat program, multidisciplinary personnel, legal counsel, and privacy responsibilities.",
+            "If infrastructure and data-residency context are provided, evaluate key-management, encryption, signature, hashing, and cross-border data-handling constraints.",
+            "If budget and resource context are provided, evaluate the institutional resourcing required for policy, training, personnel, management practices, and control implementation."
+          ],
+          "constraints": [
+            "Deployment-specific regulatory compatibility is conditional on applicable laws, executive orders, directives, regulations, policies, standards, and guidelines, and on organization-defined cryptographic types for specified uses.",
+            "Institutional implementation is conditional on an organization-wide insider-threat program with training, policy/procedure, management practices, multidisciplinary capabilities, detect/assess/manage practices, civil-liberties protection, confidentiality, and balanced policy/process/messaging.",
+            "Institutional governance is conditional on personnel responsible for the insider-threat program, cross-discipline incident handling, legal counsel, and information security/privacy responsibilities.",
+            "Cryptography-related controls may require alignment with standards-based mechanisms, key establishment, encryption, hashing, and digital signature implementation.",
+            "The frozen deployment context does not identify a region, organization type, infrastructure context, or budget context, so jurisdiction-specific and deployment-specific constraints remain unestablished."
+          ],
+          "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+          "evidence_gaps": [
+            "region is null in deployment_context, so jurisdiction-specific regulatory, data-sovereignty, and cross-border constraints cannot be assessed.",
+            "organization_type is null in deployment_context, so organizational governance, mission, culture, size, risk tolerance, and staffing barriers cannot be assessed.",
+            "infrastructure_context is null in deployment_context, so data residency, key-management location, network boundaries, and technical deployment barriers cannot be assessed.",
+            "budget_context is null in deployment_context, so resourcing constraints for program-wide insider-threat mitigation cannot be assessed.",
+            "No supplied record establishes deployment-specific adoption, implementation, operational effectiveness, or regional legal acceptance for CRYPTOGRAPHY during the 2025-2027 timing window."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen DecisionObject leaves region, organization_type, infrastructure_context, and budget_context null, so jurisdiction-specific, data-sovereignty, cross-border, and deployment-specific institutional feasibility cannot be established from the supplied records. The supplied evidence does provide general institutional and regulatory context: NIST SP 800-53 Rev. 5 describes cryptography as a security-control capability that must be implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines, with organization-defined cryptographic types for specified uses; NIST SP 800-53A Rev. 5 references insider-threat program personnel, cross-discipline incident handling, legal counsel, and information security/privacy responsibilities; CISA insider-threat mitigation guidance describes an organization-wide program requiring training, policy/procedure, management practices, multidisciplinary capabilities, civil-liberties protection, confidentiality, and balanced policy/process/messaging. These support general conditional feasibility of CRYPTOGRAPHY as an institutional security control, but they do not establish compatibility with any specific region, data-governance regime, or deployment environment. Therefore the action is neither materially supported as deployment-specifically feasible nor materially challenged under this lens; the judgment is indeterminate due to missing deployment context.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "Cryptography can be employed to support security solutions, including protection of classified information and controlled unclassified information, provision and implementation of digital signatures, enforcement of information separation when authorized individuals have necessary clearances but lack formal access approvals, and support for random number and hash generation.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "E_25_746173685B235ED2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The cited control requires organization-defined types of cryptography for each specified cryptographic use and states that cryptography is implemented in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "scope": "GENERAL",
+              "statement": "A digital signature is described as an electronic analogue of a written signature providing assurance that the claimed signatory signed and that the information was not modified after signature generation; a digital signature algorithm includes a signature generation process and a signature verification process.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "scope": "GENERAL",
+              "statement": "The cited guidance describes a fingerprint such as a cryptographic hash or checksum as allowing some tamper-evidence but notes that if content or metadata is modified, it is straightforward to recompute the fingerprint and overwrite it, and it presents digital signatures as a more robust solution for metadata authentication.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C5",
+              "evidence_ids": [
+                "E_23_A793FAF5B393EFE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "Encryption is defined as a procedure used in cryptography to convert plain text into cipher text to prevent anyone but the intended recipient from reading that data, and hashing is defined as applying a mathematical algorithm to data to produce a numeric hash value representing the data.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C6",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref record reports annual publication counts for the query title CRYPTOGRAPHY and bibliographic security of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works/year, and explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C7",
+              "evidence_ids": [
+                "E_22_C239828119FC69CD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The insider-threat mitigation guidance describes an insider threat mitigation program that spans the entire organization and uses training and awareness, policy and procedure, management practices, multidisciplinary capabilities enabled by technologies and/or dedicated personnel, and a detect-and-identify, assess, and manage framework.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C8",
+              "evidence_ids": [
+                "E_26_92664A4339CF24C9"
+              ],
+              "scope": "GENERAL",
+              "statement": "The insider-threat assessment guidance references personnel responsible for the insider threat program and members of a cross-discipline insider threat incident handling team.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C9",
+              "evidence_ids": [
+                "E_20_913B6F999A0F1458"
+              ],
+              "scope": "GENERAL",
+              "statement": "The C-SCRM guidance states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C10",
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "scope": "GENERAL",
+              "statement": "The AML guidance contrasts cryptography with widely used machine learning algorithms by stating that there are no information-theoretic security proofs for the widely used machine learning algorithms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C11",
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The IoT device cybersecurity record references NIST SP 800-56A Rev. 3 for pairwise key-establishment schemes using discrete logarithm cryptography and notes that ETSI 303 645 was not used because it was still a draft.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C12",
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "scope": "GENERAL",
+              "statement": "The three Crossref records are static acknowledgment-to-reviewers publication metadata for the journal Cryptography with stated DOIs and publication dates.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific conclusion would require an infrastructure inventory and compatibility assessment for the target systems and existing cryptographic controls.",
+            "A deployment-specific conclusion would require organization-defined selection of cryptographic types for each intended use, as indicated by the cited control.",
+            "If the intended use is confidentiality of insider-accessible data, the deployment would need to specify the encryption controls relevant to the data, storage, processing, and transmission context; the supplied evidence only defines encryption.",
+            "If the intended use is metadata/content integrity or attribution, the deployment would need to support digital signature generation and verification processes; the supplied evidence describes those processes but not deployment specifics.",
+            "If the intended use is information separation for authorized individuals lacking formal access approvals, the deployment would need to define the clearance and access-approval conditions and how cryptography enforces the separation.",
+            "Operational feasibility would require assessment of insider-threat program personnel, cross-discipline incident handling team, training/policy/management practices, and data-collection unpredictability requirements."
+          ],
+          "constraints": [
+            "Cryptographic types for each specified cryptographic use are organization-defined, so the concrete control selection depends on the deployment's intended uses and requirements.",
+            "Implementation is described as occurring in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; jurisdiction-specific obligations cannot be inferred from the supplied records.",
+            "If metadata tamper-evidence or attribution is required, the supplied guidance identifies digital signatures as a more robust approach than a recomputable hash/checksum fingerprint.",
+            "If confidentiality of data is required, the supplied guidance defines encryption as converting plaintext to ciphertext to prevent reading by anyone but the intended recipient.",
+            "Insider-threat program assessment references personnel responsible for the program and a cross-discipline incident handling team, so operational staffing and incident-handling processes are relevant.",
+            "C-SCRM guidance recommends less predictable predefined data-collection frequencies to reduce the risk of an insider threat bypassing security mechanisms.",
+            "Claims of exact effectiveness, ROI, deployment maturity, operational effectiveness, or causal mitigation effectiveness are not supported by the supplied evidence."
+          ],
+          "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+          "evidence_gaps": [
+            "Missing infrastructure_context: target information systems, applications, data stores, network boundaries, existing cryptographic controls, key/certificate management architecture, access-control and information-separation mechanisms, logging/monitoring capabilities, and insider-threat detection tooling.",
+            "Missing organization_type, region, and budget_context needed for deployment-specific compatibility, compliance obligations, and operational-burden judgments.",
+            "No supplied record identifies the specific insider-threat exploitation mechanism or attack surface that CRYPTOGRAPHY would mitigate.",
+            "No supplied record provides deployment, adoption, or operational-effectiveness observations for CRYPTOGRAPHY as an insider-threat mitigation during the 2025-2027 timing window.",
+            "No supplied record provides implementation timelines, scalability metrics, maintainability metrics, or deployment-maturity evidence."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "General technical implementability of CRYPTOGRAPHY is supported by the supplied records: cryptography is described as a security control supporting digital signatures, information separation, encryption/hashing, and random number/hash generation, with organization-defined cryptographic types for specified uses (TF-C1, TF-C2, TF-C3, TF-C5). Digital signatures are described as more robust than recomputable hash/checksum fingerprints for metadata authentication (TF-C4). However, the supplied evidence does not establish insider-threat-specific technical fit, deployment maturity, integration compatibility, operational effectiveness, scalability, or maintainability. The Crossref record shows external publication activity but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness (TF-C6). Insider-threat guidance describes broader program controls and assessment personnel (TF-C7, TF-C8), and C-SCRM guidance recommends less predictable data-collection frequencies to reduce insider-bypass risk (TF-C9), but none of these records demonstrates that CRYPTOGRAPHY is integrable or operable in a specific deployment. Because the frozen DecisionObject leaves region, organization_type, infrastructure_context, and budget_context missing, deployment-specific operability is indeterminate rather than affirmatively feasible or materially challenged.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "d2d07b2e843c50822b1768eafe53f9927a0960bf931bb4a59046acb57cd34126",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "2b0f1c988b6e69eca684aa58af4845709b9606c1462e619f9eb69ccfbd3e650d",
+    "institutional_regional_system_prompt_sha256": "4642d85804f50bd8e077aec1f9f5de89854abbd00d9c1e0fae16f7e20cb431f4",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "42292179008af427c77e9fe5294c40ff49f4108912f5959f33b0c1fdca2fa1ad"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage4-artifact-v1",
+  "semantic_validation_version": "stage4-semantic-validation-v1",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "39cbad1783873b171b466b5b406d4b106b9cdf1afe0ae07fd512bb74c425a355",
+  "stage3_artifact_sha256": "4169f796e178d3d7b4b4131973420f2a97f6d4079eff914ab342390db64ffc88",
+  "stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+  "stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+  "stage4_output_sha256": "62637b3f04bb89439b95cfa2206ac6a5fa7b50b09b86f5a8c1e890eba7e3b8e8"
+}

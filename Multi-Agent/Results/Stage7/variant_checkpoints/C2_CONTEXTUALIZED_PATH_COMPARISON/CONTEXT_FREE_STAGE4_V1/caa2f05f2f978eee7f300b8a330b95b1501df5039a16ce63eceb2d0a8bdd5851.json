@@ -1,0 +1,174 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FIN-ADOPT-001",
+        "evidence_ids": [
+          "E_25_746173685B235ED2"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 describes cryptography as usable to support security solutions, including protection of classified information and controlled unclassified information, digital signatures, information separation, and random number/hash generation; it also notes that generally applicable cryptographic standards include FIPS-validated cryptography and NSA-approved cryptography, with implementation in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-002",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref cutoff-constrained publication trend for CRYPTOGRAPHY reports annual publication counts of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024; it reports OLS slope 37.80 works/year, first-to-last delta 120, total results 1066, and states that post-cutoff deposits of older publications are excluded, that the axis is independent of the Scopus-derived NoP model input, and that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-003",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider-threat mitigation guidance states that some mitigation measures are cost prohibitive and that projected cost savings may be a significant determinant of an insider-threat mitigation program's ROI; it cites a 2019 Ponemon Institute report concluding that organizations with active threat management programs in place averaged a cost savings of $1.2 million per incident prevented.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-004",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider-threat mitigation guidance describes an insider-threat mitigation program as spanning the entire organization, tailored to the organization's unique mission, culture, critical assets, and threat landscape, and as employing multi-disciplinary capabilities enabled by technologies and/or dedicated personnel based on organization type, size, culture, nature, business value, and risk tolerance.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-005",
+        "evidence_ids": [
+          "E_26_92664A4339CF24C9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 assessment context references personnel responsible for the insider-threat program, members of a cross-discipline insider-threat incident handling team, legal counsel, and organizational personnel with information security and privacy responsibilities.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-006",
+        "evidence_ids": [
+          "E_20_913B6F999A0F1458"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 C-SCRM guidance for automated system component inventory states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-007",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 describes digital signatures as a more robust solution than recomputable cryptographic hashes or checksums for authenticating metadata, with a signature generation process using a private key and a verification process.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADOPT-008",
+        "evidence_ids": [
+          "E_29_7C01F6CA0D982DFF",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2"
+        ],
+        "scope": "GENERAL",
+        "statement": "Three Crossref records provide static publication metadata for acknowledgments to reviewers in the journal Cryptography for 2017, 2020, and 2022; they support publication metadata only and do not establish deployment maturity or operational effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion would require known budget_context, organization_type, infrastructure_context, and region.",
+      "A deployment-specific adoption feasibility conclusion would require evidence of existing cryptographic/key-management infrastructure, staffing, legal/regulatory requirements, integration requirements, and implementation timeline.",
+      "A stronger financial conclusion would require CRYPTOGRAPHY-specific cost and benefit data, including implementation, operation, maintenance, training, integration, and expected avoided insider-threat losses.",
+      "A directional stance should remain conditional until the missing deployment context and CRYPTOGRAPHY-specific cost/benefit evidence are supplied."
+    ],
+    "constraints": [
+      "The frozen DecisionObject has null budget_context, organization_type, infrastructure_context, and region, so a deployment-specific financial or adoption feasibility conclusion is not supported under this lens.",
+      "The supplied CRYPTOGRAPHY-related records are official guidance, control-assessment context, static publication metadata, or cutoff-constrained publication trend; the publication-trend and static-metadata records do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "E_22's cost context is for insider-threat mitigation programs generally and does not provide a measured CRYPTOGRAPHY-specific deployment outcome.",
+      "E_20 is C-SCRM inventory guidance related to insider-threat bypass risk and does not directly establish a cost, staffing, or deployment burden for CRYPTOGRAPHY."
+    ],
+    "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+    "evidence_gaps": [
+      "Missing budget_context prevents estimating implementation, operation, maintenance, training, migration, or total cost of ownership for CRYPTOGRAPHY.",
+      "Missing organization_type prevents assessing how an insider-threat mitigation program would be tailored to the deploying organization's size, mission, culture, business value, and risk tolerance.",
+      "Missing infrastructure_context prevents assessing existing cryptographic/key-management capabilities, integration scope, operational readiness, or resource dependencies.",
+      "Missing region prevents assessing jurisdiction-specific legal, regulatory, or deployment conditions without making unsupported jurisdiction-specific obligations.",
+      "No supplied record provides CRYPTOGRAPHY-specific deployment, adoption, implementation, or operational-effectiveness observations for the 2025-2027 forecast horizon.",
+      "No supplied record provides cost estimates, staffing/resource estimates, contract requirements, integration/migration costs, avoided incident costs, asset values, insider incident frequency, opportunity cost, or implementation timing for CRYPTOGRAPHY."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records provide limited, general adoption context but not enough to conclude that CRYPTOGRAPHY is financially or adoption-feasible, or infeasible, under the frozen scenario. E_25 provides recognized control and standards context for cryptography, E_33 shows increasing cutoff-constrained external publication activity for CRYPTOGRAPHY from 2021 to 2024, and E_16 describes a relevant digital-signature use case. These are adoption-relevant only as general enablers or context, because they do not establish deployment maturity, operational effectiveness, causal mitigation effectiveness, cost, staffing, or adoption burden. On the burden side, E_22 states that some insider-threat mitigation measures are cost prohibitive and that projected cost savings may be significant for the financial case of an insider-threat mitigation program; it also reports a 2019 Ponemon figure of $1.2 million per prevented incident for organizations with active threat management programs, but that figure is not a measured benefit for CRYPTOGRAPHY. E_22 and E_26 further indicate organization-wide program scope, multi-disciplinary capabilities, and personnel roles that can create organizational and staffing burden, while E_20 provides insider-threat-relevant C-SCRM process guidance without direct cryptography-specific cost or deployment content. The frozen DecisionObject leaves budget_context, organization_type, infrastructure_context, and region null, and the supplied records do not provide CRYPTOGRAPHY-specific deployment, adoption, implementation, operating-cost, staffing, contract, integration, avoided-loss, or timing evidence for the 2025-2027 horizon. Therefore, context insufficiency and evidence insufficiency prevent a directional financial/adoption conclusion; stance is 0.",
+    "stance": 0
+  },
+  "assessment_sha256": "4153213ad4dfa857da69e4078655a1af5c51137b632d632e61596be48bd11238",
+  "checkpoint_sha256": "e94ba94925c1a9e967c9df7892058344a97e923fe9ef15de78014de6da636423",
+  "created_at": "2026-09-16T17:27:06.413183+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+    "base_stage3_input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+    "base_stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23",
+    "case_id": "main__insider_threat__cryptography",
+    "evidence_ids": [
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_20_913B6F999A0F1458",
+      "E_22_C239828119FC69CD",
+      "E_23_A793FAF5B393EFE3",
+      "E_25_746173685B235ED2",
+      "E_26_92664A4339CF24C9",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "caa2f05f2f978eee7f300b8a330b95b1501df5039a16ce63eceb2d0a8bdd5851",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "3f28bab6ee54ad96693b1fc36c1dccbca821bd51ac662edf312849a0e6374372",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "2979e95dbc0a89bc95a1f7e067f16756040c4592be3eab46558d7ce0d74f8150",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

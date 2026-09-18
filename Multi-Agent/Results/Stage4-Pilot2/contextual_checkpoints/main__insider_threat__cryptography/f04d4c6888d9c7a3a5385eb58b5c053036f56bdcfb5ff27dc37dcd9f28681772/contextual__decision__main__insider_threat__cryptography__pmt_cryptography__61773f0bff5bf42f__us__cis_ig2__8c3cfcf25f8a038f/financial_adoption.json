@@ -1,0 +1,40 @@
+{
+  "assessment": {
+    "claims": [],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion would require supplied evidence of available budget, procurement constraints, existing cryptographic assets, key-management capacity, and staffing or skill resources.",
+      "A SUPPORTS_FEASIBILITY direction would require evidence that the configuration, update, key-management, documentation, and assessment activities described in the supplied records can be absorbed without material resource conflict in the frozen CIS IG2 enterprise.",
+      "A CHALLENGES_FEASIBILITY direction would require evidence that costs, staffing shortages, procurement constraints, existing technical debt, or implementation timing would materially prevent or delay adoption in the frozen scenario.",
+      "Any future directional claim under this lens must cite at least one action-specific Stage-4 decision-evidence record relevant to financial or adoption burden; the current neutral context records alone do not justify a directional financial conclusion."
+    ],
+    "constraints": [
+      "The frozen deployment context explicitly assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+      "The CIS IG2 reference profile describes possible operational complexity and specialized expertise, but it cannot by itself establish cost, staffing count, or implementation burden for PMT_CRYPTOGRAPHY.",
+      "The CISA CPG record describes configuration, update, and planning tasks for encryption, but does not quantify their cost, duration, or required staffing.",
+      "The NIST SP 800-53A records describe assessment, documentation, and key-management activities, but do not quantify staff time, cost, or implementation timing.",
+      "The CISA insider-threat mitigation record discusses cost and projected cost savings generally for insider threat mitigation programs, but does not provide an action-specific cost or ROI figure for PMT_CRYPTOGRAPHY."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+    "evidence_gaps": [
+      "No supplied evidence provides a budget, price, TCO, procurement ceiling, or cost estimate for adopting PMT_CRYPTOGRAPHY in the frozen US CIS IG2 scenario.",
+      "No supplied evidence provides staffing counts, skill availability, role coverage, or contractor support for cryptographic configuration, key management, or assessment.",
+      "No supplied evidence provides the organization's existing cryptographic baseline, key-management maturity, weak-encryption inventory, or post-quantum readiness.",
+      "No supplied evidence provides contract, vendor, product, or procurement constraints for cryptographic implementation.",
+      "No supplied evidence quantifies opportunity cost, implementation duration, or timeline fit within the frozen 2025-2027 window.",
+      "No supplied evidence establishes jurisdiction-specific legal or regulatory cost drivers that would materially change the financial feasibility of this action in the US scenario."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied evidence identifies implementation and organizational activities associated with the frozen PMT_CRYPTOGRAPHY action, but it does not provide the financial and staffing evidence needed to judge whether adoption is realistically affordable or sustainable in the frozen US CIS IG2 scenario. CISA CPG guidance ties PMT_CRYPTOGRAPHY to configuration, ongoing update, and planning work, including identifying outdated or weak encryption and considering post-quantum implications. NIST SP 800-53A records describe assessment and key-management activities that imply documentation, technical testing, and responsible personnel. The CIS IG2 context profile indicates a multi-department enterprise whose safeguards may involve increased operational complexity, enterprise-grade technology, and specialized expertise. CISA insider-threat guidance also notes that some mitigation measures can be cost prohibitive and that projected cost savings may be relevant to program ROI. However, no supplied record provides a budget, price, TCO, staffing count, procurement ceiling, existing cryptographic baseline, vendor decision, contract term, or implementation duration for this action. Therefore, under the financial/adoption lens, the action is neither supported as realistically adoptable nor materially challenged on financial or adoption-burden grounds; the evidence and frozen context are insufficient for a directional feasibility conclusion.",
+    "stance": 0
+  },
+  "assessment_sha256": "8fbd9e376c2199f2ed1f372631408df6a3c627ebd5730ae633387f2acdc28199",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "8b93abfec9b65e08e6b21ffdeed0c06c294d77b09332db8174c06b4243627214",
+  "created_at": "2026-09-14T13:15:32.568150+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__8c3cfcf25f8a038f",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "financial_adoption",
+  "scenario_id": "US__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

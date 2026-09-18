@@ -1,0 +1,279 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN_SUP_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS provides adoption benefit by enabling certificate-based client authentication, path validation, revocation checking, and strong authentication options.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_SUP_2",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "Encryption guidance provides qualitative adoption benefit by linking protected communication choices to data sensitivity and overhead considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CHL_1",
+          "evidence_ids": [
+            "DE_DE14_EDCA207577B4607A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SSL-encapsulated deployment introduces adoption burden through performance and operational factors, including session-establishment time, packet fragmentation, and possible need for MTU adjustment, hardware changes, offloading, or reduced processing demand.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN_CTX_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "A deployment case study provides contextual deployment-maturity information, including labor and prototype considerations, but it does not establish a numeric financial adoption case for the frozen scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial/adoption feasibility is conditional on managing performance and operational burdens without assuming numeric financial quantities.",
+        "Any future financial decision would require explicit budget, staffing, or cost evidence not present in this frozen payload."
+      ],
+      "constraints": [
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed.",
+        "Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "Adoption decisions must remain conditional because the supplied evidence is qualitative rather than scenario-specific financial evidence."
+      ],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No supplied evidence quantifies the financial cost, benefit, ROI, TCO, or payback period of HTTPS adoption in the frozen scenario.",
+        "No supplied evidence establishes procurement, vendor, product version, or deployment-architecture-specific financial assumptions."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "The financial/adoption lens has qualitative adoption-benefit evidence showing that HTTPS/TLS can enable stronger authentication, path validation, and protected communication choices. It also has qualitative adoption-burden evidence describing performance and operational burdens associated with SSL-encapsulated deployment. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied. The mixed qualitative adoption directions require stance 0.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST_SUP_1",
+          "evidence_ids": [
+            "DE_DE14_575D613F0598EF5E"
+          ],
+          "scope": "GENERAL",
+          "statement": "Governance guidance supports HTTPS-related deployment by recommending lifecycle practices such as logging, prototype and pilot programs, phased migration, documentation, monitoring, and certificate renewal.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_SUP_2",
+          "evidence_ids": [
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "scope": "GENERAL",
+          "statement": "Retrofitting guidance provides governance enablement for structured HTTPS/SSL-TLS deployment, including trust and CA deployment, mutual authentication considerations, and DNS security considerations.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHL_1",
+          "evidence_ids": [
+            "DE_DE10_4BE87A62A6676C99"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS implementation guidance imposes compliance constraints on HTTPS deployment, including extension behavior for CBC cipher suites, truncated HMAC restrictions, and pre-shared key extension requirements.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST_CHL_2",
+          "evidence_ids": [
+            "DE_DE13_055FC5E35FA61DD5"
+          ],
+          "scope": "GENERAL",
+          "statement": "Session-authentication guidance imposes compliance constraints by requiring session identifiers to use authenticated protected channels, HTTPS-only cookies, and no fallback from authenticated HTTPS sessions to insecure transport.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional/regional feasibility is conditional on managing compliance constraints from TLS and session-authentication guidance.",
+        "Deployment-specific institutional/regional conclusions require future evidence of regulatory applicability once jurisdiction is unmasked."
+      ],
+      "constraints": [
+        "The frozen scenario intentionally masks jurisdiction, and no lens-specific jurisdictional evidence is supplied.",
+        "No feasibility direction may be inferred from the masked jurisdiction label.",
+        "The CIS IG2 reference profile describes possible regulatory burdens but does not identify specific regulatory applicability for HTTPS in this scenario."
+      ],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No supplied evidence satisfies the DEPLOYMENT_SPECIFIC regulatory_applicability required scope slot for the institutional/regional lens.",
+        "No supplied evidence establishes which specific laws, regulations, or regional obligations apply to HTTPS or session authenticity in this frozen scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "The institutional/regional lens has grounded governance-enablement evidence showing that HTTPS-related deployment can be supported by lifecycle governance, documentation, monitoring, and retrofitting guidance. It also has grounded compliance-constraint evidence from TLS implementation and session-authentication guidance. Because jurisdiction is masked and no regulatory_applicability evidence is supplied, deployment-specific institutional/regional direction cannot be established. The mixed grounded institutional directions require stance 0.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH_SUP_1",
+          "evidence_ids": [
+            "AE07S_C1EF15B9628497F0"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS/TLS is supported as an important transport-layer control within a broader session-protection strategy against interception-oriented session hijacking.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CHL_1",
+          "evidence_ids": [
+            "AE07C_9CBF5980D3BA474A"
+          ],
+          "scope": "GENERAL",
+          "statement": "HTTPS alone cannot cover all session-hijacking paths because session tokens can still be stolen through XSS or malicious browser extensions even when a secure transport channel exists.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH_CTX_1",
+          "evidence_ids": [
+            "DE_DE14_5FC183B8D7DD961A"
+          ],
+          "scope": "GENERAL",
+          "statement": "A deployment case study provides contextual deployment-maturity information for HTTPS-related deployment, including prototype and labor considerations, but it does not establish operational effectiveness or deployment maturity specific to the frozen scenario.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Technical feasibility is conditional on combining HTTPS with additional session protections where user-level token theft remains possible."
+      ],
+      "constraints": [
+        "HTTPS must be treated as part of a broader session-protection strategy rather than as a standalone solution for all session-hijacking mechanisms.",
+        "No supplied evidence establishes that HTTPS is already deployed, enforced, or operationally effective in the frozen CIS IG2 scenario."
+      ],
+      "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "evidence_gaps": [
+        "No supplied evidence directly establishes deployment, enforcement, or operational effectiveness of HTTPS for the frozen scenario.",
+        "No supplied evidence resolves whether HTTPS reduces realized session-hijacking success after the cutoff."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "The technical lens contains grounded support for HTTPS as a transport-layer control against interception-oriented session hijacking, but also grounded technical limitation evidence showing that HTTPS alone does not cover all session-hijacking paths, including XSS or malicious browser extension token theft. Deployment-maturity evidence is present but only contextual. These mixed grounded directions require stance 0 rather than a purely positive or negative technical feasibility judgment.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "e8041ad867e0902a685d3c90b35181f971ef7c5d93215bc17020e0f028e7ce17",
+  "checkpoint_sha256": "cdace13ba7bd12c6cc07fe2148a046b68e0cd0e339edfe0c81dc455e668cccd3",
+  "created_at": "2026-09-16T16:22:35.623165+00:00",
+  "identity": {
+    "axis": "B_STAGE4_ARCHITECTURE_BASELINE",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE07C_9CBF5980D3BA474A",
+          "AE07S_C1EF15B9628497F0",
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE10_4BE87A62A6676C99",
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE14_5FC183B8D7DD961A",
+          "DE_DE14_EDCA207577B4607A",
+          "DE_DE18_CDC975345637E009"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "c631591fe002570f13596ff54cb3949dc4003ec6e70844e410c7e740db005264",
+    "jurisdiction_neutral": true,
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "a4150c17e4919ac3713e474a8cf2277441781f0ecc81ddecf5bbe7069d95acef",
+    "response_schema_sha256": "0f387220bb20b31007489c690d9dcd5c28fb0fba8411bcd32c082bb0c4938ff3",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "e26844241a40566d26571a7c9d6c5b9de1107272cc008e9c03b2d1e46e757ade",
+    "variant_id": "SINGLE_AGENT_BASELINE"
+  }
+}

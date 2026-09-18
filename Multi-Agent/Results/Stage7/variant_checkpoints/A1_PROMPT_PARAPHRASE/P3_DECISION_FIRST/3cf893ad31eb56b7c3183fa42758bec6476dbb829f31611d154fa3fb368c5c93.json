@@ -1,0 +1,134 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CLM_1",
+        "evidence_ids": [
+          "AE01S_6E6099FA4C2D13D4"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied action-specific evidence reports that few-shot and fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming the compared MLP.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_2",
+        "evidence_ids": [
+          "AE01C_A6798E23EEB1E487"
+        ],
+        "scope": "GENERAL",
+        "statement": "The action-specific DDoS study does not establish turnkey production deployment; performance depended on prompt context or fine-tuning, few-shot results were materially weaker on the harder Urban IoT setting, and the evidence was benchmark-based rather than an enterprise operational deployment or cost study.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_3",
+        "evidence_ids": [
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied deployment-maturity guidance identifies operational requirements for AI/GAI systems, including monitoring behaviour/inputs, managing updates/model changes, and addressing incident/provenance-related processes, but these records do not by themselves establish a feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific technical feasibility conclusion would require evidence that an NLP/LLM DDoS detection component can be integrated with existing detection, logging, and mitigation workflows and perform acceptably on real attack traffic.",
+      "Evidence of prompt design/fine-tuning data, monitoring of system behaviour/inputs, update management, and incident-response or provenance processes would be required to assess operability.",
+      "If the chosen NLP/LLM safeguard falls within the frozen reference-enterprise profile's conditions for enterprise-grade technology or specialized expertise, evidence that those conditions can be met would be required."
+    ],
+    "constraints": [
+      "The support direction is bounded to benchmark detection performance and does not establish production readiness.",
+      "The challenge direction is grounded in the absence of turnkey production deployment evidence and in prompt/fine-tuning dependence, not in a claim that NLP/LLM is technically impossible.",
+      "Deployment-maturity guidance qualifies operability but is not directional evidence for this action."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No supplied evidence reports enterprise production deployment, integration with existing DDoS detection/mitigation pipelines, operational latency/throughput, alerting, or cost/TCO for an NLP/LLM DDoS control in the frozen reference-enterprise context.",
+      "No supplied evidence specifies the local architecture, data access, model hosting, baseline detection capability, or staffing/resource capacity required for an NLP/LLM implementation.",
+      "No supplied evidence connects the frozen 2025-2027 DDoS forecast state or PMT state to operational deployment, maturity, or effectiveness of NLP/LLM."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied action-specific technical enablement evidence shows that LLM variants can detect DDoS traffic in benchmark datasets, with fine-tuned variants reporting roughly mid-90-percent accuracy and outperforming a compared MLP. However, the action-specific technical limitation evidence states that the DDoS study does not establish turnkey production deployment, that performance depended on prompt context or fine-tuning, that few-shot results were materially weaker on the harder Urban IoT setting, and that the evidence was benchmark-based rather than an enterprise operational deployment or cost study. The challenge is more direct to operationalization, integration, and enterprise deployability than the support, which is limited to benchmark detection capability. Deployment-maturity guidance qualifies operability requirements but does not by itself establish a direction. On balance, the records materially challenge the frozen NLP/LLM action's technical feasibility as a production DDoS mitigation, while not establishing technical impossibility.",
+    "stance": -1
+  },
+  "assessment_sha256": "4f04b8dc544e5ec5c4036104fbe7c2f56b668d8d4da5c4709576699dfea54926",
+  "checkpoint_sha256": "8c0bb57156bfa5a75df76292f5e707e498ca165855fa9d25c5654ad1a407789a",
+  "created_at": "2026-09-16T13:06:30.122332+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE01C_A6798E23EEB1E487",
+        "AE01S_6E6099FA4C2D13D4",
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "3cf893ad31eb56b7c3183fa42758bec6476dbb829f31611d154fa3fb368c5c93",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "95da2dcd55814083eac83f601b9407cebe0e6d417784cd860d98daa681ea31ea",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "c6d8d15eff2dc126a44149d193ae6382ee5550c83a414fce38f61c579c5bf97c",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "c8885c6aa08e9138437240866bf424701f5bd24f0fc6899929a56e84a40c044c",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

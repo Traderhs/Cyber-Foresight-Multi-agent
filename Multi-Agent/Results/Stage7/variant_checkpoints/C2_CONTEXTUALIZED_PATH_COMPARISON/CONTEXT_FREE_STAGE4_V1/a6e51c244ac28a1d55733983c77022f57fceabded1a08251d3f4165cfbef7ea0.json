@@ -1,0 +1,182 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "CLAIM_INST_01",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 contains a control to protect the authenticity of communications sessions, states that such protection addresses session-level communications protection, and includes protection against man-in-the-middle attacks, session hijacking, and insertion of false information; it also includes an enhancement to invalidate session identifiers upon logout or other session termination.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_02",
+        "evidence_ids": [
+          "E_26_2A6B7965607F1AAF"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 describes assessment procedures for security and privacy controls, a target audience that includes assessors, authorizing officials, and other oversight roles, and a design purpose of supporting the Risk Management Framework, with organizations balancing deployment resources with resources to determine control effectiveness initially and through continuous monitoring.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_03",
+        "evidence_ids": [
+          "E_23_6C42FC29A05ADCAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA Cybersecurity Performance Goals are described as a prioritized subset of cybersecurity practices for IT and OT, intended to be voluntarily adopted by organizations, applicable across all critical infrastructure sectors, and supported by worksheet criteria such as Impact, Cost, and Complexity to help organizations internally prioritize investment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_04",
+        "evidence_ids": [
+          "E_02_3AE1561299B667F5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Verizon DBIR excerpt states that there is increased regulatory pressure for reporting data breaches to governments and that there is no commonly accepted format for such reporting, while describing VERIS-to-ATT&CK mapping as a tool to help organizations reduce burden as new laws come to fruition.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_05",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "A CISA Cybersecurity Advisory concerning a cross-site scripting vulnerability that could lead to session cookie stealing and session hijacking recommends defensive measures including minimizing network exposure, locating control system networks and remote devices behind firewalls, using VPNs for remote access, and performing proper impact analysis and risk assessment prior to deploying defensive measures.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_06",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports that security misconfigurations were the most observed risk across client environments globally, that allowing concurrent user sessions accounted for 15% of misconfiguration findings and could weaken MFA through session hijacking, and that exploitation of public-facing applications was identified in 29% of incidents, with a recommendation to develop threat models that map systems and associated attack paths to sensitive data.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_07",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained publication trend for HTTPS security reports annual publication counts and an OLS slope but explicitly states that the query does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "CLAIM_INST_08",
+        "evidence_ids": [
+          "E_20_88F8C63B0AC62BEC"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST SP 800-161 Rev.1 excerpt describes a supply-chain scenario in which an environment within a country allows larger firms advantages to do business more easily and cost-efficiently with suppliers within the same region, and the excerpt references supply chain risk management.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If a target region is supplied, assess region-specific data sovereignty, cross-border transfer, regulatory compatibility, and local governance pathways without assuming that APAC or any multi-country region is a single legal jurisdiction.",
+      "If an organization_type is supplied, map the applicable sector governance and compliance expectations to the supplied NIST control, assessment, and prioritization context.",
+      "If an infrastructure_context is supplied, determine whether existing network exposure, configuration, and risk-assessment practices are compatible with the defensive-measure precautions and architecture-mapping needs indicated by the supplied records.",
+      "If a budget_context is supplied, evaluate resource feasibility for implementation, assessment, continuous monitoring, and any compliance or reporting obligations implied by the general regulatory context.",
+      "If deployment-specific feasibility is to be judged, additional evidence of actual PMT_HTTPS deployment, enforcement, and institutional adoption in the target environment is required."
+    ],
+    "constraints": [
+      "Region-specific regulatory compatibility, data sovereignty, cross-border constraints, and local governance pathways cannot be assessed because the frozen deployment_context provides no region.",
+      "Organization-specific compliance burden and accountability structure cannot be assessed because the frozen deployment_context provides no organization_type.",
+      "Implementation barriers cannot be assessed because the frozen deployment_context provides no infrastructure_context.",
+      "Resource feasibility cannot be assessed because the frozen deployment_context provides no budget_context.",
+      "E_33_13A684B424C1D15B explicitly limits the supplied publication trend to publication activity and disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness.",
+      "E_02_3AE1561299B667F5 indicates general regulatory reporting pressure and absence of a common reporting format, but does not specify region-specific HTTPS obligations.",
+      "E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3 indicate implementation governance needs such as risk assessment, network exposure control, configuration governance, and architecture mapping, but they do not establish deployment-specific feasibility.",
+      "The supplied records do not establish that PMT_HTTPS was deployed, enforced, or institutionally adopted in the frozen target environment."
+    ],
+    "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+    "evidence_gaps": [
+      "Missing region prevents assessment of jurisdiction-specific institutional/regional feasibility; no jurisdiction should be assumed.",
+      "Missing organization_type prevents assessment of sector-specific governance, compliance, and accountability requirements.",
+      "Missing infrastructure_context prevents assessment of concrete implementation barriers for the frozen HTTPS action.",
+      "Missing budget_context prevents assessment of compliance and implementation resource feasibility.",
+      "No supplied Stage 0 evidence establishes deployment, enforcement, or deployment maturity of PMT_HTTPS in the frozen target; E_33_13A684B424C1D15B only supports publication activity.",
+      "No supplied Stage 0 evidence specifies region-specific data sovereignty, cross-border transfer, or regulatory obligations for HTTPS/session-authenticity controls."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the Institutional / Regional Feasibility lens, the supplied records provide GENERAL institutional enablement but not sufficient deployment-specific regional context. NIST SP 800-53 Rev.5 describes a communications-session authenticity control relevant to session hijacking and man-in-the-middle protection, and NIST SP 800-53A Rev.5 describes assessment and audit-oriented control evaluation processes. CISA CPG material describes a voluntary prioritization framework for critical infrastructure. These support general governance, accountability, and auditability pathways. However, the records also provide GENERAL constraints or limitations: DBIR notes increased regulatory pressure for breach reporting to governments without a commonly accepted reporting format; a CISA advisory recommends impact analysis/risk assessment and network-exposure precautions before deploying defensive measures; IBM X-Force reports web-application misconfiguration and public-facing application risk context; and the Crossref publication trend explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because the frozen deployment_context has null region, organization_type, infrastructure_context, and budget_context, deployment-specific institutional/regional feasibility—including data sovereignty, cross-border constraints, and jurisdiction-specific regulatory compatibility—cannot be assessed. The balance is therefore mixed/indeterminate rather than directionally supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "7877a5310c20d716d9b26c55758ff5f8140d69f37fc58c20d6013d6786ce71bc",
+  "checkpoint_sha256": "f16a990cbaa878cca71c06e1c92162b5d646a80437e1eea0cabaaa89d6e24f89",
+  "created_at": "2026-09-16T18:10:45.962357+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+    "base_stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+    "base_stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+    "case_id": "main__session_hijacking__https",
+    "evidence_ids": [
+      "E_02_3AE1561299B667F5",
+      "E_03_6B1B12ABFD14313F",
+      "E_04_B9A3190D9CA152A3",
+      "E_10_AC5A58AF5E015229",
+      "E_12_9B8ECD82AD844621",
+      "E_12_CFEC6517865F0563",
+      "E_19_A61B74B0F1435639",
+      "E_19_E896356AEE4DB2CD",
+      "E_20_88F8C63B0AC62BEC",
+      "E_22_808618C790A7133A",
+      "E_23_6C42FC29A05ADCAE",
+      "E_25_99857C4681E8FEE5",
+      "E_26_2A6B7965607F1AAF",
+      "E_29_2B4FE56914E3B676",
+      "E_29_5608502338822397",
+      "E_29_B82ABFE7422C38D1",
+      "E_33_13A684B424C1D15B"
+    ],
+    "input_fingerprint": "a6e51c244ac28a1d55733983c77022f57fceabded1a08251d3f4165cfbef7ea0",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "567cb944426d7065c164893c1272d11e5b6c0c1b6034d65b90bc9f616dee5846",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "f65d8f6bd31189297fc36a6963116ceee690a55da8efa2d276ac4981f6bd6fd8",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "artifact_sha256": "6c46f8ced50a7f85a6cd1c781dc87210f65467b03e643d4833a2a25f6cd91b80",
+  "case_id": "main__ddos__nlp_llm",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d": {
+      "financial_adoption": "792c3f680ce7f7e89eed59d7a9cc9b5995a1a10f99925510df3ec2a147dd8b76",
+      "institutional_regional": "1cec7861b11a5b07f5873bfe963a908ead87d6aa76b48a929d47746e17434051",
+      "technical_feasibility": "625dff4156ec997e9df18c9dc835eb7537f1aa8e7058343bb99764654b72d7f2"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec": {
+      "financial_adoption": "f8ea2cb6b3828fe62bab9d526541be6cac06191d5bd035ccb092310543ddbeaa",
+      "institutional_regional": "d6d5dbfdd247c96c96aebdc9adfbd70ad5d6dfeb6dcb028b91a4ce759d074c4e",
+      "technical_feasibility": "2b7b08f92f0b347e32a4545dee359e445b7cbda92c53fd78ab8e29c5704c596d"
+    },
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46": {
+      "financial_adoption": "35a7bf817f2f237f9aad89294a95b4c010c3cd8d7044b0540a0c70b8f0c2dc99",
+      "institutional_regional": "a57f6eaa74f5433036d974630824648a8117f3dcecbe7dd6b1a4789c758074d4",
+      "technical_feasibility": "cd27fd80038a1c319b63394f7917ded0e339a9c8cac973e6ebb20b9ef65f888e"
+    }
+  },
+  "created_at": "2026-09-14T09:04:02.371666+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d": "68921ca33b4eed5bd534989517e1876bba7629936d49abe23338623f57abe200",
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec": "084bee6469819de598d900e905d7424613960f0b5ab6d4908bd58df8e0d205d8",
+    "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46": "11a26cb4b15537e0687389a7d8ac2768fd34fa504a9b9b079a94fc7c4adae096"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ddos__nlp_llm",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_ADOP_C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_ADOP_C2",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference profile states that IG2 safeguards address increased operational complexity and that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_ADOP_C3",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref record reports annual NLP/LLM security publication counts of 2021=14, 2022=18, 2023=33, and 2024=87, and explicitly states that this publication-activity trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_ADOP_C4",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref metadata record is an academic metadata record with DOI=10.2139/ssrn.4996945 and title 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.'",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion would require supplied evidence establishing bounded cost, affordability, or procurement constraints for PMT_NLP_LLM in this scenario.",
+            "A staffing or organizational-burden conclusion would require supplied evidence establishing required expertise, training, operational maintenance load, or resource workload for PMT_NLP_LLM.",
+            "An opportunity-cost conclusion would require supplied evidence comparing PMT_NLP_LLM against alternative DDoS mitigation investments under the same resource constraints.",
+            "A timing conclusion would require supplied evidence establishing implementation lead time, integration dependencies, or operational readiness timing."
+          ],
+          "constraints": [
+            "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed in the frozen scenario.",
+            "The deployment context is a frozen experimental CIS IG2 reference-enterprise profile, not an observed real organization.",
+            "No Stage-4 action-specific decision-evidence record is supplied for financial or adoption feasibility of PMT_NLP_LLM."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec",
+          "evidence_gaps": [
+            "Missing numeric or bounded acquisition, integration, training, staffing, maintenance, or operational cost data for NLP/LLM-based DDoS mitigation.",
+            "Missing deployment-specific budget, staffing/infrastructure, contracts, or procurement ceiling for the CIS IG2 reference-enterprise scenario.",
+            "Missing evidence of required specialized skills, training, or organizational burden specific to NLP/LLM implementation.",
+            "Missing opportunity-cost or alternative-investment comparison data for DDoS mitigation.",
+            "Missing implementation-timing, lead-time, or operational-readiness evidence within the frozen 2025-2027 timing window."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The frozen context does not supply numeric budget, staffing, procurement, ROI, TCO, payback, or implementation-timing data for PMT_NLP_LLM. The supplied context and publication records are non-directional context only. No action-specific Stage-4 decision-evidence record is available to support a directional financial or adoption feasibility judgment.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF_C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C2",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference-enterprise profile states that such enterprises often process sensitive client or enterprise information and may face regulatory burdens.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C3",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference-enterprise profile states that IG2 safeguards address increased operational complexity and that some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C4",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The NLP/LLM Crossref publication-trend record states that the trend is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C5",
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "scope": "GENERAL",
+              "statement": "The DDoS threat-intelligence record reports hacktivism-related DDoS context and recommends that organizations review network security posture, contact a DDoS mitigation provider, maintain and practice a DDoS incident response plan, and keep current contact information for DDoS mitigation and internet service providers.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "KR-specific evidence identifying applicable law, regulation, data-protection obligation, or cross-border constraint is required to make a DEPLOYMENT_SPECIFIC institutional/regional feasibility claim.",
+            "Action-specific Stage-4 decision evidence addressing regulatory applicability, governance/audit requirements, or institutional prerequisites is required to make a directional institutional/regional feasibility claim.",
+            "If the implementation relies on enterprise-grade technology or specialized expertise, evidence that the reference enterprise can supply those capabilities is required to assess institutional implementation feasibility.",
+            "If sensitive client or enterprise information is processed, evidence of applicable data-protection, audit, or accountability requirements is required to assess compliance burden."
+          ],
+          "constraints": [
+            "The neutral context above does not establish KR-specific regulatory compatibility, data sovereignty, legal obligation, compliance burden, cross-border constraints, or NLP/LLM institutional implementation barriers.",
+            "The neutral context above does not by itself establish legal applicability, deployment-specific institutional constraints, or action-specific compliance requirements for the frozen NLP/LLM action."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec",
+          "evidence_gaps": [
+            "No supplied action-specific Stage-4 decision evidence addresses regulatory applicability, governance/audit requirements, implementation prerequisites, integration/operation burden, reference deployment limitations, resource/skill burden, data sovereignty, data localization, or cross-border constraints for the frozen NLP/LLM action in the KR scenario.",
+            "No supplied evidence connects the NLP/LLM PMT to institutional implementation constraints specific to the CIS IG2 reference enterprise or the KR scenario."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied material does not contain action-specific Stage-4 decision evidence for regulatory applicability, governance/audit requirements, data sovereignty, data localization, or cross-border constraints. The CIS IG2 profile supplies only generalized organizational context, and the NLP/LLM publication-trend record expressly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore, the institutional/regional lens cannot support a positive or negative directional feasibility judgment for the frozen KR scenario; the judgment remains indeterminate and context-insufficient.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_001",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise context is CIS Implementation Group 2, described as a multi-department enterprise IT environment in which some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_002",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NLP/LLM academic metadata record identifies a work titled “Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.”",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_003",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NLP/LLM publication-trend record reports cutoff-constrained security-related Crossref publication counts for 2021-2024 as 2021=14, 2022=18, 2023=33, and 2024=87, and states that the record does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A GENERAL technical-feasibility conclusion would require action-specific decision evidence establishing that NLP/LLM can be implemented as a defined DDoS mitigation or operational-support function, integrated into existing or specified processes, and operated within the 2025-2027 horizon.",
+            "A DEPLOYMENT_SPECIFIC technical-feasibility conclusion would require evidence beyond the CIS IG2 reference profile, including infrastructure architecture, relevant tooling, data sources, model deployment constraints, staff skill requirements, and operational maintenance requirements.",
+            "Any claim that NLP/LLM is mature enough for production DDoS mitigation would require evidence of deployment readiness, integration feasibility, operational effectiveness, or causal mitigation effectiveness; the supplied publication-trend record explicitly does not provide that basis."
+          ],
+          "constraints": [
+            "No exact budget, staffing count, vendor, product version, architecture, implementation timeline, or control effectiveness value may be inferred from the supplied records.",
+            "The CIS IG2 profile is a frozen standard-derived reference-enterprise context, not evidence that a real observed organization has NLP/LLM deployment capabilities or requirements.",
+            "Publication-activity evidence cannot be used as standalone evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "Deployment-specific technical compatibility cannot be concluded from the generic CIS IG2 infrastructure profile alone."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__e91d77767fcf42ec",
+          "evidence_gaps": [
+            "No action-specific Stage 4 decision-evidence record is supplied for implementation prerequisites of NLP/LLM as a DDoS mitigation or operational-support function.",
+            "No supplied evidence describes a concrete NLP/LLM technical mechanism, integration interface, deployment topology, data pipeline, model hosting arrangement, or operational workflow for DDoS defense.",
+            "No supplied evidence establishes NLP/LLM technical maturity, deployment readiness, operational effectiveness, or causal mitigation effectiveness for DDoS.",
+            "No supplied evidence addresses operational burden, scalability, maintainability, staffing skill requirements, or maintenance processes for NLP/LLM in this scenario.",
+            "No supplied evidence provides deployment-specific infrastructure details needed to assess compatibility with the actual DDoS mitigation stack, network or edge architecture, telemetry and data availability, or operational tooling."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the Technical Feasibility lens, the supplied material does not establish whether the frozen NLP/LLM mitigation is technically implementable, integrable, or operable now or within the 2025-2027 forecast horizon. The supplied NLP/LLM-specific records are limited to publication metadata and a publication-activity trend. The publication-trend record explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The DDoS threat records provide threat-context information about attack patterns and mitigation-readiness language, but none of the supplied records is an action-specific Stage 4 decision-evidence record addressing NLP/LLM implementation prerequisites, integration, operational burden, resource or skill requirements, scalability, maintainability, or technical mitigation fit. The CIS IG2 context provides a generic reference-enterprise infrastructure profile, but it cannot by itself establish deployment-specific technical compatibility. Because no action-specific Stage 4 decision evidence is available, a directional feasibility conclusion would be unsupported; therefore the stance is indeterminate rather than supported or challenged.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, and states that IG2 safeguards address increased operational complexity, with some safeguards depending on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_C2",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained publication trend for PMT=NLP/LLM shows increasing security publication counts from 2021 to 2024 and reports an OLS slope, but the record explicitly states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_C3",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NLP/LLM academic metadata record identifies a publication using LLM and NLP methods, but its allowed claim types are limited to publication metadata and its prohibited claim types include deployment_maturity and operational_effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_C4",
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The DDoS threat-context record states that an organization should ensure its contracted service can clear the bar so that most of the impact will likely be absorbed; the record is DDoS threat context, not NLP/LLM adoption evidence.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A directional financial/adoption feasibility judgment requires at least one action-specific Stage-4 decision-evidence record relevant to NLP/LLM cost, staffing, implementation burden, opportunity cost, or timing.",
+            "Deployment-specific feasibility additionally requires deployment context values for budget capacity, staffing capacity, existing technology, contracts, and implementation timing.",
+            "Any claim that NLP/LLM is realistically adoptable must be conditional on supplied evidence that the organization can absorb the relevant financial, skills, integration, and timing burden.",
+            "Any claim that NLP/LLM is materially unadoptable must be conditional on supplied evidence showing that the relevant cost, staffing, implementation, or opportunity-cost burden exceeds the organization's capacity."
+          ],
+          "constraints": [
+            "The reference enterprise profile is a frozen standardized scenario profile, not an observed real organization.",
+            "The frozen budget context contains no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+            "CIS IG2 context may indicate organizational complexity and possible need for specialized expertise for some safeguards, but it does not by itself establish NLP/LLM implementation burden, cost, regulatory applicability, or legal obligation.",
+            "Publication-activity evidence for NLP/LLM cannot be used to infer deployment maturity, operational effectiveness, causal mitigation effectiveness, or financial adoptability.",
+            "No vendor, product, product version, sector, deployment architecture, exact implementation timeline, or exact control effectiveness is supplied."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d",
+          "evidence_gaps": [
+            "No action-specific NLP/LLM cost, budget, price, TCO, ROI, payback, or procurement-ceiling evidence is supplied.",
+            "No action-specific NLP/LLM staffing, skill, training, or organizational-burden evidence is supplied.",
+            "No action-specific NLP/LLM implementation prerequisite, integration, operation, maintenance, or scalability burden evidence is supplied.",
+            "No opportunity-cost comparison against alternative DDoS mitigation or monitoring options is supplied.",
+            "No NLP/LLM-specific implementation timeline or deployment-sequence evidence is supplied.",
+            "No governance, audit, or regulatory applicability evidence specifically connecting NLP/LLM adoption burden to the EU scenario is supplied."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "Under the Financial / Adoption Feasibility lens, the frozen CIS IG2 profile describes an organizationally complex enterprise environment in which some safeguards may depend on enterprise-grade technology and specialized expertise, but it does not establish the cost, staffing burden, implementation burden, or adoption burden of NLP/LLM for DDoS. The NLP/LLM publication records provide publication-activity context only and explicitly do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The supplied decision-evidence records are empty, and no supplied evaluation_evidence record provides action-specific NLP/LLM cost, budget, staffing, integration, maintenance, opportunity-cost, or implementation-timing evidence. Because the frozen budget context contains no numeric financial quantities and no action-specific Stage-4 decision evidence relevant to financial/adoption feasibility is present, this lens cannot support either SUPPORTS_FEASIBILITY or CHALLENGES_FEASIBILITY. The result is indeterminate.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "L4-IR-C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "CIS Implementation Group 2 describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions. IG2 safeguards address increased operational complexity, and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "L4-IR-C2",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "A cutoff-constrained Crossref publication trend for PMT=NLP/LLM reports annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with OLS slope 23.400000 works/year, first-to-last delta 73, and total results 152. The record states this is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "L4-IR-C3",
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA Known Exploited Vulnerabilities records CVE-2023-44487, an IETF HTTP/2 Rapid Reset vulnerability, as allowing a distributed denial-of-service attack and provides mitigation guidance to apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If the deployment processes sensitive client or enterprise information, applicable EU data-governance constraints, if any, would need assessment against supplied evidence.",
+            "If external DDoS mitigation providers, cloud services, or internet service providers are used, applicable cross-border data-flow and contractual constraints, if any, would need assessment against supplied evidence.",
+            "If NLP/LLM controls depend on enterprise-grade technology or specialized expertise, institutional capacity, governance, and training constraints, if any, would need assessment against supplied evidence."
+          ],
+          "constraints": [],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d",
+          "evidence_gaps": [
+            "No supplied record establishes whether EU-specific regulatory, data-governance, data-sovereignty, cross-border, logging, retention, model input/output, human oversight, or audit constraints exist or apply to NLP/LLM DDoS controls for a CIS IG2 enterprise.",
+            "No supplied record establishes whether the BOD 22-01 cloud-services guidance referenced in E_08_3453329306E149CB applies in the EU scenario or creates a compliance constraint for NLP/LLM deployment.",
+            "No supplied record establishes action-specific institutional implementation prerequisites, governance controls, or audit requirements for NLP/LLM-based DDoS mitigation."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen action is NLP/LLM for DDoS in an EU CIS IG2 experimental scenario. The decision_evidence_records array is empty, so no supplied action-specific Stage-4 decision-evidence record for regulatory_applicability is available. CTX_CIS_IG2_9F94838146D9C3A4 is a frozen reference-enterprise profile and may support only organizational, resource, infrastructure, or adoption context; it does not by itself establish EU regulatory compatibility, data sovereignty, compliance burden, cross-border constraints, or NLP/LLM-specific implementation burden. E_33_ADC8BC66D812799F provides only publication-activity context and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. E_08_3453329306E149CB provides DDoS-related confirmed-exploitation and mitigation-guidance context but does not establish EU applicability or compliance burden. Because no supplied record supports a directional institutional/regional feasibility judgment for NLP/LLM, stance is 0 and evidence sufficiency is insufficient.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLAIM_001",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref publication-trend record for PMT=NLP/LLM reports annual publication counts of 2021=14, 2022=18, 2023=33, and 2024=87; OLS_slope=23.400000 works/year; first_to_last_delta=73; total_results=152; and states that the record does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_002",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref metadata record verifies the title 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' and DOI=10.2139/ssrn.4996945, and its contract prohibits deployment_maturity and operational_effectiveness claims.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_003",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 context record describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, notes that such enterprises may face regulatory burdens, and states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_004",
+              "evidence_ids": [
+                "E_02_066AFE8300EDCEBB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied DBIR record reports that the median DDoS bits per second grew 57% from 1.4 Gbps to 2.2 Gbps, that the 97.5 percentile grew 25% from 99 Gbps to 124 Gbps, and that distributed DNS Water Torture resource-exhaustion attacks are reported as a growing observed vector.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_005",
+              "evidence_ids": [
+                "E_08_3453329306E149CB"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CISA KEV record states that CVE-2023-44487 is an HTTP/2 Rapid Reset vulnerability that allows DDoS and provides mitigation guidance to apply vendor mitigations, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_006",
+              "evidence_ids": [
+                "E_03_06E6ABC42DA3AC77",
+                "E_03_F13F996D181217BA"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Mandiant records report DDoS as an example of destructive operations and report hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLAIM_007",
+              "evidence_ids": [
+                "E_04_892BBCAA3CE5CC92"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied IBM X-Force record reports observed claimed hacktivism operations related to the Israel-Hamas conflict, with Telegram used as a social media outlet for actor claims.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "To support a GENERAL technical feasibility conclusion, action-specific evidence must show that NLP/LLM can be implemented, integrated, and operated for the frozen DDoS use case without relying on publication-trend evidence as proof of deployment maturity or operational effectiveness.",
+            "To support a DEPLOYMENT_SPECIFIC technical feasibility conclusion, infrastructure evidence must identify NLP/LLM-specific deployment architecture, integration points, data sources, operational workflows, and required expertise within the frozen CIS IG2 reference-enterprise profile.",
+            "If the only available NLP/LLM evidence remains publication metadata or publication-trend evidence, technical feasibility should remain indeterminate.",
+            "Threat-context records about DDoS must not be used to infer NLP/LLM technical fit unless an explicit mitigation-relation or control-implementation evidence record is supplied."
+          ],
+          "constraints": [
+            "Any GENERAL technical feasibility judgment for PMT_NLP_LLM is constrained by the fact that the only supplied NLP/LLM-specific records are publication metadata and a publication-activity trend, and E_33_ADC8BC66D812799F explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "Any DEPLOYMENT_SPECIFIC technical feasibility judgment is constrained by the frozen infrastructure context being a generic CIS IG2 reference-enterprise profile; it may describe enterprise-grade technology and specialized expertise for some safeguards, but it does not supply NLP/LLM-specific implementation, integration, or operational evidence.",
+            "The supplied DDoS records constrain the technical assessment to threat-context information about DDoS attack-size trends, observed vectors, confirmed exploitation, or hacktivist activity; they do not establish that NLP/LLM is technically implementable, integrable, or operable for DDoS mitigation.",
+            "No exact vendor, product version, dollar value, ROI, TCO, staffing count, or exact implementation timeline may be inferred from the supplied evidence."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__9d4a926937b4179d",
+          "evidence_gaps": [
+            "No action-specific Stage-4 decision evidence establishes a technical relation between NLP/LLM and DDoS mitigation, such as threat-mitigation fit, mechanism, or control behavior.",
+            "No action-specific Stage-4 decision evidence establishes implementation prerequisites, configuration requirements, deployment steps, or deployment limitations for NLP/LLM in this DDoS scenario.",
+            "No action-specific Stage-4 decision evidence establishes integration feasibility with the frozen enterprise environment or with DDoS-relevant systems such as DDoS mitigation services, DNS infrastructure, or HTTP/2-related endpoints.",
+            "No action-specific Stage-4 decision evidence establishes operational burden, scalability, maintainability, or operability for NLP/LLM across the 2025-2027 forecast horizon.",
+            "Deployment-specific infrastructure details beyond the generic CIS IG2 profile are missing, including NLP/LLM-specific deployment architecture, integration points, data pipelines, model tooling, operational workflows, and relevant expertise context."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under the technical feasibility lens, the frozen action is PMT_NLP_LLM for threat THREAT_DDOS in a 2025-2027 forecast window. The only supplied NLP/LLM-specific records are E_29_CD092D34A1331D02 and E_33_ADC8BC66D812799F. E_33_ADC8BC66D812799F reports a cutoff-constrained 2021-2024 publication-activity trend and explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. E_29_CD092D34A1331D02 is bibliographic metadata for an NLP/LLM work and its contract prohibits deployment_maturity and operational_effectiveness claims. The supplied DDoS records, E_02_066AFE8300EDCEBB, E_03_06E6ABC42DA3AC77, E_03_F13F996D181217BA, E_04_892BBCAA3CE5CC92, and E_08_3453329306E149CB, provide threat-context information about DDoS attack-size trends, observed vectors, confirmed exploitation, and hacktivist activity, but none supplies action-specific technical evidence that NLP/LLM is implementable, integrable, or operable for DDoS mitigation. The frozen infrastructure context is the generic CIS IG2 reference-enterprise profile in CTX_CIS_IG2_9F94838146D9C3A4; it may require enterprise-grade technology and specialized expertise for some safeguards, but it cannot by itself establish NLP/LLM-specific implementation burden, integration feasibility, scalability, or operability. Because no action-specific Stage-4 decision evidence is supplied, neither a GENERAL nor DEPLOYMENT_SPECIFIC directional technical feasibility conclusion can be supported. Evidence/context insufficiency is not converted into a directional stance, so the stance is 0.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "F1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied CIS IG2 context describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and states that IG2 safeguards address increased operational complexity, with some depending on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "F2",
+              "evidence_ids": [
+                "E_33_ADC8BC66D812799F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref trend record reports NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works/year and a first-to-last delta of 73, and states that the record does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "F3",
+              "evidence_ids": [
+                "E_29_CD092D34A1331D02"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied academic metadata record reports a Crossref record for a work titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' with DOI 10.2139/ssrn.4996945.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific stance requires action-specific decision evidence showing that PMT_NLP_LLM can be implemented, integrated, operated, and maintained within the organization's cost, staffing, and timing constraints, or that it materially exceeds those constraints.",
+            "Deployment-specific financial/adoption feasibility requires the missing budget, staffing/expertise, contract/vendor, architecture/integration, and implementation-timing context needed to evaluate opportunity cost and organizational burden.",
+            "Without such action-specific decision evidence and deployment context, this lens must remain indeterminate rather than assign a supported or challenged stance."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, staffing count, vendor, product version, sector, architecture, or implementation timeline is inferred from the supplied context.",
+            "The deployment context is a frozen experimental scenario using a CIS IG2 reference-enterprise profile, not an observed real organization.",
+            "The supplied context profile is standard-derived and cannot by itself establish PMT_NLP_LLM implementation burden, cost, regulatory applicability, or legal obligation."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46",
+          "evidence_gaps": [
+            "No action-specific Stage-4 decision-evidence record for PMT_NLP_LLM is supplied for implementation prerequisites, integration/operation burden, resource/skill burden, reference deployment limitations, governance/audit requirements, or regulatory applicability.",
+            "Missing financial context for the frozen deployment, including numeric budget, price, ROI, TCO, procurement ceiling, existing contracts, or vendor/product commitments.",
+            "Missing staffing and expertise context, including team size, role availability, required NLP/LLM skills, training, and operational ownership.",
+            "Missing implementation timing and opportunity-cost context, including deployment duration, maintenance effort, resource competition with other DDoS mitigation obligations, and schedule constraints."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The cited claims are limited to neutral context about the CIS IG2 reference-enterprise profile and neutral publication records for NLP/LLM. They do not provide action-specific decision evidence for implementation prerequisite, integration/operation burden, or resource/skill burden, and the frozen scenario contains no numeric budget, staffing, contract, vendor, or implementation-timing context. Under the Financial/Adoption Feasibility lens, adoption is therefore indeterminate rather than feasible or materially challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [],
+          "conditional_requirements": [
+            "A directional institutional/regional feasibility judgment requires at least one action-specific Stage-4 decision-evidence record addressing regulatory, institutional, data-governance, or cross-border constraints for PMT_NLP_LLM.",
+            "If a deployment-specific US judgment is required, evidence must establish the applicable US regulatory or institutional constraints for NLP/LLM use in DDoS operations; the scenario label alone is insufficient.",
+            "If data governance is in scope, evidence must identify what data would be processed, retained, transmitted, or used by the NLP/LLM action and any applicable data-sovereignty or cross-border constraints.",
+            "If institutional implementation feasibility is assessed, evidence must identify prerequisite governance, audit, staffing, skill, integration, or operational constraints for the CIS IG2 reference profile.",
+            "Absent such records, keep the institutional/regional feasibility assessment general and indeterminate rather than inferring jurisdiction-specific obligations."
+          ],
+          "constraints": [
+            "The assessment is limited to the supplied evaluation_evidence array and the frozen DecisionObject.",
+            "Stage 2 adjudications are treated only as reasoning provenance, not as external factual evidence.",
+            "The frozen scenario jurisdiction is United States, but no supplied evidence establishes US-specific legal obligations, regulatory applicability, data-sovereignty rules, or compliance requirements for NLP/LLM.",
+            "The CIS IG2 profile may face regulatory burdens and may require enterprise-grade technology or specialized expertise, but no supplied evidence identifies the specific institutional or regulatory constraints applicable to this action."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46",
+          "evidence_gaps": [
+            "No Stage-4 decision-evidence record establishes regulatory_applicability for PMT_NLP_LLM in the United States.",
+            "No Stage-4 decision-evidence record establishes governance_audit_requirement for PMT_NLP_LLM in the United States.",
+            "No Stage-4 decision-evidence record establishes implementation_prerequisite for PMT_NLP_LLM under the CIS IG2 profile.",
+            "No Stage-4 decision-evidence record establishes integration_operation_burden for PMT_NLP_LLM under the CIS IG2 profile.",
+            "No Stage-4 decision-evidence record establishes reference_deployment_limitation for PMT_NLP_LLM under the CIS IG2 profile.",
+            "No Stage-4 decision-evidence record establishes resource_skill_burden for PMT_NLP_LLM under the CIS IG2 profile."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied evaluation_evidence contains only a CIS IG2 reference-enterprise context record, DDoS threat-context records, a CISA KEV exploitation record, and NLP/LLM academic metadata/publication-trend records. It contains no Stage-4 decision-evidence record establishing regulatory compatibility, data sovereignty, compliance burden, cross-border constraints, or institutional implementation barriers for PMT_NLP_LLM under the frozen US__CIS_IG2 scenario. The CIS IG2 context is relevant because it describes an enterprise profile that may process sensitive information, may face regulatory burdens, and may require enterprise-grade technology or specialized expertise for some safeguards. However, that context does not by itself establish US-specific regulatory applicability, legal obligations, data-governance constraints, or institutional feasibility for NLP/LLM-based DDoS handling. The NLP/LLM publication-trend record explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Because no action-specific Stage-4 decision-evidence record relevant to institutional/regional feasibility was supplied, and because evidence/context insufficiency cannot be converted into a directional stance, institutional/regional feasibility is indeterminate under this lens.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [],
+          "conditional_requirements": [
+            "A deployment-specific technical-feasibility conclusion requires action-specific evidence that NLP/LLM can be integrated into the actual DDoS detection, mitigation, and incident-response workflow.",
+            "A deployment-specific technical-feasibility conclusion requires evidence identifying required expertise, operational burden, and maintainability in the reference enterprise environment.",
+            "A general technical-feasibility conclusion requires action-specific evidence that NLP/LLM has a defined technical mechanism, integration path, and operational workflow for DDoS mitigation within the 2025-2027 horizon."
+          ],
+          "constraints": [
+            "A directional technical-feasibility judgment requires action-specific Stage-4 decision evidence for at least one of implementation_prerequisite, integration_operation_burden, or reference_deployment_limitation.",
+            "Deployment-specific compatibility cannot be concluded without infrastructure-specific information for the DDoS mitigation workflow, model/hosting environment, monitoring and logging sources, and operational expertise."
+          ],
+          "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__c0681198568daf46",
+          "evidence_gaps": [
+            "Action-specific decision evidence for NLP/LLM implementation prerequisites is missing.",
+            "Action-specific decision evidence for NLP/LLM integration, operation, maintenance, and scalability burden is missing.",
+            "Action-specific decision evidence for NLP/LLM reference deployment limitations or architecture constraints is missing.",
+            "Deployment-specific infrastructure information for DDoS detection, mitigation, DNS/edge service environment, data inputs, response actions, and operational ownership is missing."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under this lens, the supplied material does not provide action-specific Stage-4 decision evidence sufficient for a directional technical-feasibility judgment. The frozen NLP/LLM action therefore remains indeterminate for technical implementability, integrability, and operability within the 2025-2027 horizon.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "fdb49a6f10fbcea8bc913e9420c38620267cf95c7bd04b723e1f432969787116",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "7ed19b86b2a47cddb36397255dc8efc9def00cbbda92119f2565ba05db34b3b4",
+    "institutional_regional_system_prompt_sha256": "507f8c8fff4d1f1e678788b34a10957110def2935a28c7e32dfe54f320d996d7",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "3ef0b7afd1704ead4ce23534b68baebc268e870b2a4dfdb1e05ec02cea7c9680"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v2",
+  "semantic_validation_version": "stage4-semantic-validation-v2",
+  "stage3_context_artifact_sha256": "6c11911488b4bd9a79c5cd14208c3426d778933f57a559fcfbd394892220af40",
+  "stage3_context_input_fingerprint": "2a0a0db145ca51dd3d3c1fa28b7737445061d70a4475fad1aafd57c2ab760666",
+  "stage3_context_output_sha256": "7788ea190fe54e3483f4c0357f5e78411b19efe974de432027e8c08fc0efec69",
+  "stage4_output_sha256": "64f288177d33062d178d0159094fd1920bb983f0dabc572f9ba863a86c8fee00"
+}

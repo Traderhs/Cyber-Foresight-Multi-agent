@@ -1,0 +1,196 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref cutoff-constrained record reports IDS/IPS annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication-trend record explicitly states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref academic metadata record identifies a 2016 publication titled 'Efficiency test of IDS/IPS systems against DOS and DDOS attacks'.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "E_29_BAD6581A8E96027C"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref academic metadata record includes an abstract describing testing of Suricata in IDS and IPS modes, installation/configuration, CPU utilization and CPU load average monitoring, and optimization based on hardware resources such as number of cores.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-5",
+        "evidence_ids": [
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref academic metadata record includes an abstract describing implementation/configuration of IDS/IPS with Telegram notification and testing against possible intrusion scenarios.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-6",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1",
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied IDS/IPS academic records are publication/trend metadata whose record boundaries limit them to publication or metadata claims and exclude deployment maturity or operational effectiveness claims.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-7",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "scope": "GENERAL",
+        "statement": "An ATT&CK record describes forwarding logs from IDS/IPS systems, including an example Suricata syslog/TLS output, to a remote security information system.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-8",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG records describe brute-force-relevant recommended controls, including MFA for remote-access IT/OT accounts, alerting and system-enforced login prevention after consecutive unsuccessful logins mapped to T1110.001-T1110.004, and unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-9",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "A NIST SP 800-53 Rev.5 record discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-10",
+        "evidence_ids": [
+          "E_02_669F59880AF52688",
+          "E_03_C54C5F099169E020",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_04_02D425B67E57F32D"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied threat records describe observed brute-force-related context: DBIR reports 1,997 basic web application attack incidents and states actors continue to brute force default, simplistic, or guessable credentials; Mandiant reports password guessing against cloud sign-in portals and shows Brute Force in an initial infection vector chart; X-Force reports vulnerabilities that make brute force attacks easier.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Provide infrastructure_context to assess DEPLOYMENT_SPECIFIC technical feasibility.",
+      "Provide evidence of IDS/IPS deployment, configuration, or integration in a comparable environment to assess operability and maintainability.",
+      "Provide brute-force-specific detection or testing evidence to assess threat-mitigation fit.",
+      "Provide organization_type and region if they affect technical deployment constraints."
+    ],
+    "constraints": [
+      "The supplied academic IDS/IPS evidence is limited to publication metadata, described studies, and publication trend; it does not establish deployment maturity or operational effectiveness.",
+      "The supplied official guidance records are primarily brute-force-relevant control context, not direct evidence that IDS/IPS is technically feasible in the unknown deployment.",
+      "The frozen deployment context has null infrastructure_context, organization_type, region, and budget_context, so DEPLOYMENT_SPECIFIC compatibility, scalability, and maintainability cannot be assessed."
+    ],
+    "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+    "evidence_gaps": [
+      "No supplied Stage 0 record provides brute-force-specific IDS/IPS detection or prevention effectiveness in the target environment.",
+      "No supplied Stage 0 record provides target infrastructure details needed for DEPLOYMENT_SPECIFIC feasibility, such as network architecture, segmentation, protocols, traffic volume, latency constraints, or existing monitoring/SIEM/IDS/IPS integration points.",
+      "No supplied Stage 0 record establishes how IDS/IPS would integrate with authentication, account lockout, alerting, or response workflows in the unknown organization.",
+      "No supplied Stage 0 record provides maintainability or scalability evidence for the unknown deployment scale."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records provide GENERAL technical enablers for IDS/IPS: a cutoff-constrained positive publication trend through 2024, academic publication metadata describing IDS/IPS testing and configuration, and a record describing IDS/IPS log forwarding. However, the same records explicitly do not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, and no supplied record provides brute-force-specific IDS/IPS effectiveness or target-environment integration evidence. The frozen deployment context leaves infrastructure, organization, region, and budget unknown, so DEPLOYMENT_SPECIFIC technical feasibility cannot be concluded. The result is mixed: GENERAL feasibility is supported but deployment-specific feasibility is indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "9387dd63188003896fc9db3ca513aa0c0274002e05a106a1aa00cd128ea9770e",
+  "checkpoint_sha256": "68775e3a5bb07de75a3cfd3cf429ce13e1046489affcee75eb41975f99257a36",
+  "created_at": "2026-09-16T17:34:43.241174+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "577799c73a613d52e2d7d92d673cb2cbeb7d998e4ba82ef8ade093548ee53466",
+    "base_stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+    "base_stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+    "case_id": "main__brute_force__ids_ips",
+    "evidence_ids": [
+      "E_02_669F59880AF52688",
+      "E_03_C54C5F099169E020",
+      "E_03_F2B2EBA86BEEFDC5",
+      "E_04_02D425B67E57F32D",
+      "E_12_D8076704AE363FE2",
+      "E_23_312B9513BCEE9B9D",
+      "E_23_B21FAA9377991F05",
+      "E_23_EBCAB9508641E703",
+      "E_25_FE58E4FCF044EDE3",
+      "E_29_8E495DC2A98305B1",
+      "E_29_BAD6581A8E96027C",
+      "E_29_CA00E63DF08A6FC1",
+      "E_33_A707006877BFD1C2"
+    ],
+    "input_fingerprint": "c54203bf515c4133f8fdaf05bcf539b7ae250f6fc0d980da90db1262219e785f",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "9199067a2d6048ca220bd816ac5da55674ad3100083c0f77e41b9323304bbe9a",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "76e26387bdba12b875605230c4122e3e9b23ad8edc15abbc7a91939925aa71d9",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

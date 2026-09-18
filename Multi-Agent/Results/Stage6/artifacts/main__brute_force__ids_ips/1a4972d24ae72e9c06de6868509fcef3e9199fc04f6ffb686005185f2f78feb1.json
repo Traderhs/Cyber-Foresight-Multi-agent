@@ -1,0 +1,2203 @@
+{
+  "artifact_sha256": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd",
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_narrative_schema_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7": "f0824bb62ced8e2dc389d08a6ad1eb059ea71c6028fa8b72547ecbd489e7fc09",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6": "f8646cd163605a50103584cd12cc6223b0882e87a74efcb3220ab95d6d47f581",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf": "5c0734b4e6b4fc261f68b334cbab8a5fb8b3c12ef538da1387bfea263558785f"
+  },
+  "created_at": "2026-09-16T07:58:44.905996+00:00",
+  "decision_policy_version": "stage6-decision-policy-v1",
+  "frame_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7": "58517c50c8aa6a8a9efa04244154c23d4859f7fd8f8655a12d3bfed6b0206c1d",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6": "4714c01331ed9d6f8d742044a13fe52504a825a95cd348860b974297cecc1bd5",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf": "79a094d96ddce86b36e79e49c1ca01efaf451a216e84ba7b7a9c10538ccb4bbd"
+  },
+  "generation_contract_version": "policy-conditional-evidence-grounded-strategic-report-v5",
+  "input_fingerprint": "1a4972d24ae72e9c06de6868509fcef3e9199fc04f6ffb686005185f2f78feb1",
+  "narrative_schema_sha256": "90c3f41a059fadb03bf517404e61f75203cee936324cc9d1925a1942069c5b6e",
+  "output_schema_sha256": "151aaf5b8f2ea7ae51de0c269d13b03b5596c84dca0889acba40123874352a2c",
+  "prompt_hashes": {
+    "system_prompt_sha256": "a59721faa1b0e23230ac2eee07159eb74d7e8d92cde1bfcee856805e2f96be4e",
+    "user_prompt_sha256": "37f3e1a3fd642cf049b90d181d6a59db96dcf09586471167a31b3ab3c63febba"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "server_total_context_size": 131072,
+    "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage6-artifact-v5",
+  "semantic_validation_version": "stage6-semantic-validation-v12",
+  "stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+  "stage3_context_output_sha256": "c173707adbef64b495df00a02c6bcf6292f1e9dc65ebd13960cd0b90798c41a7",
+  "stage4_context_artifact_sha256": "b1376510b636d7f3fd21c937b3f7a4f82f30b343895aa38cb986cc68f06b7d1d",
+  "stage4_context_output_sha256": "3a5c00d94511443a3d3f537b769b45aecd8e2fe68ca5d65ac4d298ebf3aa914b",
+  "stage5_artifact_sha256": "50b01e42e78acdff697914105ad41738baa44f5ead7013c4419340f3faf6d05a",
+  "stage5_output_sha256": "5e955f064a9356437fc1e70db28f19acebbe4c9d5ab0c4b206c94c2d8a32be4a",
+  "stage6_output_sha256": "3184df027e871022c7c29001c676649c98e0d73e4bce18aee2caf3a0154d5b6d",
+  "synthesis_bundle": {
+    "case_id": "main__brute_force__ids_ips",
+    "syntheses": [
+      {
+        "candidate_action_id": "PMT_IDS_IPS",
+        "candidate_action_name": "IDS/IPS",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only.",
+            "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027.",
+            "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal.",
+            "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established.",
+            "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?",
+            "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished.",
+            "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?",
+            "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?",
+            "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            },
+            {
+              "adjudication_id": "MA-R2-3",
+              "attack_claim_ids": [
+                "A5"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-R2-4",
+              "attack_claim_ids": [
+                "A6"
+              ],
+              "defense_claim_ids": [
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            }
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "RECOMMEND_PILOT",
+        "decision_rule_id": "ADOPTION_GATE_UNRESOLVED",
+        "dissenting_lenses": [],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 4,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.34218763772174093,
+            "2026": 0.33360196353894545,
+            "2027": 0.3282731411870303
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.33523038945438566,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1444477323116293,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_IDS_IPS_2025-01",
+              "YF_PMT_IDS_IPS_2025-02",
+              "YF_PMT_IDS_IPS_2025-03",
+              "YF_PMT_IDS_IPS_2025-04",
+              "YF_PMT_IDS_IPS_2025-05",
+              "YF_PMT_IDS_IPS_2025-06",
+              "YF_PMT_IDS_IPS_2025-07",
+              "YF_PMT_IDS_IPS_2025-08",
+              "YF_PMT_IDS_IPS_2025-09",
+              "YF_PMT_IDS_IPS_2025-10",
+              "YF_PMT_IDS_IPS_2025-11",
+              "YF_PMT_IDS_IPS_2025-12",
+              "YF_PMT_IDS_IPS_2026-01",
+              "YF_PMT_IDS_IPS_2026-02",
+              "YF_PMT_IDS_IPS_2026-03",
+              "YF_PMT_IDS_IPS_2026-04",
+              "YF_PMT_IDS_IPS_2026-05",
+              "YF_PMT_IDS_IPS_2026-06",
+              "YF_PMT_IDS_IPS_2026-07",
+              "YF_PMT_IDS_IPS_2026-08",
+              "YF_PMT_IDS_IPS_2026-09",
+              "YF_PMT_IDS_IPS_2026-10",
+              "YF_PMT_IDS_IPS_2026-11",
+              "YF_PMT_IDS_IPS_2026-12",
+              "YF_PMT_IDS_IPS_2027-01",
+              "YF_PMT_IDS_IPS_2027-02",
+              "YF_PMT_IDS_IPS_2027-03",
+              "YF_PMT_IDS_IPS_2027-04",
+              "YF_PMT_IDS_IPS_2027-05",
+              "YF_PMT_IDS_IPS_2027-06",
+              "YF_PMT_IDS_IPS_2027-07",
+              "YF_PMT_IDS_IPS_2027-08",
+              "YF_PMT_IDS_IPS_2027-09",
+              "YF_PMT_IDS_IPS_2027-10",
+              "YF_PMT_IDS_IPS_2027-11",
+              "YF_PMT_IDS_IPS_2027-12"
+            ],
+            "forecast_mean_z": 1.0192261919390517,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10241186776763442,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 1.1257886809404631,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [
+          "financial_adoption"
+        ],
+        "jurisdiction_code": "KR",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA-CLM-1",
+                "evidence_ids": [
+                  "DE_DE07_86DF83870E0A768D"
+                ],
+                "scope": "GENERAL",
+                "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-2",
+                "evidence_ids": [
+                  "DE_DE16_E455D97291B61E2A"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-3",
+                "evidence_ids": [
+                  "DE_DE04_DB6B29C9BE1B0F05"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-4",
+                "evidence_ids": [
+                  "DE_DE04_C6F46FCDE66BFAC7"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-5",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "FA-CLM-6",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+              "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+              "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+              "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+            ],
+            "constraints": [
+              "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+              "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+              "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+              "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+              "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+            "evidence_gaps": [
+              "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+              "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+              "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+              "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+            "stance": 0
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR-G1",
+                "evidence_ids": [
+                  "DE_DE07_E2C403C2FF05BA09"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-G2",
+                "evidence_ids": [
+                  "DE_DE04_0B77B88875745973"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-N1",
+                "evidence_ids": [
+                  "DE_DE16_CEA1C38E613068F8"
+                ],
+                "scope": "GENERAL",
+                "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "IR-D1",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+              "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+              "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+            ],
+            "constraints": [
+              "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+              "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+              "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+            "evidence_gaps": [
+              "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+              "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+              "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+              "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF-C1",
+                "evidence_ids": [
+                  "AE05S_CCD7CA4B2AE10DC9"
+                ],
+                "scope": "GENERAL",
+                "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C2",
+                "evidence_ids": [
+                  "AE05C_2D35A464AD6F0FAE"
+                ],
+                "scope": "GENERAL",
+                "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C3",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF-C4",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "GENERAL",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+              "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+              "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+            ],
+            "constraints": [
+              "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+              "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+            "evidence_gaps": [
+              "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+              "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+              "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+              "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1444477323116293,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10241186776763442
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4",
+              "DE_DE04_C6F46FCDE66BFAC7",
+              "DE_DE04_DB6B29C9BE1B0F05",
+              "DE_DE07_86DF83870E0A768D",
+              "DE_DE16_E455D97291B61E2A"
+            ],
+            "institutional_regional": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B77B88875745973",
+              "DE_DE07_E2C403C2FF05BA09",
+              "DE_DE16_CEA1C38E613068F8"
+            ],
+            "technical_feasibility": [
+              "AE05C_2D35A464AD6F0FAE",
+              "AE05S_CCD7CA4B2AE10DC9",
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE",
+            "AE05S_CCD7CA4B2AE10DC9",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE04_0B017D64401987E4",
+            "DE_DE04_0B77B88875745973",
+            "DE_DE04_C6F46FCDE66BFAC7",
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8",
+            "DE_DE16_E455D97291B61E2A",
+            "E_02_669F59880AF52688",
+            "E_03_C54C5F099169E020",
+            "E_03_F2B2EBA86BEEFDC5",
+            "E_04_02D425B67E57F32D",
+            "E_12_D8076704AE363FE2",
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3",
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1",
+            "E_33_A707006877BFD1C2"
+          ],
+          "jurisdiction_code": "KR",
+          "scenario_id": "KR__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "scenario_id": "KR__CIS_IG2",
+        "strategic_intelligence_report": "IDS/IPS: Brute-Force Defense Pilot — Stage 6 Strategic Intelligence Report\n\n1. Decision Summary\nThe frozen Stage 6 decision policy supports IDS/IPS as a limited pilot, not as a full production endorsement. At the strategic candidate-action scope, the evidence supports moving forward with a bounded evaluation, while preserving the unresolved financial/adoption question and the technical and institutional constraints that bound the decision. This is a pilot decision, not a guarantee of production deployment success, exact ROI, or universal effectiveness.\n\n2. Why the Frozen Policy Supports a Pilot\nThe decision rests on three predeclared functional dimensions. Technical feasibility is supported. Institutional/regional enablement is supported. Financial/adoption feasibility is unresolved. Under the frozen policy, an unresolved adoption gate with supported technical and institutional prerequisites supports a pilot rather than full recommendation, hold, or rejection.\n\nThis is not a majority-vote result. The three lenses are fixed decision dimensions, not a statistical sample. The within-set dispersion is descriptive only and is not population uncertainty, calibrated confidence, or predictive uncertainty.\n\n3. What the Evidence Actually Supports\n\nTechnical Feasibility: Supported\nThe technical dimension supports IDS/IPS as a generally feasible brute-force defense. A 2024 case study directly applies IDS components, including Snort and Fail2Ban, to brute-force defense using a honeypot and alerting workflow, showing that IDS/IPS-style monitoring and blocking can be implemented against repeated authentication attacks [EVIDENCE:AE05S_CCD7CA4B2AE10DC9]. NIST IDPS guidance adds that organizations should define requirements, understand the target environment, and consider integration with logging or SIEM-based correlation and alert verification [EVIDENCE:DE_DE04_0B017D64401987E4].\n\nThe technical support is materially conditional. A documented limitation shows that distributed low-rate brute-force attacks using disciplined-IP patterns can stay below ordinary per-host login thresholds and evade conventional IDS/IPS rules [EVIDENCE:AE05C_2D35A464AD6F0FAE]. No supplied record establishes that the forecasted brute-force threat will use that variant, so the dimension remains supported at general scope, but the pilot must test whether the actual threat pattern can evade ordinary threshold-based detection. The frozen CIS IG2 reference-enterprise profile adds that the environment may require enterprise-grade technology and specialized expertise, but it does not by itself establish deployment-specific fit [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4].\n\nInstitutional/Regional Enablement: Supported\nThe institutional dimension supports organizational enablement for deploying and operating IDS/IPS. A NIST ISCM record provides an organization-level governance pathway in which security controls, status, and monitoring metrics can support risk-related decision making and governance [EVIDENCE:DE_DE07_E2C403C2FF05BA09]. A NIST IDPS guidance record supports institutional implementation practices, including protected IDPS accounts and management communications, ongoing monitoring, update testing, vulnerability assessment, and configuration backup [EVIDENCE:DE_DE04_0B77B88875745973].\n\nThe institutional support is bounded. A CISA/ICS-CERT record frames IDS as a warning or audit system, not a silver bullet, and notes that complete event understanding may require more than one method or device [EVIDENCE:DE_DE16_CEA1C38E613068F8]. No eligible compliance-constraint record is supplied, and no regulatory-applicability evidence is supplied for the frozen masked jurisdiction. Therefore, no deployment-specific legal, regulatory, data-sovereignty, or jurisdiction-specific compliance conclusion can be made. The KR label alone must not be used to infer regulatory compatibility [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4].\n\nFinancial/Adoption Feasibility: Unresolved\nThe financial/adoption dimension is unresolved because grounded evidence supports both adoption benefits and adoption burdens. Benefit records are conditional, not exact cost or ROI claims. Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce time spent on redundant monitoring tasks [EVIDENCE:DE_DE07_86DF83870E0A768D]. Integrating IDS/IPS information with SIEM or consolidated log management can reduce manual log-review effort [EVIDENCE:DE_DE16_E455D97291B61E2A]. Integrated IDPS management through a common console or data sharing can provide time savings and speed alert prioritization [EVIDENCE:DE_DE04_DB6B29C9BE1B0F05].\n\nBurden records are also grounded. IDPS adoption imposes staffing and operational burden because implementation, tuning, signature-update testing, and ongoing alert management require specialized administrative and information-security skills [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. The frozen CIS IG2 profile supports an enterprise context but does not supply numeric budget, price, ROI, TCO, payback period, procurement ceiling, staffing count, existing IDS/IPS/SIEM assets, or administrative skill availability [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Because both benefit and burden evidence is present while deployment-specific financial and operational capacity is missing, the financial/adoption direction remains unresolved rather than supported or challenged.\n\n4. Forecast Evidence and Its Limits\nThe forecast frame contains two model-output directions: brute-force threat NoI increasing for 2025-2027, and IDS/IPS PMT NoP publication-activity increasing. These forecast outputs remain existing model outputs even where external confirmation is limited.\n\nThe PMT publication-activity direction is directly supported by a Crossref record reporting annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with a positive OLS slope of 5.1 works/year [EVIDENCE:E_33_A707006877BFD1C2]. This record supports increased publication activity only. It does not establish deployment maturity, tuning, operational effectiveness, or causal mitigation effectiveness against brute force. The 2021-to-2022 dip from 44 to 43 is noted, but it does not overturn the overall positive publication-trend signal.\n\nThe threat NoI increasing direction is not directly confirmed or challenged by the supplied evidence. A DBIR record reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and persistence of brute-forcing of default, simplistic, or guessable credentials [EVIDENCE:E_02_669F59880AF52688]. The word 'continue' supports persistence of an observed threat pattern, not a forward-looking increase in brute-force incident count or frequency. A Mandiant record reports initial-infection-vector shares, including exploit at 38%, phishing at 17%, prior compromise at 15%, and brute force at 6% as chart data [EVIDENCE:E_03_F2B2EBA86BEEFDC5]. The mediation trace requires these records to be treated as neutral observed context, not as direct threat-trajectory evidence for a brute-force NoI increase or decrease. The exploitation-signal evidence slot is missing, so direct observed exploitation signals for the brute-force trajectory are not established.\n\nThe forecasted threat-minus-PMT gap direction, with the gap moving from negative in 2025 to positive in 2026-2027, therefore remains an unvalidated model relationship. It cannot be directly validated because no surfaced temporal brute-force incident-count or frequency evidence is available to compare against the PMT publication-activity trend. The defense-side publication and operational-control context remains supported; the attack-side threat-trajectory question remains unresolved.\n\nBrute-force-relevant operational controls are documented in CISA/NIST records: alerting and prevention after consecutive unsuccessful logins, MFA prioritization, unique credential provisioning, and account lockout or delay [EVIDENCE:E_23_B21FAA9377991F05][EVIDENCE:E_23_312B9513BCEE9B9D][EVIDENCE:E_23_EBCAB9508641E703][EVIDENCE:E_25_FE58E4FCF044EDE3]. These records support control mapping and operational interpretation, not exact control effectiveness or product ROI.\n\n5. Material Challenges and Unresolved Tensions\nThe strongest preserved challenge is technical: ordinary per-host IDS/IPS threshold rules may be insufficient against distributed low-rate disciplined-IP brute force [EVIDENCE:AE05C_2D35A464AD6F0FAE]. This does not defeat general technical feasibility, but it means the pilot must determine whether the threat pattern in scope can evade standard rules and whether additional detection logic, tuning, or integration is required.\n\nThe second major tension is financial/adoption. The evidence shows that IDS/IPS can create efficiency benefits through automation and integration, but it also creates ongoing workload and skill demands [EVIDENCE:DE_DE07_86DF83870E0A768D][EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. Without budget, staffing, procurement, and existing-integration data, the organization cannot conclude whether the net adoption burden is acceptable.\n\nThe third tension is forecast validation. The model forecasts increasing brute-force threat intensity and increasing IDS/IPS publication activity, but the supplied external evidence only directly confirms the publication-activity side. The threat side remains neutral observed context, not confirmed trajectory evidence [EVIDENCE:E_02_669F59880AF52688][EVIDENCE:E_03_F2B2EBA86BEEFDC5]. The pilot should therefore treat the forecast as context to be validated, not as established fact.\n\n6. Conditions and Evidence Gaps That Bound the Decision\nSeveral gaps qualify the scope of the pilot rather than creating additional independent policy gates:\n- No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, product/version compatibility, staffing count, budget, or procurement capacity is supplied.\n- No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat is supplied.\n- No jurisdiction-specific regulatory applicability, compliance constraint, data-sovereignty, cross-border, or financial cost evidence is supplied for the frozen masked jurisdiction.\n- No organization-specific evidence establishes whether the efficiency benefits from automation, SIEM/log integration, or integrated IDPS management will be available in this deployment.\n\nThese gaps are reassessment conditions. They require pilot validation, but they do not independently reverse the frozen recommendation.\n\n7. What the Pilot Should Test\nA limited pilot is appropriate because it can resolve the unresolved adoption gate while preserving the supported technical and institutional basis. The pilot should test:\n- Whether IDS/IPS placement and tuning detect or reduce brute-force attempts in the actual environment, including whether low-rate distributed patterns evade ordinary per-host thresholds [EVIDENCE:AE05C_2D35A464AD6F0FAE].\n- Whether integration with SIEM/log management or integrated IDPS management actually reduces alert workload and manual review, because those benefits are conditional [EVIDENCE:DE_DE16_E455D97291B61E2A][EVIDENCE:DE_DE04_DB6B29C9BE1B0F05].\n- Whether staffing, tuning, signature-update testing, and alert-management burden are acceptable given available security skills and monitoring bandwidth [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7].\n- Whether complementary operational controls are present or prioritized, such as MFA, unique credential provisioning, account lockout/delay, and alerting after failed logins [EVIDENCE:E_23_B21FAA9377991F05][EVIDENCE:E_23_312B9513BCEE9B9D][EVIDENCE:E_23_EBCAB9508641E703][EVIDENCE:E_25_FE58E4FCF044EDE3].\n\n8. Decision-Maker Bottom Line\nThe frozen recommendation is RECOMMEND_PILOT. IDS/IPS has grounded technical feasibility for brute-force defense and grounded institutional/regional enablement, but financial/adoption feasibility remains unresolved. The forecast context is useful but not fully externally validated on the threat side. A pilot is the correct bounded step because it can convert general feasibility into deployment-specific evidence on detection fit, operational workload, integration value, and budgetary acceptability. The pilot does not guarantee production success, exact ROI, universal effectiveness, or validation of the forecasted threat trajectory.",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only."
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027."
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal."
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established."
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?"
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?"
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?"
+          },
+          {
+            "gap_id": "G10",
+            "source": "stage2_defense_post",
+            "text": "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No exact staffing count, security-team size, budget, or procurement capacity is supplied."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules."
+          },
+          {
+            "gap_id": "G14",
+            "source": "technical_feasibility",
+            "text": "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made."
+          },
+          {
+            "gap_id": "G17",
+            "source": "institutional_regional",
+            "text": "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved."
+          },
+          {
+            "gap_id": "G18",
+            "source": "institutional_regional",
+            "text": "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits."
+          },
+          {
+            "gap_id": "G21",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management."
+          },
+          {
+            "gap_id": "G22",
+            "source": "financial_adoption",
+            "text": "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "financial_adoption",
+            "text": "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "financial_adoption",
+            "text": "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          }
+        ]
+      },
+      {
+        "candidate_action_id": "PMT_IDS_IPS",
+        "candidate_action_name": "IDS/IPS",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only.",
+            "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027.",
+            "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal.",
+            "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established.",
+            "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?",
+            "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished.",
+            "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?",
+            "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?",
+            "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            },
+            {
+              "adjudication_id": "MA-R2-3",
+              "attack_claim_ids": [
+                "A5"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-R2-4",
+              "attack_claim_ids": [
+                "A6"
+              ],
+              "defense_claim_ids": [
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            }
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "RECOMMEND_PILOT",
+        "decision_rule_id": "ADOPTION_GATE_UNRESOLVED",
+        "dissenting_lenses": [],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 4,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.34218763772174093,
+            "2026": 0.33360196353894545,
+            "2027": 0.3282731411870303
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.33523038945438566,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1444477323116293,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_IDS_IPS_2025-01",
+              "YF_PMT_IDS_IPS_2025-02",
+              "YF_PMT_IDS_IPS_2025-03",
+              "YF_PMT_IDS_IPS_2025-04",
+              "YF_PMT_IDS_IPS_2025-05",
+              "YF_PMT_IDS_IPS_2025-06",
+              "YF_PMT_IDS_IPS_2025-07",
+              "YF_PMT_IDS_IPS_2025-08",
+              "YF_PMT_IDS_IPS_2025-09",
+              "YF_PMT_IDS_IPS_2025-10",
+              "YF_PMT_IDS_IPS_2025-11",
+              "YF_PMT_IDS_IPS_2025-12",
+              "YF_PMT_IDS_IPS_2026-01",
+              "YF_PMT_IDS_IPS_2026-02",
+              "YF_PMT_IDS_IPS_2026-03",
+              "YF_PMT_IDS_IPS_2026-04",
+              "YF_PMT_IDS_IPS_2026-05",
+              "YF_PMT_IDS_IPS_2026-06",
+              "YF_PMT_IDS_IPS_2026-07",
+              "YF_PMT_IDS_IPS_2026-08",
+              "YF_PMT_IDS_IPS_2026-09",
+              "YF_PMT_IDS_IPS_2026-10",
+              "YF_PMT_IDS_IPS_2026-11",
+              "YF_PMT_IDS_IPS_2026-12",
+              "YF_PMT_IDS_IPS_2027-01",
+              "YF_PMT_IDS_IPS_2027-02",
+              "YF_PMT_IDS_IPS_2027-03",
+              "YF_PMT_IDS_IPS_2027-04",
+              "YF_PMT_IDS_IPS_2027-05",
+              "YF_PMT_IDS_IPS_2027-06",
+              "YF_PMT_IDS_IPS_2027-07",
+              "YF_PMT_IDS_IPS_2027-08",
+              "YF_PMT_IDS_IPS_2027-09",
+              "YF_PMT_IDS_IPS_2027-10",
+              "YF_PMT_IDS_IPS_2027-11",
+              "YF_PMT_IDS_IPS_2027-12"
+            ],
+            "forecast_mean_z": 1.0192261919390517,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10241186776763442,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 1.1257886809404631,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [
+          "financial_adoption"
+        ],
+        "jurisdiction_code": "EU",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA-CLM-1",
+                "evidence_ids": [
+                  "DE_DE07_86DF83870E0A768D"
+                ],
+                "scope": "GENERAL",
+                "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-2",
+                "evidence_ids": [
+                  "DE_DE16_E455D97291B61E2A"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-3",
+                "evidence_ids": [
+                  "DE_DE04_DB6B29C9BE1B0F05"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-4",
+                "evidence_ids": [
+                  "DE_DE04_C6F46FCDE66BFAC7"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-5",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "FA-CLM-6",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+              "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+              "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+              "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+            ],
+            "constraints": [
+              "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+              "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+              "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+              "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+              "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+            "evidence_gaps": [
+              "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+              "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+              "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+              "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+            "stance": 0
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR-G1",
+                "evidence_ids": [
+                  "DE_DE07_E2C403C2FF05BA09"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-G2",
+                "evidence_ids": [
+                  "DE_DE04_0B77B88875745973"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-N1",
+                "evidence_ids": [
+                  "DE_DE16_CEA1C38E613068F8"
+                ],
+                "scope": "GENERAL",
+                "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "IR-D1",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+              "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+              "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+            ],
+            "constraints": [
+              "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+              "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+              "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+            "evidence_gaps": [
+              "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+              "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+              "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+              "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF-C1",
+                "evidence_ids": [
+                  "AE05S_CCD7CA4B2AE10DC9"
+                ],
+                "scope": "GENERAL",
+                "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C2",
+                "evidence_ids": [
+                  "AE05C_2D35A464AD6F0FAE"
+                ],
+                "scope": "GENERAL",
+                "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C3",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF-C4",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "GENERAL",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+              "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+              "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+            ],
+            "constraints": [
+              "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+              "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+            "evidence_gaps": [
+              "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+              "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+              "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+              "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1444477323116293,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10241186776763442
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4",
+              "DE_DE04_C6F46FCDE66BFAC7",
+              "DE_DE04_DB6B29C9BE1B0F05",
+              "DE_DE07_86DF83870E0A768D",
+              "DE_DE16_E455D97291B61E2A"
+            ],
+            "institutional_regional": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B77B88875745973",
+              "DE_DE07_E2C403C2FF05BA09",
+              "DE_DE16_CEA1C38E613068F8"
+            ],
+            "technical_feasibility": [
+              "AE05C_2D35A464AD6F0FAE",
+              "AE05S_CCD7CA4B2AE10DC9",
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE",
+            "AE05S_CCD7CA4B2AE10DC9",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE04_0B017D64401987E4",
+            "DE_DE04_0B77B88875745973",
+            "DE_DE04_C6F46FCDE66BFAC7",
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8",
+            "DE_DE16_E455D97291B61E2A",
+            "E_02_669F59880AF52688",
+            "E_03_C54C5F099169E020",
+            "E_03_F2B2EBA86BEEFDC5",
+            "E_04_02D425B67E57F32D",
+            "E_12_D8076704AE363FE2",
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3",
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1",
+            "E_33_A707006877BFD1C2"
+          ],
+          "jurisdiction_code": "EU",
+          "scenario_id": "EU__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "scenario_id": "EU__CIS_IG2",
+        "strategic_intelligence_report": "Strategic Intelligence Report: IDS/IPS for Brute-Force Mitigation — EU CIS IG2 Scenario. Candidate: IDS/IPS. Scenario: EU__CIS_IG2. Recommendation: RECOMMEND_PILOT at strategic candidate-action scope, meaning a limited pilot/evaluation step, not a full-scale production deployment, not a guarantee of success, and not a claim of universal optimality.\n\nExecutive summary. The frozen Stage 6 decision policy yields a pilot recommendation because the financial/adoption dimension is unresolved while the technical-feasibility and institutional/regional dimensions are supported. The unresolved adoption stance is the direct policy trigger for the pilot outcome. Technical feasibility is supported by a 2024 case study applying Snort, Fail2Ban, honeypot, and alerting to repeated authentication attacks [EVIDENCE:AE05S_CCD7CA4B2AE10DC9]. Institutional/regional enablement is supported by NIST ISCM governance and NIST IDPS operational practices [EVIDENCE:DE_DE07_E2C403C2FF05BA09] [EVIDENCE:DE_DE04_0B77B88875745973], while CISA framing of IDS as a warning/audit system rather than a silver bullet is treated as neutral context [EVIDENCE:DE_DE16_CEA1C38E613068F8]. Financial/adoption is unresolved because the evidence contains both grounded benefits and grounded burdens: automation, SIEM/log integration, and integrated IDPS management can reduce cost or manual effort [EVIDENCE:DE_DE07_86DF83870E0A768D] [EVIDENCE:DE_DE16_E455D97291B61E2A] [EVIDENCE:DE_DE04_DB6B29C9BE1B0F05], but adoption also imposes staffing, tuning, update-testing, and alert-management burdens [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. Because both sides are grounded and deployment-specific financial/operational capacity is not supplied, the adoption stance remains unresolved rather than merely incomplete.\n\nDecision basis. The recommendation is conditional on the frozen decision policy. This candidate is treated as adoption-gated. The unresolved financial/adoption stance is the direct trigger for the pilot result. Technical feasibility and institutional/regional support are prerequisites; their supported status makes a full hold less necessary, while unresolved adoption prevents a full recommendation. Missing evidence items, unresolved questions, and upstream conditions qualify scope and reassessment rather than acting as extra policy gates. This is decision support, not a guarantee of deployment success or causal optimality.\n\nForecast and evidentiary context. The frozen model outputs forecast increasing brute-force threat NoI and increasing IDS/IPS PMT NoP for 2025-2027, with the threat-minus-PMT gap moving from negative in 2025 to positive in 2026 and 2027. These forecast directions are existing model outputs and are not treated as externally confirmed facts. After critic adjudication, the attack-side threat-trajectory assessment remains unresolved because the surfaced threat records are neutral context rather than direct brute-force NoI trajectory evidence. The defense-side assessment supports a PMT publication-activity signal but does not establish deployment maturity, tuning, or operational effectiveness. Crossref reports IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year [EVIDENCE:E_33_A707006877BFD1C2]. The adjudicated boundary limits this to publication activity; it does not establish deployment maturity, tuning, operational effectiveness, or causal mitigation effectiveness. No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency that directly validates or challenges the forecasted threat NoI increasing direction. The DBIR record reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and persistence of brute forcing default, simplistic, or guessable credentials [EVIDENCE:E_02_669F59880AF52688]; the word “continue” is neutral observed context, not a forward-looking NoI trajectory. Mandiant vector shares, including the 6% brute-force value, are initial-vector chart data, not incident-count trajectory evidence [EVIDENCE:E_03_F2B2EBA86BEEFDC5]. Therefore, the forecasted threat-minus-PMT gap sign change cannot be directly validated. CISA/NIST records describe relevant brute-force controls, such as alerting after unsuccessful logins [EVIDENCE:E_23_B21FAA9377991F05], MFA prioritization [EVIDENCE:E_23_312B9513BCEE9B9D], unique credential provisioning [EVIDENCE:E_23_EBCAB9508641E703], and account lockout or delay [EVIDENCE:E_25_FE58E4FCF044EDE3]. These are neutral operational-control context; they do not establish exact effectiveness, product ROI, or actual adoption in the frozen deployment.\n\nTechnical feasibility: SUPPORTED, PARTIAL evidence sufficiency. IDS/IPS is technically feasible at general scope for brute-force mitigation. The direct support is the 2024 case study applying Snort, Fail2Ban, honeypot, and alerting to repeated authentication attacks [EVIDENCE:AE05S_CCD7CA4B2AE10DC9]. A material challenge is that distributed low-rate brute-force attacks can use disciplined-IP patterns to evade ordinary IDS/IPS per-host rules [EVIDENCE:AE05C_2D35A464AD6F0FAE]. This challenge is conditional because no supplied evidence establishes that the forecasted brute-force threat uses that variant. NIST IDPS guidance requires defining requirements, understanding the target environment, and integrating with SIEM or alert verification where needed [EVIDENCE:DE_DE04_0B017D64401987E4]; the CIS IG2 profile adds enterprise-scale and expertise context [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Deployment-specific feasibility remains conditional on architecture, placement, SIEM coverage, and measured detection performance.\n\nInstitutional/regional: SUPPORTED, PARTIAL evidence sufficiency. Institutional/regional enablement is supported at general scope. NIST ISCM provides a governance pathway for controls, security status, and monitoring metrics in risk-related decision making [EVIDENCE:DE_DE07_E2C403C2FF05BA09]. NIST IDPS guidance supports implementation practices such as multiple technology types, protected accounts, continuous monitoring, update testing, vulnerability assessment, and configuration backup [EVIDENCE:DE_DE04_0B77B88875745973]. CISA characterizes IDS as a warning or audit system, not a silver bullet, often requiring more than one method or device [EVIDENCE:DE_DE16_CEA1C38E613068F8]. The frozen EU/CIS IG2 context is neutral deployment context [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Because jurisdiction-specific regulatory applicability and compliance constraints are not supplied, no deployment-specific legal or EU-specific compliance conclusion can be made.\n\nFinancial/adoption: UNRESOLVED, PARTIAL evidence sufficiency. Financial/adoption feasibility is unresolved because grounded support and challenge coexist. Support: automated monitoring can lower cost and reduce redundant monitoring time [EVIDENCE:DE_DE07_86DF83870E0A768D]; IDS/IPS integration with SIEM or log management can reduce manual review effort [EVIDENCE:DE_DE16_E455D97291B61E2A]; integrated IDPS management can save administrator time and speed alert prioritization [EVIDENCE:DE_DE04_DB6B29C9BE1B0F05]. Challenge: IDPS adoption imposes staffing and operational burden because implementation, tuning, maintenance, signature-update testing, and alert management require specialized skills [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. Adoption is also context-dependent on requirements, environment, policies, and oversight [EVIDENCE:DE_DE04_0B017D64401987E4], and the CIS IG2 profile may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Missing numeric budget, price, ROI, TCO, payback period, staffing count, existing IDS/IPS/SIEM assets, skills availability, and jurisdiction-specific cost evidence block deployment-specific adoption feasibility.\n\nMaterial challenges and preserved dissent. Technical dissent: conventional IDS/IPS may be ineffective against distributed low-rate disciplined-IP brute-force patterns, so pilot design must test detection, tuning, and possible additional mechanisms [EVIDENCE:AE05C_2D35A464AD6F0FAE]. Adoption dissent: efficiency benefits are conditional on automation, SIEM/log integration, or integrated management, while documented staffing and tuning burden remains unquantified against the organization’s capacity [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. Institutional limitation: general governance support does not resolve EU-specific regulatory, data-sovereignty, cross-border, or compliance-burden questions; the jurisdiction-specific record is masked or absent. Forecast limitation: the increasing threat NoI direction and threat-minus-PMT gap sign change are model outputs not directly confirmed by surfaced temporal brute-force incident-count evidence or exploitation signals [EVIDENCE:E_02_669F59880AF52688] [EVIDENCE:E_03_F2B2EBA86BEEFDC5].\n\nKey evidence limitations. Forecast validation gap: the threat NoI direction lacks direct temporal incident-count/frequency evidence; the exploitation-signal slot is missing, and DBIR/Mandiant records are neutral context after adjudication [EVIDENCE:E_02_669F59880AF52688] [EVIDENCE:E_03_F2B2EBA86BEEFDC5]. Publication-activity boundary: the Crossref positive trend measures IDS/IPS publication activity only, not deployment maturity, tuning, operational effectiveness, or causal mitigation effectiveness [EVIDENCE:E_33_A707006877BFD1C2]. Deployment-specific context gap: no exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, product/version compatibility, staffing count, budget, procurement ceiling, or skills capacity is supplied; the CIS IG2 profile is a frozen reference scenario, not an observed organization [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. Operational effectiveness gap: no measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat is supplied; CISA/NIST control records are relevant context but do not establish exact effectiveness [EVIDENCE:E_23_B21FAA9377991F05] [EVIDENCE:E_23_312B9513BCEE9B9D] [EVIDENCE:E_23_EBCAB9508641E703] [EVIDENCE:E_25_FE58E4FCF044EDE3].\n\nUnresolved questions. What temporal brute-force-specific incident-count or frequency evidence would establish or refute the threat-side NoI direction, given the missing exploitation signal? What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026? Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness, or only increased publication activity? Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and how would that affect operational interpretation without changing the NoP publication-activity direction? Would the frozen deployment’s architecture, SIEM integration, staffing, budget, and EU-specific regulatory environment support scale-up beyond pilot?\n\nDecision conditions and reassessment triggers. A full-scale recommendation should require deployment-specific validation of IDPS placement, sensor/agent coverage, SIEM/log integration, alert triage, tuning, and staffing capacity. If low-rate distributed or disciplined-IP brute force is in scope, ordinary per-host threshold rules are insufficient and additional detection/prevention mechanisms or tuning are required [EVIDENCE:AE05C_2D35A464AD6F0FAE]. Before scale-up, resolve organization-specific budget, staffing, existing technology, procurement constraints, and EU-specific regulatory applicability or compliance constraints. If integrated IDPS management is selected, assess concentration risk from a single failure or compromise affecting multiple IDPS technologies. Reassess if surfaced evidence provides temporal brute-force NoI data, measured IDS/IPS operational effectiveness, or jurisdiction-specific regulatory/compliance constraints.",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only."
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027."
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal."
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established."
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?"
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?"
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?"
+          },
+          {
+            "gap_id": "G10",
+            "source": "stage2_defense_post",
+            "text": "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No exact staffing count, security-team size, budget, or procurement capacity is supplied."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules."
+          },
+          {
+            "gap_id": "G14",
+            "source": "technical_feasibility",
+            "text": "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made."
+          },
+          {
+            "gap_id": "G17",
+            "source": "institutional_regional",
+            "text": "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved."
+          },
+          {
+            "gap_id": "G18",
+            "source": "institutional_regional",
+            "text": "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits."
+          },
+          {
+            "gap_id": "G21",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management."
+          },
+          {
+            "gap_id": "G22",
+            "source": "financial_adoption",
+            "text": "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "financial_adoption",
+            "text": "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "financial_adoption",
+            "text": "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          }
+        ]
+      },
+      {
+        "candidate_action_id": "PMT_IDS_IPS",
+        "candidate_action_name": "IDS/IPS",
+        "critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only.",
+            "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027.",
+            "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal.",
+            "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established.",
+            "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?",
+            "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished.",
+            "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?",
+            "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?",
+            "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            },
+            {
+              "adjudication_id": "MA-R2-3",
+              "attack_claim_ids": [
+                "A5"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-R2-4",
+              "attack_claim_ids": [
+                "A6"
+              ],
+              "defense_claim_ids": [
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            }
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_interpretation": "DESCRIPTIVE_WITHIN_SET_DISPERSION_NOT_POPULATION_UNCERTAINTY",
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+        "decision_policy_version": "stage6-decision-policy-v1",
+        "decision_recommendation": "RECOMMEND_PILOT",
+        "decision_rule_id": "ADOPTION_GATE_UNRESOLVED",
+        "dissenting_lenses": [],
+        "evidence_quality_summary": {
+          "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+          "claim_evidence_reference_pass_rate": 1.0,
+          "d_lens_evaluable": true,
+          "evidence_sufficiency_by_lens": {
+            "financial_adoption": "PARTIAL",
+            "institutional_regional": "PARTIAL",
+            "technical_feasibility": "PARTIAL"
+          },
+          "joint_abstention": false,
+          "semantic_grounding_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+          "source_family_count": 4,
+          "stage0_evidence_slot_coverage_ratio": 0.833333
+        },
+        "forecast_summary": {
+          "gap_by_year": {
+            "2025": -0.34218763772174093,
+            "2026": 0.33360196353894545,
+            "2027": 0.3282731411870303
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.33523038945438566,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.1444477323116293,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_IDS_IPS_2025-01",
+              "YF_PMT_IDS_IPS_2025-02",
+              "YF_PMT_IDS_IPS_2025-03",
+              "YF_PMT_IDS_IPS_2025-04",
+              "YF_PMT_IDS_IPS_2025-05",
+              "YF_PMT_IDS_IPS_2025-06",
+              "YF_PMT_IDS_IPS_2025-07",
+              "YF_PMT_IDS_IPS_2025-08",
+              "YF_PMT_IDS_IPS_2025-09",
+              "YF_PMT_IDS_IPS_2025-10",
+              "YF_PMT_IDS_IPS_2025-11",
+              "YF_PMT_IDS_IPS_2025-12",
+              "YF_PMT_IDS_IPS_2026-01",
+              "YF_PMT_IDS_IPS_2026-02",
+              "YF_PMT_IDS_IPS_2026-03",
+              "YF_PMT_IDS_IPS_2026-04",
+              "YF_PMT_IDS_IPS_2026-05",
+              "YF_PMT_IDS_IPS_2026-06",
+              "YF_PMT_IDS_IPS_2026-07",
+              "YF_PMT_IDS_IPS_2026-08",
+              "YF_PMT_IDS_IPS_2026-09",
+              "YF_PMT_IDS_IPS_2026-10",
+              "YF_PMT_IDS_IPS_2026-11",
+              "YF_PMT_IDS_IPS_2026-12",
+              "YF_PMT_IDS_IPS_2027-01",
+              "YF_PMT_IDS_IPS_2027-02",
+              "YF_PMT_IDS_IPS_2027-03",
+              "YF_PMT_IDS_IPS_2027-04",
+              "YF_PMT_IDS_IPS_2027-05",
+              "YF_PMT_IDS_IPS_2027-06",
+              "YF_PMT_IDS_IPS_2027-07",
+              "YF_PMT_IDS_IPS_2027-08",
+              "YF_PMT_IDS_IPS_2027-09",
+              "YF_PMT_IDS_IPS_2027-10",
+              "YF_PMT_IDS_IPS_2027-11",
+              "YF_PMT_IDS_IPS_2027-12"
+            ],
+            "forecast_mean_z": 1.0192261919390517,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.10241186776763442,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2025-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2026-12",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-01",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-02",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-03",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-04",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-05",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-06",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-07",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-08",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-09",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-10",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-11",
+              "YF_THREAT_BRUTE_FORCE_ATTACK_2027-12"
+            ],
+            "forecast_mean_z": 1.1257886809404631,
+            "state_modality": "NoI"
+          }
+        },
+        "indeterminate_lenses": [
+          "financial_adoption"
+        ],
+        "jurisdiction_code": "US",
+        "lens_evidence_trace": {
+          "financial_adoption": {
+            "claims": [
+              {
+                "claim_id": "FA-CLM-1",
+                "evidence_ids": [
+                  "DE_DE07_86DF83870E0A768D"
+                ],
+                "scope": "GENERAL",
+                "statement": "Automated security monitoring related to IDS/IPS can lower costs, enhance efficiency, and reduce the time security professionals spend on redundant monitoring tasks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-2",
+                "evidence_ids": [
+                  "DE_DE16_E455D97291B61E2A"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make review of operational and security data cheaper and easier.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-3",
+                "evidence_ids": [
+                  "DE_DE04_DB6B29C9BE1B0F05"
+                ],
+                "scope": "GENERAL",
+                "statement": "Integrated IDPS management through a common console or data sharing can provide time savings for administrators and users and can speed analysis and alert prioritization.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-4",
+                "evidence_ids": [
+                  "DE_DE04_C6F46FCDE66BFAC7"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption imposes a staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "FA-CLM-5",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "IDPS adoption is context-dependent: product selection and integration depend on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "FA-CLM-6",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, describing a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints.",
+              "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management.",
+              "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth.",
+              "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+            ],
+            "constraints": [
+              "The cited financial/adoption benefits are conditional pathways: automation, SIEM/log integration, or integrated IDPS management; they do not establish exact cost, ROI, TCO, payback period, or affordability for this frozen deployment.",
+              "The cited adoption burden is a documented resource and skills burden, but the supplied record does not quantify staffing count, cost, or procurement burden.",
+              "Integrated IDPS management carries a recorded concentration risk: a failure or compromise of the integrated solution could endanger all IDPS technologies in that solution.",
+              "Feasibility is conditional on organizational requirements, environment, objectives, existing policies, and oversight; no exact architecture, vendor, product version, or staffing level is supplied.",
+              "The CIS IG2 reference profile supports the frozen enterprise shape but cannot by itself establish exact implementation burden, cost, or affordability."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+            "evidence_gaps": [
+              "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded.",
+              "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits.",
+              "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management.",
+              "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "financial_adoption",
+            "rationale": "The supplied decision evidence contains both adoption-benefit and adoption-burden material for IDS/IPS. Benefit records document potential cost, efficiency, and time-saving pathways through automation, IDS/IPS information integration with SIEM or log-management solutions, and integrated IDPS management. The adoption-burden record documents required administrative skills, signature-update testing, tuning, and ongoing alert-management effort. The frozen CIS IG2 reference profile provides deployment context but no numeric budget, staffing, procurement, or exact integration architecture. On balance, the records support a mixed GENERAL financial/adoption feasibility judgment rather than a clear support or challenge; deployment-specific feasibility is blocked by missing exact financial and operational capacity context.",
+            "stance": 0
+          },
+          "institutional_regional": {
+            "claims": [
+              {
+                "claim_id": "IR-G1",
+                "evidence_ids": [
+                  "DE_DE07_E2C403C2FF05BA09"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support organization-level risk-related decision making and governance.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-G2",
+                "evidence_ids": [
+                  "DE_DE04_0B77B88875745973"
+                ],
+                "scope": "GENERAL",
+                "statement": "A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "IR-N1",
+                "evidence_ids": [
+                  "DE_DE16_CEA1C38E613068F8"
+                ],
+                "scope": "GENERAL",
+                "statement": "A CISA/ICS-CERT record characterizes IDS as a warning or audit system that can alert to possible misconfigurations and known intrusion methods, but not as a silver bullet and often requiring more than one method or device.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "IR-D1",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "DEPLOYMENT_SPECIFIC",
+                "statement": "The frozen deployment context is a CIS IG2 reference enterprise, described as a multi-department enterprise that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS.",
+              "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS.",
+              "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+            ],
+            "constraints": [
+              "IDS/IPS is described as an audit and warning system rather than a silver bullet; complete event understanding may require multiple methods or devices (DE_DE16_CEA1C38E613068F8).",
+              "IDPS operation requires governance-supported practices such as multiple technology types, protected accounts and management communications, continuous monitoring, vulnerability assessment, update testing, and configuration backup (DE_DE04_0B77B88875745973).",
+              "The CIS IG2 profile may involve regulatory burdens and specialized expertise, but the supplied records do not identify jurisdiction-specific obligations (CTX_CIS_IG2_9F94838146D9C3A4)."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+            "evidence_gaps": [
+              "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted.",
+              "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made.",
+              "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved.",
+              "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "institutional_regional",
+            "rationale": "Under GENERAL scope, the supplied institutional/regional grounding contains governance_enablement records relevant to IDS/IPS: organization-wide ISCM governance and metrics, IDPS implementation and operational governance, and defense-in-depth monitoring/audit context. These support GENERAL institutional enablement for deploying and operating IDS/IPS. The supplied grounding does not contain an eligible compliance_constraint record for this lens, and no regulatory_applicability evidence is present for the frozen masked jurisdiction. Therefore, no grounded CHALLENGES_FEASIBILITY direction can be asserted, and no DEPLOYMENT_SPECIFIC regional/legal conclusion can be made. Missing jurisdiction-specific regulatory, compliance, data-sovereignty, and resource information is treated as conditional context rather than as a challenge. On balance, the surviving grounded direction is GENERAL institutional support, with PARTIAL evidence sufficiency because deployment-specific regulatory applicability and compliance constraints are unavailable.",
+            "stance": 1
+          },
+          "technical_feasibility": {
+            "claims": [
+              {
+                "claim_id": "TF-C1",
+                "evidence_ids": [
+                  "AE05S_CCD7CA4B2AE10DC9"
+                ],
+                "scope": "GENERAL",
+                "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C2",
+                "evidence_ids": [
+                  "AE05C_2D35A464AD6F0FAE"
+                ],
+                "scope": "GENERAL",
+                "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "claim_id": "TF-C3",
+                "evidence_ids": [
+                  "DE_DE04_0B017D64401987E4"
+                ],
+                "scope": "GENERAL",
+                "statement": "NIST IDPS guidance requires organizations to define requirements, understand the characteristics of the organization’s system and network environments, and consider direct or indirect integration of IDPS products, including SIEM-based correlation and alert verification.",
+                "status": "NEUTRAL_CONTEXT"
+              },
+              {
+                "claim_id": "TF-C4",
+                "evidence_ids": [
+                  "CTX_CIS_IG2_9F94838146D9C3A4"
+                ],
+                "scope": "GENERAL",
+                "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+                "status": "NEUTRAL_CONTEXT"
+              }
+            ],
+            "conditional_requirements": [
+              "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure.",
+              "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required.",
+              "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+            ],
+            "constraints": [
+              "Conventional IDS/IPS per-host thresholds may be evaded by distributed low-rate disciplined-IP brute force, so threat-mitigation fit is conditional on attacker pattern and may require additional detection logic or tuning.",
+              "IDPS deployment requires defining requirements and understanding the target system and network environment; multiple IDPS technologies may need direct or indirect SIEM integration for correlation and alert verification."
+            ],
+            "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf",
+            "evidence_gaps": [
+              "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion.",
+              "No exact staffing count, security-team size, budget, or procurement capacity is supplied.",
+              "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules.",
+              "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+            ],
+            "evidence_sufficiency": "PARTIAL",
+            "lens_type": "technical_feasibility",
+            "rationale": "The GENERAL technical feasibility direction is supported by the action-specific technical-enablement record AE05S_CCD7CA4B2AE10DC9, which reports a 2024 case study applying IDS components, including Snort and Fail2Ban, to brute-force defense with a honeypot and alerting workflow. The action-specific technical-limitation record AE05C_2D35A464AD6F0FAE challenges threat-mitigation fit by documenting that distributed low-rate brute-force attacks can evade ordinary IDS/IPS rules through disciplined-IP patterns. This limitation is materially conditional: it concerns a specific low-rate distributed variant, while the frozen threat object is the general Brute Force Attack threat and no supplied record establishes that the forecasted threat uses that variant. The NIST IDPS guidance record DE_DE04_0B017D64401987E4 and the CIS IG2 context record CTX_CIS_IG2_9F94838146D9C3A4 show that deployment-specific compatibility depends on target architecture, integration, and expertise, which are not fully specified. On balance, the supplied records support the GENERAL technical feasibility of IDS/IPS for brute-force mitigation, while preserving material conditional constraints and keeping the assessment PARTIAL rather than deployment-specific.",
+            "stance": 1
+          }
+        },
+        "lens_set_role": "PREDECLARED_FUNCTIONAL_DIMENSIONS_NOT_STATISTICAL_SAMPLE",
+        "non_claims": [
+          "No causal optimality claim.",
+          "No majority-vote decision rule.",
+          "The three Stage 4 lenses are predeclared functional decision dimensions, not a statistical sample of agents or stakeholders.",
+          "D_lens is descriptive within-set dispersion, not a population uncertainty estimate, calibrated probability, or predictive uncertainty.",
+          "The recommendation is conditional on the frozen Stage 6 decision policy and does not establish universal or stakeholder-optimal action validity.",
+          "No practitioner validation claim.",
+          "No guaranteed deployment success or utility improvement claim.",
+          "No exact ROI, budget, staffing, or risk estimate unless it already exists in frozen upstream evidence."
+        ],
+        "predictive_uncertainty_summary": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.1444477323116293,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.10241186776763442
+        },
+        "provenance": {
+          "candidate_selection_rule": "case-forecast-pmt-only-v1",
+          "cited_evidence_ids_by_lens": {
+            "financial_adoption": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4",
+              "DE_DE04_C6F46FCDE66BFAC7",
+              "DE_DE04_DB6B29C9BE1B0F05",
+              "DE_DE07_86DF83870E0A768D",
+              "DE_DE16_E455D97291B61E2A"
+            ],
+            "institutional_regional": [
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B77B88875745973",
+              "DE_DE07_E2C403C2FF05BA09",
+              "DE_DE16_CEA1C38E613068F8"
+            ],
+            "technical_feasibility": [
+              "AE05C_2D35A464AD6F0FAE",
+              "AE05S_CCD7CA4B2AE10DC9",
+              "CTX_CIS_IG2_9F94838146D9C3A4",
+              "DE_DE04_0B017D64401987E4"
+            ]
+          },
+          "evaluation_evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE",
+            "AE05S_CCD7CA4B2AE10DC9",
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE04_0B017D64401987E4",
+            "DE_DE04_0B77B88875745973",
+            "DE_DE04_C6F46FCDE66BFAC7",
+            "DE_DE04_DB6B29C9BE1B0F05",
+            "DE_DE07_86DF83870E0A768D",
+            "DE_DE07_E2C403C2FF05BA09",
+            "DE_DE16_CEA1C38E613068F8",
+            "DE_DE16_E455D97291B61E2A",
+            "E_02_669F59880AF52688",
+            "E_03_C54C5F099169E020",
+            "E_03_F2B2EBA86BEEFDC5",
+            "E_04_02D425B67E57F32D",
+            "E_12_D8076704AE363FE2",
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3",
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1",
+            "E_33_A707006877BFD1C2"
+          ],
+          "jurisdiction_code": "US",
+          "scenario_id": "US__CIS_IG2"
+        },
+        "recommendation_interpretation": "POLICY_CONDITIONAL_DECISION_SUPPORT",
+        "recommendation_scope": "STRATEGIC_CANDIDATE_ACTION",
+        "report_cited_evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "CTX_CIS_IG2_9F94838146D9C3A4",
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_0B77B88875745973",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8",
+          "DE_DE16_E455D97291B61E2A",
+          "E_02_669F59880AF52688",
+          "E_03_F2B2EBA86BEEFDC5",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3",
+          "E_33_A707006877BFD1C2"
+        ],
+        "scenario_id": "US__CIS_IG2",
+        "strategic_intelligence_report": "The frozen recommendation is RECOMMEND_PILOT for IDS/IPS as a candidate action for brute-force mitigation in the frozen US CIS IG2 reference scenario. This supports a limited pilot or evaluation step only. It does not endorse broad production deployment, imply that deployment will succeed or that utility will improve, or establish a universally optimal or stakeholder-validated action. The recommendation is conditional on the frozen Stage 6 decision policy and the supplied evidence boundary.\n\nThe recommendation fires only in the combination of an unresolved financial/adoption feasibility state and supported technical and institutional/regional prerequisites. Under the frozen policy, the unresolved financial/adoption state is the direct trigger for the pilot outcome; the supported technical-feasibility and institutional/regional states are required prerequisites for that outcome. Missing budget, staffing, integration, regulatory, and operational-effectiveness evidence qualifies the scope of the decision and defines reassessment conditions, but it does not create an additional policy gate beyond the unresolved adoption state.\n\nTechnical feasibility is supported at general scope. The grounded technical-enablement record is a 2024 case study that directly applies IDS components, including Snort and Fail2Ban, to brute-force defense using a honeypot and an alerting workflow. This supports the candidate's technical feasibility as an implementable response to repeated authentication attacks [EVIDENCE:AE05S_CCD7CA4B2AE10DC9]. The material challenge is that distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules through disciplined-IP patterns [EVIDENCE:AE05C_2D35A464AD6F0FAE]. That challenge is materially conditional: the supplied evidence does not establish that the forecasted brute-force threat will use the distributed low-rate disciplined-IP variant. NIST IDPS guidance requires the organization to define requirements, understand system and network characteristics, and consider direct or indirect integration with SIEM-based correlation and alert verification [EVIDENCE:DE_DE04_0B017D64401987E4]. The CIS IG2 profile describes an enterprise IT environment with personnel responsible for managing and protecting infrastructure, where some safeguards may require enterprise-grade technology and specialized expertise [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. On balance, the technical dimension supports the candidate's general feasibility, while deployment-specific feasibility remains bounded by architecture, visibility, integration, tuning, and attacker-pattern conditions.\n\nInstitutional/regional feasibility is supported at general scope. A NIST ISCM record provides an organization-level governance pathway in which security controls, security status, and monitoring metrics can support risk-related decision making and governance [EVIDENCE:DE_DE07_E2C403C2FF05BA09]. A NIST IDPS guidance record supports institutional implementation practices for IDPS, including multiple technology types, protected IDPS accounts and management communications, ongoing security monitoring, update testing, vulnerability assessment, and configuration backup [EVIDENCE:DE_DE04_0B77B88875745973]. A CISA/ICS-CERT record characterizes IDS as a warning or audit system rather than a silver bullet, and notes that complete event understanding may require more than one method or device [EVIDENCE:DE_DE16_CEA1C38E613068F8]. The CIS IG2 profile supplies the frozen deployment shape, but the supplied records do not identify jurisdiction-specific obligations [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. No eligible compliance-constraint record and no regulatory-applicability record for the frozen deployment are supplied, so no grounded deployment-specific legal challenge or deployment-specific legal support conclusion can be made. The general institutional direction supports operating IDS/IPS within an existing governance structure, while jurisdiction-specific regulatory compatibility, data-sovereignty constraints, and compliance burden remain unresolved.\n\nFinancial/adoption feasibility is unresolved because the supplied evidence contains both grounded support and grounded challenge for the candidate's adoption feasibility. The support side identifies conditional efficiency and cost-reduction pathways: automated security monitoring can lower costs, enhance efficiency, and reduce time spent on redundant monitoring tasks [EVIDENCE:DE_DE07_86DF83870E0A768D]; integrating IDS/IPS information with a SIEM or consolidated log-management solution can reduce manual log-review effort and make operational and security data review cheaper and easier [EVIDENCE:DE_DE16_E455D97291B61E2A]; and integrated IDPS management through a common console or data sharing can provide time savings and speed analysis and alert prioritization [EVIDENCE:DE_DE04_DB6B29C9BE1B0F05]. The challenge side identifies a documented adoption burden: IDPS adoption imposes staffing and operational burden because implementation, tuning, and maintenance require specialized administrative and information-security skills, signature-update testing, and ongoing alert management or reconfiguration [EVIDENCE:DE_DE04_C6F46FCDE66BFAC7]. Product selection and integration are also context-dependent, depending on defined requirements, fit with the organization's environment and objectives, existing security policies, and oversight [EVIDENCE:DE_DE04_0B017D64401987E4], and the CIS IG2 profile supplies organizational shape but not exact financial quantities [EVIDENCE:CTX_CIS_IG2_9F94838146D9C3A4]. No numeric budget, price, ROI, TCO, payback period, procurement ceiling, existing IDS/IPS/SIEM/log-management asset evidence, or staffing/security-team capacity is supplied. The unresolved state is therefore a substantive mixed judgment: the benefits are real but conditional, and the burden is real but unquantified for this deployment.\n\nThe forecast evidence must be read separately from external evidentiary confirmation. The model forecast is an existing output: brute-force threat incident activity, NoI, is forecast to increase through 2025-2027; IDS/IPS publication activity, NoP, is forecast to increase; and the threat-minus-PMT gap is forecast to move increasingly positive, with a sign change from 2025 to 2026. These directions are model outputs, not observed trends. The threat-side NoI direction is not directly confirmed or challenged by the supplied evidence. A DBIR record reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to take advantage of assets with default, simplistic, or easily guessable credentials by brute forcing them, buying them, or reusing them from previous breaches [EVIDENCE:E_02_669F59880AF52688]. The adjudicated interpretation is neutral observed threat context: the word \"continue\" supports persistence of an observed threat pattern, not a forward-looking increase in brute-force incident count or frequency. A Mandiant M-Trends record reports initial-infection-vector shares, including exploit at 38%, phishing at 17%, prior compromise at 15%, and brute force at 6% as chart-data-only [EVIDENCE:E_03_F2B2EBA86BEEFDC5]. The adjudicated interpretation is neutral initial-vector context, not a challenge to the forecasted brute-force NoI trajectory. The exploitation-signal evidence slot is missing, so direct observed exploitation signals for the brute-force trajectory are not established. The PMT-side NoP direction is supported as publication activity by a Crossref record showing annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with a positive OLS slope [EVIDENCE:E_33_A707006877BFD1C2]. That record supports publication activity only; it does not establish deployment maturity, tuning, operational effectiveness, or causal mitigation effectiveness. The 2021-to-2022 dip from 44 to 43 does not negate the overall positive publication trend. CISA/NIST records describe brute-force-relevant controls, including alerting after consecutive unsuccessful logins, MFA prioritization for IT and OT accounts, unique credential provisioning, and automatic account lockout or delay after unsuccessful logons [EVIDENCE:E_23_B21FAA9377991F05] [EVIDENCE:E_23_312B9513BCEE9B9D] [EVIDENCE:E_23_EBCAB9508641E703] [EVIDENCE:E_25_FE58E4FCF044EDE3]. These records are operational-control context, not exact effectiveness or ROI evidence. Because the threat-side NoI direction lacks a direct temporal incident-count or frequency signal, the forecasted gap sign change cannot be directly validated as a joint comparative movement, even though the PMT publication direction is supported as publication activity.\n\nThe recommendation is bounded by unresolved limitations that require pilot evidence before any broader deployment decision. No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat is supplied. No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied, so technical feasibility remains general rather than deployment-specific. No numeric budget, staffing count, procurement ceiling, or existing integration assets are supplied, so financial/adoption feasibility remains unresolved. No jurisdiction-specific regulatory applicability or compliance-constraint evidence is supplied, even in the US scenario, so institutional feasibility remains general and region-specific legal compatibility remains unresolved. The forecasted threat trajectory is not directly confirmed by surfaced incident-frequency evidence; DBIR persistence language and Mandiant vector shares are neutral context, not forward-looking validation. These limitations do not change the frozen recommendation, but they define what must be assessed in the pilot.\n\nThe pilot should therefore be limited to evaluating whether IDS/IPS is suitable for brute-force mitigation in the CIS IG2 reference context. It should measure or document whether expected brute-force patterns, including possible low-rate distributed disciplined-IP variants, are detected, alerted on, or blocked; the tuning, false-positive, and administrative burden; integration fit with existing logging, SIEM, or console architecture; staffing and budget implications against organizational capacity; and any jurisdiction-specific regulatory or compliance constraints that become applicable. Reassessment should occur if the pilot shows that low-rate distributed variants evade ordinary threshold rules, that operational burden or cost is incompatible with organizational capacity, that required regulatory or compliance constraints are not met, or that measured effectiveness is materially below operational expectations. The pilot does not establish that IDS/IPS is sufficient as a standalone control; IDS is also described as a warning or audit system that may require complementary methods or devices [EVIDENCE:DE_DE16_CEA1C38E613068F8].",
+        "supporting_lenses": [
+          "institutional_regional",
+          "technical_feasibility"
+        ],
+        "synthesis_authority": "DETERMINISTIC_POLICY_WITH_EVIDENCE_GROUNDED_LLM_REPORT",
+        "unresolved_evidence_gaps": [
+          {
+            "gap_id": "G01",
+            "source": "stage2_attack_post",
+            "text": "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only."
+          },
+          {
+            "gap_id": "G02",
+            "source": "stage2_attack_post",
+            "text": "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027."
+          },
+          {
+            "gap_id": "G03",
+            "source": "stage2_attack_post",
+            "text": "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal."
+          },
+          {
+            "gap_id": "G04",
+            "source": "stage2_attack_post",
+            "text": "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established."
+          },
+          {
+            "gap_id": "G05",
+            "source": "stage2_attack_post",
+            "text": "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+          },
+          {
+            "gap_id": "G06",
+            "source": "stage2_defense_post",
+            "text": "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?"
+          },
+          {
+            "gap_id": "G07",
+            "source": "stage2_defense_post",
+            "text": "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished."
+          },
+          {
+            "gap_id": "G08",
+            "source": "stage2_defense_post",
+            "text": "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?"
+          },
+          {
+            "gap_id": "G09",
+            "source": "stage2_defense_post",
+            "text": "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?"
+          },
+          {
+            "gap_id": "G10",
+            "source": "stage2_defense_post",
+            "text": "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?"
+          },
+          {
+            "gap_id": "G11",
+            "source": "technical_feasibility",
+            "text": "No exact target architecture, network topology, traffic-visibility points, existing IDPS/SIEM stack, or product/version compatibility detail is supplied for a DEPLOYMENT_SPECIFIC technical feasibility conclusion."
+          },
+          {
+            "gap_id": "G12",
+            "source": "technical_feasibility",
+            "text": "No exact staffing count, security-team size, budget, or procurement capacity is supplied."
+          },
+          {
+            "gap_id": "G13",
+            "source": "technical_feasibility",
+            "text": "No supplied evidence establishes whether the forecasted Brute Force Attack will use the distributed low-rate disciplined-IP pattern that evades ordinary IDS/IPS rules."
+          },
+          {
+            "gap_id": "G14",
+            "source": "technical_feasibility",
+            "text": "No measured detection, false-positive, blocking-success, or operational-effectiveness data for IDS/IPS against the forecasted brute-force threat are supplied."
+          },
+          {
+            "gap_id": "G15",
+            "source": "institutional_regional",
+            "text": "No eligible compliance_constraint record is supplied in the institutional/regional grounding contract, so a grounded CHALLENGES_FEASIBILITY direction cannot be asserted."
+          },
+          {
+            "gap_id": "G16",
+            "source": "institutional_regional",
+            "text": "No regulatory_applicability record is supplied for the frozen masked jurisdiction, so a DEPLOYMENT_SPECIFIC institutional/regional legal conclusion cannot be made."
+          },
+          {
+            "gap_id": "G17",
+            "source": "institutional_regional",
+            "text": "The frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE; jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden remain unresolved."
+          },
+          {
+            "gap_id": "G18",
+            "source": "institutional_regional",
+            "text": "No numeric budget, staffing count, or procurement ceiling is supplied, so institutional resource feasibility cannot be quantified."
+          },
+          {
+            "gap_id": "G19",
+            "source": "financial_adoption",
+            "text": "No numeric budget, price, ROI, TCO, payback period, procurement ceiling, or exact staffing/security-team count is supplied; DEPLOYMENT_SPECIFIC financial feasibility cannot be concluded."
+          },
+          {
+            "gap_id": "G20",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about existing IDS/IPS, SIEM, log-management, or integrated console assets that would enable the cited integration or automation benefits."
+          },
+          {
+            "gap_id": "G21",
+            "source": "financial_adoption",
+            "text": "No evidence is supplied about current administrative skill availability, training capacity, or operational bandwidth for IDPS tuning, update testing, and alert management."
+          },
+          {
+            "gap_id": "G22",
+            "source": "financial_adoption",
+            "text": "No jurisdiction-specific financial or regulatory cost evidence is supplied in this masked equivalence class."
+          }
+        ],
+        "upstream_conditions": [
+          {
+            "condition_id": "C01",
+            "source_lens": "technical_feasibility",
+            "text": "For a DEPLOYMENT_SPECIFIC feasibility judgment, the evaluation must confirm that the target environment’s architecture allows the selected IDPS placement, sensor/agent coverage, and integration with existing logging or SIEM infrastructure."
+          },
+          {
+            "condition_id": "C02",
+            "source_lens": "technical_feasibility",
+            "text": "If the disciplined-IP low-rate distributed brute-force variant is in scope, ordinary per-host threshold rules are insufficient; additional detection/prevention mechanisms or tuning are required."
+          },
+          {
+            "condition_id": "C03",
+            "source_lens": "technical_feasibility",
+            "text": "Before product or placement selection, the organization must articulate IDPS goals, review existing security policies, and map the target system and network characteristics to the IDPS capabilities being evaluated."
+          },
+          {
+            "condition_id": "C04",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC support conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a governance_enablement record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C05",
+            "source_lens": "institutional_regional",
+            "text": "A DEPLOYMENT_SPECIFIC challenge conclusion would require both regulatory_applicability evidence for the frozen jurisdiction and a compliance_constraint record relevant to IDS/IPS."
+          },
+          {
+            "condition_id": "C06",
+            "source_lens": "institutional_regional",
+            "text": "Any region-specific conclusion is conditional on resolving the masked jurisdiction and supplying jurisdiction-specific evidence; the current GENERAL direction must not be inferred from the jurisdiction label."
+          },
+          {
+            "condition_id": "C07",
+            "source_lens": "financial_adoption",
+            "text": "A deployment-specific conclusion would require organization-specific budget, staffing, existing technology, integration plan, and procurement constraints."
+          },
+          {
+            "condition_id": "C08",
+            "source_lens": "financial_adoption",
+            "text": "The efficiency benefits should be evaluated only if the deployment will use automation, SIEM/log integration, or integrated IDPS management."
+          },
+          {
+            "condition_id": "C09",
+            "source_lens": "financial_adoption",
+            "text": "The staffing and tuning burden should be evaluated against available skills, training, and monitoring bandwidth."
+          },
+          {
+            "condition_id": "C10",
+            "source_lens": "financial_adoption",
+            "text": "If integrated IDPS management is selected, the concentration risk of a single failure or compromise affecting multiple IDPS technologies should be assessed."
+          }
+        ]
+      }
+    ],
+    "synthesis_contract_version": "stage6-synthesis-v5"
+  },
+  "synthesis_contract_version": "stage6-synthesis-v5"
+}

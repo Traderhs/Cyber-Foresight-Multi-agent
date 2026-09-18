@@ -1,0 +1,347 @@
+{
+  "artifact_sha256": "3ed8cc05c62160848afb3b993ca7fe3e3f971f50396fab97f444e84ae643a418",
+  "candidate_selection_rule": "case-forecast-pmt-only-v1",
+  "case_id": "main__insider_threat__cryptography",
+  "created_at": "2026-09-15T13:57:55.248423+00:00",
+  "decision_bundle": {
+    "candidate_selection_rule": "case-forecast-pmt-only-v1",
+    "case_id": "main__insider_threat__cryptography",
+    "decision_objects": [
+      {
+        "candidate_action": {
+          "action_id": "PMT_CRYPTOGRAPHY",
+          "action_name": "CRYPTOGRAPHY",
+          "source": "B_MTGNN_CASE_PMT",
+          "source_evidence_ids": [
+            "E_15_0A98378FC609EF7E",
+            "E_16_E7BB108A85B71262",
+            "E_19_4E69D255F61736DB",
+            "E_23_A793FAF5B393EFE3",
+            "E_25_746173685B235ED2",
+            "E_29_185B62FFF51926EC",
+            "E_29_3C1B7B4F9532A5F2",
+            "E_29_7C01F6CA0D982DFF",
+            "E_33_CDE0F421E4D797ED"
+          ]
+        },
+        "candidate_action_source": "B_MTGNN_CASE_PMT",
+        "candidate_selection_rule": "case-forecast-pmt-only-v1",
+        "case_id": "main__insider_threat__cryptography",
+        "contradictory_evidence_ids": [],
+        "decision_object_id": "decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f",
+        "deployment_context": {
+          "budget_context": null,
+          "infrastructure_context": null,
+          "organization_type": null,
+          "region": null
+        },
+        "evaluation_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_20_913B6F999A0F1458",
+          "E_22_C239828119FC69CD",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2",
+          "E_26_92664A4339CF24C9",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "forecast_interpretation": {
+          "gap_by_year": {
+            "2025": 0.9766173647127738,
+            "2026": 1.0645615816324334,
+            "2027": 0.9776019362010582
+          },
+          "gap_direction": "threat_minus_pmt_increasing",
+          "gap_direction_semantics": "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, not absolute-distance widening/narrowing",
+          "gap_semantics": "yearly_mean_zscore_node_state_gap",
+          "gap_slope_per_year": 0.0004922857441421735,
+          "pmt_state": {
+            "confidence_95_half_width_z_mean": 0.13487590619322182,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_PMT_CRYPTOGRAPHY_2025-01",
+              "YF_PMT_CRYPTOGRAPHY_2025-02",
+              "YF_PMT_CRYPTOGRAPHY_2025-03",
+              "YF_PMT_CRYPTOGRAPHY_2025-04",
+              "YF_PMT_CRYPTOGRAPHY_2025-05",
+              "YF_PMT_CRYPTOGRAPHY_2025-06",
+              "YF_PMT_CRYPTOGRAPHY_2025-07",
+              "YF_PMT_CRYPTOGRAPHY_2025-08",
+              "YF_PMT_CRYPTOGRAPHY_2025-09",
+              "YF_PMT_CRYPTOGRAPHY_2025-10",
+              "YF_PMT_CRYPTOGRAPHY_2025-11",
+              "YF_PMT_CRYPTOGRAPHY_2025-12",
+              "YF_PMT_CRYPTOGRAPHY_2026-01",
+              "YF_PMT_CRYPTOGRAPHY_2026-02",
+              "YF_PMT_CRYPTOGRAPHY_2026-03",
+              "YF_PMT_CRYPTOGRAPHY_2026-04",
+              "YF_PMT_CRYPTOGRAPHY_2026-05",
+              "YF_PMT_CRYPTOGRAPHY_2026-06",
+              "YF_PMT_CRYPTOGRAPHY_2026-07",
+              "YF_PMT_CRYPTOGRAPHY_2026-08",
+              "YF_PMT_CRYPTOGRAPHY_2026-09",
+              "YF_PMT_CRYPTOGRAPHY_2026-10",
+              "YF_PMT_CRYPTOGRAPHY_2026-11",
+              "YF_PMT_CRYPTOGRAPHY_2026-12",
+              "YF_PMT_CRYPTOGRAPHY_2027-01",
+              "YF_PMT_CRYPTOGRAPHY_2027-02",
+              "YF_PMT_CRYPTOGRAPHY_2027-03",
+              "YF_PMT_CRYPTOGRAPHY_2027-04",
+              "YF_PMT_CRYPTOGRAPHY_2027-05",
+              "YF_PMT_CRYPTOGRAPHY_2027-06",
+              "YF_PMT_CRYPTOGRAPHY_2027-07",
+              "YF_PMT_CRYPTOGRAPHY_2027-08",
+              "YF_PMT_CRYPTOGRAPHY_2027-09",
+              "YF_PMT_CRYPTOGRAPHY_2027-10",
+              "YF_PMT_CRYPTOGRAPHY_2027-11",
+              "YF_PMT_CRYPTOGRAPHY_2027-12"
+            ],
+            "forecast_mean_z": -0.1190687827003756,
+            "state_modality": "NoP"
+          },
+          "threat_state": {
+            "confidence_95_half_width_z_mean": 0.06369521705345892,
+            "direction": "increasing",
+            "forecast_field_ids": [
+              "YF_THREAT_INSIDER_THREAT_2025-01",
+              "YF_THREAT_INSIDER_THREAT_2025-02",
+              "YF_THREAT_INSIDER_THREAT_2025-03",
+              "YF_THREAT_INSIDER_THREAT_2025-04",
+              "YF_THREAT_INSIDER_THREAT_2025-05",
+              "YF_THREAT_INSIDER_THREAT_2025-06",
+              "YF_THREAT_INSIDER_THREAT_2025-07",
+              "YF_THREAT_INSIDER_THREAT_2025-08",
+              "YF_THREAT_INSIDER_THREAT_2025-09",
+              "YF_THREAT_INSIDER_THREAT_2025-10",
+              "YF_THREAT_INSIDER_THREAT_2025-11",
+              "YF_THREAT_INSIDER_THREAT_2025-12",
+              "YF_THREAT_INSIDER_THREAT_2026-01",
+              "YF_THREAT_INSIDER_THREAT_2026-02",
+              "YF_THREAT_INSIDER_THREAT_2026-03",
+              "YF_THREAT_INSIDER_THREAT_2026-04",
+              "YF_THREAT_INSIDER_THREAT_2026-05",
+              "YF_THREAT_INSIDER_THREAT_2026-06",
+              "YF_THREAT_INSIDER_THREAT_2026-07",
+              "YF_THREAT_INSIDER_THREAT_2026-08",
+              "YF_THREAT_INSIDER_THREAT_2026-09",
+              "YF_THREAT_INSIDER_THREAT_2026-10",
+              "YF_THREAT_INSIDER_THREAT_2026-11",
+              "YF_THREAT_INSIDER_THREAT_2026-12",
+              "YF_THREAT_INSIDER_THREAT_2027-01",
+              "YF_THREAT_INSIDER_THREAT_2027-02",
+              "YF_THREAT_INSIDER_THREAT_2027-03",
+              "YF_THREAT_INSIDER_THREAT_2027-04",
+              "YF_THREAT_INSIDER_THREAT_2027-05",
+              "YF_THREAT_INSIDER_THREAT_2027-06",
+              "YF_THREAT_INSIDER_THREAT_2027-07",
+              "YF_THREAT_INSIDER_THREAT_2027-08",
+              "YF_THREAT_INSIDER_THREAT_2027-09",
+              "YF_THREAT_INSIDER_THREAT_2027-10",
+              "YF_THREAT_INSIDER_THREAT_2027-11",
+              "YF_THREAT_INSIDER_THREAT_2027-12"
+            ],
+            "forecast_mean_z": 0.8871915114817129,
+            "state_modality": "NoP"
+          }
+        },
+        "intended_goal": "Evaluate the feasibility and decision relevance of CRYPTOGRAPHY for the frozen Insider Threat forecast pair without changing the action set after observing downstream lens outputs.",
+        "known_constraints": [
+          "Candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+          "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+          "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+        ],
+        "pmt_or_mitigation": "CRYPTOGRAPHY",
+        "pmt_or_mitigation_id": "PMT_CRYPTOGRAPHY",
+        "predictive_uncertainty": {
+          "legacy_variance_warning": "legacy inverse scaling uses scale rather than scale^2; retained as raw provenance only",
+          "pmt_confidence_95_half_width_z_mean": 0.13487590619322182,
+          "status": "PAPER_124_NODE_Y",
+          "threat_confidence_95_half_width_z_mean": 0.06369521705345892
+        },
+        "stage2_critique_summary": {
+          "attack_post_stance": 0,
+          "attack_post_unresolved_questions": [
+            "Does any pre-cutoff record in the surfaced evidence report a temporal change in insider-threat publication count (NoP), incident frequency (NoI), or exploitation signal for THREAT_INSIDER_THREAT? No such record is present; the historical input masks both threat NoP and NoI, and exploitation_signal is listed as a missing required slot.",
+            "The Stage 0 model-input PMT NoP recent_direction is recorded as 'decreasing' while the external Crossref PMT_CRYPTOGRAPHY publication trend (E_33) reports increasing annual counts through 2024. The payload does not provide a reconciliation between these two NoP signals.",
+            "The forecast assigns the threat state a direction of 'increasing' with state_modality NoP, but the historical input marks threat NoP as unavailable. No surfaced evidence evidences the basis for this forecast direction.",
+            "The forecasted gap slope of 0.000492 (near-zero positive, threat_minus_pmt_increasing) cannot be independently validated without a threat-side NoP or NoI directional signal; the sole directional evidence available (E_33) pertains to the PMT side only.",
+            "The source contracts for E_20, E_22, and E_23 prohibit deployment-effectiveness and exact-effectiveness claims, so the operational effectiveness of the described insider-threat controls and cryptography mechanisms remains unestablished in the surfaced evidence."
+          ],
+          "defense_post_stance": 1,
+          "defense_post_unresolved_questions": [
+            "The Stage 0 PMT historical input records NoP recent_direction as decreasing, while the Crossref PMT publication trend (E_33_CDE0F421E4D797ED) reports an increasing 2021–2024 publication-activity trajectory; the payload does not provide a reconciling record that explains the discrepancy between the model-input direction and the external publication trend.",
+            "The Stage 0 retrieval summary marks exploitation_signal as a missing required evidence slot, so the specific insider-threat mechanism that cryptography would mitigate or counter is not directly evidenced in the surfaced payload.",
+            "The Stage 0 threat historical input marks threat NoP as unavailable (latest_value_z = null, recent_direction = masked), yet the forecast threat_state uses NoP as its state_modality with direction increasing; the evidentiary basis for the threat NoP direction is not present in the surfaced payload and cannot be independently validated from the available records.",
+            "The supplied evidence contains no deployment, adoption, implementation, or operational-effectiveness observations for cryptography as an insider-threat mitigation during the 2025–2027 forecast horizon; all cryptography-related records are control guidance, mechanism descriptions, or static publication metadata."
+          ],
+          "final_mediator_adjudications": [
+            {
+              "adjudication_id": "MA-1",
+              "attack_claim_ids": [
+                "C1"
+              ],
+              "defense_claim_ids": [
+                "C1"
+              ],
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "Both critics identify the same cutoff-constrained Crossref PMT_CRYPTOGRAPHY publication trend. E_33 directly states the 2021-2024 annual counts and OLS slope, and both responses correctly limit the claim to external directional publication activity rather than deployment maturity, operational effectiveness, or threat-side trajectory evidence.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-2",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "C4"
+              ],
+              "evidence_ids": [
+                "E_20_913B6F999A0F1458"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "E_20 supports the factual statement that NIST SP 800-161 Rev.1 C-SCRM guidance recommends less predictable predefined data-collection frequencies to reduce the risk of an insider threat bypassing security mechanisms. However, the record is control guidance, not measured risk reduction and not direct directional evidence for a THREAT_INSIDER_THREAT NoP/NoI trajectory or PMT trajectory. The defense revision is better grounded in the surfaced evidence boundary.",
+              "required_revision": "In the final post-assessment, recast Attack C2 as NEUTRAL_CONTEXT operational-control guidance and explicitly state that E_20 does not establish a directional THREAT_INSIDER_THREAT NoP/NoI trajectory or PMT trajectory."
+            },
+            {
+              "adjudication_id": "MA-3",
+              "attack_claim_ids": [
+                "C4"
+              ],
+              "defense_claim_ids": [
+                "C2",
+                "C3",
+                "C6"
+              ],
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E",
+                "E_16_E7BB108A85B71262",
+                "E_23_A793FAF5B393EFE3",
+                "E_25_746173685B235ED2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The grouped cryptography-context claim and the corresponding individual defense claims are supported by the cited guidance: E_15 supports the cryptography/ML information-theoretic security proof contrast, E_16 supports digital signatures as a more robust metadata authentication method than recomputable hashes/checksums, E_23 supports the encryption/hashing definitions, and E_25 supports cryptography as a security control enabling digital signatures, information separation, and random number/hash generation. All are properly treated as neutral context, not measured deployment effectiveness.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-4",
+              "attack_claim_ids": [
+                "C3"
+              ],
+              "defense_claim_ids": [
+                "C5",
+                "C8"
+              ],
+              "evidence_ids": [
+                "E_22_C239828119FC69CD",
+                "E_26_92664A4339CF24C9"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "E_22 supports the description of an organization-wide insider-threat mitigation program using detect/assess/manage practices, training, policy, and management practices. E_26 supports the NIST SP 800-53A Rev.5 assessment reference to personnel responsible for the insider threat program and cross-discipline insider threat incident handling team. Both claims are descriptive control/assessment context and are not effectiveness evidence.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-5",
+              "attack_claim_ids": [
+                "C5"
+              ],
+              "defense_claim_ids": [
+                "C7"
+              ],
+              "evidence_ids": [
+                "E_29_185B62FFF51926EC",
+                "E_29_3C1B7B4F9532A5F2",
+                "E_29_7C01F6CA0D982DFF"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The three Crossref metadata records establish the cited Cryptography journal acknowledgment publications with the stated publication dates and static review-acknowledgment content. They support the claims as static publication metadata only and do not establish a directional NoP trend, deployment maturity, or operational effectiveness.",
+              "required_revision": null
+            }
+          ],
+          "matched_resolved_claim_ids": [],
+          "matched_unresolved_claim_ids": [],
+          "required_revisions": [
+            {
+              "adjudication_id": "MA-2",
+              "attack_claim_ids": [
+                "C2"
+              ],
+              "defense_claim_ids": [
+                "C4"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "required_revision": "In the final post-assessment, recast Attack C2 as NEUTRAL_CONTEXT operational-control guidance and explicitly state that E_20 does not establish a directional THREAT_INSIDER_THREAT NoP/NoI trajectory or PMT trajectory."
+            }
+          ]
+        },
+        "supporting_evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "threat": "Insider Threat",
+        "threat_id": "THREAT_INSIDER_THREAT",
+        "timing_window": {
+          "end_year": 2027,
+          "start_year": 2025
+        },
+        "unknown_context_fields": [
+          "region",
+          "organization_type",
+          "infrastructure_context",
+          "budget_context"
+        ],
+        "unresolved_evidence_gaps": []
+      }
+    ],
+    "eligible_action_set": [
+      {
+        "action_id": "PMT_CRYPTOGRAPHY",
+        "action_name": "CRYPTOGRAPHY",
+        "source": "B_MTGNN_CASE_PMT",
+        "source_evidence_ids": [
+          "E_15_0A98378FC609EF7E",
+          "E_16_E7BB108A85B71262",
+          "E_19_4E69D255F61736DB",
+          "E_23_A793FAF5B393EFE3",
+          "E_25_746173685B235ED2",
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF",
+          "E_33_CDE0F421E4D797ED"
+        ]
+      }
+    ],
+    "excluded_actions_and_reason": [
+      {
+        "action_id": "PMT_ENCRYPTION",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      },
+      {
+        "action_id": "PMT_HTTPS",
+        "reason": "Excluded by case-forecast-pmt-only-v1: the main Stage 3 object evaluates the PMT in the predeclared B-MTGNN Threat-PMT forecast pair. Evidence-tagged alternative PMTs are not silently promoted into the main action set; they are reserved for an explicit action-set sensitivity run."
+      }
+    ]
+  },
+  "decision_bundle_schema_sha256": "bcd029d15adbfe35ae50ee75fc2ac8731f73baa4897e7265fac3b44b692c9003",
+  "input_fingerprint": "15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68",
+  "schema_version": "stage3-artifact-v2",
+  "semantic_validation_version": "stage3-semantic-validation-v2",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "39cbad1783873b171b466b5b406d4b106b9cdf1afe0ae07fd512bb74c425a355",
+  "stage2_artifact_sha256": "3ddd4def226a25d78c6243f4382fb30d384b7793f7191e62a95b79e660f11d06",
+  "stage2_output_sha256": "f1ba183aa8d25bf804efb3af9dcaede97b11523ee46fb2d78863f133bba8e79e",
+  "stage3_context": {
+    "budget_context": null,
+    "infrastructure_context": null,
+    "organization_type": null,
+    "pmt": "CRYPTOGRAPHY",
+    "region": null,
+    "threat": "Insider Threat"
+  },
+  "stage3_output_sha256": "c470023689b7e9e573ae0ebe688ded54cf26f72f31927485b386dab4e7573f23"
+}

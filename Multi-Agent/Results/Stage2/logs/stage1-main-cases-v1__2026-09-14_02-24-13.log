@@ -1,0 +1,1023 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\logs\stage1-main-cases-v1__2026-09-14_02-24-13.log
+--- Stage 0 -> Stage 1 -> Stage 2 Main Case Set: batch execution ---
+Stage 1/2 shared runtime profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\runs\stage1-main-cases-v1__seed-42__progress.json
+Resume is automatic: exact Stage 1/2 artifacts are reused; interrupted Stage 1 critics and Stage 2 debate steps resume only from exact-fingerprint checkpoints.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 artifact not found for fingerprint bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+Stage 2 exact step checkpoint reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\checkpoints\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35\round1_attack.json
+Stage 2 exact step checkpoint reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\checkpoints\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35\round1_defense.json
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=13716 generated_tokens=59 context_tokens=13779 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=13716 generated_tokens=463 context_tokens=14183 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=13716 generated_tokens=790 context_tokens=14510 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=13716 generated_tokens=1158 context_tokens=14878 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=13716 generated_tokens=1523 context_tokens=15243 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=13716 generated_tokens=1870 context_tokens=15590 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=13716 generated_tokens=2261 context_tokens=15981 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=13716 generated_tokens=2643 context_tokens=16358 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=13716 generated_tokens=3052 context_tokens=16767 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=13716 generated_tokens=3437 context_tokens=17157 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=13716 generated_tokens=3814 context_tokens=17534 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=13716 generated_tokens=4203 context_tokens=17923 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=13716 generated_tokens=4588 context_tokens=18303 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=13716 generated_tokens=4951 context_tokens=18671 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=13716 generated_tokens=5365 context_tokens=19085 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=13716 generated_tokens=5738 context_tokens=19458 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=13716 generated_tokens=6112 context_tokens=19827 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=13716 generated_tokens=6528 context_tokens=20248 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=13716 generated_tokens=6949 context_tokens=20669 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=13716 generated_tokens=7374 context_tokens=21094 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=13716 generated_tokens=7740 context_tokens=21460 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+220s] state=True input_tokens=13716 generated_tokens=8252 context_tokens=21972 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+230s] state=True input_tokens=13716 generated_tokens=8590 context_tokens=22305 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+240s] state=True input_tokens=13716 generated_tokens=8937 context_tokens=22657 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+250s] state=True input_tokens=13716 generated_tokens=9301 context_tokens=23021 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=13716 generated_tokens=9743 context_tokens=23463 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=13716 generated_tokens=10245 context_tokens=23960 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=13716 generated_tokens=10674 context_tokens=24394 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=13716 generated_tokens=11029 context_tokens=24749 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=13716 generated_tokens=11521 context_tokens=25241 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=13716 generated_tokens=12086 context_tokens=25801 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=13716 generated_tokens=12661 context_tokens=26381 remaining=-1 task=11161
+[QWEN][Stage2-R1-Mediator] completed elapsed=326.1s prompt_tokens=13716 completion_tokens=12883 total_tokens=26599 reasoning_chars=44475
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=15278 generated_tokens=3 context_tokens=15285 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=15278 generated_tokens=401 context_tokens=15683 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=15278 generated_tokens=740 context_tokens=16022 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=15278 generated_tokens=1155 context_tokens=16437 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=15278 generated_tokens=1578 context_tokens=16860 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=15278 generated_tokens=1983 context_tokens=17265 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=15278 generated_tokens=2348 context_tokens=17625 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=15278 generated_tokens=2690 context_tokens=17967 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=15278 generated_tokens=3148 context_tokens=18425 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+100s] state=True input_tokens=15278 generated_tokens=3645 context_tokens=18927 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+110s] state=True input_tokens=15278 generated_tokens=4075 context_tokens=19357 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+120s] state=True input_tokens=15278 generated_tokens=4712 context_tokens=19994 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment][+130s] state=True input_tokens=15278 generated_tokens=5376 context_tokens=20658 remaining=-1 task=15538
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=137.7s prompt_tokens=15278 completion_tokens=5855 total_tokens=21133 reasoning_chars=18106
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=15338 generated_tokens=9 context_tokens=15351 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=15338 generated_tokens=361 context_tokens=15703 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=15338 generated_tokens=737 context_tokens=16079 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=15338 generated_tokens=1072 context_tokens=16414 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=15338 generated_tokens=1410 context_tokens=16752 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=15338 generated_tokens=1743 context_tokens=17085 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=15338 generated_tokens=2169 context_tokens=17506 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=15338 generated_tokens=2569 context_tokens=17911 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=15338 generated_tokens=2966 context_tokens=18308 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=15338 generated_tokens=3484 context_tokens=18826 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=15338 generated_tokens=3924 context_tokens=19266 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=15338 generated_tokens=4363 context_tokens=19700 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=15338 generated_tokens=4786 context_tokens=20128 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=15338 generated_tokens=5169 context_tokens=20511 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=15338 generated_tokens=5474 context_tokens=20816 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+160s] state=True input_tokens=15338 generated_tokens=5804 context_tokens=21146 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+170s] state=True input_tokens=15338 generated_tokens=6142 context_tokens=21484 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+180s] state=True input_tokens=15338 generated_tokens=6587 context_tokens=21929 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+190s] state=True input_tokens=15338 generated_tokens=7108 context_tokens=22445 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+200s] state=True input_tokens=15338 generated_tokens=7495 context_tokens=22837 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+211s] state=True input_tokens=15338 generated_tokens=8084 context_tokens=23426 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment][+221s] state=True input_tokens=15338 generated_tokens=8740 context_tokens=24082 remaining=-1 task=17322
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=227.5s prompt_tokens=15338 completion_tokens=9181 total_tokens=24519 reasoning_chars=32550
+[MAIN SET][1/7] COMPLETE in 692.3s | action=generated_or_resumed_stage2_and_frozen | evidence=7 | slots=3/6 | families=3 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json
+
+====================================================================================================
+[MAIN SET][2/7] main__malware__anomaly_detection
+Threat=Malware | PMT=ANOMALY DETECTION
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__malware__anomaly_detection (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7.json
+
+Stage 2 artifact not found for fingerprint 52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=17299 generated_tokens=419 context_tokens=17717 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=17299 generated_tokens=847 context_tokens=18150 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=17299 generated_tokens=1226 context_tokens=18524 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=17299 generated_tokens=1693 context_tokens=18996 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=17299 generated_tokens=2198 context_tokens=19501 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=17299 generated_tokens=2595 context_tokens=19898 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=17299 generated_tokens=2900 context_tokens=20203 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=17299 generated_tokens=3238 context_tokens=20541 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=17299 generated_tokens=3613 context_tokens=20916 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=17299 generated_tokens=3944 context_tokens=21247 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=17299 generated_tokens=4260 context_tokens=21563 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=17299 generated_tokens=4624 context_tokens=21927 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=17299 generated_tokens=5013 context_tokens=22316 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+150s] state=True input_tokens=17299 generated_tokens=5402 context_tokens=22705 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+160s] state=True input_tokens=17299 generated_tokens=5880 context_tokens=23183 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+170s] state=True input_tokens=17299 generated_tokens=6268 context_tokens=23571 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+180s] state=True input_tokens=17299 generated_tokens=6665 context_tokens=23963 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+190s] state=True input_tokens=17299 generated_tokens=7057 context_tokens=24360 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+200s] state=True input_tokens=17299 generated_tokens=7439 context_tokens=24742 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+210s] state=True input_tokens=17299 generated_tokens=7866 context_tokens=25169 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+220s] state=True input_tokens=17299 generated_tokens=8297 context_tokens=25600 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+231s] state=True input_tokens=17299 generated_tokens=8828 context_tokens=26131 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse][+241s] state=True input_tokens=17299 generated_tokens=9419 context_tokens=26722 remaining=-1 task=20333
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=241.4s prompt_tokens=17299 completion_tokens=9470 total_tokens=26769 reasoning_chars=34020
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=17359 generated_tokens=438 context_tokens=17801 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=17359 generated_tokens=738 context_tokens=18101 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=17359 generated_tokens=1178 context_tokens=18541 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=17359 generated_tokens=1598 context_tokens=18961 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=17359 generated_tokens=2059 context_tokens=19422 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=17359 generated_tokens=2556 context_tokens=19914 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=17359 generated_tokens=2936 context_tokens=20299 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=17359 generated_tokens=3279 context_tokens=20642 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=17359 generated_tokens=3672 context_tokens=21035 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=17359 generated_tokens=4089 context_tokens=21452 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=17359 generated_tokens=4498 context_tokens=21861 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+130s] state=True input_tokens=17359 generated_tokens=4913 context_tokens=22271 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+140s] state=True input_tokens=17359 generated_tokens=5367 context_tokens=22730 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+150s] state=True input_tokens=17359 generated_tokens=5763 context_tokens=23126 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+160s] state=True input_tokens=17359 generated_tokens=6241 context_tokens=23604 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+170s] state=True input_tokens=17359 generated_tokens=6614 context_tokens=23977 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+180s] state=True input_tokens=17359 generated_tokens=7022 context_tokens=24385 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+190s] state=True input_tokens=17359 generated_tokens=7395 context_tokens=24758 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse][+200s] state=True input_tokens=17359 generated_tokens=7938 context_tokens=25301 remaining=-1 task=23465
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=209.4s prompt_tokens=17359 completion_tokens=8449 total_tokens=25808 reasoning_chars=30010
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=19056 generated_tokens=330 context_tokens=19390 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=19056 generated_tokens=774 context_tokens=19829 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=19056 generated_tokens=1225 context_tokens=20285 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=19056 generated_tokens=1775 context_tokens=20830 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=19056 generated_tokens=2334 context_tokens=21394 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=19056 generated_tokens=2790 context_tokens=21850 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=19056 generated_tokens=3354 context_tokens=22409 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=19056 generated_tokens=3749 context_tokens=22809 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=19056 generated_tokens=4209 context_tokens=23269 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=19056 generated_tokens=4760 context_tokens=23820 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=19056 generated_tokens=5215 context_tokens=24275 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=19056 generated_tokens=5630 context_tokens=24690 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=19056 generated_tokens=6038 context_tokens=25093 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=19056 generated_tokens=6477 context_tokens=25537 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=19056 generated_tokens=6999 context_tokens=26059 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=19056 generated_tokens=7463 context_tokens=26518 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=19056 generated_tokens=7899 context_tokens=26959 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=19056 generated_tokens=8414 context_tokens=27469 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=19056 generated_tokens=8956 context_tokens=28016 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=19056 generated_tokens=9412 context_tokens=28467 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+221s] state=True input_tokens=19056 generated_tokens=9898 context_tokens=28953 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+231s] state=True input_tokens=19056 generated_tokens=10301 context_tokens=29361 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+241s] state=True input_tokens=19056 generated_tokens=10830 context_tokens=29890 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+251s] state=True input_tokens=19056 generated_tokens=11410 context_tokens=30465 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=19056 generated_tokens=12000 context_tokens=31060 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=19056 generated_tokens=12522 context_tokens=31582 remaining=-1 task=26162
+[QWEN][Stage2-R1-Mediator] completed elapsed=275.7s prompt_tokens=19056 completion_tokens=12731 total_tokens=31787 reasoning_chars=44129
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=21042 generated_tokens=283 context_tokens=21329 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=21042 generated_tokens=644 context_tokens=21690 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=21042 generated_tokens=990 context_tokens=22036 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=21042 generated_tokens=1313 context_tokens=22359 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=21042 generated_tokens=1798 context_tokens=22844 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=21042 generated_tokens=2268 context_tokens=23314 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=21042 generated_tokens=2613 context_tokens=23659 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=21042 generated_tokens=2948 context_tokens=23994 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+100s] state=True input_tokens=21042 generated_tokens=3277 context_tokens=24323 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+110s] state=True input_tokens=21042 generated_tokens=3613 context_tokens=24659 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+120s] state=True input_tokens=21042 generated_tokens=3950 context_tokens=24996 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+130s] state=True input_tokens=21042 generated_tokens=4339 context_tokens=25385 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+140s] state=True input_tokens=21042 generated_tokens=4708 context_tokens=25754 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+150s] state=True input_tokens=21042 generated_tokens=5135 context_tokens=26176 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+160s] state=True input_tokens=21042 generated_tokens=5456 context_tokens=26502 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+170s] state=True input_tokens=21042 generated_tokens=5800 context_tokens=26846 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+180s] state=True input_tokens=21042 generated_tokens=6308 context_tokens=27349 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+190s] state=True input_tokens=21042 generated_tokens=6788 context_tokens=27834 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+200s] state=True input_tokens=21042 generated_tokens=7284 context_tokens=28330 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+210s] state=True input_tokens=21042 generated_tokens=7619 context_tokens=28665 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+220s] state=True input_tokens=21042 generated_tokens=8028 context_tokens=29074 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+230s] state=True input_tokens=21042 generated_tokens=8614 context_tokens=29660 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+241s] state=True input_tokens=21042 generated_tokens=9254 context_tokens=30300 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment][+251s] state=True input_tokens=21042 generated_tokens=9806 context_tokens=30852 remaining=-1 task=29675
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=252.0s prompt_tokens=21042 completion_tokens=9901 total_tokens=30943 reasoning_chars=37028
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=21102 generated_tokens=299 context_tokens=21400 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=21102 generated_tokens=762 context_tokens=21868 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=21102 generated_tokens=1159 context_tokens=22265 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=21102 generated_tokens=1522 context_tokens=22628 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=21102 generated_tokens=1801 context_tokens=22907 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=21102 generated_tokens=2144 context_tokens=23250 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=21102 generated_tokens=2493 context_tokens=23599 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=21102 generated_tokens=2791 context_tokens=23897 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=21102 generated_tokens=3113 context_tokens=24219 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=21102 generated_tokens=3533 context_tokens=24634 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=21102 generated_tokens=4030 context_tokens=25131 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=21102 generated_tokens=4371 context_tokens=25477 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=21102 generated_tokens=4732 context_tokens=25838 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=21102 generated_tokens=5061 context_tokens=26167 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+160s] state=True input_tokens=21102 generated_tokens=5407 context_tokens=26513 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+170s] state=True input_tokens=21102 generated_tokens=5750 context_tokens=26856 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+180s] state=True input_tokens=21102 generated_tokens=6178 context_tokens=27279 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+190s] state=True input_tokens=21102 generated_tokens=6676 context_tokens=27777 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+200s] state=True input_tokens=21102 generated_tokens=7099 context_tokens=28205 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+210s] state=True input_tokens=21102 generated_tokens=7513 context_tokens=28619 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+220s] state=True input_tokens=21102 generated_tokens=7868 context_tokens=28974 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+231s] state=True input_tokens=21102 generated_tokens=8251 context_tokens=29357 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+241s] state=True input_tokens=21102 generated_tokens=8762 context_tokens=29863 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+251s] state=True input_tokens=21102 generated_tokens=9397 context_tokens=30503 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment][+261s] state=True input_tokens=21102 generated_tokens=9987 context_tokens=31093 remaining=-1 task=32855
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=263.1s prompt_tokens=21102 completion_tokens=10143 total_tokens=31245 reasoning_chars=36002
+[MAIN SET][2/7] COMPLETE in 1242.6s | action=generated_or_resumed_stage2_and_frozen | evidence=17 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__malware__anomaly_detection\52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20.json
+
+====================================================================================================
+[MAIN SET][3/7] main__ransomware__cryptography
+Threat=Ransomware | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_steep_slope
+Reason=Coverage-qualified representative of the large-gap/steep-slope regime. Selected before Stage 1 generation using only frozen Stage 0 forecast/evidence metadata.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ransomware__cryptography (16 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4.json
+
+Stage 2 artifact not found for fingerprint ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=17924 generated_tokens=357 context_tokens=18285 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=17924 generated_tokens=767 context_tokens=18695 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=17924 generated_tokens=1217 context_tokens=19145 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=17924 generated_tokens=1602 context_tokens=19530 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=17924 generated_tokens=2089 context_tokens=20017 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=17924 generated_tokens=2501 context_tokens=20429 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=17924 generated_tokens=2918 context_tokens=20846 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=17924 generated_tokens=3286 context_tokens=21214 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=17924 generated_tokens=3660 context_tokens=21588 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=17924 generated_tokens=4034 context_tokens=21962 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=17924 generated_tokens=4411 context_tokens=22339 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=17924 generated_tokens=4840 context_tokens=22768 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=17924 generated_tokens=5301 context_tokens=23229 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+150s] state=True input_tokens=17924 generated_tokens=5771 context_tokens=23699 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+160s] state=True input_tokens=17924 generated_tokens=6139 context_tokens=24062 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+170s] state=True input_tokens=17924 generated_tokens=6524 context_tokens=24452 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+180s] state=True input_tokens=17924 generated_tokens=6957 context_tokens=24885 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+190s] state=True input_tokens=17924 generated_tokens=7466 context_tokens=25389 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse][+200s] state=True input_tokens=17924 generated_tokens=8007 context_tokens=25935 remaining=-1 task=36188
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=201.7s prompt_tokens=17924 completion_tokens=8083 total_tokens=26007 reasoning_chars=26926
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=17984 generated_tokens=378 context_tokens=18366 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=17984 generated_tokens=835 context_tokens=18823 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=17984 generated_tokens=1269 context_tokens=19257 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=17984 generated_tokens=1686 context_tokens=19669 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=17984 generated_tokens=2159 context_tokens=20147 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=17984 generated_tokens=2532 context_tokens=20515 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=17984 generated_tokens=2851 context_tokens=20839 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=17984 generated_tokens=3194 context_tokens=21182 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=17984 generated_tokens=3545 context_tokens=21533 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=17984 generated_tokens=3950 context_tokens=21938 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=17984 generated_tokens=4288 context_tokens=22271 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+130s] state=True input_tokens=17984 generated_tokens=4693 context_tokens=22681 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+140s] state=True input_tokens=17984 generated_tokens=5091 context_tokens=23079 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+150s] state=True input_tokens=17984 generated_tokens=5441 context_tokens=23424 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+160s] state=True input_tokens=17984 generated_tokens=5882 context_tokens=23870 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+170s] state=True input_tokens=17984 generated_tokens=6252 context_tokens=24240 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+180s] state=True input_tokens=17984 generated_tokens=6662 context_tokens=24650 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+190s] state=True input_tokens=17984 generated_tokens=7092 context_tokens=25080 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+200s] state=True input_tokens=17984 generated_tokens=7461 context_tokens=25449 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+210s] state=True input_tokens=17984 generated_tokens=7880 context_tokens=25868 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+220s] state=True input_tokens=17984 generated_tokens=8199 context_tokens=26187 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+230s] state=True input_tokens=17984 generated_tokens=8580 context_tokens=26568 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+240s] state=True input_tokens=17984 generated_tokens=9116 context_tokens=27104 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse][+250s] state=True input_tokens=17984 generated_tokens=9694 context_tokens=27682 remaining=-1 task=38785
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=253.1s prompt_tokens=17984 completion_tokens=9849 total_tokens=27833 reasoning_chars=34966
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=20831 generated_tokens=234 context_tokens=21069 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=20831 generated_tokens=672 context_tokens=21507 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=20831 generated_tokens=1026 context_tokens=21861 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=20831 generated_tokens=1393 context_tokens=22228 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=20831 generated_tokens=1847 context_tokens=22677 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=20831 generated_tokens=2217 context_tokens=23047 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=20831 generated_tokens=2580 context_tokens=23415 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=20831 generated_tokens=2970 context_tokens=23805 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=20831 generated_tokens=3444 context_tokens=24274 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=20831 generated_tokens=3820 context_tokens=24655 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=20831 generated_tokens=4140 context_tokens=24975 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=20831 generated_tokens=4475 context_tokens=25310 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=20831 generated_tokens=4832 context_tokens=25667 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=20831 generated_tokens=5181 context_tokens=26016 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=20831 generated_tokens=5543 context_tokens=26378 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=20831 generated_tokens=5898 context_tokens=26733 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=20831 generated_tokens=6264 context_tokens=27099 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=20831 generated_tokens=6755 context_tokens=27590 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=20831 generated_tokens=7258 context_tokens=28088 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=20831 generated_tokens=7628 context_tokens=28463 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+221s] state=True input_tokens=20831 generated_tokens=7994 context_tokens=28824 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+231s] state=True input_tokens=20831 generated_tokens=8418 context_tokens=29248 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+241s] state=True input_tokens=20831 generated_tokens=8852 context_tokens=29687 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+251s] state=True input_tokens=20831 generated_tokens=9274 context_tokens=30104 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=20831 generated_tokens=9589 context_tokens=30424 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=20831 generated_tokens=9941 context_tokens=30776 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=20831 generated_tokens=10291 context_tokens=31126 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=20831 generated_tokens=10695 context_tokens=31530 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=20831 generated_tokens=11231 context_tokens=32066 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=20831 generated_tokens=11749 context_tokens=32584 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=20831 generated_tokens=12149 context_tokens=32984 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=20831 generated_tokens=12544 context_tokens=33379 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=20831 generated_tokens=12920 context_tokens=33755 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=20831 generated_tokens=13300 context_tokens=34135 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=20831 generated_tokens=13625 context_tokens=34460 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=20831 generated_tokens=14038 context_tokens=34873 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+381s] state=True input_tokens=20831 generated_tokens=14347 context_tokens=35177 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+391s] state=True input_tokens=20831 generated_tokens=14710 context_tokens=35540 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+401s] state=True input_tokens=20831 generated_tokens=15042 context_tokens=35877 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+411s] state=True input_tokens=20831 generated_tokens=15421 context_tokens=36256 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+421s] state=True input_tokens=20831 generated_tokens=15725 context_tokens=36560 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+431s] state=True input_tokens=20831 generated_tokens=16103 context_tokens=36938 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+441s] state=True input_tokens=20831 generated_tokens=16397 context_tokens=37232 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+451s] state=True input_tokens=20831 generated_tokens=16890 context_tokens=37720 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+461s] state=True input_tokens=20831 generated_tokens=17391 context_tokens=38226 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+471s] state=True input_tokens=20831 generated_tokens=17797 context_tokens=38632 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+481s] state=True input_tokens=20831 generated_tokens=18188 context_tokens=39023 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+491s] state=True input_tokens=20831 generated_tokens=18741 context_tokens=39576 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+501s] state=True input_tokens=20831 generated_tokens=19282 context_tokens=40112 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+511s] state=True input_tokens=20831 generated_tokens=19819 context_tokens=40649 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator][+521s] state=True input_tokens=20831 generated_tokens=20323 context_tokens=41153 remaining=-1 task=42066
+[QWEN][Stage2-R1-Mediator] completed elapsed=522.2s prompt_tokens=20831 completion_tokens=20365 total_tokens=41196 reasoning_chars=70611
+[QWEN][Stage2-R1-Mediator:repair-1] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator:repair-1][+10s] state=True input_tokens=24336 generated_tokens=322 context_tokens=24662 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+20s] state=True input_tokens=24336 generated_tokens=780 context_tokens=25115 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+30s] state=True input_tokens=24336 generated_tokens=1152 context_tokens=25492 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+40s] state=True input_tokens=24336 generated_tokens=1745 context_tokens=26085 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+50s] state=True input_tokens=24336 generated_tokens=2398 context_tokens=26738 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+60s] state=True input_tokens=24336 generated_tokens=3053 context_tokens=27393 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+70s] state=True input_tokens=24336 generated_tokens=3703 context_tokens=28043 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1][+80s] state=True input_tokens=24336 generated_tokens=4352 context_tokens=28692 remaining=-1 task=48686
+[QWEN][Stage2-R1-Mediator:repair-1] completed elapsed=80.2s prompt_tokens=24336 completion_tokens=4355 total_tokens=28691 reasoning_chars=4319
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=23395 generated_tokens=234 context_tokens=23633 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=23395 generated_tokens=793 context_tokens=24187 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=23395 generated_tokens=1347 context_tokens=24746 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=23395 generated_tokens=1766 context_tokens=25165 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=23395 generated_tokens=2261 context_tokens=25655 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=23395 generated_tokens=2746 context_tokens=26145 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=23395 generated_tokens=3296 context_tokens=26695 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=23395 generated_tokens=3723 context_tokens=27122 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+100s] state=True input_tokens=23395 generated_tokens=4202 context_tokens=27601 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+110s] state=True input_tokens=23395 generated_tokens=4716 context_tokens=28115 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+120s] state=True input_tokens=23395 generated_tokens=5331 context_tokens=28730 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+130s] state=True input_tokens=23395 generated_tokens=5936 context_tokens=29335 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+140s] state=True input_tokens=23395 generated_tokens=6564 context_tokens=29958 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment][+150s] state=True input_tokens=23395 generated_tokens=7031 context_tokens=30430 remaining=-1 task=49716
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=158.7s prompt_tokens=23395 completion_tokens=7457 total_tokens=30852 reasoning_chars=16947
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=23455 generated_tokens=245 context_tokens=23704 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=23455 generated_tokens=756 context_tokens=24215 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=23455 generated_tokens=1191 context_tokens=24650 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=23455 generated_tokens=1690 context_tokens=25144 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=23455 generated_tokens=2192 context_tokens=25651 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=23455 generated_tokens=2657 context_tokens=26116 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=23455 generated_tokens=3154 context_tokens=26608 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=23455 generated_tokens=3697 context_tokens=27151 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=23455 generated_tokens=4169 context_tokens=27628 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=23455 generated_tokens=4643 context_tokens=28102 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=23455 generated_tokens=5254 context_tokens=28713 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=23455 generated_tokens=5896 context_tokens=29355 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=23455 generated_tokens=6479 context_tokens=29938 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=23455 generated_tokens=7006 context_tokens=30460 remaining=-1 task=51621
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=153.7s prompt_tokens=23455 completion_tokens=7204 total_tokens=30659 reasoning_chars=17533
+[MAIN SET][3/7] COMPLETE in 1370.7s | action=generated_or_resumed_stage2_and_frozen | evidence=16 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ransomware__cryptography\ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f.json
+
+====================================================================================================
+[MAIN SET][4/7] main__insider_threat__cryptography
+Threat=Insider Threat | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_moderate_slope
+Reason=Coverage-qualified representative of the large-gap/moderate-slope regime, included to separate persistent structural imbalance from rapidly accelerating imbalance.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__insider_threat__cryptography (12 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3.json
+
+Stage 2 artifact not found for fingerprint 34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=13193 generated_tokens=76 context_tokens=13268 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=13193 generated_tokens=466 context_tokens=13663 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=13193 generated_tokens=913 context_tokens=14110 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=13193 generated_tokens=1396 context_tokens=14588 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=13193 generated_tokens=1912 context_tokens=15109 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=13193 generated_tokens=2251 context_tokens=15443 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=13193 generated_tokens=2679 context_tokens=15876 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=13193 generated_tokens=3117 context_tokens=16314 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=13193 generated_tokens=3472 context_tokens=16669 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=13193 generated_tokens=3838 context_tokens=17035 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=13193 generated_tokens=4298 context_tokens=17495 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=13193 generated_tokens=4733 context_tokens=17930 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=13193 generated_tokens=5169 context_tokens=18366 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=13193 generated_tokens=5767 context_tokens=18964 remaining=-1 task=53463
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=148.2s prompt_tokens=13193 completion_tokens=6236 total_tokens=19429 reasoning_chars=20046
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=13253 generated_tokens=66 context_tokens=13318 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=13253 generated_tokens=538 context_tokens=13795 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=13253 generated_tokens=1108 context_tokens=14360 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=13253 generated_tokens=1493 context_tokens=14750 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=13253 generated_tokens=1850 context_tokens=15102 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=13253 generated_tokens=2157 context_tokens=15414 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=13253 generated_tokens=2666 context_tokens=15918 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=13253 generated_tokens=3135 context_tokens=16392 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=13253 generated_tokens=3519 context_tokens=16776 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=13253 generated_tokens=3901 context_tokens=17158 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=13253 generated_tokens=4490 context_tokens=17742 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=13253 generated_tokens=4912 context_tokens=18169 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+130s] state=True input_tokens=13253 generated_tokens=5305 context_tokens=18562 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+140s] state=True input_tokens=13253 generated_tokens=5745 context_tokens=19002 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+150s] state=True input_tokens=13253 generated_tokens=6126 context_tokens=19383 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+160s] state=True input_tokens=13253 generated_tokens=6583 context_tokens=19840 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse][+170s] state=True input_tokens=13253 generated_tokens=7108 context_tokens=20365 remaining=-1 task=55414
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=178.1s prompt_tokens=13253 completion_tokens=7570 total_tokens=20823 reasoning_chars=26345
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=15672 generated_tokens=0 context_tokens=15676 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=15676 generated_tokens=458 context_tokens=16138 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=15676 generated_tokens=979 context_tokens=16654 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=15676 generated_tokens=1429 context_tokens=17109 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=15676 generated_tokens=1815 context_tokens=17495 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=15676 generated_tokens=2119 context_tokens=17799 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=15676 generated_tokens=2467 context_tokens=18147 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=15676 generated_tokens=2814 context_tokens=18494 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=15676 generated_tokens=3154 context_tokens=18834 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=15676 generated_tokens=3504 context_tokens=19184 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=15676 generated_tokens=3837 context_tokens=19517 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=15676 generated_tokens=4238 context_tokens=19918 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=15676 generated_tokens=4681 context_tokens=20361 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=15676 generated_tokens=5074 context_tokens=20749 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=15676 generated_tokens=5434 context_tokens=21114 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=15676 generated_tokens=5922 context_tokens=21602 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=15676 generated_tokens=6427 context_tokens=22107 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=15676 generated_tokens=6986 context_tokens=22666 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=15676 generated_tokens=7504 context_tokens=23184 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=15676 generated_tokens=7892 context_tokens=23572 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=15676 generated_tokens=8213 context_tokens=23893 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+220s] state=True input_tokens=15676 generated_tokens=8542 context_tokens=24222 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+230s] state=True input_tokens=15676 generated_tokens=8908 context_tokens=24588 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+241s] state=True input_tokens=15676 generated_tokens=9316 context_tokens=24996 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+251s] state=True input_tokens=15676 generated_tokens=9698 context_tokens=25378 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=15676 generated_tokens=10094 context_tokens=25774 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=15676 generated_tokens=10459 context_tokens=26139 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=15676 generated_tokens=10788 context_tokens=26463 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=15676 generated_tokens=11164 context_tokens=26844 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=15676 generated_tokens=11612 context_tokens=27292 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=15676 generated_tokens=11966 context_tokens=27646 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=15676 generated_tokens=12358 context_tokens=28038 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=15676 generated_tokens=12771 context_tokens=28451 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=15676 generated_tokens=13127 context_tokens=28802 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=15676 generated_tokens=13475 context_tokens=29155 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=15676 generated_tokens=14010 context_tokens=29690 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=15676 generated_tokens=14599 context_tokens=30274 remaining=-1 task=57763
+[QWEN][Stage2-R1-Mediator] completed elapsed=376.3s prompt_tokens=15676 completion_tokens=14842 total_tokens=30518 reasoning_chars=54312
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16154 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=16670 generated_tokens=446 context_tokens=17120 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=16670 generated_tokens=868 context_tokens=17542 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=16670 generated_tokens=1306 context_tokens=17980 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=16670 generated_tokens=1780 context_tokens=18449 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=16670 generated_tokens=2257 context_tokens=18931 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=16670 generated_tokens=2870 context_tokens=19539 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=16670 generated_tokens=3479 context_tokens=20153 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=16670 generated_tokens=4000 context_tokens=20674 remaining=-1 task=62716
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=95.6s prompt_tokens=16670 completion_tokens=4265 total_tokens=20935 reasoning_chars=9561
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16214 remaining=-1 task=63899
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=16730 generated_tokens=431 context_tokens=17165 remaining=-1 task=63899
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=16730 generated_tokens=857 context_tokens=17591 remaining=-1 task=63899
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=16730 generated_tokens=1540 context_tokens=18274 remaining=-1 task=63899
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=16730 generated_tokens=2110 context_tokens=18844 remaining=-1 task=63899
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=57.6s prompt_tokens=16730 completion_tokens=2480 total_tokens=19210 reasoning_chars=3102
+[MAIN SET][4/7] COMPLETE in 857.1s | action=generated_or_resumed_stage2_and_frozen | evidence=12 | slots=5/6 | families=4 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__insider_threat__cryptography\34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d.json
+
+====================================================================================================
+[MAIN SET][5/7] main__brute_force__ids_ips
+Threat=Brute Force Attack | PMT=IDS/IPS
+Selection=regime_representative | Regime=moderate_gap_steep_slope
+Reason=Coverage-qualified representative of the moderate-gap/steep-slope regime, included to test whether agents distinguish emerging escalation from already-large gaps.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__brute_force__ids_ips (13 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d.json
+
+Stage 2 artifact not found for fingerprint 0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=15616 generated_tokens=1 context_tokens=15621 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=15616 generated_tokens=449 context_tokens=16069 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=15616 generated_tokens=905 context_tokens=16525 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=15616 generated_tokens=1512 context_tokens=17132 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=15616 generated_tokens=1912 context_tokens=17532 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=15616 generated_tokens=2245 context_tokens=17865 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=15616 generated_tokens=2688 context_tokens=18308 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=15616 generated_tokens=3090 context_tokens=18705 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=15616 generated_tokens=3464 context_tokens=19084 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=15616 generated_tokens=3819 context_tokens=19439 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=15616 generated_tokens=4193 context_tokens=19813 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=15616 generated_tokens=4549 context_tokens=20169 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=15616 generated_tokens=4960 context_tokens=20580 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=15616 generated_tokens=5376 context_tokens=20991 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+150s] state=True input_tokens=15616 generated_tokens=5731 context_tokens=21351 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+160s] state=True input_tokens=15616 generated_tokens=6291 context_tokens=21911 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+170s] state=True input_tokens=15616 generated_tokens=6747 context_tokens=22367 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+180s] state=True input_tokens=15616 generated_tokens=7122 context_tokens=22742 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+190s] state=True input_tokens=15616 generated_tokens=7680 context_tokens=23300 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse][+200s] state=True input_tokens=15616 generated_tokens=8286 context_tokens=23906 remaining=-1 task=64562
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=204.7s prompt_tokens=15616 completion_tokens=8555 total_tokens=24171 reasoning_chars=28844
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=15672 generated_tokens=0 context_tokens=15676 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=15676 generated_tokens=502 context_tokens=16182 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=15676 generated_tokens=966 context_tokens=16646 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=15676 generated_tokens=1286 context_tokens=16961 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=15676 generated_tokens=1699 context_tokens=17379 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=15676 generated_tokens=2167 context_tokens=17847 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=15676 generated_tokens=2630 context_tokens=18310 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=15676 generated_tokens=2984 context_tokens=18664 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=15676 generated_tokens=3410 context_tokens=19090 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=15676 generated_tokens=3903 context_tokens=19583 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=15676 generated_tokens=4416 context_tokens=20096 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=15676 generated_tokens=4966 context_tokens=20646 remaining=-1 task=67252
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=121.4s prompt_tokens=15676 completion_tokens=5035 total_tokens=20711 reasoning_chars=16941
+[QWEN][Stage2-R1-DefenseResponse:repair-1] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse:repair-1][+10s] state=True input_tokens=16938 generated_tokens=417 context_tokens=17359 remaining=-1 task=68809
+[QWEN][Stage2-R1-DefenseResponse:repair-1][+20s] state=True input_tokens=16938 generated_tokens=821 context_tokens=17763 remaining=-1 task=68809
+[QWEN][Stage2-R1-DefenseResponse:repair-1][+30s] state=True input_tokens=16938 generated_tokens=1504 context_tokens=18446 remaining=-1 task=68809
+[QWEN][Stage2-R1-DefenseResponse:repair-1] completed elapsed=31.3s prompt_tokens=16938 completion_tokens=1591 total_tokens=18529 reasoning_chars=2451
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=18868 generated_tokens=326 context_tokens=19198 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=18868 generated_tokens=705 context_tokens=19572 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=18868 generated_tokens=1060 context_tokens=19932 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=18868 generated_tokens=1407 context_tokens=20274 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=18868 generated_tokens=1743 context_tokens=20615 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=18868 generated_tokens=2139 context_tokens=21011 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=18868 generated_tokens=2676 context_tokens=21548 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=18868 generated_tokens=2997 context_tokens=21869 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=18868 generated_tokens=3310 context_tokens=22177 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=18868 generated_tokens=3672 context_tokens=22544 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=18868 generated_tokens=3988 context_tokens=22855 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=18868 generated_tokens=4296 context_tokens=23168 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=18868 generated_tokens=4660 context_tokens=23532 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=18868 generated_tokens=5052 context_tokens=23924 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=18868 generated_tokens=5556 context_tokens=24428 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=18868 generated_tokens=5913 context_tokens=24785 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=18868 generated_tokens=6269 context_tokens=25141 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=18868 generated_tokens=6643 context_tokens=25515 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=18868 generated_tokens=7016 context_tokens=25888 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=18868 generated_tokens=7424 context_tokens=26296 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+221s] state=True input_tokens=18868 generated_tokens=7819 context_tokens=26691 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+231s] state=True input_tokens=18868 generated_tokens=8223 context_tokens=27095 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+241s] state=True input_tokens=18868 generated_tokens=8561 context_tokens=27433 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+251s] state=True input_tokens=18868 generated_tokens=8911 context_tokens=27783 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=18868 generated_tokens=9288 context_tokens=28160 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=18868 generated_tokens=9653 context_tokens=28520 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=18868 generated_tokens=10040 context_tokens=28912 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=18868 generated_tokens=10350 context_tokens=29222 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=18868 generated_tokens=10712 context_tokens=29584 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=18868 generated_tokens=11069 context_tokens=29941 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=18868 generated_tokens=11489 context_tokens=30361 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=18868 generated_tokens=11955 context_tokens=30827 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=18868 generated_tokens=12372 context_tokens=31239 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=18868 generated_tokens=12813 context_tokens=31680 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=18868 generated_tokens=13131 context_tokens=32003 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=18868 generated_tokens=13544 context_tokens=32411 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+381s] state=True input_tokens=18868 generated_tokens=14004 context_tokens=32876 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator][+391s] state=True input_tokens=18868 generated_tokens=14517 context_tokens=33389 remaining=-1 task=69234
+[QWEN][Stage2-R1-Mediator] completed elapsed=397.1s prompt_tokens=18868 completion_tokens=14771 total_tokens=33639 reasoning_chars=53000
+[QWEN][Stage2-R1-Mediator:repair-1] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator:repair-1][+10s] state=True input_tokens=20474 generated_tokens=357 context_tokens=20835 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+20s] state=True input_tokens=20474 generated_tokens=756 context_tokens=21234 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+30s] state=True input_tokens=20474 generated_tokens=1113 context_tokens=21591 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+40s] state=True input_tokens=20474 generated_tokens=1485 context_tokens=21963 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+50s] state=True input_tokens=20474 generated_tokens=1798 context_tokens=22276 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+60s] state=True input_tokens=20474 generated_tokens=2152 context_tokens=22630 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+70s] state=True input_tokens=20474 generated_tokens=2494 context_tokens=22972 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+80s] state=True input_tokens=20474 generated_tokens=2857 context_tokens=23335 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+90s] state=True input_tokens=20474 generated_tokens=3179 context_tokens=23657 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+100s] state=True input_tokens=20474 generated_tokens=3542 context_tokens=24020 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+110s] state=True input_tokens=20474 generated_tokens=3923 context_tokens=24401 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+120s] state=True input_tokens=20474 generated_tokens=4254 context_tokens=24732 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+130s] state=True input_tokens=20474 generated_tokens=4752 context_tokens=25225 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+140s] state=True input_tokens=20474 generated_tokens=5404 context_tokens=25882 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1][+150s] state=True input_tokens=20474 generated_tokens=6038 context_tokens=26516 remaining=-1 task=74359
+[QWEN][Stage2-R1-Mediator:repair-1] completed elapsed=151.8s prompt_tokens=20474 completion_tokens=6132 total_tokens=26606 reasoning_chars=19205
+[QWEN][Stage2-R2-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R2-AttackResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+20s] state=True input_tokens=20107 generated_tokens=311 context_tokens=20422 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+30s] state=True input_tokens=20107 generated_tokens=732 context_tokens=20843 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+40s] state=True input_tokens=20107 generated_tokens=1136 context_tokens=21247 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+50s] state=True input_tokens=20107 generated_tokens=1612 context_tokens=21723 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+60s] state=True input_tokens=20107 generated_tokens=2048 context_tokens=22154 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+70s] state=True input_tokens=20107 generated_tokens=2434 context_tokens=22545 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+80s] state=True input_tokens=20107 generated_tokens=2896 context_tokens=23007 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+90s] state=True input_tokens=20107 generated_tokens=3301 context_tokens=23412 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+100s] state=True input_tokens=20107 generated_tokens=3716 context_tokens=23822 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+110s] state=True input_tokens=20107 generated_tokens=4261 context_tokens=24367 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse][+120s] state=True input_tokens=20107 generated_tokens=4840 context_tokens=24951 remaining=-1 task=76387
+[QWEN][Stage2-R2-AttackResponse] completed elapsed=129.9s prompt_tokens=20107 completion_tokens=5402 total_tokens=25509 reasoning_chars=14699
+[QWEN][Stage2-R2-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R2-DefenseResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+20s] state=True input_tokens=20167 generated_tokens=276 context_tokens=20447 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+30s] state=True input_tokens=20167 generated_tokens=612 context_tokens=20783 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+40s] state=True input_tokens=20167 generated_tokens=1039 context_tokens=21210 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+50s] state=True input_tokens=20167 generated_tokens=1483 context_tokens=21654 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+60s] state=True input_tokens=20167 generated_tokens=2055 context_tokens=22226 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+70s] state=True input_tokens=20167 generated_tokens=2498 context_tokens=22664 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+80s] state=True input_tokens=20167 generated_tokens=2982 context_tokens=23153 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse][+90s] state=True input_tokens=20167 generated_tokens=3590 context_tokens=23761 remaining=-1 task=77977
+[QWEN][Stage2-R2-DefenseResponse] completed elapsed=92.1s prompt_tokens=20167 completion_tokens=3714 total_tokens=23881 reasoning_chars=10012
+[QWEN][Stage2-R2-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R2-Mediator][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+20s] state=True input_tokens=23417 generated_tokens=211 context_tokens=23632 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+30s] state=True input_tokens=23417 generated_tokens=763 context_tokens=24184 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+40s] state=True input_tokens=23417 generated_tokens=1231 context_tokens=24652 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+50s] state=True input_tokens=23417 generated_tokens=1698 context_tokens=25114 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+60s] state=True input_tokens=23417 generated_tokens=2130 context_tokens=25551 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+70s] state=True input_tokens=23417 generated_tokens=2608 context_tokens=26029 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+80s] state=True input_tokens=23417 generated_tokens=3134 context_tokens=26555 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+90s] state=True input_tokens=23417 generated_tokens=3542 context_tokens=26963 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+100s] state=True input_tokens=23417 generated_tokens=4048 context_tokens=27469 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+110s] state=True input_tokens=23417 generated_tokens=4611 context_tokens=28032 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+120s] state=True input_tokens=23417 generated_tokens=5167 context_tokens=28583 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator][+130s] state=True input_tokens=23417 generated_tokens=5708 context_tokens=29129 remaining=-1 task=79066
+[QWEN][Stage2-R2-Mediator] completed elapsed=134.4s prompt_tokens=23417 completion_tokens=5863 total_tokens=29280 reasoning_chars=14669
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=25099 generated_tokens=166 context_tokens=25269 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=25099 generated_tokens=636 context_tokens=25739 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=25099 generated_tokens=1114 context_tokens=26217 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=25099 generated_tokens=1605 context_tokens=26708 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=25099 generated_tokens=2127 context_tokens=27225 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=25099 generated_tokens=2655 context_tokens=27758 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=25099 generated_tokens=3265 context_tokens=28368 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=25099 generated_tokens=3784 context_tokens=28887 remaining=-1 task=80658
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=95.5s prompt_tokens=25099 completion_tokens=4093 total_tokens=29192 reasoning_chars=9549
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=25159 generated_tokens=134 context_tokens=25292 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=25159 generated_tokens=474 context_tokens=25637 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=25159 generated_tokens=886 context_tokens=26044 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=25159 generated_tokens=1286 context_tokens=26449 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=25159 generated_tokens=1690 context_tokens=26853 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=25159 generated_tokens=2043 context_tokens=27206 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=25159 generated_tokens=2386 context_tokens=27549 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=25159 generated_tokens=2891 context_tokens=28054 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=25159 generated_tokens=3372 context_tokens=28535 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=25159 generated_tokens=3740 context_tokens=28903 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=25159 generated_tokens=4132 context_tokens=29295 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=25159 generated_tokens=4521 context_tokens=29684 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=25159 generated_tokens=4829 context_tokens=29987 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=25159 generated_tokens=5197 context_tokens=30360 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+160s] state=True input_tokens=25159 generated_tokens=5576 context_tokens=30739 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+170s] state=True input_tokens=25159 generated_tokens=6027 context_tokens=31190 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+180s] state=True input_tokens=25159 generated_tokens=6436 context_tokens=31594 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+190s] state=True input_tokens=25159 generated_tokens=7005 context_tokens=32168 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+200s] state=True input_tokens=25159 generated_tokens=7643 context_tokens=32801 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment][+210s] state=True input_tokens=25159 generated_tokens=8253 context_tokens=33411 remaining=-1 task=81716
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=218.1s prompt_tokens=25159 completion_tokens=8662 total_tokens=33821 reasoning_chars=27500
+[MAIN SET][5/7] COMPLETE in 1577.5s | action=generated_or_resumed_stage2_and_frozen | evidence=13 | slots=5/6 | families=4 | rounds=2 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__brute_force__ids_ips\0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f.json
+
+====================================================================================================
+[MAIN SET][6/7] main__targeted_attack__access_control
+Threat=Targeted Attack | PMT=ACCESS CONTROL
+Selection=regime_representative | Regime=moderate_gap_low_slope
+Reason=Coverage-qualified representative of the moderate-gap/low-slope regime, included as a managed/stable trajectory rather than another escalation-heavy example.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__targeted_attack__access_control (18 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3.json
+
+Stage 2 artifact not found for fingerprint c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=19517 generated_tokens=336 context_tokens=19857 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=19517 generated_tokens=788 context_tokens=20309 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=19517 generated_tokens=1188 context_tokens=20709 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=19517 generated_tokens=1551 context_tokens=21072 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=19517 generated_tokens=1942 context_tokens=21463 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=19517 generated_tokens=2364 context_tokens=21885 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=19517 generated_tokens=2877 context_tokens=22398 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=19517 generated_tokens=3288 context_tokens=22809 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=19517 generated_tokens=3617 context_tokens=23138 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=19517 generated_tokens=4068 context_tokens=23589 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=19517 generated_tokens=4398 context_tokens=23919 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=19517 generated_tokens=4909 context_tokens=24430 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=19517 generated_tokens=5439 context_tokens=24960 remaining=-1 task=84368
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=141.0s prompt_tokens=19517 completion_tokens=5480 total_tokens=24997 reasoning_chars=17350
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=19577 generated_tokens=352 context_tokens=19928 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=19577 generated_tokens=889 context_tokens=20470 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=19577 generated_tokens=1357 context_tokens=20938 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=19577 generated_tokens=1754 context_tokens=21335 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=19577 generated_tokens=2091 context_tokens=21672 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=19577 generated_tokens=2468 context_tokens=22049 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=19577 generated_tokens=2790 context_tokens=22371 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=19577 generated_tokens=3154 context_tokens=22730 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=19577 generated_tokens=3477 context_tokens=23058 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=19577 generated_tokens=3817 context_tokens=23398 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=19577 generated_tokens=4216 context_tokens=23797 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+130s] state=True input_tokens=19577 generated_tokens=4578 context_tokens=24159 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+140s] state=True input_tokens=19577 generated_tokens=4962 context_tokens=24543 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+150s] state=True input_tokens=19577 generated_tokens=5404 context_tokens=24985 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+160s] state=True input_tokens=19577 generated_tokens=5816 context_tokens=25397 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+170s] state=True input_tokens=19577 generated_tokens=6192 context_tokens=25773 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+180s] state=True input_tokens=19577 generated_tokens=6551 context_tokens=26132 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+190s] state=True input_tokens=19577 generated_tokens=6865 context_tokens=26441 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+200s] state=True input_tokens=19577 generated_tokens=7320 context_tokens=26901 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+211s] state=True input_tokens=19577 generated_tokens=7710 context_tokens=27291 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+221s] state=True input_tokens=19577 generated_tokens=8037 context_tokens=27618 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+231s] state=True input_tokens=19577 generated_tokens=8413 context_tokens=27989 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+241s] state=True input_tokens=19577 generated_tokens=8833 context_tokens=28414 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+251s] state=True input_tokens=19577 generated_tokens=9338 context_tokens=28919 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse][+261s] state=True input_tokens=19577 generated_tokens=9921 context_tokens=29497 remaining=-1 task=86121
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=263.8s prompt_tokens=19577 completion_tokens=10082 total_tokens=29659 reasoning_chars=37004
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=20589 generated_tokens=305 context_tokens=20898 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=20589 generated_tokens=656 context_tokens=21249 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=20589 generated_tokens=1004 context_tokens=21597 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=20589 generated_tokens=1322 context_tokens=21915 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=20589 generated_tokens=1666 context_tokens=22259 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=20589 generated_tokens=2004 context_tokens=22597 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=20589 generated_tokens=2339 context_tokens=22932 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=20589 generated_tokens=2704 context_tokens=23297 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=20589 generated_tokens=3130 context_tokens=23718 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=20589 generated_tokens=3451 context_tokens=24044 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=20589 generated_tokens=3777 context_tokens=24365 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=20589 generated_tokens=4107 context_tokens=24700 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=20589 generated_tokens=4496 context_tokens=25089 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=20589 generated_tokens=4903 context_tokens=25496 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=20589 generated_tokens=5271 context_tokens=25864 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=20589 generated_tokens=5633 context_tokens=26226 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=20589 generated_tokens=5981 context_tokens=26574 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=20589 generated_tokens=6319 context_tokens=26907 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=20589 generated_tokens=6660 context_tokens=27253 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=20589 generated_tokens=7108 context_tokens=27701 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+220s] state=True input_tokens=20589 generated_tokens=7567 context_tokens=28160 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+230s] state=True input_tokens=20589 generated_tokens=7914 context_tokens=28507 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+240s] state=True input_tokens=20589 generated_tokens=8342 context_tokens=28935 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+250s] state=True input_tokens=20589 generated_tokens=8670 context_tokens=29258 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+260s] state=True input_tokens=20589 generated_tokens=9017 context_tokens=29610 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+270s] state=True input_tokens=20589 generated_tokens=9423 context_tokens=30016 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+280s] state=True input_tokens=20589 generated_tokens=9804 context_tokens=30397 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=20589 generated_tokens=10328 context_tokens=30921 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=20589 generated_tokens=10871 context_tokens=31464 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=20589 generated_tokens=11345 context_tokens=31938 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=20589 generated_tokens=11845 context_tokens=32438 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=20589 generated_tokens=12363 context_tokens=32951 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=20589 generated_tokens=12774 context_tokens=33367 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=20589 generated_tokens=13083 context_tokens=33676 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=20589 generated_tokens=13496 context_tokens=34089 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=20589 generated_tokens=13840 context_tokens=34433 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+381s] state=True input_tokens=20589 generated_tokens=14190 context_tokens=34783 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+391s] state=True input_tokens=20589 generated_tokens=14725 context_tokens=35313 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+401s] state=True input_tokens=20589 generated_tokens=15204 context_tokens=35792 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator][+411s] state=True input_tokens=20589 generated_tokens=15742 context_tokens=36335 remaining=-1 task=89487
+[QWEN][Stage2-R1-Mediator] completed elapsed=416.6s prompt_tokens=20589 completion_tokens=16011 total_tokens=36600 reasoning_chars=56626
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=22078 generated_tokens=213 context_tokens=22295 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=22078 generated_tokens=592 context_tokens=22669 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=22078 generated_tokens=958 context_tokens=23040 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=22078 generated_tokens=1287 context_tokens=23369 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=22078 generated_tokens=1627 context_tokens=23709 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=22078 generated_tokens=2081 context_tokens=24163 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=22078 generated_tokens=2466 context_tokens=24543 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=22078 generated_tokens=2827 context_tokens=24909 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+100s] state=True input_tokens=22078 generated_tokens=3157 context_tokens=25239 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+110s] state=True input_tokens=22078 generated_tokens=3526 context_tokens=25608 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+120s] state=True input_tokens=22078 generated_tokens=3878 context_tokens=25960 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+130s] state=True input_tokens=22078 generated_tokens=4393 context_tokens=26475 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+140s] state=True input_tokens=22078 generated_tokens=4774 context_tokens=26856 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+150s] state=True input_tokens=22078 generated_tokens=5204 context_tokens=27286 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+160s] state=True input_tokens=22078 generated_tokens=5545 context_tokens=27622 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+170s] state=True input_tokens=22078 generated_tokens=6030 context_tokens=28112 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+180s] state=True input_tokens=22078 generated_tokens=6404 context_tokens=28486 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+190s] state=True input_tokens=22078 generated_tokens=6900 context_tokens=28977 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+200s] state=True input_tokens=22078 generated_tokens=7542 context_tokens=29619 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment][+211s] state=True input_tokens=22078 generated_tokens=8146 context_tokens=30228 remaining=-1 task=94736
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=220.0s prompt_tokens=22078 completion_tokens=8690 total_tokens=30768 reasoning_chars=29297
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=14336 generated_tokens=0 context_tokens=16384 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=22138 generated_tokens=261 context_tokens=22403 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=22138 generated_tokens=623 context_tokens=22765 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=22138 generated_tokens=959 context_tokens=23101 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=22138 generated_tokens=1275 context_tokens=23417 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=22138 generated_tokens=1637 context_tokens=23779 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=22138 generated_tokens=2034 context_tokens=24176 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=22138 generated_tokens=2471 context_tokens=24613 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=22138 generated_tokens=2926 context_tokens=25068 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=22138 generated_tokens=3312 context_tokens=25449 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=22138 generated_tokens=3706 context_tokens=25848 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=22138 generated_tokens=4068 context_tokens=26205 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=22138 generated_tokens=4564 context_tokens=26706 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=22138 generated_tokens=4965 context_tokens=27107 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=22138 generated_tokens=5431 context_tokens=27573 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+160s] state=True input_tokens=22138 generated_tokens=5860 context_tokens=28002 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+170s] state=True input_tokens=22138 generated_tokens=6463 context_tokens=28605 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+180s] state=True input_tokens=22138 generated_tokens=6972 context_tokens=29114 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+190s] state=True input_tokens=22138 generated_tokens=7377 context_tokens=29514 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+200s] state=True input_tokens=22138 generated_tokens=7757 context_tokens=29899 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+210s] state=True input_tokens=22138 generated_tokens=8106 context_tokens=30243 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+220s] state=True input_tokens=22138 generated_tokens=8527 context_tokens=30669 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+230s] state=True input_tokens=22138 generated_tokens=8924 context_tokens=31066 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+241s] state=True input_tokens=22138 generated_tokens=9379 context_tokens=31521 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+251s] state=True input_tokens=22138 generated_tokens=9775 context_tokens=31912 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+261s] state=True input_tokens=22138 generated_tokens=10236 context_tokens=32378 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+271s] state=True input_tokens=22138 generated_tokens=10745 context_tokens=32887 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+281s] state=True input_tokens=22138 generated_tokens=11380 context_tokens=33517 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+291s] state=True input_tokens=22138 generated_tokens=12006 context_tokens=34148 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment][+301s] state=True input_tokens=22138 generated_tokens=12612 context_tokens=34754 remaining=-1 task=97484
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=302.3s prompt_tokens=22138 completion_tokens=12709 total_tokens=34847 reasoning_chars=41542
+[MAIN SET][6/7] COMPLETE in 1344.6s | action=generated_or_resumed_stage2_and_frozen | evidence=18 | slots=5/6 | families=8 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__targeted_attack__access_control\c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086.json
+
+====================================================================================================
+[MAIN SET][7/7] main__session_hijacking__https
+Threat=Session Hijacking | PMT=HTTPS
+Selection=regime_representative | Regime=small_gap_low_or_negative_slope
+Reason=Coverage-qualified representative of the small-gap/low-or-negative-slope regime, included as a low-risk alignment control against high-gap and accelerating cases.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__session_hijacking__https (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35.json
+
+Stage 2 artifact not found for fingerprint 250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=15959 generated_tokens=0 context_tokens=15959 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=16475 generated_tokens=353 context_tokens=16832 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=16475 generated_tokens=754 context_tokens=17233 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=16475 generated_tokens=1099 context_tokens=17578 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=16475 generated_tokens=1447 context_tokens=17926 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=16475 generated_tokens=1845 context_tokens=18324 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=16475 generated_tokens=2241 context_tokens=18720 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=16475 generated_tokens=2612 context_tokens=19091 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=16475 generated_tokens=2931 context_tokens=19410 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=16475 generated_tokens=3287 context_tokens=19766 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=16475 generated_tokens=3717 context_tokens=20196 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=16475 generated_tokens=4095 context_tokens=20569 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=16475 generated_tokens=4431 context_tokens=20910 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=16475 generated_tokens=4777 context_tokens=21256 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+150s] state=True input_tokens=16475 generated_tokens=5212 context_tokens=21691 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+160s] state=True input_tokens=16475 generated_tokens=5718 context_tokens=22197 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+170s] state=True input_tokens=16475 generated_tokens=6150 context_tokens=22629 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse][+180s] state=True input_tokens=16475 generated_tokens=6612 context_tokens=23091 remaining=-1 task=101286
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=189.2s prompt_tokens=16475 completion_tokens=7134 total_tokens=23609 reasoning_chars=26601
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=16019 generated_tokens=0 context_tokens=16019 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=16535 generated_tokens=448 context_tokens=16987 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=16535 generated_tokens=811 context_tokens=17350 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=16535 generated_tokens=1235 context_tokens=17774 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=16535 generated_tokens=1621 context_tokens=18160 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=16535 generated_tokens=2065 context_tokens=18604 remaining=-1 task=103753
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=68.3s prompt_tokens=16535 completion_tokens=2522 total_tokens=19057 reasoning_chars=7573
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=12855 generated_tokens=72 context_tokens=12926 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=12855 generated_tokens=520 context_tokens=13379 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=12855 generated_tokens=899 context_tokens=13758 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=12855 generated_tokens=1263 context_tokens=14122 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=12855 generated_tokens=1565 context_tokens=14424 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=12855 generated_tokens=1920 context_tokens=14779 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=12855 generated_tokens=2283 context_tokens=15137 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=12855 generated_tokens=2645 context_tokens=15504 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=12855 generated_tokens=3034 context_tokens=15893 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=12855 generated_tokens=3443 context_tokens=16302 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=12855 generated_tokens=3861 context_tokens=16720 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=12855 generated_tokens=4188 context_tokens=17047 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=12855 generated_tokens=4548 context_tokens=17402 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=12855 generated_tokens=4866 context_tokens=17725 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=12855 generated_tokens=5216 context_tokens=18075 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=12855 generated_tokens=5575 context_tokens=18429 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=12855 generated_tokens=5925 context_tokens=18784 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=12855 generated_tokens=6280 context_tokens=19134 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=12855 generated_tokens=6666 context_tokens=19525 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=12855 generated_tokens=7007 context_tokens=19866 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=12855 generated_tokens=7379 context_tokens=20238 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+220s] state=True input_tokens=12855 generated_tokens=7717 context_tokens=20576 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+230s] state=True input_tokens=12855 generated_tokens=8202 context_tokens=21061 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+240s] state=True input_tokens=12855 generated_tokens=8753 context_tokens=21612 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+251s] state=True input_tokens=12855 generated_tokens=9272 context_tokens=22131 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+261s] state=True input_tokens=12855 generated_tokens=9663 context_tokens=22522 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+271s] state=True input_tokens=12855 generated_tokens=10021 context_tokens=22880 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=12855 generated_tokens=10381 context_tokens=23240 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=12855 generated_tokens=10742 context_tokens=23601 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=12855 generated_tokens=11131 context_tokens=23990 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=12855 generated_tokens=11499 context_tokens=24358 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=12855 generated_tokens=11851 context_tokens=24710 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=12855 generated_tokens=12261 context_tokens=25120 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=12855 generated_tokens=12596 context_tokens=25455 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=12855 generated_tokens=12985 context_tokens=25844 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=12855 generated_tokens=13422 context_tokens=26281 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=12855 generated_tokens=13769 context_tokens=26628 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+381s] state=True input_tokens=12855 generated_tokens=14148 context_tokens=27007 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+391s] state=True input_tokens=12855 generated_tokens=14589 context_tokens=27448 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+401s] state=True input_tokens=12855 generated_tokens=14955 context_tokens=27814 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+411s] state=True input_tokens=12855 generated_tokens=15312 context_tokens=28166 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+421s] state=True input_tokens=12855 generated_tokens=15657 context_tokens=28516 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+431s] state=True input_tokens=12855 generated_tokens=16178 context_tokens=29037 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+441s] state=True input_tokens=12855 generated_tokens=16525 context_tokens=29384 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+451s] state=True input_tokens=12855 generated_tokens=16902 context_tokens=29761 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator][+461s] state=True input_tokens=12855 generated_tokens=17448 context_tokens=30307 remaining=-1 task=104565
+[QWEN][Stage2-R1-Mediator] completed elapsed=470.2s prompt_tokens=12855 completion_tokens=17924 total_tokens=30779 reasoning_chars=70002
+Stage 2 debate ended after round 1: Mediator adjudication selected STOP.
+[QWEN][Stage2-Post-AttackAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-AttackAssessment][+10s] state=True input_tokens=13671 generated_tokens=40 context_tokens=13715 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+20s] state=True input_tokens=13671 generated_tokens=393 context_tokens=14068 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+30s] state=True input_tokens=13671 generated_tokens=720 context_tokens=14395 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+40s] state=True input_tokens=13671 generated_tokens=1150 context_tokens=14825 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+50s] state=True input_tokens=13671 generated_tokens=1516 context_tokens=15191 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+60s] state=True input_tokens=13671 generated_tokens=1951 context_tokens=15626 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+70s] state=True input_tokens=13671 generated_tokens=2326 context_tokens=16001 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+80s] state=True input_tokens=13671 generated_tokens=2778 context_tokens=16448 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment][+90s] state=True input_tokens=13671 generated_tokens=3462 context_tokens=17132 remaining=-1 task=110875
+[QWEN][Stage2-Post-AttackAssessment] completed elapsed=98.5s prompt_tokens=13671 completion_tokens=3877 total_tokens=17548 reasoning_chars=11682
+[QWEN][Stage2-Post-DefenseAssessment] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-Post-DefenseAssessment][+10s] state=True input_tokens=13731 generated_tokens=47 context_tokens=13782 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+20s] state=True input_tokens=13731 generated_tokens=435 context_tokens=14170 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+30s] state=True input_tokens=13731 generated_tokens=785 context_tokens=14520 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+40s] state=True input_tokens=13731 generated_tokens=1163 context_tokens=14898 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+50s] state=True input_tokens=13731 generated_tokens=1511 context_tokens=15246 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+60s] state=True input_tokens=13731 generated_tokens=1922 context_tokens=15657 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+70s] state=True input_tokens=13731 generated_tokens=2286 context_tokens=16021 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+80s] state=True input_tokens=13731 generated_tokens=2625 context_tokens=16360 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+90s] state=True input_tokens=13731 generated_tokens=3062 context_tokens=16792 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+100s] state=True input_tokens=13731 generated_tokens=3467 context_tokens=17197 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+110s] state=True input_tokens=13731 generated_tokens=3864 context_tokens=17594 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+120s] state=True input_tokens=13731 generated_tokens=4201 context_tokens=17936 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+130s] state=True input_tokens=13731 generated_tokens=4559 context_tokens=18294 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+140s] state=True input_tokens=13731 generated_tokens=4900 context_tokens=18635 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+150s] state=True input_tokens=13731 generated_tokens=5259 context_tokens=18994 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+160s] state=True input_tokens=13731 generated_tokens=5637 context_tokens=19372 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+170s] state=True input_tokens=13731 generated_tokens=6017 context_tokens=19747 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+180s] state=True input_tokens=13731 generated_tokens=6469 context_tokens=20204 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+190s] state=True input_tokens=13731 generated_tokens=6907 context_tokens=20642 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+200s] state=True input_tokens=13731 generated_tokens=7294 context_tokens=21029 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+210s] state=True input_tokens=13731 generated_tokens=7694 context_tokens=21429 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+220s] state=True input_tokens=13731 generated_tokens=8054 context_tokens=21789 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+230s] state=True input_tokens=13731 generated_tokens=8404 context_tokens=22139 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+240s] state=True input_tokens=13731 generated_tokens=8904 context_tokens=22639 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+251s] state=True input_tokens=13731 generated_tokens=9514 context_tokens=23249 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+261s] state=True input_tokens=13731 generated_tokens=9935 context_tokens=23670 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+271s] state=True input_tokens=13731 generated_tokens=10266 context_tokens=24001 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+281s] state=True input_tokens=13731 generated_tokens=10615 context_tokens=24350 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+291s] state=True input_tokens=13731 generated_tokens=10951 context_tokens=24686 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+301s] state=True input_tokens=13731 generated_tokens=11345 context_tokens=25075 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+311s] state=True input_tokens=13731 generated_tokens=11693 context_tokens=25428 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+321s] state=True input_tokens=13731 generated_tokens=12035 context_tokens=25770 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+331s] state=True input_tokens=13731 generated_tokens=12359 context_tokens=26094 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+341s] state=True input_tokens=13731 generated_tokens=12685 context_tokens=26420 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+351s] state=True input_tokens=13731 generated_tokens=13031 context_tokens=26766 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+361s] state=True input_tokens=13731 generated_tokens=13494 context_tokens=27229 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+371s] state=True input_tokens=13731 generated_tokens=13833 context_tokens=27568 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+381s] state=True input_tokens=13731 generated_tokens=14157 context_tokens=27887 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+391s] state=True input_tokens=13731 generated_tokens=14505 context_tokens=28235 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+401s] state=True input_tokens=13731 generated_tokens=14814 context_tokens=28549 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+411s] state=True input_tokens=13731 generated_tokens=15159 context_tokens=28894 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+421s] state=True input_tokens=13731 generated_tokens=15529 context_tokens=29264 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+431s] state=True input_tokens=13731 generated_tokens=16007 context_tokens=29742 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment][+441s] state=True input_tokens=13731 generated_tokens=16634 context_tokens=30369 remaining=-1 task=112150
+[QWEN][Stage2-Post-DefenseAssessment] completed elapsed=447.4s prompt_tokens=13731 completion_tokens=16976 total_tokens=30707 reasoning_chars=69465
+[MAIN SET][7/7] COMPLETE in 1274.8s | action=generated_or_resumed_stage2_and_frozen | evidence=17 | slots=5/6 | families=6 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__session_hijacking__https\250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f.json
+
+====================================================================================================
+MAIN SET COMPLETE: 7/7 cases | generated/resumed=7 | reused=0 | total=139.3 min
+Progress file: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\runs\stage1-main-cases-v1__seed-42__progress.json
+====================================================================================================

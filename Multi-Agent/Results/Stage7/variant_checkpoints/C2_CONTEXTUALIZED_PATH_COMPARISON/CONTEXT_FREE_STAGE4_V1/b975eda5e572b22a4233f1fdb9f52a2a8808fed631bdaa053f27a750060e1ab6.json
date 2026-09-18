@@ -1,0 +1,91 @@
+{
+  "assessment": {
+    "claims": [],
+    "conditional_requirements": [
+      "A deployment-specific technical feasibility conclusion requires deployment context and evidence of NLP/LLM integration with the relevant DDoS mitigation environment.",
+      "A deployment-specific technical feasibility conclusion requires evidence of NLP/LLM operability, scalability, and maintainability for DDoS controls.",
+      "Any claim that NLP/LLM will address the DDoS forecast must be supported by implementation or operational-effectiveness evidence, not by publication activity alone (TF_C5; E_33_ADC8BC66D812799F)."
+    ],
+    "constraints": [
+      "Deployment-specific feasibility must remain conditional because the frozen deployment context does not specify region, organization_type, infrastructure_context, or budget_context.",
+      "Technical feasibility must be limited to general claims unless the missing deployment context is supplied.",
+      "Publication-activity evidence (TF_C5; E_33_ADC8BC66D812799F) must not be treated as evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+    ],
+    "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+    "evidence_gaps": [
+      "No supplied record provides NLP/LLM-specific DDoS detection or mitigation capability evidence.",
+      "No supplied record provides implementation or integration evidence for NLP/LLM with DDoS mitigation services, telemetry, or incident-response workflows.",
+      "No supplied record provides operability, scalability, or maintainability evidence for NLP/LLM-based DDoS controls.",
+      "No supplied record links the observed DDoS threat context to NLP/LLM as the technical control.",
+      "The frozen deployment context does not specify network architecture, existing DDoS mitigation services, telemetry availability, integration points, capacity, or operational constraints."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied records establish general NLP/LLM publication-activity context and general DDoS threat/mitigation-readiness context, but they do not establish NLP/LLM-specific threat-mitigation fit, implementation or integration evidence, operability, scalability, maintainability, or operational effectiveness for DDoS within the frozen 2025-2027 window. The frozen deployment context is unknown, so deployment-specific compatibility cannot be evaluated. On balance, the technical-feasibility judgment is therefore indeterminate rather than clearly supported or materially challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "d67212d14ab13e895cd2ec9835a4f51efe5fcd130114ad73f5cb408d67551433",
+  "checkpoint_sha256": "b4db7ad908ef1ef52b147ecd19a6d160045435306d1cdce05966e89196e8b689",
+  "created_at": "2026-09-16T16:29:03.513069+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+    "base_stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+    "base_stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+    "case_id": "main__ddos__nlp_llm",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_06E6ABC42DA3AC77",
+      "E_03_F13F996D181217BA",
+      "E_04_892BBCAA3CE5CC92",
+      "E_08_3453329306E149CB",
+      "E_29_CD092D34A1331D02",
+      "E_33_ADC8BC66D812799F"
+    ],
+    "input_fingerprint": "b975eda5e572b22a4233f1fdb9f52a2a8808fed631bdaa053f27a750060e1ab6",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "f671b032f680892315f21f053855534fd8fc872e8d5aea6b35f9bc79c001696f",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "f7edbe0a665d7af86756789ed17bda28e974286296e7d5371e3d498a2ce71857",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

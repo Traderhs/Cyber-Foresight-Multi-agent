@@ -1,0 +1,136 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_S1",
+        "evidence_ids": [
+          "AE07S_C1EF15B9628497F0"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied session-hijacking countermeasure study supports HTTPS/TLS as a concrete transport-layer control against interception-oriented session hijacking, within a broader session-protection strategy.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_C1",
+        "evidence_ids": [
+          "AE07C_9CBF5980D3BA474A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied OIPM study records that a secure transport channel does not prevent session-token theft through XSS or malicious browser extensions and that some existing session protections remain ineffective against user-level malware, so HTTPS alone cannot cover all session-hijacking paths.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_N1",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SSL VPN case study provides implementation-planning context for an SSL VPN remote-access solution, including option evaluation, prototype testing, and phased deployment, but it is deployment-maturity context and does not by itself establish a feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific technical feasibility conclusion would require evidence of the current web/application transport layer, the technical configuration needed for HTTPS/TLS, browser-client environment, and integration points.",
+      "A sufficiency conclusion for the full session-hijacking threat would require evidence that complementary controls address residual token-theft paths from XSS, browser extensions, and user-level malware.",
+      "A maintainability conclusion would require evidence that the deployment environment can support ongoing operations, maintenance, monitoring, and update processes for HTTPS/TLS.",
+      "Any jurisdiction-specific technical conclusion would require supplied jurisdiction-specific evidence; the masked region must not be used to infer direction."
+    ],
+    "constraints": [
+      "HTTPS/TLS is supported as a transport-layer component of session protection, not as a standalone complete mitigation for all session-hijacking paths.",
+      "Residual token-theft paths through XSS, malicious browser extensions, or user-level malware require complementary controls before HTTPS can be treated as sufficient.",
+      "Deployment-specific compatibility, scalability, maintainability, and integration conclusions are not supported without exact architecture, product/version, current HTTPS/TLS coverage, integration points, and operational environment details.",
+      "No vendor, product version, budget, staffing count, cost, ROI, TCO, or procurement assumption is introduced by this assessment."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No supplied record establishes current HTTPS/TLS deployment, enforcement, or coverage in the frozen deployment environment.",
+      "No supplied record specifies exact application architecture, product/version, technical configuration needed for HTTPS/TLS, browser-client environment, or integration points.",
+      "No supplied record reports operational effectiveness, actual session-hijacking exploitation trend, or maintenance outcomes for HTTPS/TLS in the frozen deployment environment.",
+      "No supplied record provides jurisdiction-specific technical evidence; the masked region does not support a region-driven feasibility direction.",
+      "No exact budget, staffing count, cost, ROI, TCO, or procurement capacity is supplied."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "Under the technical-feasibility grounding contract, AE07S_C1EF15B9628497F0 is the eligible support record and AE07C_9CBF5980D3BA474A is the eligible challenge record; DE_DE14_5FC183B8D7DD961A is deployment-maturity context and is not used to create direction. AE07S_C1EF15B9628497F0 directly supports HTTPS/TLS as a transport-layer countermeasure for interception-oriented session hijacking, so HTTPS is technically feasible as a component of a session-protection strategy relevant to the frozen 2025-2027 window. AE07C_9CBF5980D3BA474A directly challenges standalone sufficiency by showing that secure transport does not cover session-token theft via XSS, malicious browser extensions, or some user-level malware. This limitation is material to threat-mitigation fit but does not establish a technical barrier to implementing HTTPS/TLS. DE_DE14_5FC183B8D7DD961A adds implementation-planning context without providing a direction. Missing exact architecture, product/version, current coverage, integration points, and operational details prevent a deployment-specific conclusion.",
+    "stance": 1
+  },
+  "assessment_sha256": "8084fac250f801c43429eb77d11e3e9c76dd928a16e4a06db155095d61a8bad6",
+  "checkpoint_sha256": "f27f49d66e1e0d5e3e38577b19d502f0ab8e2e6e8b0aa7ea4a692d5c5d68840b",
+  "created_at": "2026-09-16T12:50:27.236807+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE07C_9CBF5980D3BA474A",
+        "AE07S_C1EF15B9628497F0",
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "c44f22ba5a07fabc824ed93807e57b5aad61cbf12dbd8ab34de7c87a89311fe3",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "25d733ad81d08637efd5f2461ac855920126361a00f6bfe21672a66335e3fdba",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "861f8378e4d0c581dc1985dfd63b54984fc8f42accb084ab13c3a73c8240202e",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "59871bdba6296d76d1dfa0d7aa61ed8b49ec056fa76a5b206413d3d4204e6930",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

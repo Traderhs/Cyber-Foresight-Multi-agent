@@ -1,0 +1,195 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLAIM_001",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG introductory text states that small and medium-sized hospitals and utilities ask how to make progress with limited budgets, staffing, and expertise, and that CPGs are intended to help organizations identify and prioritize cybersecurity practices and support a compelling argument for adequate resources.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_002",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG text describes the CPGs as a common set of IT and OT cybersecurity protections that are clearly defined, straightforward to implement, aimed at common and impactful cyber risks, and designed to be easy to understand and relatively easy to communicate with non-technical audiences.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_003",
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST CSF 2.0 describes scoping an Organizational Profile to countering ransomware threats and handling ransomware incidents involving financial systems, and describes gathering information, creating profiles, analyzing gaps, and developing an action plan that may have an overall deadline or be ongoing.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLAIM_004",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 provides assessment objectives and methods for SC-12(06) physical control of cryptographic keys when stored information is encrypted by external service providers, and for SC-13 cryptographic protection, including defining cryptographic uses and types of cryptography and implementing them.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_005",
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 identifies ransomware attacks that encrypt organizational data on servers as actual threat events relevant to contingency planning and requires testing the contingency plan at an organization-defined frequency using organization-defined tests.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_006",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref cutoff-constrained publication trend reports annual publication counts for the CRYPTOGRAPHY query of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with OLS slope 37.8 works/year, first-to-last delta 120, and total results 1066, and states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_007",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "scope": "GENERAL",
+        "statement": "EU NIS2 recital states that the Union has faced an exponential increase in ransomware attacks, that Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy, and that public-private partnerships can clarify available funding options among other items.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_008",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force report excerpt states that ransomware held the top action-on-objective position since at least 2020 and constituted 17% of remediated incidents in 2022.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLAIM_009",
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV record states that CVE-2022-27593 in QNAP Photo Station was observed being utilized in a Deadbolt ransomware campaign.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLAIM_010",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 describes cryptographic hashes, digital signatures, and perceptual hashing as mechanisms for metadata linkage, tamper-evidence, and attribution in synthetic-content provenance.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If deployment-specific financial feasibility is required, obtain organization_type, budget, staffing/expertise levels, and existing infrastructure relevant to cryptographic key management, cryptographic protection, and contingency planning.",
+      "If regulatory or funding support is to be considered, establish whether the deployment is subject to EU NIS2 or an equivalent jurisdictional scope before relying on E_31_6C5988FD2D0D8867.",
+      "If implementation timing is to be assessed, obtain a concrete implementation plan or schedule consistent with the frozen 2025-2027 timing window.",
+      "If adoption benefit depends on ransomware-specific cryptographic effectiveness, obtain supplied evidence directly linking the specific cryptography sub-area to ransomware defense, recovery, or resource savings."
+    ],
+    "constraints": [
+      "The frozen deployment_context has organization_type, budget_context, infrastructure_context, and region set to null, so deployment-specific financial/adoption feasibility cannot be concluded.",
+      "No supplied Stage 0 record provides exact cost, ROI, payback period, contract price, licensing price, staffing cost, or implementation timeline for PMT_CRYPTOGRAPHY.",
+      "E_33_CDE0F421E4D797ED must be treated as directional publication activity only; it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+      "E_31_6C5988FD2D0D8867 is EU regulatory/regulatory-scope context and cannot be converted into a deployment-specific funding or obligation claim without region or jurisdiction applicability.",
+      "Stage 2 adjudications in the DecisionObject are reasoning provenance and were not used as external factual evidence."
+    ],
+    "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+    "evidence_gaps": [
+      "Missing organization_type prevents assessing whether the action is feasible for a small organization, large enterprise, government entity, critical infrastructure operator, or other organizational class.",
+      "Missing budget_context prevents assessing affordability, budgetary burden, ROI, payback, or resource allocation for CRYPTOGRAPHY implementation.",
+      "Missing infrastructure_context prevents assessing whether existing cryptographic key management, cryptographic protection, contingency, backup, or assessment infrastructure would reduce or increase adoption burden.",
+      "Missing region prevents determining whether E_31_6C5988FD2D0D8867 EU NIS2 policy and PPP funding-option language is applicable to the deployment.",
+      "No supplied record provides a financial or resource-saving pathway specific to CRYPTOGRAPHY for ransomware-related deployment.",
+      "No supplied record provides implementation timing, schedule, or duration for deploying or assessing the frozen CRYPTOGRAPHY action within the 2025-2027 window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied Stage 0 records provide some general adoption enablers and some general organizational burdens, but they do not support a net positive or negative financial/adoption feasibility judgment for the frozen action. E_23_AC2A498B747552DF describes resource-prioritization context and limited budgets/staffing/expertise, while also describing CPGs as straightforward to implement and communicable. E_24_223CAC714FDE427B, E_26_A710FE8084614182, and E_25_95744996E05BA6E9 describe planning, assessment, and testing burdens that are generally relevant to cryptographic control adoption, but they do not quantify cost, staffing burden, ROI, or implementation duration. E_33_CDE0F421E4D797ED reports increasing publication activity for CRYPTOGRAPHY, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. E_31_6C5988FD2D0D8867 provides EU regulatory and PPP funding-option context, but the frozen deployment_context leaves region null, so it cannot be treated as deployment-specific support. Because organization_type, budget_context, infrastructure_context, and region are all null, and no supplied record provides exact cost, ROI, payback, contract price, staffing cost, or implementation timeline for CRYPTOGRAPHY, the financial/adoption feasibility question is indeterminate rather than supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "50ebe250cad1aeac0f5992e7b95175c7c4d6555a6a200ec1531ff78502ef6391",
+  "checkpoint_sha256": "d5e7986468d34a1cc35201264d126b37a32a00d7f3f6b32ff830083363645905",
+  "created_at": "2026-09-16T17:11:59.747220+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "04c731c00caa0211d483c4689c68454d8e1ec1eb0db6d9329a3eba2d1db25fcb",
+    "base_stage3_input_fingerprint": "958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e",
+    "base_stage3_output_sha256": "67e2fd7b9d1272554191bb08d631aaf42f25353977ff79b29c9e232a9a910d98",
+    "case_id": "main__ransomware__cryptography",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_0BAA7B22596028F4",
+      "E_04_270A1E7C47ACC4FF",
+      "E_08_510579F0D776F3BE",
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_23_AC2A498B747552DF",
+      "E_24_223CAC714FDE427B",
+      "E_25_95744996E05BA6E9",
+      "E_26_A710FE8084614182",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "b2c72233db277e341f480e40c13641164aba3783d690c1fe50d5208222462f27",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "30b60c95a427e5696341267648912cd984064f2c01475db1d48ffa6d64f76480",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "95d457baffb25f988cc8692ee2698c8310aa20a0d537cacdcbb56a0e44911f54",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

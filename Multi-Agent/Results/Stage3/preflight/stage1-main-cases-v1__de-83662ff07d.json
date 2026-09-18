@@ -1,0 +1,3651 @@
+{
+  "action_evidence_registry_sha256": "02a3d2a913953c45a8891dbeb88004404ddf4eda341b9c334f7b054afff36497",
+  "action_evidence_registry_version": "stage3-action-evidence-registry-v1",
+  "action_evidence_snapshot_id": "stage3-action-evidence-2024-12-31-v1",
+  "analysis_cutoff_date": "2024-12-31",
+  "case_count": 7,
+  "case_set_version": "stage1-main-cases-v1",
+  "cases": [
+    {
+      "case_id": "main__ddos__nlp_llm",
+      "pmt": "NLP/LLM",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "guastalla-llm-ddos-2024",
+            "ncsc-guidelines-secure-ai-system-development",
+            "nist-ai-600-1",
+            "nist-ai-rmf-1-0",
+            "nist-sp-800-218a"
+          ],
+          "generic_record_count": 11,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0",
+                "nist-sp-800-218a"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-218a"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-ai-600-1"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "guastalla-llm-ddos-2024",
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST",
+                "SPRINGER_EAI"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "guastalla-llm-ddos-2024",
+            "ncsc-guidelines-secure-ai-system-development",
+            "nist-ai-600-1",
+            "nist-ai-rmf-1-0",
+            "nist-sp-800-218a"
+          ],
+          "generic_record_count": 11,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0",
+                "nist-sp-800-218a"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-218a"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-ai-600-1"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "guastalla-llm-ddos-2024",
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST",
+                "SPRINGER_EAI"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "guastalla-llm-ddos-2024",
+            "ncsc-guidelines-secure-ai-system-development",
+            "nist-ai-600-1",
+            "nist-ai-rmf-1-0",
+            "nist-sp-800-218a"
+          ],
+          "generic_record_count": 11,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0",
+                "nist-sp-800-218a"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-218a"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1",
+                "nist-ai-rmf-1-0"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-ai-600-1"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "ncsc-guidelines-secure-ai-system-development",
+                    "nist-ai-rmf-1-0"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "NCSC_UK",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "guastalla-llm-ddos-2024",
+                "ncsc-guidelines-secure-ai-system-development",
+                "nist-ai-600-1"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "guastalla-llm-ddos-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SPRINGER_EAI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "NCSC_UK",
+                "NIST",
+                "SPRINGER_EAI"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "DDoS"
+    },
+    {
+      "case_id": "main__malware__anomaly_detection",
+      "pmt": "ANOMALY DETECTION",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-ir-8219",
+            "nist-sp-1800-10",
+            "nist-sp-800-94",
+            "patel-aproctor-malware-2023"
+          ],
+          "generic_record_count": 9,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 4,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219",
+                    "nist-sp-1800-10",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 4
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "patel-aproctor-malware-2023"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "ACM",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-ir-8219",
+            "nist-sp-1800-10",
+            "nist-sp-800-94",
+            "patel-aproctor-malware-2023"
+          ],
+          "generic_record_count": 9,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 4,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219",
+                    "nist-sp-1800-10",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 4
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "patel-aproctor-malware-2023"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "ACM",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-ir-8219",
+            "nist-sp-1800-10",
+            "nist-sp-800-94",
+            "patel-aproctor-malware-2023"
+          ],
+          "generic_record_count": 9,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 4,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-ir-8219",
+                    "nist-sp-1800-10",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 4
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-ir-8219",
+                "nist-sp-1800-10",
+                "patel-aproctor-malware-2023"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "patel-aproctor-malware-2023"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ACM"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "ACM",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Malware"
+    },
+    {
+      "case_id": "main__ransomware__cryptography",
+      "pmt": "CRYPTOGRAPHY",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 7,
+          "generic_document_ids": [
+            "ciphertrace-ransomware-2024",
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "entropy-sharing-ransomware-2024",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 4,
+              "document_ids": [
+                "ciphertrace-ransomware-2024",
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "entropy-sharing-ransomware-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "ciphertrace-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "OXFORD_ACADEMIC"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "entropy-sharing-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "MDPI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "MDPI",
+                "OXFORD_ACADEMIC"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "regulatory_applicability",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 7,
+          "generic_document_ids": [
+            "ciphertrace-ransomware-2024",
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "entropy-sharing-ransomware-2024",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 5,
+              "document_ids": [
+                "cisa-cpg",
+                "eu-gdpr",
+                "eu-nis2",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "EU_PRIMARY",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 4,
+              "document_ids": [
+                "ciphertrace-ransomware-2024",
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "entropy-sharing-ransomware-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "ciphertrace-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "OXFORD_ACADEMIC"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "entropy-sharing-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "MDPI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "MDPI",
+                "OXFORD_ACADEMIC"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 7,
+          "generic_document_ids": [
+            "ciphertrace-ransomware-2024",
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "entropy-sharing-ransomware-2024",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 4,
+              "document_ids": [
+                "ciphertrace-ransomware-2024",
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "entropy-sharing-ransomware-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "ciphertrace-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "OXFORD_ACADEMIC"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "entropy-sharing-ransomware-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "MDPI"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "MDPI",
+                "OXFORD_ACADEMIC"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Ransomware"
+    },
+    {
+      "case_id": "main__insider_threat__cryptography",
+      "pmt": "CRYPTOGRAPHY",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5",
+            "securecipher-insider-2024"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "securecipher-insider-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "regulatory_applicability",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5",
+            "securecipher-insider-2024"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 5,
+              "document_ids": [
+                "cisa-cpg",
+                "eu-gdpr",
+                "eu-nis2",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "EU_PRIMARY",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "securecipher-insider-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-cpg",
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-131ar2",
+            "nist-sp-800-52r2",
+            "nist-sp-800-57pt1r5",
+            "securecipher-insider-2024"
+          ],
+          "generic_record_count": 8,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-cpg"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "nist-sp-800-131ar2",
+                "nist-sp-800-57pt1r5"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-131ar2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-cpg",
+                    "nist-sp-800-57pt1r5"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-cpg",
+                "cisa-dhs-control-systems-encryption-primer",
+                "securecipher-insider-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "securecipher-insider-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Insider Threat"
+    },
+    {
+      "case_id": "main__brute_force__ids_ips",
+      "pmt": "IDS/IPS",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-sp-800-137",
+            "nist-sp-800-94",
+            "snort-fail2ban-bruteforce-2024",
+            "topase-bruteforce-2016"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-94",
+                "snort-fail2ban-bruteforce-2024",
+                "topase-bruteforce-2016"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "snort-fail2ban-bruteforce-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "UNTAN_JUSTIN"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "topase-bruteforce-2016"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "IPSJ"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "IPSJ",
+                "NIST",
+                "UNTAN_JUSTIN"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-sp-800-137",
+            "nist-sp-800-94",
+            "snort-fail2ban-bruteforce-2024",
+            "topase-bruteforce-2016"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-94",
+                "snort-fail2ban-bruteforce-2024",
+                "topase-bruteforce-2016"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "snort-fail2ban-bruteforce-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "UNTAN_JUSTIN"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "topase-bruteforce-2016"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "IPSJ"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "IPSJ",
+                "NIST",
+                "UNTAN_JUSTIN"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "cisa-ics-defense-in-depth-2016",
+            "nist-sp-800-137",
+            "nist-sp-800-94",
+            "snort-fail2ban-bruteforce-2024",
+            "topase-bruteforce-2016"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 5,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-ics-defense-in-depth-2016",
+                "nist-sp-800-137",
+                "nist-sp-800-94"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 0,
+                  "document_ids": [],
+                  "publisher_count": 0,
+                  "publisher_groups": [],
+                  "record_count": 0
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-ics-defense-in-depth-2016",
+                    "nist-sp-800-137",
+                    "nist-sp-800-94"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-94",
+                "snort-fail2ban-bruteforce-2024",
+                "topase-bruteforce-2016"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "snort-fail2ban-bruteforce-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "UNTAN_JUSTIN"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "topase-bruteforce-2016"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "IPSJ"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "IPSJ",
+                "NIST",
+                "UNTAN_JUSTIN"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Brute Force Attack"
+    },
+    {
+      "case_id": "main__targeted_attack__access_control",
+      "pmt": "ACCESS CONTROL",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "apt-zero-trust-access-control-2024",
+            "cisa-zero-trust-maturity-model-v2",
+            "nist-sp-800-162",
+            "nist-sp-800-207",
+            "nist-sp-800-63b"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-162",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                },
+                "adoption_burden": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-162",
+                "nist-sp-800-207",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "apt-zero-trust-access-control-2024",
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "regulatory_applicability",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "apt-zero-trust-access-control-2024",
+            "cisa-zero-trust-maturity-model-v2",
+            "nist-sp-800-162",
+            "nist-sp-800-207",
+            "nist-sp-800-63b"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-162",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                },
+                "adoption_burden": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 5,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "eu-nis2",
+                "nist-sp-800-162",
+                "nist-sp-800-207",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "EU_PRIMARY",
+                "NIST"
+              ],
+              "record_count": 6,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "apt-zero-trust-access-control-2024",
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 5,
+          "generic_document_ids": [
+            "apt-zero-trust-access-control-2024",
+            "cisa-zero-trust-maturity-model-v2",
+            "nist-sp-800-162",
+            "nist-sp-800-207",
+            "nist-sp-800-63b"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-162",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "CISA_DHS"
+                  ],
+                  "record_count": 1
+                },
+                "adoption_burden": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-162",
+                "nist-sp-800-207",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                },
+                "governance_enablement": {
+                  "document_count": 3,
+                  "document_ids": [
+                    "cisa-zero-trust-maturity-model-v2",
+                    "nist-sp-800-162",
+                    "nist-sp-800-207"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 3
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "apt-zero-trust-access-control-2024",
+                "cisa-zero-trust-maturity-model-v2",
+                "nist-sp-800-207"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "apt-zero-trust-access-control-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "ELSEVIER"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "CISA_DHS",
+                "ELSEVIER",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Targeted Attack"
+    },
+    {
+      "case_id": "main__session_hijacking__https",
+      "pmt": "HTTPS",
+      "scenarios": [
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-113",
+            "nist-sp-800-52r2",
+            "nist-sp-800-63b",
+            "oipm-session-token-2024",
+            "session-hijacking-countermeasures-2024"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "nist-sp-800-52r2",
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-113",
+                "oipm-session-token-2024",
+                "session-hijacking-countermeasures-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "session-hijacking-countermeasures-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "EDP_SCIENCES"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "oipm-session-token-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SCITEPRESS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "EDP_SCIENCES",
+                "NIST",
+                "SCITEPRESS"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "KR__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-113",
+            "nist-sp-800-52r2",
+            "nist-sp-800-63b",
+            "oipm-session-token-2024",
+            "session-hijacking-countermeasures-2024"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "nist-sp-800-52r2",
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-113",
+                "oipm-session-token-2024",
+                "session-hijacking-countermeasures-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "session-hijacking-countermeasures-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "EDP_SCIENCES"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "oipm-session-token-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SCITEPRESS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "EDP_SCIENCES",
+                "NIST",
+                "SCITEPRESS"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "EU__CIS_IG2"
+        },
+        {
+          "covered_slots": [
+            "adoption_benefit",
+            "adoption_burden",
+            "compliance_constraint",
+            "deployment_maturity",
+            "governance_enablement",
+            "technical_enablement",
+            "technical_limitation"
+          ],
+          "generic_document_count": 6,
+          "generic_document_ids": [
+            "cisa-dhs-control-systems-encryption-primer",
+            "nist-sp-800-113",
+            "nist-sp-800-52r2",
+            "nist-sp-800-63b",
+            "oipm-session-token-2024",
+            "session-hijacking-countermeasures-2024"
+          ],
+          "generic_record_count": 10,
+          "lens_coverage": {
+            "financial_adoption": {
+              "document_count": 3,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2"
+              ],
+              "eligible_slots": [
+                "adoption_benefit",
+                "adoption_burden",
+                "deployment_maturity"
+              ],
+              "facet_coverage": {
+                "adoption_benefit": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-52r2"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "adoption_burden": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "adoption_benefit",
+                "adoption_burden"
+              ]
+            },
+            "institutional_regional": {
+              "document_count": 4,
+              "document_ids": [
+                "cisa-dhs-control-systems-encryption-primer",
+                "nist-sp-800-113",
+                "nist-sp-800-52r2",
+                "nist-sp-800-63b"
+              ],
+              "eligible_slots": [
+                "compliance_constraint",
+                "governance_enablement",
+                "regulatory_applicability"
+              ],
+              "facet_coverage": {
+                "compliance_constraint": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "nist-sp-800-52r2",
+                    "nist-sp-800-63b"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "NIST"
+                  ],
+                  "record_count": 2
+                },
+                "governance_enablement": {
+                  "document_count": 2,
+                  "document_ids": [
+                    "cisa-dhs-control-systems-encryption-primer",
+                    "nist-sp-800-113"
+                  ],
+                  "publisher_count": 2,
+                  "publisher_groups": [
+                    "CISA_DHS",
+                    "NIST"
+                  ],
+                  "record_count": 2
+                }
+              },
+              "publisher_count": 2,
+              "publisher_groups": [
+                "CISA_DHS",
+                "NIST"
+              ],
+              "record_count": 4,
+              "required_balance_facets": [
+                "compliance_constraint",
+                "governance_enablement"
+              ]
+            },
+            "technical_feasibility": {
+              "document_count": 3,
+              "document_ids": [
+                "nist-sp-800-113",
+                "oipm-session-token-2024",
+                "session-hijacking-countermeasures-2024"
+              ],
+              "eligible_slots": [
+                "deployment_maturity",
+                "technical_enablement",
+                "technical_limitation"
+              ],
+              "facet_coverage": {
+                "technical_enablement": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "session-hijacking-countermeasures-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "EDP_SCIENCES"
+                  ],
+                  "record_count": 1
+                },
+                "technical_limitation": {
+                  "document_count": 1,
+                  "document_ids": [
+                    "oipm-session-token-2024"
+                  ],
+                  "publisher_count": 1,
+                  "publisher_groups": [
+                    "SCITEPRESS"
+                  ],
+                  "record_count": 1
+                }
+              },
+              "publisher_count": 3,
+              "publisher_groups": [
+                "EDP_SCIENCES",
+                "NIST",
+                "SCITEPRESS"
+              ],
+              "record_count": 3,
+              "required_balance_facets": [
+                "technical_enablement",
+                "technical_limitation"
+              ]
+            }
+          },
+          "scenario_id": "US__CIS_IG2"
+        }
+      ],
+      "threat": "Session Hijacking"
+    }
+  ],
+  "decision_evidence_retrieval_version": "decision-evidence-retrieval-v5",
+  "decision_source_manifest_sha256": "a5558376de013699dc20c5024df94f579b1876488f15dec03ad49f89fd8bdd54",
+  "decision_source_records_sha256": "a38404457c6866ed9b6f9425db99585ad9b3ac6cd86169a261e814c6602f3b70",
+  "decision_source_registry_version": "stage3-decision-source-registry-v3",
+  "decision_source_snapshot_id": "stage3-decision-sources-2024-12-31-v3",
+  "main_guidance_selection_sha256": "3feabfbd76fc1155bb85a720a0085166820478651d7ef5be8079a47bb2f1a072",
+  "main_guidance_selection_version": "stage3-main-guidance-selection-v1",
+  "minimum_balance_documents_per_facet": 0,
+  "minimum_balance_publishers_per_facet": 0,
+  "minimum_generic_documents": 3,
+  "minimum_generic_records": 6,
+  "minimum_lens_documents": 3,
+  "minimum_lens_publishers": 2,
+  "preflight_version": "stage3-decision-evidence-preflight-v3",
+  "scenario_count": 21,
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "status": "PASS"
+}

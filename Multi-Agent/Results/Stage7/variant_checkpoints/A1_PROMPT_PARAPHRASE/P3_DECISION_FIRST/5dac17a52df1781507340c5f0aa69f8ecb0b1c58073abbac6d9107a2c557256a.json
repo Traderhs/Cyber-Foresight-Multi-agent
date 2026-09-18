@@ -1,0 +1,141 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FIN_ADOPT_SUPPORT_01",
+        "evidence_ids": [
+          "DE_DE03_6786A7AB93821D48",
+          "DE_DE03_912FC8A63179A943"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NIST decision guidance identifies potential adoption enablers for AI/NLP-LLM systems: automated methods lower the effort and resources needed to detect vulnerabilities, and secure-by-design practices help improve development efficiency; the guidance also recommends using standardized security features and services rather than proprietary implementations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_ADOPT_CHALLENGE_01",
+        "evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied NCSC decision guidance states that following secure-by-design principles requires significant resources throughout a system’s life cycle, including investment in features, mechanisms, and implementation of tools; the record also notes that this investment can prevent costly later redesigns.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN_ADOPT_MATURITY_CONTEXT_01",
+        "evidence_ids": [
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied deployment-maturity guidance describes ongoing monitoring, update management, feedback/provenance, and secure operation/maintenance activities for AI systems; this is supplementary context that may affect adoption effort but does not by itself establish a financial/adoption direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC support stance would require bounded or exact financial data showing that the resource-saving/efficiency pathways lead to affordable adoption within the organization’s budget and staffing constraints.",
+      "A DEPLOYMENT_SPECIFIC challenge stance would require bounded or exact financial data showing that lifecycle resource and staffing burdens create material affordability, opportunity cost, or timing constraints.",
+      "Deployment-specific conclusions also require organization budget, staffing/infrastructure, existing contracts, vendor/product selection, and implementation/timing plan.",
+      "Until those data are supplied, retain the GENERAL mixed stance and avoid exact cost/ROI claims."
+    ],
+    "constraints": [
+      "The efficiency/resource-saving direction is conditional and unquantified; it does not establish exact cost savings, ROI, TCO, payback period, staffing savings, or budget fit.",
+      "The resource-burden direction is lifecycle-wide and unquantified; it does not establish exact budget, staffing count, price, procurement ceiling, or implementation cost.",
+      "Deployment-maturity activities may affect implementation effort and timing, but they are supplementary context and do not by themselves determine financial feasibility direction.",
+      "No jurisdiction-specific financial or regulatory obligation may be inferred from the masked jurisdiction label in this equivalence class."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "Exact budget, affordability, price, ROI, TCO, payback period, and procurement ceiling for NLP/LLM DDoS adoption are missing.",
+      "Exact staffing count, security-team size, specialized-expertise availability, and infrastructure prerequisites for the frozen CIS IG2 profile are missing.",
+      "Enterprise operational deployment, implementation timeline, procurement timing, and cost-study data for NLP/LLM DDoS mitigation are missing.",
+      "Jurisdiction-specific regulatory or financial obligations are unavailable in this masked equivalence class.",
+      "No supplied record quantifies whether the documented efficiency benefits offset the documented lifecycle resource burden."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "For the frozen NLP/LLM action in the jurisdiction-neutral CIS IG2 scenario, the supplied financial/adoption evidence is mixed at the GENERAL level. NIST decision guidance provides a grounded adoption-benefit direction by identifying potential resource-saving and development-efficiency pathways. NCSC decision guidance provides a grounded adoption-burden direction by documenting significant lifecycle resource and investment requirements. Deployment-maturity guidance adds operational monitoring, update, feedback, and maintenance context but does not by itself establish a financial/adoption direction. Because exact budget, price, ROI, TCO, payback, staffing, vendor/product, and procurement timing are absent, the records do not support a positive or negative DEPLOYMENT_SPECIFIC financial conclusion.",
+    "stance": 0
+  },
+  "assessment_sha256": "b38259025c9f098fc0b46ecaa19603d0720e458f80b0676a5aed7f10536eeb91",
+  "checkpoint_sha256": "04e64ecb3928401dd871b4ba1cbe60d97d2b54674525406afc58b2ac55ed4a9e",
+  "created_at": "2026-09-16T13:12:08.764890+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_E85CB6412740EF20",
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE03_6786A7AB93821D48",
+        "DE_DE03_912FC8A63179A943",
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "5dac17a52df1781507340c5f0aa69f8ecb0b1c58073abbac6d9107a2c557256a",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "c766f34af179cb5226e01ecd12767a63f0793d57cbc720d5e4f1d05d86b7f389",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "893b19395ed63dd6e2cd8426e9fb08b77dad407ac78a44fdc9d85a1f97627789",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "1924dca98709cf34d7f74354c6983718a5071ab80fd60e93c40f8669ce080c7e",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_33 reports a cutoff-constrained NLP/LLM security publication trend with annual publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, an OLS slope of 23.4 works/year, and a first-to-last delta of 73.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_33 states that the publication trend is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_29 is an academic metadata record for a paper titled 'Enhancing Literature Review with LLM and NLP Methods. Algorithmic Trading Case.' with DOI 10.2139/ssrn.4996945 and empty venue metadata.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02 reports that median DDoS bits per second grew 57% from 1.4 Gbps to 2.2 Gbps and that the 97.5 percentile grew 25% from 99 Gbps to 124 Gbps.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02 states that costs of bandwidth and CPU processing have become more accessible and available, suggesting an ongoing escalation between attackers and mitigating services.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02 reports growth of distributed DNS Water Torture attacks on shared DNS infrastructure as a resource-exhaustion pattern and advises checking DNS infrastructure resiliency and mitigation-service options.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_02 states that ensuring a contracted service can clear the attack-size bar is likely to allow most of the impact to be absorbed.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_04 recommends DDoS mitigation readiness actions, including contacting a DDoS mitigation provider, having and practicing an incident response plan, and ensuring incident responders have up-to-date contact information for DDoS mitigation and internet service providers.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_08 records confirmed exploitation of CVE-2023-44487, an HTTP/2 Rapid Reset vulnerability allowing DDoS, with mitigation guidance to apply vendor mitigations, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C10",
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "scope": "GENERAL",
+        "statement": "E_03 reports DDoS as an example of destructive operations, and E_03_F13F996D181217BA reports observed hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific supportive conclusion would require evidence that the organization can fund, staff, integrate, and operate NLP/LLM controls within its budget and infrastructure constraints.",
+      "A deployment-specific supportive conclusion would require evidence that NLP/LLM controls have sufficient operational effectiveness for the relevant DDoS threat context to justify adoption.",
+      "A deployment-specific challenging conclusion would require evidence that NLP/LLM adoption imposes material financial, staffing, infrastructure, contractual, or opportunity-cost burdens that outweigh expected benefits."
+    ],
+    "constraints": [
+      "The action, forecast, timing window, and evidence universe are frozen and must not be changed.",
+      "Stage 2 adjudications are reasoning provenance and are not external factual evidence.",
+      "Deployment-specific feasibility claims are not supported because budget_context, organization_type, infrastructure_context, and region are missing.",
+      "The NLP/LLM publication trend must be treated as publication activity only and not as evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+    ],
+    "decision_object_id": "decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272",
+    "evidence_gaps": [
+      "No supplied record provides NLP/LLM-specific implementation cost, staffing requirements, infrastructure requirements, contract terms, licensing costs, or budget impact.",
+      "No supplied record provides NLP/LLM-specific operational effectiveness, deployment maturity, causal mitigation effectiveness, or DDoS incident-reduction outcomes for the frozen 2025-2027 window.",
+      "No supplied record quantifies opportunity cost relative to alternative DDoS mitigation options.",
+      "No supplied record provides an NLP/LLM implementation or adoption timeline aligned to the frozen 2025-2027 window.",
+      "Organization type, infrastructure context, contract context, and budget context are missing, preventing deployment-specific financial/adoption feasibility assessment."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records do not provide NLP/LLM-specific financial or adoption evidence such as budget impact, staffing requirements, infrastructure fit, contract terms, implementation timeline, operational effectiveness, or deployment maturity. The only NLP/LLM-specific supplied records are publication/metadata records: E_33 reports a cutoff-constrained increasing NLP/LLM security publication trend for 2021-2024 but explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness; E_29 is an academic metadata record only. The DDoS records supply indirect, general threat-context and mitigation-readiness signals, including increased DDoS bandwidth, DNS resource-exhaustion concerns, reliance on a contracted DDoS mitigation service, incident-response readiness tasks, and a confirmed exploited HTTP/2 DDoS vulnerability with maintenance/retirement guidance. These are relevant to DDoS mitigation context but are not NLP/LLM-specific financial or adoption evidence. Because budget_context, organization_type, infrastructure_context, and region are missing, deployment-specific financial/adoption feasibility cannot be assessed. On balance, the records are mixed or indeterminate rather than clearly supporting or challenging the frozen action.",
+    "stance": 0
+  },
+  "assessment_sha256": "2e2e2257f7990b3ffe7470936ffbf99a9e6ea891e79260d449a9f137fc22cb77",
+  "checkpoint_sha256": "7bd13371132baea0f1ec5f72f7da561c9295f881ad14c715a99fc010eea988ab",
+  "created_at": "2026-09-16T16:35:52.907277+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "27491951f56835359ac6d0b22199cc60df73c0a8b70a51d6a611d1e5dcaa83c7",
+    "base_stage3_input_fingerprint": "ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d",
+    "base_stage3_output_sha256": "1dffb6d7017761e18978137fb0ced9c53e3786e7d8fe1189558300e35f023ef2",
+    "case_id": "main__ddos__nlp_llm",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_06E6ABC42DA3AC77",
+      "E_03_F13F996D181217BA",
+      "E_04_892BBCAA3CE5CC92",
+      "E_08_3453329306E149CB",
+      "E_29_CD092D34A1331D02",
+      "E_33_ADC8BC66D812799F"
+    ],
+    "input_fingerprint": "b9437de80363528e0683f0bc2cfa4d4ce2a9be2fdbefb314b6d442ac33866235",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "1d2b184b04de946d65073a9256efeda00258ab4be387145a7b8a591ff22ed379",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "f7edbe0a665d7af86756789ed17bda28e974286296e7d5371e3d498a2ce71857",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

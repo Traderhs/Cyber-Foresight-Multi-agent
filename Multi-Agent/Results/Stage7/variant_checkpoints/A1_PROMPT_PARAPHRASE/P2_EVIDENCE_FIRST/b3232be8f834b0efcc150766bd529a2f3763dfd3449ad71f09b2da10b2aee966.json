@@ -1,0 +1,153 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FIN-ADP-1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST behavioral anomaly-detection record states that anomaly-detection tools can support detection in time for response and recovery, expanded visibility, real-time monitoring/alerting, oversight of resources, faster incident-response times, fewer incidents, and shorter downtimes.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADP-2",
+        "evidence_ids": [
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA ICS decision-guidance record describes a SIEM log-centralization pathway that eliminates the time and effort required for manual log reviews and whose analysis engine speeds data processing and formatting, making review of functional, operational, and security data cheaper and easier.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADP-3",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST IDPS record documents that IDPS implementation, operation, tuning, and maintenance require system administration, network administration, information security, incident-response, network-protocol, application/operating-system knowledge, possible programming skills, update testing, and training, which constitutes a staffing/resource adoption burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FIN-ADP-4",
+        "evidence_ids": [
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST SP 1800-10B record reports a behavior anomaly-detection configuration that received packet streams from specified network segments in an ICS test context.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FIN-ADP-5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied CIS IG2 context record describes the frozen reference enterprise as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure and notes that some IG2 safeguards depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion would require evidence of actual or approved budget, procurement constraints, and staffing/training resources for implementing anomaly detection in the frozen CIS IG2 reference enterprise.",
+      "A stronger GENERAL conclusion would require evidence that links the reported resource savings, such as manual log review time, incident-response time, and downtime, to the specific anomaly-detection action and to the organization's resource base.",
+      "If the organization lacks the skills, training, or testing capacity described in the IDPS record, the adoption burden would need to be assessed with deployment-specific staffing and capacity evidence."
+    ],
+    "constraints": [
+      "General support is based on qualitative resource-saving and efficiency language, not on measured cost, ROI, TCO, payback period, or exact budget fit.",
+      "The documented challenge is an unquantified skills, training, testing, and maintenance burden; it is not presented as a budget disqualifier.",
+      "Deployment-maturity evidence is supplementary and cannot by itself establish financial or adoption feasibility.",
+      "No jurisdiction-specific financial/adoption evidence is present for this masked-equivalence-class evaluation, so the GENERAL direction is jurisdiction-neutral."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No supplied record provides an exact budget, cost, price, procurement ceiling, ROI, TCO, or payback period for anomaly detection in the frozen deployment.",
+      "No supplied record provides exact staffing counts, role allocations, or training costs for the skills described in the IDPS burden record.",
+      "No supplied record provides deployment-specific financial data for the CIS IG2 reference enterprise beyond the standardized profile context record.",
+      "No supplied jurisdiction-specific financial/adoption evidence is present, so a region-specific financial feasibility conclusion cannot be drawn."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied decision evidence provides a GENERAL supporting direction for the financial/adoption feasibility of ANOMALY DETECTION. The support-slot records document resource-saving and efficiency pathways: one NIST behavioral anomaly-detection record lists operational/resource benefits such as oversight of resources, faster incident-response times, fewer incidents, and shorter downtimes; one CISA ICS decision-guidance record describes a SIEM log-centralization pathway that eliminates time and effort for manual log reviews and makes review cheaper and easier. The challenge-slot record documents an adoption burden: NIST IDPS guidance describes multiple administrative, security, network, protocol, application/OS, and possible programming skills, plus update testing and training, required for implementation, operation, and maintenance. The NIST SP 1800-10B record is supplementary deployment-maturity context and cannot by itself establish financial feasibility. Exact budget, cost, price, ROI, TCO, payback period, staffing counts, and procurement constraints are not supplied, so the support is qualitative rather than exact affordability evidence. On balance, the direct resource-saving language in the support records outweighs the generic, unquantified skill/training burden for a GENERAL feasibility direction under this lens, while deployment-specific financial feasibility remains conditional.",
+    "stance": 1
+  },
+  "assessment_sha256": "987f9443dd2dcd7110d3998e4e0ef330e077960592789984a71a06dd93baa7fc",
+  "checkpoint_sha256": "864ff16c712057bc7e25376582e9b587460314caeb2166ef76d65d40f4d5f3e4",
+  "created_at": "2026-09-16T12:41:29.290494+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_C6F46FCDE66BFAC7",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b3232be8f834b0efcc150766bd529a2f3763dfd3449ad71f09b2da10b2aee966",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "d4da70620005a0811b31e1ca3b600d02611a3ad544ed6c3180511e8e76832892",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "c5a711609b6676a53fe6406bffa491511dc493d4cc30db5bdf6d8d7ea5429121",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "ee7420834d00c9c612895b8fb56d43f0a948477fd3d4152891a4a865ee7d35e2",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

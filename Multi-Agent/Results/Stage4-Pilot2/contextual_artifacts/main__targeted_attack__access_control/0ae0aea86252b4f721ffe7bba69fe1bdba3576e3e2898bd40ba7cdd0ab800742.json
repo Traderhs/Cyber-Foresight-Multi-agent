@@ -1,0 +1,804 @@
+{
+  "artifact_sha256": "56fd1bf7cec78d87b562ed0fc85cf6eed9da6800240b311a623fc4b5fec3d5f0",
+  "case_id": "main__targeted_attack__access_control",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1": {
+      "financial_adoption": "0d74672887c664313ca58f9428e0fe3bcf378b77776d98f0d9fd33923fb8aba4",
+      "institutional_regional": "2146992d4f7e9f91a7463659457c00508a5ab09b83b3d14f8e6d9b7e0965db87",
+      "technical_feasibility": "3e38577989b682d3c8a5234bb81a6b9b513d36442dcd0d26134aee891760c23e"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430": {
+      "financial_adoption": "64c41f7d1dc4720a51d4297e484244f3562f8fdfd3809b4c004af86eedacda4e",
+      "institutional_regional": "4af299be9b691a0b0c979ad115c820247aff2af9aa1f6fe262caad845854ef59",
+      "technical_feasibility": "10f187a5bce53efdbff2dd5d825afe65096691ae2f77c536956810d5986f459a"
+    },
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959": {
+      "financial_adoption": "4f1fb0137780c6abcaed8191384e74806b21b175d4507626745b0ea3c246f587",
+      "institutional_regional": "4dfa30142ae8a5c967964083de4774c45d3dfd69ff75994e34e9ded0a45b8ba3",
+      "technical_feasibility": "695f180995a2e819b7f7a61ecccccbef1c916d81f7f5c8a50d7e6ebc2b23d880"
+    }
+  },
+  "created_at": "2026-09-14T17:03:09.148186+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1": "25815d448e043396f112088db73245481be18143726405a106302438e8790adb",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430": "b715e5a637b266d843d2317bd9bd57efa0b95a09265b24dd2b0abbc2739e981e",
+    "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959": "e5a6cbb40cb04d537719733f946b5a5eb676cdf00323de597939c5a600c6d04f"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__targeted_attack__access_control",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430",
+        "financial_adoption": {
+          "claims": [],
+          "conditional_requirements": [
+            "To support a deployment-specific positive financial/adoption stance, evidence is needed showing sufficient budget or procurement capacity and that the expected implementation and maintenance costs are affordable under the frozen scenario.",
+            "To support a deployment-specific negative financial/adoption stance, evidence is needed showing material cost, staffing, integration, skill, or timing constraints that make adoption unrealistic.",
+            "If the selected access-control safeguards fall within the CIS IG2 profile's safeguards that may depend on enterprise-grade technology or specialized expertise, evidence is needed confirming those technology/skill requirements and associated costs.",
+            "Evidence of implementation timing and operational disruption constraints is needed to evaluate whether adoption can fit the frozen 2025-2027 timing window.",
+            "If KR-specific regulatory or contractual obligations apply, evidence of the applicable obligations and any associated cost or burden is needed."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, vendor, product version, procurement ceiling, or implementation timeline is assumed or inferred.",
+            "The CIS IG2 context record may support only standardized reference-enterprise profile facts and cannot by itself establish access-control implementation burden, cost, regulatory applicability, or legal obligation.",
+            "Directional feasibility claims are limited to the supplied Stage-4 decision-evidence records relevant to financial/adoption feasibility.",
+            "Missing financial, staffing, infrastructure, contract, or timing context is treated as missing information, not as evidence that adoption is affordable, unaffordable, timely, or untimely."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430",
+          "evidence_gaps": [
+            "No numeric budget, price, TCO, ROI, payback period, procurement ceiling, or exact staffing count is supplied for the frozen CIS IG2 reference enterprise.",
+            "No organization-specific access-control deployment scope, existing identity/access management infrastructure, integration effort, required skills, change-management constraints, service-interruption limits, or implementation timeline is supplied.",
+            "No KR-specific legal, regulatory, or contractual requirement or cost evidence is supplied for this scenario.",
+            "No evidence quantifies opportunity cost or compares alternative security investments.",
+            "No evidence confirms whether the selected access-control safeguards specifically require enterprise-grade technology or specialized expertise; the CIS IG2 profile states only that some safeguards may depend on such capabilities."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The frozen decision-evidence pack supports a general assessment of access-control adoption burden and standardization, but not a deployment-specific financial or staffing feasibility conclusion. NIST CSF 2.0 and NIST SP 800-53/800-53A records describe access control as a recognized control area with implementation, governance, assessment, and monitoring-related requirements, which indicates organizational effort. They also provide standardized frameworks, which is a general feasibility-supporting factor. The CIS IG2 reference profile supplies organizational context only, including personnel responsible for IT, possible regulatory burdens, tolerance for short service interruptions, and possible dependence of some safeguards on enterprise-grade technology or specialized expertise. However, the supplied records do not establish exact budget, price, ROI, TCO, payback, staffing count, procurement ceiling, vendor/product cost, implementation timeline, opportunity cost, or KR-specific regulatory/contractual cost burden. Therefore the financial/adoption direction is mixed and indeterminate rather than materially supported or materially challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF_CLM_1",
+              "evidence_ids": [
+                "E_24_7001313C0950C22F",
+                "E_24_C6DD39371794D388"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST CSF 2.0 places identity management, authentication, and access control within the PROTECT function and provides PR.AA subcategories for identity and credential management, authentication, and protected identity assertions.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_CLM_2",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 organizes Access Control as a security control family and states that control selection and implementation may require organization-specific derived requirements or instantiated control parameter values.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_CLM_3",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes PII Processing and Transparency as a privacy control family, indicating that data-governance control categories are part of the institutional control-selection context relevant to access control.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_CLM_4",
+              "evidence_ids": [
+                "E_26_6DFFABBF70120E2E"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 provides assessment methods for accountability and traceability and lists access control policy, audit and accountability policy, and system audit records as selectable assessment objects, supporting institutional audit and documentation feasibility.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_CLM_5",
+              "evidence_ids": [
+                "E_31_96F42990F3AEAC86"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied primary-law record is EU-specific, describes risk-management measures for essential and important entities, and mentions access control policies in that EU context.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "KR-specific regulatory applicability evidence is required before deployment-specific institutional/regional feasibility can be judged.",
+            "If the enterprise processes data subject to KR data-governance or residency rules, those rules must be mapped to the access-control implementation.",
+            "If cross-border access, storage, or processing occurs, jurisdictional data-sovereignty constraints must be evidenced before deployment-specific feasibility can be judged."
+          ],
+          "constraints": [
+            "Institutional implementation may require organization-specific derived requirements or instantiated control parameter values.",
+            "Assessment and audit readiness may require policies, records, interviewable roles, and auditable mechanisms.",
+            "The EU primary-law record cannot be used to establish KR regulatory compatibility for the frozen KR scenario."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430",
+          "evidence_gaps": [
+            "No KR-specific legal, regulatory, data-protection, or data-sovereignty evidence for ACCESS CONTROL is supplied.",
+            "No evidence establishes whether the reference enterprise in the KR scenario is subject to KR essential-entity, sectoral, or data-residency obligations.",
+            "No evidence establishes cross-border data transfer, remote access, or residency constraints applicable to the frozen KR deployment context.",
+            "The decision evidence pack lists regulatory_applicability as a missing slot."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied evidence establishes general institutional feasibility for ACCESS CONTROL as a recognizable, governable, auditable, and data-governance-related control category under cited frameworks. It does not, however, establish Republic of Korea-specific regulatory applicability, data-sovereignty constraints, cross-border constraints, or sectoral compliance obligations. The frozen deployment context specifies KR, but the supplied primary-law record is EU-specific and cannot be generalized to KR. Because the regional regulatory and data-governance context needed for a deployment-specific institutional/regional judgment is missing, the stance is indeterminate rather than directionally supported or challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLM_01",
+              "evidence_ids": [
+                "E_24_C6DD39371794D388",
+                "E_24_C7F5278DFA868A84",
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision evidence represents access control as a standardized control category and protection outcome in official cybersecurity guidance.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_02",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 decision evidence describes security controls as including administrative, technical, and physical aspects, and states that control implementation may require derived requirements or instantiated control parameter values.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_03",
+              "evidence_ids": [
+                "E_25_8F4D567857A97316"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision evidence defines access control in terms of granting or denying access to information systems, information processing services, and physical facilities, which is technically aligned with limiting unauthorized access in a targeted-attack context.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_04",
+              "evidence_ids": [
+                "E_24_C6DD39371794D388",
+                "E_24_C7F5278DFA868A84"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision evidence identifies PR.AA, Identity Management, Authentication, and Access Control, as a Protect Function category, including management of identities and credentials, authentication, and protection of identity assertions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_05",
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied evaluation evidence provides a concrete Active Directory implementation pattern for access control, including domain accounts, group policy logon restrictions, RDP restrictions, dedicated administrative accounts, authentication silos, and implementation tools such as GPMC, PowerShell, and AD Administrative Center.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_06",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied decision evidence identifies dynamic reconfiguration mechanisms, including access control lists, router rules, intrusion detection or prevention parameters, and firewall filter rules, as technically operable incident-response actions with organization-defined system components and time frames.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLM_07",
+              "evidence_ids": [
+                "E_26_22D6C8ED91C81D37",
+                "E_26_6DFFABBF70120E2E",
+                "E_26_7511053718EC6304"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied evaluation evidence and decision evidence identify assessment and testing objects for access-control-related mechanisms, including access control, identification and authentication, audit mechanisms, configuration settings, physical access control devices, accountability and traceability procedures, and privileged-status software installation controls.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_08",
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref publication trend for ACCESS CONTROL reports publication activity and a positive slope, but the record explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_CLM_09",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, and notes that IG2 safeguards address increased operational complexity and that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion requires evidence of the actual identity/infrastructure architecture and the ability to configure and test access-control mechanisms in that environment.",
+            "If an Active Directory-based implementation is assumed, evidence must confirm the presence and operability of AD domain infrastructure, group policy management, and the relevant account/logon/RDP/authentication-silo configuration capabilities.",
+            "Operational feasibility requires evidence that organization-defined control parameters, reconfiguration components, time frames, and assessment objects can be established and maintained.",
+            "If the selected IG2 safeguards require enterprise-grade technology or specialized expertise, a deployment-specific conclusion would require evidence that such technology and expertise are available in the frozen scenario.",
+            "Any claim that the action is implementable now or within the 2025-2027 timing window must be limited to general feasibility unless deployment-specific integration and operational evidence is supplied."
+          ],
+          "constraints": [
+            "Implementation feasibility depends on organization-specific derived requirements and instantiated control parameter values.",
+            "Deployment-specific feasibility cannot be concluded without evidence about the actual identity platform, network architecture, existing access-control tooling, service-account practices, and integration points.",
+            "Operational feasibility requires organization-defined system components and time frames for dynamic reconfiguration during incident response.",
+            "Some IG2 safeguards may require enterprise-grade technology and specialized expertise to install and configure, but the supplied profile does not quantify staffing, cost, or operational burden.",
+            "Publication-trend evidence does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "No supplied evidence specifies exact implementation timelines, vendor products, product versions, budgets, ROI, TCO, staffing counts, or measured control effectiveness."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__82a73ce1d4b17430",
+          "evidence_gaps": [
+            "Missing deployment infrastructure detail: whether the reference enterprise uses Active Directory, another identity provider, network segmentation, firewalls/ACLs, privileged access management, or existing access-control mechanisms.",
+            "Missing integration evidence: no supplied record shows that the frozen access-control action can be integrated with the reference enterprise's actual platforms within the 2025-2027 timing window.",
+            "Missing operational evidence: no supplied record demonstrates that the action is operable, maintainable, or sustainably manageable in the frozen deployment context.",
+            "Missing measured-effectiveness evidence: no supplied record establishes operational effectiveness of access control against the targeted-attack threat in this deployment context.",
+            "Missing burden evidence: no supplied record quantifies operational burden, skill requirements, timeline, or resource constraints beyond the general IG2 profile."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "General technical feasibility is supported because the supplied decision evidence shows access control as a standardized control category and protection outcome, and the supplied evaluation evidence provides concrete implementation mechanisms and assessment methods. However, deployment-specific integrability and operability within the frozen 2025-2027 timing window are not established because the supplied records do not identify the reference enterprise's actual identity platform, network architecture, existing access-control tooling, integration points, implementation timeline, operational burden, or measured operational effectiveness. Missing deployment context is therefore treated as INSUFFICIENT_CONTEXT rather than as a directional challenge.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1",
+        "financial_adoption": {
+          "claims": [],
+          "conditional_requirements": [
+            "If the organization is confirmed to be an EU NIS2 essential or important entity, access control policy adoption should be treated as a regulatory risk-management expectation under the supplied recital.",
+            "If the intended implementation follows NIST SP 800-53-style control selection, a feasibility estimate should account for administrative, technical, and physical elements plus organization-defined derived requirements or parameter values.",
+            "If NIST CSF 2.0 PROTECT outcomes are used as the implementation scope, the estimate should account for identity, credential, authentication, and identity-assertion management activities.",
+            "If control assessment is required, the estimate should account for examining policies and documentation, interviewing organizational personnel, and testing mechanisms or processes.",
+            "If incident-response capabilities are included, the estimate should account for access-control-list reconfiguration and organization-defined time frames for rapid response.",
+            "If the CIS IG2 reference profile is used for resourcing assumptions, exact staffing and budget values must still be supplied because the profile itself does not establish cost or implementation burden."
+          ],
+          "constraints": [
+            "No numeric budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, or exact implementation timeline is assumed by the frozen deployment context.",
+            "Exact employee count, security-team size, sector, architecture, and deployment-specific cost values are not established by the supplied evidence.",
+            "Stage 2 adjudications are treated only as reasoning provenance, not as external factual evidence.",
+            "Any deployment-specific financial conclusion must remain conditional unless the missing cost, staffing, infrastructure, contract, and timing context is supplied."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1",
+          "evidence_gaps": [
+            "Missing exact or bounded budget, cost, price, ROI, TCO, payback period, opportunity-cost baseline, and procurement ceiling for adopting access control.",
+            "Missing staffing counts, skill inventory, role assignments, internal capacity, and whether specialized expertise must be purchased or hired.",
+            "Missing current access-control maturity, identity-management baseline, existing systems, architecture, contracts, vendor assumptions, and integration scope.",
+            "Missing exact implementation timing, migration windows, disruption tolerance beyond the reference profile, and operational maintenance schedule.",
+            "Missing EU NIS2 applicability facts, such as whether the reference enterprise is an essential or important entity, its sector, size, or other legal trigger facts.",
+            "Missing maintenance, monitoring, audit, incident-response reconfiguration, and change-management cost or effort estimates for access control."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The frozen action is a recognized access-control category in supplied guidance, and an EU primary-law recital conditionally expects access control policies for essential and important entities. However, the supplied records do not provide numeric budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, opportunity-cost baseline, or exact implementation timeline. The records do indicate qualitative implementation and governance burden dimensions, including administrative, technical, and physical control aspects, organization-defined parameters, identity/access subcategories, assessment interview/examination/test activities, and incident-response reconfiguration involving access control lists. Because exact cost and adoption-burden context is missing, a directional financial or deployment-specific adoption judgment cannot be made. The insufficiency is not converted into a directional stance.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IFR_C1",
+              "evidence_ids": [
+                "E_24_C6DD39371794D388",
+                "E_24_C7F5278DFA868A84",
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "Access control is recognized in the supplied governance and control guidance as a Protect-category control and as an Access Control control family that can be implemented through administrative, technical, and physical mechanisms, with organization-defined derived requirements or instantiated control parameter values where necessary.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IFR_C2",
+              "evidence_ids": [
+                "E_26_6DFFABBF70120E2E",
+                "E_26_7511053718EC6304",
+                "E_26_22D6C8ED91C81D37"
+              ],
+              "scope": "GENERAL",
+              "statement": "Institutional implementation and auditability are supported by supplied assessment and control-monitoring guidance covering access-control policies, audit and accountability, accountability and traceability, user-installed-software governance, and testing of access-control, identification/authentication, audit, configuration, and physical-access-control mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IFR_C3",
+              "evidence_ids": [
+                "E_31_96F42990F3AEAC86"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "In the frozen EU scenario, EU primary-law context states that essential and important entities should have appropriate access control policies as part of cybersecurity risk-management measures, which supports regulatory compatibility of ACCESS CONTROL for an in-scope EU entity.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IFR_C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference profile describes an enterprise that may face regulatory burdens and for which some safeguards may depend on enterprise-grade technology and specialized expertise, but it does not establish exact staffing, budget, or capacity; this limits the strength of deployment-specific feasibility conclusions.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Determine whether the frozen EU enterprise is in scope for the EU essential/important entity access-control expectation before treating ACCESS CONTROL as a direct legal compliance obligation.",
+            "Define the physical and logical asset scope, identity and credential management, authentication, and access-decision processes required by the control.",
+            "Establish or update access-control policy, audit and accountability procedures, and assessment or monitoring mechanisms sufficient for institutional oversight.",
+            "Verify any additional EU sector-specific or data-sovereignty constraints if the enterprise processes sensitive client or enterprise data or operates regulated communications services; the supplied records do not establish those specifics."
+          ],
+          "constraints": [
+            "The EU access-control expectation is tied to essential and important entities and cybersecurity risk-management measures; it cannot be assumed to apply directly to every EU enterprise without a scope determination.",
+            "Access-control implementation may require organization-defined derived requirements and instantiated control parameter values, as well as administrative, technical, and physical aspects.",
+            "The frozen CIS IG2 profile indicates possible regulatory burdens and possible dependence on enterprise-grade technology and specialized expertise for some safeguards, but it does not quantify those burdens."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1",
+          "evidence_gaps": [
+            "Missing determination of whether the CIS IG2 reference enterprise is an essential or important entity under the EU primary-law context supplied by E_31_96F42990F3AEAC86.",
+            "Missing sector, service type, data categories, cross-border data flows, and data-sovereignty constraints needed to evaluate data-governance feasibility beyond the supplied EU NIS2-context record.",
+            "Missing Member State-specific operationalization, existing access-control baseline, roles and responsibilities, and current policy inventory needed to measure incremental compliance burden."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen EU scenario supports institutional and regional feasibility of ACCESS CONTROL, but only conditionally. EU primary-law context states that essential and important entities should have appropriate access control policies as part of cybersecurity risk-management measures, so the action is regulatorily compatible with the frozen EU jurisdiction rather than prohibited by it. General governance and control records show that access control can be institutionalized through policy, administrative/technical/physical mechanisms, control parameters, assessment, audit, accountability, and monitoring. The frozen CIS IG2 profile supplies organizational context but does not establish whether the enterprise is an EU essential or important entity, its sector, data categories, cross-border data flows, Member State, or exact capacity. Therefore, the positive stance is based on regulatory compatibility and institutional workability, not on confirmed direct legal applicability to the exact reference enterprise.",
+          "stance": 1
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "E_24_7001313C0950C22F",
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST CSF 2.0 identifies identity management, authentication, and access control as PROTECT outcomes, and NIST SP 800-53 Rev. 5 organizes Access Control as a control family, supporting the general technical implementability of ACCESS CONTROL as a recognized control class.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "E_25_8F4D567857A97316"
+              ],
+              "scope": "GENERAL",
+              "statement": "Access control is defined as the process of granting or denying specific requests for obtaining and using information and related information processing services, and to enter specific physical facilities, giving the action a concrete logical and physical technical scope.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "E_24_C6DD39371794D388"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST CSF 2.0 PR.AA subcategories provide an implementable technical scope for access control: managing identities and credentials for authorized users, services, and hardware; proofing and binding identities to credentials; authenticating users, services, and hardware; and protecting, conveying, and verifying identity assertions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C4",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 incident response guidance describes dynamic reconfiguration that includes changes to access control lists, router rules, intrusion detection or prevention parameters, and firewall filter rules, supporting integration of access-control changes with operational incident response.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C5",
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9",
+                "E_24_C6DD39371794D388"
+              ],
+              "scope": "GENERAL",
+              "statement": "MITRE ATT&CK M1015 describes Active Directory access-control configuration measures, including domain accounts, interactive logon restrictions, RDP restrictions, dedicated administrative accounts, and authentication silos, with implementation using Group Policy Management Console, PowerShell, and AD Administrative Center; this supports technical fit to unauthorized-access and lateral-movement threat context when combined with the PR.AA identity/authentication/access-control scope.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C6",
+              "evidence_ids": [
+                "E_26_7511053718EC6304"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment procedures for user-installed software reference mechanisms for prohibiting installation without privileged status, including access controls, supporting access control as an operational enforcement mechanism.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C7",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 states that selection and implementation of a control may require additional organization-specific specification, derived requirements, or instantiated control parameter values, and that controls may involve policy, oversight, supervision, manual processes, and automated mechanisms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C8",
+              "evidence_ids": [
+                "E_26_6DFFABBF70120E2E"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment procedures list access control policy, audit and accountability policy, least privilege procedures, audit records, and configuration documentation among potential assessment objects, indicating documentation and assessment objects relevant to operability.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C9",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS IG2 reference profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, sensitive information processing, possible regulatory burdens, short service interruption tolerance, and notes that some IG2 safeguards depend on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C10",
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_B4F773BEC65685CC",
+                "E_10_CEB460BC4092B2D3"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA advisory records describe product-specific access-control defects in Mendix Workflow Commons and Mendix Email Connector and a Kastle Systems access-control firmware vulnerability, with potential unauthorized access to sensitive information, and include vendor update recommendations and impact analysis/risk assessment guidance before deploying defensive measures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C11",
+              "evidence_ids": [
+                "E_31_96F42990F3AEAC86"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The EU primary-law record states that essential and important entities should, as part of cybersecurity risk-management measures, address human resources security and have in place appropriate access control policies.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C12",
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication trend record reports access-control publication counts and a positive OLS slope but explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If an AD/domain environment is present, implement the described AD access-control configurations using the listed GPO, PowerShell, and AD Administrative Center methods.",
+            "If dynamic incident response is required, define organization-specific dynamic reconfiguration types, affected system components, and time frames for ACL/firewall/router changes.",
+            "If NIST SP 800-53 AC controls are selected, define derived requirements and instantiated control parameter values for the selected controls.",
+            "If the cited product-specific access-control vulnerabilities are present, perform impact analysis and risk assessment before deploying defensive measures.",
+            "If the organization is in scope for the cited EU NIS2 provision, establish appropriate access control policies as part of cybersecurity risk-management measures.",
+            "If selected IG2 safeguards depend on enterprise-grade technology or specialized expertise, verify that those resources are available in the frozen reference environment."
+          ],
+          "constraints": [
+            "General implementability is supported, but deployment-specific integrability depends on unknown architecture and platform details.",
+            "Access-control implementation may require organization-specific specification, derived requirements, or instantiated parameter values.",
+            "Operability may require identity/credential management, authentication, and identity-assertion processes.",
+            "Assessment and documentation may involve access control policy, audit and accountability policy, least privilege procedures, audit records, and configuration documentation.",
+            "The frozen reference profile may involve enterprise-grade technology and specialized expertise for some safeguards.",
+            "Product-specific access-control vulnerability records indicate that software/firmware updates and impact analysis may be part of implementation."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__23df96e628e43ff1",
+          "evidence_gaps": [
+            "No supplied record identifies the specific identity/IAM architecture, AD presence, local account inventory, or privileged account design needed to determine whether the described AD access-control measures can be integrated.",
+            "No supplied record identifies the network architecture, firewall/ACL inventory, or incident-response automation needed to determine integration of access-control list and firewall/filter reconfiguration.",
+            "No supplied record identifies current access-control policies, account baselines, least-privilege procedures, or audit capabilities needed to determine operational readiness.",
+            "No supplied record identifies whether the organization operates the specific OT/ICS or product environments covered by the cited access-control advisories.",
+            "No supplied record establishes 2025-2027 deployment, adoption, or operational effectiveness of access-control controls; the publication trend record does not establish deployment maturity or operational effectiveness.",
+            "No supplied record establishes whether the CIS IG2 reference enterprise falls within the scope of the cited EU NIS2 essential/important entity provision."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The frozen ACCESS CONTROL action has supported GENERAL technical feasibility. Supplied Stage-4 decision-evidence records identify access control as a recognized control class, define its technical scope, and describe concrete implementation and integration mechanisms, including identity/credential management, authentication, incident-response reconfiguration, Active Directory configuration measures, and privileged-status enforcement. However, deployment-specific integrability and operability for the frozen CIS IG2 reference enterprise are not established. The supplied context gives only a multi-department enterprise IT profile and possible need for enterprise-grade technology or specialized expertise for some safeguards; it does not identify the actual identity platform, directory environment, network/firewall/ACL inventory, OT/ICS or product exposure, existing access-control policies, audit capabilities, or a 2025-2027 implementation path. Therefore, this lens is mixed/indeterminate: general feasibility is supported, but deployment-specific technical feasibility cannot be confirmed or materially challenged from the supplied records.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959",
+        "financial_adoption": {
+          "claims": [],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility judgment requires exact budget and cost data for the selected access-control implementation, including administrative, technical, and physical components.",
+            "A deployment-specific judgment requires staffing and expertise data sufficient to support organization-specific requirement derivation, policy/procedure updates, assessment, testing, and ongoing access management.",
+            "A deployment-specific judgment requires implementation timing and opportunity-cost data, including whether dynamic reconfiguration or incident-response coordination obligations would affect operational capacity.",
+            "If the selected implementation falls within the portion of the CIS IG2 profile that may require enterprise-grade technology or specialized expertise, those resource requirements must be confirmed and costed before feasibility can be assessed.",
+            "General feasibility is conditionally supported only if the organization can absorb the cited implementation, assessment, and ongoing management obligations within unknown but not-yet-demonstrated cost and staffing limits."
+          ],
+          "constraints": [
+            "Adoption burden is grounded only qualitatively through organization-specific control implementation, assessment procedures, testing, and ongoing access management, not through quantified cost or staffing data.",
+            "The NIST SP 800-53 Rev. 5 glossary frames adequate security through cost-effective controls, but the supplied records do not demonstrate that access-control implementation in this scenario is cost-effective or affordable.",
+            "The frozen CIS IG2 profile describes a multi-department enterprise with personnel responsible for IT infrastructure and notes that some IG2 safeguards may depend on enterprise-grade technology and specialized expertise, but it does not establish exact implementation burden, cost, or staffing requirement.",
+            "No deployment-specific financial conclusion can be made without exact budget, staffing, procurement, existing infrastructure, opportunity-cost, and timeline information."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959",
+          "evidence_gaps": [
+            "Missing exact budget, price, TCO, ROI, payback period, and procurement ceiling for the frozen US__CIS_IG2 scenario.",
+            "Missing exact staffing count, security-team capacity, role availability, and expertise availability for access-control implementation and operation.",
+            "Missing implementation timeline, migration schedule, operational disruption window, and opportunity-cost estimate.",
+            "Missing existing identity-management, access-control, audit, and enforcement infrastructure that would condition implementation effort.",
+            "Missing vendor, product, product-version, contract, and licensing cost information, which the scenario explicitly does not assume.",
+            "Missing US-jurisdiction-specific regulatory cost or procurement-constraint evidence relevant to financial feasibility."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "Under the financial/adoption lens, the supplied action-specific decision-evidence records show that ACCESS CONTROL adoption can involve organizational implementation, governance, assessment, testing, and ongoing access-management obligations. These grounded burden indicators make a purely positive financial feasibility judgment unsupported. At the same time, the records also place access control within standard NIST/CSF structures and define adequate security in terms that include cost-effective controls, which provides a conditional planning frame but no measured cost, ROI, TCO, staffing, or timing outcome. The frozen CIS IG2 US context profile supplies an enterprise resource context but not exact budget, staffing count, procurement ceiling, implementation timeline, or opportunity-cost data. Therefore, the financial/adoption feasibility direction is indeterminate rather than materially supported or challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF_C1",
+              "evidence_ids": [
+                "E_24_7001313C0950C22F",
+                "E_24_C6DD39371794D388",
+                "E_24_C7F5278DFA868A84"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST CSF 2.0 records provide institutional alignment for access control by placing identity management, authentication, and access control under PROTECT and defining PR.AA outcomes for limiting access to authorized users, services, and hardware and for managing identities, credentials, authentication, and identity assertions.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C2",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43",
+                "E_25_8F4D567857A97316"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 record provides an institutional control structure for access control, listing an Access Control family and stating that controls are selected and implemented by organizations to satisfy system requirements, with derived requirements or instantiated control parameters when necessary.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C3",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev. 5 incident-handling record connects access-control-related mechanisms, including access control lists and firewall filter rules, to dynamic reconfiguration and incident response for incident classes that include targeted malicious attacks, supporting operational integration of the action within institutional incident governance.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4",
+                "E_25_799E13A9B6313B43",
+                "E_26_6DFFABBF70120E2E"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, and the supplied NIST records describe access control as an established control family with assessment-relevant policies, audit records, and accountability/traceability objects, so the action can be institutionally accommodated by that profile.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C5",
+              "evidence_ids": [
+                "E_26_6DFFABBF70120E2E",
+                "E_26_7511053718EC6304",
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A records indicate that access-control-related and accountability/traceability controls require examination, interview, and testing of policies, audit records, configuration settings, and responsible personnel, creating governance and assessment effort as an institutional implementation condition.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4",
+                "E_25_799E13A9B6313B43",
+                "E_26_6DFFABBF70120E2E"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS IG2 reference profile states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure; combined with the supplied NIST requirements for organizational control specification and assessment, institutional adoption of access control in the frozen scenario is conditional on having or obtaining those capabilities.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Institutional adoption requires the organization to define access-control requirements, policies, audit/accountability objects, and assessment methods for the selected controls.",
+            "If the selected access-control safeguards require enterprise-grade technology or specialized expertise, those capabilities must be available or obtained before deployment-specific institutional feasibility can be considered supported.",
+            "Regulatory, data-governance, and cross-border feasibility remains conditional on supplied evidence identifying the applicable obligations and constraints for the frozen US scenario."
+          ],
+          "constraints": [
+            "Access-control implementation must be specified through organizational control selection, derived requirements, and instantiated control parameters [E_25_799E13A9B6313B43].",
+            "Governance and assessment may require access-control policy, least-privilege procedures, audit records, auditable events, configuration settings, security plan, and responsible personnel [E_26_6DFFABBF70120E2E, E_26_7511053718EC6304].",
+            "The frozen CIS IG2 profile is multi-department, may process sensitive information, may face regulatory burdens, and some safeguards depend on enterprise-grade technology and specialized expertise [CTX_CIS_IG2_9F94838146D9C3A4]."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959",
+          "evidence_gaps": [
+            "No supplied evidence_id establishes US regulatory applicability, mandatory legal compliance obligations, data-sovereignty requirements, or cross-border operating constraints for access control in US__CIS_IG2.",
+            "No supplied evidence_id quantifies exact budget, staffing, procurement, implementation-burden magnitude, or exact control effectiveness for access control in this scenario.",
+            "The supplied EU NIS2 record is outside the frozen US jurisdiction and is not used to infer US regulatory applicability [E_31_96F42990F3AEAC86]."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied NIST CSF 2.0 and NIST SP 800-53 records provide institutional alignment for access control as a recognized control category, PROTECT outcome, control family, and incident-response integration point. However, the same NIST records and the frozen CIS IG2 profile introduce governance, specification, assessment, and capability conditions, and no supplied evidence_id establishes US regulatory applicability, data-sovereignty requirements, or cross-border operating constraints for the frozen US__CIS_IG2 scenario. Therefore, institutional/regional feasibility is mixed and indeterminate rather than affirmatively supported or materially challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TECH_FEAS_1",
+              "evidence_ids": [
+                "E_25_799E13A9B6313B43"
+              ],
+              "scope": "GENERAL",
+              "statement": "Access control is a defined control family, and controls can include administrative, technical, and physical aspects; implementation may require organization-defined derived requirements or instantiated control parameter values.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_2",
+              "evidence_ids": [
+                "E_25_8F4D567857A97316"
+              ],
+              "scope": "GENERAL",
+              "statement": "Access control is defined as the process of granting or denying specific requests for obtaining and using information and related information processing services, and for entering specific physical facilities.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_3",
+              "evidence_ids": [
+                "E_24_C6DD39371794D388",
+                "E_24_7001313C0950C22F"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST CSF 2.0 treats identity management, authentication, and access control as PROTECT outcomes and defines subcategories for managing identities and credentials, binding identities to credentials, authenticating users/services/hardware, and protecting, conveying, and verifying identity assertions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_4",
+              "evidence_ids": [
+                "E_24_C7F5278DFA868A84",
+                "E_24_7001313C0950C22F"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CSF 2.0 Core organizes identity management, authentication, and access control within a broader framework that also includes Identify, Detect, Respond, and Recover categories, supporting integration with operational risk-management processes.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_5",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "Dynamic reconfiguration for incident response can include changes to access control lists, router rules, intrusion detection or prevention system parameters, and firewall filter rules, with related controls AC-2, AC-4, and CM-2.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_6",
+              "evidence_ids": [
+                "E_26_6DFFABBF70120E2E",
+                "E_26_7511053718EC6304"
+              ],
+              "scope": "GENERAL",
+              "statement": "Assessment procedures for access-control-related safeguards include examining access control policy, least privilege procedures, identification and authentication policy, audit records, configuration settings, and interviewing or testing organizational personnel and processes.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TECH_FEAS_7",
+              "evidence_ids": [
+                "E_12_F6120325C44B5EA9"
+              ],
+              "scope": "GENERAL",
+              "statement": "A cited mitigation record describes Active Directory configuration measures for access control, including domain accounts, interactive logon restrictions, RDP restrictions, dedicated administrative accounts, authentication silos, and tools such as GPMC, PowerShell, and AD Administrative Center.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TECH_FEAS_8",
+              "evidence_ids": [
+                "E_25_8F4D567857A97316",
+                "E_03_F0CD4F1DE74CC7AD"
+              ],
+              "scope": "GENERAL",
+              "statement": "The targeted-attack context includes adversaries establishing footholds in IT infrastructure and opportunistic compromise being leveraged into targeted attack activity, while the access-control control family addresses granting or denying access to information, services, and physical facilities.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TECH_FEAS_9",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference enterprise profile is a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure; IG2 safeguards address increased operational complexity, and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TECH_FEAS_10",
+              "evidence_ids": [
+                "E_33_F4FC25CE90264812"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication trend for access-control-related security publications reports annual publication counts and slope, but it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TECH_FEAS_11",
+              "evidence_ids": [
+                "E_10_5C0B9AC35F2420B3",
+                "E_10_CEB460BC4092B2D3",
+                "E_10_B4F773BEC65685CC"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA advisories describe product-specific access-control vulnerabilities or improper access-control handling, including potential attacker access to sensitive information, but they are product-specific advisory context rather than deployment-wide feasibility evidence.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific technical feasibility can be concluded only if the target infrastructure inventory confirms which systems, identity platforms, applications, network devices, and authorization boundaries are in scope.",
+            "If Active Directory or group-policy-based access-control measures are selected, the environment must support AD/group-policy administration, account configuration, logon restrictions, RDP restrictions, dedicated administrative accounts, and authentication silos.",
+            "If dynamic access-control reconfiguration is used for incident response, organization-defined system components, reconfiguration types, and time frames must be specified.",
+            "If IG2 safeguards are selected, the organization must have or acquire the enterprise-grade technology and specialized expertise needed to install and configure those safeguards.",
+            "Operation and assessment require maintained access-control policy, least privilege procedures, identification and authentication procedures, audit records, configuration settings, and mechanisms for testing or monitoring control operation."
+          ],
+          "constraints": [
+            "The action is a generic ACCESS CONTROL PMT, so technical feasibility is established at the level of a control family and standard implementation constructs rather than a specific frozen product or configuration.",
+            "Implementation may require organization-defined derived requirements, instantiated control parameter values, and integration into system development and operations processes.",
+            "The CIS IG2 reference profile indicates multi-department operational complexity and possible dependence on enterprise-grade technology and specialized expertise for some safeguards.",
+            "Operational burden is not quantified in the supplied records; assessment artifacts, policies, audit records, configuration settings, and personnel roles are required to judge operability.",
+            "Publication activity is not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "Product-specific CISA advisories do not establish enterprise-wide technical feasibility, compatibility, or effectiveness."
+          ],
+          "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__babbdd0efab55959",
+          "evidence_gaps": [
+            "Missing specific identity and account infrastructure: directory or Active Directory presence, identity stores, authentication services, service accounts, privilege management, and account lifecycle tooling.",
+            "Missing current authorization boundaries for applications, services, data stores, networks, and physical facilities.",
+            "Missing network and platform integration details: firewall/IDS/IPS parameters, router rules, access control lists, dynamic reconfiguration capabilities, and configuration-management support.",
+            "Missing existing access-control policies, least privilege procedures, identification and authentication procedures, audit records, and configuration documentation.",
+            "Missing operational workflow detail for incident-response reconfiguration time frames, account provisioning/deprovisioning, and privileged access enforcement.",
+            "Missing presence or absence of OT/ICS, physical access control mechanisms, and supply-chain authorization boundaries that may require separate access-control decisions.",
+            "Missing evidence quantifying required enterprise-grade technology, specialized expertise, operational burden, scalability, maintainability, or implementation timeline for the specific deployment.",
+            "Missing 2025-2027 deployment, adoption, or operational-effectiveness evidence for the selected access-control implementation."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "ACCESS CONTROL is supported as generally technically feasible in the supplied evidence. Stage-4 decision evidence shows that access control is a standardized control family with administrative, technical, and physical aspects; it appears in NIST CSF 2.0 PROTECT outcomes; it can be integrated with incident-response dynamic reconfiguration such as access control lists; and it has assessable implementation artifacts such as policies, audit records, configuration settings, and personnel procedures. This supports general implementability, integrability, and operability within the 2025-2027 horizon at the level of general technical feasibility. Deployment-specific feasibility is indeterminate because the frozen action does not specify concrete identity platforms, directory or authentication infrastructure, application authorization boundaries, network devices, service-account practices, or operational workflows. The CIS IG2 reference profile adds a multi-department enterprise context and notes that some IG2 safeguards may depend on enterprise-grade technology and specialized expertise, but it does not quantify implementation burden. Publication-trend evidence is explicitly limited to publication activity and cannot establish deployment maturity or operational effectiveness. No supplied record presents a technical blocker to general feasibility; the limitation is missing deployment-specific infrastructure and implementation detail.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "0ae0aea86252b4f721ffe7bba69fe1bdba3576e3e2898bd40ba7cdd0ab800742",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "7ed19b86b2a47cddb36397255dc8efc9def00cbbda92119f2565ba05db34b3b4",
+    "institutional_regional_system_prompt_sha256": "507f8c8fff4d1f1e678788b34a10957110def2935a28c7e32dfe54f320d996d7",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "3ef0b7afd1704ead4ce23534b68baebc268e870b2a4dfdb1e05ec02cea7c9680"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v2",
+  "semantic_validation_version": "stage4-semantic-validation-v2",
+  "stage3_context_artifact_sha256": "56954c847f3a68ef77ed0488a1ebd61572eeecaa9f4dad47704f949d865d9261",
+  "stage3_context_input_fingerprint": "809e3f3c2fdd27619f1c4afee79316196c621a1d89122c4b8002081271e0b8f8",
+  "stage3_context_output_sha256": "0d7db35965e4b4a370c8bc5c257a7dabb715fba06ce329962c94ea224aaad901",
+  "stage4_output_sha256": "323131aac3028bdd4d78d701d52f80080040f819ed8adf14ec13da4a0a90cfab"
+}

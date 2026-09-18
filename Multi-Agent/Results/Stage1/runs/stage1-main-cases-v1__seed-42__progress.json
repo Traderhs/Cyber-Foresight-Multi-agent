@@ -1,0 +1,219 @@
+{
+  "analysis_cutoff_date": "2024-12-31",
+  "case_set_version": "stage1-main-cases-v1",
+  "cases": {
+    "main__brute_force__ids_ips": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__brute_force__ids_ips\\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T14:39:57.393908+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 940.201,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 5,
+      "input_fingerprint": "ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "exploitation_signal"
+      ],
+      "pmt": "IDS/IPS",
+      "regime": "moderate_gap_steep_slope",
+      "retrieved_evidence_count": 13,
+      "selection_class": "regime_representative",
+      "source_family_count": 4,
+      "started_at": "2026-09-13T14:24:17.193029+00:00",
+      "status": "complete",
+      "threat": "Brute Force Attack"
+    },
+    "main__ddos__nlp_llm": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__ddos__nlp_llm\\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T13:41:15.516940+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "exploitation_signal",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 647.31,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 1,
+      "input_fingerprint": "8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "threat_capability_or_mechanism"
+      ],
+      "pmt": "NLP/LLM",
+      "regime": null,
+      "retrieved_evidence_count": 7,
+      "selection_class": "predeclared_anchor",
+      "source_family_count": 3,
+      "started_at": "2026-09-13T13:30:28.207099+00:00",
+      "status": "complete",
+      "threat": "DDoS"
+    },
+    "main__insider_threat__cryptography": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__insider_threat__cryptography\\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T14:24:17.191206+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 805.996,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 4,
+      "input_fingerprint": "9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "exploitation_signal"
+      ],
+      "pmt": "CRYPTOGRAPHY",
+      "regime": "large_gap_moderate_slope",
+      "retrieved_evidence_count": 12,
+      "selection_class": "regime_representative",
+      "source_family_count": 4,
+      "started_at": "2026-09-13T14:10:51.195598+00:00",
+      "status": "complete",
+      "threat": "Insider Threat"
+    },
+    "main__malware__anomaly_detection": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__malware__anomaly_detection\\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T13:58:41.736293+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "exploitation_signal",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 1046.218,
+      "evidence_sufficiency": "SUFFICIENT",
+      "final_artifact_reused": false,
+      "index": 2,
+      "input_fingerprint": "6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [],
+      "pmt": "ANOMALY DETECTION",
+      "regime": null,
+      "retrieved_evidence_count": 17,
+      "selection_class": "predeclared_anchor",
+      "source_family_count": 7,
+      "started_at": "2026-09-13T13:41:15.518500+00:00",
+      "status": "complete",
+      "threat": "Malware"
+    },
+    "main__ransomware__cryptography": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__ransomware__cryptography\\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T14:10:51.193172+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "exploitation_signal",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 729.454,
+      "evidence_sufficiency": "SUFFICIENT",
+      "final_artifact_reused": false,
+      "index": 3,
+      "input_fingerprint": "af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [],
+      "pmt": "CRYPTOGRAPHY",
+      "regime": "large_gap_steep_slope",
+      "retrieved_evidence_count": 16,
+      "selection_class": "regime_representative",
+      "source_family_count": 7,
+      "started_at": "2026-09-13T13:58:41.738994+00:00",
+      "status": "complete",
+      "threat": "Ransomware"
+    },
+    "main__session_hijacking__https": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__session_hijacking__https\\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T15:04:01.742437+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 759.678,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 7,
+      "input_fingerprint": "51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "exploitation_signal"
+      ],
+      "pmt": "HTTPS",
+      "regime": "small_gap_low_or_negative_slope",
+      "retrieved_evidence_count": 17,
+      "selection_class": "regime_representative",
+      "source_family_count": 6,
+      "started_at": "2026-09-13T14:51:22.064846+00:00",
+      "status": "complete",
+      "threat": "Session Hijacking"
+    },
+    "main__targeted_attack__access_control": {
+      "artifact_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage1\\artifacts\\main__targeted_attack__access_control\\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3.json",
+      "attack_checkpoint_reused": false,
+      "completed_at": "2026-09-13T14:51:22.062508+00:00",
+      "covered_evidence_slots": [
+        "observed_threat_reality",
+        "threat_capability_or_mechanism",
+        "mitigation_relation_or_control",
+        "mitigation_implementation",
+        "technical_literature"
+      ],
+      "defense_checkpoint_reused": false,
+      "elapsed_seconds": 684.667,
+      "evidence_sufficiency": "PARTIAL",
+      "final_artifact_reused": false,
+      "index": 6,
+      "input_fingerprint": "b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3",
+      "last_action": "generated_or_resumed_and_frozen",
+      "missing_evidence_slots": [
+        "exploitation_signal"
+      ],
+      "pmt": "ACCESS CONTROL",
+      "regime": "moderate_gap_low_slope",
+      "retrieved_evidence_count": 18,
+      "selection_class": "regime_representative",
+      "source_family_count": 8,
+      "started_at": "2026-09-13T14:39:57.396022+00:00",
+      "status": "complete",
+      "threat": "Targeted Attack"
+    }
+  },
+  "evaluation_mode": "ex_ante_replay",
+  "last_updated_at": "2026-09-13T15:04:01.742446+00:00",
+  "resume_contract": "Exact final artifacts are reused first. If a final artifact is absent, exact-fingerprint per-critic checkpoints are reused independently. Progress metadata never authorizes fallback.",
+  "seed": 42,
+  "snapshot_id": "stage0-2026-09-13-v4"
+}

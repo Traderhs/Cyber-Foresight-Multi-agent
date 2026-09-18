@@ -1,0 +1,111 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\logs\stage1-main-cases-v1__2026-09-14_01-49-42.log
+--- Stage 0 -> Stage 1 -> Stage 2 Main Case Set: batch execution ---
+Stage 1/2 shared runtime profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\runs\stage1-main-cases-v1__seed-42__progress.json
+Resume is automatic: exact Stage 1/2 artifacts are reused; interrupted Stage 1 critics and Stage 2 debate steps resume only from exact-fingerprint checkpoints.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 artifact not found for fingerprint f6895d4aed0c040921ce8190d1e2ede959bcbc8e9deb4949da40dddd5b1a0fde; structured debate will run/resume from exact step checkpoints.
+
+--- Stage 2: Evidence-grounded Structured Debate ---
+
+[QWEN][Stage2-R1-AttackResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-AttackResponse][+10s] state=True input_tokens=11035 generated_tokens=139 context_tokens=11178 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+20s] state=True input_tokens=11035 generated_tokens=534 context_tokens=11573 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+30s] state=True input_tokens=11035 generated_tokens=971 context_tokens=12010 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+40s] state=True input_tokens=11035 generated_tokens=1416 context_tokens=12455 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+50s] state=True input_tokens=11035 generated_tokens=1827 context_tokens=12866 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+60s] state=True input_tokens=11035 generated_tokens=2213 context_tokens=13252 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+70s] state=True input_tokens=11035 generated_tokens=2574 context_tokens=13608 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+80s] state=True input_tokens=11035 generated_tokens=2917 context_tokens=13956 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+90s] state=True input_tokens=11035 generated_tokens=3353 context_tokens=14387 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+100s] state=True input_tokens=11035 generated_tokens=3737 context_tokens=14776 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+110s] state=True input_tokens=11035 generated_tokens=4128 context_tokens=15167 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+120s] state=True input_tokens=11035 generated_tokens=4445 context_tokens=15484 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+130s] state=True input_tokens=11035 generated_tokens=4863 context_tokens=15897 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+140s] state=True input_tokens=11035 generated_tokens=5298 context_tokens=16332 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+150s] state=True input_tokens=11035 generated_tokens=5686 context_tokens=16725 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+160s] state=True input_tokens=11035 generated_tokens=6132 context_tokens=17171 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse][+170s] state=True input_tokens=11035 generated_tokens=6720 context_tokens=17759 remaining=-1 task=1
+[QWEN][Stage2-R1-AttackResponse] completed elapsed=170.8s prompt_tokens=11035 completion_tokens=6754 total_tokens=17789 reasoning_chars=25274
+[QWEN][Stage2-R1-DefenseResponse] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-DefenseResponse][+10s] state=True input_tokens=11095 generated_tokens=145 context_tokens=11239 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+20s] state=True input_tokens=11095 generated_tokens=629 context_tokens=11728 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+30s] state=True input_tokens=11095 generated_tokens=1057 context_tokens=12156 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+40s] state=True input_tokens=11095 generated_tokens=1423 context_tokens=12517 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+50s] state=True input_tokens=11095 generated_tokens=1846 context_tokens=12945 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+60s] state=True input_tokens=11095 generated_tokens=2338 context_tokens=13432 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+70s] state=True input_tokens=11095 generated_tokens=2773 context_tokens=13872 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+80s] state=True input_tokens=11095 generated_tokens=3146 context_tokens=14245 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+90s] state=True input_tokens=11095 generated_tokens=3587 context_tokens=14686 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+100s] state=True input_tokens=11095 generated_tokens=4004 context_tokens=15103 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+110s] state=True input_tokens=11095 generated_tokens=4424 context_tokens=15523 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+120s] state=True input_tokens=11095 generated_tokens=4865 context_tokens=15959 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse][+130s] state=True input_tokens=11095 generated_tokens=5424 context_tokens=16518 remaining=-1 task=2338
+[QWEN][Stage2-R1-DefenseResponse] completed elapsed=138.3s prompt_tokens=11095 completion_tokens=5873 total_tokens=16968 reasoning_chars=19012
+[QWEN][Stage2-R1-Mediator] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator][+10s] state=True input_tokens=13620 generated_tokens=41 context_tokens=13665 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+20s] state=True input_tokens=13620 generated_tokens=444 context_tokens=14068 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+30s] state=True input_tokens=13620 generated_tokens=789 context_tokens=14413 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+40s] state=True input_tokens=13620 generated_tokens=1118 context_tokens=14742 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+50s] state=True input_tokens=13620 generated_tokens=1562 context_tokens=15186 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+60s] state=True input_tokens=13620 generated_tokens=1966 context_tokens=15590 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+70s] state=True input_tokens=13620 generated_tokens=2299 context_tokens=15918 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+80s] state=True input_tokens=13620 generated_tokens=2622 context_tokens=16246 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+90s] state=True input_tokens=13620 generated_tokens=2962 context_tokens=16586 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+100s] state=True input_tokens=13620 generated_tokens=3314 context_tokens=16938 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+110s] state=True input_tokens=13620 generated_tokens=3724 context_tokens=17348 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+120s] state=True input_tokens=13620 generated_tokens=4082 context_tokens=17706 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+130s] state=True input_tokens=13620 generated_tokens=4576 context_tokens=18200 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+140s] state=True input_tokens=13620 generated_tokens=4901 context_tokens=18525 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+150s] state=True input_tokens=13620 generated_tokens=5324 context_tokens=18948 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+160s] state=True input_tokens=13620 generated_tokens=5682 context_tokens=19306 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+170s] state=True input_tokens=13620 generated_tokens=6081 context_tokens=19705 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+180s] state=True input_tokens=13620 generated_tokens=6523 context_tokens=20147 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+190s] state=True input_tokens=13620 generated_tokens=7082 context_tokens=20706 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+200s] state=True input_tokens=13620 generated_tokens=7613 context_tokens=21232 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+210s] state=True input_tokens=13620 generated_tokens=8131 context_tokens=21755 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+220s] state=True input_tokens=13620 generated_tokens=8720 context_tokens=22344 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+230s] state=True input_tokens=13620 generated_tokens=9305 context_tokens=22929 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+240s] state=True input_tokens=13620 generated_tokens=9699 context_tokens=23323 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+250s] state=True input_tokens=13620 generated_tokens=10057 context_tokens=23681 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+260s] state=True input_tokens=13620 generated_tokens=10428 context_tokens=24052 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+270s] state=True input_tokens=13620 generated_tokens=10849 context_tokens=24473 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+281s] state=True input_tokens=13620 generated_tokens=11208 context_tokens=24832 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+291s] state=True input_tokens=13620 generated_tokens=11585 context_tokens=25209 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+301s] state=True input_tokens=13620 generated_tokens=11920 context_tokens=25539 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+311s] state=True input_tokens=13620 generated_tokens=12276 context_tokens=25900 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+321s] state=True input_tokens=13620 generated_tokens=12648 context_tokens=26272 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+331s] state=True input_tokens=13620 generated_tokens=13017 context_tokens=26641 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+341s] state=True input_tokens=13620 generated_tokens=13393 context_tokens=27017 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+351s] state=True input_tokens=13620 generated_tokens=13774 context_tokens=27398 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+361s] state=True input_tokens=13620 generated_tokens=14119 context_tokens=27743 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+371s] state=True input_tokens=13620 generated_tokens=14614 context_tokens=28238 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+381s] state=True input_tokens=13620 generated_tokens=15070 context_tokens=28689 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+391s] state=True input_tokens=13620 generated_tokens=15467 context_tokens=29086 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+401s] state=True input_tokens=13620 generated_tokens=15984 context_tokens=29608 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+411s] state=True input_tokens=13620 generated_tokens=16555 context_tokens=30174 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator][+421s] state=True input_tokens=13620 generated_tokens=17115 context_tokens=30739 remaining=-1 task=4211
+[QWEN][Stage2-R1-Mediator] completed elapsed=429.0s prompt_tokens=13620 completion_tokens=17526 total_tokens=31146 reasoning_chars=62205
+[QWEN][Stage2-R1-Mediator:repair-1] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage2-R1-Mediator:repair-1][+10s] state=True input_tokens=16392 generated_tokens=260 context_tokens=16656 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+20s] state=True input_tokens=16392 generated_tokens=690 context_tokens=17086 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+30s] state=True input_tokens=16392 generated_tokens=1062 context_tokens=17453 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+40s] state=True input_tokens=16392 generated_tokens=1471 context_tokens=17867 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+50s] state=True input_tokens=16392 generated_tokens=1882 context_tokens=18278 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+60s] state=True input_tokens=16392 generated_tokens=2278 context_tokens=18674 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+70s] state=True input_tokens=16392 generated_tokens=2944 context_tokens=19340 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1][+80s] state=True input_tokens=16392 generated_tokens=3624 context_tokens=20020 remaining=-1 task=9950
+[QWEN][Stage2-R1-Mediator:repair-1] completed elapsed=89.8s prompt_tokens=16392 completion_tokens=4263 total_tokens=20655 reasoning_chars=8338
+[MAIN SET][1/7] FAILED: llama.cpp returned content that does not match MediatorSummary after 1 semantic repair attempt(s): '{\n  "case_id": "main__ddos__nlp_llm",\n  "round_index": 1,\n  "adjudications": [\n    {\n      "adjudication_id": "ADJ_R1_A1_D3",\n      "outcome": "REVISE_ATTACK",\n      "rationale": "The surfaced DBIR evidence supports growth in DDoS attack size, specifically median bits per second rising from 1.4 Gbps to 2.2 Gbps and the 97.5th percentile rising from 99 Gbps to 124 Gbps. It does not report a temporal increase or decrease in DDoS incident count or frequency, which is the frozen threat-state modality NoI. The defense framing is therefore better grounded: the claim should be limited to operational magnitude/context rather than direct support for the forecasted increasing NoI threat state.",\n      "evidence_ids": [\n        "E_02_066AFE8300EDCEBB"\n      ],\n      "required_revision": "Narrow AF_C1 from SUPPORTS_FORECAST for the THREAT_DDOS NoI state to NEUTRAL_CONTEXT or operational-magnitude context, and explicitly state that DBIR bandwidth/percentile growth is not direct evidence of an increasing DDoS incident-count/frequency state."\n    },\n    {\n      "adjudication_id": "ADJ_R1_A2",\n      "outcome": "REVISE_ATTACK",\n      "rationale": "The surfaced DBIR evidence supports observed growth in distributed DNS Water Torture attacks against shared DNS infrastructure. That is an observed attack-vector or operational-interpretation signal, not a direct measurement of DDoS incident count or frequency. The defense revision is grounded in the surfaced evidence because the record does not establish the frozen NoI direction.",\n      "evidence_ids": [\n        "E_02_066AFE8300EDCEBB"\n      ],\n      "required_revision": "Narrow AF_C2 from SUPPORTS_FORECAST for the THREAT_DDOS NoI state to NEUTRAL_CONTEXT or observed_attack_vector context, and explicitly state that DNS Water Torture growth is an attack-vector observation, not direct evidence of an increasing DDoS incident-count/frequency state."\n    },\n    {\n      "adjudication_id": "ADJ_R1_A3_D4",\n      "outcome": "REVISE_ATTACK",\n      "rationale": "The surfaced CISA KEV evidence supports a confirmed-exploitation record for CVE-2023-44487, an HTTP/2 Rapid Reset vulnerability that allows a distributed denial-of-service attack, together with mitigation guidance. The source contract permits confirmed-exploitation signaling but prohibits prevalence magnitude and does not establish a temporal change in DDoS incident count or frequency. The defense framing is therefore better grounded: this is exploitation-signal/mechanism context, not direct support for the forecasted increasing NoI threat state.",\n      "evidence_ids": [\n        "E_08_3453329306E149CB"\n      ],\n      "required_revision": "Narrow AF_C3 from SUPPORTS_FORECAST for the THREAT_DDOS NoI state to NEUTRAL_CONTEXT or confirmed-exploitation/mechanism context, and explicitly state that the KEV record establishes exploitation signal and mitigation guidance, not NoI incident-count/frequency direction or prevalence magnitude."\n    },\n    {\n      "adjudication_id": "ADJ_R1_A4_D6",\n      "outcome": "ACCEPT_BOTH",\n      "rationale": "The surfaced Mandiant M-Trends evidence supports DDoS as an example of destructive operations and reports hacktivist claims of traditional DDoS activity, website defacements, and hack-and-leak operations. Both critics correctly treat this as observed threat context rather than direct evidence of a NoI incident-count/frequency direction.",\n      "evidence_ids": [\n        "E_03_06E6ABC42DA3AC77",\n        "E_03_F13F996D181217BA"\n      ],\n      "required_revision": ""\n    },\n    {\n      "adjudication_id": "ADJ_R1_A5_D5",\n      "outcome": "ACCEPT_BOTH",\n      "rationale": "The surfaced IBM X-Force evidence supports observed hacktivism operations related to the Israel-Hamas conflict and DDoS mitigation-readiness recommendations, including contacting a DDoS mitigation provider, having and practicing a DDoS incident response plan, and maintaining current provider contact information. Both critics correctly treat this as neutral defense-readiness context rather than direct evidence of NoP deployment effectiveness or NoI direction.",\n      "evidence_ids": [\n        "E_04_892BBCAA3CE5CC92"\n      ],\n      "required_revision": ""\n    },\n    {\n      "adjudication_id": "ADJ_R1_A6_D1_D2",\n      "outcome": "ACCEPT_BOTH",\n      "rationale": "The surfaced Crossref cutoff-constrained evidence supports NLP/LLM security publication counts of 14 in 2021, 18 in 2022, 33 in 2023, and 87 in 2024, with an OLS slope of 23.4 works/year and a first-to-last delta of 73. Because the frozen PMT state modality is NoP publication activity, this increasing 2021-2024 publication trend is a legitimate directional challenge to the forecasted decreasing PMT NoP trajectory. The same evidence explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, which both critics correctly acknowledge.",\n      "evidence_ids": [\n        "E_33_ADC8BC66D812799F"\n      ],\n      "required_revision": ""\n    },\n    {\n      "adjudication_id": "ADJ_R1_A7",\n      "outcome": "ACCEPT_ATTACK",\n      "rationale": "The surfaced Crossref metadata record verifies the existence of the cited publication title and DOI. It does not establish deployment maturity, operational effectiveness, or a directional publication trend. The attack claim’s limitation is therefore well grounded within the surfaced evidence boundary.",\n      "evidence_ids": [\n        "E_29_CD092D34A1331D02"\n      ],\n      "required_revision": ""\n    }\n  ],\n  "round_action": "CONTINUE",\n  "overall_rationale": "The decisive unresolved issue is whether the attack-side DDoS evidence should be framed as direct support for the forecasted increasing THREAT_DDOS NoI state. The surfaced evidence supports DDoS attack-size growth, vector growth, and confirmed exploitation, but it does not report a temporal change in DDoS incident count or frequency. The defense revisions to AF_C1, AF_C2, and AF_C3 are therefore better grounded and require a focused attack-side reconsideration in Round 2. The PMT publication-trend issue is already well grounded as a challenge to the forecasted decreasing PMT NoP trajectory, while remaining limited to publication activity rather than deployment or operational effectiveness.",\n  "next_round_focus": [\n    {\n      "focus_id": "FOC_R1_AF_C1",\n      "instruction": "Re-examine AF_C1 and determine whether E_02_066AFE8300EDCEBB can be presented as SUPPORTS_FORECAST for the THREAT_DDOS NoI state, given that the evidence reports DDoS bandwidth/percentile growth rather than incident-count/frequency change. If not, reclassify AF_C1 as NEUTRAL_CONTEXT or operational-magnitude context.",\n      "attack_claim_ids": [\n        "AF_C1"\n      ],\n      "defense_claim_ids": [\n        "D3"\n      ]\n    },\n    {\n      "focus_id": "FOC_R1_AF_C2",\n      "instruction": "Re-examine AF_C2 and determine whether E_02_066AFE8300EDCEBB should be treated as observed_attack_vector context for distributed DNS Water Torture rather than direct support for the forecasted increasing THREAT_DDOS NoI state.",\n      "attack_claim_ids": [\n        "AF_C2"\n      ],\n      "defense_claim_ids": []\n    },\n    {\n      "focus_id": "FOC_R1_AF_C3",\n      "instruction": "Re-examine AF_C3 and determine whether E_08_3453329306E149CB should be limited to confirmed-exploitation/mechanism context, without implying NoI incident-count/frequency direction or prevalence magnitude.",\n      "attack_claim_ids": [\n        "AF_C3"\n      ],\n      "defense_claim_ids": [\n        "D4"\n      ]\n    }\n  ]\n}'
+Run interrupted/failed. Re-run the same command after fixing the cause; exact Stage 1/2 artifacts and exact step checkpoints resume without fallback or overwrite.

@@ -1,0 +1,951 @@
+{
+  "artifact_sha256": "548c829b4949a737a050af5a10962a365dcbfa6c523735e9e16ffff8b4f10c39",
+  "case_id": "main__ransomware__cryptography",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4": {
+      "financial_adoption": "8f72c7f22beebdce5df7b158a7dec23dbbd8b59327aa35d8067b49ce461a837c",
+      "institutional_regional": "7a1b8d59d3e3da46e757e96fc42e8e759d4fa5cf94ba4bbc736dbd1d9b3bd3d5",
+      "technical_feasibility": "2a9b0d91bbf48430aa91a80f7c95faeba1aaf2db017873754ab329d0292b27fc"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b": {
+      "financial_adoption": "87b575c532a9ad58bb11033b6bfed697b9169720a9346f6efaa84eb130ac44d8",
+      "institutional_regional": "d1dc9227c52357f98944a83f46654caf414154ece31c895c50c768cde6f620ae",
+      "technical_feasibility": "05f70b210d463e12242ca27f7c78705820f5e6d6825032e58b5393fd5be047c9"
+    },
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980": {
+      "financial_adoption": "f115d381e07271cfa0a77b944841dad26a289c70fefba81e10a6b72366f123f1",
+      "institutional_regional": "4a3779246fec39ea0c74b6baf489afff5e1c56a8e89d4b438aa75285b8e96428",
+      "technical_feasibility": "a0c55100593e1a0d483d67eb68a9e71b21edb7df76724a1161e8ed6002ad263e"
+    }
+  },
+  "created_at": "2026-09-14T11:50:09.791289+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4": "7631ba306cb93372feef4302b46aa0e3ab98bdd18337adffee0f21fe79c0910f",
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b": "267ad8d05bf86065e58d926ee3097259e0ab9032aa347351bcef66ee250d1308",
+    "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980": "f4b8df8cf44abbf2ed265e0047a806c655a6570228d2dfb7188eb36d80fab4dd"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ransomware__cryptography",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG identifies Strong and Agile Encryption as a recommended action for maintaining confidentiality of sensitive data and integrity of IT and OT traffic, including properly configured and up-to-date SSL/TLS for data in transit when technically feasible.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action requires organizations to plan to identify outdated or weak encryption and update it to sufficiently strong algorithms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "For OT, the CPG action uses encryption when feasible to minimize impact to latency and availability, usually for OT communications connecting with remote or external assets.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 states that organizations that employ cryptographic mechanisms also consider cryptographic key management solutions.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action is scoped to all IT traffic and remote OT assets that communicate with external entities, which increases the implementation surface for adoption.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C6",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action requires properly configured and up-to-date SSL/TLS for data in transit when technically feasible, adding configuration and maintenance effort.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C7",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action includes a recommendation for organizations to consider managing implications of post-quantum cryptography, adding forward-looking planning burden.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C8",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and notes that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial conclusion requires organization-specific budget, staffing/skills, vendor or product, architecture, contract, and timeline information.",
+            "If external service providers encrypt stored information, physical control of cryptographic keys and provider-related key-management requirements must be evaluated.",
+            "If OT assets are in scope, encryption must be evaluated against latency and availability constraints before deployment.",
+            "If NIST-style assessment is used, documentation and assessment of cryptographic uses, key management, and audit-information protection must be resourced.",
+            "If the CIS IG2 profile's enterprise-grade technology and specialized-expertise dependency applies to the selected cryptography deployment, the organization must confirm internal skills or an externally supported path."
+          ],
+          "constraints": [
+            "No supplied evidence provides exact budget, price, ROI, TCO, staffing count, procurement ceiling, payback period, vendor, product version, or implementation timeline for this frozen scenario.",
+            "The CIS IG2 context record may describe reference-enterprise profile facts but cannot by itself establish cost, staffing count, product TCO, product ROI, or deployment-specific burden for PMT_CRYPTOGRAPHY.",
+            "Deployment-specific financial feasibility cannot be inferred from general adoption burden claims without organization-specific resource, contract, architecture, and timing data.",
+            "The assessment must not use the EU NIS2 recital as KR-specific regulatory applicability or cost driver because the frozen scenario jurisdiction is KR and no KR-specific regulatory applicability record is supplied."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b",
+          "evidence_gaps": [
+            "Missing exact organization budget, price, TCO, ROI, payback period, and procurement ceiling for cryptography implementation.",
+            "Missing exact staffing count, skill inventory, and availability of specialized cryptography or key-management expertise.",
+            "Missing current cryptographic inventory, TLS/SSL state, weak-crypto exposure, key-management capability, and FIPS or cryptographic-module validation status.",
+            "Missing external-service-provider or contract arrangements that would trigger key-control and provider-visibility considerations.",
+            "Missing implementation lead times, scheduling dependencies, and confirmation that deployment can occur within the frozen 2025-2027 window.",
+            "Missing KR-specific regulatory applicability or cost drivers for cryptography or ransomware-related controls.",
+            "Missing opportunity-cost comparison against alternative ransomware-relevant investments."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence supports a mixed financial/adoption feasibility picture rather than a clearly positive or negative one. CISA CPG presents a recommended encryption action with concrete organizational steps, which supports feasibility in the sense of a recognized adoption path. However, the same CPG action and the NIST record introduce adoption burdens: updating weak encryption, post-quantum planning, technical-feasibility constraints, organization-wide scope, SSL/TLS configuration, and key-management consideration. The CIS IG2 context record only describes the reference-enterprise profile and potential dependence on enterprise-grade technology and specialized expertise; it does not supply budget, staffing counts, price, TCO, ROI, payback, vendor, product, or timeline data. Because the frozen deployment context explicitly leaves exact financial quantities unknown, a deployment-specific cost or payback judgment cannot be made.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "C01",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied CISA CPG record presents strong and agile encryption as a recommended action, with properly configured and up-to-date SSL/TLS used to protect data in transit when technically feasible, planning to identify and update outdated or weak encryption, and considering post-quantum cryptography implications.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C02",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53A record provides control-assessment procedures for cryptographic key establishment and management and cryptographic protection, including assessment of physical control of cryptographic keys when stored information is encrypted by external service providers.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C03",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A cryptographic protection assessment methods include examining system and communications protection policy, procedures addressing cryptographic protection, system design documentation, configuration settings, cryptographic module validation certificates, lists of FIPS-validated cryptographic modules, system audit records, and system security plans.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C04",
+              "evidence_ids": [
+                "E_26_B2995F657787797A"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53A audit-information protection record includes testing cryptographic mechanisms that protect the integrity of audit information and tools.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C05",
+              "evidence_ids": [
+                "E_26_31F09DD7BB81D0F1"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53A audit-information record includes an assessment objective for AU-09(03) cryptographic protection of audit information.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C06",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53 record defines FIPS-validated cryptography as a cryptographic module validated by the Cryptographic Module Validation Program to meet FIPS Publication 140-3 requirements, with algorithm validation by the Cryptographic Algorithm Validation Program as a prerequisite.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C07",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53 record defines external system service and external system service provider contexts, including situations in which the organization has no direct control over implementation of required security and privacy controls or assessment of control effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C08",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied NIST SP 800-53 record states that cryptographic mechanisms used to protect integrity include digital signatures and signed hashes using asymmetric cryptography, protecting the confidentiality of the key used to generate the hash, and using the public key to verify hash information; it also states that organizations employing cryptographic mechanisms consider cryptographic key management solutions.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C09",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, notes that such enterprises may face regulatory burdens, and states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C10",
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "A supplied EU NIS2 primary-law recital discusses Union and Member State policy contexts for ransomware, and its record contract permits EU legal/regulatory claims while prohibiting cross-jurisdiction generalization.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If KR-specific legal or regulatory obligations apply to the frozen scenario enterprise, those obligations must be identified before deployment-specific regulatory feasibility can be judged.",
+            "If external service providers are used to encrypt stored information, key-control arrangements must be documented and assessed against the supplied NIST physical key-control objective.",
+            "If audit-log integrity protection is required, cryptographic mechanisms protecting audit information and tools must be defined, examined, and tested under the supplied NIST audit protection methods.",
+            "If FIPS-validated cryptography is used as an institutional control marker, module validation certificates and related documentation must be available for the supplied NIST assessment methods.",
+            "If the CIS IG2 reference profile's enterprise-grade technology or specialized-expertise assumptions are material to the safeguards, availability of those capabilities must be confirmed without assuming exact staffing or budget values."
+          ],
+          "constraints": [
+            "Supplied records include a recommended encryption practice and NIST assessment procedures for cryptographic key management, cryptographic protection, and audit-information protection.",
+            "Implementation under the supplied NIST assessment guidance requires organization-defined cryptographic uses, types of cryptography, documented procedures, configuration evidence, and testing of cryptographic mechanisms.",
+            "If stored information is encrypted by external service providers, the supplied NIST assessment objective requires determining whether physical control of cryptographic keys is maintained.",
+            "If audit-log integrity protection is in scope, the supplied NIST audit protection guidance requires consideration of cryptographic mechanisms protecting audit information and tools.",
+            "The frozen CIS IG2 reference profile may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards, but it does not supply exact staffing, budget, or resource quantities.",
+            "KR-specific regulatory compatibility, data sovereignty, cross-border data-transfer constraints, and sector-specific institutional obligations are not established by the supplied records."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b",
+          "evidence_gaps": [
+            "No supplied record establishes whether the frozen Republic of Korea scenario enterprise is subject to KR cybersecurity law, sector regulation, public-sector obligations, or critical-infrastructure requirements.",
+            "No supplied record establishes KR-specific data sovereignty, data localization, cross-border data-transfer, or jurisdictional cryptographic algorithm/module obligations.",
+            "No supplied record links the supplied NIST or CISA guidance to legal force, mandatory compliance, or regulatory applicability in the Republic of Korea.",
+            "No supplied record identifies whether the reference enterprise uses external service providers that encrypt stored information, which would trigger the supplied NIST key-control assessment concern.",
+            "No supplied record identifies whether FIPS-validated cryptographic modules or other jurisdiction-specific module-validation evidence is required for the frozen KR scenario.",
+            "The supplied EU NIS2 recital is an EU legal context record and its contract prohibits cross-jurisdiction generalization; it does not fill the KR regulatory gap."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied records include institutional guidance and assessment artifacts for cryptography, including a recommended encryption practice and NIST assessment procedures for cryptographic key management, cryptographic protection, and audit-information protection. However, the supplied records do not establish Republic of Korea-specific regulatory applicability, data sovereignty, cross-border data-transfer constraints, sector-specific obligations, or whether the supplied NIST or CISA guidance has institutional or legal force in the frozen KR scenario. The supplied EU NIS2 recital is not usable to fill that KR gap because its record contract prohibits cross-jurisdiction generalization. Therefore institutional and regional feasibility remains indeterminate.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG provides a recommended action for strong and agile encryption, stating that properly configured and up-to-date SSL/TLS is used to protect data in transit when technically feasible, that organizations should identify outdated or weak encryption and update it to sufficiently strong algorithms, and that they should consider managing implications of post-quantum cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action has an explicit scope covering all IT traffic and remote OT assets that communicate with external entities, and it qualifies OT encryption as used when feasible to minimize impact to latency and availability.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 describes cryptographic mechanisms used to protect integrity, including digital signatures, signed hashes using asymmetric cryptography, confidentiality protection for the key used to generate the hash, and use of a public key to verify hash information; it also states that organizations employing cryptographic mechanisms consider cryptographic key management solutions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C4",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A provides assessment objectives and methods for cryptographic key establishment and management, including physical control of cryptographic keys when stored information is encrypted by external service providers, and for cryptographic protection, including defining cryptographic uses, defining types of cryptography for each use, and examining cryptographic module validation certificates or lists of FIPS-validated cryptographic modules.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C5",
+              "evidence_ids": [
+                "E_26_B2995F657787797A"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A provides an assessment method for cryptographic protection of audit information, including testing cryptographic mechanisms protecting the integrity of audit information and tools.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C6",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 defines FIPS-validated cryptography as a cryptographic module validated by the Cryptographic Module Validation Program to meet requirements specified in FIPS Publication 140-3, with algorithm implementation validation through the Cryptographic Algorithm Validation Program.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C7",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, notes that IG2 safeguards address increased operational complexity, and states that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C8",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record reports increasing annual publication counts for PMT_CRYPTOGRAPHY from 2021 through 2024 but explicitly states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific feasibility would require evidence of current IT/remote-OT architecture, protocol support for TLS/encryption, latency and availability requirements, and existing cryptographic or key-management capabilities.",
+            "If external service providers are used to encrypt stored information, evidence would be needed that physical control of cryptographic keys can be maintained and assessed.",
+            "If FIPS-validated cryptographic modules are required or selected, evidence would be needed that cryptographic module validation certificates or FIPS-validated module lists are available and assessed.",
+            "If audit-integrity protection is in scope, evidence would be needed that cryptographic mechanisms protecting the integrity of audit information and tools are implemented and testable.",
+            "If OT communications are in scope, evidence would be needed that encryption is technically feasible without unacceptable latency or availability impact."
+          ],
+          "constraints": [
+            "TLS/SSL protection is conditioned on technical feasibility, and OT encryption is conditioned on feasibility to minimize latency and availability impact.",
+            "Implementation includes identifying outdated or weak encryption, updating it to sufficiently strong algorithms, and considering post-quantum implications.",
+            "Cryptographic implementation entails key-management considerations, including confidentiality of cryptographic keys and assessment of key establishment/management mechanisms.",
+            "Where stored information is encrypted by external service providers, the supplied NIST SP 800-53A record identifies physical control of cryptographic keys as an assessment objective.",
+            "Cryptographic uses and the types of cryptography for each use must be defined and implemented for assessment under the supplied NIST SP 800-53A record.",
+            "The CIS IG2 reference profile indicates that some safeguards may depend on enterprise-grade technology and specialized expertise, but it does not establish that such technology or expertise is present in exact quantity or form.",
+            "No supplied evidence establishes exact staffing, budget, vendor, product version, architecture, implementation timeline, or KR-specific technical obligation."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__126cdd26b17eb03b",
+          "evidence_gaps": [
+            "No supplied evidence identifies the reference enterprise's current cryptographic inventory, existing TLS/SSL coverage, weak-crypto exposure, key-management capabilities, cryptographic module validation status, or external-service-provider encryption arrangements.",
+            "No supplied evidence provides OT/ICS architecture details, protocol compatibility, latency/availability constraints, remote/external communication paths, or device-level encryption feasibility beyond the CPG conditional statement.",
+            "No supplied evidence establishes that PMT_CRYPTOGRAPHY specifically prevents ransomware deployment, execution, encryption, exfiltration, or backup destruction; the supplied CPG encryption record associates encryption with data-in-transit confidentiality/integrity and listed TTPs, but no supplied record makes a ransomware-specific prevention claim.",
+            "No supplied evidence quantifies operational burden, scalability, maintainability effort, exact implementation timeline, or resource capacity for the frozen KR__CIS_IG2 deployment.",
+            "No supplied evidence establishes deployment maturity or operational effectiveness of cryptography for this scenario; E_33_CDE0F421E4D797ED explicitly disclaims deployment-maturity and operational-effectiveness inferences."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "General technical feasibility is supported by action-specific Stage-4 decision evidence in implementation-relevant slots: CISA CPG defines a strong and agile encryption action with a stated IT/remote-OT scope, and NIST SP 800-53 describes cryptographic integrity mechanisms and key-management considerations. NIST SP 800-53A records provide assessment context for cryptographic protection and key management, but under the supplied slot mapping they do not by themselves support a directional feasibility claim. Therefore the stance remains +1 for general technical feasibility, while deployment-specific operability remains conditional and not fully supported.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN_CLAIM_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance frames strong and agile encryption as a recommended action with concrete implementation content, including properly configured and up-to-date TLS for data in transit when technically feasible, identification of outdated or weak encryption, updating to sufficiently strong algorithms, and consideration of post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLAIM_2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same CPG guidance implies adoption burden because organizations must plan to identify outdated or weak encryption, update it, consider post-quantum implications, and apply encryption where technically feasible while managing latency and availability impacts in OT contexts.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLAIM_3",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 discussion indicates that organizations employing cryptographic mechanisms also consider cryptographic key management solutions, which is relevant to the scope of adoption.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN_CLAIM_4",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A defines assessment objectives and methods for cryptographic key establishment/management and cryptographic protection, including examination of policies, procedures, design documentation, cryptographic module validation certificates, lists of FIPS-validated cryptographic modules, interviews with responsible personnel, and testing of mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_5",
+              "evidence_ids": [
+                "E_26_B2995F657787797A"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A also provides assessment methods for cryptographic protection of audit information, including examination of relevant policies and documentation, interviews with responsible personnel, and testing of cryptographic mechanisms protecting the integrity of audit information and tools.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS IG2 reference-enterprise profile describes multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, and states that IG2 safeguards address increased operational complexity and that some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_7",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF"
+              ],
+              "scope": "GENERAL",
+              "statement": "EU NIS2 text states that encryption technologies, in particular end-to-end encryption, should be promoted for public electronic communications networks and publicly available electronic communications services, and that where necessary the use of such encryption should be mandatory for providers of those networks or services.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_8",
+              "evidence_ids": [
+                "E_31_6BBE82F2BAC198B3"
+              ],
+              "scope": "GENERAL",
+              "statement": "EU NIS2 text references encryption as a state-of-the-art security and privacy-preserving measure for processing special categories of personal data and distinguishes supervisory regimes between essential and important entities.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_9",
+              "evidence_ids": [
+                "E_31_C1CFA326F0420DCA"
+              ],
+              "scope": "GENERAL",
+              "statement": "EU NIS2 text indicates that national cybersecurity strategy policies should address public procurement cybersecurity requirements, including encryption.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_10",
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA CPG preface describes organizations asking how to focus investment and make progress with limited budgets, staffing, and expertise, and states that CPGs are clearly defined, straightforward to implement, and designed to be easy to communicate to non-technical audiences.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN_CLAIM_11",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 defines FIPS-validated cryptography as a cryptographic module validated by the Cryptographic Module Validation Program to meet FIPS 140-3, with prerequisite cryptographic algorithm validation, which is a potential procurement or compliance consideration if such validation is required.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If evidence of adequate budget, staffing, expertise, and existing key-management or assessment capability were supplied, the burden-side claims could be evaluated as potentially manageable.",
+            "If evidence of extensive weak-encryption remediation, missing cryptographic expertise, high assessment/documentation burden, or binding EU compliance obligations without adequate resources were supplied, the action would be more strongly challenged under this lens.",
+            "A deployment-specific financial conclusion requires organization-specific budget, staffing, procurement, and regulatory-scope information that is not present in the frozen payload.",
+            "If the frozen enterprise is not in scope for the EU NIS2 provisions cited, those legal records remain context only and should not be treated as direct adoption costs or obligations."
+          ],
+          "constraints": [
+            "No numeric budget, price, ROI, TCO, staffing count, payback period, vendor, product version, or procurement ceiling may be inferred from the supplied evidence or frozen context.",
+            "The CIS IG2 profile is a standard-derived reference-enterprise profile and cannot by itself establish PMT effectiveness, implementation burden, cost, regulatory applicability, or legal obligation.",
+            "EU legal records are used only as legal/regulatory context for the frozen EU scenario and do not establish that the frozen reference enterprise is subject to a specific EU obligation.",
+            "Deployment-specific financial feasibility cannot be concluded because the scenario explicitly assumes no exact financial quantities and does not supply budget, staffing, or opportunity-cost data."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4",
+          "evidence_gaps": [
+            "Actual organization budget, cybersecurity budget, procurement ceiling, or funding availability for cryptography/key-management implementation are missing.",
+            "Staffing capacity, role availability, and expertise for cryptographic implementation, key management, control assessment, and audit are missing.",
+            "Current asset and data scope, existing encryption coverage, inventory of weak or outdated encryption, and key-management maturity are missing.",
+            "Implementation timeline, project duration, operational disruption tolerance, and opportunity cost relative to other ransomware or cybersecurity investments are missing.",
+            "EU regulatory applicability to the frozen reference enterprise is missing, including whether it is an essential or important entity, a provider of public electronic communications networks or publicly available electronic communications services, processes special categories of personal data, or is subject to public procurement encryption requirements.",
+            "Any requirement for FIPS-validated or otherwise validated cryptographic modules and associated procurement, licensing, or contract constraints are missing."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence contains actionable guidance for adopting cryptography/encryption (E_23_534489D29C38B327) and identifies key-management control context that may require organizational effort (E_25_7ACBB5FD8690DDF7). Assessment-procedure records for cryptographic key management, cryptographic protection, and audit-information integrity are present (E_26_A710FE8084614182, E_26_B2995F657787797A), but they are not sufficient by themselves under this lens to establish a directional implementation-burden conclusion without exact cost, staffing, budget, or deployment-specific burden data. The frozen budget_context explicitly states that no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. The CIS IG2 context record indicates that some safeguards may depend on enterprise-grade technology and specialized expertise (CTX_CIS_IG2_9F94838146D9C3A4), but it cannot by itself establish exact cost, staffing, or burden. No supplied record provides exact implementation cost, staffing requirement, payback period, opportunity cost, or deployment-specific financial capacity for the frozen CIS IG2 reference enterprise in the EU scenario. Because deployment-specific financial and staffing context is missing, the Financial / Adoption Feasibility lens cannot support a directional feasible or infeasible conclusion without converting context insufficiency into a stance.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF_C1",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law record states that encryption technologies, in particular end-to-end encryption, should be promoted for public electronic communications networks and publicly available electronic communications services, and that where necessary their use should be mandatory for providers of those networks or services under the Directive's security and privacy principles.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C2",
+              "evidence_ids": [
+                "E_31_6BBE82F2BAC198B3"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law record links processing of special categories of personal data under GDPR Article 9 to suitable and specific measures that safeguard fundamental rights and interests, including technical limitations on re-use and state-of-the-art security and privacy-preserving measures such as pseudonymisation or encryption where anonymisation may significantly affect the purpose pursued.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C3",
+              "evidence_ids": [
+                "E_31_C1CFA326F0420DCA"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law record states that, as part of national cybersecurity strategies, Member States shall adopt policies on cybersecurity-related requirements for ICT products and services in public procurement, including cybersecurity certification, encryption, and the use of open-source cybersecurity products.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C4",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF",
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "In the frozen EU deployment context, the supplied EU primary-law record states that the use of encryption technologies should be promoted, and the supplied NIST SP 800-53A record defines assessment objectives and methods for cryptographic key establishment and management and cryptographic protection; this supports conditional institutional feasibility.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C5",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF",
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "In the frozen EU deployment context, the supplied EU primary-law record states that encryption technologies should be promoted, and the supplied CISA CPG record lists strong and agile encryption as a recommended action, including properly configured and up-to-date SSL/TLS when technically feasible, identifying and updating outdated or weak encryption, and considering post-quantum cryptography implications; this supports conditional institutional feasibility.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C6",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 discussion states that cryptographic mechanisms used to protect integrity include digital signatures and signed hashes, and that organizations that employ cryptographic mechanisms also consider cryptographic key management solutions.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C7",
+              "evidence_ids": [
+                "E_31_6BBE82F2BAC198B3"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law record states that essential entities should be subject to a comprehensive ex ante and ex post supervisory regime, while important entities should be subject to a light, ex post only supervisory regime, and that important entities should not be required to systematically document compliance with cybersecurity risk-management measures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF_C8",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied EU primary-law record states that the use of end-to-end encryption should be reconciled with Member States' powers to protect essential security interests and public security and to allow prevention, investigation, detection, and prosecution of criminal offences, while stating that this should not weaken end-to-end encryption.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF_C9",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied CIS IG2 context record describes an enterprise profile with personnel responsible for managing and protecting IT infrastructure across multiple departments, where IG2 safeguards address increased operational complexity and some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If the organization provides public electronic communications networks or publicly available electronic communications services, the supplied EU record indicates that encryption, in particular end-to-end encryption, should be promoted and may be mandatory where necessary under the Directive.",
+            "If the organization processes special categories of personal data under GDPR Article 9, the supplied EU record links that processing to state-of-the-art security and privacy-preserving measures, including encryption where anonymisation may significantly affect the purpose pursued.",
+            "If encrypted data is stored by external service providers, the supplied NIST assessment record makes physical control of cryptographic keys an assessment objective.",
+            "If cryptography is implemented under the supplied NIST control framework, cryptographic uses and the types of cryptography for each use must be defined and implemented for assessment purposes.",
+            "If following the supplied CPG recommended action, SSL/TLS should be properly configured and up-to-date when technically feasible, outdated or weak encryption should be identified and updated, and post-quantum implications should be considered.",
+            "If the organization is classified as an essential entity under the supplied EU record, it should be subject to comprehensive ex ante and ex post supervision; if it is classified as an important entity, it should be subject to light ex post supervision."
+          ],
+          "constraints": [
+            "EU regulatory applicability is conditional on the organization's status as a provider of public electronic communications networks or publicly available electronic communications services, or as an essential or important entity under the supplied EU record; the frozen deployment context does not specify that status.",
+            "The supplied EU record introduces a regulatory tension for end-to-end encryption deployments by requiring reconciliation with Member State powers for essential security interests, public security, and criminal-law enforcement, while also stating that end-to-end encryption should not be weakened.",
+            "The supplied NIST records make cryptographic uses, types of cryptography, key-management controls, and cryptographic protection subject to institutional assessment and governance.",
+            "The supplied CIS IG2 context indicates that some safeguards may depend on enterprise-grade technology and specialized expertise, while exact budget, staffing, and procurement capacity remain unspecified."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4",
+          "evidence_gaps": [
+            "The supplied records do not specify whether the reference enterprise is an essential entity, important entity, or a provider of public electronic communications networks or publicly available electronic communications services under the supplied EU NIS2 record.",
+            "The supplied records do not specify the applicable EU Member State, sector, data categories, including whether special categories of personal data are processed, or any data residency or cross-border data-sovereignty constraints for cryptographic keys or data.",
+            "The supplied records do not specify existing cryptographic key-management infrastructure, whether external service providers hold or process encrypted data, or whether physical control of cryptographic keys is currently maintained.",
+            "The supplied records do not quantify budget, staffing, procurement ceiling, or implementation timeline for deploying or remediating cryptographic controls.",
+            "The supplied records do not address audit, documentation, or reporting obligations for the reference enterprise beyond the supplied NIST assessment procedures and the EU supervisory-regime differentiation."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied EU primary-law records support a regional policy environment in which encryption/cryptography is promoted, may be mandatory in specified communications-provider contexts, and is linked to privacy-preserving data-processing measures and public-procurement cybersecurity policies. The supplied NIST and CISA decision-evidence records provide general institutional support for implementing cryptography through recommended actions, control-assessment procedures, key-management expectations, and cryptographic-protection assessments. However, the frozen CIS IG2 deployment context does not specify whether the reference enterprise is an essential entity, important entity, or provider of public electronic communications networks or publicly available electronic communications services under the supplied EU record. It also does not specify the applicable Member State, sector, data categories, data residency or cross-border data-sovereignty constraints, existing key-management resources, budget, staffing, or procurement capacity. The EU record further states that end-to-end encryption should be reconciled with Member State powers for security and law-enforcement purposes. Therefore, general institutional feasibility is supported, but deployment-specific EU institutional/regional feasibility remains indeterminate under this lens.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_C1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG includes a recommended action for strong and agile encryption: use properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, identify outdated or weak encryption, update to sufficiently strong algorithms, and use OT encryption when feasible to minimize latency and availability impact.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C2",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 discusses cryptographic mechanisms used to protect integrity, including digital signatures and signed hashes using asymmetric cryptography, and states that organizations employing cryptographic mechanisms also consider cryptographic key management solutions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C3",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7",
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 states that organizations employing cryptographic mechanisms also consider cryptographic key management solutions, and NIST SP 800-53A provides assessment objectives and methods for SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection, including identifying cryptographic uses and implementing defined types of cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_C4",
+              "evidence_ids": [
+                "E_26_31F09DD7BB81D0F1",
+                "E_26_B2995F657787797A"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A includes AU-09(03) protection of audit information by cryptographic protection, with assessment methods examining policies, documentation, and system configurations and testing cryptographic mechanisms protecting audit information and tools.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C5",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 defines FIPS-validated cryptography as a cryptographic module validated by the Cryptographic Module Validation Program to meet FIPS 140-3 requirements and with algorithm implementations that have passed validation testing by the Cryptographic Algorithm Validation Program.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C6",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "Crossref reports increasing annual publication counts for the PMT_CRYPTOGRAPHY query from 210 in 2021 to 330 in 2024, with a positive OLS slope, and explicitly states this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C7",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, and notes that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C8",
+              "evidence_ids": [
+                "E_31_52DCE9554453ADEF"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The EU NIS2 excerpt promotes the use of encryption technologies, including end-to-end encryption, and states that where necessary the use of encryption should be mandatory for providers of public electronic communications networks or of publicly available electronic communications services.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C9",
+              "evidence_ids": [
+                "E_31_C1CFA326F0420DCA"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The EU NIS2 excerpt states that national cybersecurity strategy policies should include public procurement requirements for ICT products and services, including cybersecurity certification, encryption, and use of open-source cybersecurity products, and should promote development and integration of advanced technologies aiming to implement state-of-the-art cybersecurity risk-management measures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF_C10",
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 cites ransomware attacks that encrypt organizational data on servers as actual threat events relevant to contingency planning and contingency plan testing.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If OT communications are in scope, assess feasibility of encryption for those communications with attention to latency and availability impact.",
+            "If external service providers store encrypted information, evaluate physical control of cryptographic keys under SC-12(06).",
+            "If FIPS-validated cryptography is selected, use cryptographic modules validated by CMVP to FIPS 140-3 and with CAVP-validated algorithm implementations.",
+            "If audit information integrity is in scope, implement and test cryptographic protection of audit information per AU-09(03).",
+            "If EU public electronic communications network/service scope applies, determine applicability of NIS2 encryption promotion or mandatory encryption provisions before treating them as a technical implementation requirement."
+          ],
+          "constraints": [
+            "Cryptography should be applied where technically feasible; in OT contexts, encryption is to be used when feasible to minimize impact on latency and availability.",
+            "Implementation requires defining cryptographic uses and types, managing cryptographic keys, and, if FIPS-validated cryptography is selected, using modules validated under CMVP and CAVP as defined by NIST.",
+            "Operational and assessment burden includes maintaining policies, design documentation, configuration settings, cryptographic module validation certificates, and testing of cryptographic mechanisms for protection and audit integrity where applicable.",
+            "The CIS IG2 reference profile indicates that some IG2 safeguards may depend on enterprise-grade technology and specialized expertise to install and configure, but it does not quantify whether this burden applies to the specific cryptographic action in this scenario."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__813aef8fa98fc1a4",
+          "evidence_gaps": [
+            "No supplied record directly evaluates cryptographic controls for ransomware-specific technical fit, such as preventing ransomware encryption, protecting backup integrity, or containing lateral movement.",
+            "No supplied record provides the in-scope deployment architecture, system inventory, OT/IT data flows, existing TLS/certificate or cryptographic module state, key-management capability, latency/availability constraints, or external-provider key custody needed for a deployment-specific compatibility conclusion.",
+            "No supplied record provides exact implementation timeline, cost, staffing count, vendor/product/version, or exact control effectiveness within the 2025-2027 horizon."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The frozen action PMT_CRYPTOGRAPHY is generally technically feasible on the supplied evidence: CISA CPG provides a recommended encryption practice using properly configured/up-to-date SSL/TLS when technically feasible, and NIST SP 800-53 / 800-53A provide implementation and assessment mechanisms for cryptographic protection, key management, and FIPS-validated cryptography where applicable. However, the supplied material is not sufficient for a deployment-specific technical operability conclusion because the frozen infrastructure context is only a generic CIS IG2 reference profile, and it is also insufficient for a ransomware-specific technical-fit conclusion because no supplied record directly evaluates cryptographic controls for ransomware-specific prevention, containment, backup-integrity protection, or recovery. EU primary-law records provide regulatory context but not technical implementation detail. The Crossref publication trend supports publication activity only and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore the lens is mixed: general feasibility is supported, while deployment-specific operability and ransomware-specific technical fit remain indeterminate.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG frames STRONG AND AGILE ENCRYPTION as a recommended action and requires properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption action has a broad scope covering all IT traffic and remote OT assets communicating with external entities, and requires planning to identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum cryptography implications.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A provides assessment objectives and methods for cryptographic key establishment and management and cryptographic protection, including examination, interview, and test procedures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 states that organizations that employ cryptographic mechanisms also consider cryptographic key management solutions, indicating additional management and solution-design obligations.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "CIS Implementation Group 2 describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility conclusion would require supplied budget, price, TCO, procurement, and ROI data.",
+            "A staffing feasibility conclusion would require supplied role-level staffing or capacity data for cryptographic implementation, key management, and assessment.",
+            "A timing feasibility conclusion would require supplied implementation schedule, migration constraints, or operational availability constraints.",
+            "An opportunity-cost conclusion would require supplied comparison of resources consumed by cryptography against alternative controls or existing priorities."
+          ],
+          "constraints": [
+            "The action is conditioned on technical feasibility for data-in-transit encryption and OT use, with operational considerations for latency and availability.",
+            "The action includes identifying and updating outdated or weak encryption and considering post-quantum implications, which can increase implementation and maintenance effort.",
+            "Cryptographic key management and control-assessment obligations are present in the supplied guidance and assessment records.",
+            "The reference-enterprise profile includes multi-department IT personnel and may require enterprise-grade technology and specialized expertise for some safeguards."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980",
+          "evidence_gaps": [
+            "No numeric budget, price, TCO, procurement ceiling, ROI, or payback-period data is supplied.",
+            "No staffing count, security-team size, role-level capacity, or training-capacity data is supplied.",
+            "No implementation timeline, project duration, migration schedule, or opportunity-cost estimate is supplied.",
+            "No vendor, product, product-version, licensing, or architecture cost information is supplied.",
+            "No US-specific regulatory applicability or compliance-cost evidence is supplied in the decision evidence pack."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence does not establish a directional financial or deployment-specific adoption judgment. CISA CPG frames strong and agile encryption as a recommended action conditioned on technical feasibility, which mildly supports general adoption, but the same record specifies a broad scope across IT and remote OT assets plus work to identify and update weak encryption and consider post-quantum implications. NIST 800-53 and 800-53A add key-management and control-assessment obligations. The CIS IG2 profile supplies an organizational-context baseline of multi-department IT personnel and possible specialized expertise, but it does not provide budget, staffing, price, TCO, ROI, payback, or timing data. Because the required cost, staffing, opportunity-cost, and implementation-timing inputs are absent, the stance is mixed/indeterminate and the sufficiency is INSUFFICIENT_CONTEXT for a deployment-specific financial conclusion.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [],
+          "conditional_requirements": [
+            "Determine the applicable US legal, regulatory, sector, and data-sovereignty constraints for the specific enterprise, data flows, and external providers before treating the action as deployment-specifically compliant.",
+            "Assess technical feasibility in the target IT/OT environment, including latency and availability impacts, before applying encryption broadly.",
+            "Define cryptographic uses and types, implement key-management controls, and maintain physical key control where external service providers encrypt stored information.",
+            "Prepare documentation and test evidence supporting cryptographic protection of audit information for assessment or audit purposes.",
+            "Confirm whether the deployment will require enterprise-grade technology and specialized expertise consistent with the CIS IG2 reference-enterprise profile."
+          ],
+          "constraints": [
+            "Encryption deployment is conditioned by technical feasibility; for OT communications, encryption is used when feasible to minimize impact to latency and availability.",
+            "Organizations that employ cryptographic mechanisms are expected to consider cryptographic key management solutions.",
+            "When stored information is encrypted by external service providers, physical control of cryptographic keys is an assessment objective under NIST SP 800-53A SC-12(06).",
+            "Cryptographic uses and types of cryptography for each specified use must be defined, identified, and implemented under NIST SP 800-53A SC-13.",
+            "Audit-information cryptographic protection is an assessable control area requiring examination, interview, and testing of cryptographic mechanisms protecting audit information and tools.",
+            "The CIS IG2 reference-enterprise profile indicates that some safeguards address increased operational complexity and may depend on enterprise-grade technology and specialized expertise to install and configure."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980",
+          "evidence_gaps": [
+            "No supplied record establishes which US laws, regulations, or sector-specific cybersecurity obligations apply to the frozen CIS IG2 reference enterprise.",
+            "No supplied record addresses data sovereignty, cross-border data-transfer constraints, or external-provider key-custody rules specific to the frozen US scenario.",
+            "No supplied record identifies deployment-specific architecture, data-classification, audit-obligation, or external-provider relationship details needed for a deployment-specific institutional judgment.",
+            "The supplied CIS IG2 profile states that some safeguards may require enterprise-grade technology and specialized expertise but does not identify which cryptography-related safeguards would require them in this deployment.",
+            "The supplied EU NIS2 record is EU-scoped and cannot be used to infer US regulatory applicability for this scenario."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied evidence gives partial institutional support for the frozen CRYPTOGRAPHY action in the US scenario: a CISA CPG record recommends strong and agile encryption, NIST SP 800-53 discusses cryptographic mechanisms and key management, and NIST SP 800-53A provides assessment procedures for cryptographic protection, key control, and audit-information protection. However, the same records introduce conditions and burdens: technical feasibility constraints for IT/OT, latency and availability considerations for OT, key-management requirements, physical key-control obligations when external service providers encrypt stored information, and audit-assessment evidence requirements. The CIS IG2 context indicates a multi-department enterprise that may face regulatory burdens and may need specialized expertise for some safeguards, but it does not establish specific US legal obligations, data-sovereignty rules, cross-border constraints, or sector-specific regulatory applicability for this frozen reference enterprise. Because the supplied records do not establish the relevant US regulatory or data-governance constraints with enough specificity, the institutional/regional feasibility judgment is mixed or indeterminate rather than clearly supported or clearly challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG includes an action-specific recommended practice for strong and agile encryption that requires properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, planning to identify and update outdated or weak encryption, and considering post-quantum cryptography implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA encryption action is conditioned on technical feasibility, including use of encryption when feasible for OT communications connecting with remote or external assets in order to minimize impact to latency and availability.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-3",
+              "evidence_ids": [
+                "E_25_7ACBB5FD8690DDF7"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 describes cryptographic mechanisms used to protect integrity, including digital signatures and signed hashes using asymmetric cryptography, and notes that organizations employing cryptographic mechanisms also consider cryptographic key management solutions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-6",
+              "evidence_ids": [
+                "E_25_771754BCE59F5FBC"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 defines FIPS-validated cryptography as a cryptographic module validated by the Cryptographic Module Validation Program to meet FIPS Publication 140-3 requirements, with a prerequisite that the cryptographic algorithm implementation pass validation testing by the Cryptographic Algorithm Validation Program.",
+              "status": "SUPPORTS_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific feasibility conclusion requires an inventory of in-scope systems, traffic, external service providers, and cryptographic uses.",
+            "If OT or ICS assets are in scope, technical feasibility must be assessed for latency and availability impact before encryption is assumed operable (TF-2).",
+            "Outdated or weak encryption must be identified and updated before the action can be considered operable (TF-1).",
+            "Cryptographic key management must be established and assessable (TF-3).",
+            "FIPS-validated cryptographic module status must be verified where FIPS-validated cryptography is in scope (TF-6)."
+          ],
+          "constraints": [
+            "Encryption of OT communications is conditional on technical feasibility and minimizing impact to latency and availability (TF-2).",
+            "Implementation includes planning to identify and update outdated or weak encryption (TF-1).",
+            "Cryptographic mechanisms require consideration of cryptographic key management (TF-3).",
+            "FIPS-validated cryptography is defined by CMVP validation against FIPS 140-3 and CAVP algorithm validation (TF-6)."
+          ],
+          "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__3811dd7f88b09980",
+          "evidence_gaps": [
+            "No supplied record describes the specific existing network architecture, endpoint inventory, application protocols, storage systems, backup systems, or external service provider integrations in the frozen deployment context.",
+            "No supplied record describes the current cryptographic inventory, including existing TLS versions, algorithm strengths, weak or outdated cryptographic endpoints, or certificate lifecycle state.",
+            "No supplied record describes existing cryptographic key management mechanisms, key storage, key recovery procedures, or physical key-control arrangements.",
+            "No supplied record links PMT_CRYPTOGRAPHY to a ransomware-specific technical mitigation path.",
+            "No supplied record quantifies implementation effort, staffing burden, operational burden, integration complexity, or exact implementation timeline for the frozen enterprise.",
+            "The generic CIS IG2 reference-enterprise profile does not by itself establish deployment-specific technical compatibility or operability."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The frozen PMT_CRYPTOGRAPHY action has GENERAL technical feasibility support from action-specific decision evidence. E_23_534489D29C38B327 provides a CISA recommended action for strong and agile encryption, including properly configured and up-to-date SSL/TLS where technically feasible, planning to identify and update outdated or weak encryption, and consideration of post-quantum implications. E_25_7ACBB5FD8690DDF7 provides NIST control context identifying cryptographic mechanisms for integrity protection and the need to consider cryptographic key management solutions. E_25_771754BCE59F5FBC defines FIPS-validated cryptography and its validation prerequisites, supporting a general implementability and assessment pathway. However, the frozen deployment context is only a generic CIS IG2 reference-enterprise profile, and the supplied records do not establish deployment-specific compatibility, exact integration constraints, or operability of the action now or within the 2025-2027 window. The CISA record explicitly conditions encryption on technical feasibility, including OT latency and availability impacts. Therefore the action is technically feasible in general but mixed/indeterminate for deployment-specific operability under this lens.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "ac1ca852df720749e8ca37144ff85b485a98ad31fd92522abd647b8f108cb252",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "7ed19b86b2a47cddb36397255dc8efc9def00cbbda92119f2565ba05db34b3b4",
+    "institutional_regional_system_prompt_sha256": "507f8c8fff4d1f1e678788b34a10957110def2935a28c7e32dfe54f320d996d7",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "3ef0b7afd1704ead4ce23534b68baebc268e870b2a4dfdb1e05ec02cea7c9680"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v2",
+  "semantic_validation_version": "stage4-semantic-validation-v2",
+  "stage3_context_artifact_sha256": "e818963921c33de3c54451363f9320ebc1003a3d95b4beda0ba47d90a5506764",
+  "stage3_context_input_fingerprint": "2f7f2b943811e1e0dbcba05b696d178fdb4ec47c4c7dc7772b83aed5d28a5468",
+  "stage3_context_output_sha256": "3700c3540c31d53651ea4dd78bdc5c596641538a86e9f3fe845ab4308d55f6fb",
+  "stage4_output_sha256": "2b6b3042d4f7de0454c98b78c0bcc1a9120b68a7a60c6288ed92ea20a9001641"
+}

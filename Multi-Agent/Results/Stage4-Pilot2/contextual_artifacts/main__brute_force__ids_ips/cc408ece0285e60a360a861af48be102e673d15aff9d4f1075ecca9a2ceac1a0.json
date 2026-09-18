@@ -1,0 +1,1120 @@
+{
+  "artifact_sha256": "5c0b7852ddc5722e82ab14c4b83a9bffa1d3a557f184270ddb1893efa8d2be10",
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7": {
+      "financial_adoption": "0c4e1642bf30e64733069eadabba068adc6ec4a5d07b51c83a6b4995b2f0de99",
+      "institutional_regional": "51c30cde0b5bae3476ce3f5d228b91041beb3b70db53d3fe5c7ac1bf2142b02c",
+      "technical_feasibility": "e2333c5db860dabe0b16ddf1b35a7ff9ae43e288984c7ff5c45482bdcb869401"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145": {
+      "financial_adoption": "04142ddf63c24dcf174e95a7e70b5a56f5c44c354c71f151152717c23d4a2d9d",
+      "institutional_regional": "ec9601c1da50584ffcfe5e871b6e60526c77702336bfd60d04787349f743af74",
+      "technical_feasibility": "099d1e62446d0d9eef45f6c3f5875d71662d109409561591c6c5b18d4e3759cb"
+    },
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46": {
+      "financial_adoption": "e7b06ddc8062f35004c45e37255484bfecb4b394b3a8c9e360317cdb3c58fe6e",
+      "institutional_regional": "df6d8c0df601d7ab3fad62ea84447f1d2fe203c6c74851e50984eaafd003aa6e",
+      "technical_feasibility": "ca746e32f50c10d4c291aabf3123fc05073f3740d201e7bc8da2e56d8ec2d331"
+    }
+  },
+  "created_at": "2026-09-14T15:40:57.350350+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7": "121740b4023a894ce638bcaf8d6a0fb95bac831091401aa8f2e63684bfc14e3d",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145": "50ff384d1779cd0ad94e0c8b2fac093d1e544d7274acfe5e3928dcf2bf5f2927",
+    "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46": "91efb4a2fcad3a3588218769bc8e96c23224549090a0813bbb1f5231f3aefdb8"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__brute_force__ids_ips",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen reference-enterprise profile is a CIS Implementation Group 2 enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments; such enterprises may face regulatory burdens and can tolerate short service interruptions.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "CIS IG2 safeguards address increased operational complexity, and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST system monitoring control requires organizations to monitor for attacks and unauthorized connections, invoke or deploy monitoring devices, analyze detected events and anomalies, adjust monitoring activity when risk changes, obtain legal opinion regarding monitoring activities, and provide monitoring information to organization-defined personnel or roles.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST system monitoring control enhancements require connecting and configuring individual intrusion detection tools into a system-wide intrusion detection system, employing automated tools and mechanisms for near real-time analysis of events, and integrating intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST incident response guidance includes dynamic reconfiguration that may include changes to intrusion detection or prevention system parameters, and organizations include specific time frames for achieving reconfiguration considering the potential need for rapid response to cyber threats.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C6",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST assessment procedures for system monitoring require examining policies, procedures, system design and monitoring documentation, configuration settings, audit records, and security plans; interviewing system/network administrators and organizational personnel responsible for installing, configuring, maintaining, monitoring, or the intrusion detection system; and testing system monitoring processes and mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C7",
+              "evidence_ids": [
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST assessment procedures for traffic and event pattern analysis and wireless intrusion detection require use of traffic and event profiles for tuning monitoring devices, acceptable thresholds for false positives and false negatives, and assessment of intrusion detection system mechanisms and responsible personnel.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C8",
+              "evidence_ids": [
+                "E_23_B21FAA9377991F05",
+                "E_23_312B9513BCEE9B9D",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance and NIST unsuccessful logon discussion identify brute-force-relevant controls including alerting after consecutive unsuccessful logins, system-enforced prevention of future logins, automatic lockout or delay algorithms, MFA, and unique credential provisioning.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility conclusion requires organization-specific budget or procurement ceiling data for IDS/IPS acquisition, licensing, implementation, maintenance, and integration.",
+            "A deployment-specific adoption feasibility conclusion requires staffing and skill data for personnel responsible for installing, configuring, monitoring, analyzing, tuning, maintaining, and assessing IDS/IPS systems.",
+            "A deployment-specific timing conclusion requires scope and architecture data, including the number of monitored systems, deployment mode, integration points, and expected rollout or reconfiguration effort.",
+            "An opportunity-cost conclusion requires a documented comparison between IDS/IPS and other brute-force-relevant controls, such as MFA, account lockout, unique credentials, failed-login alerting, and related monitoring capabilities.",
+            "If the organization lacks sufficient budget, staffing, specialized expertise, or implementation timeline capacity, the adoption burden evidence would materially challenge feasibility; if sufficient capacity exists, the same burden evidence would not by itself make adoption infeasible."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, vendor, product version, sector, architecture, or exact implementation timeline may be inferred.",
+            "The frozen scenario explicitly assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+            "The CIS IG2 context record may support reference-enterprise profile facts but cannot by itself establish PMT implementation burden, cost, regulatory applicability, or legal obligation.",
+            "Stage 2 adjudications in the DecisionObject are reasoning provenance and are not used as external factual evidence.",
+            "Evidence or context insufficiency is not converted into a positive or negative financial feasibility stance.",
+            "Jurisdiction is a frozen experimental scenario parameter and does not by itself establish KR-specific financial, procurement, staffing, or legal obligations."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145",
+          "evidence_gaps": [
+            "No supplied evidence provides exact cost, price, TCO, ROI, payback period, budget, or procurement ceiling for IDS/IPS adoption in the frozen KR CIS IG2 scenario.",
+            "No supplied evidence provides deployment-specific staffing counts, skill inventories, training needs, contract obligations, or vendor or architecture assumptions.",
+            "No supplied evidence provides an exact implementation timeline, effort estimate, maintenance burden estimate, or opportunity-cost comparison for IDS/IPS versus alternative brute-force-relevant controls.",
+            "The supplied retrieval metadata shows missing slots for integration_operation_burden, resource_skill_burden, regulatory_applicability, and reference_deployment_limitation, limiting deployment-specific financial and adoption judgments.",
+            "No supplied evidence establishes whether the organization has existing IDS, IPS, SIEM, logging, or monitoring capacity that would reduce or increase adoption burden."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied Stage-4 decision-evidence records show that adopting an IDS/IPS action is associated with nontrivial deployment and operational obligations. NIST system-monitoring guidance requires organizations to monitor systems, deploy monitoring devices, analyze detected events and anomalies, adjust monitoring activity, obtain legal opinions regarding monitoring activities, and provide monitoring information to defined personnel or roles. Additional NIST guidance and assessment procedures require connecting and configuring intrusion detection tools into system-wide detection, employing automated near-real-time analysis mechanisms, integrating monitoring tools with access or flow control, and supporting assessment through documentation review, personnel interviews, and testing. These records therefore support a general adoption-burden challenge. However, the frozen deployment context provides no numeric budget, price, TCO, ROI, staffing count, procurement ceiling, implementation timeline, vendor, product version, or architecture. The CIS IG2 reference-enterprise profile only establishes a multi-department enterprise context and possible dependence on enterprise-grade technology and specialized expertise; it cannot by itself establish cost, staffing burden, or financial feasibility. Because the required financial judgment depends on cost, staffing, organizational capacity, opportunity cost, and implementation timing data that are absent, the lens cannot support a positive or negative deployment-specific financial feasibility stance.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 system monitoring control states that system monitoring capabilities can be achieved through tools and techniques including intrusion detection and prevention systems, and it includes organization-defined monitoring objectives, deployment of monitoring devices strategically or at ad hoc locations, analysis of detected events and anomalies, and provision of organization-defined monitoring information to organization-defined personnel or roles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The same NIST SP 800-53 Rev.5 system monitoring control includes obtaining legal opinion regarding system monitoring activities.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 system monitoring control enhancements state that automated monitoring techniques can create unintended privacy risks and that organizations assess and document these risks in their privacy impact assessment and make determinations in alignment with their privacy program plan.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF",
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 provides assessment objectives and methods for system monitoring, system-wide intrusion detection, and related monitoring capabilities, including examination of system and information integrity policy, procedures, system design documentation, monitoring tool documentation, configuration settings, audit records, system protocols documentation, and system security plan, as well as interviews with system/network administrators and personnel responsible for monitoring or intrusion detection, and testing of monitoring processes and mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 incident response guidance states that dynamic reconfiguration includes changes to intrusion detection or prevention system parameters and that organizations include specific time frames for achieving reconfiguration of systems in the definition of the reconfiguration capability.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen scenario uses a CIS IG2 reference-enterprise profile; the context record describes such an enterprise as having personnel responsible for managing and protecting IT infrastructure across multiple departments, often processing sensitive client or enterprise information, potentially facing regulatory burdens, tolerating short service interruptions, and potentially requiring enterprise-grade technology and specialized expertise to install and configure some safeguards.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C7",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied MITRE ATT&CK mitigation record discusses moving security logs to secure off-host locations, including forwarding logs from intrusion detection or prevention systems to a remote security information system, with access control and encryption considerations for sensitive data.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific institutional/regional feasibility judgment requires evidence that any applicable legal, regulatory, data-protection, or sector-specific obligations are identified and satisfied for IDS/IPS deployment, monitoring, and logging in the frozen Republic of Korea scenario.",
+            "If IDS/IPS telemetry or logs are forwarded to a remote or off-host location, the deployment-specific assessment must establish whether data-residency, cross-border transfer, access-control, retention, or encryption requirements apply under the applicable regional rules.",
+            "The organization must have, or be able to obtain, the organizational roles, policies, procedures, configuration documentation, audit records, and assessment processes needed to satisfy the cited NIST system-monitoring and assessment requirements.",
+            "If privacy risks are identified from automated monitoring or log analysis, the deployment-specific assessment must include a privacy impact assessment or equivalent documented determination consistent with the cited NIST control enhancement.",
+            "The deployment-specific assessment must confirm whether legal opinion, privacy approval, or other institutional authorization is required for system monitoring activities before IDS/IPS is deployed."
+          ],
+          "constraints": [
+            "The cited NIST system-monitoring control requires organization-defined monitoring objectives, organization-defined techniques and methods for identifying unauthorized use, deployment of monitoring devices, analysis of detected events and anomalies, adjustment of monitoring level when risk changes, legal opinion regarding system monitoring activities, and provision of organization-defined monitoring information to organization-defined personnel or roles. [E_25_7FB0B97526B274D0]",
+            "The cited NIST control enhancement requires assessment and documentation of privacy risks from automated monitoring in a privacy impact assessment, with determinations aligned to the organization's privacy program plan. [E_25_CC32123F54635AB1]",
+            "The cited NIST assessment guidance requires examination of policies, procedures, design and configuration documentation, audit records, protocols documentation, and system security plan, as well as interviews with relevant personnel and testing of monitoring or intrusion detection processes. [E_26_CACA5262EA892F47, E_26_060DE806723ADFAF, E_26_96ABE12078B52458]",
+            "The cited NIST incident response control requires organizations to define time frames for dynamic reconfiguration, including changes to intrusion detection or prevention system parameters, as part of the reconfiguration capability. [E_25_B0CF9F22CECCA425]",
+            "The frozen CIS IG2 context indicates possible regulatory burdens and possible dependence on enterprise-grade technology and specialized expertise, but it does not establish specific legal obligations, exact budget, exact staffing, product effectiveness, or jurisdiction-specific compliance requirements. [CTX_CIS_IG2_9F94838146D9C3A4]"
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145",
+          "evidence_gaps": [
+            "No supplied evidence establishes whether any Republic of Korea law, regulation, standard, or sector-specific rule applies to IDS/IPS deployment, system monitoring, intrusion prevention, network monitoring, or related logging in the frozen scenario.",
+            "No supplied evidence establishes data sovereignty, data-residency, cross-border transfer, or data localization constraints for IDS/IPS logs, telemetry, or remote log forwarding in the Republic of Korea scenario.",
+            "No supplied evidence establishes whether the organization must obtain legal opinion, privacy impact assessment approval, regulator approval, customer consent, or other institutional authorization before deploying IDS/IPS in the frozen scenario.",
+            "No supplied evidence quantifies compliance burden, budget, staffing, procurement, exact implementation timeline, or exact control effectiveness for institutional or regional deployment.",
+            "No supplied evidence establishes whether the frozen CIS IG2 reference enterprise actually has the policies, procedures, documentation, audit records, privacy program plan, or personnel roles required by the cited NIST assessment methods."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen action is institutionally recognizable as a monitoring control, but the supplied evidence does not establish that it is feasible under the specific regulatory, data-governance, or regional operating constraints of the Republic of Korea scenario. Claims C1 through C5 show GENERAL feasibility signals and institutional burdens drawn from action-specific Stage-4 decision evidence: NIST SP 800-53 Rev.5 treats intrusion detection and prevention systems as one possible means of system monitoring, includes organization-defined monitoring objectives, deployment of monitoring devices, event analysis, and provision of monitoring information to organization-defined personnel or roles; also includes obtaining legal opinion regarding system monitoring activities. NIST SP 800-53A Rev.5 provides assessment methods for system monitoring and system-wide intrusion detection, including examination of policies, procedures, documentation, configuration, and audit records, as well as interviews and testing. NIST SP 800-53 Rev.5 also notes that automated monitoring can create privacy risks and says organizations assess and document those risks in a privacy impact assessment aligned with a privacy program plan; it also ties dynamic reconfiguration, including intrusion detection or prevention system parameters, to organization-defined reconfiguration time frames. These facts support the existence of institutional governance and audit pathways, but they also introduce legal-review, privacy-assessment, documentation, and response-planning burdens. The frozen scenario uses a CIS IG2 reference-enterprise profile, which the context record describes as multi-department, potentially facing regulatory burdens, and potentially requiring enterprise-grade technology and specialized expertise for some safeguards. However, that context record is not a legal source and does not establish Republic of Korea-specific legal obligations, data-residency rules, cross-border transfer constraints, sector-specific duties, budget, staffing, or exact implementation timelines. Because the required jurisdiction-specific regulatory and data-governance evidence is missing, overall feasibility under this lens is indeterminate rather than supported or materially challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 states that system monitoring capabilities are achieved through a variety of tools and techniques, including intrusion detection and prevention systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 requires monitoring for attacks and indicators of potential attacks, unauthorized local, network, and remote connections, deployment or invocation of monitoring devices, analysis of detected events and anomalies, and adjustment of monitoring activity when risk changes.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 control enhancements describe connecting and configuring individual intrusion detection tools into a system-wide intrusion detection system, employing automated tools and mechanisms for near real-time analysis, and integrating intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 defines assessment objectives for determining whether individual intrusion detection tools are connected and configured into a system-wide intrusion detection system and whether automated tools and mechanisms support near real-time analysis of events.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C5",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 incident response guidance includes dynamic reconfiguration of intrusion detection or prevention system parameters as a technical means to stop attacks, misdirect attackers, or isolate components of systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C6",
+              "evidence_ids": [
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 describes assessment and tuning activities for system monitoring, including developing profiles representing common traffic patterns and events, using traffic and event profiles to tune system-monitoring devices, and maintaining acceptable thresholds for false positives and false negatives.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C7",
+              "evidence_ids": [
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 includes assessment objectives for determining whether an intrusion detection system monitors wireless communications traffic passing from wireless to wireline networks and whether information from monitoring tools and mechanisms employed throughout the system is correlated.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C8",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A MITRE ATT&CK mitigation record describes forwarding logs from IDS/IPS systems to a remote security information system, illustrating a log-integration pattern without establishing effectiveness or deployment compatibility for this scenario.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C9",
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "scope": "GENERAL",
+              "statement": "Mandiant M-Trends records observed password guessing attacks against cloud sign-in portals to identify accounts without MFA configured.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C10",
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Verizon DBIR record states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing, buying, or reusing them from previous breaches.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C11",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS Implementation Group 2 reference profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and notes that some safeguards address increased operational complexity and depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-C12",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref IDS/IPS publication-trend record explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific feasibility can be assessed only if the organization supplies evidence of relevant network architecture and monitoring infrastructure.",
+            "If system-wide detection is required, individual intrusion detection tools must be connected and configured into a system-wide intrusion detection system.",
+            "If near real-time analysis is required, automated tools and mechanisms, such as SIEM technologies, must be employed and related privacy risks assessed and documented.",
+            "If intrusion prevention response is required, dynamic reconfiguration of intrusion detection or prevention system parameters must be included in the incident response capability.",
+            "If tuning is required, traffic and event patterns, profiles, and acceptable false positive and false negative thresholds must be developed and used.",
+            "If wireless-to-wireline monitoring is required, an intrusion detection system must be employed at that boundary.",
+            "If operational ownership is required, roles for installing, configuring, maintaining, monitoring, and assessing the intrusion detection system must be identified."
+          ],
+          "constraints": [
+            "The action is technically feasible in a general sense only; deployment-specific compatibility is conditional on architecture facts not present in the frozen context.",
+            "Operability depends on configuration, tuning, correlation, monitoring, and assessment processes described in the NIST records.",
+            "If wireless-to-wireline traffic is in scope, an intrusion detection system must monitor that traffic boundary.",
+            "If automated near real-time analysis or SIEM integration is used, the NIST record notes that automated monitoring techniques can create unintended privacy risks requiring assessment and documentation.",
+            "No exact implementation timeline, vendor name, product version, dollar value, ROI, TCO, staffing count, or exact control effectiveness is supported by the supplied evidence."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__4a659cd5de8bb145",
+          "evidence_gaps": [
+            "Missing network architecture, segmentation, protocol visibility, and traffic flow details needed to evaluate IDS/IPS placement.",
+            "Missing inline capacity or performance constraints needed to evaluate IPS-mode deployment.",
+            "Missing existing monitoring, SIEM, log collection, alerting, and ticketing infrastructure needed to evaluate integration feasibility.",
+            "Missing authentication, account lockout, MFA, and access-control architecture needed to evaluate integration with access control and flow control mechanisms.",
+            "Missing wireless and wireline interface inventory needed to evaluate wireless-to-wireline intrusion detection applicability.",
+            "Missing exact staffing, skills, and operational capacity details; the CIS IG2 profile provides only a reference-enterprise context, not exact staffing counts.",
+            "Missing brute-force-specific technical effectiveness evidence for IDS/IPS in this deployment; the supplied threat records do not establish exact control effectiveness.",
+            "Missing deployment-specific maturity evidence; the supplied publication-trend record explicitly does not establish deployment maturity."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied decision-evidence records support general technical feasibility of IDS/IPS as a system-monitoring control. NIST SP 800-53 Rev. 5 identifies intrusion detection and prevention systems among techniques for system monitoring and requires monitoring devices, analysis of detected events, and adjustment of monitoring activity. NIST SP 800-53 Rev. 5 control enhancements and NIST SP 800-53A Rev. 5 assessment procedures support integrability and operability by describing connection/configuration of individual intrusion detection tools into a system-wide intrusion detection system, automated near real-time analysis, integration with access control and flow control mechanisms, dynamic reconfiguration of intrusion detection or prevention system parameters, traffic/event pattern tuning, correlation of monitoring information, and assessment of wireless-to-wireline intrusion detection where applicable. A MITRE ATT&CK mitigation record adds a general IDS/IPS log-forwarding integration pattern. The threat records provide brute-force technical context, including password guessing against sign-in portals and use of default, simplistic, or guessable credentials, but do not establish exact control effectiveness. The CIS IG2 reference profile supplies only a reference-enterprise infrastructure context and does not establish PMT effectiveness, implementation burden, cost, regulatory applicability, or legal obligation by itself. Deployment-specific compatibility is therefore indeterminate because the frozen context does not provide network architecture, protocol visibility, inline capacity, existing monitoring infrastructure, or exact operational staffing facts.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, and states that IG2 safeguards address increased operational complexity and that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 system monitoring guidance, which names intrusion detection and prevention systems as a means to achieve system monitoring, requires organization-defined monitoring objectives, deployment of monitoring devices strategically or at ad hoc locations, analysis of detected events and anomalies, adjustment of monitoring activity, obtaining legal opinion regarding monitoring, and providing monitoring information to organization-defined personnel or roles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST system-monitoring control enhancements require connecting and configuring individual intrusion detection tools into a system-wide intrusion detection system, employing automated tools and mechanisms to support near real-time analysis of events, and employing automated tools and mechanisms to integrate intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST incident response guidance identifies dynamic reconfiguration of intrusion detection or prevention system parameters as a possible reconfiguration action and notes that organizations include specific time frames for achieving system reconfiguration, considering the potential need for rapid response.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A assessment procedures for system monitoring and IDS-related enhancements require examining system monitoring policies, procedures, design documentation, configuration settings, audit records, and security plans; interviewing system/network administrators and organizational personnel installing, configuring, maintaining, monitoring, or responsible for the intrusion detection system; and testing intrusion detection and monitoring processes.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C6",
+              "evidence_ids": [
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A assessment guidance for analyzing traffic and event patterns references developing traffic and event profiles, using those profiles to tune system-monitoring devices, and maintaining lists of acceptable thresholds for false positives and false negatives.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C7",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained publication-trend record reports IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works per year, and states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility conclusion requires organization-specific budget or procurement ceiling and actual acquisition, licensing, integration, and operational cost data for IDS/IPS.",
+            "A deployment-specific adoption feasibility conclusion requires staffing and skill data showing available personnel to install, configure, tune, monitor, maintain, and operationally respond to IDS/IPS.",
+            "A deployment-specific conclusion must account for availability of enterprise-grade technology and specialized expertise; the supplied evidence does not establish whether such technology or expertise is available.",
+            "Because NIST guidance includes legal opinion regarding monitoring activities and privacy risk assessment for automated monitoring, a deployment-specific conclusion should condition on organization-defined legal and privacy determinations (E_25_7FB0B97526B274D0, E_25_CC32123F54635AB1).",
+            "A deployment-specific timing conclusion requires organization-specific implementation and integration constraints, which are absent."
+          ],
+          "constraints": [
+            "The frozen scenario assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling; exact financial quantities remain unknown.",
+            "The reference-enterprise profile may involve enterprise-grade technology and specialized expertise for some safeguards, but it does not provide exact staffing counts, budget, or product cost (CTX_CIS_IG2_9F94838146D9C3A4).",
+            "NIST guidance makes monitoring objectives, techniques, device placement, information distribution, legal opinions, privacy determinations, and integration parameters organization-defined, so adoption cost and effort cannot be derived without organizational assignments (E_25_7FB0B97526B274D0, E_25_CC32123F54635AB1).",
+            "Academic publication-trend evidence is limited to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, so it cannot support a cost or adoption-burden conclusion (E_33_A707006877BFD1C2)."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7",
+          "evidence_gaps": [
+            "No supplied evidence provides IDS/IPS purchase price, licensing cost, total cost of ownership, budget, ROI, payback period, procurement ceiling, or contract terms.",
+            "No supplied evidence provides exact staffing count, security-team size, skill inventory, training requirements, or operational ownership for installing, configuring, tuning, monitoring, maintaining, and responding to IDS/IPS.",
+            "No supplied evidence provides existing infrastructure, network scale, current IDS/IPS/SIEM/log-management assets, or integration constraints that would determine implementation timing or opportunity cost.",
+            "No supplied EU jurisdiction-specific financial or regulatory obligation evidence is available; the CTX profile only states that such enterprises may face regulatory burdens and cannot establish applicability.",
+            "No supplied evidence provides an action-specific implementation-timeline or resource-loading estimate for the frozen 2025-2027 timing window."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records support general adoption-burden factors for IDS/IPS: organization-defined monitoring parameters, deployment and configuration of monitoring devices, system-wide IDS integration, automated near real-time analysis, tuning, incident-response reconfiguration, and assessment activities that engage organizational personnel. The frozen CIS IG2 profile supplies a reference-enterprise context with IT-management personnel and notes possible need for enterprise-grade technology and specialized expertise for some safeguards, but it provides no budget, staffing counts, or product costs. No supplied evidence provides cost, price, TCO, ROI, payback, procurement ceilings, exact staffing, vendor/product details, or EU-specific financial/regulatory obligations. Therefore the evidence cannot support a deployment-specific conclusion that adoption is feasible or materially infeasible on financial grounds. The burden factors are present but their magnitude relative to the organization's resources is unknown, so the stance is indeterminate.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF-001",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev.5 system monitoring record identifies intrusion detection and prevention systems among monitoring capabilities and requires organization-defined monitoring objectives, deployment of monitoring devices, analysis of detected events and anomalies, obtaining legal opinion regarding monitoring activities, and providing organization-defined monitoring information to organization-defined personnel or roles at an organization-defined frequency or as needed.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-002",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev.5 control enhancements require connecting and configuring individual intrusion detection tools into a system-wide intrusion detection system, employing automated tools and mechanisms for near real-time analysis of events, and employing automated tools and mechanisms to integrate intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-003",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_96ABE12078B52458",
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A Rev.5 assessment records define assessment objectives and methods for system monitoring and intrusion detection capabilities, including system-wide intrusion detection system configuration, automated near real-time analysis, correlation of monitoring information, analysis of traffic and event patterns with traffic/event profiles used for tuning, wireless intrusion detection, and wireless-to-wireline intrusion detection; methods include examining policies, procedures, design documentation, configuration settings, audit records, event correlation logs, and relevant documentation, interviewing administrators and responsible personnel, and testing processes and mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-004",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev.5 record states that automated monitoring techniques can create unintended privacy risks because automated controls may connect to external or otherwise unrelated systems, that matching of records between these systems may create linkages with unintended consequences, and that organizations must assess and document these risks in a privacy impact assessment and make determinations aligned with their privacy program plan.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-005",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 Rev.5 incident response record states that dynamic reconfiguration includes changes to intrusion detection or prevention system parameters and that organizations include specific time frames for achieving reconfiguration of systems in the definition of the reconfiguration capability, considering the potential need for rapid response.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-006",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; such enterprises often process sensitive client or enterprise information, may face regulatory burdens, and can tolerate short service interruptions; IG2 safeguards address increased operational complexity, and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-007",
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "scope": "GENERAL",
+              "statement": "A supplied operational mitigation record describes forwarding logs from IDS/IPS systems to a remote security information system and describes remote file storage solutions with encryption at rest, access control policies, and encryption for sensitive data in transit and at rest.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Before EU deployment, obtain and document a jurisdiction-specific legal review of system monitoring activities, building on the supplied general requirement to obtain legal opinion regarding monitoring activities.",
+            "Conduct and document a privacy impact assessment for automated monitoring, especially if monitoring data is forwarded externally, matched across systems, or connected to unrelated systems.",
+            "Define and retain organization-defined monitoring objectives, techniques and methods, reporting roles, reporting frequency, and incident-response dynamic reconfiguration parameters for IDS/IPS.",
+            "Maintain assessable institutional artifacts, including monitoring policies, procedures, system design documentation, configuration documentation, audit records, event correlation logs, and traffic/event tuning profiles.",
+            "Confirm that the selected IDS/IPS deployment can satisfy any enterprise-grade technology or specialized expertise needs indicated by the CIS IG2 reference profile, without assuming exact staffing or budget quantities.",
+            "If IDS/IPS logs are forwarded to remote storage or a remote security information system, first resolve the EU-specific data-governance and data-sovereignty conditions for such forwarding under the frozen scenario."
+          ],
+          "constraints": [
+            "The action is subject to organization-defined monitoring objectives, deployment of monitoring devices, analysis of events, legal opinion, and reporting to organization-defined personnel or roles.",
+            "IDS/IPS deployment may require integration into a system-wide intrusion detection system, real-time analysis mechanisms, and access control or flow control mechanisms.",
+            "Automated monitoring may create privacy risks from external system connections and record matching, requiring privacy impact assessment and alignment with a privacy program plan.",
+            "Implementation and operation may require maintainable policies, procedures, design documentation, configuration documentation, audit records, event correlation logs, tuning profiles, and assessment evidence.",
+            "Incident response integration may require defined IDS/IPS dynamic reconfiguration parameters and specific response time frames.",
+            "The CIS IG2 reference profile implies possible regulatory burdens, multi-department complexity, and dependence on enterprise-grade technology or specialized expertise for some safeguards."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7",
+          "evidence_gaps": [
+            "No supplied evidence establishes EU-specific regulatory applicability, legal obligations, sectoral rules, or data-protection rules for IDS/IPS deployment in the frozen European Union scenario.",
+            "No supplied evidence establishes EU-specific data sovereignty or cross-border constraints for IDS/IPS monitoring data, log forwarding, remote storage, or external monitoring connections.",
+            "No supplied evidence provides the specific legal opinion, privacy determination, or jurisdiction-specific compliance decision for the frozen deployment design.",
+            "No supplied evidence provides exact deployment architecture, network segmentation, existing SIEM or monitoring integration, data categories, log retention locations, or legal-review capacity beyond the CIS IG2 reference profile.",
+            "No supplied evidence provides exact staffing count, budget, procurement ceiling, or vendor-specific deployment assumptions; resource capacity is only represented by the frozen CIS IG2 reference profile."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied action-specific Stage-4 decision evidence provides a general institutional and data-governance framework for IDS/IPS-related system monitoring: organization-defined monitoring objectives, legal opinion, privacy impact assessment, system-wide detection integration, automated real-time analysis, correlation, tuning profiles, documentation, and assessment methods. This supports GENERAL institutional feasibility only as conditional. However, the frozen scenario is European Union, and the supplied records do not establish EU-specific regulatory applicability, data sovereignty, cross-border monitoring-data constraints, sectoral obligations, or jurisdiction-specific legal obligations for IDS/IPS deployment. The CIS IG2 context record supports only the reference-enterprise profile, not EU regulatory applicability. Because EU-specific institutional/regional feasibility cannot be established or materially challenged from the supplied boundary, stance is indeterminate and evidence sufficiency is INSUFFICIENT_CONTEXT.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-1",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 system-monitoring guidance identifies intrusion detection and prevention systems as tools through which system monitoring capabilities can be achieved, including monitoring for attacks and unauthorized local, network, and remote connections.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-2",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 control-enhancement text describes connecting and configuring individual intrusion detection tools into a system-wide intrusion detection system, employing automated tools and mechanisms for near real-time analysis, including host-based, network-based, transport-based, or storage-based monitoring tools or SIEM technologies, and integrating intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-3",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 assessment objectives require determining whether individual intrusion detection tools are connected to and configured into a system-wide intrusion detection system and whether automated tools and mechanisms are employed to support near real-time analysis of events.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-4",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 incident-response guidance includes changes to intrusion detection or prevention system parameters as an example of dynamic reconfiguration that organizations may use to stop attacks, misdirect attackers, or isolate system components, with specific time frames for reconfiguration considered part of the capability definition.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-5",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_96ABE12078B52458",
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 assessment procedures reference examination, interview, and test methods involving system/network administrators, information security personnel, personnel installing/configuring/maintaining the system, monitoring personnel, and personnel responsible for the intrusion detection system.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-6",
+              "evidence_ids": [
+                "E_26_96ABE12078B52458",
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 assessment objectives reference using traffic and event profiles in tuning system-monitoring devices and correlating information from monitoring tools and mechanisms employed throughout the system.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-7",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, and states that IG2 safeguards address increased operational complexity and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-8",
+              "evidence_ids": [
+                "E_02_669F59880AF52688",
+                "E_23_B21FAA9377991F05"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied threat context includes observed credential-related brute-force activity, including brute forcing of default, simplistic, or easily guessable credentials, and CISA guidance describes failed-login alerting and system-enforced login prevention for brute-force-related techniques.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-9",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0",
+                "E_25_CC32123F54635AB1",
+                "E_25_B0CF9F22CECCA425",
+                "E_26_96ABE12078B52458",
+                "E_26_060DE806723ADFAF",
+                "E_26_CACA5262EA892F47"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied action-specific IDS/IPS decision evidence addresses system monitoring, integration, tuning, correlation, and dynamic reconfiguration, but does not assert exact brute-force-specific detection or prevention effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-10",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record reports IDS/IPS security publication activity from 2021 to 2024 and explicitly states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion would require deployment evidence corresponding to the cited NIST mechanisms: placement/configuration of monitoring devices, system-wide IDS connectivity, near-real-time analysis integration, traffic/event tuning, correlation, and IR reconfiguration time frames.",
+            "If the frozen action is to be assessed as technically fit for brute force in this deployment, deployment evidence must show that organization-defined monitoring objectives and monitoring placement cover the relevant attack indicators or unauthorized connections, and that IDS/IPS output is integrated with response workflows; supplied evidence does not establish that fit.",
+            "If operational burden or availability impact must be judged, additional deployment evidence is required because current records do not quantify burden or exact implementation timelines."
+          ],
+          "constraints": [
+            "Deployment must be configured according to organization-defined monitoring objectives, techniques and methods, personnel or roles, and frequency, and may require a legal opinion regarding system monitoring activities.",
+            "Operable deployment requires configuration documentation, monitoring personnel, tuning of system-monitoring devices using traffic and event profiles, and correlation of monitoring information.",
+            "System-wide or integrated deployment requires connecting and configuring individual intrusion detection tools and supporting near real-time analysis, potentially through SIEM or other automated mechanisms.",
+            "Incident-response use of IDS/IPS assumes dynamic reconfiguration capability, including changes to IDS/IPS parameters, with defined time frames for rapid response.",
+            "The CIS IG2 reference profile indicates that some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure, but it does not establish exact staffing counts, budgets, or exact operational burden."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__463c2866f17cb3a7",
+          "evidence_gaps": [
+            "No deployment-specific architecture is supplied beyond the CIS IG2 reference profile, including network topology, monitoring placement, authentication/identity architecture, existing IDS/IPS or SIEM, traffic volume, and maintenance ownership.",
+            "No supplied record quantifies exact implementation duration, exact operational burden, scalability limits, or tuning effort.",
+            "No supplied record establishes brute-force-specific technical effectiveness of IDS/IPS.",
+            "The Stage-4 retrieval metadata lists missing slots for integration_operation_burden, reference_deployment_limitation, and resource_skill_burden."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "Under this lens, the frozen action is technically implementable at a general control-class level because the supplied action-specific Stage-4 decision evidence identifies IDS/IPS as a recognized system-monitoring tool family, provides integration pathways into system-wide intrusion detection, near-real-time analysis, access/flow control mechanisms, and incident-response dynamic reconfiguration, and specifies assessment methods for configuration, tuning, correlation, and responsible personnel. The CIS IG2 reference profile adds that the deployment context may involve increased operational complexity and specialized expertise, but it does not introduce a material technical challenge. The evidence does not establish brute-force-specific detection or prevention effectiveness, nor does it establish deployment-specific compatibility, exact operational burden, scalability limits, or implementation timelines. Therefore, the stance is +1 for general technical feasibility, while deployment-specific feasibility remains conditional on infrastructure details not supplied.",
+          "stance": 1
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen CIS IG2 reference-enterprise context describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 record treats intrusion detection and prevention systems as one of the tools through which system monitoring capabilities are achieved, and it describes invoking or deploying monitoring devices strategically or at ad hoc locations and providing monitoring information to organization-defined personnel or roles.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 record specifies control enhancements to connect and configure individual intrusion detection tools into a system-wide intrusion detection system, employ automated tools and mechanisms for near real-time analysis, and integrate intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF",
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A records define assessment objectives and methods for system monitoring and intrusion detection, including determining whether individual intrusion detection tools are connected and configured into a system-wide IDS, whether automated tools support near real-time analysis, whether monitoring information is correlated, and whether traffic and event profiles are developed and used to tune system-monitoring devices.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C5",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF",
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53A records identify potential assessment methods that include examining policies, procedures, system design and monitoring documentation, configuration settings, audit records, and interviewing organizational personnel installing, configuring, maintaining, or monitoring the system and the intrusion detection system.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C6",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST SP 800-53 record includes dynamic reconfiguration of intrusion detection or prevention system parameters as part of incident response capability and notes that organizations include specific time frames for reconfiguration to address rapid response needs.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial/adoption feasibility conclusion would require supplied evidence for budget, staffing, existing infrastructure, integration scope, and implementation timeline.",
+            "If the organization can fund and staff the required deployment/configuration, system-wide integration, automated analysis, tuning, correlation, dynamic reconfiguration, and assessment work, the supplied control and assessment records support a procedurally feasible adoption path.",
+            "Any deployment-specific adoption plan must explicitly determine whether enterprise-grade technology and specialized expertise are required for the chosen IDS/IPS scope, without assuming exact staffing or cost values.",
+            "Ongoing operational burden must be evaluated separately for monitoring, alert analysis, tuning, incident response, and assessment documentation; these obligations are indicated by the supplied NIST records but are not quantified."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, staffing count, procurement ceiling, or implementation timeline is supplied for IDS/IPS adoption in this frozen scenario.",
+            "The frozen CIS IG2 context permits enterprise-grade technology and specialized expertise for some safeguards, but it does not establish exact IDS/IPS-specific staffing, infrastructure, or cost requirements.",
+            "The supplied NIST records indicate implementation, integration, tuning, assessment, and ongoing monitoring obligations, but they do not quantify the financial or labor cost of meeting those obligations.",
+            "Directional adoption-burden observations are limited to the supplied decision-evidence records and the frozen reference-enterprise context; no external vendor, product version, cost, or staffing value may be inferred."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46",
+          "evidence_gaps": [
+            "Exact budget or procurement ceiling for IDS/IPS acquisition, licensing, infrastructure, professional services, and maintenance.",
+            "Exact staffing count, security-team size, role allocation, skills inventory, and training requirements for IDS/IPS deployment and operation.",
+            "Existing monitoring stack, SIEM or log-management capacity, network architecture, traffic volume, and integration points required for IDS/IPS log forwarding and correlation.",
+            "Implementation and maintenance timeline within the frozen 2025-2027 window.",
+            "Opportunity-cost data comparing IDS/IPS adoption against other candidate controls or resource allocations.",
+            "Deployment-specific infrastructure constraints, such as whether the organization already has enterprise-grade technology or specialized expertise available for IDS/IPS installation and configuration."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied decision evidence indicates that IDS/IPS adoption is not a simple standalone purchase or configuration. NIST control and assessment records describe deployment/configuration work, system-wide IDS integration, automated near real-time analysis, correlation/tuning, dynamic reconfiguration of IDS/IPS parameters, and assessment activities that require organizational personnel and documentation. The CIS IG2 reference-enterprise context also states that some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure. These facts support a nontrivial adoption burden. However, the frozen scenario explicitly assumes no numeric budget, price, ROI, TCO, staffing count, procurement ceiling, or implementation timeline, and no supplied record provides exact financial quantities, opportunity-cost data, or deployment-specific staffing/infrastructure data. Therefore, financial/adoption feasibility cannot be assigned a net positive or negative directional stance under this lens; the evidence is sufficient to identify the burden but insufficient for a deployment-specific financial conclusion.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF-1",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 identifies intrusion detection and prevention systems as one means of achieving system monitoring, and its control text requires organizations to monitor the system, deploy or invoke monitoring devices, analyze detected events, and provide monitoring information to organization-defined personnel or roles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-2",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47",
+                "E_26_060DE806723ADFAF",
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 provides assessment procedures for system monitoring and system-wide intrusion detection, including examination of policies, procedures, configuration documentation, audit records, and event-correlation artifacts, as well as interviews with personnel responsible for installing, configuring, maintaining, monitoring, or being responsible for the intrusion detection system.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-3",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 specifies that organizations obtain a legal opinion regarding system monitoring activities and use organization-defined monitoring objectives, identification techniques, and monitoring-information recipients or roles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-4",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 states that automated monitoring techniques can create unintended privacy risks because automated controls may connect to external or unrelated systems, and it requires organizations to assess and document these risks in their privacy impact assessment and align determinations with their privacy program plan.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure; such enterprises often process sensitive information, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-6",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 discusses dynamic reconfiguration for incident response that includes changes to intrusion detection or prevention system parameters, with organization-defined types of dynamic reconfiguration and time frames.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Define the organization-specific monitoring objectives, unauthorized-use identification techniques, and monitoring-information recipients or roles (E_25_7FB0B97526B274D0).",
+            "Obtain a legal opinion regarding system monitoring activities (E_25_7FB0B97526B274D0).",
+            "Complete a privacy impact assessment and align determinations with the privacy program plan for automated monitoring/IDS mechanisms (E_25_CC32123F54635AB1).",
+            "Maintain assessment-ready policies, procedures, configuration documentation, audit records, event-correlation or threshold artifacts, and designated responsible personnel (E_26_CACA5262EA892F47, E_26_060DE806723ADFAF, E_26_96ABE12078B52458).",
+            "If incident response includes dynamic reconfiguration, define IDS/IPS reconfiguration types, time frames, and associated response actions (E_25_B0CF9F22CECCA425)."
+          ],
+          "constraints": [
+            "The organization must define monitoring objectives, unauthorized-use identification techniques, and the personnel or roles that receive monitoring information (E_25_7FB0B97526B274D0).",
+            "The organization must obtain a legal opinion regarding system monitoring activities (E_25_7FB0B97526B274D0).",
+            "Privacy risks associated with automated monitoring and IDS/IPS mechanisms must be assessed and documented in a privacy impact assessment and aligned with the organization's privacy program plan (E_25_CC32123F54635AB1).",
+            "If incident response uses dynamic reconfiguration, the organization must define the types of reconfiguration, including IDS/IPS parameter changes, and the time frames for achieving them (E_25_B0CF9F22CECCA425).",
+            "Policies, procedures, configuration documentation, audit records, event-correlation records, and traffic/event-profile or threshold artifacts must be available for assessment (E_26_CACA5262EA892F47, E_26_060DE806723ADFAF, E_26_96ABE12078B52458).",
+            "Personnel responsible for installing, configuring, maintaining, and monitoring the intrusion detection capability must be identifiable for assessment and accountability (E_26_CACA5262EA892F47, E_26_060DE806723ADFAF).",
+            "The CIS IG2 reference-enterprise profile indicates increased operational complexity and possible dependence on enterprise-grade technology and specialized expertise for some safeguards (CTX_CIS_IG2_9F94838146D9C3A4)."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46",
+          "evidence_gaps": [
+            "The applicable legal or regulatory regime for the frozen CIS IG2 reference enterprise is not specified, so whether NIST SP 800-53/53A is a mandatory legal requirement or a voluntary framework is not established.",
+            "Data sovereignty, cross-border monitoring-data transfer constraints, and privacy-law applicability for IDS/IPS logs, alerts, and correlated monitoring data are not specified.",
+            "Whether the enterprise has sufficient budget, staffing, expertise, or existing legal/privacy processes to satisfy the NIST legal-opinion, privacy-impact, documentation, and assessment requirements is not established.",
+            "Whether the deployment will use system-wide IDS, automated real-time analysis, cross-system correlation, or other configurations that trigger the privacy-impact conditions is not specified."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen IDS/IPS action is institutionally plausible under the supplied records because NIST SP 800-53 Rev. 5 recognizes intrusion detection and prevention systems as a system-monitoring capability and NIST SP 800-53A Rev. 5 supplies assessment, documentation, and personnel-accountability procedures for system-wide intrusion detection and related monitoring capabilities. At the same time, the same NIST records impose organization-specific institutional and data-governance conditions: organization-defined monitoring objectives and techniques, legal opinion on monitoring activities, privacy impact assessment for automated monitoring, maintainable policy/configuration/audit artifacts, and identifiable responsible personnel. The frozen CIS IG2 reference-enterprise profile adds enterprise complexity and possible regulatory burden, but it does not establish mandatory legal applicability, data-sovereignty constraints, cross-border monitoring-data transfer limits, or resource sufficiency. Because the supplied evidence cannot determine whether the frozen enterprise is subject to the applicable legal regime or can satisfy those conditions, the institutional/regional feasibility judgment is mixed/indeterminate rather than directionally supported or challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-CLM-01",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 system-monitoring text states that monitoring capabilities are achieved through a variety of tools and techniques, including intrusion detection and prevention systems, malicious code protection software, scanning tools, audit record monitoring software, and network monitoring software.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-02",
+              "evidence_ids": [
+                "E_25_7FB0B97526B274D0"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 system-monitoring text requires monitoring attacks and indicators of potential attacks, unauthorized local/network/remote connections, organization-defined techniques and methods, strategic and ad hoc deployment of monitoring devices, analysis of detected events and anomalies, risk-based adjustment of monitoring activity, and provision of defined monitoring information.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-03",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 control-enhancement text directs connection and configuration of individual intrusion detection tools into a system-wide intrusion detection system.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-04",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 control-enhancement text directs use of automated tools and mechanisms to support near real-time analysis of events, including host-based, network-based, transport-based, or storage-based event monitoring tools and mechanisms or SIEM technologies.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-05",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 control-enhancement text directs use of automated tools and mechanisms to integrate intrusion detection tools and mechanisms into access control and flow control mechanisms.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-06",
+              "evidence_ids": [
+                "E_25_CC32123F54635AB1"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 discussion notes that automated monitoring techniques can create unintended privacy risks and that organizations assess and document these risks in a privacy impact assessment.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-07",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment text provides assessment objectives to determine whether individual intrusion detection tools are connected to and configured into a system-wide intrusion detection system.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-08",
+              "evidence_ids": [
+                "E_26_CACA5262EA892F47"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment text provides an assessment objective to determine whether automated tools and mechanisms are employed to support near real-time analysis of events.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-09",
+              "evidence_ids": [
+                "E_26_96ABE12078B52458"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 assessment text for traffic and event pattern analysis examines whether traffic and event profiles are developed and used in tuning system-monitoring devices, and references acceptable thresholds for false positives and false negatives.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-10",
+              "evidence_ids": [
+                "E_26_060DE806723ADFAF"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "NIST SP 800-53A Rev. 5 assessment text includes objectives for wireless intrusion detection, an intrusion detection system monitoring wireless-to-wireline communications traffic, and correlation of information from monitoring tools and mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-11",
+              "evidence_ids": [
+                "E_25_B0CF9F22CECCA425"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 incident-response discussion states that dynamic reconfiguration includes changes to router rules, access control lists, intrusion detection or prevention system parameters, and filter rules, and that organizations may perform dynamic reconfiguration to stop attacks, misdirect attackers, and isolate components of systems.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-12",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure and states that some IG2 safeguards address increased operational complexity and may depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-13",
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Crossref publication-trend record reports IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, first-to-last delta of 14, and total results of 197, and states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-14",
+              "evidence_ids": [
+                "E_29_8E495DC2A98305B1",
+                "E_29_BAD6581A8E96027C",
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied academic metadata records include publication titles or abstracts concerning IDS/IPS topics, including an IDS/IPS efficiency test against DOS and DDOS attacks, an intrusion prevention system operating in IDS and IPS modes for a computing cluster, and IDS/IPS with real-time notification.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-15",
+              "evidence_ids": [
+                "E_02_669F59880AF52688",
+                "E_03_C54C5F099169E020"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied threat records report brute-force-related credential attacks, including brute forcing of default, simplistic, and easily guessable credentials and password guessing against cloud sign-in portals to identify accounts without MFA configured.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-16",
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied Mandiant M-Trends record lists Brute Force as one of the 2023 initial infection vector categories in a chart of vector shares.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-17",
+              "evidence_ids": [
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied NIST unsuccessful logon guidance discusses automatic system lockout or delay algorithms and a combination of other actions to help prevent brute force attacks.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical conclusion would require the actual network architecture, traffic visibility, segmentation, existing monitoring/SIEM, log-forwarding capability, wireless scope, authentication endpoints, and integration points.",
+            "For general technical operability, the organization must define monitoring objectives, techniques, methods, strategic or ad hoc deployment locations, event analysis, risk-based adjustment of monitoring, and delivery of monitoring information.",
+            "For integration feasibility, individual IDS tools must be connected and configured into a system-wide intrusion detection system and automated tools or mechanisms must be used for near-real-time analysis and integration with access/flow controls where required.",
+            "For maintainability, traffic and event profiles must be developed and used for tuning, and acceptable false-positive/false-negative thresholds must be defined.",
+            "If wireless environments are in scope, IDS must monitor wireless-to-wireline traffic and monitoring information from tools must be correlated.",
+            "For incident-response operability, dynamic reconfiguration parameters and time frames for IDS/IPS parameter changes must be defined.",
+            "For privacy-safe operation, automated monitoring risks must be assessed and documented in a privacy impact assessment."
+          ],
+          "constraints": [
+            "Deployment and configuration of IDS/IPS depend on the security architecture and organization-defined monitoring objectives, techniques, methods, device placement, analysis, and delivery of monitoring information.",
+            "System-wide IDS requires connecting and configuring individual intrusion detection tools into a unified detection capability.",
+            "Near-real-time operability requires automated tools or mechanisms, potentially including SIEM or other event-monitoring technology.",
+            "Integration feasibility depends on the ability to connect IDS tools or mechanisms into access control and flow control mechanisms.",
+            "Operability requires traffic and event profiling, tuning of monitoring devices, and defined acceptable thresholds for false positives and false negatives.",
+            "If wireless or wireless-to-wireline monitoring is in scope, an IDS must monitor that traffic and monitoring information should be correlated.",
+            "Dynamic reconfiguration for incident response requires organization-defined reconfiguration types and time frames for IDS/IPS parameter changes.",
+            "Automated monitoring may create privacy risks that must be assessed and documented in a privacy impact assessment.",
+            "The CIS IG2 context indicates that some safeguards may require enterprise-grade technology and specialized expertise to install and configure."
+          ],
+          "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__a0ef98a673b0dc46",
+          "evidence_gaps": [
+            "No supplied record establishes exact implementation timeline, deployment readiness, vendor/product selection, budget, staffing count, or exact operational burden for IDS/IPS in this frozen scenario.",
+            "No supplied record establishes deployment maturity or operational effectiveness of IDS/IPS; the publication-trend record explicitly states it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, and the academic records are publication metadata.",
+            "No supplied record establishes brute-force-specific detection coverage for the exact authentication endpoints, network protocols, cloud sign-in paths, MFA flows, or traffic visibility present in the deployment.",
+            "No supplied record quantifies scalability, alert volume, tuning effort, maintenance effort, false-positive/false-negative rates, or required staffing skills for this specific deployment.",
+            "No supplied record provides deployment-specific network architecture, traffic volume, segmentation, existing monitoring/SIEM, log-forwarding capability, or integration points needed to make a deployment-specific compatibility conclusion."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied NIST SP 800-53 Rev. 5 and NIST SP 800-53A Rev. 5 decision-evidence records support GENERAL technical feasibility for IDS/IPS as a system-monitoring control. The NIST SP 800-53 Rev. 5 records identify IDS/IPS among monitoring tools, require or support organization-defined monitoring objectives, describe connection and configuration of individual intrusion detection tools into a system-wide intrusion detection system, and describe automated near-real-time analysis and integration with access control and flow control mechanisms. The NIST SP 800-53A records provide assessment procedures for system-wide IDS, near-real-time automated analysis, traffic/event profiling, tuning, false-positive/false-negative thresholds, wireless IDS, wireless-to-wireline IDS, and correlation of monitoring information. The NIST incident-response record also supports operational use of IDS/IPS parameter changes as part of dynamic reconfiguration. The supplied threat records provide contextual relevance to brute-force credential attacks, and the CIS IG2 context supplies a general multi-department enterprise profile. However, the supplied records do not establish exact implementation timeline, vendor/product choice, deployment maturity, operational effectiveness, brute-force-specific detection coverage, or deployment-specific compatibility. Academic publication-trend and metadata records are explicitly limited to publication activity and metadata and cannot be used to establish deployment maturity or operational effectiveness. Therefore, the action is generally technically implementable, integrable, and operable under this lens, while deployment-specific operability remains conditional and context-insufficient.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "cc408ece0285e60a360a861af48be102e673d15aff9d4f1075ecca9a2ceac1a0",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "7ed19b86b2a47cddb36397255dc8efc9def00cbbda92119f2565ba05db34b3b4",
+    "institutional_regional_system_prompt_sha256": "507f8c8fff4d1f1e678788b34a10957110def2935a28c7e32dfe54f320d996d7",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "3ef0b7afd1704ead4ce23534b68baebc268e870b2a4dfdb1e05ec02cea7c9680"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v2",
+  "semantic_validation_version": "stage4-semantic-validation-v2",
+  "stage3_context_artifact_sha256": "32d06ec932f6f500c9f7b5318a29549d7cf69426378accc2fc7cee77ffa5d0d1",
+  "stage3_context_input_fingerprint": "932aa8f7a7b11d2eb6c8ef7b0e36f7469778bdd75ce254401cec6a036943f1e9",
+  "stage3_context_output_sha256": "eea2672e23dc27a202b1c10204917b38826058d0275b7496cf5388742a8594d4",
+  "stage4_output_sha256": "29afe1dbb4cef18c09139726de697991e59a7531cfc00ee2f0ca4ca6e1eaf00e"
+}

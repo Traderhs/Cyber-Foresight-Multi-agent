@@ -1,0 +1,155 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAD-SUP-1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "Behavioral anomaly detection is stated to support oversight of IT, personnel, and data resources and to enable faster incident-response times, fewer incidents, and shorter downtimes, which is an adoption benefit relevant to resource feasibility.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-SUP-2",
+        "evidence_ids": [
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A SIEM is stated to integrate multiple log formats and IDS/IPS information, collect information remotely and automatically, speed data processing and formatting, and make review of functional, operational, and security data cheaper and easier, providing an efficiency pathway for detection and alert operations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-CHA-1",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "scope": "GENERAL",
+        "statement": "IDPS implementation, operation, and maintenance require skills in system administration, network administration, information security, incident response, monitored network protocols, applications, and operating systems, with possible programming needs; these skills must be built and maintained through training, technical references, mentoring, or vendor courses, constituting a staffing/skill adoption burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAD-MAT-1",
+        "evidence_ids": [
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A NIST ICS section describes a configured behavior anomaly detection implementation receiving packet streams and detecting file-transfer activity, providing supplementary deployment-maturity context without establishing financial feasibility.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FAD-CTX-1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference profile is CIS IG2: a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, where safeguards address increased operational complexity and may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "For a deployment-specific financial conclusion, supply budget/cost/TCO/ROI/payback data and evidence that the organization can procure and integrate the anomaly-detection capability within its resources.",
+      "For a deployment-specific adoption conclusion, verify administrator skill coverage and a training/maintenance plan for detection/IDPS operation and tuning.",
+      "To realize the stated log-review efficiency, establish an integration plan for log sources, IDS/IPS information, and alerting/SIEM tooling with the anomaly-detection approach.",
+      "If the deployment includes additional asset classes beyond the general multi-department enterprise IT context, verify coverage and integration for those assets; the supplied records do not establish asset-specific coverage."
+    ],
+    "constraints": [
+      "The GENERAL supported direction does not establish exact affordability, budget fit, ROI, TCO, payback period, procurement ceiling, or implementation timing.",
+      "The documented skills, training, and maintenance burden remains an adoption constraint and is not eliminated by the stated efficiency benefits.",
+      "The benefit records are framed in ICS/manufacturing and SIEM/IDPS contexts, so their transfer to the exact CIS IG2 deployment requires deployment-specific validation.",
+      "The jurisdiction is masked and no jurisdiction-specific financial evidence is supplied, so no jurisdiction-driven feasibility direction is asserted."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "Exact budget, price, cost, TCO, ROI, payback period, and procurement ceiling are not supplied.",
+      "Exact staffing counts, administrator skill availability, training capacity, and ongoing operation/maintenance effort are not supplied.",
+      "Exact architecture, asset scope, network domains, existing log sources/SIEM/IDPS integration context, and product or contract selection are not supplied.",
+      "Opportunity cost relative to alternative safeguards is not quantified in the supplied records.",
+      "Deployment-specific applicability of the ICS/manufacturing-oriented benefit evidence to the CIS IG2 reference enterprise is not established."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The assigned feasibility question is whether the supplied records support or challenge the financial/adoption feasibility of the frozen ANOMALY DETECTION action for Malware under the masked CIS IG2 scenario. The directional grounding contract requires SUPPORTS_FEASIBILITY claims to cite adoption_benefit records and CHALLENGES_FEASIBILITY claims to cite adoption_burden records. The benefit evidence supplies direct adoption-relevant resource-saving and operational oversight pathways: anomaly detection is stated to support oversight of resources and to enable faster incident response, fewer incidents, and shorter downtimes, while centralized log/alert tooling is stated to reduce manual review effort and make review cheaper and easier. The burden evidence documents a real adoption constraint: IDPS/detection implementation and operation require administrator skills, training, and ongoing maintenance, with possible programming needs. This burden is not quantified and does not establish budget failure, staffing infeasibility, or procurement impossibility. The maturity record is supplementary implementation context and cannot by itself create direction. On balance, the grounded benefit evidence is more direct to the frozen action and to operational resource outcomes, while the burden evidence remains a material but unresolved constraint. Therefore, GENERAL financial/adoption feasibility is supported, but deployment-specific affordability and implementation feasibility remain conditional on missing budget, staffing, procurement, integration, and asset-scope information.",
+    "stance": 1
+  },
+  "assessment_sha256": "6ff9554f7a02b82d4854a2cc3e2d80a97a09e511109a7c1fdd36006a2894dae4",
+  "checkpoint_sha256": "6f9a1e4ced340b2358925b8809df95ce87797e57d5e35fab0ca8382343ce6dcf",
+  "created_at": "2026-09-16T13:34:16.537318+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_C6F46FCDE66BFAC7",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "aa6095fb51e024f9f0595bc58be9b3481f2b50eccf2a155ed8feaca03cad2ead",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "d4da70620005a0811b31e1ca3b600d02611a3ad544ed6c3180511e8e76832892",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "c5a711609b6676a53fe6406bffa491511dc493d4cc30db5bdf6d8d7ea5429121",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "9879c63d112c50e4f7a18f01cc4fde301c52e5d2301dee5e8e4e782ef4ea338c",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

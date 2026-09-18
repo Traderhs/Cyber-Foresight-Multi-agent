@@ -1,0 +1,219 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-C01",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev.5 provides assessment objectives and methods for SC-12(06) physical control of cryptographic keys when stored information is encrypted by external service providers, and for SC-13 cryptographic protection, including examination of cryptographic protection policies, FIPS-validated cryptographic module lists, and testing of mechanisms supporting cryptographic protection.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C02",
+        "evidence_ids": [
+          "E_16_E7BB108A85B71262"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-4 describes cryptographic hashes and digital signatures as mechanisms that can link content to metadata and provide tamper-evidence and attribution support, and describes perceptual hashing as aiming to generate similar or identical hashes for similar content.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C03",
+        "evidence_ids": [
+          "E_19_4E69D255F61736DB"
+        ],
+        "scope": "GENERAL",
+        "statement": "NISTIR 8259A references NIST SP 800-56A Rev.3 as guidance for pairwise key-establishment schemes using discrete logarithm cryptography.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C04",
+        "evidence_ids": [
+          "E_15_0A98378FC609EF7E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST AI 100-2 contrasts cryptography with widely used machine learning algorithms by stating that, unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C05",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref reports annual publication counts for the CRYPTOGRAPHY query of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works per year, and states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C06",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "scope": "GENERAL",
+        "statement": "The EU NIS2 recital characterizes ransomware attacks as malware that encrypts data and systems and demands a ransom payment for release, and lists drivers including different attack patterns, criminal business models around ransomware-as-a-service and cryptocurrencies, ransom demands, and supply-chain attacks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C07",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports that ransomware constituted 17% of remediated incidents in 2022 and had held the top action-on-objective position since at least 2020.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C08",
+        "evidence_ids": [
+          "E_03_0BAA7B22596028F4"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant M-Trends 2023 reports a global median dwell time of 16 days in 2022, down from 21 days in the M-Trends 2022 report, and a 9-day median dwell time for ransomware intrusions in 2022 compared with 5 days reported in M-Trends 2022.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C09",
+        "evidence_ids": [
+          "E_08_510579F0D776F3BE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV records CVE-2022-27593 in QNAP Photo Station as an externally controlled reference vulnerability observed being utilized in a Deadbolt ransomware campaign.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C10",
+        "evidence_ids": [
+          "E_25_95744996E05BA6E9"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 identifies ransomware attacks that encrypt organizational data on servers as an example of actual threat events relevant to contingency planning.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C11",
+        "evidence_ids": [
+          "E_23_AC2A498B747552DF"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG material identifies ransomware among unprecedented cyber threats and describes the CPGs as providing an approachable common set of IT and OT cybersecurity protections aimed at common and impactful cyber risks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C12",
+        "evidence_ids": [
+          "E_24_223CAC714FDE427B"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST CSF 2.0 provides an example of scoping an Organizational Profile to countering ransomware threats and handling ransomware incidents involving financial systems.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C13",
+        "evidence_ids": [
+          "E_29_185B62FFF51926EC",
+          "E_29_3C1B7B4F9532A5F2",
+          "E_29_7C01F6CA0D982DFF"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Crossref metadata records establish the existence of Cryptography journal reviewer-acknowledgment items for 2017, 2020, and 2022.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific support conclusion would require evidence that the target environment can maintain physical control of cryptographic keys for externally encrypted storage and implement defined cryptographic types, corresponding to the SC-12(06) and SC-13 assessment areas in E_26_A710FE8084614182.",
+      "A threat-mitigation fit conclusion would require evidence linking selected cryptographic controls to ransomware attack behavior, data integrity, or recovery objectives in the target deployment.",
+      "A scalability/maintainability conclusion would require evidence on mechanisms supporting and/or implementing cryptographic key establishment, management, and recovery, and on cryptographic protection mechanisms within the target environment, as framed by E_26_A710FE8084614182."
+    ],
+    "constraints": [
+      "The candidate action is frozen before downstream lens evaluation under case-forecast-pmt-only-v1.",
+      "Stage 2 adjudications are reasoning provenance and are not promoted to external evidence.",
+      "Organization/deployment-specific feasibility must remain conditional where deployment context is unknown."
+    ],
+    "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+    "evidence_gaps": [
+      "The frozen payload's deployment_context leaves infrastructure_context, organization_type, region, and budget_context null, so DEPLOYMENT_SPECIFIC technical compatibility, operability, scalability, and maintainability cannot be concluded.",
+      "No supplied record directly links the described cryptographic mechanisms or NIST cryptographic control objectives to ransomware-specific prevention, detection, recovery, or measured control effectiveness.",
+      "No supplied record provides target-environment integration evidence, such as existing key-management architecture, external provider key controls, cryptographic module validation status, or operational procedures for cryptographic protection.",
+      "No supplied record provides evidence on scalability or maintainability of cryptographic controls over the 2025-2027 window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "technical_feasibility",
+    "rationale": "Under the Technical Feasibility lens, the supplied records support GENERAL technical feasibility for CRYPTOGRAPHY: they describe cryptographic mechanisms and control-assessment procedures that can be implemented and assessed, including cryptographic hashes/digital signatures for tamper-evidence and attribution, key-establishment guidance, and NIST control objectives for key management and cryptographic protection. The records also provide threat context showing ransomware is an observed threat pattern, but that context is regulatory, operational, or confirmed-exploitation context rather than direct evidence of ransomware-specific cryptographic control effectiveness. The publication-trend record supports publication activity only and explicitly disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness. The frozen payload's deployment context is null, so DEPLOYMENT_SPECIFIC feasibility cannot be assessed. On balance, the records support general feasibility but leave deployment-specific feasibility and threat-mitigation fit indeterminate; therefore the stance is mixed/indeterminate.",
+    "stance": 0
+  },
+  "assessment_sha256": "c78adf142e771f97c05f6bc0a8d8c9c751b8d6a5bd73d2ae01d82ffc931880c3",
+  "checkpoint_sha256": "e494dcdda9cec18c402c2f5014fb7ba6eeb5dfd2add5f708ff0df38f720a015d",
+  "created_at": "2026-09-16T17:05:59.391693+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "04c731c00caa0211d483c4689c68454d8e1ec1eb0db6d9329a3eba2d1db25fcb",
+    "base_stage3_input_fingerprint": "958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e",
+    "base_stage3_output_sha256": "67e2fd7b9d1272554191bb08d631aaf42f25353977ff79b29c9e232a9a910d98",
+    "case_id": "main__ransomware__cryptography",
+    "evidence_ids": [
+      "E_02_066AFE8300EDCEBB",
+      "E_03_0BAA7B22596028F4",
+      "E_04_270A1E7C47ACC4FF",
+      "E_08_510579F0D776F3BE",
+      "E_15_0A98378FC609EF7E",
+      "E_16_E7BB108A85B71262",
+      "E_19_4E69D255F61736DB",
+      "E_23_AC2A498B747552DF",
+      "E_24_223CAC714FDE427B",
+      "E_25_95744996E05BA6E9",
+      "E_26_A710FE8084614182",
+      "E_29_185B62FFF51926EC",
+      "E_29_3C1B7B4F9532A5F2",
+      "E_29_7C01F6CA0D982DFF",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_CDE0F421E4D797ED"
+    ],
+    "input_fingerprint": "192a01de18914789e7764fd348aaef83cd251ea09220055b6688deba3a693471",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "98882e57e9883c16bdb7c235155df9f99507a837b45b89a242ae006da855a62b",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "95d457baffb25f988cc8692ee2698c8310aa20a0d537cacdcbb56a0e44911f54",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

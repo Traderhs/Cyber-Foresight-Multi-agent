@@ -1,0 +1,107 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_FEAS_01",
+        "evidence_ids": [
+          "E_12_F6120325C44B5EA9"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied MITRE ATT&CK M1015 record describes implementable Active Directory access-control configuration measures, including account configuration, interactive logon restrictions, RDP restrictions, dedicated administrative accounts, and authentication silos, and identifies Group Policy Management Console, PowerShell, and AD Administrative Center as implementation tools.",
+        "status": "SUPPORTS_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Deployment-specific feasibility requires infrastructure information identifying whether Active Directory, group-policy administration, account/permission management, and relevant authorization services are present.",
+      "If the assessment is to support realized mitigation within 2025-2027, it requires evidence of access-control deployment, configuration, and operational effectiveness in the target deployment."
+    ],
+    "constraints": [
+      "The feasibility support is general and does not establish deployment-specific compatibility because infrastructure_context is null in the frozen deployment_context.",
+      "The supplied evidence does not establish realized 2025-2027 deployment, adoption, maintenance, or operational effectiveness for the target deployment."
+    ],
+    "decision_object_id": "decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567",
+    "evidence_gaps": [
+      "Missing infrastructure_context needed to determine whether the target deployment can use the described Active Directory, group-policy, authentication, or authorization mechanisms.",
+      "Missing direct 2025-2027 deployment- or environment-specific evidence of access-control implementation and operational effectiveness."
+    ],
+    "evidence_sufficiency": "SUFFICIENT",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied record E_12_F6120325C44B5EA9 describes implementable Active Directory access-control configuration measures and named implementation tools, which supports general technical feasibility of ACCESS CONTROL. The frozen deployment_context has null infrastructure_context, organization_type, region, and budget_context, so deployment-specific compatibility and realized 2025-2027 effectiveness are not established. On balance, the supplied records support general technical feasibility without materially challenging it.",
+    "stance": 1
+  },
+  "assessment_sha256": "4b8301a6c395521666e4bf84800d77326121529f00931b1ab3c648c90a98bd48",
+  "checkpoint_sha256": "1cf70be7c7ac6320db6c8597a25d4a84ddcced9dd79430c572b3b48b1369fd72",
+  "created_at": "2026-09-16T17:56:56.036524+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "8dc45948c9a5fafa1e072407edadc9b50e058ecc7304cbda3de1064da4f8ea8a",
+    "base_stage3_input_fingerprint": "d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13",
+    "base_stage3_output_sha256": "52a43d3a673cc8ab023b4726616257c27608a8e654371c0d22375d8ba68a4d2a",
+    "case_id": "main__targeted_attack__access_control",
+    "evidence_ids": [
+      "E_02_BE48A23ABD77A19C",
+      "E_03_B4E8A797813EC72F",
+      "E_03_F0CD4F1DE74CC7AD",
+      "E_10_5C0B9AC35F2420B3",
+      "E_10_B4F773BEC65685CC",
+      "E_10_CEB460BC4092B2D3",
+      "E_12_F6120325C44B5EA9",
+      "E_15_195FD353ADC8E8B0",
+      "E_20_4D81D3799E4826F0",
+      "E_20_7FC83A095DEEBF69",
+      "E_23_42E9198B388BAA83",
+      "E_25_8F4D567857A97316",
+      "E_26_22D6C8ED91C81D37",
+      "E_29_4ED97777A686537A",
+      "E_29_951AF8A7281A822E",
+      "E_29_A8790308F8A745BD",
+      "E_31_96F42990F3AEAC86",
+      "E_33_F4FC25CE90264812"
+    ],
+    "input_fingerprint": "8d7c01c804527858c8c559a0039d28a94dc6ccbb3d8078e454ebb8a4697ab35d",
+    "lens_type": "technical_feasibility",
+    "response_schema_sha256": "a36d5d80caca740c1cd1892b41ddff28f9623475db3149f5d5cf68d34e103c35",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "2833380ddb4f7f2d1782146cc9b7e57dd6c0462d066bcaa3308784ff3521bdae",
+    "user_prompt_sha256": "0bd2c056117d5f8bb31b9615b69b28d706a79120a11cb2b0ed48c3a8e88cba95",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

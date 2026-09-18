@@ -1,0 +1,221 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_33_D28EA285670B0D01"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained PMT publication trend for ANOMALY DETECTION reports annual publication counts of 1431 in 2021, 1643 in 2022, 2110 in 2023, and 2496 in 2024, with an OLS slope of 366.20 works/year, and it explicitly states that this is an external publication-activity validation axis that does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_29_C2D0AFA5060E4ED3",
+          "E_29_EB10E20E98625441",
+          "E_29_EC3B9CB419FEA81B"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied Crossref academic metadata records verify DOIs for network anomaly detection material and another anomaly-detection application, indicating available published literature associated with PMT_ANOMALY_DETECTION, but these metadata records do not establish deployment maturity or operational effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "The NIST AI 100-2e2023 record documents poisoning of unsupervised clustering used in malware classification and network traffic anomaly detection, and documents evasion attacks for malware classification, PDF malware classification, Android malicious app detection, and network intrusion detection, indicating a technical adversarial-risk burden that can affect implementation and validation effort.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "Mandiant reports that China-nexus attackers have accessed edge devices through vulnerabilities including zero-days and deployed custom malware ecosystems, that such malware may remain undetected for long periods, and that off-the-shelf security products typically will not support edge devices, creating a conditional adoption burden if edge devices are in the deployment environment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_04_58956777A1075C28"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports infostealer campaigns linked to ITG23 (TrickBot/Conti) distributing Vidar, LummaC2, Nemesis, and Rhadamanthys; LockBit announced its desire to purchase Raccoon Stealer source code; infostealers made up 17.8% of the most unique Windows malware samples in 2023; and the report expects identity abuse to impact defenders' detection timelines, which can create operational pressure to improve detection but does not quantify financial feasibility.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_04_270A1E7C47ACC4FF"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports that backdoors were the top action on objective in almost one-quarter of incidents remediated in 2022 at 21%, Emotet contributed to a year-over-year jump in backdoor activity, ransomware constituted 17% of incidents, phishing was the top initial access vector at 41%, and there was a notable resurgence of hacktivism and destructive malware, providing general operational threat context that can motivate detection adoption.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_02_F60155CA81B80881"
+        ],
+        "scope": "GENERAL",
+        "statement": "Verizon DBIR reports that credential stuffing was the most commonly identified sampled API attack, credential-abuse-like attacks amounted to 15% of attacks, password dumpers appeared in 2% of breaches, and a two-day sample from one credential marketplace found more than 1,000 credentials per day posted for sale with an average price of $10, providing financialized threat context but not direct anomaly-detection cost or benefit data.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_12_842A9CCD6A194A93"
+        ],
+        "scope": "GENERAL",
+        "statement": "The MITRE ATT&CK M1019 record describes implementing a Threat Intelligence Program through forming a dedicated team or assigning existing security personnel, using threat intelligence platforms, integrating with SIEMs, automating collection and enrichment, mapping to MITRE ATT&CK, and regularly evaluating the program, indicating the type of organizational staffing, tooling, and integration burden that security-program adoption can involve.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C9",
+        "evidence_ids": [
+          "E_22_04CC5D97FEA06DDE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA states that organizations of all types and sizes are vulnerable to insider threats and that an effective program can prevent loss of revenue or intellectual property among other outcomes, providing a general benefit rationale for security mitigation programs without quantifying anomaly-detection-specific financial benefit.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C10",
+        "evidence_ids": [
+          "E_31_6C5988FD2D0D8867"
+        ],
+        "scope": "GENERAL",
+        "statement": "EU NIS2 regulatory context references the rise of ransomware, requires Member States to address ransomware in national cybersecurity strategy, and states that policies underpinning cybersecurity public-private partnerships should clarify available funding options, providing a conditional policy/funding enabler that is not deployment-specific because region and organization type are unknown.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C11",
+        "evidence_ids": [
+          "E_08_197B243FDF3AA15A",
+          "E_08_FEE46219AABDA967"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA KEV records identify CVE-2017-8540 in Microsoft Malware Protection Engine and CVE-2013-7331 in Internet Explorer, the latter of which could allow an attacker to detect anti-malware applications, indicating that security and anti-malware tooling can itself be a vulnerability-management burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C12",
+        "evidence_ids": [
+          "E_20_BF167BDA75891A3B"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-161 Rev.1 states that unauthorized removal of systems and network maintenance tools from the supply chain may introduce supply chain risks such as malware insertion, and that enterprises should explicitly authorize, track, and audit removal of maintenance tools; maintenance tools can include vulnerability scanning, indicating a governance and tracking burden for security tooling.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion requires budget_context, organization_type, infrastructure_context, and region to be supplied or otherwise established within the frozen evidence boundary.",
+      "If the deployment includes edge devices, additional deployment-specific evidence is required to show that anomaly detection or related monitoring can support those devices, because the supplied Mandiant record reports limited off-the-shelf security product support for edge devices.",
+      "If EU or EU-aligned procurement, funding, or regulatory context applies, deployment-specific evidence is required to connect the general NIS2 public-private partnership funding context to an available funding pathway for anomaly detection.",
+      "If the implementation plan includes AI-based or clustering-based anomaly detection, adversarial-robustness and validation effort should be included as a cost/adoption factor, because the supplied NIST record documents poisoning of unsupervised clustering for network traffic anomaly detection.",
+      "If an organizational security program is part of the adoption pathway, staffing, tooling, integration, and ongoing evaluation costs should be assessed separately, because the supplied records describe general program resource components rather than exact anomaly-detection costs.",
+      "To move from indeterminate to supported, the evidence set would need to add deployment-specific cost, staffing, integration, benefit, and budget-fit data without changing the frozen action, forecast, timing window, or evidence universe."
+    ],
+    "constraints": [
+      "The candidate action, forecast, timing window, deployment context, and evidence universe are frozen and were not modified.",
+      "Stage 2 adjudications in the DecisionObject were treated only as reasoning provenance and not as external factual evidence.",
+      "No exact vendor name, product version, dollar cost, ROI, TCO, payback period, staffing cost, or budget value was introduced.",
+      "Deployment-specific financial or adoption conclusions were not made because organization_type, infrastructure_context, budget_context, and region are missing.",
+      "Publication-activity evidence was not used to assert deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+    ],
+    "decision_object_id": "decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28",
+    "evidence_gaps": [
+      "Missing budget_context prevents any assessment of whether ANOMALY DETECTION can be funded, what budget class it falls into, or whether implementation cost is affordable.",
+      "Missing organization_type prevents assessment of staffing capacity, security-program maturity, regulatory posture, and likely administrative burden.",
+      "Missing infrastructure_context prevents assessment of whether anomaly detection can be integrated with existing network, host, logging, SIEM, TIP, or edge-device environments.",
+      "Missing region prevents assessment of jurisdiction-specific funding, procurement, regulatory, or legal adoption requirements.",
+      "No supplied record quantifies implementation cost, licensing cost, integration effort, data-readiness effort, model training effort, alert triage staffing, maintenance cost, or opportunity cost for ANOMALY DETECTION.",
+      "No supplied record quantifies financial benefit, loss avoidance, detection-time reduction value, incident-cost reduction, or return on investment attributable specifically to deploying ANOMALY DETECTION.",
+      "No supplied record establishes whether anomaly-detection tooling would support edge devices, custom-malware environments, or the specific visibility gaps described in the Mandiant record.",
+      "No supplied record establishes deployment maturity, operational effectiveness, or causal mitigation effectiveness of anomaly detection for this malware forecast."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "Under the Financial / Adoption Feasibility lens, the supplied records are indeterminate rather than clearly supporting or challenging the frozen ANOMALY DETECTION action. The frozen deployment_context is missing organization_type, infrastructure_context, budget_context, and region, so deployment-specific cost, staffing, contract, ROI, payback, or budget judgments cannot be made. The records do provide general adoption-relevant signals: publication activity for ANOMALY DETECTION increased through 2021-2024 [E_33_D28EA285670B0D01], academic metadata for network anomaly detection exists [E_29_C2D0AFA5060E4ED3, E_29_EB10E20E98625441, E_29_EC3B9CB419FEA81B], and operational threat reports indicate malware, infostealer, credential-theft, and edge-device visibility pressures that can motivate detection adoption [E_04_58956777A1075C28, E_04_270A1E7C47ACC4FF, E_02_F60155CA81B80881, E_03_F1CA4CD00581F628]. At the same time, the records also surface adoption burdens and constraints: adversarial ML risks for anomaly detection [E_15_D3680C31BEE2C0F8], edge-device monitoring and off-the-shelf support limitations [E_03_F1CA4CD00581F628], organizational program/resource components for related security measures [E_12_842A9CCD6A194A93, E_22_04CC5D97FEA06DDE], security-tool vulnerability management [E_08_197B243FDF3AA15A, E_08_FEE46219AABDA967], and supply-chain governance for maintenance tools [E_20_BF167BDA75891A3B]. However, no supplied record quantifies implementation cost, staffing cost, licensing cost, integration cost, benefit realization, loss avoidance, ROI, payback, or budget fit for deploying PMT_ANOMALY_DETECTION. The publication trend is explicitly a publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness [E_33_D28EA285670B0D01]. The EU NIS2 record provides a conditional policy/funding context but is not deployment-specific because region and organization_type are unknown [E_31_6C5988FD2D0D8867]. Therefore, on balance, the records neither materially support nor materially challenge financial/adoption feasibility for this frozen action; the result is mixed/indeterminate pending deployment-specific financial, staffing, infrastructure, and jurisdictional context.",
+    "stance": 0
+  },
+  "assessment_sha256": "7aad47a1a12c46e90a62eb96f3c282bca9eeb1514aee70a031986d737d4ec9e8",
+  "checkpoint_sha256": "30f294586da8a369401dbcb8a74d4a26927d2c8adb2956ac452908dab6099e6f",
+  "created_at": "2026-09-16T16:56:29.148621+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "5829ef17bf9bd5c950bcd602e3f0d2b574c0c1e2ada3a72ec8dd5adf07d077e9",
+    "base_stage3_input_fingerprint": "85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3",
+    "base_stage3_output_sha256": "a5ce30b9c7b30338270a3f1d160af279549cbdd2f76cbe5b3acf5b9618a9a370",
+    "case_id": "main__malware__anomaly_detection",
+    "evidence_ids": [
+      "E_02_F60155CA81B80881",
+      "E_03_F1CA4CD00581F628",
+      "E_04_270A1E7C47ACC4FF",
+      "E_04_58956777A1075C28",
+      "E_08_197B243FDF3AA15A",
+      "E_08_FEE46219AABDA967",
+      "E_12_842A9CCD6A194A93",
+      "E_12_DC3A7F14C38A9DF2",
+      "E_15_556E817722D16E74",
+      "E_15_D3680C31BEE2C0F8",
+      "E_20_BF167BDA75891A3B",
+      "E_22_04CC5D97FEA06DDE",
+      "E_29_C2D0AFA5060E4ED3",
+      "E_29_EB10E20E98625441",
+      "E_29_EC3B9CB419FEA81B",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_D28EA285670B0D01"
+    ],
+    "input_fingerprint": "edd952c4622cec1516b7abf24142eb9524e9689dc1707a3203c9b2175d64479f",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "e8594fad81d1ad0be835c027efe45bfa6d7eb9a57a0c2ec8ca84fb957353af6e",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "50285706bebe3e4adfc73309f572992a3202de58266a8566bc22f73c9f517512",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

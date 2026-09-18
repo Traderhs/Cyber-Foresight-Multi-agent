@@ -1,0 +1,75 @@
+{
+  "case_id": "main__ddos__nlp_llm",
+  "checkpoint_sha256": "4ec6e642b9e2b627289b312fd0137b82447f919384da993702102b948fb95828",
+  "created_at": "2026-09-13T16:54:52.657950+00:00",
+  "dependency_sha256": "0df70505931076a958f664d4a301663c2beb9462b14f2e38b7f229d3fcc4bd3a",
+  "input_fingerprint": "f6895d4aed0c040921ce8190d1e2ede959bcbc8e9deb4949da40dddd5b1a0fde",
+  "payload": {
+    "case_id": "main__ddos__nlp_llm",
+    "responder_critic": "defense_robustness",
+    "responses": [
+      {
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "E_02_066AFE8300EDCEBB supports the factual bandwidth/percentile increases and the DBIR's characterization of a hard-to-break trend. However, the frozen threat-state modality is NoI incident count/frequency, and attack magnitude is not direct NoI evidence. The claim is defensible only as observed DDoS size/operational-interpretation context, not as direct support for the forecasted increasing NoI threat state or as decisive evidence for the threat-side forecast.",
+        "response_type": "REVISE",
+        "target_claim_id": "AF_C1"
+      },
+      {
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "E_02_066AFE8300EDCEBB supports the factual observation of growing distributed DNS Water Torture activity against shared DNS infrastructure. This is an observed attack-vector or operational-interpretation signal, not a direct measurement of NoI incident count/frequency. The forecast relation should therefore be limited to context/vector observation rather than direct support for the forecasted increasing NoI threat state.",
+        "response_type": "REVISE",
+        "target_claim_id": "AF_C2"
+      },
+      {
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "note": "E_08_3453329306E149CB supports the factual statement that CVE-2023-44487 is recorded as an HTTP/2 Rapid Reset vulnerability allowing DDoS and that the payload represents it as a confirmed exploitation record. The source contract permits confirmed exploitation signaling but does not establish prevalence magnitude, severity, or a temporal NoI incident-count trend. It should be treated as an exploitation-signal/mechanism context rather than direct support for the forecasted increasing NoI threat state.",
+        "response_type": "REVISE",
+        "target_claim_id": "AF_C3"
+      },
+      {
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "note": "The cited Mandiant M-Trends chunks support the claim. E_03_06E6ABC42DA3AC77 defines destructive operations with DDoS as an example, and E_03_F13F996D181217BA reports hacktivist claims of traditional DDoS activity. This remains neutral context and does not directly establish the frozen NoI threat-state direction.",
+        "response_type": "AGREE",
+        "target_claim_id": "AF_C4"
+      },
+      {
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "note": "E_04_892BBCAA3CE5CC92 supports the claim that IBM X-Force observed hacktivism operations related to the Israel-Hamas conflict and recommended DDoS mitigation readiness, including contacting a DDoS mitigation provider and maintaining incident-response readiness. This is neutral contextual evidence and does not by itself establish the NoI threat-state direction.",
+        "response_type": "AGREE",
+        "target_claim_id": "AF_C5"
+      },
+      {
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "E_33_ADC8BC66D812799F directly supports the stated publication counts and OLS slope, and its source contract permits a directional publication trend. Because the frozen PMT state modality is NoP publication activity and the forecast PMT direction is decreasing, this increasing 2021-2024 NLP/LLM security publication trend is a legitimate challenge to the forecasted PMT NoP trajectory. It does not, however, establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "target_claim_id": "AF_C6"
+      },
+      {
+        "evidence_ids": [
+          "E_29_CD092D34A1331D02"
+        ],
+        "note": "E_29_CD092D34A1331D02 is static Crossref metadata and supports verification of the cited publication title. It does not establish deployment maturity, operational effectiveness, or a directional publication trend. The claim's limitation is therefore correct.",
+        "response_type": "AGREE",
+        "target_claim_id": "AF_C7"
+      }
+    ],
+    "round_index": 1,
+    "target_critic": "attack_feasibility"
+  },
+  "payload_sha256": "aa116cbcd8d07e1b1b31464101ffe18f41b9014769a747d8ebec75a01b5dd437",
+  "schema_version": "stage2-step-checkpoint-v2",
+  "step_name": "round1_defense"
+}

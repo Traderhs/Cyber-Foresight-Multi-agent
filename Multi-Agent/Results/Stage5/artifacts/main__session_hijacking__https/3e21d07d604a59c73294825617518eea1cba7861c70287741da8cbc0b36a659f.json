@@ -1,0 +1,630 @@
+{
+  "artifact_sha256": "31865f18b575039e9744f107701fda16da6862860b705e5c4e2439a55372649d",
+  "case_id": "main__session_hijacking__https",
+  "created_at": "2026-09-15T15:27:09.981412+00:00",
+  "diagnostic_bundle": {
+    "case_id": "main__session_hijacking__https",
+    "critique_diagnostic": {
+      "attack_post_stance": 0,
+      "attack_pre_stance": 0,
+      "d_critique_change": 0.0,
+      "d_critique_post": 0.0,
+      "d_critique_pre": 0.0,
+      "defense_post_stance": 0,
+      "defense_pre_stance": 0,
+      "evidence_gap_count": 0,
+      "unresolved_claim_count": 0
+    },
+    "diagnostic_contract_version": "stage5-diagnostics-v1",
+    "jurisdiction_sensitivity": {
+      "any_evidence_sensitivity": false,
+      "any_stance_sensitivity": false,
+      "by_lens": {
+        "financial_adoption": {
+          "available_lens_relevant_evidence_changed": false,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_5FC183B8D7DD961A",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ],
+            "KR": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_5FC183B8D7DD961A",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ],
+            "US": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_5FC183B8D7DD961A",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ],
+            "KR": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ],
+            "US": [
+              "DE_DE10_A086B3193CD6440B",
+              "DE_DE14_EDCA207577B4607A",
+              "DE_DE18_CDC975345637E009"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": false,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "DE_DE14_EDCA207577B4607A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "DE_DE14_EDCA207577B4607A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "DE_DE14_EDCA207577B4607A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE10_A086B3193CD6440B"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE18_CDC975345637E009"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": false,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "financial_adoption",
+          "sensitivity_sources": [],
+          "stance_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "stance_variance": 0.0
+        },
+        "institutional_regional": {
+          "available_lens_relevant_evidence_changed": false,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ],
+            "KR": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ],
+            "US": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ],
+            "KR": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ],
+            "US": [
+              "DE_DE10_4BE87A62A6676C99",
+              "DE_DE13_055FC5E35FA61DD5",
+              "DE_DE14_575D613F0598EF5E",
+              "DE_DE18_20A979A3238D1DE6"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": false,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "DE_DE10_4BE87A62A6676C99",
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE14_575D613F0598EF5E",
+                  "DE_DE18_20A979A3238D1DE6"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "DE_DE10_4BE87A62A6676C99",
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE14_575D613F0598EF5E",
+                  "DE_DE18_20A979A3238D1DE6"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "DE_DE10_4BE87A62A6676C99",
+                  "DE_DE13_055FC5E35FA61DD5"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "DE_DE14_575D613F0598EF5E",
+                  "DE_DE18_20A979A3238D1DE6"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": false,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "institutional_regional",
+          "sensitivity_sources": [],
+          "stance_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "stance_variance": 0.0
+        },
+        "technical_feasibility": {
+          "available_lens_relevant_evidence_changed": false,
+          "available_lens_relevant_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0",
+              "DE_DE14_5FC183B8D7DD961A"
+            ],
+            "KR": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0",
+              "DE_DE14_5FC183B8D7DD961A"
+            ],
+            "US": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0",
+              "DE_DE14_5FC183B8D7DD961A"
+            ]
+          },
+          "cited_directional_evidence_changed": false,
+          "cited_directional_evidence_ids_by_jurisdiction": {
+            "EU": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0"
+            ],
+            "KR": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0"
+            ],
+            "US": [
+              "AE07C_9CBF5980D3BA474A",
+              "AE07S_C1EF15B9628497F0"
+            ]
+          },
+          "deployment_specific_directional_claim_count_by_jurisdiction": {
+            "EU": 0,
+            "KR": 0,
+            "US": 0
+          },
+          "deployment_specific_directional_claim_count_changed": false,
+          "directional_claim_signature_changed": false,
+          "directional_claim_signatures_by_jurisdiction": {
+            "EU": [
+              {
+                "evidence_ids": [
+                  "AE07C_9CBF5980D3BA474A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE07S_C1EF15B9628497F0"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "KR": [
+              {
+                "evidence_ids": [
+                  "AE07C_9CBF5980D3BA474A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE07S_C1EF15B9628497F0"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ],
+            "US": [
+              {
+                "evidence_ids": [
+                  "AE07C_9CBF5980D3BA474A"
+                ],
+                "scope": "GENERAL",
+                "status": "CHALLENGES_FEASIBILITY"
+              },
+              {
+                "evidence_ids": [
+                  "AE07S_C1EF15B9628497F0"
+                ],
+                "scope": "GENERAL",
+                "status": "SUPPORTS_FEASIBILITY"
+              }
+            ]
+          },
+          "jurisdiction_evidence_sensitivity": false,
+          "jurisdiction_specific_available_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_specific_used_evidence_ids_by_jurisdiction": {
+            "EU": [],
+            "KR": [],
+            "US": []
+          },
+          "jurisdiction_stance_sensitivity": false,
+          "lens_type": "technical_feasibility",
+          "sensitivity_sources": [],
+          "stance_by_jurisdiction": {
+            "EU": 1,
+            "KR": 1,
+            "US": 1
+          },
+          "stance_variance": 0.0
+        }
+      },
+      "evidence_sensitive_lenses": [],
+      "stance_sensitive_lenses": []
+    },
+    "model_reported_confidence_used": false,
+    "predictive_uncertainty_claimed_from_d_lens": false,
+    "scenario_diagnostics": [
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE14_5FC183B8D7DD961A",
+            "DE_DE14_EDCA207577B4607A",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "institutional_regional": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE10_4BE87A62A6676C99",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "technical_feasibility": [
+            "AE07C_9CBF5980D3BA474A",
+            "AE07S_C1EF15B9628497F0",
+            "DE_DE14_5FC183B8D7DD961A"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "KR",
+        "nonzero_stance_lens_count": 1,
+        "scenario_id": "KR__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 2,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        }
+      },
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE14_5FC183B8D7DD961A",
+            "DE_DE14_EDCA207577B4607A",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "institutional_regional": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE10_4BE87A62A6676C99",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "technical_feasibility": [
+            "AE07C_9CBF5980D3BA474A",
+            "AE07S_C1EF15B9628497F0",
+            "DE_DE14_5FC183B8D7DD961A"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "EU",
+        "nonzero_stance_lens_count": 1,
+        "scenario_id": "EU__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 2,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        }
+      },
+      {
+        "agreement_class": "SUBSTANTIVE_DISAGREEMENT",
+        "challenge_claim_count_by_lens": {
+          "financial_adoption": 1,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        },
+        "cited_evidence_ids_by_lens": {
+          "financial_adoption": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE14_5FC183B8D7DD961A",
+            "DE_DE14_EDCA207577B4607A",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "institutional_regional": [
+            "CTX_CIS_IG2_9F94838146D9C3A4",
+            "DE_DE10_4BE87A62A6676C99",
+            "DE_DE13_055FC5E35FA61DD5",
+            "DE_DE14_575D613F0598EF5E",
+            "DE_DE18_20A979A3238D1DE6"
+          ],
+          "technical_feasibility": [
+            "AE07C_9CBF5980D3BA474A",
+            "AE07S_C1EF15B9628497F0",
+            "DE_DE14_5FC183B8D7DD961A"
+          ]
+        },
+        "d_lens": 0.222222,
+        "d_lens_evaluable": true,
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051",
+        "deployment_specific_directional_claim_count_by_lens": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 0
+        },
+        "directional_lens_count": 3,
+        "evidence_sufficiency_by_lens": {
+          "financial_adoption": "PARTIAL",
+          "institutional_regional": "PARTIAL",
+          "technical_feasibility": "PARTIAL"
+        },
+        "joint_abstention": false,
+        "jurisdiction_code": "US",
+        "nonzero_stance_lens_count": 1,
+        "scenario_id": "US__CIS_IG2",
+        "stance_vector": {
+          "financial_adoption": 0,
+          "institutional_regional": 0,
+          "technical_feasibility": 1
+        },
+        "sufficient_or_partial_lens_count": 3,
+        "support_claim_count_by_lens": {
+          "financial_adoption": 2,
+          "institutional_regional": 1,
+          "technical_feasibility": 1
+        }
+      }
+    ],
+    "system_evidence_diagnostic": {
+      "claim_evidence_audit_pass_rate": null,
+      "claim_evidence_audit_status": "DEFERRED_TO_STAGE7_SEMANTIC_GROUNDING_AUDIT",
+      "claim_evidence_reference_pass_rate": 1.0,
+      "covered_evidence_slots": [
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "observed_threat_reality",
+        "technical_literature",
+        "threat_capability_or_mechanism"
+      ],
+      "evidence_slot_coverage_ratio": 0.833333,
+      "independent_evidence_chain_count": 14,
+      "missing_evidence_slots": [
+        "exploitation_signal"
+      ],
+      "required_evidence_slots": [
+        "exploitation_signal",
+        "mitigation_implementation",
+        "mitigation_relation_or_control",
+        "observed_threat_reality",
+        "technical_literature",
+        "threat_capability_or_mechanism"
+      ],
+      "source_contract_violation_count": 0,
+      "source_family_count": 6,
+      "stage0_evidence_sufficiency": "PARTIAL",
+      "stage4_claim_count": 30,
+      "stage4_directional_claim_count": 21,
+      "stage4_sufficiency_counts": {
+        "INSUFFICIENT_CONTEXT": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "PARTIAL": 9,
+        "SUFFICIENT": 0
+      },
+      "temporal_violation_count": 0
+    }
+  },
+  "diagnostic_contract_version": "stage5-diagnostics-v1",
+  "input_fingerprint": "3e21d07d604a59c73294825617518eea1cba7861c70287741da8cbc0b36a659f",
+  "output_schema_sha256": "3efba0bbc7f46bbf535ac97b3010f0b927b18ebad518be5b684528fc8057e4e8",
+  "schema_version": "stage5-artifact-v1",
+  "stage0_evidence_pack_sha256": "6a4b7cb10d09f6b120e2783bf1bb0957dd7cd53c66243135af329756876c5170",
+  "stage2_artifact_sha256": "14969c617a024fe48cc5a81bde0a5caf353e2f14a296a2ff4f0788a244ea49b7",
+  "stage2_output_sha256": "a0867e46d39020baed0378cb057158c2367161643e6eb4717d43b954aba0df4e",
+  "stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+  "stage3_context_output_sha256": "85bf0b121d5c59efcb60af5ad52bfb86007d6f491e0e02209eea786205231778",
+  "stage4_context_artifact_sha256": "d1853be1e80bea8b4894668ef60ba1d5b4f878e2f8334340759ec658b9685c3d",
+  "stage4_context_output_sha256": "7117661a823aa33b1b3dc64659acaae88cb146f7554b3bbfca96c9458d34edaf",
+  "stage5_output_sha256": "892d90d0926362f23f6f237a1b792055947f9204adee99a38b418b64d55df215"
+}

@@ -1,0 +1,23 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage6\logs\stage1-main-cases-v1__2026-09-16_16-34-17.log
+--- Stage 0 -> Stage 1 -> Stage 2 -> Stage 3 base -> Stage 3 context v4 -> Stage 4 v4 -> Stage 5 diagnostics -> Stage 6 synthesis: batch execution ---
+Shared model/sampling profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Active shared runtime: 131072 total tokens / 2 slots = 65536 tokens per slot; contextual Stage 4 identity=stage4-context-runtime-128k-total-2slot-v3; Stage 6 synthesis identity=stage6-synthesis-runtime-128k-total-2slot-v1. Historical one-slot Stage 1/2 artifacts may be reused through the explicit concurrency-only compatibility path.
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Decision-evidence preflight: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\preflight\stage1-main-cases-v1__de-83662ff07d.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage6\runs\stage1-main-cases-v1__stage3-context-scenarios-v1__stage4-artifact-v4__stage6-artifact-v5__stage6-synthesis-runtime-128k-total-2slot-v1__de-83662ff07d__seed-42__progress.json
+Resume is automatic: exact Stage 1/2/base-Stage3/contextual-Stage3/Stage4-v4/Stage5/Stage6 artifacts are reused; interrupted Stage 1 critics, Stage 2 debate steps, contextual Stage 4 lenses, and Stage 6 syntheses resume only from exact-fingerprint checkpoints. Both Stage 3 layers and Stage 5 remain deterministic.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json
+
+[MAIN SET][1/7] FAILED: strategic-intelligence report cited evidence outside the frozen upstream evidence universe: ['E_08_3453329306E1331D02']
+Run interrupted/failed. Re-run the same command after fixing the cause; exact Stage 1/2/3/4/5/6 artifacts and exact Stage 1/2/4/6 checkpoints resume without fallback or overwrite.

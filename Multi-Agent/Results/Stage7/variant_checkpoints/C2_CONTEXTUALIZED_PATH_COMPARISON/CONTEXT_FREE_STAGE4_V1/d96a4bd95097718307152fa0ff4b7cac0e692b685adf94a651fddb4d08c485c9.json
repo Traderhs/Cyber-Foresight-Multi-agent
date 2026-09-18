@@ -1,0 +1,162 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IRF-1",
+        "evidence_ids": [
+          "E_12_842A9CCD6A194A93"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied MITRE ATT&CK record describes a Threat Intelligence Program mitigation that enables organizations to proactively identify, analyze, and act on cyber threats by using internal and external data sources, and it specifies governance and operational measures such as establishing a team, defining intelligence requirements, leveraging internal and external sources, implementing automation, analyzing and acting on intelligence, sharing and collaborating, and evaluating and updating the program.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-2",
+        "evidence_ids": [
+          "E_20_BF167BDA75891A3B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-161 record states that enterprises should explicitly authorize, track, and audit removal of systems and network maintenance tools, and that unauthorized removal may introduce supply chain risks such as malware insertion while the tool is outside the enterprise's control.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-3",
+        "evidence_ids": [
+          "E_22_04CC5D97FEA06DDE"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA record states that organizations of all types and sizes are vulnerable to insider threats and should consider a proactive insider threat mitigation program to define threats, detect and identify those threats, assess risk, and manage risk before concerning behaviors manifest in an actual insider incident.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-4",
+        "evidence_ids": [
+          "E_15_D3680C31BEE2C0F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST AI 100-2 record states that poisoning unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection, and that evasion attacks have been proposed for malware classification, PDF malware classification, Android malicious app detection, and network intrusion detection via Clements et al. on small, weak routers; it does not state that evasion attacks are shown for network traffic anomaly detection.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-5",
+        "evidence_ids": [
+          "E_03_F1CA4CD00581F628"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Mandiant record reports a trend in which China-nexus attackers gained access to edge devices via exploitation of vulnerabilities, particularly zero-days, and deployed custom malware ecosystems; it states that custom malware may go undetected for long periods, that network defenders may have little to no means for monitoring and detection of malware activity on edge devices, and that off-the-shelf security products typically will not support edge devices.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IRF-6",
+        "evidence_ids": [
+          "E_33_D28EA285670B0D01"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Crossref trend record reports annual publication counts for anomaly detection with a security bibliographic filter as 1431 in 2021, 1643 in 2022, 2110 in 2023, and 2496 in 2024, with an OLS slope of 366.20 works/year; it states that the trend is cutoff-constrained and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If the target region is later specified, assess regional legal requirements, regulatory compatibility, data sovereignty, and cross-border constraints for that region.",
+      "If the organization uses threat intelligence to prioritize anomaly detection or related defenses, map the deployment to the supplied M1019 program measures: team responsibility, defined intelligence requirements, internal and external data sources, automation, analysis and action, sharing, and evaluation/update.",
+      "If anomaly detection involves systems or network maintenance tools that can be removed from the environment, apply the supplied supply-chain control expectation to explicitly authorize, track, and audit removal of maintenance tools.",
+      "If edge devices are in scope, account for the supplied observed visibility gap and the stated limitation that off-the-shelf security products typically will not support edge devices.",
+      "If anomaly detection uses unsupervised learning or clustering, account for the supplied documented poisoning of unsupervised clustering for network traffic anomaly detection when assessing adversarial robustness.",
+      "If the organization expects institutional accountability and auditability, incorporate the supplied governance and audit-related guidance into the implementation design, subject to confirmation of the actual organization type and infrastructure context."
+    ],
+    "constraints": [
+      "The frozen deployment_context does not specify a target region, so no jurisdiction-specific legal or regulatory feasibility can be assessed.",
+      "The frozen deployment_context does not specify organization_type, infrastructure_context, or budget_context, so organizational capacity, implementation infrastructure, and compliance resourcing cannot be assessed.",
+      "The supplied records do not establish a target-region requirement, prohibition, approval, data sovereignty constraint, or cross-border transfer constraint for ANOMALY DETECTION.",
+      "Region-specific applicability of supplied legal or regulatory records cannot be assessed because the target region is absent.",
+      "Documented adversarial ML poisoning for network traffic anomaly detection and documented edge-device detection limitations are general implementation barriers, not evidence of target-specific institutional infeasibility."
+    ],
+    "decision_object_id": "decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28",
+    "evidence_gaps": [
+      "Missing target region prevents assessment of regional legal requirements, regulatory compatibility, data sovereignty, and cross-border constraints.",
+      "Missing organization_type prevents assessment of institutional governance capacity and organizational threat-intelligence or insider-threat program maturity.",
+      "Missing infrastructure_context prevents assessment of whether the environment includes edge devices, SIEM integration, maintenance tooling, or other systems relevant to auditability and implementation.",
+      "Missing budget_context prevents assessment of compliance burden, tooling, staffing, or program governance costs.",
+      "No supplied record establishes that ANOMALY DETECTION is institutionally approved, legally required, prohibited, or audit-ready in the unspecified target region.",
+      "No supplied record provides a region-specific compliance burden or regulatory compatibility assessment for the frozen 2025-2027 timing window."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen action is ANOMALY DETECTION. Under the institutional/regional feasibility lens, the supplied records provide only general governance and risk-related context. The frozen deployment_context leaves region, organization_type, infrastructure_context, and budget_context null, so deployment-specific regulatory compatibility, data sovereignty, cross-border constraints, compliance burden, and organizational capacity cannot be assessed. General institutional enablement is present through governance, threat-intelligence, auditability, and insider-threat program guidance. General constraints are present through documented adversarial machine-learning risks for anomaly detection and documented edge-device detection limitations. The Crossref record is publication activity only and does not establish deployment maturity or operational effectiveness. Because general enablement and general constraints both exist, but the necessary regional and organizational context is missing, the stance is indeterminate rather than supported or materially challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "8b0c68d3160c092f07aa2aa74126682b9d54493171d6f3802fdd052c9b20d572",
+  "checkpoint_sha256": "c794cd69751e641cf07ea6da46069e8c9e8c96ccb8d792fe9bc719f410723f42",
+  "created_at": "2026-09-16T16:46:11.204628+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "5829ef17bf9bd5c950bcd602e3f0d2b574c0c1e2ada3a72ec8dd5adf07d077e9",
+    "base_stage3_input_fingerprint": "85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3",
+    "base_stage3_output_sha256": "a5ce30b9c7b30338270a3f1d160af279549cbdd2f76cbe5b3acf5b9618a9a370",
+    "case_id": "main__malware__anomaly_detection",
+    "evidence_ids": [
+      "E_02_F60155CA81B80881",
+      "E_03_F1CA4CD00581F628",
+      "E_04_270A1E7C47ACC4FF",
+      "E_04_58956777A1075C28",
+      "E_08_197B243FDF3AA15A",
+      "E_08_FEE46219AABDA967",
+      "E_12_842A9CCD6A194A93",
+      "E_12_DC3A7F14C38A9DF2",
+      "E_15_556E817722D16E74",
+      "E_15_D3680C31BEE2C0F8",
+      "E_20_BF167BDA75891A3B",
+      "E_22_04CC5D97FEA06DDE",
+      "E_29_C2D0AFA5060E4ED3",
+      "E_29_EB10E20E98625441",
+      "E_29_EC3B9CB419FEA81B",
+      "E_31_6C5988FD2D0D8867",
+      "E_33_D28EA285670B0D01"
+    ],
+    "input_fingerprint": "d96a4bd95097718307152fa0ff4b7cac0e692b685adf94a651fddb4d08c485c9",
+    "lens_type": "institutional_regional",
+    "response_schema_sha256": "31c89546ffa945df7e6bb4e17b698b91a559df381d458cf643052ae7171a56e6",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "061fee6c798b1c8b402519d2ed9ebd6de85bcb567838e1f3108bc84c36bbd6ac",
+    "user_prompt_sha256": "50285706bebe3e4adfc73309f572992a3202de58266a8566bc22f73c9f517512",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported by governance-enablement records describing organizational pathways for governing AI/NLP-LLM systems, including accountability structures, roles and responsibilities, training, executive responsibility, AI inventory, monitoring, decommissioning, documentation, transparency, logging, update management, and secure operation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C2",
+        "evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is challenged in a limited and unquantified way by a compliance-constraint record requiring GAI incident reporting in compliance with legal and regulatory requirements; this indicates a potential compliance/reporting burden but does not establish exact obligations, applicability, or burden magnitude for the frozen masked region or this DDoS action.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C3",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise IT environment that may face regulatory burdens and may require enterprise-grade technology and specialized expertise for some safeguards; it does not establish legal applicability, exact burden, or a feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_C4",
+        "evidence_ids": [
+          "AE01C_A6798E23EEB1E487"
+        ],
+        "scope": "GENERAL",
+        "statement": "A curated DDoS LLM finding states that the study does not establish turnkey production deployment, that performance depended on prompt context or fine-tuning, and that the evidence is benchmark-based rather than an enterprise operational or cost study; this is implementation-context information and does not determine institutional/regional feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_C5",
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "scope": "GENERAL",
+        "statement": "Crossref cutoff-constrained publication-activity data for NLP/LLM security shows increasing 2021-2024 counts and trend statistics, but it does not establish deployment maturity, operational effectiveness, causal mitigation, or institutional feasibility.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Before any DEPLOYMENT_SPECIFIC institutional/regional conclusion, obtain jurisdiction-specific regulatory_applicability evidence for GAI/NLP-LLM and DDoS-related systems in the frozen region.",
+      "Implementation planning should identify and, if applicable, integrate legal/regulatory GAI incident-reporting requirements before deployment, consistent with the supplied compliance-constraint record.",
+      "If the organization realizes the supplied governance-enablement pathways, it should define AI accountability roles, inventory, monitoring, documentation, logging, update, and decommissioning processes.",
+      "Deployment planning should assess availability of enterprise-grade technology and specialized expertise where required by the frozen CIS IG2 reference profile.",
+      "If an NLP/LLM DDoS detection approach is deployed, planning should account for the supplied finding that production deployment is not turnkey and may depend on prompt context or fine-tuning."
+    ],
+    "constraints": [
+      "DEPLOYMENT_SPECIFIC institutional/regional direction is not grounded because the supplied grounding contract requires regulatory_applicability and no supplied record provides that slot.",
+      "The compliance constraint in DE_DE02_007F05150CB46131 is generic GAI incident-reporting compliance and does not establish exact legal obligations, reporting triggers, data-sovereignty rules, cross-border constraints, or burden magnitude for the frozen masked region.",
+      "The CIS IG2 profile in CTX_CIS_IG2_9F94838146D9C3A4 supports only reference-enterprise context, including possible regulatory burdens and possible need for enterprise-grade technology or specialized expertise; it does not establish a feasibility direction.",
+      "Threat, publication-trend, benchmark, and other non-eligible records provide context only and do not determine institutional/regional feasibility direction under the supplied grounding contract."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No supplied evidence provides regulatory_applicability for the frozen masked jurisdiction, so jurisdiction-specific legal/regional feasibility remains ungrounded.",
+      "No supplied evidence specifies which legal, data-privacy, data-sovereignty, cross-border, sector, or incident-reporting obligations would apply to an NLP/LLM DDoS deployment in the frozen region.",
+      "No supplied evidence quantifies compliance burden, staffing, funding, or resource capacity for implementing the supplied AI governance pathways.",
+      "No supplied evidence connects the supplied governance guidance to the specific DDoS threat/action beyond generic NLP/LLM/GAI system governance."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen grounding contract permits a GENERAL institutional/regional direction only from the supplied governance_enablement and compliance_constraint records. The support-side records provide organizational governance pathways for AI/NLP-LLM systems, including accountability, roles, monitoring, inventory, decommissioning, documentation, logging, updates, and secure operation. The challenge-side record introduces a generic GAI incident-reporting compliance constraint, but it does not establish exact legal obligations, reporting triggers, data-sovereignty rules, cross-border constraints, or burden magnitude for the frozen masked jurisdiction or this DDoS action. No regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC legal/regional direction cannot be grounded. On balance, the supplied GENERAL governance-enablement evidence is broader and more directly relevant to institutional feasibility than the single generic compliance constraint, so the lens supports feasibility at GENERAL scope with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "fbad6ffb09ded0113a20252c4742fc9eb95b49242bd1945891748a5763131705",
+  "checkpoint_sha256": "314490b6516d8064a653bf7e827b4a029a5952a9bc212d6c1accf8493b4cce13",
+  "created_at": "2026-09-16T11:39:55.639063+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_0B9728FE19095FD0",
+        "DE_DE02_007F05150CB46131",
+        "DE_DE15_271AFADC7B3D5999",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "bd7a899ecaaa769be68bb8837cfd3b095925d610a24185387ffa3bd8f664e7c2",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "fc89ade14bc934fe6fc0c0ea471cce486176f605af227dc7bb1203680708b08d",
+    "payload_transform_id": null,
+    "prompt_variant": "P2_EVIDENCE_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "2765ceeab5b9512e5881af286dbd75df1553f279b395dc9b7c1582f9af16fbc4",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "fdbd7c6d6db6288b722f3a3e1ddd245199a2927ec1c61ada4304cad52a8e2372",
+    "variant_id": "P2_EVIDENCE_FIRST"
+  }
+}

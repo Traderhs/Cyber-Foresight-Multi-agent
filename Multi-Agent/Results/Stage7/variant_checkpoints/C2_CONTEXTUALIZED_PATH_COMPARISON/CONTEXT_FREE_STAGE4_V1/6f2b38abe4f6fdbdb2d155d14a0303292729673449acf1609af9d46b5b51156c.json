@@ -1,0 +1,181 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14, and it explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_29_BAD6581A8E96027C"
+        ],
+        "scope": "GENERAL",
+        "statement": "A 2017 academic metadata record describes an article that tests Suricata in IDS and IPS modes, describes installation and configuration, uses CPU utilization and CPU load average monitoring, and discusses optimizing operating modes depending on hardware resources such as the number of cores.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A 2016 academic metadata record identifies an article titled 'Efficiency test of IDS/IPS systems against DOS and DDOS attacks' with a DOI and venue, and the record is limited to publication metadata while prohibiting deployment_maturity and operational_effectiveness claims.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "scope": "GENERAL",
+        "statement": "A 2024 academic metadata record describes an article on using IDS and IPS for computer network security with Telegram notifications, including implementation/configuration and testing of intrusion scenarios.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "scope": "GENERAL",
+        "statement": "MITRE ATT&CK mitigation M1029 describes remote data storage and intrusion-detection log forwarding, including forwarding logs from IDS/IPS systems such as Zeek/Suricata to a remote security information system.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG records recommend brute-force-relevant controls, including MFA prioritization for IT and OT accounts, alerting after consecutive unsuccessful logins with system-enforced login prevention for IT assets, and unique credential provisioning for IT and newly acquired OT assets; these records prohibit exact_effectiveness and product_roi claims.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C7",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53 Rev.5 describes automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks, and the record prohibits exact_effectiveness and product_roi claims.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C8",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "scope": "GENERAL",
+        "statement": "The 2024 DBIR reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to exploit default, simplistic, or easily guessable credentials via brute forcing, buying, or reusing credentials; the record prohibits product_roi, product_tco, and universal_control_effectiveness claims.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If budget and cost data show that IDS/IPS procurement, configuration, monitoring, and maintenance are affordable, financial feasibility becomes more supported.",
+      "If infrastructure capacity can accommodate IDS/IPS resource requirements and log forwarding to existing centralized/remote log management, adoption burden may be reduced.",
+      "If staffing capacity exists to configure, tune, and respond to IDS/IPS alerts, operational burden is lower; if not, adoption burden may become material.",
+      "If deployment-specific performance and resource-load evidence for the target environment becomes available, the hardware-resource dependence indicated by the academic record can be financially assessed.",
+      "Positive publication activity alone is insufficient for financial feasibility; budget, staffing, and infrastructure context are required.",
+      "If brute-force-relevant controls such as MFA, lockout, and unique credentials are already implemented, IDS/IPS may complement them, but financial feasibility still depends on budget, staffing, and infrastructure context."
+    ],
+    "constraints": [
+      "Deployment-specific financial feasibility cannot be assessed because budget_context, infrastructure_context, organization_type, and region are missing from the frozen deployment context.",
+      "The positive IDS/IPS publication trend is limited to publication activity and cannot be used to infer deployment maturity, operational effectiveness, causal mitigation effectiveness, or financial benefit.",
+      "Academic metadata records cannot be used to assert deployment maturity or operational effectiveness; they support only publication-level and described implementation/testing context.",
+      "DBIR threat counts and persistence statements cannot be used to infer product ROI, product TCO, or universal control effectiveness.",
+      "CISA/NIST control records cannot be used to assert exact control effectiveness or product ROI; they provide only recommended-control context.",
+      "MITRE mitigation descriptions cannot establish causal effectiveness or financial savings; they provide only an implementation/integration pathway context."
+    ],
+    "decision_object_id": "decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c",
+    "evidence_gaps": [
+      "Missing budget context: available funds, one-time implementation cost, recurring license/hardware/service cost, maintenance cost, and total cost of ownership.",
+      "Missing staffing context: SOC/analyst capacity, alert triage volume, tuning effort, on-call responsibility, and operational workload.",
+      "Missing infrastructure context: network architecture, traffic volume, CPU/memory/latency constraints, deployment topology, existing SIEM/log management, and IT/OT boundaries.",
+      "Missing organization and contract context: organization scale, procurement constraints, existing contracts, vendor/support obligations, and regional conditions.",
+      "Missing financial benefit data: incident cost avoidance, loss reduction, or cost savings attributable to IDS/IPS against brute force.",
+      "Missing operational effectiveness data for IDS/IPS against brute force in the target deployment; supplied records prohibit effectiveness claims.",
+      "Missing implementation timing, lead time, and opportunity cost data.",
+      "Missing efficiency or resource-saving pathway data that would quantify net financial benefit."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "Under the financial/adoption feasibility lens, the supplied records provide only weak, general adoption signals for IDS/IPS and do not establish enough support to conclude that the frozen action is financially feasible, nor do they establish material financial or adoption infeasibility. The direct PMT-specific positive signal is a positive IDS/IPS publication trend, but that record is limited to publication activity and explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Academic records describe implementation, testing, performance monitoring, notification, and hardware-resource optimization contexts for IDS/IPS, while MITRE ATT&CK describes IDS/IPS log forwarding into centralized or remote log management. CISA/NIST records show brute-force-relevant operational controls, and DBIR provides neutral observed brute-force threat context. However, no supplied record provides budget, cost, TCO, ROI, staffing, contract, infrastructure capacity, implementation timing, opportunity cost, or deployment-specific financial benefit data. Because budget_context, infrastructure_context, organization_type, and region are null in the frozen deployment context, deployment-specific financial/adoption feasibility cannot be assessed. The balance is therefore mixed/indeterminate: weak general adoption enablers exist, but unquantified integration/resource burdens and missing financial/deployment context prevent a directional feasibility conclusion.",
+    "stance": 0
+  },
+  "assessment_sha256": "e92ce5bf91b9375cff26c315dac574d0cff94a3e5c36bbc47713a3472bd05b7a",
+  "checkpoint_sha256": "81716d05ccec1688294fe41ea939444d0d9c4db7c87259746c1e233b0eb274d9",
+  "created_at": "2026-09-16T17:41:28.280302+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "577799c73a613d52e2d7d92d673cb2cbeb7d998e4ba82ef8ade093548ee53466",
+    "base_stage3_input_fingerprint": "40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815",
+    "base_stage3_output_sha256": "39986484dc1b69948531ef36d4c6d2d4cace4c3afd4c7520c5b2a4f020d29817",
+    "case_id": "main__brute_force__ids_ips",
+    "evidence_ids": [
+      "E_02_669F59880AF52688",
+      "E_03_C54C5F099169E020",
+      "E_03_F2B2EBA86BEEFDC5",
+      "E_04_02D425B67E57F32D",
+      "E_12_D8076704AE363FE2",
+      "E_23_312B9513BCEE9B9D",
+      "E_23_B21FAA9377991F05",
+      "E_23_EBCAB9508641E703",
+      "E_25_FE58E4FCF044EDE3",
+      "E_29_8E495DC2A98305B1",
+      "E_29_BAD6581A8E96027C",
+      "E_29_CA00E63DF08A6FC1",
+      "E_33_A707006877BFD1C2"
+    ],
+    "input_fingerprint": "6f2b38abe4f6fdbdb2d155d14a0303292729673449acf1609af9d46b5b51156c",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "b3c00c2f63cd7ec581c44e9a10294c5ccb6f85baca61e8cfb763bc9cfd081833",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "76e26387bdba12b875605230c4122e3e9b23ad8edc15abbc7a91939925aa71d9",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAC_C1",
+        "evidence_ids": [
+          "E_23_6C42FC29A05ADCAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA's Cybersecurity Performance Goals are described as voluntarily adopted, prioritized cybersecurity practices for IT and OT, applicable across critical infrastructure sectors, with a worksheet that includes impact, cost, and complexity criteria to help organizations internally prioritize investment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_C2",
+        "evidence_ids": [
+          "E_25_99857C4681E8FEE5"
+        ],
+        "scope": "GENERAL",
+        "statement": "A NIST SP 800-53 control addresses protection of communications-session authenticity and explicitly includes protection against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_C3",
+        "evidence_ids": [
+          "E_04_B9A3190D9CA152A3"
+        ],
+        "scope": "GENERAL",
+        "statement": "IBM X-Force reports that security misconfigurations were the most observed web application security risk across client environments globally, accounting for 30% of total findings, and that allowing concurrent user sessions was a top misconfiguration at 15%, which could weaken MFA through session hijacking.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_C4",
+        "evidence_ids": [
+          "E_26_2A6B7965607F1AAF"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A states that organizations balance the resources expended on deployment of security and privacy controls with the resources expended to determine overall control effectiveness, initially and through continuous monitoring.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_C5",
+        "evidence_ids": [
+          "E_10_AC5A58AF5E015229"
+        ],
+        "scope": "GENERAL",
+        "statement": "A CISA advisory reports that an XSS vulnerability in affected Siemens SCALANCE products could result in session cookie stealing and session hijacking, and CISA recommends organizations perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAC_C6",
+        "evidence_ids": [
+          "E_33_13A684B424C1D15B"
+        ],
+        "scope": "GENERAL",
+        "statement": "A Crossref cutoff-constrained publication trend for HTTPS security reports annual counts of 2021=14, 2022=8, 2023=8, 2024=15, an OLS slope of 0.3 works/year, a first-to-last delta of 1, total results of 45, and explicitly states that the trend does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial/adoption feasibility judgment requires supplied deployment context for organization_type, region, infrastructure_context, and budget_context.",
+      "A deployment-specific judgment requires supplied HTTPS-specific cost and resource data, including implementation, staffing, integration, certificate/key management, and continuous monitoring or assessment costs.",
+      "A defensible benefit side requires supplied evidence that HTTPS or session-authenticity controls reduce session-hijacking outcomes in the relevant environment, along with a grounded method for translating that risk reduction into financial value.",
+      "If pre-deployment impact analysis or risk assessment is required by internal or regulatory policy, the scope, effort, staffing, and resource requirements for that analysis must be supplied."
+    ],
+    "constraints": [
+      "E_23_6C42FC29A05ADCAE indicates that the CPGs are voluntarily adopted and internally prioritized using impact, cost, and complexity criteria, so the record does not establish automatic funding, mandated HTTPS deployment, or organization-specific cost recovery.",
+      "E_26_2A6B7965607F1AAF indicates that adopting security controls involves ongoing resource allocation for deployment and effectiveness determination, including continuous monitoring.",
+      "E_10_AC5A58AF5E015229 recommends proper impact analysis and risk assessment prior to deploying defensive measures, which adds a general pre-adoption effort and assessment burden.",
+      "E_33_13A684B424C1D15B does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, so the publication trend cannot be treated as evidence of successful HTTPS adoption."
+    ],
+    "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+    "evidence_gaps": [
+      "No supplied evidence provides HTTPS-specific budget, cost, total cost of ownership, staffing, contractor, infrastructure, or maintenance cost information for the frozen scenario.",
+      "No supplied evidence provides an HTTPS implementation timeline, migration duration, cutover constraints, or deployment sequence for the 2025-2027 timing window.",
+      "No supplied evidence provides current deployment status, certificate management, key management, application inventory, integration scope, or operational change-management requirements for HTTPS.",
+      "No supplied evidence provides a quantified or directional financial benefit, avoided-incident value, or opportunity-cost estimate attributable to HTTPS in the relevant environment.",
+      "No supplied evidence links PMT_HTTPS or session-authenticity controls to reduced session-hijacking success in a specific deployed environment, which is required for a deployment-specific financial feasibility judgment.",
+      "The frozen deployment_context has missing organization_type, region, infrastructure_context, and budget_context, preventing a deployment-specific financial/adoption conclusion."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied Stage 0 records support only a general, conditional view of HTTPS adoption feasibility. E_23_6C42FC29A05ADCAE provides a voluntary prioritization framework that includes impact, cost, and complexity criteria, which is a general adoption enabler. E_25_99857C4681E8FEE5 describes a session-authenticity control relevant to session hijacking and man-in-the-middle protection, which supports a general adoption benefit. E_04_B9A3190D9CA152A3 provides observed web-application misconfiguration risk context related to session hijacking, which can act as an adoption driver. On the burden side, E_26_2A6B7965607F1AAF indicates that organizations must balance resources for deploying controls and determining control effectiveness, including continuous monitoring. E_10_AC5A58AF5E015229 recommends impact analysis and risk assessment before deploying defensive measures. E_33_13A684B424C1D15B supplies an HTTPS publication-activity trend but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The frozen deployment context lacks budget, infrastructure, organization type, and region. No supplied record provides cost, staffing, contract, budget, ROI, payback, exact control effectiveness, or implementation-timing information specific to HTTPS in this scenario. Therefore, the financial/adoption feasibility is materially indeterminate rather than supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "d0cf0f570dd5ce5767f40a80a9a6a830caea73119d95632a3e5d6bee8a6342c4",
+  "checkpoint_sha256": "cd5164fd4959c2042584deb4d3ef387ea8e6814437820cbf4f2038b41bcb4285",
+  "created_at": "2026-09-16T18:13:51.534731+00:00",
+  "identity": {
+    "axis": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+    "base_stage3_artifact_sha256": "8cbf609b1a0d7e51b91d7b153f0e4beabeb29c8ab5e339c4a1ae6911801acc3e",
+    "base_stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+    "base_stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+    "case_id": "main__session_hijacking__https",
+    "evidence_ids": [
+      "E_02_3AE1561299B667F5",
+      "E_03_6B1B12ABFD14313F",
+      "E_04_B9A3190D9CA152A3",
+      "E_10_AC5A58AF5E015229",
+      "E_12_9B8ECD82AD844621",
+      "E_12_CFEC6517865F0563",
+      "E_19_A61B74B0F1435639",
+      "E_19_E896356AEE4DB2CD",
+      "E_20_88F8C63B0AC62BEC",
+      "E_22_808618C790A7133A",
+      "E_23_6C42FC29A05ADCAE",
+      "E_25_99857C4681E8FEE5",
+      "E_26_2A6B7965607F1AAF",
+      "E_29_2B4FE56914E3B676",
+      "E_29_5608502338822397",
+      "E_29_B82ABFE7422C38D1",
+      "E_33_13A684B424C1D15B"
+    ],
+    "input_fingerprint": "8138c1190510546194053597d12309a674d4be772a9f1af987c21b9db1437550",
+    "lens_type": "financial_adoption",
+    "response_schema_sha256": "1e579ba227b207be0e1ddc99943793e469fda07b7d90d8a9a1b612c340c63528",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "system_prompt_sha256": "a1be70c855d702b7fb11d2664113a8b726343461c6e9d463ba901b11ff19d9f2",
+    "user_prompt_sha256": "f65d8f6bd31189297fc36a6963116ceee690a55da8efa2d276ac4981f6bd6fd8",
+    "variant_id": "CONTEXT_FREE_STAGE4_V1"
+  }
+}

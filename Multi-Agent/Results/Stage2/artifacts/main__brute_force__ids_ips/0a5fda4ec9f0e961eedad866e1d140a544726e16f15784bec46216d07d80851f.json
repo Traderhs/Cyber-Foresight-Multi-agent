@@ -1,0 +1,1508 @@
+{
+  "artifact_sha256": "b1adefee8d35ca1f584475e6ccc8dbd947e0784727ea94a1beb7219a8774ac6a",
+  "case_id": "main__brute_force__ids_ips",
+  "constrained_output_schema_hashes": {
+    "post_attack_base_sha256": "1fee893effedd9d2b574dbf43d72d486b7d64dcba4e5dd5ffaf62fd247b6193b",
+    "post_defense_base_sha256": "98e6f619cafe5ce172c00a9c5536072fb70202aeb12c631c8d2d6a7081bd0f69",
+    "round1_attack_sha256": "e4cef5f28b46bfe4b2935c3da47272dcb2270333ed5499b538a7f2878ccfecdd",
+    "round1_defense_sha256": "f92bc43d76c7babaacf3720f65d07b500ec7940232733ea9649223ff07029c3e",
+    "round1_mediator_base_sha256": "b1dbcfcdcc3e917c2632cd7f16484061d2e026da6ef79381ae9749b525f27294",
+    "round2_attack_base_sha256": "70d35156661ebdccb166c547ad318e78fdeac2c33046475a3dc229a6437508b3",
+    "round2_defense_base_sha256": "53cbf576459bbe7689251731eb4163ec6368e7937c4695daf3cc57e4e6d3a4c6",
+    "round2_mediator_base_sha256": "34d9356a398be9e14678177040a292189af1e89bf7a17cb4e2a43ac4981229ca"
+  },
+  "created_at": "2026-09-13T18:59:53.637028+00:00",
+  "debate_result": {
+    "attack_post_assessment": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "A1",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 Verizon DBIR reports 1,997 basic web application attack incidents and 881 with confirmed data disclosure, and states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing them, buying them, or reusing them from previous breaches. The word 'continue' supports persistence of an observed threat pattern; the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI)."
+        },
+        {
+          "claim_id": "A2",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 reports that in 2023 exploit was the most prevalent identified initial infection vector at 38%, a six percentage point increase from 2022; phishing was 17%, down from 22% in 2022; prior compromise was 15%; and brute force appears in the initial-infection-vector chart data with a 6% value (chart-data-only, not an explicitly narrated brute-force NoI trend). These vector shares describe proportions when the initial vector was identified and do not constitute a brute-force-specific incident-count (NoI) time series."
+        },
+        {
+          "claim_id": "A3",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 describes attackers performing password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors including MFA push notification approval abuse, help-desk and technical-support social engineering, and targeted SIM swapping to obtain SMS-based MFA or account-recovery codes."
+        },
+        {
+          "claim_id": "A4",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that, in OT-related industries, widespread and likely indiscriminate internal and external vulnerability scanning was the most common attack attempt, that old vulnerabilities and threats such as WannaCry and Conficker remain relevant, and that the discussion references vulnerabilities that make brute force attacks easier for attackers."
+        },
+        {
+          "claim_id": "A5",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS security reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. The record explicitly states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "A6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG and NIST SP 800-53 Rev.5 describe MFA with hardware-based phishing-resistant methods ranked highest, unique credential provisioning for IT and OT assets, alerting after consecutive unsuccessful login attempts, system-enforced login prevention or automatic account lockout, and alternative actions to help prevent brute force attacks, mapped to brute-force subtechniques T1110.001 through T1110.004. The supplied records do not state exact control effectiveness."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "After two rounds of deliberation, no surfaced evidence provides a brute-force-specific NoI (incident count/frequency) temporal directional signal that either supports or challenges the forecasted threat NoI increasing direction. The DBIR 'continue' language (A1) supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. The Mandiant initial-infection-vector shares (A2, revised per MA-R2-2 from CHALLENGES_FORECAST to NEUTRAL_CONTEXT) describe proportions when the initial vector was identified and include a chart-data-only 6% brute-force value; they do not constitute an NoI time series. Mandiant adversary-behavior descriptions (A3) and IBM X-Force OT sector context (A4) are static observed patterns without a temporal NoI direction. The Crossref publication trend (A5) is a PMT-side publication-activity signal and cannot serve as Attack stance-basis evidence. CISA/NIST control records (A6) are neutral operational context. The exploitation_signal evidence slot is missing. No THREAT_TRAJECTORY or GAP_DIRECTION claim with a SUPPORTS_FORECAST or CHALLENGES_FORECAST relation survives as decisive evidence for the Attack stance.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "No surfaced evidence reports a temporal increase or decrease in brute-force-specific incident count or frequency (NoI) that directly validates or challenges the forecasted threat NoI increasing direction for 2025-2027.",
+        "The exploitation_signal evidence slot is missing from the retrieval, so direct observed exploitation signals for the brute force trajectory are not established.",
+        "The DBIR 'continue' language in E_02_669F59880AF52688 supports persistence of an observed threat pattern but does not constitute a forward-looking NoI directional signal.",
+        "Mandiant vector-share percentages in E_03_F2B2EBA86BEEFDC5 describe proportions when the initial vector was identified, not brute-force incident counts, and therefore do not establish an increasing NoI trajectory; the 6% brute-force value is chart-data-only.",
+        "The forecasted threat-minus-PMT gap direction (threat_minus_pmt_increasing, gap_slope_per_year 0.335) cannot be directly validated because no surfaced evidence provides a brute-force NoI directional signal that could be compared against the PMT NoP publication-activity trend as a joint comparative threat-state movement."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "attack_pre_assessment": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "A1",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 Verizon DBIR reports 1,997 basic web application attack incidents and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials by brute forcing, buying, or reusing them from previous breaches."
+        },
+        {
+          "claim_id": "A2",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "CHALLENGES_FORECAST",
+          "statement": "Mandiant M-Trends 2024 reports that in 2023 exploit was the most prevalent identified initial infection vector at 38%, a six percentage point increase from 2022; phishing was 17%, down from 22% in 2022; prior compromise was 15%; and brute force is listed among the identified initial infection vectors with a 6% value in the provided chart data."
+        },
+        {
+          "claim_id": "A3",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 describes attackers performing password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping."
+        },
+        {
+          "claim_id": "A4",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force 2023 reports that old vulnerabilities and threats remain relevant in OT-related industries and that widespread, likely indiscriminate internal and external vulnerability scanning was the most common attack attempt in that sector, in a discussion that also mentions vulnerabilities that make brute force attacks easier."
+        },
+        {
+          "claim_id": "A5",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The Crossref cutoff-constrained publication trend for IDS/IPS reports annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and states that this publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "A6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D",
+            "E_23_B21FAA9377991F05",
+            "E_23_EBCAB9508641E703",
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG and NIST SP 800-53 Rev.5 describe MFA, unique credential provisioning, account lockout, and alerting after unsuccessful logons as controls relevant to brute force techniques, without stating exact control effectiveness."
+        }
+      ],
+      "critic_type": "attack_feasibility",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 0,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "NO_DIRECTIONAL_EVIDENCE",
+        "rationale": "No supplied evidence explicitly reports a temporal increase or decrease in brute force incident count/frequency (NoI) that directly validates the forecasted threat trajectory. Observed persistence, credential-attack behavior, and static prevalence shares do not establish a future NoI increase. The PMT publication trend is directional for PMT NoP but cannot determine the Attack stance.",
+        "supporting_claim_ids": []
+      },
+      "unresolved_questions": [
+        "No supplied record explicitly reports a temporal change in brute force incident count or frequency (NoI) from the 2024 baseline into 2025-2027.",
+        "The exploitation_signal evidence slot is missing, so direct observed exploitation signals for the brute force trajectory are not established.",
+        "DBIR incident counts are reported for basic web application attacks, not as a brute-force-specific NoI time series, so they do not directly validate the forecasted NoI direction.",
+        "Mandiant percentages describe initial infection vector shares when identified, not brute force incident counts, and therefore do not by themselves establish an increasing NoI trajectory.",
+        "No supplied evidence directly establishes the forecasted Threat minus PMT gap direction, because PMT publication trend alone is not deployment maturity, operational effectiveness, or a comparative threat-state movement."
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "case_id": "main__brute_force__ids_ips",
+    "defense_post_assessment": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref record reports IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year."
+        },
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The same Crossref record states that the publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Crossref metadata records verify the existence of IDS/IPS-related publications in 2016, 2017, and 2024, including a 2024 study describing IDS/IPS integration with Telegram notifications."
+        },
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_12_D8076704AE363FE2"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied MITRE ATT&CK M1029 record contains mitigation text describing forwarding IDS/IPS logs, including a Suricata syslog example, to a remote security information system."
+        },
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_23_B21FAA9377991F05"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG describes alerting after consecutive unsuccessful login attempts and system-enforced login prevention for IT assets, mapped to brute-force subtechniques T1110.001, T1110.002, T1110.003, and T1110.004."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends MFA for IT accounts and remotely accessible OT assets, ranks hardware-based phishing-resistant MFA highest, and maps the control to brute force, valid accounts, and external remote services."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_23_EBCAB9508641E703"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends unique and separate credentials for similar services and asset access on IT and OT networks, mapped to valid accounts and brute-force password guessing."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev 5 discusses automatic account lock or delay after unsuccessful logons and, when automatic lockout is not implemented, alternative actions to help prevent brute force."
+        },
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 DBIR reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing them, buying them, or reusing them from previous breaches."
+        },
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 lists Brute Force among 2023 initial infection vectors alongside Exploit, Phishing, Prior Compromise, and Stolen Credentials, and reports the narrative vector shares for Exploit at 38%, Phishing at 17%, and Prior Compromise at 15%."
+        },
+        {
+          "claim_id": "D11",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 describes password guessing against cloud sign-in portals to identify accounts without MFA and reports financially motivated attackers using SIM swapping to obtain SMS-based MFA codes."
+        },
+        {
+          "claim_id": "D12",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports that, in OT-related industries, widespread and likely indiscriminate internal and external vulnerability scanning was the most common attack attempt, and that older vulnerabilities remain relevant, including vulnerabilities that make brute force attacks easier."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "Deliberation confirmed that the decisive defense-side directional signal is D1, based on the cutoff-constrained Crossref IDS/IPS publication-trend record. That record directly provides a positive temporal publication-activity signal for PMT NoP, with annual counts of 44, 43, 52, and 58 for 2021 through 2024 and an OLS slope of 5.1 works/year. The record explicitly limits this signal to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The DBIR, Mandiant, and IBM X-Force materials are neutral observed threat, vector, or sector context; they do not provide a brute-force-specific NoI incident-count temporal trend and therefore do not challenge the PMT NoP direction. After the required framing revisions, D9 is neutral threat context rather than direct threat-trajectory evidence, and no surfaced evidence challenges the PMT-side NoP increasing direction. The PMT-side support therefore dominates the defense stance.",
+        "supporting_claim_ids": [
+          "D1"
+        ]
+      },
+      "unresolved_questions": [
+        "What surfaced temporal brute-force-specific incident-count or frequency evidence, if any, would establish or refute the threat-side NoI direction, given the missing exploitation_signal slot?",
+        "Does the Crossref IDS/IPS publication trend indicate deployment maturity, tuning, or operational effectiveness against brute force, or only increased publication activity? The record limits it to publication activity, but operational deployment remains unestablished.",
+        "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the overall positive OLS slope and the forecasted NoP increasing direction?",
+        "What direct evidence for both PMT NoP and threat NoI modalities would be needed to interpret the forecasted threat-minus-PMT gap sign change from 2025 to 2026?",
+        "Are the CISA/NIST brute-force-relevant controls actually implemented or adopted, and if so, how would that affect operational interpretation without changing the NoP publication-activity direction?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "defense_pre_assessment": {
+      "case_id": "main__brute_force__ids_ips",
+      "claims": [
+        {
+          "claim_id": "D1",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "PMT_TRAJECTORY",
+          "forecast_relation": "SUPPORTS_FORECAST",
+          "statement": "The cutoff-constrained Crossref record reports IDS/IPS security publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year."
+        },
+        {
+          "claim_id": "D2",
+          "evidence_ids": [
+            "E_33_A707006877BFD1C2"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The same Crossref record states that the publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+        },
+        {
+          "claim_id": "D3",
+          "evidence_ids": [
+            "E_29_8E495DC2A98305B1",
+            "E_29_BAD6581A8E96027C",
+            "E_29_CA00E63DF08A6FC1"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Crossref metadata records verify the existence of IDS/IPS publications in 2016, 2017, and 2024, including a 2024 study describing IDS/IPS integration with Telegram notifications."
+        },
+        {
+          "claim_id": "D4",
+          "evidence_ids": [
+            "E_12_D8076704AE363FE2"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The supplied MITRE ATT&CK M1029 record contains mitigation text that describes forwarding IDS/IPS logs, including a Suricata syslog example, to a remote security information system."
+        },
+        {
+          "claim_id": "D5",
+          "evidence_ids": [
+            "E_23_B21FAA9377991F05"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG describes alerting after consecutive unsuccessful login attempts and system-enforced login prevention for IT assets, mapped to brute-force subtechniques T1110.001, T1110.002, T1110.003, and T1110.004."
+        },
+        {
+          "claim_id": "D6",
+          "evidence_ids": [
+            "E_23_312B9513BCEE9B9D"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends MFA for IT accounts and remotely accessible OT assets, ranks hardware-based phishing-resistant MFA highest, and maps the control to brute force, valid accounts, and external remote services."
+        },
+        {
+          "claim_id": "D7",
+          "evidence_ids": [
+            "E_23_EBCAB9508641E703"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "CISA CPG recommends unique and separate credentials for similar services and asset access on IT and OT networks, mapped to valid accounts and brute-force password guessing."
+        },
+        {
+          "claim_id": "D8",
+          "evidence_ids": [
+            "E_25_FE58E4FCF044EDE3"
+          ],
+          "forecast_component": "OPERATIONAL_INTERPRETATION",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "NIST SP 800-53 Rev 5 discusses automatic account lock or delay after unsuccessful logons and, when automatic lockout is not implemented, alternative actions to help prevent brute force."
+        },
+        {
+          "claim_id": "D9",
+          "evidence_ids": [
+            "E_02_669F59880AF52688"
+          ],
+          "forecast_component": "THREAT_TRAJECTORY",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "The 2024 DBIR reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to brute force default, simplistic, or guessable credentials."
+        },
+        {
+          "claim_id": "D10",
+          "evidence_ids": [
+            "E_03_F2B2EBA86BEEFDC5"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 includes brute force in its 2023 initial infection vector list, alongside exploit, phishing, prior compromise, and stolen credentials."
+        },
+        {
+          "claim_id": "D11",
+          "evidence_ids": [
+            "E_03_C54C5F099169E020"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "Mandiant M-Trends 2024 describes password guessing against cloud sign-in portals to identify accounts without MFA and reports financially motivated attackers using SIM swapping to obtain SMS-based MFA codes."
+        },
+        {
+          "claim_id": "D12",
+          "evidence_ids": [
+            "E_04_02D425B67E57F32D"
+          ],
+          "forecast_component": "CONTEXT",
+          "forecast_relation": "NEUTRAL_CONTEXT",
+          "statement": "IBM X-Force reports that, in OT-related industries, widespread internal and external vulnerability scanning was common and older vulnerabilities remain relevant, including conditions that make brute force attacks easier."
+        }
+      ],
+      "critic_type": "defense_robustness",
+      "evidence_sufficiency": "PARTIAL",
+      "stance": 1,
+      "stance_basis": {
+        "challenging_claim_ids": [],
+        "decision": "SUPPORT_DOMINATES",
+        "rationale": "The decisive defense-side evidence is the cutoff-constrained Crossref publication trend for IDS/IPS, which directly supports the forecasted PMT NoP increasing modality by reporting a positive temporal publication-activity trend. The evidence explicitly limits that trend to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. No supplied evidence affirmatively challenges the NoP direction, while the remaining evidence provides neutral operational and threat context.",
+        "supporting_claim_ids": [
+          "D1"
+        ]
+      },
+      "unresolved_questions": [
+        "What direct exploitation-signal evidence would confirm or refute the threat NoI increasing direction, since the payload's missing evidence slot is exploitation_signal?",
+        "Does the positive Crossref IDS/IPS publication trend reflect actual IDS/IPS deployment, tuning, or operational effectiveness against brute force, or only increased scholarly activity?",
+        "How should the 2021-to-2022 publication-count dip from 44 to 43 be reconciled with the forecasted increasing NoP direction and the overall positive OLS slope?",
+        "What is the evidentiary basis for the forecasted threat-minus-PMT gap sign change from 2025 to 2026, given that the supplied threat reports describe patterns and vector shares rather than a confirmed year-over-year NoI incident-count increase?",
+        "Are the CISA/NIST account lockout, unique-credential, and MFA controls mapped to brute force actually implemented or being adopted, which would affect operational interpretation but not the NoP publication trajectory?"
+      ],
+      "unsupported_specificity_detected": false
+    },
+    "evidence_conflicts": [],
+    "evidence_gaps": [],
+    "exchanges": [
+      {
+        "claim_id": "D1",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref record explicitly reports the stated annual counts and OLS slope. It is valid as a directional IDS/IPS publication-activity signal for the PMT side, but it remains a publication-activity axis and does not by itself establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D2",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref record explicitly states the publication-activity limitation described in the opponent claim.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D3",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "note": "The cited metadata records support the existence of IDS/IPS-related publications in 2016, 2017, and 2024, and the 2024 record describes IDS/IPS with Telegram notification. This remains publication metadata and does not establish deployment maturity or operational effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D4",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "note": "The cited MITRE ATT&CK M1029 record does contain mitigation text about forwarding IDS/IPS logs and includes a Suricata syslog forwarding example. This is operational context, not direct evidence of brute-force-specific effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D5",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05"
+        ],
+        "note": "The cited CISA CPG record explicitly describes alerting after consecutive unsuccessful login attempts, system-enforced login prevention for IT assets, and mapping to the four named brute-force subtechniques.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D"
+        ],
+        "note": "The cited CISA CPG record explicitly recommends MFA for IT accounts and remotely accessible OT assets, ranks hardware-based phishing-resistant MFA highest, and maps the control to brute force, valid accounts, and external remote services among other items.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D7",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "note": "The cited CISA CPG record explicitly recommends unique and separate credentials for similar services and asset access on IT and OT networks and maps the control to valid accounts and brute-force password guessing.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D8",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "note": "The cited NIST SP 800-53 Rev. 5 record discusses automatic system lockout or delay algorithms and alternative actions to help prevent brute force attacks when automatic lockout is not implemented.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D9",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "note": "The cited DBIR record supports the factual reporting of 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and continued use of brute forcing against default, simplistic, or easily guessable credentials. However, this evidence does not establish a brute-force-specific NoI directional trajectory. The claim should be read as neutral observed threat context rather than as direct THREAT_TRAJECTORY support.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D10",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "note": "The cited Mandiant M-Trends record includes brute force in the 2023 initial infection vector list alongside exploit, phishing, prior compromise, and stolen credentials. This is a vector-share context claim, not direct evidence of a brute-force NoI incident-count trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D11",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "note": "The cited Mandiant M-Trends record explicitly describes password guessing against cloud sign-in portals to identify accounts without MFA and reports financially motivated attackers using SIM swapping to obtain SMS-based MFA codes. This is observed adversary behavior context, not direct NoI trajectory evidence.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D12",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "note": "The cited IBM X-Force record supports widespread internal and external vulnerability scanning in OT-related industries, continued relevance of older vulnerabilities, and a mention of vulnerabilities that make brute force attacks easier. This is static sector context and does not by itself establish a brute-force NoI directional trajectory.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "A1",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "note": "The cited DBIR chunk directly reports 1,997 basic web application attack incidents and states that threat actors continue to use default, simplistic, and easily guessable credentials via brute forcing, buying, or reusing them from previous breaches. The claim is supported as written.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A2",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "note": "The cited M-Trends chunk supports the reported 2023 initial-infection-vector shares, but those shares describe vector prevalence when identified, not a brute-force NoI incident-count or frequency trajectory. The claim’s factual core is defensible, but its CHALLENGES_FORECAST framing should be narrowed to neutral context rather than direct threat-trajectory evidence.",
+        "response_type": "REVISE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A3",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "note": "The cited M-Trends chunk directly describes password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A4",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "note": "The cited IBM X-Force chunk directly supports the claim that old vulnerabilities and threats remain relevant in OT-related industries, that widespread internal and external vulnerability scanning was the most common attack attempt in that sector, and that the discussion mentions vulnerabilities that make brute force attacks easier.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A5",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref publication-trend record directly reports the IDS/IPS annual publication counts of 44, 43, 52, and 58 for 2021 through 2024, the OLS slope of 5.1 works/year, and the stated limitation that publication activity does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "note": "The cited CISA CPG and NIST SP 800-53 Rev. 5 records collectively describe MFA, unique credential provisioning, alerting after unsuccessful logons, and account lockout or delay as controls relevant to brute force techniques. The supplied text does not state exact control effectiveness, so the claim is supported as written.",
+        "response_type": "AGREE",
+        "round_index": 1,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "D1",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref record directly reports the stated annual IDS/IPS publication counts and OLS slope. It supports the PMT-side publication-activity trajectory only within the record's explicit limitations: it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, and it cannot become decisive Attack stance-basis evidence.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D2",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref record explicitly states that the publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. This limitation is correctly preserved in the opponent claim.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D3",
+        "evidence_ids": [
+          "E_29_8E495DC2A98305B1",
+          "E_29_BAD6581A8E96027C",
+          "E_29_CA00E63DF08A6FC1"
+        ],
+        "note": "The cited Crossref metadata records support publication existence for IDS/IPS-related works in 2016, 2017, and 2024, and the 2024 record describes IDS/IPS with Telegram notification. These are publication-metadata facts only; they do not establish deployment maturity, operational effectiveness, or a directional NoP trend because the static metadata records do not provide a temporal publication-activity series.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D4",
+        "evidence_ids": [
+          "E_12_D8076704AE363FE2"
+        ],
+        "note": "The cited MITRE ATT&CK M1029 record contains the stated mitigation text about forwarding IDS/IPS logs, including a Suricata syslog example, to a remote security information system. This is operational context and does not establish brute-force-specific detection or prevention effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D5",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05"
+        ],
+        "note": "The cited CISA CPG record directly supports alerting after consecutive unsuccessful login attempts, system-enforced login prevention for IT assets, and mapping to the listed brute-force subtechniques. This remains a recommended-control context, not direct evidence of operational effectiveness or a threat trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D"
+        ],
+        "note": "The cited CISA CPG record supports MFA recommendations for IT accounts and remotely accessible OT assets, prioritization of hardware-based phishing-resistant MFA, and mapping to brute force, valid accounts, and external remote services. This is control-recommendation context and does not assert exact control effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D7",
+        "evidence_ids": [
+          "E_23_EBCAB9508641E703"
+        ],
+        "note": "The cited CISA CPG record supports unique and separate credential provisioning for similar services and asset access on IT and OT networks, with mapping to valid accounts and brute-force password guessing. This is recommended-control context, not direct evidence of deployment, adoption, or measured effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D8",
+        "evidence_ids": [
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "note": "The cited NIST SP 800-53 Rev. 5 record discusses automatic account lockout or delay algorithms after unsuccessful logons and alternative actions to help prevent brute force attacks when lockout is not implemented. This is control-context evidence and does not establish exact effectiveness or a forecast trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D9",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "note": "Addressing NR-1: D9's factual core is supported by the DBIR record, which reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and continued use of brute forcing against default, simplistic, or guessable credentials. However, the THREAT_TRAJECTORY label is overextended. The record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI), and the word 'continue' supports persistence or an observed threat pattern rather than a future NoI increase. D9 should be recast in the final post-assessment as neutral observed threat context or operational interpretation, not as direct THREAT_TRAJECTORY evidence.",
+        "response_type": "REVISE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D10",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "note": "Addressing NR-2: D10 is correctly framed as neutral initial-infection-vector context. The cited Mandiant record lists brute force among 2023 initial infection vectors alongside exploit, phishing, prior compromise, and stolen credentials, but it does not establish a brute-force-specific NoI incident-count or frequency trajectory. This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D11",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "note": "The cited Mandiant record supports password guessing against cloud sign-in portals to identify accounts without MFA and financially motivated use of SIM swapping to obtain SMS-based MFA or account-recovery codes. This is observed adversary-behavior context and does not by itself establish a brute-force NoI trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "D12",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "note": "The cited IBM X-Force record supports widespread internal and external vulnerability scanning in OT-related industries, continued relevance of older vulnerabilities, and a mention of vulnerabilities that make brute force attacks easier. This is static sector context and does not establish a directional brute-force NoI trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "attack_feasibility",
+        "target_critic": "defense_robustness"
+      },
+      {
+        "claim_id": "A1",
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "note": "The cited DBIR chunk directly supports A1: it reports 1,997 basic web application attack incidents and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials by brute forcing, buying, or reusing them from previous breaches. Addressing NR-1, this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A2",
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "note": "Addressing NR-2, the cited M-Trends chunk supports the factual 2023 initial-infection-vector context, including the reported shares for exploit, phishing, and prior compromise, and the presence of brute force in the vector list. However, the surfaced record does not establish a brute-force-specific NoI incident-count or frequency trajectory, so A2's CHALLENGES_FORECAST framing is overextended. In the final post-assessment, A2 should be narrowed to NEUTRAL_CONTEXT observed vector-share context; if the 6% Brute Force value is retained, it should be treated as chart-data-only rather than as an explicitly narrated temporal brute-force trend.",
+        "response_type": "REVISE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A3",
+        "evidence_ids": [
+          "E_03_C54C5F099169E020"
+        ],
+        "note": "The cited M-Trends chunk directly supports A3's description of password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping. This is grounded as neutral observed adversary behavior context, not as direct NoI trajectory evidence.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A4",
+        "evidence_ids": [
+          "E_04_02D425B67E57F32D"
+        ],
+        "note": "The cited IBM X-Force chunk supports A4's description that old vulnerabilities and threats remain relevant in OT-related industries, that widespread likely indiscriminate internal and external vulnerability scanning was common, and that the discussion includes vulnerabilities that make brute force attacks easier. This is neutral sector context and does not by itself establish a brute-force NoI directional trajectory.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A5",
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "note": "The cited Crossref cutoff-constrained record directly supports A5: it reports IDS/IPS annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and explicitly limits the record to publication activity rather than deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      },
+      {
+        "claim_id": "A6",
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "note": "The cited CISA CPG and NIST SP 800-53 Rev.5 records collectively support A6's description of MFA, unique credential provisioning, alerting after unsuccessful logons, and account lockout or delay as controls relevant to brute force techniques. The supplied text does not assert exact control effectiveness, so the claim is supported as neutral operational-control context.",
+        "response_type": "AGREE",
+        "round_index": 2,
+        "source_critic": "defense_robustness",
+        "target_critic": "attack_feasibility"
+      }
+    ],
+    "final_adjudications": [
+      {
+        "adjudication_id": "MA-R2-1",
+        "attack_claim_ids": [
+          "A1"
+        ],
+        "defense_claim_ids": [
+          "D9"
+        ],
+        "evidence_ids": [
+          "E_02_669F59880AF52688"
+        ],
+        "outcome": "REVISE_DEFENSE",
+        "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+        "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+      },
+      {
+        "adjudication_id": "MA-R2-2",
+        "attack_claim_ids": [
+          "A2"
+        ],
+        "defense_claim_ids": [
+          "D10"
+        ],
+        "evidence_ids": [
+          "E_03_F2B2EBA86BEEFDC5"
+        ],
+        "outcome": "REVISE_ATTACK",
+        "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+        "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+      },
+      {
+        "adjudication_id": "MA-R2-3",
+        "attack_claim_ids": [
+          "A5"
+        ],
+        "defense_claim_ids": [
+          "D1"
+        ],
+        "evidence_ids": [
+          "E_33_A707006877BFD1C2"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+        "required_revision": null
+      },
+      {
+        "adjudication_id": "MA-R2-4",
+        "attack_claim_ids": [
+          "A6"
+        ],
+        "defense_claim_ids": [
+          "D5",
+          "D6",
+          "D7",
+          "D8"
+        ],
+        "evidence_ids": [
+          "E_23_312B9513BCEE9B9D",
+          "E_23_B21FAA9377991F05",
+          "E_23_EBCAB9508641E703",
+          "E_25_FE58E4FCF044EDE3"
+        ],
+        "outcome": "ACCEPT_BOTH",
+        "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+        "required_revision": null
+      }
+    ],
+    "resolved_claims": [],
+    "rounds": [
+      {
+        "attack_turn": {
+          "case_id": "main__brute_force__ids_ips",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref record explicitly reports the stated annual counts and OLS slope. It is valid as a directional IDS/IPS publication-activity signal for the PMT side, but it remains a publication-activity axis and does not by itself establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D1"
+            },
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref record explicitly states the publication-activity limitation described in the opponent claim.",
+              "response_type": "AGREE",
+              "target_claim_id": "D2"
+            },
+            {
+              "evidence_ids": [
+                "E_29_8E495DC2A98305B1",
+                "E_29_BAD6581A8E96027C",
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "note": "The cited metadata records support the existence of IDS/IPS-related publications in 2016, 2017, and 2024, and the 2024 record describes IDS/IPS with Telegram notification. This remains publication metadata and does not establish deployment maturity or operational effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D3"
+            },
+            {
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "note": "The cited MITRE ATT&CK M1029 record does contain mitigation text about forwarding IDS/IPS logs and includes a Suricata syslog forwarding example. This is operational context, not direct evidence of brute-force-specific effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D4"
+            },
+            {
+              "evidence_ids": [
+                "E_23_B21FAA9377991F05"
+              ],
+              "note": "The cited CISA CPG record explicitly describes alerting after consecutive unsuccessful login attempts, system-enforced login prevention for IT assets, and mapping to the four named brute-force subtechniques.",
+              "response_type": "AGREE",
+              "target_claim_id": "D5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D"
+              ],
+              "note": "The cited CISA CPG record explicitly recommends MFA for IT accounts and remotely accessible OT assets, ranks hardware-based phishing-resistant MFA highest, and maps the control to brute force, valid accounts, and external remote services among other items.",
+              "response_type": "AGREE",
+              "target_claim_id": "D6"
+            },
+            {
+              "evidence_ids": [
+                "E_23_EBCAB9508641E703"
+              ],
+              "note": "The cited CISA CPG record explicitly recommends unique and separate credentials for similar services and asset access on IT and OT networks and maps the control to valid accounts and brute-force password guessing.",
+              "response_type": "AGREE",
+              "target_claim_id": "D7"
+            },
+            {
+              "evidence_ids": [
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "note": "The cited NIST SP 800-53 Rev. 5 record discusses automatic system lockout or delay algorithms and alternative actions to help prevent brute force attacks when automatic lockout is not implemented.",
+              "response_type": "AGREE",
+              "target_claim_id": "D8"
+            },
+            {
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "note": "The cited DBIR record supports the factual reporting of 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and continued use of brute forcing against default, simplistic, or easily guessable credentials. However, this evidence does not establish a brute-force-specific NoI directional trajectory. The claim should be read as neutral observed threat context rather than as direct THREAT_TRAJECTORY support.",
+              "response_type": "REVISE",
+              "target_claim_id": "D9"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "note": "The cited Mandiant M-Trends record includes brute force in the 2023 initial infection vector list alongside exploit, phishing, prior compromise, and stolen credentials. This is a vector-share context claim, not direct evidence of a brute-force NoI incident-count trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D10"
+            },
+            {
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "note": "The cited Mandiant M-Trends record explicitly describes password guessing against cloud sign-in portals to identify accounts without MFA and reports financially motivated attackers using SIM swapping to obtain SMS-based MFA codes. This is observed adversary behavior context, not direct NoI trajectory evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "D11"
+            },
+            {
+              "evidence_ids": [
+                "E_04_02D425B67E57F32D"
+              ],
+              "note": "The cited IBM X-Force record supports widespread internal and external vulnerability scanning in OT-related industries, continued relevance of older vulnerabilities, and a mention of vulnerabilities that make brute force attacks easier. This is static sector context and does not by itself establish a brute-force NoI directional trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D12"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__brute_force__ids_ips",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "note": "The cited DBIR chunk directly reports 1,997 basic web application attack incidents and states that threat actors continue to use default, simplistic, and easily guessable credentials via brute forcing, buying, or reusing them from previous breaches. The claim is supported as written.",
+              "response_type": "AGREE",
+              "target_claim_id": "A1"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "note": "The cited M-Trends chunk supports the reported 2023 initial-infection-vector shares, but those shares describe vector prevalence when identified, not a brute-force NoI incident-count or frequency trajectory. The claim’s factual core is defensible, but its CHALLENGES_FORECAST framing should be narrowed to neutral context rather than direct threat-trajectory evidence.",
+              "response_type": "REVISE",
+              "target_claim_id": "A2"
+            },
+            {
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "note": "The cited M-Trends chunk directly describes password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping.",
+              "response_type": "AGREE",
+              "target_claim_id": "A3"
+            },
+            {
+              "evidence_ids": [
+                "E_04_02D425B67E57F32D"
+              ],
+              "note": "The cited IBM X-Force chunk directly supports the claim that old vulnerabilities and threats remain relevant in OT-related industries, that widespread internal and external vulnerability scanning was the most common attack attempt in that sector, and that the discussion mentions vulnerabilities that make brute force attacks easier.",
+              "response_type": "AGREE",
+              "target_claim_id": "A4"
+            },
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref publication-trend record directly reports the IDS/IPS annual publication counts of 44, 43, 52, and 58 for 2021 through 2024, the OLS slope of 5.1 works/year, and the stated limitation that publication activity does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "A5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "note": "The cited CISA CPG and NIST SP 800-53 Rev. 5 records collectively describe MFA, unique credential provisioning, alerting after unsuccessful logons, and account lockout or delay as controls relevant to brute force techniques. The supplied text does not state exact control effectiveness, so the claim is supported as written.",
+              "response_type": "AGREE",
+              "target_claim_id": "A6"
+            }
+          ],
+          "round_index": 1,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "MA-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The surfaced DBIR record directly supports the factual statement in D9: it reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and states that threat actors continue to exploit default, simplistic, or guessable credentials through brute forcing, buying, or reuse. However, the same record does not report a temporal increase or decrease in brute-force-specific incident count or frequency. The term 'continue' supports persistence or observed threat pattern, not a direct threat-trajectory increase. A1 already treats the same DBIR material as neutral operational context. Therefore the defensive trajectory framing is better grounded only after revision to neutral observed threat context.",
+              "required_revision": "In the final post-assessment, recast D9 as neutral observed threat context or operational interpretation, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; retain only the DBIR counts and persistence statement, and do not infer a future increase from 'continue' without a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced Mandiant M-Trends record supports the factual vector-share context in A2: exploit was reported at 38% with a six percentage point increase, phishing at 17% down from 22%, prior compromise at 15%, and Brute Force appears in the initial infection vector list. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory, and D10 correctly treats the Mandiant material as neutral vector context. Therefore A2's CHALLENGES_FORECAST framing is overextended relative to the surfaced evidence and should be narrowed to neutral observed vector-share context. The visible chart text also makes the exact binding of a 6% value to Brute Force less explicit than the narrative values, so any retained 6% brute-force detail should be treated as chart-data-only rather than as a confirmed narrative trend.",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as direct CHALLENGES_FORECAST evidence for the brute-force NoI trajectory; remove or qualify any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase, and if the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            },
+            {
+              "adjudication_id": "MA-3",
+              "attack_claim_ids": [
+                "A5"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced Crossref cutoff-constrained publication-trend record directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year. Both critics agree that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The claim is therefore well grounded within the surfaced evidence boundary.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-4",
+              "attack_claim_ids": [
+                "A6"
+              ],
+              "defense_claim_ids": [
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev. 5 records collectively describe alerting after unsuccessful logons, system-enforced login prevention or lockout, MFA prioritization, unique credential provisioning, and alternative actions to help prevent brute force attacks. The records support the claims as recommended or security controls mapped to brute-force techniques without asserting exact control effectiveness. Both critics agree on this neutral operational-control context, so the claims are grounded within the surfaced evidence boundary.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__brute_force__ids_ips",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [
+            {
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "focus_id": "NR-1",
+              "instruction": "Re-examine whether D9 should be treated as direct THREAT_TRAJECTORY support for a brute-force NoI increase. Align D9 to neutral observed threat context supported by the surfaced DBIR record, and do not infer a future increase from the word 'continue' without a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "focus_id": "NR-2",
+              "instruction": "Re-examine whether A2 should be framed as CHALLENGES_FORECAST. Align A2 to neutral observed initial-infection-vector context supported by the surfaced Mandiant record, and treat the 6% Brute Force value as chart-data-only if retained."
+            }
+          ],
+          "overall_rationale": "The two substantive disputes are framing disputes rather than factual rejections. The DBIR and Mandiant materials are factually supported, but neither provides a brute-force-specific NoI temporal trend strong enough to sustain direct trajectory or forecast-challenge labels without revision. The Crossref publication trend and the CISA/NIST control claims are adequately grounded as neutral PMT publication activity and control-context claims. A focused Round 2 review can help both critics align their final post-assessments with the evidence boundary.",
+          "round_action": "CONTINUE",
+          "round_index": 1
+        },
+        "round_index": 1
+      },
+      {
+        "attack_turn": {
+          "case_id": "main__brute_force__ids_ips",
+          "responder_critic": "attack_feasibility",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref record directly reports the stated annual IDS/IPS publication counts and OLS slope. It supports the PMT-side publication-activity trajectory only within the record's explicit limitations: it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness, and it cannot become decisive Attack stance-basis evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "D1"
+            },
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref record explicitly states that the publication-activity axis does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. This limitation is correctly preserved in the opponent claim.",
+              "response_type": "AGREE",
+              "target_claim_id": "D2"
+            },
+            {
+              "evidence_ids": [
+                "E_29_8E495DC2A98305B1",
+                "E_29_BAD6581A8E96027C",
+                "E_29_CA00E63DF08A6FC1"
+              ],
+              "note": "The cited Crossref metadata records support publication existence for IDS/IPS-related works in 2016, 2017, and 2024, and the 2024 record describes IDS/IPS with Telegram notification. These are publication-metadata facts only; they do not establish deployment maturity, operational effectiveness, or a directional NoP trend because the static metadata records do not provide a temporal publication-activity series.",
+              "response_type": "AGREE",
+              "target_claim_id": "D3"
+            },
+            {
+              "evidence_ids": [
+                "E_12_D8076704AE363FE2"
+              ],
+              "note": "The cited MITRE ATT&CK M1029 record contains the stated mitigation text about forwarding IDS/IPS logs, including a Suricata syslog example, to a remote security information system. This is operational context and does not establish brute-force-specific detection or prevention effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D4"
+            },
+            {
+              "evidence_ids": [
+                "E_23_B21FAA9377991F05"
+              ],
+              "note": "The cited CISA CPG record directly supports alerting after consecutive unsuccessful login attempts, system-enforced login prevention for IT assets, and mapping to the listed brute-force subtechniques. This remains a recommended-control context, not direct evidence of operational effectiveness or a threat trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D"
+              ],
+              "note": "The cited CISA CPG record supports MFA recommendations for IT accounts and remotely accessible OT assets, prioritization of hardware-based phishing-resistant MFA, and mapping to brute force, valid accounts, and external remote services. This is control-recommendation context and does not assert exact control effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D6"
+            },
+            {
+              "evidence_ids": [
+                "E_23_EBCAB9508641E703"
+              ],
+              "note": "The cited CISA CPG record supports unique and separate credential provisioning for similar services and asset access on IT and OT networks, with mapping to valid accounts and brute-force password guessing. This is recommended-control context, not direct evidence of deployment, adoption, or measured effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "D7"
+            },
+            {
+              "evidence_ids": [
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "note": "The cited NIST SP 800-53 Rev. 5 record discusses automatic account lockout or delay algorithms after unsuccessful logons and alternative actions to help prevent brute force attacks when lockout is not implemented. This is control-context evidence and does not establish exact effectiveness or a forecast trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D8"
+            },
+            {
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "note": "Addressing NR-1: D9's factual core is supported by the DBIR record, which reports 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and continued use of brute forcing against default, simplistic, or guessable credentials. However, the THREAT_TRAJECTORY label is overextended. The record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI), and the word 'continue' supports persistence or an observed threat pattern rather than a future NoI increase. D9 should be recast in the final post-assessment as neutral observed threat context or operational interpretation, not as direct THREAT_TRAJECTORY evidence.",
+              "response_type": "REVISE",
+              "target_claim_id": "D9"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "note": "Addressing NR-2: D10 is correctly framed as neutral initial-infection-vector context. The cited Mandiant record lists brute force among 2023 initial infection vectors alongside exploit, phishing, prior compromise, and stolen credentials, but it does not establish a brute-force-specific NoI incident-count or frequency trajectory. This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.",
+              "response_type": "AGREE",
+              "target_claim_id": "D10"
+            },
+            {
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "note": "The cited Mandiant record supports password guessing against cloud sign-in portals to identify accounts without MFA and financially motivated use of SIM swapping to obtain SMS-based MFA or account-recovery codes. This is observed adversary-behavior context and does not by itself establish a brute-force NoI trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D11"
+            },
+            {
+              "evidence_ids": [
+                "E_04_02D425B67E57F32D"
+              ],
+              "note": "The cited IBM X-Force record supports widespread internal and external vulnerability scanning in OT-related industries, continued relevance of older vulnerabilities, and a mention of vulnerabilities that make brute force attacks easier. This is static sector context and does not establish a directional brute-force NoI trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "D12"
+            }
+          ],
+          "round_index": 2,
+          "target_critic": "defense_robustness"
+        },
+        "defense_turn": {
+          "case_id": "main__brute_force__ids_ips",
+          "responder_critic": "defense_robustness",
+          "responses": [
+            {
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "note": "The cited DBIR chunk directly supports A1: it reports 1,997 basic web application attack incidents and states that threat actors continue to exploit assets with default, simplistic, and easily guessable credentials by brute forcing, buying, or reusing them from previous breaches. Addressing NR-1, this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.",
+              "response_type": "AGREE",
+              "target_claim_id": "A1"
+            },
+            {
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "note": "Addressing NR-2, the cited M-Trends chunk supports the factual 2023 initial-infection-vector context, including the reported shares for exploit, phishing, and prior compromise, and the presence of brute force in the vector list. However, the surfaced record does not establish a brute-force-specific NoI incident-count or frequency trajectory, so A2's CHALLENGES_FORECAST framing is overextended. In the final post-assessment, A2 should be narrowed to NEUTRAL_CONTEXT observed vector-share context; if the 6% Brute Force value is retained, it should be treated as chart-data-only rather than as an explicitly narrated temporal brute-force trend.",
+              "response_type": "REVISE",
+              "target_claim_id": "A2"
+            },
+            {
+              "evidence_ids": [
+                "E_03_C54C5F099169E020"
+              ],
+              "note": "The cited M-Trends chunk directly supports A3's description of password guessing against cloud sign-in portals to identify accounts without MFA, along with related credential-abuse behaviors such as MFA push approval abuse, help-desk social engineering, and SIM swapping. This is grounded as neutral observed adversary behavior context, not as direct NoI trajectory evidence.",
+              "response_type": "AGREE",
+              "target_claim_id": "A3"
+            },
+            {
+              "evidence_ids": [
+                "E_04_02D425B67E57F32D"
+              ],
+              "note": "The cited IBM X-Force chunk supports A4's description that old vulnerabilities and threats remain relevant in OT-related industries, that widespread likely indiscriminate internal and external vulnerability scanning was common, and that the discussion includes vulnerabilities that make brute force attacks easier. This is neutral sector context and does not by itself establish a brute-force NoI directional trajectory.",
+              "response_type": "AGREE",
+              "target_claim_id": "A4"
+            },
+            {
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "note": "The cited Crossref cutoff-constrained record directly supports A5: it reports IDS/IPS annual publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year, and explicitly limits the record to publication activity rather than deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "response_type": "AGREE",
+              "target_claim_id": "A5"
+            },
+            {
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "note": "The cited CISA CPG and NIST SP 800-53 Rev.5 records collectively support A6's description of MFA, unique credential provisioning, alerting after unsuccessful logons, and account lockout or delay as controls relevant to brute force techniques. The supplied text does not assert exact control effectiveness, so the claim is supported as neutral operational-control context.",
+              "response_type": "AGREE",
+              "target_claim_id": "A6"
+            }
+          ],
+          "round_index": 2,
+          "target_critic": "attack_feasibility"
+        },
+        "mediator_summary": {
+          "adjudications": [
+            {
+              "adjudication_id": "MA-R2-1",
+              "attack_claim_ids": [
+                "A1"
+              ],
+              "defense_claim_ids": [
+                "D9"
+              ],
+              "evidence_ids": [
+                "E_02_669F59880AF52688"
+              ],
+              "outcome": "REVISE_DEFENSE",
+              "rationale": "The surfaced DBIR record (E_02_669F59880AF52688) directly supports the factual content of D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the statement that threat actors 'continue to take advantage of assets with default, simplistic and easily guessable credentials via brute forcing them, buying them or reusing them from previous breaches.' However, the record does not report a temporal increase or decrease in brute-force-specific incident count or frequency (NoI). The word 'continue' supports persistence of an observed threat pattern, not a forward-looking NoI trajectory. In Round 1 the mediator issued REVISE_DEFENSE for D9. In Round 2, the Attack critic again requests the revision (REVISE), and the Defense critic explicitly concedes in its A1 response: 'this remains neutral observed threat context rather than direct THREAT_TRAJECTORY evidence for a brute-force NoI increase; the corresponding defensive D9 framing should therefore be recast in the final post-assessment to that neutral context boundary.' Both critics now agree on the required revision. The revision is still formally required because the frozen Stage 1 claim D9 carries the THREAT_TRAJECTORY forecast_component and NEUTRAL_CONTEXT forecast_relation in a manner that overextends the surfaced evidence.",
+              "required_revision": "In the final post-assessment, recast D9 as NEUTRAL_CONTEXT observed threat context or OPERATIONAL_INTERPRETATION, not as direct THREAT_TRAJECTORY evidence for a brute-force NoI increase. Retain only the DBIR-reported 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and the persistence statement about brute forcing default, simplistic, or guessable credentials. Do not infer a future NoI increase from the word 'continue' absent a surfaced temporal brute-force NoI signal."
+            },
+            {
+              "adjudication_id": "MA-R2-2",
+              "attack_claim_ids": [
+                "A2"
+              ],
+              "defense_claim_ids": [
+                "D10"
+              ],
+              "evidence_ids": [
+                "E_03_F2B2EBA86BEEFDC5"
+              ],
+              "outcome": "REVISE_ATTACK",
+              "rationale": "The surfaced Mandiant M-Trends record (E_03_F2B2EBA86BEEFDC5) supports the factual vector-share content: exploit at 38% (six-point increase from 2022), phishing at 17% (down from 22%), prior compromise at 15%, and Brute Force appearing in the initial-infection-vector chart. The record does not, however, report a brute-force-specific NoI incident-count or frequency trajectory that would support a CHALLENGES_FORECAST label. In Round 1 the mediator issued REVISE_ATTACK for A2. In Round 2, the Defense critic again requests the revision (REVISE), and the Attack critic explicitly concedes in its D10 response: 'This also confirms that my own A2 CHALLENGES_FORECAST framing is overextended and should be narrowed to NEUTRAL_CONTEXT in the final post-assessment; if the 6% Brute Force value is retained, it must be treated as chart-data-only rather than an explicitly narrated trend.' Both critics now agree on the required revision. The revision remains formally required because the frozen Stage 1 claim A2 carries the CHALLENGES_FORECAST forecast_relation, which is not supported by the surfaced evidence boundary.",
+              "required_revision": "In the final post-assessment, recast A2 as NEUTRAL_CONTEXT observed initial-infection-vector context, not as CHALLENGES_FORECAST evidence for the brute-force NoI trajectory. Remove any implication that the Mandiant vector shares directly establish or challenge a brute-force incident-count increase. If the 6% Brute Force value is retained, label it as chart-data-only rather than as an explicitly narrated brute-force trend."
+            },
+            {
+              "adjudication_id": "MA-R2-3",
+              "attack_claim_ids": [
+                "A5"
+              ],
+              "defense_claim_ids": [
+                "D1"
+              ],
+              "evidence_ids": [
+                "E_33_A707006877BFD1C2"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced Crossref cutoff-constrained publication-trend record (E_33_A707006877BFD1C2) directly reports the annual IDS/IPS publication counts of 44 in 2021, 43 in 2022, 52 in 2023, and 58 in 2024, with an OLS slope of 5.1 works/year and a first-to-last delta of 14. Both critics agree in all rounds that this supports a positive publication-activity signal for the PMT side while explicitly limiting it to publication activity, not deployment maturity, operational effectiveness, or causal mitigation effectiveness. The record's allowed_claim_types is restricted to directional_publication_trend, and its prohibited_claim_types exclude deployment_maturity, operational_effectiveness, and causal_effectiveness. Both A5 and D1 accurately capture the evidence within these boundaries. No revision is needed.",
+              "required_revision": null
+            },
+            {
+              "adjudication_id": "MA-R2-4",
+              "attack_claim_ids": [
+                "A6"
+              ],
+              "defense_claim_ids": [
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+              ],
+              "evidence_ids": [
+                "E_23_312B9513BCEE9B9D",
+                "E_23_B21FAA9377991F05",
+                "E_23_EBCAB9508641E703",
+                "E_25_FE58E4FCF044EDE3"
+              ],
+              "outcome": "ACCEPT_BOTH",
+              "rationale": "The surfaced CISA CPG and NIST SP 800-53 Rev.5 records collectively support the claims as recommended security controls mapped to brute-force techniques without asserting exact control effectiveness. E_23_B21FAA9377991F05 describes alerting after consecutive unsuccessful logins and system-enforced login prevention mapped to T1110.001-T1110.004. E_23_312B9513BCEE9B9D describes MFA prioritization for IT and OT accounts mapped to Brute Force, Valid Accounts, and External Remote Services. E_23_EBCAB9508641E703 describes unique credential provisioning mapped to Valid Accounts and Brute Force subtechniques. E_25_FE58E4FCF044EDE3 discusses automatic account lockout or delay after unsuccessful logons and alternative actions to help prevent brute force attacks. Both critics agree in all rounds that these are neutral operational-control context claims. The evidence's prohibited_claim_types exclude exact_effectiveness and product_roi, and the claims respect those boundaries. No revision is needed.",
+              "required_revision": null
+            }
+          ],
+          "case_id": "main__brute_force__ids_ips",
+          "claim_matches": [],
+          "evidence_conflicts": [],
+          "evidence_gaps": [],
+          "next_round_focus": [],
+          "overall_rationale": "Both substantive disputes carried over from Round 1 (NR-1 on D9's threat-trajectory framing and NR-2 on A2's challenges-forecast framing) are now resolved through explicit mutual concession. The Attack critic requests the D9 revision and the Defense critic concedes it; the Defense critic requests the A2 revision and the Attack critic concedes it. All remaining claims (A1, A3, A4, A5, A6 on the Attack side and D1-D8, D10-D12 on the Defense side) are agreed by both critics as neutral context within the surfaced evidence boundary. No new disputes emerged in Round 2. The surfaced evidence does not contain a brute-force-specific NoI temporal trend or an exploitation_signal record, so neither critic can ground a directional threat-trajectory claim beyond what the frozen evidence supports. The Crossref publication trend remains the only directional signal, bounded to PMT publication activity. No further round would materially clarify the evidence boundary. This is the final allowed round.",
+          "round_action": "STOP",
+          "round_index": 2
+        },
+        "round_index": 2
+      }
+    ],
+    "stance_changes": {
+      "attack_feasibility": 0,
+      "defense_robustness": 0
+    },
+    "unresolved_claims": []
+  },
+  "execution_order_version": "attack-defense-mediator-post-attack-defense-v1",
+  "followup_rule_version": "mediator-adjudication-routes-round2-v1",
+  "forecast_data_sha256": "2f7021606f9c5aaa66397cae00ac1da3fd88691eb9b40208b31cc8e7660522d6",
+  "input_fingerprint": "0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f",
+  "max_rounds": 2,
+  "output_schema_hashes": {
+    "critic_debate_turn_sha256": "cfeff667e1e2404b1a65de1d5b854c2436a3ae52f6f67010474638a813f12760",
+    "mediator_summary_sha256": "ccc54c2be82dfc86a61d35c60a4fed7acc93854fa8339520828a291e07b4d550",
+    "stage2_result_sha256": "67173d52fa6bde8dd367e131809d34a218d209e2e778771ec0c05981260b9a80"
+  },
+  "prompt_hashes": {
+    "debate_appendix_sha256": "bed650d112e9246cb612f05735d8f1bcd3b1e0cac81452dfefaa18841063347f",
+    "debate_user_prompt_sha256": "0f71384c4d2663f44231aac78961d15ec66aee761fa0f15f6bba7e49a05aa168",
+    "mediator_system_prompt_sha256": "9a8540efcc67868e45e2288c8293853f4714c47fcc2e9da729f21366b2c4f7b2",
+    "mediator_user_prompt_sha256": "a79719c372de805daa710f4be29681f4115cf4e9edf4bf927f2ee4d7b4ec91cd",
+    "post_appendix_sha256": "dbafcf3212623902892def956e19af67053f33fd2f258bcb348d91df777a0a7b",
+    "post_user_prompt_sha256": "64b2a02b322884c7dd8700bfa6aa5d5725f9ae06459207eb221d9dcc757d7673",
+    "stage2_attack_role_context_sha256": "728c94692c122e34eba32fad0dfa9f8a63a52c667d412b3ce44d05542f8c94e1",
+    "stage2_defense_role_context_sha256": "7a4501539002af93df15a454fbba90082cc0e234febf3306db4dde8c464b4a3b"
+  },
+  "prompt_visibility_rule_version": "mediator-round2-post-surfaced-evidence-view-v2",
+  "round2_evidence_rule_version": "round2-surfaced-evidence-only-v1",
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage2-artifact-v9",
+  "semantic_validation_version": "stage2-semantic-validation-v9",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "6058219ac145f10e6a0a2cc48eb12c0a6bfed8f0e9e82ee3bf0f427a64e738b0",
+  "stage1_artifact_sha256": "858782a6cb72199947a0dfd862986ffa765abfb7050121966cdad799b3f12b43",
+  "stage1_input_fingerprint": "ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d",
+  "stage2_output_sha256": "8f3714e3ef438137b20943011b1c184cb0c2e00f85c29559b366b56bcbf62a63"
+}

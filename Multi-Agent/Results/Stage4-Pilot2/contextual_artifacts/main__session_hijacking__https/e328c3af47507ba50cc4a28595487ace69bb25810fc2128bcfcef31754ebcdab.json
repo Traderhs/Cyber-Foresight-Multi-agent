@@ -1,0 +1,845 @@
+{
+  "artifact_sha256": "d3975d6f278c68be1872cee052de516a24cb77b8faea23558dc0fe10bb00db48",
+  "case_id": "main__session_hijacking__https",
+  "constrained_output_schema_sha256": {
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904": {
+      "financial_adoption": "a7a8af0b75424b31e4a51e49f06f615c3e6ae9c2f938cf66a2061dc9173c911f",
+      "institutional_regional": "9c155345b6de9cc96d2a91c241cb55bb2ae5d0f9a97c44e9e614ea73b21a5560",
+      "technical_feasibility": "b332cce406348126d588fbd6b324d329d0fbb62c15295c0d194b5fe065126608"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e": {
+      "financial_adoption": "c96b3ca7c50c0d669a74487c82e3586751fe83578b1182ab0010c7abcf6c7c7e",
+      "institutional_regional": "1c6710ccb361b132756df3c89a78bc8e0030a9e9a73ca43537cd0c43376641ed",
+      "technical_feasibility": "f7b27b3b7388092e5c8bf25f71eb0a68ecb039b65685829a5314c5bb8b417f38"
+    },
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e": {
+      "financial_adoption": "d7fe41ba0255da1e28b75746d611dd336681188e384ea804ec0b974ad5434996",
+      "institutional_regional": "08aa6770657cd7db0a7eb61cce2cf28b54f75dc304e747d31419735c47a1de85",
+      "technical_feasibility": "3062bb01c2c21900d9ec1f9860dee408afc1dccbf9494a8ba0232d7fddc14869"
+    }
+  },
+  "created_at": "2026-09-14T18:05:45.507036+00:00",
+  "decision_object_payload_sha256": {
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904": "58027cc6e147a8d84b946b7f78145ea841b7cdc33d3f1cee632542eeea7a928e",
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e": "afcf1437f98379c5e07a09d3144257dc10f11cd6673cfebccfabb9b4bdf3795a",
+    "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e": "80fa4fd444e991f76b8fe0d1be8a143e7be74f81d25709d7bc87ea6827de0ae1"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__session_hijacking__https",
+    "evaluations": [
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "C1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG presents properly configured and up-to-date SSL/TLS as a recommended action, to be used when technically feasible, and includes planning to identify and update outdated or weak encryption, with OT use when feasible to limit latency and availability impact.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "C2",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 describes session-authenticity implementation through organization-defined allowed certificate authorities and TLS certificates, indicating that HTTPS/TLS adoption involves certificate/CA governance and protected-session configuration.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C3",
+              "evidence_ids": [
+                "E_25_FA43BDF2D7F668F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 defines TLS as Transport Layer Security.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "C4",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The frozen CIS IG2 reference profile is a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure; the profile notes that such enterprises can tolerate short service interruptions and that IG2 safeguards address increased operational complexity, with some depending on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial conclusion requires scenario-specific evidence for budget/cost, staffing/expertise, contracts/vendor terms, timeline, and opportunity cost.",
+            "Confirm technical-feasibility scope for TLS/SSL, including OT latency/availability constraints and weak-encryption inventory.",
+            "Confirm certificate-authority and TLS certificate management prerequisites for protected sessions.",
+            "Assess whether the reference enterprise's IT personnel, enterprise-grade technology, and specialized expertise are available, given the IG2 profile."
+          ],
+          "constraints": [
+            "Adoption should be treated as conditional on technical feasibility, including feasible use for OT and updating weak or outdated encryption.",
+            "Adoption includes certificate-authority and TLS certificate configuration/governance for protected sessions.",
+            "The reference enterprise profile may require enterprise-grade technology and specialized expertise for some safeguards, but exact staffing and budget values are not supplied.",
+            "No exact cost, staffing count, contract term, timeline, or opportunity-cost value may be inferred from the supplied records."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e",
+          "evidence_gaps": [
+            "No supplied evaluation_evidence record provides exact HTTPS/TLS implementation cost, budget, procurement ceiling, TCO, price, ROI, or payback period for this scenario.",
+            "No supplied record provides exact staffing counts, security-team size, or available specialized expertise for HTTPS/TLS implementation and certificate management.",
+            "No supplied record provides an implementation timeline, sequencing, service-interruption estimate, or opportunity-cost quantification for this scenario.",
+            "No supplied record provides organization-specific current TLS/SSL coverage, certificate/CA management capability, application/OT compatibility, or vendor/contract terms.",
+            "No supplied record provides KR jurisdiction-specific regulatory or governance cost applicability for HTTPS/TLS adoption."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied material provides general support for adopting HTTPS/TLS as a recognized control: CISA CPG presents properly configured and up-to-date SSL/TLS as a recommended action when technically feasible, including planning to identify and update weak or outdated encryption (E_23_534489D29C38B327), and NIST SP 800-53 describes protected sessions using allowed certificate authorities and TLS certificates (E_25_391B2BD4163782FE). The frozen CIS IG2 reference profile adds relevant adoption context: a multi-department enterprise IT environment with infrastructure personnel, where some safeguards address increased operational complexity and may depend on enterprise-grade technology and specialized expertise (CTX_CIS_IG2_9F94838146D9C3A4). However, the supplied records do not establish exact HTTPS/TLS cost, budget, staffing count, vendor/contract terms, implementation timeline, opportunity cost, or payback for this scenario. Because the financial/adoption question requires cost, staffing, burden, opportunity cost, and timing constraints, and those deployment-specific quantities are missing, the lens cannot make a deployment-specific feasibility conclusion. The action is therefore conditionally supported in general but indeterminate for this specific deployment.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "claim_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance recommends properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, and it frames this as a recommended action for all IT traffic and remote OT assets that communicate with external entities.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_2",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes a session-authenticity enhancement that allows only organization-defined certificate authorities for verification of protected sessions and states that TLS certificates facilitate protected sessions between web clients and web servers.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_3",
+              "evidence_ids": [
+                "E_25_FA43BDF2D7F668F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 defines TLS as Transport Layer Security, supporting the identification of the cited transport-security mechanism as relevant to the PMT_HTTPS action.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_4",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA CPG material describes the CPGs as intended to be voluntarily adopted by organizations, which limits its force as a general prioritization mechanism rather than an evidence of a jurisdiction-specific legal mandate.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_5",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and notes that some IG2 safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_6",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA advisory concerning a cross-site scripting vulnerability that could enable session-cookie stealing and session hijacking recommends impact analysis and risk assessment before deploying defensive measures, indicating an additional institutional implementation consideration.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "claim_7",
+              "evidence_ids": [
+                "E_23_534489D29C38B327",
+                "E_25_391B2BD4163782FE",
+                "E_25_FA43BDF2D7F668F3"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "No supplied evidence establishes Republic of Korea-specific regulatory applicability, data-sovereignty obligations, cross-border transfer constraints, certification-authority governance requirements, or audit/documentation obligations for PMT_HTTPS.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Confirm applicable Republic of Korea legal and regulatory requirements for transport encryption, data protection, and web session security before asserting deployment-specific regulatory feasibility.",
+            "Confirm whether the enterprise processes personal information, critical-infrastructure data, or other data classes that trigger Korea-specific data-governance or cross-border constraints.",
+            "Confirm certificate-authority trust governance, TLS configuration standards, and any jurisdiction-specific audit or documentation obligations for the systems in scope.",
+            "Confirm whether ICS/OT assets are included, because the supplied CISA advisory and CPG material introduce feasibility conditions such as impact analysis, risk assessment, and technical feasibility for latency- or availability-sensitive environments."
+          ],
+          "constraints": [
+            "The evaluation is limited to the frozen PMT_HTTPS action, the KR__CIS_IG2 scenario, and the supplied evaluation_evidence records.",
+            "The Republic of Korea jurisdiction is treated as a frozen experimental scenario parameter, not as evidence of an observed real organization.",
+            "No vendor, product version, exact budget, staffing count, architecture, or jurisdiction-specific legal obligation may be inferred beyond the supplied records.",
+            "CISA CPG guidance is voluntary in the supplied material and therefore cannot be used to establish a Korea-specific legal mandate.",
+            "Korea-specific regulatory compatibility, data sovereignty, and cross-border constraints remain unresolved because no supplied evidence addresses them."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e",
+          "evidence_gaps": [
+            "No Korea-specific statutory, regulatory, or sector-specific applicability evidence for HTTPS/TLS deployment was supplied.",
+            "No Korea-specific data-sovereignty, data-localization, cross-border transfer, or key-management governance evidence was supplied.",
+            "No evidence was supplied on audit, documentation, accountability, or certification-authority governance requirements specific to the KR__CIS_IG2 deployment.",
+            "No deployment architecture, data-classification, system-boundary, or ICS/OT scope evidence was supplied to convert the general control context into deployment-specific feasibility."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen PMT_HTTPS action has GENERAL feasibility support because supplied CISA and NIST guidance treats SSL/TLS as a recommended or controlled mechanism for protecting data in transit and web session establishment. This provides an institutional and control-governance alignment with official security guidance. However, the deployment region is the Republic of Korea, and the supplied evidence contains no Korea-specific regulatory, data-sovereignty, cross-border, certification-authority governance, or audit-requirement evidence. The CIS IG2 reference profile adds only generic organizational-context support, not jurisdiction-specific feasibility. Because jurisdiction-specific regulatory compatibility and data-governance constraints cannot be assessed from the supplied records, the deployment-specific feasibility question is indeterminate rather than materially challenged.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Stage-4 decision evidence presents properly configured and up-to-date SSL/TLS as a recommended action for protecting data in transit, conditional on technical feasibility.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF2",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Stage-4 decision evidence describes TLS certificates, after verification by certificate authorities, as facilitating the establishment of protected sessions between web clients and web servers, with allowed certificate authorities organization-defined.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF3",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE",
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "Supplied session-authenticity control evidence states that authenticity protection includes protecting against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions, while the Stage-4 decision evidence links TLS certificates to protected web sessions, making HTTPS/TLS technically relevant to the frozen session-hijacking threat.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF4",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Stage-4 decision evidence conditions HTTPS/TLS implementation on technical feasibility and requires identifying outdated or weak encryption, updating to sufficiently strong algorithms, and considering post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF5",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The supplied publication-trend record for PMT_HTTPS explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise context describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, differing departmental risk profiles, possible sensitive information, regulatory burdens, tolerance for short interruptions, and notes that some safeguards address increased operational complexity and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Confirm that target web sessions can establish protected sessions using TLS certificates validated against organization-defined allowed certificate authorities.",
+            "Confirm technical feasibility for each asset class and update weak or outdated encryption to sufficiently strong algorithms where HTTPS/TLS is to be used.",
+            "If session hijacking protection depends on session authenticity, configure unique system-generated session identifiers and invalidate session identifiers at logout.",
+            "If OT or ICS assets are in scope, apply encryption when feasible, especially for remote or external communications, while considering latency and availability impact.",
+            "Obtain deployment-specific architecture, web application inventory, certificate-management information, and current TLS adoption status before making a deployment-specific feasibility conclusion."
+          ],
+          "constraints": [
+            "HTTPS/TLS use is recommended only when technically feasible.",
+            "SSL/TLS must be properly configured and up-to-date to protect data in transit.",
+            "Outdated or weak encryption should be identified and updated to sufficiently strong algorithms.",
+            "Post-quantum cryptography implications should be considered.",
+            "TLS-protected web sessions rely on certificates validated against organization-defined allowed certificate authorities.",
+            "Session-authenticity controls include unique system-generated session identifiers with organization-defined randomness and invalidation of session identifiers at logout.",
+            "For OT, encryption is used when feasible, usually for OT communications connecting with remote or external assets, to minimize latency and availability impact."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__84d27cfcc826946e",
+          "evidence_gaps": [
+            "No supplied record provides the current HTTPS/TLS adoption status for the specific web applications, APIs, endpoints, or administrative interfaces in the frozen scenario.",
+            "No supplied record provides the specific architecture or inventory needed to determine whether target web servers, reverse proxies, load balancers, clients, or legacy systems can support TLS/HTTPS and certificate validation.",
+            "No supplied record provides certificate-authority policy, certificate lifecycle management, or allowed-CA configuration for the frozen scenario.",
+            "No supplied record provides an inventory of existing weak or outdated encryption that would need to be updated for HTTPS/TLS deployment.",
+            "No supplied record provides deployment-specific scalability, maintainability, operational burden, or implementation-timeline information within the 2025-2027 horizon.",
+            "No supplied record provides exact staffing, budget, or procurement constraints for implementing or operating HTTPS/TLS."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied Stage-4 decision evidence supports GENERAL technical feasibility for HTTPS/TLS as a recognized control practice for protecting web sessions and data in transit, subject to technical-feasibility conditions. CISA CPG evidence presents properly configured and up-to-date SSL/TLS as a recommended action where technically feasible, and NIST SP 800-53 evidence describes TLS certificates and organization-defined allowed certificate authorities as facilitating protected web-client-to-web-server sessions. Related session-authenticity evidence connects session-authenticity protection to session hijacking, supporting GENERAL threat-mitigation technical fit. However, the frozen deployment context is a CIS IG2 reference-enterprise profile and does not supply deployment-specific architecture, web application inventory, endpoint or legacy compatibility, certificate-management details, current HTTPS adoption, exact implementation timeline, scalability/maintainability data, or resource capacity. The supplied publication-trend evidence explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Therefore, GENERAL feasibility is supported, but DEPLOYMENT_SPECIFIC feasibility within the 2025-2027 horizon is indeterminate under this lens.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "FIN-CLAIM-1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance recommends using properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, and to plan identification and update of outdated or weak encryption while considering post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN-CLAIM-2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG encryption recommended action has a scope of all IT traffic and remote OT assets that communicate with external entities, and for OT states that encryption is used when feasible to minimize latency and availability impacts.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN-CLAIM-3",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST session-authenticity guidance requires organization-defined certificate authorities for protected sessions and states that TLS certificates facilitate protected sessions between web clients and web servers.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "FIN-CLAIM-4",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A describes organizations balancing resources expended on deployment of security and privacy controls with resources expended to determine overall control effectiveness, both initially and on an ongoing basis through continuous monitoring.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN-CLAIM-5",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG framework includes impact, cost, and complexity as worksheet criteria for organizations to internally prioritize security investments.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN-CLAIM-6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen reference-enterprise profile is CIS IG2, describing an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "FIN-CLAIM-7",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref PMT publication trend for HTTPS reports publication activity only and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility conclusion requires organization-specific budget or resource allocation, staffing and skill capacity, contracts or procurement assumptions, existing TLS/CA capabilities, and an implementation timeline.",
+            "Feasibility is conditional on the CPG technical-feasibility and OT latency/availability constraints described in E_23_534489D29C38B327.",
+            "Feasibility is conditional on the organization's ability to manage organization-defined certificate authorities and TLS certificates for protected web sessions, as described in E_25_391B2BD4163782FE.",
+            "Feasibility is conditional on allocating resources for deployment, assessment, and continuous monitoring of security controls, as described in E_26_2A6B7965607F1AAF.",
+            "Feasibility is conditional on internal prioritization of impact, cost, and complexity, as described in E_23_6C42FC29A05ADCAE."
+          ],
+          "constraints": [
+            "No exact budget, price, ROI, TCO, payback period, staffing count, vendor, product version, sector, or architecture may be inferred unless explicitly supported by supplied evidence.",
+            "The CIS IG2 reference-enterprise profile may support organizational context only; it cannot by itself establish implementation burden, cost, or EU legal obligation.",
+            "Deployment-specific financial feasibility claims require organization-specific budget, staffing, contract, and implementation-timing evidence, which is absent.",
+            "Publication-activity evidence for PMT_HTTPS does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904",
+          "evidence_gaps": [
+            "No supplied evidence provides numeric budget, price, procurement ceiling, TCO, ROI, payback period, or opportunity-cost estimate for PMT_HTTPS.",
+            "No supplied evidence provides exact staffing count, security-team size, skill coverage, or capacity for TLS/SSL configuration, certificate authority management, and continuous monitoring.",
+            "No supplied evidence provides contract terms, vendor or product assumptions, product versions, deployment architecture, existing TLS coverage, or certificate-lifecycle tooling.",
+            "No supplied evidence provides implementation timing or schedule assumptions compatible with the frozen 2025-2027 timing window.",
+            "No supplied EU-specific evidence establishes financial obligations, compliance costs, or regulatory budget constraints for HTTPS/TLS adoption."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied records support a general, conditional adoption-feasibility view but do not support a deployment-specific financial or staffing conclusion. CISA CPG guidance describes properly configured and up-to-date SSL/TLS as a recommended action when technically feasible, with scope covering all IT traffic and remote OT assets and with planning to identify or update outdated or weak encryption and consider post-quantum implications. This supports the relevance of HTTPS/TLS as an adoptable control but also introduces configuration, scope, and upgrade-planning burden. NIST session-authenticity guidance ties protected web sessions to TLS certificates and organization-defined certificate authorities, indicating a prerequisite for certificate and CA management. NIST SP 800-53A and CPG prioritization language indicate that deployment resources, control-effectiveness assessment, continuous monitoring, impact, cost, and complexity are relevant to internal prioritization. However, the supplied evidence does not quantify budget, price, ROI, TCO, payback period, staffing count, opportunity cost, contract terms, vendor assumptions, or implementation timing. The CIS IG2 reference-enterprise profile supplies only a general organizational context and cannot by itself establish implementation burden, cost, or EU legal obligation. Therefore, under the Financial/Adoption Feasibility lens, the direction is indeterminate: there are adoption-burden signals, but no supplied financial or resourcing evidence sufficient to conclude that adoption is realistically feasible or materially infeasible in the frozen deployment context.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [],
+          "conditional_requirements": [
+            "If EU-specific regulatory or data-protection obligations are supplied, PMT_HTTPS must be assessed against those obligations before a deployment-specific institutional/regional stance can be assigned.",
+            "If the deployment includes OT or latency-sensitive systems, the CPG condition that encryption be used when technically feasible and that OT latency/availability impact be minimized must be evaluated [E_23_534489D29C38B327].",
+            "If the CIS IG2 profile’s possible regulatory burdens are confirmed to apply, jurisdiction-specific legal evidence is required to determine EU compliance [CTX_CIS_IG2_9F94838146D9C3A4].",
+            "If session-authenticity controls are adopted, organization-defined policy choices must be made for requirements such as randomness and allowed certificate authorities [E_25_391B2BD4163782FE]."
+          ],
+          "constraints": [
+            "PMT_HTTPS is supported as a general institutional control, but the CPG record ties SSL/TLS use to technical feasibility and OT latency/availability impact [E_23_534489D29C38B327].",
+            "The CIS IG2 profile indicates possible regulatory burdens and possible dependence on enterprise-grade technology and specialized expertise for some safeguards, but it does not quantify PMT_HTTPS-specific burden [CTX_CIS_IG2_9F94838146D9C3A4].",
+            "NIST SP 800-53 session-authenticity control language relies on organization-defined assignments, such as randomness requirements and allowed certificate authorities, meaning institutional adoption requires policy definitions [E_25_391B2BD4163782FE]."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904",
+          "evidence_gaps": [
+            "No supplied evidence establishes EU-specific regulatory applicability for PMT_HTTPS, such as a law, regulation, or binding guideline requiring or prohibiting HTTPS/TLS, session-authenticity controls, or TLS certificate handling.",
+            "No supplied evidence establishes EU data-governance, data-sovereignty, data-residency, or cross-border transfer constraints specific to PMT_HTTPS.",
+            "No supplied evidence quantifies EU-specific compliance, audit, reporting, or governance burden for PMT_HTTPS.",
+            "No supplied evidence quantifies staffing, budget, vendor, product version, exact implementation timeline, or technical complexity for PMT_HTTPS in the EU scenario.",
+            "No supplied evidence specifies whether PMT_HTTPS applies to public web endpoints, internal applications, OT systems, third-party services, or a particular deployment architecture."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied decision-evidence records support general institutional feasibility of PMT_HTTPS as a recognized TLS/SSL session-protection and data-in-transit control. However, the frozen EU scenario lacks supplied EU-specific regulatory, data-sovereignty, cross-border, and compliance evidence. The CIS IG2 profile and NIST session-authenticity guidance provide neutral institutional context but do not establish EU legal applicability or quantify deployment-specific compliance burden. Because EU-specific constraints are missing, the lens cannot support a deployment-specific feasibility judgment without converting context insufficiency into a directional stance.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF_CLAIM_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance recommends using properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, with stated scope including all IT traffic and remote OT assets that communicate with external entities.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLAIM_2",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST session-authenticity guidance ties TLS certificates to the establishment of protected sessions between web clients and web servers and requires organization-defined certificate authorities for verification of protected-session establishment.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLAIM_3",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE",
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST session-authenticity guidance frames session-level protection as addressing session hijacking and man-in-the-middle risks, and it describes unique system-generated session identifiers as curbing reuse of previously valid session IDs.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLAIM_4",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "Implementation of the action is conditional on technical feasibility and ongoing cryptographic maintenance, and OT use is qualified by the need to minimize latency and availability impacts.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF_CLAIM_5",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The supplied PMT_HTTPS publication-trend record reports publication activity but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Confirm that the target sessions are web client/web server sessions in which TLS certificates can be validated using organization-defined certificate authorities. Evidence: E_25_391B2BD4163782FE.",
+            "Confirm technical feasibility for each targeted traffic class, especially latency-sensitive or availability-critical OT or remote traffic. Evidence: E_23_534489D29C38B327.",
+            "Combine TLS/HTTPS with session-identifier lifecycle controls, including unique system-generated identifiers and invalidation at logout, where session hijacking is the target technique. Evidence: E_25_391B2BD4163782FE, E_25_99857C4681E8FEE5."
+          ],
+          "constraints": [
+            "TLS/HTTPS use is qualified by technical feasibility and by OT latency and availability constraints. Evidence: E_23_534489D29C38B327.",
+            "The control requires identification and update of outdated or weak encryption and consideration of post-quantum cryptography implications. Evidence: E_23_534489D29C38B327.",
+            "Protected session establishment depends on organization-defined certificate authorities and TLS certificate verification. Evidence: E_25_391B2BD4163782FE.",
+            "The supplied session-authenticity records describe unique system-generated session identifiers and logout invalidation as complementary controls; they do not by themselves show that TLS/HTTPS replaces session-identifier lifecycle controls. Evidence: E_25_391B2BD4163782FE, E_25_99857C4681E8FEE5."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__8b9aa904c5dfe904",
+          "evidence_gaps": [
+            "Missing deployment architecture details needed for DEPLOYMENT_SPECIFIC technical feasibility: target web applications or endpoints, client/browser compatibility, reverse-proxy or load-balancer configuration, certificate-authority lifecycle, legacy-protocol usage, and OT-device or network constraints. The supplied CIS IG2 context is only a high-level reference-enterprise profile. Evidence: CTX_CIS_IG2_9F94838146D9C3A4.",
+            "No supplied record quantifies implementation effort, operational burden, maintainability, scalability, or a concrete implementation timeline for TLS/HTTPS within the 2025-2027 horizon. Evidence: E_23_534489D29C38B327, E_33_13A684B424C1D15B.",
+            "No supplied record establishes that TLS/HTTPS alone mitigates session hijacking caused by already-stolen session identifiers or session-management misconfigurations, such as the XSS-to-cookie-stealing and concurrent-session risk contexts. Evidence: E_10_AC5A58AF5E015229, E_04_B9A3190D9CA152A3."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied decision evidence supports limited GENERAL technical feasibility for the frozen HTTPS/TLS mitigation. CISA CPG guidance recommends properly configured and up-to-date SSL/TLS for protecting data in transit when technically feasible, and NIST session-authenticity guidance links TLS certificates to protected web client/web server sessions, allowed certificate authorities, and session-identifier controls relevant to session hijacking. These facts support technical fit and general implementability, but they do not establish deployment-specific compatibility, exact operational burden, maintainability, scalability, or a concrete implementation timeline. The same CISA record conditions use on technical feasibility and on OT latency/availability constraints, and the supplied publication-trend record explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The frozen CIS IG2 infrastructure context is only a high-level reference-enterprise profile and lacks endpoint, application, client, proxy, certificate-authority, legacy-protocol, and OT architecture details. Therefore, GENERAL technical feasibility is supported, while DEPLOYMENT_SPECIFIC feasibility is indeterminate; converting that context insufficiency into a directional stance is not appropriate.",
+          "stance": 0
+        }
+      },
+      {
+        "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "fin_claim_1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance recommends properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible, and it directs organizations to plan to identify outdated or weak encryption, update it to sufficiently strong algorithms, and consider post-quantum implications.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "fin_claim_2",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPG guidance assigns the encryption practice a scope covering all IT traffic and remote OT assets that communicate with external entities, with OT encryption used when feasible to minimize latency and availability impact.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "fin_claim_3",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev. 5 control guidance requires allowing only organization-defined certificate authorities for verification of protected sessions and states that TLS certificates, after verification by certificate authorities, facilitate protected sessions between web clients and web servers.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "fin_claim_4",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CPGs are described as intended to be voluntarily adopted and the CPG Worksheet includes criteria such as impact, cost, and complexity to help organizations internally prioritize security investment.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "fin_claim_5",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev. 5 states that organizations balance resources expended on deploying security and privacy controls with resources expended to determine overall control effectiveness initially and on an ongoing basis through continuous monitoring programs.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "fin_claim_6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and states that some safeguards depend on enterprise-grade technology and specialized expertise to install and configure; it does not provide exact staffing, budget, price, TCO, ROI, or product cost.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific financial feasibility conclusion requires supplied evidence of available budget, staffing capacity, existing TLS/PKI baseline, and implementation timing.",
+            "If the deployment scope includes remote OT assets, the adoption plan must respect the technically feasible condition and latency/availability considerations stated in the CPG record.",
+            "If organization-defined certificate authorities are not already in place, adoption must account for the CA and TLS certificate prerequisites described in the NIST control record.",
+            "If continuous monitoring or control assessment is part of adoption, resource planning must include both deployment effort and ongoing control-effectiveness determination effort."
+          ],
+          "constraints": [
+            "No numeric budget, price, ROI, TCO, staffing count, procurement ceiling, vendor, product version, or payback period may be inferred because the frozen scenario and supplied records do not provide them.",
+            "The CIS IG2 context record may support only reference-enterprise profile facts; it cannot by itself establish HTTPS implementation burden, cost, or regulatory obligation.",
+            "The action-specific CPG guidance conditions SSL/TLS use on technical feasibility and sets a broad scope across IT traffic and remote OT assets.",
+            "NIST control guidance adds certificate-authority and TLS certificate prerequisites for protected sessions.",
+            "Stage 2 adjudications are treated only as reasoning provenance and are not used as external factual evidence."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e",
+          "evidence_gaps": [
+            "No supplied record provides a numeric budget, price, TCO, ROI, payback period, or procurement ceiling for adopting PMT_HTTPS.",
+            "No supplied record provides exact staffing count, team size, skill inventory, or available engineering hours for TLS/HTTPS implementation, certificate management, or continuous monitoring.",
+            "No supplied record provides the organization's current TLS, HTTPS, PKI, certificate-authority, or certificate-management baseline.",
+            "No supplied record identifies the exact deployment scope, such as which web clients, web servers, IT traffic, remote OT assets, or third-party endpoints are in scope.",
+            "No supplied record provides implementation timing, migration schedule, service-interruption constraints, or opportunity-cost data specific to this frozen action.",
+            "No supplied record distinguishes between low, moderate, or high adoption burden for the specific US__CIS_IG2 deployment context."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied action-specific decision evidence supports that PMT_HTTPS, operationalized as SSL/TLS-based protected sessions, is a recognized recommended control and that CPG practice is presented as voluntary with internal prioritization criteria including cost and complexity. At the same time, the same CPG record assigns a broad scope across all IT traffic and remote OT assets and adds work to identify and update outdated or weak encryption while considering post-quantum implications. NIST control guidance adds prerequisites around organization-defined certificate authorities and TLS certificates for protected sessions. The frozen CIS IG2 context describes a multi-department enterprise with IT personnel but does not supply exact staffing, budget, price, TCO, ROI, payback period, vendor, product version, or deployment architecture. Because the required deployment-specific financial and adoption-burden quantities are absent, this lens cannot assign a positive or negative feasibility stance and treats deployment-specific feasibility as indeterminate.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IR-1",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "In the frozen US scenario, a CISA CPG record states a recommended action to use properly configured and up-to-date SSL/TLS to protect data in transit when technically feasible.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-2",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "In the frozen US scenario, a NIST SP 800-53 Rev. 5 record describes session authenticity control enhancements, including organization-defined certificate authorities and TLS certificates for protected sessions between web clients and web servers.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-3",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The CISA CPG recommended action for SSL/TLS is conditional on technical feasibility, limiting an unconditional HTTPS/TLS feasibility determination under this lens.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-4",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The NIST SP 800-53 Rev. 5 session authenticity control enhancements depend on organization-defined certificate authorities and session-identifier requirements, meaning implementation requires institutional policy configuration.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-5",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "A CISA CPG record states that the CPGs are a prioritized subset of cybersecurity practices intended to be voluntarily adopted by organizations, applicable across critical infrastructure sectors, and not tiered into maturity categories.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-6",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 reference-enterprise profile states that such enterprises have personnel responsible for managing and protecting IT infrastructure across multiple departments, often process sensitive client or enterprise information, may face regulatory burdens, and some IG2 safeguards depend on enterprise-grade technology and specialized expertise.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-7",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST SP 800-53A Rev. 5 record describes that organizations balance resources expended on deploying security and privacy controls with resources for determining overall control effectiveness, including initial assessment and ongoing continuous monitoring.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-8",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA advisory record recommends that organizations perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IR-9",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "A NIST SP 800-53 Rev. 5 record states that protecting session authenticity addresses communications protection at the session level and includes protection against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "HTTPS/TLS should be treated as feasible only where technically feasible, consistent with the CPG recommended action (E_23_534489D29C38B327).",
+            "Organization-defined certificate authority allowlists and session-identifier requirements must be established if NIST SP 800-53 Rev. 5 session authenticity controls are adopted (E_25_391B2BD4163782FE).",
+            "If CPG or NIST SP 800-53 controls are adopted, assessment and continuous monitoring resource balancing should be considered (E_26_2A6B7965607F1AAF).",
+            "If OT/ICS or other advisory-covered defensive measures are in scope, impact analysis and risk assessment should be performed before deployment (E_10_AC5A58AF5E015229; E_23_534489D29C38B327).",
+            "If actual US regulatory, data sovereignty, or cross-border obligations become known, the institutional/regional feasibility judgment should be re-evaluated because the current supplied context is insufficient."
+          ],
+          "constraints": [
+            "The CISA CPG SSL/TLS recommended action is explicitly conditioned on technical feasibility (E_23_534489D29C38B327).",
+            "The CPGs are described as intended to be voluntarily adopted, so the supplied record does not establish mandatory legal adoption (E_23_6C42FC29A05ADCAE).",
+            "NIST session authenticity control enhancements require organization-defined certificate authorities and session-identifier assignments (E_25_391B2BD4163782FE).",
+            "The CIS IG2 reference profile indicates possible regulatory burdens and operational complexity, but does not identify specific legal obligations (CTX_CIS_IG2_9F94838146D9C3A4).",
+            "NIST assessment guidance describes balancing control deployment resources with assessment and continuous monitoring resources (E_26_2A6B7965607F1AAF)."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e",
+          "evidence_gaps": [
+            "No supplied record identifies specific United States legal, regulatory, sectoral, or contractual obligations that apply to the frozen CIS IG2 reference enterprise for HTTPS/TLS deployment.",
+            "No supplied record identifies data sovereignty, data residency, cross-border transfer, or third-party data-processing constraints for the HTTPS action.",
+            "No supplied record specifies action-specific governance, audit, documentation, or accountability requirements for HTTPS/TLS implementation.",
+            "No supplied record determines whether the frozen enterprise is a critical infrastructure operator, government contractor, or otherwise subject to particular US control-adoption obligations.",
+            "No supplied record specifies whether the deployment includes OT/ICS, public-facing web applications, or specific application architectures where the supplied CPG or CISA advisory recommendations would apply."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The frozen HTTPS action is institutionally supported in the US scenario because supplied CISA CPG and NIST SP 800-53 Rev. 5 records describe TLS/SSL use and session-authenticity controls relevant to protected web sessions. However, the supplied records do not establish specific US legal obligations, data sovereignty, cross-border constraints, or action-specific governance/audit requirements for this frozen CIS IG2 enterprise. The CPG recommendation is explicitly conditioned on technical feasibility, and the NIST control enhancements depend on organization-defined policy choices. Therefore the institutional/regional feasibility assessment is mixed and indeterminate under this lens.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-CLM-001",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG describes a recommended action for strong and agile encryption in which properly configured and up-to-date SSL/TLS is utilized to protect data in transit when technically feasible.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-002",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG directs organizations to identify use of outdated or weak encryption, update these to sufficiently strong algorithms, and consider implications of post-quantum cryptography.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-003",
+              "evidence_ids": [
+                "E_23_534489D29C38B327"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG states that for OT, encryption is used when feasible to minimize the impact to latency and availability, usually for OT communications connecting with remote or external assets.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-004",
+              "evidence_ids": [
+                "E_25_391B2BD4163782FE"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 session-authenticity guidance requires allowing only organization-defined certificate authorities for verification of protected sessions and states that TLS certificates, after verification by certificate authorities, facilitate the establishment of protected sessions between web clients and web servers.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-005",
+              "evidence_ids": [
+                "E_25_FA43BDF2D7F668F3"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 defines TLS as Transport Layer Security.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-CLM-006",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 states that session-authenticity protection includes protecting against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions, and includes an enhancement to invalidate session identifiers upon logout or other session termination.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-007",
+              "evidence_ids": [
+                "CTX_CIS_IG2_9F94838146D9C3A4"
+              ],
+              "scope": "DEPLOYMENT_SPECIFIC",
+              "statement": "The frozen CIS IG2 context describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and states that IG2 safeguards address increased operational complexity, with some depending on enterprise-grade technology and specialized expertise to install and configure.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-008",
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "scope": "GENERAL",
+              "statement": "IBM X-Force reports security misconfigurations as the most observed OWASP web application risk, with allowing concurrent user sessions at 15% of that category and a statement that this could weaken MFA through session hijacking.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-009",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA/Siemens advisory states that a cross-site scripting vulnerability in affected SCALANCE switches could allow the stealing of session cookies and session hijacking, and recommends updates, protected network access, isolation, VPN where remote access is required, and impact analysis/risk assessment prior to deploying defensive measures.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TF-CLM-010",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication-trend record for PMT=HTTPS reports publication-activity metrics but explicitly states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Implement HTTPS/TLS only where transport-layer protection is technically feasible for the in-scope traffic, including IT traffic and remote OT assets that communicate with external entities.",
+            "Configure protected sessions with organization-defined allowed certificate authorities and valid TLS certificates.",
+            "Maintain properly configured and up-to-date SSL/TLS, identify and update outdated or weak encryption, and consider post-quantum cryptographic implications.",
+            "For OT communications, assess latency and availability impact before enabling encryption, consistent with the evidence that encryption is used when feasible.",
+            "Pair HTTPS/TLS with session-authenticity measures described in the supplied NIST guidance, including unique system-generated session identifiers and invalidation of session identifiers at logout or session termination.",
+            "Where advisory-based defensive measures are considered for affected devices, perform impact analysis and risk assessment prior to deployment."
+          ],
+          "constraints": [
+            "HTTPS/TLS implementation is conditional on the environment being technically feasible for SSL/TLS deployment, including proper configuration, current TLS usage, trusted certificate authority management, and maintenance of weak or outdated encryption.",
+            "Operational burden includes ongoing identification and remediation of outdated or weak encryption and consideration of post-quantum cryptographic implications.",
+            "For OT or latency/availability-sensitive segments, the evidence conditions encryption use on feasibility and impact on latency and availability, so deployment-specific assessment is required before assuming operability.",
+            "The CIS IG2 reference profile indicates that some safeguards may depend on enterprise-grade technology and specialized expertise, which may increase integration and operational burden.",
+            "Session-hijacking protection described by NIST is broader than TLS alone: it includes session-authenticity controls such as unique system-generated session identifiers, allowed certificate authorities, and invalidation of session identifiers at logout or termination.",
+            "Supplied threat evidence includes application-layer session-hijacking mechanisms such as web application concurrent-session misconfiguration and XSS-based session cookie stealing; the supplied evidence does not establish that HTTPS/TLS alone remediates those application-layer mechanisms."
+          ],
+          "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__51dbc5390d27296e",
+          "evidence_gaps": [
+            "No supplied evidence identifies the current web endpoint inventory, application frameworks, reverse proxies, load balancers, or existing HTTPS/TLS implementation state.",
+            "No supplied evidence identifies organizational certificate authority policy, certificate lifecycle management, trust store constraints, or existing TLS versions/cipher suites.",
+            "No supplied evidence identifies current session identifier generation, session timeout, concurrent-session, or invalidation-at-logout configuration for the systems whose sessions are at risk.",
+            "No supplied evidence identifies OT/ICS latency or availability constraints for the specific systems in the frozen scenario.",
+            "No supplied evidence provides exact budget, staffing count, vendor names, product versions, sector, deployment architecture, or exact implementation timeline.",
+            "No supplied evidence establishes deployment maturity, operational effectiveness, or causal mitigation effectiveness of HTTPS/TLS for the specific frozen threat; the publication-trend record explicitly does not establish these properties."
+          ],
+          "evidence_sufficiency": "PARTIAL",
+          "lens_type": "technical_feasibility",
+          "rationale": "The supplied decision evidence supports GENERAL technical feasibility of PMT_HTTPS as a transport-layer/session-protection control. E_23_534489D29C38B327 describes a recommended action in which properly configured and up-to-date SSL/TLS is used to protect data in transit when technically feasible, with a maintenance duty to identify outdated or weak encryption and update it. E_25_391B2BD4163782FE describes session-authenticity requirements that include allowing only organization-defined certificate authorities and notes that TLS certificates facilitate protected sessions between web clients and web servers. E_25_FA43BDF2D7F668F3 supplies the term TLS as Transport Layer Security, reinforcing the technical object under assessment. E_25_99857C4681E8FEE5 links session-authenticity protection to protection against session hijacking and man-in-the-middle attacks, and requires invalidation of session identifiers at logout or termination, which is a relevant technical fit for the frozen threat. The action is therefore technically implementable and integrable at the GENERAL level where web client/server sessions or IT traffic are in scope and the environment can support current TLS configuration, certificate authority management, and maintenance. This support is conditional, not deployment-specific: the frozen CIS IG2 context says some safeguards may require enterprise-grade technology and specialized expertise, but no supplied evidence identifies the actual current architecture, PKI state, certificate lifecycle, web endpoint inventory, session configuration, OT latency constraints, vendor/product versions, staffing, budget, or implementation timeline. Therefore, DEPLOYMENT_SPECIFIC operability is not fully supported. The evidence does not establish exact control effectiveness, deployment maturity, or causal mitigation of all session-hijacking mechanisms; in particular, supplied threat records describe application-layer mechanisms such as web application concurrent-session misconfiguration and XSS-based session cookie stealing, which are not shown by the supplied evidence to be fully remediated by HTTPS/TLS alone. These limitations constrain the mitigation fit but do not materially challenge the general technical implementability of HTTPS/TLS as a recognized session/data-in-transit protection practice.",
+          "stance": 1
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "e328c3af47507ba50cc4a28595487ace69bb25810fc2128bcfcef31754ebcdab",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "7ed19b86b2a47cddb36397255dc8efc9def00cbbda92119f2565ba05db34b3b4",
+    "institutional_regional_system_prompt_sha256": "507f8c8fff4d1f1e678788b34a10957110def2935a28c7e32dfe54f320d996d7",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "3ef0b7afd1704ead4ce23534b68baebc268e870b2a4dfdb1e05ec02cea7c9680"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "scenario_set_version": "stage3-context-scenarios-v1",
+  "schema_version": "stage4-artifact-v2",
+  "semantic_validation_version": "stage4-semantic-validation-v2",
+  "stage3_context_artifact_sha256": "285564e3c6beff509be2f6da9a6e593086d49acf9a06d2f1a3e17740e499f4e1",
+  "stage3_context_input_fingerprint": "101684dc685879e230553d9bd072190a3ab3fc3adb2672a5a362487ee191c6be",
+  "stage3_context_output_sha256": "06dba450b2ae770ca46ec920eec33606395484d5624c7865eb694a76beaf21f3",
+  "stage4_output_sha256": "60d12b137ac48f6431f70ca5fbfca088baf7b7a64a4b72679cacc1f5b54b7ec3"
+}

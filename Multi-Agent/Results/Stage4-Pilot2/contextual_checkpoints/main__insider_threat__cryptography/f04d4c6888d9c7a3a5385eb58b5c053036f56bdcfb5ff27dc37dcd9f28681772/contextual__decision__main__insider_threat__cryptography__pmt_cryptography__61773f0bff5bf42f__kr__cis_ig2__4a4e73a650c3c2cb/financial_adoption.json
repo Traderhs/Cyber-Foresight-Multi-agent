@@ -1,0 +1,87 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG presents strong and agile encryption as a recommended action, with properly configured and up-to-date SSL/TLS used to protect data in transit when technically feasible, a plan to identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum implications; OT encryption is used when feasible, usually for OT communications connecting with remote or external assets.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A provides assessment objectives and methods for SC-13 cryptographic protection, including defined cryptographic uses, defined types of cryptography, examination of policies/procedures/design/configuration documents, FIPS-related cryptographic module references, interviews, and testing; SC-12(06) assesses physical control of cryptographic keys when stored information is encrypted by external service providers.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "E_26_31F09DD7BB81D0F1",
+          "E_26_B2995F657787797A"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A provides assessment procedures for AU-09(03) cryptographic protection of audit information, including examination of policy, system security plans, design documentation, configuration settings, and testing cryptographic mechanisms protecting the integrity of audit information and tools.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, and states that IG2 safeguards address increased operational complexity, with some depending on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA insider-threat mitigation guidance states that some mitigation measures are cost prohibitive, that projected cost savings may be a significant determinant of an insider threat mitigation program's ROI, and that a 2019 Ponemon Institute report concluded organizations with active threat management programs averaged a cost savings of $1.2 million per incident prevented.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion requires action-specific budget, staffing, skill, procurement, and timeline evidence for the chosen PMT_CRYPTOGRAPHY implementation.",
+      "If cryptographic protection of audit information is in scope, the deployment must resource the AU-09(03) assessment and testing activities described in E_26_31F09DD7BB81D0F1 and E_26_B2995F657787797A.",
+      "If stored information is encrypted by external service providers, the deployment must address the SC-12(06) physical control and key-management assessment activities described in E_26_A710FE8084614182.",
+      "If the deployment spans IT and OT traffic, the scope should respect the technical-feasibility and latency/availability conditions described in E_23_534489D29C38B327.",
+      "If insider-threat cost recovery is required to justify adoption, an action-specific cost-savings or ROI record for PMT_CRYPTOGRAPHY would be required; E_22_C239828119FC69CD only provides general insider-threat program context."
+    ],
+    "constraints": [
+      "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed by the frozen deployment context.",
+      "No exact employee count, security-team size, vendor, product, product version, sector, or deployment architecture is assumed unless supplied by evidence.",
+      "CTX_CIS_IG2_9F94838146D9C3A4 may support only standardized reference-enterprise profile facts and cannot by itself establish implementation burden, cost, or legal obligation.",
+      "Forecast records and CTX profile records cannot by themselves justify a directional feasibility claim for this lens.",
+      "Stage 2 adjudications are reasoning provenance only and are not treated as external factual evidence."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+    "evidence_gaps": [
+      "No action-specific cost, price, TCO, budget, procurement ceiling, or payback-period record for PMT_CRYPTOGRAPHY is supplied.",
+      "No staffing count, security-team size, cryptographic skill availability, or training-cost record specific to PMT_CRYPTOGRAPHY deployment is supplied.",
+      "No exact implementation, migration, or operational timing estimate for PMT_CRYPTOGRAPHY is supplied.",
+      "No KR jurisdiction-specific financial, procurement, or regulatory cost applicability for PMT_CRYPTOGRAPHY is supplied.",
+      "No deployment-specific infrastructure scope is supplied for which systems, traffic, audit logs, key-management boundary, or external service providers would be included in the cryptography deployment."
+    ],
+    "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied Stage 4 decision-evidence does not establish a direction for financial or adoption feasibility of PMT_CRYPTOGRAPHY in the frozen KR/CIS IG2 scenario. E_23_534489D29C38B327 presents strong and agile encryption as a recommended action, but it is conditioned on technical feasibility, includes planning for outdated or weak encryption, and introduces post-quantum considerations. E_26_A710FE8084614182 and E_26_B2995F657787797A describe assessment, documentation, key-management, and testing activities, but under this evidence boundary they are neutral context because no supplied record quantifies cost, staffing, or timeline and no required-slot decision evidence supports a directional financial/adoption challenge. CTX_CIS_IG2_9F94838146D9C3A4 provides only a generalized reference-enterprise profile and cannot by itself establish deployment-specific cost or staffing. E_22_C239828119FC69CD provides general insider-threat cost/ROI context, but it is not specific to PMT_CRYPTOGRAPHY. Because the frozen deployment context expressly omits numeric budget, price, TCO, ROI, staffing count, and procurement ceiling, and no action-specific financial records are supplied, a deployment-specific financial feasibility judgment cannot be made without converting missing context into an unsupported directional stance.",
+    "stance": 0
+  },
+  "assessment_sha256": "92862cb24f972c7422ef540f103d462385e07870d0e13a4dc620cfeb0ae8a0d4",
+  "case_id": "main__insider_threat__cryptography",
+  "checkpoint_sha256": "4fc65ddbcbd23bc2a4852e21c42ebe594cec5289b027be31b29eabccc321811f",
+  "created_at": "2026-09-14T12:20:58.707929+00:00",
+  "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__4a4e73a650c3c2cb",
+  "input_fingerprint": "f04d4c6888d9c7a3a5385eb58b5c053036f56bdcfb5ff27dc37dcd9f28681772",
+  "lens_type": "financial_adoption",
+  "scenario_id": "KR__CIS_IG2",
+  "schema_version": "stage4-lens-checkpoint-v2"
+}

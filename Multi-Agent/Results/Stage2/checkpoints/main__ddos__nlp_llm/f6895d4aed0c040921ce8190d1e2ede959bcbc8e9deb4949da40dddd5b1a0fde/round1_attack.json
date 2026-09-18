@@ -1,0 +1,67 @@
+{
+  "case_id": "main__ddos__nlp_llm",
+  "checkpoint_sha256": "de9c4822ed77f6fb133a5e417a44aa1152cd98d875eabdd871efd7c1f1a0bf46",
+  "created_at": "2026-09-13T16:52:34.340410+00:00",
+  "dependency_sha256": "523d439282ad5b8d32b7055447b68985875284a5f566324a44b8ceb081285f3a",
+  "input_fingerprint": "f6895d4aed0c040921ce8190d1e2ede959bcbc8e9deb4949da40dddd5b1a0fde",
+  "payload": {
+    "case_id": "main__ddos__nlp_llm",
+    "responder_critic": "attack_feasibility",
+    "responses": [
+      {
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "The cited Crossref cutoff-constrained record explicitly supports the stated 2021-2024 publication counts, OLS slope, and first-to-last delta. As an attack-feasibility review, this is a valid PMT-side publication-activity challenge to the forecasted decreasing PMT NoP trajectory, but it does not establish threat-side NoI incident-count/frequency direction or direct DDoS attack feasibility.",
+        "response_type": "AGREE",
+        "target_claim_id": "D1"
+      },
+      {
+        "evidence_ids": [
+          "E_33_ADC8BC66D812799F"
+        ],
+        "note": "The Crossref record explicitly limits its scope to publication-activity validation and states that it does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "response_type": "AGREE",
+        "target_claim_id": "D2"
+      },
+      {
+        "evidence_ids": [
+          "E_02_066AFE8300EDCEBB"
+        ],
+        "note": "The DBIR chunk supports the reported median and 97.5th percentile DDoS bandwidth growth and the conditional statement that a contracted service able to clear the relevant bar can have most impact likely absorbed. This remains operational magnitude and mitigation context, not direct NoI incident-count/frequency evidence.",
+        "response_type": "AGREE",
+        "target_claim_id": "D3"
+      },
+      {
+        "evidence_ids": [
+          "E_08_3453329306E149CB"
+        ],
+        "note": "The KEV record supports the CVE-2023-44487 HTTP/2 Rapid Reset DDoS description and the stated mitigation guidance. The claim does not assert prohibited prevalence magnitude or vulnerability severity details.",
+        "response_type": "AGREE",
+        "target_claim_id": "D4"
+      },
+      {
+        "evidence_ids": [
+          "E_04_892BBCAA3CE5CC92"
+        ],
+        "note": "The X-Force chunk supports the listed DDoS mitigation-readiness actions, though the source frames them in the regional hacktivism context and as measures that help organizations that are targeted. This is defense-readiness context, not direct NoP deployment or effectiveness evidence.",
+        "response_type": "AGREE",
+        "target_claim_id": "D5"
+      },
+      {
+        "evidence_ids": [
+          "E_03_06E6ABC42DA3AC77",
+          "E_03_F13F996D181217BA"
+        ],
+        "note": "The Mandiant chunks support DDoS as an example of destructive operations and reported hacktivist claims of DDoS attacks, website defacements, and hack-and-leak operations. This is observed-threat context, not direct NoI direction.",
+        "response_type": "AGREE",
+        "target_claim_id": "D6"
+      }
+    ],
+    "round_index": 1,
+    "target_critic": "defense_robustness"
+  },
+  "payload_sha256": "4469b8713dd8f4cd57946d8f6196da216c5e7ec8ccf38f025d3b2f34e991c583",
+  "schema_version": "stage2-step-checkpoint-v2",
+  "step_name": "round1_attack"
+}

@@ -1,0 +1,351 @@
+{
+  "artifact_sha256": "0f7e9a14be77140d005f770ba5e480cb2666bdb0e5390f37ea652a50e855c8f9",
+  "case_id": "main__session_hijacking__https",
+  "constrained_output_schema_sha256": {
+    "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2": {
+      "financial_adoption": "1e579ba227b207be0e1ddc99943793e469fda07b7d90d8a9a1b612c340c63528",
+      "institutional_regional": "567cb944426d7065c164893c1272d11e5b6c0c1b6034d65b90bc9f616dee5846",
+      "technical_feasibility": "b8f8cca2fee4f1f1c92a7e428e329f2d00a0714e25a7968d015c01393d39d87a"
+    }
+  },
+  "created_at": "2026-09-14T05:42:43.255616+00:00",
+  "decision_object_payload_sha256": {
+    "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2": "03a6e9b89af1d41297e0831feb14bb6bb1807c7ea48869ebdfe05654ada13838"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__session_hijacking__https",
+    "evaluations": [
+      {
+        "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "F_ADF_C1",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance states that CPGs are intended to be voluntarily adopted by organizations and that the CPG Worksheet includes criteria such as Impact, Cost, and Complexity to help organizations internally prioritize their investment.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F_ADF_C2",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A guidance states that organizations balance resources expended on deployment of security and privacy controls with resources expended to determine overall control effectiveness, both initially and on an ongoing basis through continuous monitoring programs, in a cost-effective manner.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F_ADF_C3",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA advisory guidance states that organizations should perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F_ADF_C4",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes a control to protect the authenticity of communications sessions, with discussion that such protection addresses session-level communication protection, including protection against man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F_ADF_C5",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained PMT publication trend for HTTPS reports annual publication counts and a positive OLS slope, but explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "F_ADF_C6",
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "scope": "GENERAL",
+              "statement": "IBM X-Force 2024 reports that security misconfigurations were the most observed OWASP web application risk across client environments globally and that allowing concurrent user sessions could weaken MFA through session hijacking.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If the organization has existing HTTPS deployment and certificate-management infrastructure, adoption burden may be lower, but the supplied evidence does not establish this.",
+            "If the organization has limited budget or staffing, the general guidance to prioritize by cost, impact, and complexity would require a documented tradeoff assessment, but no such data are supplied.",
+            "If deployment requires impact analysis, risk assessment, testing, or ongoing monitoring, those activities should be included in any deployment-specific feasibility calculation, but no exact effort or cost is supplied.",
+            "A deployment-specific conclusion would require organization-specific evidence for current HTTPS coverage, affected systems, required changes, available budget, and implementation timing constraints."
+          ],
+          "constraints": [
+            "No HTTPS-specific dollar values, ROI, TCO, budget line, payback period, vendor cost, product version, or exact implementation timeline is supplied.",
+            "No deployment-specific staffing, infrastructure, contract, organizational maturity, or opportunity-cost context is supplied.",
+            "The publication-trend evidence is limited to publication activity and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "The web-application misconfiguration evidence does not establish the cost or staffing burden of implementing or extending HTTPS."
+          ],
+          "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+          "evidence_gaps": [
+            "Missing organization_type prevents assessment of sector-specific adoption burden, regulatory obligations, or typical resourcing constraints.",
+            "Missing budget_context prevents assessment of available funding, cost tolerance, or opportunity cost relative to alternative controls.",
+            "Missing infrastructure_context prevents assessment of current HTTPS deployment status, certificate management, web application inventory, or required engineering effort.",
+            "Missing staffing and operational context prevents assessment of implementation, testing, rollback, monitoring, and maintenance burden.",
+            "Missing jurisdiction-specific context prevents assessment of legally or contractually required controls, reporting obligations, or compliance-driven costs."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence supports only general adoption-burden factors: prioritization of security investments by cost and complexity, cost-effective assessment and resource balancing between control deployment and effectiveness determination, and pre-deployment impact analysis and risk assessment. It also identifies session-authenticity controls as relevant to session hijacking and reports HTTPS publication-activity and web-application misconfiguration context. However, it does not quantify HTTPS-specific cost, staffing, contracts, budget, ROI, exact implementation timing, or jurisdiction-specific obligations. Because the frozen deployment_context has null budget_context, infrastructure_context, organization_type, and region, a deployment-specific financial/adoption feasibility conclusion is not supportable. Therefore the action is neither financially supported nor materially challenged under this lens; the stance is indeterminate.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [
+            {
+              "claim_id": "IRF-C1",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes a control to protect the authenticity of communications sessions, addressing protection against man-in-the-middle attacks and session hijacking, with an enhancement to invalidate session identifiers at logout.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C2",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 provides assessment procedures for security and privacy controls in information systems and organizations.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C3",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA Cybersecurity Performance Goals are intended to be voluntarily adopted by organizations, apply to IT and OT, are applicable across all critical infrastructure sectors, and include internal prioritization criteria such as impact, cost, and complexity.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C4",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA guidance in ICSA-22-286-15 recommends that organizations perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "IRF-C5",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA guidance in ICSA-22-286-15 states that organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-C6",
+              "evidence_ids": [
+                "E_02_3AE1561299B667F5"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Verizon DBIR reports increased regulatory pressure of reporting data breaches to governments and notes that there is no commonly accepted format for such reporting.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "IRF-C7",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication trend for HTTPS is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "If the target region is later provided, evaluate region-specific legal, regulatory, data-governance, and cross-border constraints separately; do not infer applicability of any specific jurisdiction from the supplied evidence alone.",
+            "If the organization_type is later provided, determine whether critical-infrastructure, sector-specific, or public-sector institutional controls apply to HTTPS adoption.",
+            "If HTTPS is intended to satisfy session-hijacking protection, document control mapping to session-authenticity and communications-protection controls and obtain implementation or assessment evidence for the target environment.",
+            "If CISA guidance is relied upon, include pre-deployment impact analysis and risk assessment and align incident-reporting workflows to the stated CISA guidance.",
+            "If data-breach reporting is in scope, identify the applicable reporting authority and format before concluding reporting compliance, because the supplied evidence does not provide a target-region reporting requirement."
+          ],
+          "constraints": [
+            "HTTPS should be treated as institutionally feasible only where it can be mapped to recognized session-authenticity or communications-protection control expectations, including session-identifier invalidation where relevant.",
+            "Where CISA guidance is used as an institutional reference, pre-deployment impact analysis and risk assessment are recommended, and suspected malicious activity should be handled under established internal procedures with CISA reporting where applicable.",
+            "Breach-reporting regulatory pressure and the absence of a commonly accepted reporting format mean reporting-related compliance processes cannot be assumed uniform.",
+            "Publication-activity evidence for HTTPS must not be used as evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness."
+          ],
+          "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+          "evidence_gaps": [
+            "The frozen deployment context does not provide target region, organization_type, infrastructure_context, or budget_context, so jurisdiction-specific regulatory compatibility, data sovereignty, cross-border constraints, and compliance burden cannot be assessed.",
+            "No supplied Stage 0 evidence identifies the applicable jurisdiction, sector-specific regulatory regime, data-localization requirements, or cross-border data-transfer obligations for the target deployment.",
+            "No supplied Stage 0 evidence establishes that HTTPS has been deployed, enforced, or operationally effective in the target organization or target region."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "Under the institutional/regional feasibility lens, HTTPS is not shown to be institutionally incompatible with the supplied records. The evidence includes an official NIST control for protecting communications-session authenticity, related to session hijacking and man-in-the-middle protection; a NIST assessment procedure for security and privacy controls; CISA Cybersecurity Performance Goals described as voluntarily adopted and applicable across critical infrastructure sectors; and CISA advisory guidance recommending impact analysis and risk assessment before deploying defensive measures. It also notes regulatory pressure related to data-breach reporting without a commonly accepted reporting format, which introduces compliance-process uncertainty. However, the frozen deployment context lacks region, organization_type, infrastructure_context, and budget_context, and no supplied Stage 0 evidence identifies the target jurisdiction, sector-specific obligations, data-sovereignty rules, cross-border transfer constraints, or target-environment HTTPS deployment maturity. Therefore, general institutional feasibility is supported in a limited control-context sense, while deployment-specific regional feasibility is indeterminate due to missing context.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TF-C1",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes a control to protect the authenticity of communications sessions, and its discussion states that session authenticity protection addresses man-in-the-middle attacks, session hijacking, and insertion of false information into sessions.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C2",
+              "evidence_ids": [
+                "E_25_99857C4681E8FEE5"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 includes a session-authenticity enhancement to invalidate session identifiers upon user logout or other session termination, with discussion that this curtails the ability of adversaries to capture and continue to employ previously valid session IDs.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C3",
+              "evidence_ids": [
+                "E_10_AC5A58AF5E015229"
+              ],
+              "scope": "GENERAL",
+              "statement": "A CISA/Siemens advisory reports an XSS vulnerability in affected Siemens SCALANCE switch products that, if used by a threat actor, could result in stealing of session cookies and session hijacking, and recommends updating to the latest versions and protecting network access to the devices.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C4",
+              "evidence_ids": [
+                "E_04_B9A3190D9CA152A3"
+              ],
+              "scope": "GENERAL",
+              "statement": "IBM X-Force reports security misconfigurations as the most observed web application risk across client environments globally, accounting for 30% of total findings, including allowing concurrent user sessions at 15% which could weaken MFA through session hijacking and excessive session timeouts at 8%.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C5",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "A Crossref cutoff-constrained publication trend for PMT=HTTPS reports total_results=45, annual publication counts of 2021=14, 2022=8, 2023=8, and 2024=15, with an OLS_slope=0.300000 works/year and first_to_last_delta=1.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C6",
+              "evidence_ids": [
+                "E_33_13A684B424C1D15B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref publication trend for PMT_HTTPS explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "CHALLENGES_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C7",
+              "evidence_ids": [
+                "E_23_6C42FC29A05ADCAE"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPG guidance describes CPGs as voluntarily adopted, applicable to all critical infrastructure organizations, not tiered into maturity categories, and using worksheet criteria such as Impact, Cost, and Complexity for internal prioritization.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TF-C8",
+              "evidence_ids": [
+                "E_26_2A6B7965607F1AAF"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A describes organizations balancing resources for deployment of security and privacy controls with resources for determining overall control effectiveness, initially and on an ongoing basis through continuous monitoring programs.",
+              "status": "SUPPORTS_FEASIBILITY"
+            }
+          ],
+          "conditional_requirements": [
+            "A deployment-specific technical feasibility conclusion would require infrastructure_context identifying the target web applications, endpoints, proxies/load balancers, certificate management, existing TLS/HTTPS deployment, legacy protocol compatibility, and session-identifier lifecycle controls.",
+            "A supported technical feasibility stance would require evidence that PMT_HTTPS can be implemented and operated in the target environment without requiring changes outside the supplied evidence, or that any required changes are compatible with the deployment context.",
+            "An operational-burden conclusion would require budget_context and evidence about current monitoring, assessment, maintenance, and continuous-monitoring capabilities.",
+            "A stronger threat-mitigation technical fit conclusion would require evidence tying PMT_HTTPS specifically to protection of the relevant session or cookie transmission paths and to the session-authenticity objectives described in the supplied control guidance.",
+            "A feasibility conclusion for the 2025-2027 horizon would require evidence of implementation readiness, integration status, or scheduled technical implementation within that horizon."
+          ],
+          "constraints": [
+            "Only GENERAL technical feasibility can be assessed because the frozen DecisionObject has null infrastructure_context, organization_type, region, and budget_context.",
+            "The supplied HTTPS publication trend is weak maturity evidence because it reports publication activity only and explicitly disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness.",
+            "Session-authenticity control guidance is treated as relevant technical context, not as evidence that PMT_HTTPS is specifically implemented, deployed, integrated, or effective.",
+            "No deployment-specific compatibility, version-specific implementation timeline, cost, or exact control effectiveness claim is supported by the supplied evidence."
+          ],
+          "decision_object_id": "decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2",
+          "evidence_gaps": [
+            "No supplied evidence defines the technical scope of PMT_HTTPS, such as TLS/HTTPS configuration, certificate management, endpoint enforcement, protocol versions, or integration points.",
+            "No supplied evidence establishes that PMT_HTTPS has been deployed, enforced, integrated, or operated in the relevant environment before or within the 2025-2027 forecast horizon.",
+            "No supplied evidence directly links PMT_HTTPS to the session-authenticity control described in E_25_99857C4681E8FEE5 or to mitigation of the specific session-hijacking mechanisms reported in E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3.",
+            "No supplied evidence establishes PMT_HTTPS compatibility with the target infrastructure, web application stack, API consumers, legacy systems, certificate lifecycle, or network topology.",
+            "No supplied evidence establishes PMT_HTTPS operational burden, maintenance effort, scalability, or maintainability in the target organization.",
+            "Missing infrastructure_context prevents a deployment-specific conclusion about technical implementability, integrability, or operability.",
+            "Missing organization_type, region, and budget_context prevent organization-specific or resource-specific feasibility conclusions."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+          "lens_type": "technical_feasibility",
+          "rationale": "The frozen PMT_HTTPS action is not sufficiently evidenced as technically implementable, integrable, and operable under this lens. The supplied evidence does establish some threat-relevant technical context: session-authenticity control guidance addressing session hijacking and man-in-the-middle risk, and observed session-hijacking-relevant mechanisms such as XSS-based session-cookie theft and web-application session misconfigurations. It also shows limited HTTPS-related publication activity, but that publication trend explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. The supplied records do not define the technical scope of PMT_HTTPS, do not demonstrate that PMT_HTTPS has been deployed, integrated, enforced, or operated in the relevant environment, and do not establish compatibility, operational burden, scalability, maintainability, or implementation constraints. Because infrastructure_context, organization_type, region, and budget_context are missing, only GENERAL feasibility can be assessed, and even the GENERAL evidence is insufficient to support a positive technical feasibility stance. The result is indeterminate rather than supported or materially challenged.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "372158f02ea7ff242829a415e1178ff07345a5a007f3eb1bd11e41f97224e984",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "2b0f1c988b6e69eca684aa58af4845709b9606c1462e619f9eb69ccfbd3e650d",
+    "institutional_regional_system_prompt_sha256": "4642d85804f50bd8e077aec1f9f5de89854abbd00d9c1e0fae16f7e20cb431f4",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "42292179008af427c77e9fe5294c40ff49f4108912f5959f33b0c1fdca2fa1ad"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage4-artifact-v1",
+  "semantic_validation_version": "stage4-semantic-validation-v1",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "6a4b7cb10d09f6b120e2783bf1bb0957dd7cd53c66243135af329756876c5170",
+  "stage3_artifact_sha256": "82c90f5bba32f4c4d498f11afe229671be7cd88679ad183fd5fde1142c88bdcb",
+  "stage3_input_fingerprint": "13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589",
+  "stage3_output_sha256": "4eb586fd629f7e886172255798473e9ecf9d48ada2ef4f48d39c9c6c4bf13bfd",
+  "stage4_output_sha256": "689e868edf84b63c059aee7042f716d9e63eb126f5d0e2af64ca973705fe6913"
+}

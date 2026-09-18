@@ -1,0 +1,1079 @@
+Run log: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\logs\stage1-main-cases-v1__2026-09-15_22-25-34.log
+--- Stage 0 -> Stage 1 -> Stage 2 -> Stage 3 base -> Stage 3 context v4 -> Stage 4 v4: batch execution ---
+Shared model/sampling profile: Qwen3.8-27B-Q6_K_L via llama.cpp at http://127.0.0.1:8080 (thinking=xhigh, temp=1.0, top_p=0.95, top_k=20, seed=42)
+Active shared runtime: 131072 total tokens / 2 slots = 65536 tokens per slot; contextual Stage 4 identity=stage4-context-runtime-128k-total-2slot-v3. Historical one-slot Stage 1/2 artifacts may be reused through the explicit concurrency-only compatibility path.
+Case-set manifest: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\case_sets\stage1-main-cases-v1.json
+Decision-evidence preflight: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\preflight\stage1-main-cases-v1__de-83662ff07d.json
+Progress/resume state: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\runs\stage1-main-cases-v1__stage3-context-scenarios-v1__stage4-artifact-v4__stage4-context-runtime-128k-total-2slot-v3__de-83662ff07d__seed-42__progress.json
+Resume is automatic: exact Stage 1/2/base-Stage3/contextual-Stage3/Stage4-v4 artifacts are reused; interrupted Stage 1 critics, Stage 2 debate steps, and contextual Stage 4 lenses resume only from exact-fingerprint checkpoints, while both Stage 3 layers remain deterministic.
+
+====================================================================================================
+[MAIN SET][1/7] main__ddos__nlp_llm
+Threat=DDoS | PMT=NLP/LLM
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case retained regardless of evidence coverage. It intentionally stress-tests the strict ex-ante evidence boundary and the PARTIAL/INSUFFICIENT_EVIDENCE path instead of dropping a difficult case post hoc.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ddos__nlp_llm (7 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ddos__nlp_llm\8eab7e04105e00e2d439f71acfb2ac39146dbc21c6e348ff4badc56fe51251d8.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json
+
+[MAIN SET][1/7] COMPLETE in 1.6s | action=reused_contextual_stage4_artifact | evidence=7 | slots=3/6 | families=3 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ddos__nlp_llm\bad5024203cfb148f64e4f0d21388555066a3e93a442ba8dd34575d7fdc8eb35.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__ddos__nlp_llm\ce0ff7e92295b8e62d1cd5f39a80758e67832acf98132f024af1630d4285e98d.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__ddos__nlp_llm\b0f94f8f0735d70cb808c364d321aa7220814b18715a022ce9d25ceded374f4f.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__ddos__nlp_llm\0d427d1dfcccc1a4d07fa7019c0abaafc919aa346081203a2e45b82df8f2b8b6.json
+
+====================================================================================================
+[MAIN SET][2/7] main__malware__anomaly_detection
+Threat=Malware | PMT=ANOMALY DETECTION
+Selection=predeclared_anchor | Regime=anchor
+Reason=Predeclared reference case with full slot coverage. It provides a stable, evidence-rich counterpart to the low-coverage anchor and allows redesign comparisons without selecting cases after seeing Stage 1 outputs.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__malware__anomaly_detection (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__malware__anomaly_detection\6a9e72914699b88fbea334d84ce5dc660bfe82645fbe1ae1145e7d7b55e1eaa7.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__malware__anomaly_detection\52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=3 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12451 generated_tokens=0 context_tokens=14499 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12451 generated_tokens=0 context_tokens=14499 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17756 generated_tokens=7 context_tokens=17767 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17756 generated_tokens=7 context_tokens=17767 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17756 generated_tokens=306 context_tokens=18066 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17756 generated_tokens=306 context_tokens=18066 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17756 generated_tokens=639 context_tokens=18399 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17756 generated_tokens=640 context_tokens=18395 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17756 generated_tokens=953 context_tokens=18713 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17756 generated_tokens=953 context_tokens=18713 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17756 generated_tokens=1203 context_tokens=18963 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17756 generated_tokens=1205 context_tokens=18965 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17756 generated_tokens=1523 context_tokens=19283 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17756 generated_tokens=1523 context_tokens=19283 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17756 generated_tokens=1833 context_tokens=19593 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17756 generated_tokens=1833 context_tokens=19593 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17756 generated_tokens=2133 context_tokens=19888 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17756 generated_tokens=2133 context_tokens=19893 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17756 generated_tokens=2400 context_tokens=20160 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17756 generated_tokens=2400 context_tokens=20160 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17756 generated_tokens=2697 context_tokens=20457 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17756 generated_tokens=2702 context_tokens=20457 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17756 generated_tokens=2947 context_tokens=20707 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17756 generated_tokens=2948 context_tokens=20703 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17756 generated_tokens=3210 context_tokens=20970 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17756 generated_tokens=3212 context_tokens=20967 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17756 generated_tokens=3467 context_tokens=21227 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17756 generated_tokens=3467 context_tokens=21227 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17756 generated_tokens=3728 context_tokens=21488 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17756 generated_tokens=3728 context_tokens=21488 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17756 generated_tokens=4030 context_tokens=21790 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17756 generated_tokens=4030 context_tokens=21790 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17756 generated_tokens=4336 context_tokens=22096 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17756 generated_tokens=4340 context_tokens=22095 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17756 generated_tokens=4601 context_tokens=22361 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17756 generated_tokens=4601 context_tokens=22361 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=17756 generated_tokens=4871 context_tokens=22631 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=17756 generated_tokens=4871 context_tokens=22631 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=17756 generated_tokens=5231 context_tokens=22991 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=17756 generated_tokens=5231 context_tokens=22991 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=17756 generated_tokens=5578 context_tokens=23333 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=17756 generated_tokens=5578 context_tokens=23338 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=17756 generated_tokens=5946 context_tokens=23701 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=17756 generated_tokens=5946 context_tokens=23706 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=17756 generated_tokens=6234 context_tokens=23994 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=17756 generated_tokens=6234 context_tokens=23994 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=17756 generated_tokens=6525 context_tokens=24285 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=17756 generated_tokens=6525 context_tokens=24285 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=17756 generated_tokens=6775 context_tokens=24535 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=17756 generated_tokens=6775 context_tokens=24535 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=17756 generated_tokens=7082 context_tokens=24842 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=17756 generated_tokens=7082 context_tokens=24842 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=17756 generated_tokens=7315 context_tokens=25075 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=17756 generated_tokens=7315 context_tokens=25075 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=17756 generated_tokens=7592 context_tokens=25352 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=17756 generated_tokens=7597 context_tokens=25357 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17756 generated_tokens=7976 context_tokens=25731 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17756 generated_tokens=7976 context_tokens=25736 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17756 generated_tokens=8384 context_tokens=26144 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17756 generated_tokens=8385 context_tokens=26145 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17756 generated_tokens=8722 context_tokens=26482 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17756 generated_tokens=8724 context_tokens=26479 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17756 generated_tokens=9089 context_tokens=26849 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17756 generated_tokens=9094 context_tokens=26854 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17756 generated_tokens=9346 context_tokens=27106 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17756 generated_tokens=9348 context_tokens=27108 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17756 generated_tokens=9626 context_tokens=27386 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17756 generated_tokens=9629 context_tokens=27389 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17756 generated_tokens=9879 context_tokens=27639 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17756 generated_tokens=9881 context_tokens=27641 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=17756 generated_tokens=10146 context_tokens=27906 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=17756 generated_tokens=10150 context_tokens=27905 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=17756 generated_tokens=10527 context_tokens=28287 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=17756 generated_tokens=10532 context_tokens=28292 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=17756 generated_tokens=10859 context_tokens=28619 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=17756 generated_tokens=10861 context_tokens=28616 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=17756 generated_tokens=11132 context_tokens=28892 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=17756 generated_tokens=11134 context_tokens=28889 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=17756 generated_tokens=11440 context_tokens=29200 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=17756 generated_tokens=11443 context_tokens=29198 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=17756 generated_tokens=11783 context_tokens=29543 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=17756 generated_tokens=11783 context_tokens=29543 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=17756 generated_tokens=12229 context_tokens=29989 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=17756 generated_tokens=12234 context_tokens=29994 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=17756 generated_tokens=12712 context_tokens=30472 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=17756 generated_tokens=12717 context_tokens=30477 remaining=-1 task=30863
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=17756 generated_tokens=13201 context_tokens=30961 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=17756 generated_tokens=13203 context_tokens=30963 remaining=-1 task=30863
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=449.0s prompt_tokens=17756 completion_tokens=13587 total_tokens=31343 reasoning_chars=55530
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__malware__anomaly_detection\79eca30bf648fb8ea249b9faab4949f0928bcb37f1cb0eebb0d2917f748bde33\contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c\institutional_regional.json
+Stage 4 worker 2: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=0 generated_tokens=0 context_tokens=2043 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12441 generated_tokens=0 context_tokens=14484 remaining=-1 task=35525
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=16527 generated_tokens=0 context_tokens=17241 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17757 generated_tokens=214 context_tokens=17970 remaining=-1 task=35525
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=17757 generated_tokens=294 context_tokens=18055 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17757 generated_tokens=571 context_tokens=18332 remaining=-1 task=35525
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=480.1s prompt_tokens=17676 completion_tokens=14549 total_tokens=32225 reasoning_chars=57472
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__malware__anomaly_detection\79eca30bf648fb8ea249b9faab4949f0928bcb37f1cb0eebb0d2917f748bde33\contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c\technical_feasibility.json
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17757 generated_tokens=970 context_tokens=18731 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17757 generated_tokens=1311 context_tokens=19072 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17757 generated_tokens=1652 context_tokens=19413 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17757 generated_tokens=1976 context_tokens=19732 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17757 generated_tokens=2322 context_tokens=20083 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17757 generated_tokens=2709 context_tokens=20470 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17757 generated_tokens=3092 context_tokens=20853 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17757 generated_tokens=3484 context_tokens=21245 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17757 generated_tokens=3840 context_tokens=21601 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17757 generated_tokens=4177 context_tokens=21938 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17757 generated_tokens=4491 context_tokens=22252 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17757 generated_tokens=4867 context_tokens=22628 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17757 generated_tokens=5244 context_tokens=23005 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17757 generated_tokens=5597 context_tokens=23358 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17757 generated_tokens=5913 context_tokens=23669 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=17757 generated_tokens=6227 context_tokens=23988 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=17757 generated_tokens=6683 context_tokens=24444 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=17757 generated_tokens=7072 context_tokens=24833 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=17757 generated_tokens=7499 context_tokens=25260 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=17757 generated_tokens=8062 context_tokens=25823 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=17757 generated_tokens=8546 context_tokens=26307 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=17757 generated_tokens=8933 context_tokens=26689 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+260s] state=True input_tokens=17757 generated_tokens=9278 context_tokens=27039 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+270s] state=True input_tokens=17757 generated_tokens=9646 context_tokens=27407 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+280s] state=True input_tokens=17757 generated_tokens=10013 context_tokens=27774 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17757 generated_tokens=10407 context_tokens=28168 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17757 generated_tokens=10750 context_tokens=28511 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17757 generated_tokens=11106 context_tokens=28867 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17757 generated_tokens=11621 context_tokens=29382 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17757 generated_tokens=12047 context_tokens=29808 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17757 generated_tokens=12364 context_tokens=30125 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17757 generated_tokens=12772 context_tokens=30533 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=17757 generated_tokens=13238 context_tokens=30999 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=17757 generated_tokens=13703 context_tokens=31464 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=17757 generated_tokens=14244 context_tokens=32005 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=17757 generated_tokens=14817 context_tokens=32578 remaining=-1 task=35525
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=396.2s prompt_tokens=17757 completion_tokens=15144 total_tokens=32901 reasoning_chars=59924
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__malware__anomaly_detection\79eca30bf648fb8ea249b9faab4949f0928bcb37f1cb0eebb0d2917f748bde33\contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c\financial_adoption.json
+[MAIN SET][2/7] COMPLETE in 847.5s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=17 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__malware__anomaly_detection\52d0501e93ef71ab489514c9f2767724f111063d84c3207abf8c863058bd8c20.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__malware__anomaly_detection\85f5d5bb621f66fbf82b5be92eb41719b2a167ec11dc3ee6901a1d8fc9428bd3.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__malware__anomaly_detection\aacea9ff286fdc02197a65bc5f47ac23f4bf0494300a145e4734aa4735862a41.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__malware__anomaly_detection\79eca30bf648fb8ea249b9faab4949f0928bcb37f1cb0eebb0d2917f748bde33.json
+
+====================================================================================================
+[MAIN SET][3/7] main__ransomware__cryptography
+Threat=Ransomware | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_steep_slope
+Reason=Coverage-qualified representative of the large-gap/steep-slope regime. Selected before Stage 1 generation using only frozen Stage 0 forecast/evidence metadata.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__ransomware__cryptography (16 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__ransomware__cryptography\af439e078d46aad897a106116005e8d71afd8fabdd5318db3369ac6312b07bd4.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ransomware__cryptography\ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=4 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12451 generated_tokens=0 context_tokens=14499 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12451 generated_tokens=0 context_tokens=14499 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19315 generated_tokens=4 context_tokens=19323 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19315 generated_tokens=4 context_tokens=19323 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19315 generated_tokens=215 context_tokens=19534 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19315 generated_tokens=215 context_tokens=19534 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19315 generated_tokens=614 context_tokens=19933 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19315 generated_tokens=614 context_tokens=19933 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19315 generated_tokens=893 context_tokens=20212 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19315 generated_tokens=893 context_tokens=20212 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19315 generated_tokens=1204 context_tokens=20518 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19315 generated_tokens=1204 context_tokens=20523 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19315 generated_tokens=1517 context_tokens=20836 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19315 generated_tokens=1517 context_tokens=20836 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19315 generated_tokens=1765 context_tokens=21084 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19315 generated_tokens=1765 context_tokens=21084 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=19315 generated_tokens=2041 context_tokens=21360 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=19315 generated_tokens=2041 context_tokens=21360 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=19315 generated_tokens=2284 context_tokens=21603 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=19315 generated_tokens=2286 context_tokens=21600 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=19315 generated_tokens=2532 context_tokens=21851 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=19315 generated_tokens=2532 context_tokens=21851 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=19315 generated_tokens=2811 context_tokens=22130 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=19315 generated_tokens=2811 context_tokens=22130 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=19315 generated_tokens=3146 context_tokens=22465 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=19315 generated_tokens=3151 context_tokens=22465 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=19315 generated_tokens=3571 context_tokens=22890 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=19315 generated_tokens=3571 context_tokens=22890 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=19315 generated_tokens=3833 context_tokens=23152 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=19315 generated_tokens=3833 context_tokens=23152 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=19315 generated_tokens=4106 context_tokens=23425 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=19315 generated_tokens=4106 context_tokens=23425 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=19315 generated_tokens=4360 context_tokens=23679 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=19315 generated_tokens=4360 context_tokens=23679 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=19315 generated_tokens=4658 context_tokens=23972 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=19315 generated_tokens=4658 context_tokens=23972 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=19315 generated_tokens=4895 context_tokens=24214 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=19315 generated_tokens=4895 context_tokens=24214 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=19315 generated_tokens=5184 context_tokens=24503 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=19315 generated_tokens=5184 context_tokens=24503 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=19315 generated_tokens=5466 context_tokens=24785 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=19315 generated_tokens=5471 context_tokens=24790 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=19315 generated_tokens=5767 context_tokens=25081 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=19315 generated_tokens=5767 context_tokens=25086 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=19315 generated_tokens=5999 context_tokens=25318 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=19315 generated_tokens=5999 context_tokens=25318 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=19315 generated_tokens=6358 context_tokens=25677 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=19315 generated_tokens=6363 context_tokens=25682 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=19315 generated_tokens=6624 context_tokens=25943 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=19315 generated_tokens=6625 context_tokens=25944 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+260s] state=True input_tokens=19315 generated_tokens=6950 context_tokens=26269 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+260s] state=True input_tokens=19315 generated_tokens=6950 context_tokens=26269 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+270s] state=True input_tokens=19315 generated_tokens=7257 context_tokens=26576 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+270s] state=True input_tokens=19315 generated_tokens=7257 context_tokens=26576 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+280s] state=True input_tokens=19315 generated_tokens=7548 context_tokens=26862 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+280s] state=True input_tokens=19315 generated_tokens=7548 context_tokens=26867 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+290s] state=True input_tokens=19315 generated_tokens=7835 context_tokens=27154 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+290s] state=True input_tokens=19315 generated_tokens=7840 context_tokens=27159 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+300s] state=True input_tokens=19315 generated_tokens=8199 context_tokens=27518 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+300s] state=True input_tokens=19315 generated_tokens=8199 context_tokens=27518 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+310s] state=True input_tokens=19315 generated_tokens=8439 context_tokens=27758 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=19315 generated_tokens=8442 context_tokens=27756 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+320s] state=True input_tokens=19315 generated_tokens=8749 context_tokens=28068 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=19315 generated_tokens=8749 context_tokens=28068 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=19315 generated_tokens=9058 context_tokens=28377 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=19315 generated_tokens=9058 context_tokens=28377 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=19315 generated_tokens=9331 context_tokens=28650 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=19315 generated_tokens=9333 context_tokens=28647 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=19315 generated_tokens=9611 context_tokens=28930 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=19315 generated_tokens=9614 context_tokens=28933 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=19315 generated_tokens=9999 context_tokens=29318 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=19315 generated_tokens=10004 context_tokens=29318 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=19315 generated_tokens=10350 context_tokens=29669 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=19315 generated_tokens=10355 context_tokens=29674 remaining=-1 task=40632
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=378.7s prompt_tokens=18871 completion_tokens=11225 total_tokens=30096 reasoning_chars=47669
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__ransomware__cryptography\a9b5c8a328cc1a70ec2077f0825092a30d9a1fdeb4beb2277f180dd57d9b3f3d\contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762\technical_feasibility.json
+Stage 4 worker 1: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=19315 generated_tokens=10569 context_tokens=29888 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=19315 generated_tokens=10582 context_tokens=29901 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=19315 generated_tokens=10583 context_tokens=29902 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19315 generated_tokens=10817 context_tokens=30136 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=19315 generated_tokens=10875 context_tokens=30194 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19315 generated_tokens=11112 context_tokens=30431 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=19315 generated_tokens=11151 context_tokens=30470 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19315 generated_tokens=11398 context_tokens=30712 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=19315 generated_tokens=11455 context_tokens=30774 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19315 generated_tokens=11758 context_tokens=31077 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=19315 generated_tokens=11802 context_tokens=31121 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19315 generated_tokens=12115 context_tokens=31434 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=19315 generated_tokens=12198 context_tokens=31517 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19315 generated_tokens=12599 context_tokens=31918 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=19315 generated_tokens=12682 context_tokens=32001 remaining=-1 task=40632
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19315 generated_tokens=13053 context_tokens=32372 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=19315 generated_tokens=13144 context_tokens=32463 remaining=-1 task=40632
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=464.5s prompt_tokens=19315 completion_tokens=13322 total_tokens=32637 reasoning_chars=54398
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__ransomware__cryptography\a9b5c8a328cc1a70ec2077f0825092a30d9a1fdeb4beb2277f180dd57d9b3f3d\contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762\institutional_regional.json
+Stage 4 worker 2: starting EU__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=8340 generated_tokens=0 context_tokens=10383 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+10s] state=True input_tokens=16512 generated_tokens=0 context_tokens=18555 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=20949 generated_tokens=40 context_tokens=20993 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+20s] state=True input_tokens=20949 generated_tokens=239 context_tokens=21187 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=20949 generated_tokens=434 context_tokens=21387 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+30s] state=True input_tokens=20949 generated_tokens=675 context_tokens=21628 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=20949 generated_tokens=806 context_tokens=21759 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+40s] state=True input_tokens=20949 generated_tokens=979 context_tokens=21932 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=20949 generated_tokens=1111 context_tokens=22064 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+50s] state=True input_tokens=20949 generated_tokens=1291 context_tokens=22244 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=20949 generated_tokens=1391 context_tokens=22344 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+60s] state=True input_tokens=20949 generated_tokens=1595 context_tokens=22543 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=20949 generated_tokens=1738 context_tokens=22691 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+70s] state=True input_tokens=20949 generated_tokens=1926 context_tokens=22879 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=20949 generated_tokens=2018 context_tokens=22971 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+80s] state=True input_tokens=20949 generated_tokens=2172 context_tokens=23125 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=20949 generated_tokens=2300 context_tokens=23248 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+90s] state=True input_tokens=20949 generated_tokens=2454 context_tokens=23407 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=20949 generated_tokens=2539 context_tokens=23492 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+100s] state=True input_tokens=20949 generated_tokens=2701 context_tokens=23654 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=20949 generated_tokens=2795 context_tokens=23748 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+110s] state=True input_tokens=20949 generated_tokens=2947 context_tokens=23900 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=20949 generated_tokens=3074 context_tokens=24027 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+120s] state=True input_tokens=20949 generated_tokens=3241 context_tokens=24194 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=20949 generated_tokens=3340 context_tokens=24293 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+130s] state=True input_tokens=20949 generated_tokens=3469 context_tokens=24422 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=20949 generated_tokens=3574 context_tokens=24522 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+140s] state=True input_tokens=20949 generated_tokens=3733 context_tokens=24686 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=20949 generated_tokens=3835 context_tokens=24788 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+150s] state=True input_tokens=20949 generated_tokens=3958 context_tokens=24911 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=20949 generated_tokens=4062 context_tokens=25015 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+160s] state=True input_tokens=20949 generated_tokens=4177 context_tokens=25125 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=20949 generated_tokens=4281 context_tokens=25234 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+170s] state=True input_tokens=20949 generated_tokens=4415 context_tokens=25363 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=20949 generated_tokens=4533 context_tokens=25486 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+180s] state=True input_tokens=20949 generated_tokens=4651 context_tokens=25604 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=20949 generated_tokens=4790 context_tokens=25738 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+190s] state=True input_tokens=20949 generated_tokens=5024 context_tokens=25977 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=20949 generated_tokens=5164 context_tokens=26112 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+200s] state=True input_tokens=20949 generated_tokens=5304 context_tokens=26257 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=20949 generated_tokens=5435 context_tokens=26388 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+210s] state=True input_tokens=20949 generated_tokens=5592 context_tokens=26545 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=20949 generated_tokens=5730 context_tokens=26683 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+220s] state=True input_tokens=20949 generated_tokens=5864 context_tokens=26817 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=20949 generated_tokens=5984 context_tokens=26932 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+230s] state=True input_tokens=20949 generated_tokens=6153 context_tokens=27106 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=20949 generated_tokens=6245 context_tokens=27198 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+240s] state=True input_tokens=20949 generated_tokens=6429 context_tokens=27382 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=20949 generated_tokens=6574 context_tokens=27527 remaining=-1 task=45312
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=331.2s prompt_tokens=18915 completion_tokens=9181 total_tokens=28096 reasoning_chars=38349
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__ransomware__cryptography\a9b5c8a328cc1a70ec2077f0825092a30d9a1fdeb4beb2277f180dd57d9b3f3d\contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762\financial_adoption.json
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+250s] state=True input_tokens=20949 generated_tokens=6816 context_tokens=27769 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+260s] state=True input_tokens=20949 generated_tokens=7194 context_tokens=28142 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+271s] state=True input_tokens=20949 generated_tokens=7590 context_tokens=28543 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+281s] state=True input_tokens=20949 generated_tokens=7934 context_tokens=28887 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+291s] state=True input_tokens=20949 generated_tokens=8259 context_tokens=29207 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+301s] state=True input_tokens=20949 generated_tokens=8589 context_tokens=29542 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+311s] state=True input_tokens=20949 generated_tokens=8914 context_tokens=29867 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+321s] state=True input_tokens=20949 generated_tokens=9447 context_tokens=30400 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+331s] state=True input_tokens=20949 generated_tokens=9842 context_tokens=30795 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+341s] state=True input_tokens=20949 generated_tokens=10239 context_tokens=31192 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+351s] state=True input_tokens=20949 generated_tokens=10605 context_tokens=31558 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+361s] state=True input_tokens=20949 generated_tokens=10932 context_tokens=31885 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+371s] state=True input_tokens=20949 generated_tokens=11352 context_tokens=32305 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+381s] state=True input_tokens=20949 generated_tokens=11716 context_tokens=32664 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+391s] state=True input_tokens=20949 generated_tokens=12219 context_tokens=33172 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+401s] state=True input_tokens=20949 generated_tokens=12652 context_tokens=33605 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+411s] state=True input_tokens=20949 generated_tokens=13101 context_tokens=34054 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+421s] state=True input_tokens=20949 generated_tokens=13512 context_tokens=34465 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+431s] state=True input_tokens=20949 generated_tokens=13898 context_tokens=34851 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+441s] state=True input_tokens=20949 generated_tokens=14308 context_tokens=35261 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+451s] state=True input_tokens=20949 generated_tokens=14737 context_tokens=35690 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+461s] state=True input_tokens=20949 generated_tokens=15067 context_tokens=36020 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+471s] state=True input_tokens=20949 generated_tokens=15520 context_tokens=36473 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+481s] state=True input_tokens=20949 generated_tokens=16043 context_tokens=36991 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+491s] state=True input_tokens=20949 generated_tokens=16592 context_tokens=37545 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+501s] state=True input_tokens=20949 generated_tokens=16989 context_tokens=37942 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+511s] state=True input_tokens=20949 generated_tokens=17328 context_tokens=38281 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+521s] state=True input_tokens=20949 generated_tokens=17736 context_tokens=38689 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+531s] state=True input_tokens=20949 generated_tokens=18142 context_tokens=39095 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+541s] state=True input_tokens=20949 generated_tokens=18532 context_tokens=39485 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+551s] state=True input_tokens=20949 generated_tokens=19030 context_tokens=39978 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+561s] state=True input_tokens=20949 generated_tokens=19472 context_tokens=40420 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+571s] state=True input_tokens=20949 generated_tokens=19970 context_tokens=40923 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+581s] state=True input_tokens=20949 generated_tokens=20305 context_tokens=41258 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+591s] state=True input_tokens=20949 generated_tokens=20759 context_tokens=41712 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+601s] state=True input_tokens=20949 generated_tokens=21346 context_tokens=42294 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+611s] state=True input_tokens=20949 generated_tokens=21912 context_tokens=42865 remaining=-1 task=45312
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] completed elapsed=614.8s prompt_tokens=20949 completion_tokens=22130 total_tokens=43079 reasoning_chars=91761
+Stage 4 v4 institutional_regional EU__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__ransomware__cryptography\a9b5c8a328cc1a70ec2077f0825092a30d9a1fdeb4beb2277f180dd57d9b3f3d\contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67\institutional_regional.json
+[MAIN SET][3/7] COMPLETE in 1082.5s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=16 | slots=6/6 | families=7 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__ransomware__cryptography\ffa0b7bb01aee28a6d75e603eebc95c56e3ce945a7347cc636b5f27beb7b351f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__ransomware__cryptography\958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__ransomware__cryptography\412279eddcde7b2dc2b504a4a1f07be1850877450b2fbd4c6c19384ec1bfacfa.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__ransomware__cryptography\a9b5c8a328cc1a70ec2077f0825092a30d9a1fdeb4beb2277f180dd57d9b3f3d.json
+
+====================================================================================================
+[MAIN SET][4/7] main__insider_threat__cryptography
+Threat=Insider Threat | PMT=CRYPTOGRAPHY
+Selection=regime_representative | Regime=large_gap_moderate_slope
+Reason=Coverage-qualified representative of the large-gap/moderate-slope regime, included to separate persistent structural imbalance from rapidly accelerating imbalance.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__insider_threat__cryptography (12 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__insider_threat__cryptography\9dc36f33e43f2721298f592e334d359900f2091dd189c9640226600b30ff53b3.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__insider_threat__cryptography\34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=4 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14933 generated_tokens=0 context_tokens=14933 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14933 generated_tokens=0 context_tokens=14937 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=14937 generated_tokens=56 context_tokens=14997 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=14937 generated_tokens=92 context_tokens=15033 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=14937 generated_tokens=463 context_tokens=15404 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=14937 generated_tokens=508 context_tokens=15444 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=14937 generated_tokens=818 context_tokens=15754 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=14937 generated_tokens=837 context_tokens=15778 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=14937 generated_tokens=1091 context_tokens=16032 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=14937 generated_tokens=1113 context_tokens=16054 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=14937 generated_tokens=1325 context_tokens=16266 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=14937 generated_tokens=1350 context_tokens=16286 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=14937 generated_tokens=1605 context_tokens=16546 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=14937 generated_tokens=1625 context_tokens=16566 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=14937 generated_tokens=1869 context_tokens=16810 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=14937 generated_tokens=1906 context_tokens=16847 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=14937 generated_tokens=2177 context_tokens=17118 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=14937 generated_tokens=2197 context_tokens=17133 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=14937 generated_tokens=2428 context_tokens=17369 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=14937 generated_tokens=2453 context_tokens=17389 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=14937 generated_tokens=2714 context_tokens=17655 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=14937 generated_tokens=2754 context_tokens=17690 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=14937 generated_tokens=3009 context_tokens=17950 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=14937 generated_tokens=3037 context_tokens=17978 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=14937 generated_tokens=3277 context_tokens=18218 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=14937 generated_tokens=3306 context_tokens=18247 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=14937 generated_tokens=3549 context_tokens=18485 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=14937 generated_tokens=3568 context_tokens=18509 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=14937 generated_tokens=3817 context_tokens=18753 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=14937 generated_tokens=3833 context_tokens=18774 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=14937 generated_tokens=4103 context_tokens=19044 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=14937 generated_tokens=4127 context_tokens=19063 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=14937 generated_tokens=4477 context_tokens=19418 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=14937 generated_tokens=4528 context_tokens=19464 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=14937 generated_tokens=4815 context_tokens=19756 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=14937 generated_tokens=4842 context_tokens=19783 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=14937 generated_tokens=5216 context_tokens=20152 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=14937 generated_tokens=5249 context_tokens=20185 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=14937 generated_tokens=5528 context_tokens=20469 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=14937 generated_tokens=5554 context_tokens=20495 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=14937 generated_tokens=5781 context_tokens=20722 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=14937 generated_tokens=5801 context_tokens=20742 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=14937 generated_tokens=6043 context_tokens=20984 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=14937 generated_tokens=6077 context_tokens=21018 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=14937 generated_tokens=6332 context_tokens=21273 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=14937 generated_tokens=6361 context_tokens=21302 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=14937 generated_tokens=6693 context_tokens=21634 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=14937 generated_tokens=6730 context_tokens=21671 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=14937 generated_tokens=7029 context_tokens=21970 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=14937 generated_tokens=7059 context_tokens=22000 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=14937 generated_tokens=7326 context_tokens=22262 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=14937 generated_tokens=7358 context_tokens=22299 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=14937 generated_tokens=7605 context_tokens=22546 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=14937 generated_tokens=7653 context_tokens=22594 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=14937 generated_tokens=7928 context_tokens=22869 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=14937 generated_tokens=7946 context_tokens=22887 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=14937 generated_tokens=8207 context_tokens=23148 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=14937 generated_tokens=8249 context_tokens=23190 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=14937 generated_tokens=8521 context_tokens=23462 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=14937 generated_tokens=8548 context_tokens=23489 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=14937 generated_tokens=8862 context_tokens=23798 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=14937 generated_tokens=8877 context_tokens=23818 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=14937 generated_tokens=9144 context_tokens=24080 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=14937 generated_tokens=9173 context_tokens=24114 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=14937 generated_tokens=9419 context_tokens=24360 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=14937 generated_tokens=9457 context_tokens=24398 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=14937 generated_tokens=9779 context_tokens=24720 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=14937 generated_tokens=9820 context_tokens=24756 remaining=-1 task=52559
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=343.9s prompt_tokens=14955 completion_tokens=10239 total_tokens=25194 reasoning_chars=41030
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__insider_threat__cryptography\f5ff6e3feb929159d321db5836068081b832b30b3e83d393b117835bb4adda6b\contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f\technical_feasibility.json
+Stage 4 worker 1: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=14937 generated_tokens=9911 context_tokens=24852 remaining=-1 task=52559
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14937 generated_tokens=9917 context_tokens=24858 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=14937 generated_tokens=10205 context_tokens=25146 remaining=-1 task=52559
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=14937 generated_tokens=10309 context_tokens=25250 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=14937 generated_tokens=10675 context_tokens=25616 remaining=-1 task=52559
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=14937 generated_tokens=10770 context_tokens=25706 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=14937 generated_tokens=11086 context_tokens=26027 remaining=-1 task=52559
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=381.6s prompt_tokens=14937 completion_tokens=11112 total_tokens=26049 reasoning_chars=44638
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__insider_threat__cryptography\f5ff6e3feb929159d321db5836068081b832b30b3e83d393b117835bb4adda6b\contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f\institutional_regional.json
+Stage 4 worker 2: starting EU__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=2211 generated_tokens=0 context_tokens=4254 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+10s] state=True input_tokens=16565 generated_tokens=0 context_tokens=16569 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=16569 generated_tokens=41 context_tokens=16614 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+20s] state=True input_tokens=16569 generated_tokens=336 context_tokens=16909 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=16569 generated_tokens=367 context_tokens=16940 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+30s] state=True input_tokens=16569 generated_tokens=626 context_tokens=17199 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=16569 generated_tokens=666 context_tokens=17239 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+40s] state=True input_tokens=16569 generated_tokens=942 context_tokens=17515 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=16569 generated_tokens=975 context_tokens=17548 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+50s] state=True input_tokens=16569 generated_tokens=1214 context_tokens=17782 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=16569 generated_tokens=1262 context_tokens=17830 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+60s] state=True input_tokens=16569 generated_tokens=1479 context_tokens=18052 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=16569 generated_tokens=1516 context_tokens=18089 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+70s] state=True input_tokens=16569 generated_tokens=1776 context_tokens=18349 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=16569 generated_tokens=1812 context_tokens=18385 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+80s] state=True input_tokens=16569 generated_tokens=2045 context_tokens=18618 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=16569 generated_tokens=2084 context_tokens=18657 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+90s] state=True input_tokens=16569 generated_tokens=2301 context_tokens=18869 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=16569 generated_tokens=2331 context_tokens=18899 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+100s] state=True input_tokens=16569 generated_tokens=2570 context_tokens=19143 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=16569 generated_tokens=2614 context_tokens=19187 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+110s] state=True input_tokens=16569 generated_tokens=2859 context_tokens=19432 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=16569 generated_tokens=2899 context_tokens=19472 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+120s] state=True input_tokens=16569 generated_tokens=3200 context_tokens=19773 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=16569 generated_tokens=3240 context_tokens=19813 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+130s] state=True input_tokens=16569 generated_tokens=3563 context_tokens=20136 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=16569 generated_tokens=3614 context_tokens=20187 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+140s] state=True input_tokens=16569 generated_tokens=3864 context_tokens=20437 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=16569 generated_tokens=3901 context_tokens=20474 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+150s] state=True input_tokens=16569 generated_tokens=4144 context_tokens=20717 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=16569 generated_tokens=4170 context_tokens=20743 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+160s] state=True input_tokens=16569 generated_tokens=4399 context_tokens=20972 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=16569 generated_tokens=4431 context_tokens=21004 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+170s] state=True input_tokens=16569 generated_tokens=4628 context_tokens=21201 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=16569 generated_tokens=4676 context_tokens=21249 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+180s] state=True input_tokens=16569 generated_tokens=5031 context_tokens=21604 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+221s] state=True input_tokens=16569 generated_tokens=5068 context_tokens=21641 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+190s] state=True input_tokens=16569 generated_tokens=5345 context_tokens=21918 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=16569 generated_tokens=5405 context_tokens=21978 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+200s] state=True input_tokens=16569 generated_tokens=5638 context_tokens=22211 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=16569 generated_tokens=5668 context_tokens=22241 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+210s] state=True input_tokens=16569 generated_tokens=5913 context_tokens=22486 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=16569 generated_tokens=5944 context_tokens=22517 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+221s] state=True input_tokens=16569 generated_tokens=6160 context_tokens=22733 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=16569 generated_tokens=6209 context_tokens=22782 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+231s] state=True input_tokens=16569 generated_tokens=6464 context_tokens=23037 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=16569 generated_tokens=6500 context_tokens=23073 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+241s] state=True input_tokens=16569 generated_tokens=6759 context_tokens=23332 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=16569 generated_tokens=6797 context_tokens=23370 remaining=-1 task=56573
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=281.2s prompt_tokens=15000 completion_tokens=8413 total_tokens=23413 reasoning_chars=31825
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__insider_threat__cryptography\f5ff6e3feb929159d321db5836068081b832b30b3e83d393b117835bb4adda6b\contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f\financial_adoption.json
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+251s] state=True input_tokens=16569 generated_tokens=7070 context_tokens=23643 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+261s] state=True input_tokens=16569 generated_tokens=7395 context_tokens=23968 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+271s] state=True input_tokens=16569 generated_tokens=7779 context_tokens=24347 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+281s] state=True input_tokens=16569 generated_tokens=8169 context_tokens=24742 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+291s] state=True input_tokens=16569 generated_tokens=8491 context_tokens=25064 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+301s] state=True input_tokens=16569 generated_tokens=8900 context_tokens=25473 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+311s] state=True input_tokens=16569 generated_tokens=9374 context_tokens=25947 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+321s] state=True input_tokens=16569 generated_tokens=9711 context_tokens=26284 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+331s] state=True input_tokens=16569 generated_tokens=10081 context_tokens=26654 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+341s] state=True input_tokens=16569 generated_tokens=10441 context_tokens=27009 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+351s] state=True input_tokens=16569 generated_tokens=10875 context_tokens=27448 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+361s] state=True input_tokens=16569 generated_tokens=11232 context_tokens=27805 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+371s] state=True input_tokens=16569 generated_tokens=11549 context_tokens=28122 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+381s] state=True input_tokens=16569 generated_tokens=11933 context_tokens=28506 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+391s] state=True input_tokens=16569 generated_tokens=12448 context_tokens=29016 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+401s] state=True input_tokens=16569 generated_tokens=13058 context_tokens=29631 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+411s] state=True input_tokens=16569 generated_tokens=13629 context_tokens=30197 remaining=-1 task=56573
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] completed elapsed=414.4s prompt_tokens=16569 completion_tokens=13806 total_tokens=30375 reasoning_chars=56175
+Stage 4 v4 institutional_regional EU__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__insider_threat__cryptography\f5ff6e3feb929159d321db5836068081b832b30b3e83d393b117835bb4adda6b\contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944\institutional_regional.json
+[MAIN SET][4/7] COMPLETE in 799.1s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=12 | slots=5/6 | families=4 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__insider_threat__cryptography\34cf0ab0ed4151857bfcb6df6889c953b8a86e76b3339f54d17bf6004495fc8d.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__insider_threat__cryptography\15d2e4849f93240cc2a6777986f6ac3e7911baf6c677e50d35bfeb35e6e3cb68.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__insider_threat__cryptography\5522cc5b23aa4f16c14ce5d6de18c2b79063e16ed4f75b320481106a52b4ea0d.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__insider_threat__cryptography\f5ff6e3feb929159d321db5836068081b832b30b3e83d393b117835bb4adda6b.json
+
+====================================================================================================
+[MAIN SET][5/7] main__brute_force__ids_ips
+Threat=Brute Force Attack | PMT=IDS/IPS
+Selection=regime_representative | Regime=moderate_gap_steep_slope
+Reason=Coverage-qualified representative of the moderate-gap/steep-slope regime, included to test whether agents distinguish emerging escalation from already-large gaps.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__brute_force__ids_ips (13 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__brute_force__ids_ips\ca895840a87be56a8b38e815847e83a1cabee4fadb1bb3a8a516a026cf57ea7d.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__brute_force__ids_ips\0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=3 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14499 generated_tokens=0 context_tokens=16547 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14499 generated_tokens=0 context_tokens=16547 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17483 generated_tokens=14 context_tokens=17501 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17483 generated_tokens=15 context_tokens=17502 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17483 generated_tokens=368 context_tokens=17855 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17483 generated_tokens=395 context_tokens=17882 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17483 generated_tokens=698 context_tokens=18180 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17483 generated_tokens=715 context_tokens=18202 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17483 generated_tokens=985 context_tokens=18472 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17483 generated_tokens=1005 context_tokens=18492 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17483 generated_tokens=1263 context_tokens=18750 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17483 generated_tokens=1286 context_tokens=18773 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17483 generated_tokens=1560 context_tokens=19047 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17483 generated_tokens=1571 context_tokens=19058 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17483 generated_tokens=1842 context_tokens=19324 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17483 generated_tokens=1858 context_tokens=19345 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17483 generated_tokens=2112 context_tokens=19599 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17483 generated_tokens=2128 context_tokens=19610 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17483 generated_tokens=2414 context_tokens=19901 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17483 generated_tokens=2423 context_tokens=19910 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17483 generated_tokens=2710 context_tokens=20197 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17483 generated_tokens=2726 context_tokens=20208 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17483 generated_tokens=2971 context_tokens=20458 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17483 generated_tokens=2985 context_tokens=20472 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17483 generated_tokens=3203 context_tokens=20690 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17483 generated_tokens=3220 context_tokens=20707 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17483 generated_tokens=3557 context_tokens=21044 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17483 generated_tokens=3587 context_tokens=21069 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17483 generated_tokens=3967 context_tokens=21454 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17483 generated_tokens=3991 context_tokens=21478 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17483 generated_tokens=4374 context_tokens=21861 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17483 generated_tokens=4397 context_tokens=21884 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17483 generated_tokens=4743 context_tokens=22230 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17483 generated_tokens=4758 context_tokens=22245 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17483 generated_tokens=4996 context_tokens=22483 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17483 generated_tokens=5018 context_tokens=22505 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=17483 generated_tokens=5274 context_tokens=22756 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=17483 generated_tokens=5285 context_tokens=22767 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=17483 generated_tokens=5515 context_tokens=23002 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=17483 generated_tokens=5533 context_tokens=23020 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=17483 generated_tokens=5781 context_tokens=23268 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=17483 generated_tokens=5796 context_tokens=23283 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=17483 generated_tokens=6084 context_tokens=23571 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=17483 generated_tokens=6114 context_tokens=23601 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=17483 generated_tokens=6407 context_tokens=23894 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=17483 generated_tokens=6432 context_tokens=23919 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=17483 generated_tokens=6700 context_tokens=24187 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=17483 generated_tokens=6720 context_tokens=24207 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=17483 generated_tokens=7038 context_tokens=24525 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=17483 generated_tokens=7047 context_tokens=24534 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=17483 generated_tokens=7411 context_tokens=24898 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=17483 generated_tokens=7432 context_tokens=24919 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=17483 generated_tokens=7831 context_tokens=25318 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=17483 generated_tokens=7859 context_tokens=25346 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=17483 generated_tokens=8253 context_tokens=25740 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=17483 generated_tokens=8282 context_tokens=25769 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17483 generated_tokens=8557 context_tokens=26044 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17483 generated_tokens=8565 context_tokens=26052 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17483 generated_tokens=8849 context_tokens=26336 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17483 generated_tokens=8876 context_tokens=26363 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17483 generated_tokens=9237 context_tokens=26724 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17483 generated_tokens=9261 context_tokens=26748 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17483 generated_tokens=9548 context_tokens=27030 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17483 generated_tokens=9556 context_tokens=27043 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17483 generated_tokens=9811 context_tokens=27298 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17483 generated_tokens=9821 context_tokens=27308 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17483 generated_tokens=10163 context_tokens=27650 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17483 generated_tokens=10191 context_tokens=27673 remaining=-1 task=61490
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17483 generated_tokens=10624 context_tokens=28111 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17483 generated_tokens=10651 context_tokens=28138 remaining=-1 task=61490
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=358.1s prompt_tokens=17483 completion_tokens=11014 total_tokens=28497 reasoning_chars=44014
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__brute_force__ids_ips\6cd2c369f1df77f56d1649afeaa5f98cd70385cb94a6292748d386099df60acd\contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6\institutional_regional.json
+Stage 4 worker 2: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=2226 generated_tokens=0 context_tokens=4269 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14484 generated_tokens=0 context_tokens=16527 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=17068 generated_tokens=0 context_tokens=17580 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=17584 generated_tokens=296 context_tokens=17884 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=17584 generated_tokens=366 context_tokens=17954 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=17584 generated_tokens=620 context_tokens=18208 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=17584 generated_tokens=685 context_tokens=18273 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=17584 generated_tokens=932 context_tokens=18520 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=17584 generated_tokens=998 context_tokens=18586 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=17584 generated_tokens=1192 context_tokens=18780 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=17584 generated_tokens=1237 context_tokens=18820 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=17584 generated_tokens=1459 context_tokens=19047 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=17584 generated_tokens=1502 context_tokens=19090 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=17584 generated_tokens=1711 context_tokens=19299 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=17584 generated_tokens=1797 context_tokens=19380 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=17584 generated_tokens=2040 context_tokens=19623 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=17584 generated_tokens=2103 context_tokens=19691 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=17584 generated_tokens=2298 context_tokens=19886 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=17584 generated_tokens=2347 context_tokens=19935 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=17584 generated_tokens=2554 context_tokens=20142 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=17584 generated_tokens=2600 context_tokens=20188 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=17584 generated_tokens=2793 context_tokens=20376 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=17584 generated_tokens=2826 context_tokens=20414 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=17584 generated_tokens=3006 context_tokens=20594 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+481s] state=True input_tokens=17584 generated_tokens=3062 context_tokens=20650 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=17584 generated_tokens=3276 context_tokens=20864 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+491s] state=True input_tokens=17584 generated_tokens=3322 context_tokens=20910 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=17584 generated_tokens=3515 context_tokens=21103 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+501s] state=True input_tokens=17584 generated_tokens=3572 context_tokens=21160 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=17584 generated_tokens=3768 context_tokens=21356 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+511s] state=True input_tokens=17584 generated_tokens=3828 context_tokens=21416 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=17584 generated_tokens=4068 context_tokens=21656 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+521s] state=True input_tokens=17584 generated_tokens=4130 context_tokens=21713 remaining=-1 task=65236
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=523.2s prompt_tokens=17405 completion_tokens=15392 total_tokens=32797 reasoning_chars=63606
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__brute_force__ids_ips\6cd2c369f1df77f56d1649afeaa5f98cd70385cb94a6292748d386099df60acd\contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6\technical_feasibility.json
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=17584 generated_tokens=4407 context_tokens=21990 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=17584 generated_tokens=4756 context_tokens=22344 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+191s] state=True input_tokens=17584 generated_tokens=5077 context_tokens=22660 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+201s] state=True input_tokens=17584 generated_tokens=5396 context_tokens=22984 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+211s] state=True input_tokens=17584 generated_tokens=5714 context_tokens=23297 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+221s] state=True input_tokens=17584 generated_tokens=6068 context_tokens=23656 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=17584 generated_tokens=6425 context_tokens=24013 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=17584 generated_tokens=6730 context_tokens=24318 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=17584 generated_tokens=7166 context_tokens=24754 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=17584 generated_tokens=7524 context_tokens=25107 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=17584 generated_tokens=7951 context_tokens=25539 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=17584 generated_tokens=8357 context_tokens=25945 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=17584 generated_tokens=8659 context_tokens=26247 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=17584 generated_tokens=9027 context_tokens=26610 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=17584 generated_tokens=9493 context_tokens=27081 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=17584 generated_tokens=9994 context_tokens=27582 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=17584 generated_tokens=10390 context_tokens=27978 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=17584 generated_tokens=10825 context_tokens=28413 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=17584 generated_tokens=11150 context_tokens=28738 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=17584 generated_tokens=11505 context_tokens=29093 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=17584 generated_tokens=11877 context_tokens=29465 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=17584 generated_tokens=12444 context_tokens=30032 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=17584 generated_tokens=13067 context_tokens=30650 remaining=-1 task=65236
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=393.8s prompt_tokens=17584 completion_tokens=13239 total_tokens=30823 reasoning_chars=52894
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__brute_force__ids_ips\6cd2c369f1df77f56d1649afeaa5f98cd70385cb94a6292748d386099df60acd\contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6\financial_adoption.json
+[MAIN SET][5/7] COMPLETE in 754.8s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=13 | slots=5/6 | families=4 | rounds=2 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__brute_force__ids_ips\0a5fda4ec9f0e961eedad866e1d140a544726e16f15784bec46216d07d80851f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__brute_force__ids_ips\40634fab0e4340b0e2daea7aec502d04dd39579f3be02f628153d13292e1a815.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__brute_force__ids_ips\263aa93bcccab54f5551ce1bf443244e4816079e1d8d190025bd3d78e10deb65.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__brute_force__ids_ips\6cd2c369f1df77f56d1649afeaa5f98cd70385cb94a6292748d386099df60acd.json
+
+====================================================================================================
+[MAIN SET][6/7] main__targeted_attack__access_control
+Threat=Targeted Attack | PMT=ACCESS CONTROL
+Selection=regime_representative | Regime=moderate_gap_low_slope
+Reason=Coverage-qualified representative of the moderate-gap/low-slope regime, included as a managed/stable trajectory rather than another escalation-heavy example.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__targeted_attack__access_control (18 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__targeted_attack__access_control\b803ee2ffa8de74c60c53e01ba3ade29f57f559326b9adb8e1035c8aa8c0a7f3.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__targeted_attack__access_control\c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=4 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=10403 generated_tokens=0 context_tokens=12451 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12451 generated_tokens=0 context_tokens=14499 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19958 generated_tokens=1 context_tokens=19963 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19958 generated_tokens=4 context_tokens=19966 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19958 generated_tokens=173 context_tokens=20130 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19958 generated_tokens=193 context_tokens=20155 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19958 generated_tokens=572 context_tokens=20534 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19958 generated_tokens=595 context_tokens=20557 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19958 generated_tokens=901 context_tokens=20863 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19958 generated_tokens=926 context_tokens=20888 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19958 generated_tokens=1221 context_tokens=21178 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19958 generated_tokens=1267 context_tokens=21229 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19958 generated_tokens=1524 context_tokens=21486 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19958 generated_tokens=1539 context_tokens=21501 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19958 generated_tokens=1754 context_tokens=21716 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19958 generated_tokens=1786 context_tokens=21748 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=19958 generated_tokens=2017 context_tokens=21979 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=19958 generated_tokens=2045 context_tokens=22007 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=19958 generated_tokens=2295 context_tokens=22257 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=19958 generated_tokens=2324 context_tokens=22286 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=19958 generated_tokens=2664 context_tokens=22621 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=19958 generated_tokens=2688 context_tokens=22650 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=19958 generated_tokens=2933 context_tokens=22895 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=19958 generated_tokens=2963 context_tokens=22925 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=19958 generated_tokens=3166 context_tokens=23128 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=19958 generated_tokens=3186 context_tokens=23148 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=19958 generated_tokens=3453 context_tokens=23415 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=19958 generated_tokens=3476 context_tokens=23438 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=19958 generated_tokens=3736 context_tokens=23698 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=19958 generated_tokens=3760 context_tokens=23717 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=19958 generated_tokens=4015 context_tokens=23972 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=19958 generated_tokens=4043 context_tokens=24005 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=19958 generated_tokens=4280 context_tokens=24242 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=19958 generated_tokens=4298 context_tokens=24260 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=19958 generated_tokens=4511 context_tokens=24473 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=19958 generated_tokens=4537 context_tokens=24499 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=19958 generated_tokens=4770 context_tokens=24732 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=19958 generated_tokens=4797 context_tokens=24759 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=19958 generated_tokens=5077 context_tokens=25039 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=19958 generated_tokens=5102 context_tokens=25059 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=19958 generated_tokens=5340 context_tokens=25297 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=19958 generated_tokens=5373 context_tokens=25335 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=19958 generated_tokens=5653 context_tokens=25615 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=19958 generated_tokens=5679 context_tokens=25641 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=19958 generated_tokens=5991 context_tokens=25953 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=19958 generated_tokens=6021 context_tokens=25983 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=19958 generated_tokens=6283 context_tokens=26240 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=19958 generated_tokens=6303 context_tokens=26265 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=19958 generated_tokens=6530 context_tokens=26492 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=19958 generated_tokens=6556 context_tokens=26513 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=19958 generated_tokens=6782 context_tokens=26739 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=19958 generated_tokens=6816 context_tokens=26778 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=19958 generated_tokens=7134 context_tokens=27096 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=19958 generated_tokens=7176 context_tokens=27138 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=19958 generated_tokens=7485 context_tokens=27447 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=19958 generated_tokens=7501 context_tokens=27463 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=19958 generated_tokens=7819 context_tokens=27781 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=19958 generated_tokens=7845 context_tokens=27807 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=19958 generated_tokens=8138 context_tokens=28095 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=19958 generated_tokens=8164 context_tokens=28121 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=19958 generated_tokens=8519 context_tokens=28481 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=19958 generated_tokens=8560 context_tokens=28522 remaining=-1 task=69836
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=19958 generated_tokens=8953 context_tokens=28910 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=19958 generated_tokens=8998 context_tokens=28960 remaining=-1 task=69836
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=320.8s prompt_tokens=19958 completion_tokens=9004 total_tokens=28962 reasoning_chars=38373
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__targeted_attack__access_control\8c8fa2236b0ce09c8f5b77673f8520ce32f84780be9680aae9a79c9c8d7bdc3c\contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1\institutional_regional.json
+Stage 4 worker 2: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=12441 generated_tokens=0 context_tokens=14484 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14484 generated_tokens=0 context_tokens=16527 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=19477 generated_tokens=165 context_tokens=19641 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=19477 generated_tokens=217 context_tokens=19698 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=19477 generated_tokens=483 context_tokens=19964 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=19477 generated_tokens=526 context_tokens=20007 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=19477 generated_tokens=802 context_tokens=20283 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=19477 generated_tokens=834 context_tokens=20315 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=19477 generated_tokens=1051 context_tokens=20532 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=19477 generated_tokens=1081 context_tokens=20562 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=19477 generated_tokens=1336 context_tokens=20817 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=19477 generated_tokens=1374 context_tokens=20855 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=19477 generated_tokens=1591 context_tokens=21072 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=19477 generated_tokens=1619 context_tokens=21095 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=19477 generated_tokens=1877 context_tokens=21358 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=19477 generated_tokens=1898 context_tokens=21379 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=19477 generated_tokens=2103 context_tokens=21584 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=19477 generated_tokens=2130 context_tokens=21611 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=19477 generated_tokens=2341 context_tokens=21822 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=19477 generated_tokens=2370 context_tokens=21851 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=19477 generated_tokens=2647 context_tokens=22128 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=19477 generated_tokens=2668 context_tokens=22149 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=19477 generated_tokens=2875 context_tokens=22356 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=19477 generated_tokens=2912 context_tokens=22393 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=19477 generated_tokens=3138 context_tokens=22619 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=19477 generated_tokens=3167 context_tokens=22643 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=19477 generated_tokens=3435 context_tokens=22916 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=19477 generated_tokens=3451 context_tokens=22932 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=19477 generated_tokens=3667 context_tokens=23148 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=19477 generated_tokens=3686 context_tokens=23167 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+481s] state=True input_tokens=19477 generated_tokens=3889 context_tokens=23370 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=19477 generated_tokens=3914 context_tokens=23395 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+491s] state=True input_tokens=19477 generated_tokens=4126 context_tokens=23607 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=19477 generated_tokens=4151 context_tokens=23632 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+501s] state=True input_tokens=19477 generated_tokens=4368 context_tokens=23849 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=19477 generated_tokens=4393 context_tokens=23874 remaining=-1 task=73104
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=504.0s prompt_tokens=19386 completion_tokens=14563 total_tokens=33949 reasoning_chars=59984
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__targeted_attack__access_control\8c8fa2236b0ce09c8f5b77673f8520ce32f84780be9680aae9a79c9c8d7bdc3c\contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1\technical_feasibility.json
+Stage 4 worker 1: starting EU__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=19477 generated_tokens=4460 context_tokens=23941 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+10s] state=True input_tokens=19477 generated_tokens=4464 context_tokens=23945 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=19477 generated_tokens=4561 context_tokens=24042 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+20s] state=True input_tokens=19477 generated_tokens=4617 context_tokens=24098 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=19477 generated_tokens=4867 context_tokens=24348 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+30s] state=True input_tokens=19477 generated_tokens=4913 context_tokens=24394 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=19477 generated_tokens=5152 context_tokens=24633 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+40s] state=True input_tokens=19477 generated_tokens=5208 context_tokens=24684 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=19477 generated_tokens=5399 context_tokens=24875 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+50s] state=True input_tokens=19477 generated_tokens=5447 context_tokens=24923 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=19477 generated_tokens=5676 context_tokens=25157 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+60s] state=True input_tokens=19477 generated_tokens=5714 context_tokens=25195 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=19477 generated_tokens=5954 context_tokens=25435 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+70s] state=True input_tokens=19477 generated_tokens=5997 context_tokens=25478 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=19477 generated_tokens=6290 context_tokens=25771 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+80s] state=True input_tokens=19477 generated_tokens=6349 context_tokens=25830 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=19477 generated_tokens=6676 context_tokens=26152 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+90s] state=True input_tokens=19477 generated_tokens=6721 context_tokens=26202 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=19477 generated_tokens=6995 context_tokens=26476 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+100s] state=True input_tokens=19477 generated_tokens=7038 context_tokens=26519 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=19477 generated_tokens=7282 context_tokens=26763 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+110s] state=True input_tokens=19477 generated_tokens=7333 context_tokens=26814 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=19477 generated_tokens=7551 context_tokens=27027 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+120s] state=True input_tokens=19477 generated_tokens=7614 context_tokens=27095 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=19477 generated_tokens=7849 context_tokens=27325 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+130s] state=True input_tokens=19477 generated_tokens=7896 context_tokens=27377 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=19477 generated_tokens=8139 context_tokens=27620 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+140s] state=True input_tokens=19477 generated_tokens=8194 context_tokens=27670 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=19477 generated_tokens=8405 context_tokens=27881 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+150s] state=True input_tokens=19477 generated_tokens=8458 context_tokens=27939 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=19477 generated_tokens=8667 context_tokens=28148 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+160s] state=True input_tokens=19477 generated_tokens=8712 context_tokens=28193 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=19477 generated_tokens=8907 context_tokens=28388 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+170s] state=True input_tokens=19477 generated_tokens=8949 context_tokens=28430 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=19477 generated_tokens=9217 context_tokens=28698 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+180s] state=True input_tokens=19477 generated_tokens=9256 context_tokens=28737 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=19477 generated_tokens=9466 context_tokens=28947 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+190s] state=True input_tokens=19477 generated_tokens=9510 context_tokens=28986 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=19477 generated_tokens=9718 context_tokens=29194 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+200s] state=True input_tokens=19477 generated_tokens=9780 context_tokens=29261 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=19477 generated_tokens=9972 context_tokens=29453 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+210s] state=True input_tokens=19477 generated_tokens=10011 context_tokens=29492 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=19477 generated_tokens=10275 context_tokens=29751 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+220s] state=True input_tokens=19477 generated_tokens=10343 context_tokens=29824 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=19477 generated_tokens=10596 context_tokens=30077 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+230s] state=True input_tokens=19477 generated_tokens=10644 context_tokens=30120 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=19477 generated_tokens=10928 context_tokens=30409 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+241s] state=True input_tokens=19477 generated_tokens=11004 context_tokens=30480 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=19477 generated_tokens=11253 context_tokens=30734 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+251s] state=True input_tokens=19477 generated_tokens=11317 context_tokens=30793 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=19477 generated_tokens=11591 context_tokens=31072 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+261s] state=True input_tokens=19477 generated_tokens=11668 context_tokens=31144 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=19477 generated_tokens=11939 context_tokens=31415 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+271s] state=True input_tokens=19477 generated_tokens=12004 context_tokens=31485 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=19477 generated_tokens=12285 context_tokens=31766 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+281s] state=True input_tokens=19477 generated_tokens=12363 context_tokens=31844 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=19477 generated_tokens=12723 context_tokens=32204 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+291s] state=True input_tokens=19477 generated_tokens=12790 context_tokens=32271 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+481s] state=True input_tokens=19477 generated_tokens=13127 context_tokens=32608 remaining=-1 task=73104
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+301s] state=True input_tokens=19477 generated_tokens=13195 context_tokens=32676 remaining=-1 task=73104
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=486.4s prompt_tokens=19477 completion_tokens=13344 total_tokens=32821 reasoning_chars=53734
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__targeted_attack__access_control\8c8fa2236b0ce09c8f5b77673f8520ce32f84780be9680aae9a79c9c8d7bdc3c\contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1\financial_adoption.json
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+311s] state=True input_tokens=21045 generated_tokens=8238 context_tokens=29287 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+321s] state=True input_tokens=21045 generated_tokens=8652 context_tokens=29701 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+331s] state=True input_tokens=21045 generated_tokens=9025 context_tokens=30074 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+341s] state=True input_tokens=21045 generated_tokens=9380 context_tokens=30429 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+351s] state=True input_tokens=21045 generated_tokens=9743 context_tokens=30787 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+361s] state=True input_tokens=21045 generated_tokens=10127 context_tokens=31176 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+371s] state=True input_tokens=21045 generated_tokens=10590 context_tokens=31639 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+381s] state=True input_tokens=21045 generated_tokens=11009 context_tokens=32058 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+391s] state=True input_tokens=21045 generated_tokens=11459 context_tokens=32508 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+401s] state=True input_tokens=21045 generated_tokens=11828 context_tokens=32872 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+411s] state=True input_tokens=21045 generated_tokens=12186 context_tokens=33235 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+421s] state=True input_tokens=21045 generated_tokens=12631 context_tokens=33680 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+431s] state=True input_tokens=21045 generated_tokens=13213 context_tokens=34257 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+441s] state=True input_tokens=21045 generated_tokens=13519 context_tokens=34568 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+451s] state=True input_tokens=21045 generated_tokens=13887 context_tokens=34931 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+461s] state=True input_tokens=21045 generated_tokens=14248 context_tokens=35292 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+471s] state=True input_tokens=21045 generated_tokens=14704 context_tokens=35753 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+481s] state=True input_tokens=21045 generated_tokens=15283 context_tokens=36332 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2][+491s] state=True input_tokens=21045 generated_tokens=15788 context_tokens=36837 remaining=-1 task=74872
+[QWEN][Stage4v4B-InstitutionalRegional-2of3-EU__CIS_IG2] completed elapsed=491.2s prompt_tokens=21045 completion_tokens=15797 total_tokens=36842 reasoning_chars=68059
+Stage 4 v4 institutional_regional EU__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__targeted_attack__access_control\8c8fa2236b0ce09c8f5b77673f8520ce32f84780be9680aae9a79c9c8d7bdc3c\contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9\institutional_regional.json
+[MAIN SET][6/7] COMPLETE in 997.6s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=18 | slots=5/6 | families=8 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__targeted_attack__access_control\c326fe471f7d0dc2c7ae7125869aeb92d824840cbc6c0fd0761a4d610a06c086.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__targeted_attack__access_control\d258fb231d7b878ec139955f8b6c305ddfd64bd11ef3d81fc629e909837f5d13.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__targeted_attack__access_control\562477e41fb10caca3a8bbcde891fc4ce7da044f34bdf4bac9652143a159f2b7.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__targeted_attack__access_control\8c8fa2236b0ce09c8f5b77673f8520ce32f84780be9680aae9a79c9c8d7bdc3c.json
+
+====================================================================================================
+[MAIN SET][7/7] main__session_hijacking__https
+Threat=Session Hijacking | PMT=HTTPS
+Selection=regime_representative | Regime=small_gap_low_or_negative_slope
+Reason=Coverage-qualified representative of the small-gap/low-or-negative-slope regime, included as a low-risk alignment control against high-gap and accelerating cases.
+====================================================================================================
+Stage 0 EvidencePack loaded: main__session_hijacking__https (17 evidence records)
+
+Stage 1 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage1\artifacts\main__session_hijacking__https\51df2e6a4fad9a3211cdb2ec21b0e88de75392f9b0cec0ab6fca734df0e12d35.json
+
+Stage 2 frozen artifact reused: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__session_hijacking__https\250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f.json
+
+Stage 4 priority queue: jurisdiction-neutral equivalent scenario/lens inputs are deduplicated before generation; KR-first canonical jobs are ahead of any jurisdiction-bound EU/US jobs; 2 workers keep the inference slots occupied. canonical_jobs=3 from raw_jobs=9.
+Stage 4 worker 1: starting KR__CIS_IG2 / technical_feasibility
+Stage 4 worker 2: starting KR__CIS_IG2 / institutional_regional
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=12405 generated_tokens=0 context_tokens=14453 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14453 generated_tokens=0 context_tokens=16501 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=18531 generated_tokens=7 context_tokens=18542 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=18531 generated_tokens=12 context_tokens=18547 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=18531 generated_tokens=273 context_tokens=18803 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=18531 generated_tokens=289 context_tokens=18824 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=18531 generated_tokens=607 context_tokens=19142 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=18531 generated_tokens=627 context_tokens=19162 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=18531 generated_tokens=887 context_tokens=19422 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=18531 generated_tokens=907 context_tokens=19442 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=18531 generated_tokens=1138 context_tokens=19673 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=18531 generated_tokens=1153 context_tokens=19688 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=18531 generated_tokens=1413 context_tokens=19948 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=18531 generated_tokens=1434 context_tokens=19969 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=18531 generated_tokens=1683 context_tokens=20218 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=18531 generated_tokens=1699 context_tokens=20234 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=18531 generated_tokens=1937 context_tokens=20472 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=18531 generated_tokens=1949 context_tokens=20484 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=18531 generated_tokens=2220 context_tokens=20755 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=18531 generated_tokens=2248 context_tokens=20783 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=18531 generated_tokens=2499 context_tokens=21034 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=18531 generated_tokens=2519 context_tokens=21054 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=18531 generated_tokens=2777 context_tokens=21312 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=18531 generated_tokens=2816 context_tokens=21351 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=18531 generated_tokens=3096 context_tokens=21631 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=18531 generated_tokens=3117 context_tokens=21652 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=18531 generated_tokens=3414 context_tokens=21949 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=18531 generated_tokens=3447 context_tokens=21982 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=18531 generated_tokens=3700 context_tokens=22230 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=18531 generated_tokens=3721 context_tokens=22251 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=18531 generated_tokens=4015 context_tokens=22550 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=18531 generated_tokens=4054 context_tokens=22589 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=18531 generated_tokens=4391 context_tokens=22926 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=18531 generated_tokens=4408 context_tokens=22943 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=18531 generated_tokens=4660 context_tokens=23195 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=18531 generated_tokens=4681 context_tokens=23216 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=18531 generated_tokens=4961 context_tokens=23496 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=18531 generated_tokens=4985 context_tokens=23520 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=18531 generated_tokens=5206 context_tokens=23741 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=18531 generated_tokens=5229 context_tokens=23764 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=18531 generated_tokens=5448 context_tokens=23983 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=18531 generated_tokens=5473 context_tokens=24008 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=18531 generated_tokens=5685 context_tokens=24220 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+220s] state=True input_tokens=18531 generated_tokens=5712 context_tokens=24247 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=18531 generated_tokens=5978 context_tokens=24513 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+230s] state=True input_tokens=18531 generated_tokens=5989 context_tokens=24524 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=18531 generated_tokens=6265 context_tokens=24800 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+240s] state=True input_tokens=18531 generated_tokens=6287 context_tokens=24817 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=18531 generated_tokens=6601 context_tokens=25136 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+250s] state=True input_tokens=18531 generated_tokens=6626 context_tokens=25161 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=18531 generated_tokens=6920 context_tokens=25455 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=18531 generated_tokens=6938 context_tokens=25473 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=18531 generated_tokens=7188 context_tokens=25718 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=18531 generated_tokens=7208 context_tokens=25743 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=18531 generated_tokens=7487 context_tokens=26017 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=18531 generated_tokens=7498 context_tokens=26033 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=18531 generated_tokens=7830 context_tokens=26365 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=18531 generated_tokens=7854 context_tokens=26389 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=18531 generated_tokens=8242 context_tokens=26777 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+301s] state=True input_tokens=18531 generated_tokens=8282 context_tokens=26812 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=18531 generated_tokens=8643 context_tokens=27178 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+311s] state=True input_tokens=18531 generated_tokens=8675 context_tokens=27210 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=18531 generated_tokens=8968 context_tokens=27503 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+321s] state=True input_tokens=18531 generated_tokens=8988 context_tokens=27523 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=18531 generated_tokens=9241 context_tokens=27776 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+331s] state=True input_tokens=18531 generated_tokens=9260 context_tokens=27795 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=18531 generated_tokens=9554 context_tokens=28089 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+341s] state=True input_tokens=18531 generated_tokens=9573 context_tokens=28108 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=18531 generated_tokens=9849 context_tokens=28379 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+351s] state=True input_tokens=18531 generated_tokens=9862 context_tokens=28397 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=18531 generated_tokens=10119 context_tokens=28654 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+361s] state=True input_tokens=18531 generated_tokens=10143 context_tokens=28678 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=18531 generated_tokens=10431 context_tokens=28966 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+371s] state=True input_tokens=18531 generated_tokens=10454 context_tokens=28989 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=18531 generated_tokens=10705 context_tokens=29240 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+381s] state=True input_tokens=18531 generated_tokens=10727 context_tokens=29257 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=18531 generated_tokens=10977 context_tokens=29512 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+391s] state=True input_tokens=18531 generated_tokens=11003 context_tokens=29538 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=18531 generated_tokens=11269 context_tokens=29804 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+401s] state=True input_tokens=18531 generated_tokens=11288 context_tokens=29823 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=18531 generated_tokens=11598 context_tokens=30128 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+411s] state=True input_tokens=18531 generated_tokens=11621 context_tokens=30156 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=18531 generated_tokens=11948 context_tokens=30483 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+421s] state=True input_tokens=18531 generated_tokens=11981 context_tokens=30511 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=18531 generated_tokens=12332 context_tokens=30867 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+431s] state=True input_tokens=18531 generated_tokens=12357 context_tokens=30892 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=18531 generated_tokens=12811 context_tokens=31346 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+441s] state=True input_tokens=18531 generated_tokens=12846 context_tokens=31381 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=18531 generated_tokens=13223 context_tokens=31758 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+451s] state=True input_tokens=18531 generated_tokens=13242 context_tokens=31777 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=18531 generated_tokens=13540 context_tokens=32070 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+461s] state=True input_tokens=18531 generated_tokens=13560 context_tokens=32090 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=18531 generated_tokens=13961 context_tokens=32491 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+471s] state=True input_tokens=18531 generated_tokens=13986 context_tokens=32521 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL][+481s] state=True input_tokens=18531 generated_tokens=14446 context_tokens=32976 remaining=-1 task=80339
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL][+481s] state=True input_tokens=18531 generated_tokens=14476 context_tokens=33011 remaining=-1 task=80339
+[QWEN][Stage4v4A-Technical-1of3-JURISDICTION_NEUTRAL] completed elapsed=485.3s prompt_tokens=18531 completion_tokens=14646 total_tokens=33177 reasoning_chars=63354
+Stage 4 v4 technical_feasibility KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__session_hijacking__https\0e3bcdad8c530a923aca0deb92781f9878a5c3c2fa309207c0153b921dcc69dd\contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4\technical_feasibility.json
+Stage 4 worker 1: starting KR__CIS_IG2 / financial_adoption
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] generation started (reasoning=xhigh, seed=42).
+[QWEN][Stage4v4B-InstitutionalRegional-1of3-JURISDICTION_NEUTRAL] completed elapsed=486.6s prompt_tokens=18655 completion_tokens=14515 total_tokens=33170 reasoning_chars=61349
+Stage 4 v4 institutional_regional KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__session_hijacking__https\0e3bcdad8c530a923aca0deb92781f9878a5c3c2fa309207c0153b921dcc69dd\contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4\institutional_regional.json
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+10s] state=True input_tokens=14514 generated_tokens=0 context_tokens=16562 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+20s] state=True input_tokens=18656 generated_tokens=319 context_tokens=18979 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+30s] state=True input_tokens=18656 generated_tokens=718 context_tokens=19378 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+40s] state=True input_tokens=18656 generated_tokens=1046 context_tokens=19706 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+50s] state=True input_tokens=18656 generated_tokens=1395 context_tokens=20055 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+60s] state=True input_tokens=18656 generated_tokens=1747 context_tokens=20407 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+70s] state=True input_tokens=18656 generated_tokens=2074 context_tokens=20734 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+80s] state=True input_tokens=18656 generated_tokens=2424 context_tokens=21084 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+90s] state=True input_tokens=18656 generated_tokens=2723 context_tokens=21383 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+100s] state=True input_tokens=18656 generated_tokens=3096 context_tokens=21756 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+110s] state=True input_tokens=18656 generated_tokens=3415 context_tokens=22075 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+120s] state=True input_tokens=18656 generated_tokens=3778 context_tokens=22438 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+130s] state=True input_tokens=18656 generated_tokens=4144 context_tokens=22804 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+140s] state=True input_tokens=18656 generated_tokens=4465 context_tokens=23125 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+150s] state=True input_tokens=18656 generated_tokens=4788 context_tokens=23448 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+160s] state=True input_tokens=18656 generated_tokens=5151 context_tokens=23811 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+170s] state=True input_tokens=18656 generated_tokens=5505 context_tokens=24165 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+180s] state=True input_tokens=18656 generated_tokens=5873 context_tokens=24533 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+190s] state=True input_tokens=18656 generated_tokens=6395 context_tokens=25055 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+200s] state=True input_tokens=18656 generated_tokens=6888 context_tokens=25548 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+210s] state=True input_tokens=18656 generated_tokens=7273 context_tokens=25933 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+221s] state=True input_tokens=18656 generated_tokens=7588 context_tokens=26248 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+231s] state=True input_tokens=18656 generated_tokens=7946 context_tokens=26606 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+241s] state=True input_tokens=18656 generated_tokens=8287 context_tokens=26947 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+251s] state=True input_tokens=18656 generated_tokens=8652 context_tokens=27307 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+261s] state=True input_tokens=18656 generated_tokens=9049 context_tokens=27709 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+271s] state=True input_tokens=18656 generated_tokens=9484 context_tokens=28144 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+281s] state=True input_tokens=18656 generated_tokens=9969 context_tokens=28629 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL][+291s] state=True input_tokens=18656 generated_tokens=10531 context_tokens=29191 remaining=-1 task=85348
+[QWEN][Stage4v4C-FinancialAdoption-1of3-JURISDICTION_NEUTRAL] completed elapsed=294.6s prompt_tokens=18656 completion_tokens=10768 total_tokens=29424 reasoning_chars=42676
+Stage 4 v4 financial_adoption KR__CIS_IG2 checkpoint saved: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_checkpoints\main__session_hijacking__https\0e3bcdad8c530a923aca0deb92781f9878a5c3c2fa309207c0153b921dcc69dd\contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4\financial_adoption.json
+[MAIN SET][7/7] COMPLETE in 782.4s | action=generated_or_resumed_contextual_stage4_and_frozen | evidence=17 | slots=5/6 | families=6 | rounds=1 | stage2_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage2\artifacts\main__session_hijacking__https\250bdc196bdb83e4274c7ee2012da5847b32e0db4dec16a7734cd5b7c81f650f.json | stage3_objects=1 | stage3_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\artifacts\main__session_hijacking__https\13e1f696777533a58c7b3a267384ff9a72bfbcdcf73feae811f1626308c8a589.json | stage3_context_objects=3 | stage3_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage3\contextual_artifacts\main__session_hijacking__https\7e599f9e8dd5b87be745be537a0ac839e59fd1cad29ff1cc92a0cb2d37f71264.json | stage4_context_evaluations=3 | stage4_context_artifact=C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\contextual_artifacts\main__session_hijacking__https\0e3bcdad8c530a923aca0deb92781f9878a5c3c2fa309207c0153b921dcc69dd.json
+
+====================================================================================================
+MAIN SET COMPLETE: 7/7 cases | generated/resumed=6 | reused=1 | total=87.8 min
+Progress file: C:\Users\Lab-AXIS\Desktop\Haseung Ryu\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\Multi-Agent\Results\Stage4\runs\stage1-main-cases-v1__stage3-context-scenarios-v1__stage4-artifact-v4__stage4-context-runtime-128k-total-2slot-v3__de-83662ff07d__seed-42__progress.json
+====================================================================================================

@@ -1,0 +1,319 @@
+{
+  "artifact_sha256": "0f3f67f79e9cc5f4b190212bb9bd204a120ee1410df62700405eccd15a3f800a",
+  "case_id": "main__ransomware__cryptography",
+  "constrained_output_schema_sha256": {
+    "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc": {
+      "financial_adoption": "30b60c95a427e5696341267648912cd984064f2c01475db1d48ffa6d64f76480",
+      "institutional_regional": "796a060bfbe0c2a9adf4650a6d03735de5768ae80223099a066d1d1d7ca88212",
+      "technical_feasibility": "98882e57e9883c16bdb7c235155df9f99507a837b45b89a242ae006da855a62b"
+    }
+  },
+  "created_at": "2026-09-14T04:23:29.510130+00:00",
+  "decision_object_payload_sha256": {
+    "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc": "7ca64a462fbc3875da904923914f52ee947d0da701d7a63e5dad4a0cff429ab6"
+  },
+  "evaluation_bundle": {
+    "case_id": "main__ransomware__cryptography",
+    "evaluations": [
+      {
+        "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+        "financial_adoption": {
+          "claims": [
+            {
+              "claim_id": "F1",
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "scope": "GENERAL",
+              "statement": "The CISA CPG excerpt states that organizations, including small- and medium-sized hospitals and utilities, ask how they can make progress with limited budgets, staffing, and expertise, and that the CPGs are intended to provide an approachable common set of IT and OT cybersecurity protections that are clearly defined, straightforward to implement, and easy to communicate to non-technical audiences.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F2",
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "scope": "GENERAL",
+              "statement": "The NIST CSF 2.0 excerpt states that an organization can scope an Organizational Profile to countering ransomware threats and handling ransomware incidents involving financial systems, and that the profile process includes gathering information such as resources, analyzing gaps between Current and Target Profiles, and creating a prioritized action plan.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "F3",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "The NIST SP 800-53A excerpt provides assessment objectives and methods for SC-12(06) physical control of cryptographic keys when stored information is encrypted by external service providers, and for SC-13 cryptographic protection, including defined cryptographic uses, defined types of cryptography, implementation of those types, and assessment objects such as policies, procedures, system design documentation, configuration settings, audit records, cryptographic module validation certificates, FIPS-validated module lists, and tests of supporting mechanisms.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "F4",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref trend record reports annual publication counts for PMT_CRYPTOGRAPHY as 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, with an OLS slope of 37.8 works per year, and states that the query does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "F5",
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "scope": "GENERAL",
+              "statement": "The EU NIS2 recital excerpt states that the Union has faced an exponential increase in ransomware attacks, that Member States should develop a policy addressing the rise in ransomware attacks as part of their national cybersecurity strategy, and that public-private partnerships can clarify, among other items, available funding options.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "If budget_context, organization_type, infrastructure_context, and region are supplied, a deployment-specific financial/adoption judgment can be made.",
+            "If organization_type and staffing capacity are supplied, F1 and F3 can be used to assess whether documentation, key-management, and assessment effort is realistically absorbable.",
+            "If infrastructure_context includes external service providers storing encrypted data, F3 makes SC-12(06) key-management assessment relevant to the adoption burden.",
+            "If region is an EU jurisdiction, F5 provides regulatory and funding-option context, but it does not provide an organization-specific budget amount or eligibility determination.",
+            "If implementation timing or deadlines are supplied, the action-plan steps in F2 can be used to assess scheduling burden."
+          ],
+          "constraints": [
+            "Deployment-specific financial feasibility cannot be assessed because budget_context, organization_type, infrastructure_context, and region are null in the frozen DecisionObject.",
+            "No supplied evidence provides exact or estimated cost, TCO, ROI, budget, payback period, staffing hours, vendor cost, product version, implementation duration, or funding amount for adopting CRYPTOGRAPHY.",
+            "The Crossref publication trend in E_33 cannot be used to infer deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "E_31 is an EU legal-regulatory record; because region is null, it is used only as general regulatory context.",
+            "The NIST SP 800-53A assessment context in E_26 indicates documentation, key-management, and testing activities, but it does not quantify the cost or staff effort of those activities."
+          ],
+          "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+          "evidence_gaps": [
+            "Missing budget_context: no budget amount, funding source, cost cap, or financial constraint is supplied.",
+            "Missing organization_type: no organization size, sector, program maturity, existing security team, or staffing capacity is supplied.",
+            "Missing infrastructure_context: no existing cryptographic controls, key-management systems, external service-provider arrangements, or systems in scope are supplied.",
+            "Missing region: no jurisdiction is supplied for legal, regulatory, or funding-program applicability.",
+            "Missing implementation timing: no deadline, project horizon, rollout duration, or timing constraint is supplied.",
+            "Missing opportunity cost data: no alternative actions, competing priorities, or resource trade-offs are supplied.",
+            "Missing deployment maturity evidence: no evidence shows whether cryptographic controls are already deployed, partially deployed, or absent."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "financial_adoption",
+          "rationale": "The supplied evidence shows that cryptography has defined control and assessment contexts, and that organizations of different sizes face budget, staffing, and expertise constraints, but it does not provide enough financial or deployment context to conclude that adoption is realistic or unrealistic. No Stage 0 evidence gives cost, budget, staffing volume, vendor or product cost, ROI, payback, implementation timeline, opportunity cost, or deployment-specific infrastructure data. The Crossref publication trend only measures publication activity and explicitly disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness. Because budget_context, organization_type, infrastructure_context, and region are null, any deployment-specific feasibility conclusion would be unsupported. Therefore the financial/adoption direction is indeterminate, not directionally favorable or challenged.",
+          "stance": 0
+        },
+        "institutional_regional": {
+          "claims": [],
+          "conditional_requirements": [
+            "If the deployment region is confirmed as the EU or an EU Member State, assess the EU-specific NIS2 recital context and the requirement that Member States address ransomware policy in national cybersecurity strategy (E_31_6C5988FD2D0D8867).",
+            "If the organization uses external service providers for encrypted stored information, establish and assess physical control of cryptographic keys under SC-12(06) (E_26_A710FE8084614182).",
+            "If NIST-aligned assessment is required, prepare evidence for cryptographic uses, defined cryptography types, key establishment and management procedures, system design documentation, configuration settings, audit records, cryptographic module validation certificates, and FIPS-validated module lists (E_26_A710FE8084614182).",
+            "If ransomware response planning is in scope, incorporate ransomware threat scoping and contingency planning/training considerations reflected in NIST CSF 2.0 and NIST SP 800-53 Rev.5 material (E_24_223CAC714FDE427B, E_25_95744996E05BA6E9).",
+            "If resource constraints are material, use CISA CPG-style prioritization for common and impactful cyber risks as an institutional planning reference, while recognizing that budget context is absent (E_23_AC2A498B747552DF).",
+            "If data governance or cross-border data transfer is relevant, obtain jurisdiction-specific legal and data-protection assessment because the supplied evidence does not establish a specific obligation.",
+            "If organization type is later identified as a regulated sector, re-evaluate sector-specific regulatory scope because the current evidence does not supply that context."
+          ],
+          "constraints": [
+            "Cryptographic implementation and assessment are institutionally framed by NIST SP 800-53A material covering SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection, including policies, procedures, design documentation, configuration settings, audit records, cryptographic module validation certificates, and FIPS-validated cryptographic modules (C-INST-01).",
+            "NIST SP 800-53 Rev.5 material frames ransomware attacks that encrypt organizational data on servers as actual threat events in a contingency-planning context (C-INST-02).",
+            "CISA CPG material is US-oriented and frames ransomware among unprecedented cyber threats, while noting that CPGs target common and impactful cyber risks across organizations of different sizes and that some organizations face limited budgets, staffing, and expertise (C-INST-03).",
+            "NIST CSF 2.0 material gives an example of scoping an Organizational Profile to countering ransomware threats and handling ransomware incidents involving financial systems (C-INST-04).",
+            "NIST AI 100-2 material contrasts cryptography with widely used machine learning algorithms that lack information-theoretic security proofs (C-INST-05).",
+            "NIST AI 100-4 material describes cryptographic hashes and digital signatures as mechanisms for metadata linkage, tamper-evidence, and attribution (C-INST-06).",
+            "NISTIR 8259 Series material cites NIST SP 800-56A pair-wise key-establishment using discrete logarithm cryptography as a referenced standard in an IoT device cybersecurity context (C-INST-07).",
+            "SC-12(06) specifically addresses physical control of cryptographic keys when stored information is encrypted by external service providers (C-DATA-01).",
+            "NIST CSF 2.0 material identifies organizational information needed for an Organizational Profile, including policies, risk management priorities and resources, cybersecurity requirements, practices and tools, and work roles (C-ORG-01).",
+            "EU NIS2 recital material is EU-specific: it states that the Union faced an exponential increase in ransomware attacks and that Member States should develop a policy addressing the rise of ransomware attacks as part of their national cybersecurity strategy (C-REG-EU-01)."
+          ],
+          "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+          "evidence_gaps": [
+            "Target region is absent from deployment_context, so applicable regulatory regime, data-sovereignty rules, cross-border constraints, and jurisdiction-specific cryptographic obligations cannot be assessed.",
+            "Organization type is absent from deployment_context, so sector-specific regulatory scope and critical-infrastructure obligations cannot be assessed.",
+            "Infrastructure context is absent from deployment_context, so key-management architecture, storage locations, external service provider arrangements, and applicability of module validation or FIPS-related expectations cannot be assessed.",
+            "Budget context is absent from deployment_context, so compliance and implementation resource burden cannot be assessed.",
+            "No supplied evidence addresses data governance or data sovereignty constraints specific to cryptography.",
+            "No supplied evidence addresses cross-border data transfer, cross-border key management, or regional operating constraints.",
+            "No supplied evidence identifies regulatory compatibility conflicts or prohibitions specific to the frozen CRYPTOGRAPHY action.",
+            "No supplied evidence quantifies institutional implementation burden, staffing requirements, or timeline for cryptographic control deployment."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "institutional_regional",
+          "rationale": "The supplied evidence establishes a general institutional context for CRYPTOGRAPHY as a PMT: NIST control-assessment material addresses cryptographic protection and key management, NIST framework and contingency-planning material references ransomware-related scoping and threat events, and CISA CPG material frames ransomware as a common high-impact cyber risk for organizations of different sizes while noting limited budgets, staffing, and expertise in some organization examples. This supports GENERAL institutional feasibility. However, the frozen deployment_context leaves region, organization_type, infrastructure_context, and budget_context as null, and no supplied evidence identifies the applicable jurisdiction, data-sovereignty rules, cross-border operating constraints, or sector-specific regulatory obligations. The EU NIS2 recital provides an EU-specific ransomware policy context, but the record prohibits cross-jurisdiction generalization and the target region is unknown. Therefore the action is not materially challenged on the institutional evidence provided, but deployment-specific institutional/regional feasibility is indeterminate under this lens.",
+          "stance": 0
+        },
+        "technical_feasibility": {
+          "claims": [
+            {
+              "claim_id": "TFC-1",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53A Rev.5 provides assessment objectives and methods for SC-12(06) physical control of cryptographic keys and SC-13 cryptographic protection.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TFC-2",
+              "evidence_ids": [
+                "E_26_A710FE8084614182"
+              ],
+              "scope": "GENERAL",
+              "statement": "For SC-13, NIST SP 800-53A Rev.5 lists potential assessment objects including system configuration settings and associated documentation, cryptographic module validation certificates, and a list of FIPS-validated cryptographic modules.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TFC-3",
+              "evidence_ids": [
+                "E_16_E7BB108A85B71262"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST AI 100-4 describes cryptographic hashes and digital signatures as mechanisms that can link content to metadata and provide tamper-evidence and attribution; it also describes perceptual hashing as an alternative for similar-content linkage.",
+              "status": "SUPPORTS_FEASIBILITY"
+            },
+            {
+              "claim_id": "TFC-4",
+              "evidence_ids": [
+                "E_15_0A98378FC609EF7E"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST AI 100-2 states that, unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms, and that information-theoretic impossibility results limit the effectiveness of widely used mitigation techniques.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-5",
+              "evidence_ids": [
+                "E_33_CDE0F421E4D797ED"
+              ],
+              "scope": "GENERAL",
+              "statement": "The Crossref cutoff-constrained PMT publication trend reports annual publication counts for PMT_CRYPTOGRAPHY of 210 in 2021, 254 in 2022, 272 in 2023, and 330 in 2024, and states that the record does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-6",
+              "evidence_ids": [
+                "E_19_4E69D255F61736DB"
+              ],
+              "scope": "GENERAL",
+              "statement": "NISTIR 8259 includes references to NIST SP 800-128 for security-focused configuration management of information systems and NIST SP 800-56A Rev. 3 for recommendation of pair-wise key-establishment schemes using discrete logarithm cryptography.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-7",
+              "evidence_ids": [
+                "E_25_95744996E05BA6E9"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST SP 800-53 Rev.5 cites ransomware attacks that encrypt organizational data on servers as actual threat events in the contingency training discussion.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-8",
+              "evidence_ids": [
+                "E_24_223CAC714FDE427B"
+              ],
+              "scope": "GENERAL",
+              "statement": "NIST CSF 2.0 gives an example of scoping an Organizational Profile to countering ransomware threats and handling ransomware incidents involving financial systems.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-9",
+              "evidence_ids": [
+                "E_23_AC2A498B747552DF"
+              ],
+              "scope": "GENERAL",
+              "statement": "CISA CPGs are described as an approachable common set of IT and OT cybersecurity protections that are clearly defined, straightforward to implement, and aimed at common and impactful cyber risks.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-10",
+              "evidence_ids": [
+                "E_03_0BAA7B22596028F4"
+              ],
+              "scope": "GENERAL",
+              "statement": "Mandiant M-Trends reports a 9-day median dwell time for ransomware intrusions in 2022, compared with 5 days reported in M-Trends 2022.",
+              "status": "NEUTRAL_CONTEXT"
+            },
+            {
+              "claim_id": "TFC-11",
+              "evidence_ids": [
+                "E_31_6C5988FD2D0D8867"
+              ],
+              "scope": "GENERAL",
+              "statement": "The EU NIS2 recital describes ransomware attacks as malware that encrypts data and systems and demands a ransom payment for release.",
+              "status": "NEUTRAL_CONTEXT"
+            }
+          ],
+          "conditional_requirements": [
+            "Deployment-specific integration and operability conclusions require infrastructure_context.",
+            "Threat-mitigation technical fit requires definition of the intended cryptographic control scope and use cases.",
+            "Operability within the forecast horizon requires evidence of deployment maturity or operational effectiveness for the intended cryptographic controls in comparable environments.",
+            "Maintainability and scalability judgments require operational burden and maintainability data for the unknown infrastructure."
+          ],
+          "constraints": [
+            "Publication-activity evidence for PMT_CRYPTOGRAPHY is explicitly not evidence of deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+            "The control-assessment evidence identifies assessment objectives and methods for cryptographic controls, but it does not establish current deployment, integration, or exact effectiveness in the unknown environment.",
+            "The mechanism guidance describes cryptographic hashes and digital signatures for provenance and tamper-evidence, but it does not establish ransomware-specific operational effectiveness.",
+            "The AI guidance contrast with machine learning and references to impossibility results provide context for cryptographic assurance, not evidence that cryptography is operable against the frozen ransomware threat."
+          ],
+          "decision_object_id": "decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc",
+          "evidence_gaps": [
+            "infrastructure_context is null; current IT/OT systems, data stores, backup and recovery systems, network segmentation, key-management capabilities, storage and processing constraints, and integration points are unknown.",
+            "organization_type, region, and budget_context are null; these would be needed for deployment-specific compatibility and any jurisdiction-specific control context.",
+            "The specific cryptographic controls or use cases intended within CRYPTOGRAPHY are not defined, such as encryption scope, key-management scope, backup integrity, tamper-evidence, or provenance mechanisms.",
+            "No supplied evidence links PMT_CRYPTOGRAPHY to ransomware mitigation effectiveness, deployment maturity, or operational adoption in comparable environments.",
+            "No supplied evidence addresses operational burden, key lifecycle, recovery testing, staffing, performance impact, or maintainability under the unknown infrastructure."
+          ],
+          "evidence_sufficiency": "INSUFFICIENT_CONTEXT",
+          "lens_type": "technical_feasibility",
+          "rationale": "The frozen action is a generic cryptographic control class. The supplied evidence supports some general technical feasibility context: cryptographic controls have standard assessment procedures, cryptographic mechanisms are described, and publication activity is active. However, the evidence explicitly disclaims deployment maturity, operational effectiveness, and causal mitigation effectiveness, and no supplied evidence establishes ransomware-specific technical fit, integration feasibility, operational burden, or operability in the unknown deployment environment. Because deployment_context is null, a deployment-specific technical feasibility conclusion cannot be made.",
+          "stance": 0
+        }
+      }
+    ]
+  },
+  "input_fingerprint": "887c6c7f88a5016ff86e8f7fa9fc3e534d30dffa23fb57c8f6026fe00ebe6bdc",
+  "lens_schema_sha256": "450b3d3b6810fca2bcd02daafd49a9cfb9693a00742fa1ad03743cd057db65ef",
+  "output_schema_sha256": "b6a008de9de2f28ed9cc4f6dc2781b02f620257c9aa4910c7adb934a4386cb1a",
+  "prompt_hashes": {
+    "financial_adoption_system_prompt_sha256": "2b0f1c988b6e69eca684aa58af4845709b9606c1462e619f9eb69ccfbd3e650d",
+    "institutional_regional_system_prompt_sha256": "4642d85804f50bd8e077aec1f9f5de89854abbd00d9c1e0fae16f7e20cb431f4",
+    "stage4_user_prompt_sha256": "ef71966f36dbda9be9100bc45022b48c8095fb45a1911ea37b4af2dee496097d",
+    "technical_feasibility_system_prompt_sha256": "42292179008af427c77e9fe5294c40ff49f4108912f5959f33b0c1fdca2fa1ad"
+  },
+  "runtime": {
+    "batch_size": 2048,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 131072,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 1,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage4-artifact-v1",
+  "semantic_validation_version": "stage4-semantic-validation-v1",
+  "source_snapshot_id": "stage0-2026-09-13-v4",
+  "stage0_evidence_pack_sha256": "db2e665ae71d97282a4b48a4abd6396098c789528cfee3fecd69e225b52cf4af",
+  "stage3_artifact_sha256": "4231ae6a406b0e1820259e39b5e8bbd8891d6380a03117cdc95dca9fd1c629eb",
+  "stage3_input_fingerprint": "958975ef36eaf1b355046fd856e3e51dedd381c2737c2e2a522004bf7f8fd69e",
+  "stage3_output_sha256": "67e2fd7b9d1272554191bb08d631aaf42f25353977ff79b29c9e232a9a910d98",
+  "stage4_output_sha256": "972334e7e8eec3d0f82015529e1a8698980cd528d3176b609f8b6a1447871fa4"
+}

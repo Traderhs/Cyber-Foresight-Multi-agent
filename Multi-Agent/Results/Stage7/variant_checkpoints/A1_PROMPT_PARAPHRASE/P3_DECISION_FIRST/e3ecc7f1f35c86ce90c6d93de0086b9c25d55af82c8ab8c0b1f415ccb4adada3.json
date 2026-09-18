@@ -1,0 +1,136 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_S1",
+        "evidence_ids": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance_enablement records describe general institutional pathways for NLP/LLM/GAI systems, including documented roles and accountability, periodic risk-management review, training, executive responsibility, human-AI oversight, documentation/model cards/data cards/SBOMs, and monitoring/logging/updates that support compliance, audit, investigation, and remediation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance_constraint record frames GAI incident reporting as requiring compliance with legal and regulatory requirements, with HIPAA/OCR and NHTSA examples, creating a potential legal/regulatory reporting burden for institutional deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_N1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference-enterprise profile is described as multi-department enterprise IT that may process sensitive information, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional conclusion would require jurisdiction-specific regulatory_applicability evidence for the frozen region and the NLP/LLM/GAI action.",
+      "If the jurisdiction is unmasked, legal/regulatory incident-reporting applicability must be established before treating the cited reporting requirement as a deployment-specific obligation.",
+      "Deployment-specific institutional feasibility would require evidence that the organization can operationalize the cited governance pathways and satisfy any applicable legal/regulatory reporting obligations."
+    ],
+    "constraints": [
+      "Legal/regulatory incident-reporting compliance is a constraint axis for GAI deployment; the supplied record cites HIPAA/OCR and NHTSA examples (DE_DE02_007F05150CB46131).",
+      "The frozen CIS IG2 profile is described as potentially involving sensitive information, regulatory burdens, and enterprise-grade technology/specialized expertise for some safeguards (CTX_CIS_IG2_9F94838146D9C3A4).",
+      "Institutional use of the supplied NLP/LLM/GAI guidance presupposes implementation of governance capabilities such as roles/accountability, documentation, monitoring, logging, and update management (DE_DE01_0B9728FE19095FD0, DE_DE15_271AFADC7B3D5999, DE_DE15_7C1849B1FD93975C)."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No regulatory_applicability evidence is supplied for the frozen masked jurisdiction, so DEPLOYMENT_SPECIFIC institutional/regional direction cannot be grounded.",
+      "No jurisdiction-specific evidence on AI/NLP/LLM legal obligations, data sovereignty, cross-border constraints, or DDoS mitigation regulatory requirements is supplied.",
+      "No enterprise-specific evidence that the CIS IG2 reference enterprise currently has AI governance roles, training, monitoring/logging, documentation, or incident-reporting capacity.",
+      "No action-specific evidence connects the NLP/LLM DDoS PMT to institutional governance or regulatory obligations beyond generic AI/GAI guidance."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen jurisdiction is intentionally masked and no regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC regional or legal conclusion is not grounded. At the GENERAL level, the direction-carrying governance_enablement records provide institutional pathways relevant to NLP/LLM/GAI adoption: roles and accountability, periodic risk-management review, training, executive responsibility, documentation, secure operation, monitoring, logging, and audit support. The direction-carrying compliance_constraint record identifies legal/regulatory incident-reporting compliance as a constraint, with HIPAA/OCR and NHTSA examples, but it does not establish applicability to the frozen masked jurisdiction or demonstrate that institutional adoption is infeasible. Weighing directness to institutional enablement, the general direction is support, with unresolved jurisdiction-specific regulatory applicability and enterprise-capacity details preserved as gaps.",
+    "stance": 1
+  },
+  "assessment_sha256": "b1b2586303b38090a93b8323c4cfb57df81dbeea7795baee207fa2a4f4fa7d22",
+  "checkpoint_sha256": "46d4537380f9826a6623c5aa0ca21bba6d84e5829d068260be1d454f76c8a2d0",
+  "created_at": "2026-09-16T13:06:07.334636+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_0B9728FE19095FD0",
+        "DE_DE02_007F05150CB46131",
+        "DE_DE15_271AFADC7B3D5999",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "e3ecc7f1f35c86ce90c6d93de0086b9c25d55af82c8ab8c0b1f415ccb4adada3",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "fc89ade14bc934fe6fc0c0ea471cce486176f605af227dc7bb1203680708b08d",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "2765ceeab5b9512e5881af286dbd75df1553f279b395dc9b7c1582f9af16fbc4",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "27de00534a18289301e4dad3502179401a4ba7c502a40443752ae5ff91c0b387",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}

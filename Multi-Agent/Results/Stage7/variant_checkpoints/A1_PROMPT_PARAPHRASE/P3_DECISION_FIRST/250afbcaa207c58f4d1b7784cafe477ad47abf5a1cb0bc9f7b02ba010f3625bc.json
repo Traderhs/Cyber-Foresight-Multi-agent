@@ -1,0 +1,129 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-SUPPORT-1",
+        "evidence_ids": [
+          "DE_DE04_0B77B88875745973",
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_14CCCEB6F82351D5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied Stage-4 governance_enablement records document a GENERAL institutional pathway for ANOMALY DETECTION feasibility: protective operational controls for detection systems, oversight and incident-response benefits, and audit/monitoring documentation capabilities.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CONTEXT-1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen deployment context uses a CIS IG2 reference-enterprise profile, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; this supports keeping the institutional assessment GENERAL rather than region-specific.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Adoption would require an institutional governance model for detection management, including account separation, access restriction, protected management channels, update testing, backups, and ongoing vulnerability response.",
+      "Adoption would require auditability and oversight mechanisms, including review of audit logs, configuration-change monitoring, remote-activation detection, and documentation/monitoring support.",
+      "Adoption would require management of the documented limitations of anomaly-based detection, including false-negative risk, sensitivity to network changes, and the governance implications of relying on an unpredictable detection system.",
+      "Any region-specific institutional/regional conclusion would require separate jurisdiction-specific regulatory_applicability evidence; the current masked jurisdiction does not support such a conclusion."
+    ],
+    "constraints": [
+      "Institutional operation of detection systems requires protective and ongoing management practices, including separate accounts, restricted network access, protected management communications, ongoing verification and monitoring, vulnerability response, update testing, and configuration backups.",
+      "Anomaly-based detection is characterized as capable of dealing with unknown threats but subject to false negatives, sensitivity to network device changes, subjective interpretation, unpredictable behavior, and the need to trust the system completely.",
+      "Auditability and monitoring expectations include or rely on capabilities such as sending audit logs to an external audit process, monitoring configuration changes, detecting remote activation attempts, and providing documentation and monitoring support.",
+      "Product adoption is not automatically sufficient: the organization must identify products that integrate with existing tools, processes, and system infrastructure, and the NISTIR does not guarantee compliance with any regulatory initiatives."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied, so DEPLOYMENT_SPECIFIC regional/legal feasibility, data sovereignty, cross-border constraints, and exact compliance obligations cannot be concluded.",
+      "No compliance_constraint Stage-4 decision evidence is supplied under the directional grounding contract, so a grounded institutional/regulatory challenge direction is unavailable.",
+      "No exact deployment architecture, staffing, budget, vendor, product version, or integration-maturity evidence is supplied, so deployment-specific institutional burden remains conditional.",
+      "No supplied evidence establishes whether the frozen organization already has the specific audit-log, monitoring, configuration-change, and documentation capabilities listed in the ICS-related guidance."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The assigned feasibility question is whether the supplied records, on balance, support or challenge the frozen ANOMALY DETECTION action's institutional/regional feasibility under the frozen scenario. Under the supplied directional grounding contract, a GENERAL institutional direction can be grounded by governance_enablement evidence. The eligible Stage-4 records document governance, auditability, oversight, and implementation-pathway materials for anomaly detection and related IDPS capabilities. No compliance_constraint record is supplied under the challenge slots, so a grounded institutional/regulatory challenge direction does not survive. Because the frozen jurisdiction is masked and no jurisdiction-specific regulatory_applicability evidence is supplied, a DEPLOYMENT_SPECIFIC regional/legal direction cannot be grounded. The surviving grounded GENERAL direction is therefore support, with sufficiency limited to PARTIAL because jurisdiction-specific and deployment-specific institutional details remain unresolved.",
+    "stance": 1
+  },
+  "assessment_sha256": "3fc8e9bf9e2d25b49481908bc29e9a5f085bd96c6329d11a5d88d876e09f1e65",
+  "checkpoint_sha256": "ecd3618baa08dcf1cfb8233848c9874d8e67cb25ae42f2024271a1f30d914119",
+  "created_at": "2026-09-16T13:28:11.151308+00:00",
+  "identity": {
+    "axis": "A1_PROMPT_PARAPHRASE",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B77B88875745973",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_14CCCEB6F82351D5",
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "250afbcaa207c58f4d1b7784cafe477ad47abf5a1cb0bc9f7b02ba010f3625bc",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "2c9392660f945f132847e785f91999d9d776baffae5bb17fe7eca2bab3d63a30",
+    "payload_transform_id": null,
+    "prompt_variant": "P3_DECISION_FIRST",
+    "repeat_index": null,
+    "response_schema_sha256": "6e113f72d4a320cf7270e9006ee14a01df6feaac2c80b56d06bcb1457062c250",
+    "runner_version": "stage7-decision-variant-runner-v1",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v1"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "4df8419c89d1df082dca878ca722dfc6ce5964146d9814c59f96e0878bac1dcc",
+    "variant_id": "P3_DECISION_FIRST"
+  }
+}
