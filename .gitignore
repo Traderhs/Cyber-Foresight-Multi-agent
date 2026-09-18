@@ -13,7 +13,7 @@
 /Multi-Agent/rag_storage
 /Multi-Agent/lightrag.log
 /Multi-Agent/test_environment.py
-/.idea/
+.idea/
 /.jbeval/
 __pycache__/
 *.pyc
