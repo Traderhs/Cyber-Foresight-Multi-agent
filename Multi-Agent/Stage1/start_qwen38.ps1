@@ -1,8 +1,23 @@
 $ErrorActionPreference = 'Stop'
 
-$LlamaRoot = 'C:\Users\Lab-AXIS\Desktop\Haseung Ryu\LLMs\llama.cpp-b10919-cuda13.3\runtime'
+$ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+$WorkspaceRoot = Split-Path -Parent (Split-Path -Parent $ProjectRoot)
+$LlmRoot = if ($env:LLM_ROOT) {
+    $env:LLM_ROOT
+} else {
+    Join-Path $WorkspaceRoot 'LLMs'
+}
+$LlamaRoot = if ($env:LLAMA_CPP_RUNTIME) {
+    $env:LLAMA_CPP_RUNTIME
+} else {
+    Join-Path $LlmRoot 'llama.cpp-b10919-cuda13.3\runtime'
+}
 $LlamaServer = Join-Path $LlamaRoot 'llama-server.exe'
-$Model = 'C:\Users\Lab-AXIS\Desktop\Haseung Ryu\LLMs\Qwen3.8-27B-Q6-K-L\Model\Qwen3.8-27B-Q6_K_L.gguf'
+$Model = if ($env:QWEN38_MODEL_PATH) {
+    $env:QWEN38_MODEL_PATH
+} else {
+    Join-Path $LlmRoot 'Qwen3.8-27B-Q6-K-L\Model\Qwen3.8-27B-Q6_K_L.gguf'
+}
 
 if (-not (Test-Path -LiteralPath $LlamaServer)) {
     throw "llama-server.exe not found: $LlamaServer"
@@ -15,10 +30,11 @@ if (-not (Test-Path -LiteralPath $Model)) {
 # temperature=1.0, top_p=0.95, top_k=20, min_p=0.0,
 # presence_penalty=0.0, repetition_penalty=1.0.
 #
-# Stage 1 still fans out logically in LangGraph, but llama-server deliberately
-# uses one inference slot. Current llama.cpp CUDA reports have shown corruption
-# with concurrent long MTP generations; serial server execution preserves the
-# independent-input contract without allowing one critic to observe the other.
+$Parallel = 2
+
+# One active runtime for Stage 1, Stage 2, and contextual Stage 4. The same
+# total 131072-token KV budget is split into two 65536-token inference slots,
+# allowing up to two independent model requests to run concurrently.
 & $LlamaServer `
     --model $Model `
     --alias 'Qwen3.8-27B-Q6_K_L' `
@@ -28,7 +44,7 @@ if (-not (Test-Path -LiteralPath $Model)) {
     --metrics `
     --n-gpu-layers all `
     --ctx-size 131072 `
-    --parallel 1 `
+    --parallel $Parallel `
     --batch-size 2048 `
     --ubatch-size 512 `
     --flash-attn on `
