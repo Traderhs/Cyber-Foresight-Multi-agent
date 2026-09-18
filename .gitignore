@@ -8,6 +8,7 @@
 /Data_Preparation/Elsevier_PTs/dump.json
 /Data_Preparation/cookies.py
 /Data_Preparation/scopus_cookies.pkl
+/Docs/
 /geckodriver.log
 /Multi-Agent/rag_storage
 /Multi-Agent/lightrag.log
