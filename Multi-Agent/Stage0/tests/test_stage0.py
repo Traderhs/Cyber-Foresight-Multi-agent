@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 STAGE0_PARENT = Path(__file__).resolve().parents[2]
@@ -14,8 +15,11 @@ if str(STAGE0_PARENT) not in sys.path:
 from Stage0.builder import Stage0Builder  # noqa: E402
 from Stage0.bm25 import BM25_RETRIEVER_VERSION, rank_bm25  # noqa: E402
 from Stage0.evidence_store import EvidenceSnapshotWriter, EvidenceStore  # noqa: E402
+from Stage0.ingest import EvidenceCorpusBuilder  # noqa: E402
 from Stage0.paper_migration import PaperForecastMigrator  # noqa: E402
 from Stage0.registry import SOURCE_REGISTRY, validate_source_registry  # noqa: E402
+from Stage0.source_manifest import ARTIFACT_SPECS  # noqa: E402
+from Stage0.nodes import load_data_node  # noqa: E402
 from Stage0.schema import (  # noqa: E402
     BasisType,
     ClaimReference,
@@ -28,12 +32,53 @@ from Stage0.schema import (  # noqa: E402
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
+class Stage0NodeStateTests(unittest.TestCase):
+    def test_env_config_is_resolved_back_into_state_for_downstream_stages(self) -> None:
+        agent_input = {
+            "forecast_data": "{}",
+            "evidence_pack": {
+                "case_id": "debug__ddos__nlp_llm",
+                "evidence": [{"evidence_id": "E1"}],
+                "retrieval_metadata": {
+                    "covered_evidence_slots": [],
+                    "source_family_count": 0,
+                },
+            },
+        }
+        env = {
+            "STAGE0_SNAPSHOT_ID": "stage0-2026-09-13-v4",
+            "STAGE0_THREAT": "DDoS",
+            "STAGE0_PMT": "NLP/LLM",
+            "STAGE0_ANALYSIS_CUTOFF": "2024-12-31",
+            "STAGE0_EVALUATION_MODE": "ex_ante_replay",
+            "STAGE0_CASE_ID": "debug__ddos__nlp_llm",
+        }
+        with (
+            patch.dict("os.environ", env, clear=False),
+            patch("Stage0.nodes.build_agent_input", return_value=agent_input),
+        ):
+            output = load_data_node({"stage0_config": None})
+        self.assertEqual(output["stage0_config"]["snapshot_id"], env["STAGE0_SNAPSHOT_ID"])
+        self.assertEqual(output["stage0_config"]["threat"], "DDoS")
+        self.assertEqual(output["stage0_config"]["pmt"], "NLP/LLM")
+        self.assertEqual(output["stage0_config"]["evaluation_mode"], "ex_ante_replay")
+        self.assertEqual(output["stage0_config"]["case_id"], "debug__ddos__nlp_llm")
+
+
 class Stage0RegistryTests(unittest.TestCase):
     def test_fixed_registry_contract(self) -> None:
         result = validate_source_registry()
-        self.assertEqual(result["entry_count"], 32)
+        self.assertEqual(result["entry_count"], 33)
         self.assertEqual(result["family_count"], 9)
-        self.assertEqual([source.registry_id for source in SOURCE_REGISTRY], [f"{i:02d}" for i in range(1, 33)])
+        self.assertEqual([source.registry_id for source in SOURCE_REGISTRY], [f"{i:02d}" for i in range(1, 34)])
+
+    def test_publication_trend_has_separate_claim_contract_from_static_crossref_metadata(self) -> None:
+        by_id = {source.registry_id: source for source in SOURCE_REGISTRY}
+        self.assertNotIn("directional_publication_trend", by_id["29"].allowed_claim_types)
+        self.assertEqual(by_id["33"].allowed_claim_types, ("directional_publication_trend",))
+        self.assertEqual(by_id["33"].family, "H")
+        self.assertIn("deployment_maturity", by_id["33"].prohibited_claim_types)
+        self.assertIn("operational_effectiveness", by_id["33"].prohibited_claim_types)
 
     def test_held_out_sources_not_in_main_registry(self) -> None:
         names = " ".join(source.name.lower() for source in SOURCE_REGISTRY)
@@ -208,6 +253,21 @@ class Stage0EvidenceAndBuilderTests(unittest.TestCase):
             evidence_type="official_guidance_chunk",
             content="This generic guidance fixture has no explicit threat or PMT tag and must not be injected into every case.",
         )
+        self.trend_record = writer.add_record(
+            source_registry_id="33",
+            source="Synthetic Crossref PMT publication-trend fixture",
+            publication_date="2024-12-31",
+            available_at="2024-12-31",
+            evidence_date="2024-12-31",
+            source_document_id="crossref-pmt-publication-trends",
+            source_locator="Crossref:publication-trend:PMT_NLP_LLM:2021-2024:created<=2024-12-31",
+            evidence_type="academic_publication_trend",
+            content=(
+                "Crossref cutoff-constrained PMT publication trend independent of the Scopus-derived NoP model input: "
+                "2021=10, 2022=12, 2023=15, 2024=19; OLS_slope=3.0 works/year."
+            ),
+            pmt_ids=("PMT_NLP_LLM",),
+        )
         writer.finalize()
         self.snapshot = self.evidence_root / "snapshots/test-snapshot-v1"
         self.builder = Stage0Builder(self.forecast_dir, self.snapshot)
@@ -257,6 +317,131 @@ class Stage0EvidenceAndBuilderTests(unittest.TestCase):
         self.assertIn("observed_threat_reality", pack.retrieval_metadata["retrieval_queries"])
         self.assertIn("DDoS", pack.retrieval_metadata["retrieval_queries"]["observed_threat_reality"])
         self.assertIn("NLP/LLM", pack.retrieval_metadata["retrieval_queries"]["observed_threat_reality"])
+
+    def test_gap_direction_uses_signed_threat_minus_pmt_semantics(self) -> None:
+        pack = self._pack()
+        gaps = list(pack.forecast_summary["gap_by_year"].values())
+        expected = (
+            "threat_minus_pmt_increasing"
+            if gaps[-1] > gaps[0]
+            else "threat_minus_pmt_decreasing"
+            if gaps[-1] < gaps[0]
+            else "flat"
+        )
+        self.assertEqual(pack.forecast_summary["gap_direction"], expected)
+        self.assertNotIn(pack.forecast_summary["gap_direction"], {"widening", "narrowing"})
+        self.assertIn(
+            "gap = threat_state_mean_z - pmt_state_mean_z",
+            pack.forecast_summary["gap_direction_semantics"],
+        )
+        self.assertIn("signed gap movement", pack.forecast_summary["gap_direction_semantics"])
+
+    def test_publication_trend_record_is_retrievable_as_technical_literature(self) -> None:
+        pack = self.builder.build(
+            case_id="test-ddos-nlp-trend",
+            threat="DDoS",
+            pmt="NLP/LLM",
+            analysis_cutoff_date="2024-12-31",
+            evaluation_mode=EvaluationMode.EX_ANTE_REPLAY,
+            required_evidence_slots=("technical_literature",),
+        )
+        evidence_ids = {record.evidence_id for record in pack.evidence}
+        self.assertIn(self.trend_record.evidence_id, evidence_ids)
+        trend = next(record for record in pack.evidence if record.evidence_id == self.trend_record.evidence_id)
+        self.assertEqual(trend.allowed_claim_types, ("directional_publication_trend",))
+        self.assertIn("technical_literature", pack.retrieval_metadata["covered_evidence_slots"])
+
+    def test_publication_trend_parser_emits_only_observed_cutoff_bounded_trends(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            builder = EvidenceCorpusBuilder(PROJECT_ROOT, snapshot_date="2026-09-13", snapshot_id="trend-parser-test")
+            writer = EvidenceSnapshotWriter(Path(tmp) / "Evidence", "trend-parser-test")
+            builder.writer = writer
+            spec = next(spec for spec in ARTIFACT_SPECS if spec.source_registry_id == "33")
+            zero_result_id = builder.pmt_entities[-1]["node_id"]
+            payload = {
+                "forecast_origin_cutoff": "2024-12-31",
+                "lookback_years": [2021, 2022, 2023, 2024],
+                "queries": [
+                    {
+                        "pmt_id": entity["node_id"],
+                        "pmt_name": entity["canonical_name"],
+                        "title_query": entity["canonical_name"],
+                        "bibliographic_query": "security",
+                        "annual_counts": (
+                            {"2021": 0, "2022": 0, "2023": 0, "2024": 0}
+                            if entity["node_id"] == zero_result_id
+                            else {"2021": 10, "2022": 12, "2023": 15, "2024": 19}
+                        ),
+                        "total_results": 0 if entity["node_id"] == zero_result_id else 56,
+                    }
+                    for entity in builder.pmt_entities
+                ],
+            }
+            path = Path(tmp) / "crossref-trends.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            builder._parse(spec, path, "2026-09-13", "2026-09-13")
+            trend_records = [record for record in writer.records if record.source_registry_id == "33"]
+            self.assertEqual(len(trend_records), 97)
+            self.assertFalse(any(record.pmt_ids == (zero_result_id,) for record in trend_records))
+            self.assertTrue(all(record.available_at == "2024-12-31" for record in trend_records))
+            self.assertTrue(all(record.allowed_claim_types == ("directional_publication_trend",) for record in trend_records))
+            access_control = next(record for record in trend_records if record.pmt_ids == ("PMT_ACCESS_CONTROL",))
+            self.assertIn("Crossref cutoff-constrained PMT publication trend", access_control.content)
+            self.assertIn("independent of the Scopus-derived NoP model input", access_control.content)
+            self.assertIn("2021=10, 2022=12, 2023=15, 2024=19", access_control.content)
+            builder.session.close()
+
+    def test_crossref_metadata_availability_uses_first_deposit_not_old_publication_date(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            builder = EvidenceCorpusBuilder(PROJECT_ROOT, snapshot_date="2026-09-13", snapshot_id="crossref-time-test")
+            writer = EvidenceSnapshotWriter(Path(tmp) / "Evidence", "crossref-time-test")
+            builder.writer = writer
+            spec = next(spec for spec in ARTIFACT_SPECS if spec.source_registry_id == "29")
+            payload = {
+                "queries": [
+                    {
+                        "pmt_id": "PMT_ACCESS_CONTROL",
+                        "results": [
+                            {
+                                "title": ["Access control fixture"],
+                                "DOI": "10.0000/test",
+                                "published": {"date-parts": [[2019, 1, 12]]},
+                                "created": {"date-time": "2025-10-11T12:20:07Z"},
+                            }
+                        ],
+                    }
+                ]
+            }
+            path = Path(tmp) / "crossref.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            builder._parse(spec, path, "2026-09-13", "2026-09-13")
+            self.assertEqual(len(writer.records), 1)
+            self.assertEqual(writer.records[0].publication_date, "2019-01-12")
+            self.assertEqual(writer.records[0].available_at, "2025-10-11")
+            builder.session.close()
+
+    def test_old_registry_snapshot_is_not_runtime_compatible(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Evidence"
+            writer = EvidenceSnapshotWriter(root, "strict-registry-test")
+            writer.add_record(
+                source_registry_id="02",
+                source="Registry strictness fixture",
+                publication_date="2024-01-01",
+                available_at="2024-01-01",
+                source_document_id="fixture",
+                source_locator="fixture",
+                evidence_type="annual_report_chunk",
+                content="Registry strictness fixture content for Stage 0 tests.",
+                threat_ids=("THREAT_DDOS",),
+            )
+            snapshot = writer.finalize()
+            manifest_path = snapshot / "manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["source_registry_version"] = "stage0-registry-v2"
+            manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+            with self.assertRaises(Stage0ValidationError):
+                EvidenceStore(snapshot)
 
     def test_system_evidence_coverage_uses_semantic_slots(self) -> None:
         pack = self._pack()

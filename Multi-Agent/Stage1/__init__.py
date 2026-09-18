@@ -2,20 +2,24 @@
 
 from .schema import (
     ClaimAssessment,
-    ClaimStatus,
     CriticAssessment,
     CriticType,
     EvidenceSufficiency,
+    ForecastRelation,
+    StanceBasis,
+    StanceDecision,
     Stage1ValidationError,
     validate_critic_assessment,
 )
 
 __all__ = [
     "ClaimAssessment",
-    "ClaimStatus",
     "CriticAssessment",
     "CriticType",
     "EvidenceSufficiency",
+    "ForecastRelation",
+    "StanceBasis",
+    "StanceDecision",
     "Stage1ValidationError",
     "validate_critic_assessment",
 ]

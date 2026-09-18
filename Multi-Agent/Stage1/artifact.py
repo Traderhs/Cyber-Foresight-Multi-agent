@@ -7,17 +7,23 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from Stage1.runtime import get_experiment_runtime_profile
+from Stage1.runtime import get_experiment_runtime_profile, get_legacy_one_slot_runtime_profile
 from Stage1.prompts import (
     ATTACK_FEASIBILITY_SYSTEM_PROMPT,
     DEFENSE_ROBUSTNESS_SYSTEM_PROMPT,
     STAGE1_EVALUATION_USER_PROMPT,
 )
-from Stage1.schema import CriticAssessment, CriticType, validate_critic_assessment
+from Stage1.schema import (
+    STAGE1_SEMANTIC_VALIDATION_VERSION,
+    CriticAssessment,
+    CriticType,
+    build_constrained_critic_response_schema,
+    validate_critic_assessment,
+)
 
 
-STAGE1_ARTIFACT_SCHEMA_VERSION = "stage1-artifact-v1"
-STAGE1_CRITIC_CHECKPOINT_SCHEMA_VERSION = "stage1-critic-checkpoint-v1"
+STAGE1_ARTIFACT_SCHEMA_VERSION = "stage1-artifact-v4"
+STAGE1_CRITIC_CHECKPOINT_SCHEMA_VERSION = "stage1-critic-checkpoint-v4"
 
 
 class Stage1ArtifactError(ValueError):
@@ -41,7 +47,12 @@ def _safe_case_id(case_id: str) -> str:
     return safe or "case"
 
 
-def build_stage1_identity(*, evidence_pack: dict[str, Any], forecast_data: str) -> dict[str, Any]:
+def build_stage1_identity(
+    *,
+    evidence_pack: dict[str, Any],
+    forecast_data: str,
+    runtime_profile: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Build the identity that determines whether a Stage 1 result may be reused."""
     case_id = str(evidence_pack.get("case_id") or "")
     if not case_id:
@@ -49,6 +60,7 @@ def build_stage1_identity(*, evidence_pack: dict[str, Any], forecast_data: str) 
 
     identity: dict[str, Any] = {
         "schema_version": STAGE1_ARTIFACT_SCHEMA_VERSION,
+        "semantic_validation_version": STAGE1_SEMANTIC_VALIDATION_VERSION,
         "case_id": case_id,
         "stage0_evidence_pack_sha256": _sha256_json(evidence_pack),
         "forecast_data_sha256": _sha256_text(forecast_data),
@@ -58,7 +70,16 @@ def build_stage1_identity(*, evidence_pack: dict[str, Any], forecast_data: str) 
             "stage1_user_prompt_sha256": _sha256_text(STAGE1_EVALUATION_USER_PROMPT),
         },
         "output_schema_sha256": _sha256_json(CriticAssessment.model_json_schema()),
-        "runtime": get_experiment_runtime_profile(),
+        "constrained_output_schema_sha256": {
+            critic_type.value: _sha256_json(
+                build_constrained_critic_response_schema(
+                    evidence_pack=evidence_pack,
+                    expected_critic_type=critic_type,
+                )
+            )
+            for critic_type in CriticType
+        },
+        "runtime": runtime_profile or get_experiment_runtime_profile(),
     }
     identity["input_fingerprint"] = _sha256_json(identity)
     return identity
@@ -68,7 +89,8 @@ def stage1_artifact_path(*, project_root: str | Path, identity: dict[str, Any]) 
     root = Path(project_root).resolve()
     return (
         root
-        / "Data"
+        / "Multi-Agent"
+        / "Results"
         / "Stage1"
         / "artifacts"
         / _safe_case_id(str(identity["case_id"]))
@@ -85,7 +107,8 @@ def stage1_critic_checkpoint_path(
     root = Path(project_root).resolve()
     return (
         root
-        / "Data"
+        / "Multi-Agent"
+        / "Results"
         / "Stage1"
         / "checkpoints"
         / _safe_case_id(str(identity["case_id"]))
@@ -228,7 +251,8 @@ def clear_stage1_critic_checkpoints(
             path.unlink()
     checkpoint_dir = (
         Path(project_root).resolve()
-        / "Data"
+        / "Multi-Agent"
+        / "Results"
         / "Stage1"
         / "checkpoints"
         / _safe_case_id(str(identity["case_id"]))
@@ -285,21 +309,45 @@ def _validate_frozen_artifact(
 def load_frozen_stage1_artifact(
     *, project_root: str | Path, evidence_pack: dict[str, Any], forecast_data: str
 ) -> tuple[dict[str, Any] | None, dict[str, Any], Path]:
-    """Load only the exact matching artifact; never fall back to another run/version."""
+    """Load the active exact artifact, then the explicit legacy one-slot artifact.
+
+    The legacy path is a narrow concurrency-only compatibility bridge for
+    already-frozen Stage 1 outputs. Prompt/schema/evidence drift is still a
+    hard miss, and all newly generated artifacts use the active two-slot
+    identity.
+    """
     identity = build_stage1_identity(evidence_pack=evidence_pack, forecast_data=forecast_data)
     path = stage1_artifact_path(project_root=project_root, identity=identity)
-    if not path.exists():
-        return None, identity, path
-    artifact = json.loads(path.read_text(encoding="utf-8"))
-    return (
-        _validate_frozen_artifact(
-            artifact,
-            expected_identity=identity,
-            evidence_pack=evidence_pack,
-        ),
-        identity,
-        path,
+    if path.exists():
+        artifact = json.loads(path.read_text(encoding="utf-8"))
+        return (
+            _validate_frozen_artifact(
+                artifact,
+                expected_identity=identity,
+                evidence_pack=evidence_pack,
+            ),
+            identity,
+            path,
+        )
+
+    legacy_identity = build_stage1_identity(
+        evidence_pack=evidence_pack,
+        forecast_data=forecast_data,
+        runtime_profile=get_legacy_one_slot_runtime_profile(),
     )
+    legacy_path = stage1_artifact_path(project_root=project_root, identity=legacy_identity)
+    if legacy_path.exists():
+        artifact = json.loads(legacy_path.read_text(encoding="utf-8"))
+        return (
+            _validate_frozen_artifact(
+                artifact,
+                expected_identity=legacy_identity,
+                evidence_pack=evidence_pack,
+            ),
+            legacy_identity,
+            legacy_path,
+        )
+    return None, identity, path
 
 
 def freeze_stage1_artifact(

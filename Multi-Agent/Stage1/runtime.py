@@ -6,7 +6,7 @@ import os
 import threading
 import time
 from dataclasses import asdict, dataclass
-from typing import Any, TypeVar
+from typing import Any, Callable, TypeVar
 
 import requests
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
@@ -14,13 +14,28 @@ from pydantic import BaseModel
 
 
 TModel = TypeVar("TModel", bound=BaseModel)
-_REQUEST_LOCK = threading.Lock()
+_REQUEST_GATE_LOCK = threading.Lock()
+_REQUEST_GATES: dict[int, threading.BoundedSemaphore] = {}
+
+
+def _request_gate(concurrency: int) -> threading.BoundedSemaphore:
+    with _REQUEST_GATE_LOCK:
+        gate = _REQUEST_GATES.get(concurrency)
+        if gate is None:
+            gate = threading.BoundedSemaphore(concurrency)
+            _REQUEST_GATES[concurrency] = gate
+        return gate
 
 
 STRUCTURED_REPAIR_INSTRUCTION = (
     "Your previous JSON failed deterministic schema/semantic validation. Correct only the reported "
-    "validation errors and return the complete corrected JSON object. Preserve the original case, "
-    "evidence boundary, and substantive judgment. Do not invent facts or evidence IDs. Validation error: {error}"
+    "validation errors and return the complete corrected JSON object. Preserve the original case and substantive "
+    "judgment unless the validation error shows that a cited claim is unsupported. Never infer or repair an evidence "
+    "ID from its digest, prefix, spelling, or similarity. If the validation error lists allowed evidence IDs, choose "
+    "only a complete exact string from that list; never combine the prefix of one ID with the digest of another. "
+    "Re-read the supplied Stage 0 evidence records and use only an exact evidence_id that actually supports the "
+    "literal claim. If no supplied record supports a claim, remove or rewrite that claim instead of inventing a "
+    "citation. Validation error: {error}"
 )
 
 
@@ -54,8 +69,8 @@ class QwenRuntimeConfig:
     model_source_repo: str = "bartowski/Qwen3.8-27B-GGUF"
     model_source_revision: str = "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70"
     quantization: str = "Q6_K_L"
-    expected_context_size: int = 131072
-    expected_parallel_slots: int = 1
+    expected_context_size: int = 65536
+    expected_parallel_slots: int = 2
     expected_gpu_layers: str = "all"
     batch_size: int = 2048
     ubatch_size: int = 512
@@ -80,11 +95,38 @@ def get_runtime_config() -> QwenRuntimeConfig:
     )
 
 
-def get_experiment_runtime_profile() -> dict[str, Any]:
-    """Return the fixed, paper-reportable Stage 1 inference profile."""
+def get_experiment_runtime_profile(*, expected_context_size: int | None = None) -> dict[str, Any]:
+    """Return a paper-reportable inference profile.
+
+    The active profile uses two 65,536-token inference slots backed by the
+    same 131,072-token aggregate llama.cpp context allocation. Later stages
+    may override only the required per-slot context capacity while preserving
+    every other model/runtime setting in the identity.
+    """
     raw = asdict(get_runtime_config())
     raw.pop("api_base", None)
     raw.pop("timeout_seconds", None)
+    if expected_context_size is not None:
+        raw["expected_context_size"] = int(expected_context_size)
+    raw["structured_repair_prompt_sha256"] = hashlib.sha256(
+        STRUCTURED_REPAIR_INSTRUCTION.encode("utf-8")
+    ).hexdigest()
+    return raw
+
+
+def get_legacy_one_slot_runtime_profile() -> dict[str, Any]:
+    """Reconstruct the exact historical one-slot Stage 1/2 runtime identity.
+
+    This is only for reusing already-frozen upstream artifacts created before
+    the throughput-only two-slot migration. New inference uses the active
+    two-slot profile.
+    """
+
+    raw = asdict(get_runtime_config())
+    raw.pop("api_base", None)
+    raw.pop("timeout_seconds", None)
+    raw["expected_context_size"] = 131072
+    raw["expected_parallel_slots"] = 1
     raw["structured_repair_prompt_sha256"] = hashlib.sha256(
         STRUCTURED_REPAIR_INSTRUCTION.encode("utf-8")
     ).hexdigest()
@@ -109,16 +151,22 @@ class _StructuredRunner:
         client: "LlamaCppChatClient",
         schema: type[TModel],
         progress_label: str | None = None,
+        semantic_validator: Callable[[TModel], TModel] | None = None,
+        response_schema: dict[str, Any] | None = None,
     ):
         self.client = client
         self.schema = schema
         self.progress_label = progress_label
+        self.semantic_validator = semantic_validator
+        self.response_schema = response_schema
 
     def invoke(self, messages: list[BaseMessage]) -> TModel:
         return self.client._invoke_structured(
             messages,
             self.schema,
             progress_label=self.progress_label,
+            semantic_validator=self.semantic_validator,
+            response_schema=self.response_schema,
         )
 
     async def ainvoke(self, messages: list[BaseMessage]) -> TModel:
@@ -128,8 +176,16 @@ class _StructuredRunner:
 class LlamaCppChatClient:
     """Minimal OpenAI-compatible llama.cpp client with fixed Qwen settings."""
 
-    def __init__(self, config: QwenRuntimeConfig | None = None):
+    def __init__(
+        self,
+        config: QwenRuntimeConfig | None = None,
+        *,
+        request_concurrency: int = 2,
+    ):
         self.config = config or get_runtime_config()
+        if request_concurrency < 1:
+            raise ValueError("request_concurrency must be >= 1")
+        self.request_concurrency = int(request_concurrency)
 
     @property
     def endpoint(self) -> str:
@@ -195,11 +251,47 @@ class LlamaCppChatClient:
                     return value
             return None
 
+        next_token = active.get("next_token")
+        next_token_entry = (
+            next_token[0]
+            if isinstance(next_token, list) and next_token and isinstance(next_token[0], dict)
+            else {}
+        )
+
+        # llama.cpp b10919 splits the request prompt into tokens reused from the
+        # prompt cache plus tokens newly evaluated for the request. Either counter
+        # may legitimately be zero, so neither is the input size by itself. Their
+        # sum is the request prompt size and matches usage.prompt_tokens on the
+        # completed response. n_prompt_tokens is the growing active slot/context
+        # counter, while decode progress is next_token[0].n_decoded.
+        context_tokens = first_value("n_prompt_tokens")
+        prompt_cache_tokens = first_value("n_prompt_tokens_cache")
+        prompt_processed_tokens = first_value("n_prompt_tokens_processed")
+        generated_tokens = next_token_entry.get("n_decoded")
+        if generated_tokens is None:
+            generated_tokens = first_value("n_decoded", "tokens_predicted")
+
+        input_tokens = None
+        if (
+            isinstance(prompt_cache_tokens, int)
+            and isinstance(prompt_processed_tokens, int)
+        ):
+            input_tokens = prompt_cache_tokens + prompt_processed_tokens
+        if input_tokens is None:
+            input_tokens = first_value(
+                "tokens_evaluated",
+                "prompt_tokens",
+                "n_prompt_tokens_input",
+            )
+
         return {
             "state": first_value("state", "is_processing"),
-            "prompt_tokens": first_value("n_prompt_tokens", "tokens_evaluated", "n_prompt_tokens_processed"),
-            "generated_tokens": first_value("n_decoded", "tokens_predicted"),
-            "remaining_tokens": first_value("n_remaining"),
+            "input_tokens": input_tokens,
+            "generated_tokens": generated_tokens,
+            "context_tokens": context_tokens,
+            "prompt_cache_tokens": prompt_cache_tokens,
+            "prompt_processed_tokens": prompt_processed_tokens,
+            "remaining_tokens": next_token_entry.get("n_remain", first_value("n_remaining")),
             "task_id": first_value("id_task"),
         }
 
@@ -218,10 +310,12 @@ class LlamaCppChatClient:
                 print(f"[QWEN][{label}][+{elapsed:.0f}s] request active; slot metrics temporarily unavailable.", flush=True)
                 continue
             fields = [f"state={progress['state']}"]
-            if progress["prompt_tokens"] is not None:
-                fields.append(f"prompt_tokens={progress['prompt_tokens']}")
+            if progress["input_tokens"] is not None:
+                fields.append(f"input_tokens={progress['input_tokens']}")
             if progress["generated_tokens"] is not None:
                 fields.append(f"generated_tokens={progress['generated_tokens']}")
+            if progress["context_tokens"] is not None:
+                fields.append(f"context_tokens={progress['context_tokens']}")
             if progress["remaining_tokens"] is not None:
                 fields.append(f"remaining={progress['remaining_tokens']}")
             if progress["task_id"] is not None:
@@ -252,13 +346,16 @@ class LlamaCppChatClient:
     ) -> dict[str, Any]:
         label = progress_label or "request"
         wait_started = time.monotonic()
-        if _REQUEST_LOCK.locked():
+        gate = _request_gate(self.request_concurrency)
+        acquired = gate.acquire(blocking=False)
+        if not acquired:
             print(
-                f"[QWEN][{label}] waiting for the single pinned inference slot; "
-                "another independent critic is currently generating.",
+                f"[QWEN][{label}] waiting for one of {self.request_concurrency} client inference slots; "
+                "all allowed concurrent requests are currently generating.",
                 flush=True,
             )
-        with _REQUEST_LOCK:
+            gate.acquire()
+        try:
             waited = time.monotonic() - wait_started
             if waited >= 0.5:
                 print(f"[QWEN][{label}] inference slot acquired after {waited:.1f}s queue wait.", flush=True)
@@ -309,6 +406,8 @@ class LlamaCppChatClient:
                 elapsed=time.monotonic() - request_started,
             )
             return data
+        finally:
+            gate.release()
 
     def invoke(self, messages: list[BaseMessage]) -> AIMessage:
         data = self._post(self._base_payload(messages), progress_label="unstructured")
@@ -330,10 +429,18 @@ class LlamaCppChatClient:
         *,
         method: str = "json_schema",
         progress_label: str | None = None,
+        semantic_validator: Callable[[TModel], TModel] | None = None,
+        response_schema: dict[str, Any] | None = None,
     ) -> _StructuredRunner:
         if method != "json_schema":
             raise ValueError("Stage 1 requires llama.cpp JSON-schema constrained output")
-        return _StructuredRunner(self, schema, progress_label=progress_label)
+        return _StructuredRunner(
+            self,
+            schema,
+            progress_label=progress_label,
+            semantic_validator=semantic_validator,
+            response_schema=response_schema,
+        )
 
     def _invoke_structured(
         self,
@@ -341,6 +448,8 @@ class LlamaCppChatClient:
         schema: type[TModel],
         *,
         progress_label: str | None = None,
+        semantic_validator: Callable[[TModel], TModel] | None = None,
+        response_schema: dict[str, Any] | None = None,
     ) -> TModel:
         current_messages = list(messages)
         last_content = ""
@@ -349,7 +458,7 @@ class LlamaCppChatClient:
             payload = self._base_payload(current_messages)
             payload["response_format"] = {
                 "type": "json_object",
-                "schema": schema.model_json_schema(),
+                "schema": response_schema or schema.model_json_schema(),
             }
             attempt_label = progress_label or schema.__name__
             if attempt:
@@ -358,9 +467,18 @@ class LlamaCppChatClient:
             content = data["choices"][0]["message"].get("content") or ""
             last_content = content
             try:
-                return schema.model_validate_json(content)
+                parsed = schema.model_validate_json(content)
+                if semantic_validator is not None:
+                    parsed = semantic_validator(parsed)
+                return parsed
             except Exception as exc:
                 last_error = exc
+                print(
+                    f"[QWEN][{attempt_label}] structured schema/semantic validation failed "
+                    f"(attempt {attempt + 1}/{self.config.structured_validation_retries + 1}): "
+                    f"{type(exc).__name__}: {exc}",
+                    flush=True,
+                )
                 if attempt >= self.config.structured_validation_retries:
                     break
                 current_messages = [
@@ -375,8 +493,23 @@ class LlamaCppChatClient:
         ) from last_error
 
 
-def assert_llama_server_ready() -> None:
+def assert_llama_server_ready(
+    *,
+    expected_context_size: int | None = None,
+    expected_parallel_slots: int | None = None,
+    profile_name: str = "Stage 1",
+) -> None:
     cfg = get_runtime_config()
+    required_context_size = (
+        cfg.expected_context_size
+        if expected_context_size is None
+        else int(expected_context_size)
+    )
+    required_parallel_slots = (
+        cfg.expected_parallel_slots
+        if expected_parallel_slots is None
+        else int(expected_parallel_slots)
+    )
     base = cfg.api_base.rstrip("/")
     health_url = f"{base}/health"
     try:
@@ -414,16 +547,33 @@ def assert_llama_server_ready() -> None:
         violations.append(f"model_path={model_path!r}")
     if cfg.expected_llama_build not in build_info or cfg.expected_llama_commit not in build_info:
         violations.append(f"build_info={build_info!r}")
-    if n_ctx != cfg.expected_context_size:
-        violations.append(f"n_ctx={n_ctx!r}")
-    if total_slots != cfg.expected_parallel_slots:
+    if total_slots != required_parallel_slots:
         violations.append(
-            f"total_slots={total_slots!r} (expected {cfg.expected_parallel_slots} for current CUDA/MTP safety)"
+            f"total_slots={total_slots!r} (expected {required_parallel_slots} for {profile_name})"
         )
-    if len(slots) != cfg.expected_parallel_slots:
-        violations.append(f"slots={len(slots)!r} (expected {cfg.expected_parallel_slots} inference slot)")
-    elif slots[0].get("speculative") is not True:
-        violations.append(f"slot.speculative={slots[0].get('speculative')!r} (MTP must be active)")
+    if len(slots) != required_parallel_slots:
+        violations.append(f"slots={len(slots)!r} (expected {required_parallel_slots} inference slots)")
+    else:
+        slot_contexts = [slot.get("n_ctx") for slot in slots if isinstance(slot, dict)]
+        if any(value != required_context_size for value in slot_contexts):
+            violations.append(
+                f"slot.n_ctx={slot_contexts!r} (expected {required_context_size} per slot for {profile_name})"
+            )
+        speculative = [slot.get("speculative") for slot in slots if isinstance(slot, dict)]
+        if any(value is not True for value in speculative):
+            violations.append(f"slot.speculative={speculative!r} (MTP must be active on every slot)")
+
+    # b10919 may report /props default n_ctx as either per-slot capacity or the
+    # aggregate server context when multiple slots are configured. The /slots
+    # endpoint above is authoritative for request capacity. For one-slot
+    # historical Stage 1/2 runs, preserve the old exact /props check as well.
+    if required_parallel_slots == 1 and n_ctx != required_context_size:
+        violations.append(
+            f"n_ctx={n_ctx!r} (expected {required_context_size} for {profile_name})"
+        )
     if violations:
-        raise RuntimeError("llama.cpp runtime does not match the fixed Stage 1 profile: " + "; ".join(violations))
+        raise RuntimeError(
+            f"llama.cpp runtime does not match the fixed {profile_name} profile: "
+            + "; ".join(violations)
+        )
 

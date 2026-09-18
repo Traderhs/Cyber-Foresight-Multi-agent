@@ -71,7 +71,13 @@ class Stage0Builder:
         gap_rows.sort(key=lambda r: r["year"])
         gaps = [row["gap"] for row in gap_rows]
         gap_slope = (gaps[-1] - gaps[0]) / (gap_rows[-1]["year"] - gap_rows[0]["year"])
-        gap_direction = "widening" if gaps[-1] > gaps[0] else "narrowing" if gaps[-1] < gaps[0] else "flat"
+        gap_direction = (
+            "threat_minus_pmt_increasing"
+            if gaps[-1] > gaps[0]
+            else "threat_minus_pmt_decreasing"
+            if gaps[-1] < gaps[0]
+            else "flat"
+        )
         threat_features = self._feature_summary(threat_entity["node_id"])
         pmt_features = self._feature_summary(pmt_entity["node_id"])
         threat_state = self._state_summary(threat_entity["node_id"])
@@ -122,6 +128,10 @@ class Stage0Builder:
                 "gap_slope_per_year": gap_slope,
                 "gap_direction": gap_direction,
                 "gap_semantics": gap_rows[0]["value_semantics"],
+                "gap_direction_semantics": (
+                    "gap = threat_state_mean_z - pmt_state_mean_z; gap_direction describes signed gap movement, "
+                    "not absolute-distance widening/narrowing"
+                ),
                 "predictive_uncertainty": uncertainty,
                 "historical_field_ids": {
                     "threat": [field_id for feature in threat_features.values() for field_id in feature["historical_field_ids"]],

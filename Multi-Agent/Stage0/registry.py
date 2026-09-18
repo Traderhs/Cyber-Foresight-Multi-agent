@@ -6,7 +6,7 @@ from typing import Iterable
 from .schema import Stage0ValidationError
 
 
-SOURCE_REGISTRY_VERSION = "stage0-registry-v2"
+SOURCE_REGISTRY_VERSION = "stage0-registry-v3"
 
 
 @dataclass(frozen=True)
@@ -63,6 +63,19 @@ SOURCE_REGISTRY: tuple[SourceDefinition, ...] = (
     SourceDefinition("30", "I", "Korea Primary Sources: law.go.kr + PIPC + KISA ISMS-P", "primary_law", ("legal_requirement", "regulatory_scope", "korea_control_requirement"), ("cross_jurisdiction_generalization",), ("law.go.kr", "pipc.go.kr", "kisa.or.kr", "isms-p.or.kr")),
     SourceDefinition("31", "I", "European Union Primary Source: EUR-Lex", "primary_law", ("legal_requirement", "regulatory_scope", "eu_legal_requirement"), ("cross_jurisdiction_generalization",), ("eur-lex.europa.eu",)),
     SourceDefinition("32", "I", "United States Primary Sources: eCFR + Federal Register + CISA Directives", "primary_law", ("legal_requirement", "regulatory_scope", "us_legal_requirement"), ("cross_jurisdiction_generalization",), ("ecfr.gov", "federalregister.gov", "cisa.gov")),
+    SourceDefinition(
+        "33",
+        "H",
+        "Crossref Cutoff-Constrained PMT Publication Trend",
+        "academic_trend_aggregate",
+        ("directional_publication_trend",),
+        (
+            "deployment_maturity",
+            "operational_effectiveness",
+            "causal_effectiveness",
+        ),
+        ("crossref.org",),
+    ),
 )
 
 
@@ -91,11 +104,11 @@ def registry_by_id() -> dict[str, SourceDefinition]:
 def validate_source_registry(registry: Iterable[SourceDefinition] = SOURCE_REGISTRY) -> dict:
     items = tuple(registry)
     ids = [s.registry_id for s in items]
-    expected = [f"{i:02d}" for i in range(1, 33)]
+    expected = [f"{i:02d}" for i in range(1, 34)]
     families = {s.family for s in items}
     issues: list[str] = []
     if ids != expected:
-        issues.append(f"registry IDs must be exactly 01..32 in order, got {ids}")
+        issues.append(f"registry IDs must be exactly 01..33 in order, got {ids}")
     if len(set(ids)) != len(ids):
         issues.append("registry IDs are not unique")
     if families != set("ABCDEFGHI"):

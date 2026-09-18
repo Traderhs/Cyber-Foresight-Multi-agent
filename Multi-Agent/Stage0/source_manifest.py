@@ -3,14 +3,14 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 
-SOURCE_MANIFEST_VERSION = "stage0-source-manifest-v2"
+SOURCE_MANIFEST_VERSION = "stage0-source-manifest-v3"
 
 
 @dataclass(frozen=True)
 class ArtifactSpec:
     source_registry_id: str
     artifact_id: str
-    acquisition: str  # local | url | arxiv_batch | crossref_batch
+    acquisition: str  # local | url | arxiv_search_batch | crossref_batch | crossref_trend_batch
     locator: str
     parser: str
     evidence_type: str
@@ -59,7 +59,7 @@ ARTIFACT_SPECS: tuple[ArtifactSpec, ...] = (
     ArtifactSpec("25", "nist-sp-800-53r5", "url", "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf", "pdf_chunks", "official_guidance_chunk", "800-53r5", "2020-09-23", "2020-09-23"),
     ArtifactSpec("26", "nist-sp-800-53ar5", "url", "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53Ar5.pdf", "pdf_chunks", "official_guidance_chunk", "800-53Ar5", "2022-01-25", "2022-01-25"),
     ArtifactSpec("27", "nist-sp-1800-35", "url", "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1800-35.pdf", "pdf_chunks", "reference_implementation_chunk", "1800-35", "2025-06-10", "2025-06-10"),
-    ArtifactSpec("28", "arxiv-security-batch", "arxiv_batch", "https://export.arxiv.org/api/query", "arxiv_atom", "academic_work", "snapshot"),
+    ArtifactSpec("28", "arxiv-security-search-batch", "arxiv_search_batch", "https://arxiv.org/search/", "arxiv_search_json", "academic_work", "snapshot"),
     ArtifactSpec("29", "crossref-pmt-batch", "crossref_batch", "https://api.crossref.org/works", "crossref_json", "academic_metadata_record", "snapshot"),
     ArtifactSpec("30", "korea-pipa-2020", "url", "https://www.law.go.kr/LSW/lsInfoP.do?chrClsCd=010203&lsiSeq=213857&urlMode=engLsInfoR&viewCls=engLsInfoR", "html_chunks", "primary_law_chunk", "PIPA-2020", "2020-02-04", "2020-02-04"),
     ArtifactSpec("30", "korea-pipa-2025", "url", "https://www.law.go.kr/lsInfoP.do?lsiSeq=270351&urlMode=engLsInfoR&viewCls=engLsInfoR", "html_chunks", "primary_law_chunk", "PIPA-2025", "2025-04-01", "2025-04-01"),
@@ -70,9 +70,10 @@ ARTIFACT_SPECS: tuple[ArtifactSpec, ...] = (
     ArtifactSpec("32", "us-cisa-bod-22-01", "url", "https://www.cisa.gov/sites/default/files/publications/Reducing_the_Significant_Risk_of_Known_Exploited_Vulnerabilities_20211103.pdf", "pdf_chunks", "primary_law_chunk", "BOD-22-01", "2021-11-03", "2021-11-03"),
     ArtifactSpec("32", "us-ecfr", "url", "https://www.ecfr.gov/api/search/v1/results?query=cybersecurity&per_page=100", "json_chunks", "primary_law_index_chunk", "snapshot"),
     ArtifactSpec("32", "us-federal-register", "url", "https://www.federalregister.gov/api/v1/documents.json?per_page=100&conditions%5Bterm%5D=cybersecurity", "json_chunks", "primary_law_index_chunk", "snapshot"),
+    ArtifactSpec("33", "crossref-pmt-publication-trends", "crossref_trend_batch", "https://api.crossref.org/works", "crossref_trend_json", "academic_publication_trend", "snapshot"),
 )
 
 
 def required_external_source_ids() -> tuple[str, ...]:
-    return tuple(f"{i:02d}" for i in range(2, 33))
+    return tuple(f"{i:02d}" for i in range(2, 34))
 

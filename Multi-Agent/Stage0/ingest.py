@@ -10,7 +10,6 @@ import shutil
 import tempfile
 import time
 import zipfile
-import xml.etree.ElementTree as ET
 from dataclasses import asdict
 from datetime import date, datetime
 from pathlib import Path
@@ -28,12 +27,13 @@ from .schema import Stage0ValidationError
 from .source_manifest import ARTIFACT_SPECS, SOURCE_MANIFEST_VERSION, ArtifactSpec, required_external_source_ids
 
 
-INGESTION_VERSION = "stage0-ingestion-v2"
+INGESTION_VERSION = "stage0-ingestion-v4"
 USER_AGENT = "CyberForesight-Stage0-EvidenceBuilder/1.0"
 MAX_CHUNK_CHARS = 2400
 MIN_CHUNK_CHARS = 120
 MAX_ACADEMIC_RESULTS_PER_QUERY = 5
 MAX_EPSS_RECORDS_PER_SNAPSHOT = 5000
+PUBLICATION_TREND_LOOKBACK_YEARS = 4
 
 
 class EvidenceCorpusBuilder:
@@ -51,8 +51,8 @@ class EvidenceCorpusBuilder:
         self.snapshot_date = date.fromisoformat(snapshot_date).isoformat()
         self.snapshot_id = snapshot_id or f"stage0-{self.snapshot_date}"
         self.timeout_seconds = timeout_seconds
-        self.forecast_dir = self.project_root / "Data" / "Forecast"
-        self.evidence_root = self.project_root / "Data" / "Evidence"
+        self.forecast_dir = self.project_root / "Multi-Agent" / "Results" / "Stage0" / "Forecast"
+        self.evidence_root = self.project_root / "Multi-Agent" / "Results" / "Stage0" / "Evidence"
         self.entities = self._load_json(self.forecast_dir / "node_registry.json")
         self.threat_entities = [e for e in self.entities if e["node_type"] == "threat"]
         self.pmt_entities = [e for e in self.entities if e["node_type"] == "pmt"]
@@ -134,15 +134,21 @@ class EvidenceCorpusBuilder:
                     raise Stage0ValidationError(f"Downloaded empty artifact: {spec.locator}")
                 self._record_acquisition(spec, "PASS", path.stat().st_size, response.url)
                 return path
-            if spec.acquisition == "arxiv_batch":
-                path = staging / f"{spec.artifact_id}.xml"
-                payload = self._acquire_arxiv()
-                path.write_bytes(payload)
+            if spec.acquisition == "arxiv_search_batch":
+                path = staging / f"{spec.artifact_id}.json"
+                payload = self._acquire_arxiv_search()
+                path.write_text(json.dumps(payload, ensure_ascii=False, sort_keys=True), encoding="utf-8")
                 self._record_acquisition(spec, "PASS", path.stat().st_size, spec.locator)
                 return path
             if spec.acquisition == "crossref_batch":
                 path = staging / f"{spec.artifact_id}.json"
                 payload = self._acquire_crossref()
+                path.write_text(json.dumps(payload, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+                self._record_acquisition(spec, "PASS", path.stat().st_size, spec.locator)
+                return path
+            if spec.acquisition == "crossref_trend_batch":
+                path = staging / f"{spec.artifact_id}.json"
+                payload = self._acquire_crossref_publication_trends()
                 path.write_text(json.dumps(payload, ensure_ascii=False, sort_keys=True), encoding="utf-8")
                 self._record_acquisition(spec, "PASS", path.stat().st_size, spec.locator)
                 return path
@@ -155,37 +161,41 @@ class EvidenceCorpusBuilder:
             path.write_text(f"Optional source unavailable: {exc}\n", encoding="utf-8")
             return path
 
-    def _acquire_arxiv(self) -> bytes:
+    def _acquire_arxiv_search(self) -> dict[str, Any]:
         # Keep arXiv complementary rather than using it as the sole PMT index.
-        # Crossref below provides per-PMT publisher metadata; arXiv supplies an
-        # independent open preprint view across the main technical subdomains.
-        queries = (
-            'all:"cybersecurity" AND (all:"mitigation" OR all:"defense")',
-            'all:"network security" AND (all:"detection" OR all:"prevention")',
-            'all:"adversarial machine learning"',
-            'all:"deepfake detection"',
-            'all:"hardware security"',
-            'all:"formal verification" AND all:"security"',
-            'all:"privacy preserving" AND all:"security"',
-            'all:"zero trust" AND all:"security"',
-        )
-        feeds: list[bytes] = []
+        # The v3 manifest uses arxiv.org's official search HTML because the
+        # export API may rate-limit the Lab IP even for a single request.
+        queries = ("cybersecurity",)
+        results: list[dict[str, Any]] = []
         for index, query in enumerate(queries):
             response = self._get_with_retry(
-                "https://export.arxiv.org/api/query",
-                params={"search_query": query, "start": 0, "max_results": 25, "sortBy": "submittedDate", "sortOrder": "descending"},
+                "https://arxiv.org/search/",
+                params={
+                    "query": query,
+                    "searchtype": "all",
+                    "abstracts": "show",
+                    "order": "-announced_date_first",
+                    "size": 200,
+                },
+                rate_limit_floor_seconds=10.0,
+                max_attempts=3,
+                request_timeout_seconds=25.0,
             )
-            feeds.append(response.content)
+            results.append(
+                {
+                    "query": query,
+                    "resolved_url": response.url,
+                    "html": response.text,
+                }
+            )
             if index + 1 < len(queries):
                 time.sleep(3.0)
-        # One deterministic XML wrapper preserves each official Atom response
-        # exactly as returned while allowing a single frozen artifact/hash.
-        root = ET.Element("arxiv_snapshot", {"snapshot_date": self.snapshot_date})
-        for query, feed in zip(queries, feeds):
-            item = ET.SubElement(root, "query", {"search_query": query})
-            atom = ET.fromstring(feed)
-            item.append(atom)
-        return ET.tostring(root, encoding="utf-8", xml_declaration=True)
+        return {
+            "source": "arXiv",
+            "snapshot_date": self.snapshot_date,
+            "query_count": len(results),
+            "queries": results,
+        }
 
     def _acquire_crossref(self) -> dict[str, Any]:
         queries: list[dict[str, Any]] = []
@@ -215,14 +225,74 @@ class EvidenceCorpusBuilder:
             "queries": queries,
         }
 
-    def _get_with_retry(self, url: str, *, params: dict[str, Any] | None = None, allow_redirects: bool = True) -> requests.Response:
+    def _acquire_crossref_publication_trends(self) -> dict[str, Any]:
+        forecast_manifest = self._load_json(self.forecast_dir / "manifest.json")
+        cutoff_date = str(forecast_manifest["forecast_provenance"]["forecast_origin_date"])
+        cutoff_year = date.fromisoformat(cutoff_date).year
+        years = list(range(cutoff_year - PUBLICATION_TREND_LOOKBACK_YEARS + 1, cutoff_year + 1))
+        queries: list[dict[str, Any]] = []
+
+        for index, entity in enumerate(self.pmt_entities, start=1):
+            pmt_name = str(entity["canonical_name"])
+            params = {
+                "query.title": pmt_name,
+                "query.bibliographic": "security",
+                "filter": (
+                    f"from-pub-date:{years[0]}-01-01,"
+                    f"until-pub-date:{years[-1]}-12-31,"
+                    f"until-created-date:{cutoff_date}"
+                ),
+                "rows": 0,
+                "facet": "published:100",
+            }
+            response = self._get_with_retry("https://api.crossref.org/works", params=params)
+            message = response.json().get("message", {})
+            published_facet = ((message.get("facets") or {}).get("published") or {}).get("values") or {}
+            annual_counts = {str(year): int(published_facet.get(str(year), 0)) for year in years}
+            queries.append(
+                {
+                    "pmt_id": entity["node_id"],
+                    "pmt_name": pmt_name,
+                    "title_query": pmt_name,
+                    "bibliographic_query": "security",
+                    "annual_counts": annual_counts,
+                    "total_results": int(message.get("total-results") or 0),
+                }
+            )
+            if index % 20 == 0:
+                time.sleep(0.25)
+
+        return {
+            "source": "Crossref",
+            "snapshot_date": self.snapshot_date,
+            "forecast_origin_cutoff": cutoff_date,
+            "lookback_years": years,
+            "query_count": len(queries),
+            "query_semantics": (
+                "Crossref query.title=<PMT> with query.bibliographic=security. One request per PMT uses the "
+                "published-year facet over the fixed lookback window and until-created-date at the forecast origin; "
+                "rows=0 retrieves aggregate counts only."
+            ),
+            "queries": queries,
+        }
+
+    def _get_with_retry(
+        self,
+        url: str,
+        *,
+        params: dict[str, Any] | None = None,
+        allow_redirects: bool = True,
+        rate_limit_floor_seconds: float = 0.0,
+        max_attempts: int = 5,
+        request_timeout_seconds: float | None = None,
+    ) -> requests.Response:
         last_error: Exception | None = None
-        for attempt in range(5):
+        for attempt in range(max_attempts):
             try:
                 response = self.session.get(
                     url,
                     params=params,
-                    timeout=self.timeout_seconds,
+                    timeout=request_timeout_seconds or self.timeout_seconds,
                     allow_redirects=allow_redirects,
                 )
                 if response.status_code not in {429, 500, 502, 503, 504}:
@@ -230,12 +300,16 @@ class EvidenceCorpusBuilder:
                     return response
                 last_error = requests.HTTPError(f"HTTP {response.status_code} for {response.url}", response=response)
                 retry_after = response.headers.get("Retry-After")
-                delay = min(float(retry_after), 30.0) if retry_after and retry_after.isdigit() else min(2.0 ** attempt, 16.0)
+                if response.status_code == 429:
+                    server_delay = float(retry_after) if retry_after and retry_after.isdigit() else 0.0
+                    delay = max(rate_limit_floor_seconds, server_delay, min(2.0 ** attempt, 60.0))
+                else:
+                    delay = min(2.0 ** attempt, 16.0)
                 time.sleep(delay)
             except (requests.ConnectionError, requests.Timeout) as exc:
                 last_error = exc
                 time.sleep(min(2.0 ** attempt, 16.0))
-        raise Stage0ValidationError(f"HTTP acquisition failed after retries: {url}: {last_error}")
+        raise Stage0ValidationError(f"HTTP acquisition failed after {max_attempts} attempts: {url}: {last_error}")
 
     def _validate_source_url(self, spec: ArtifactSpec) -> None:
         definition = self.registry[spec.source_registry_id]
@@ -300,8 +374,9 @@ class EvidenceCorpusBuilder:
             "attack_stix": self._parse_attack,
             "d3fend_jsonld": self._parse_d3fend,
             "atlas_yaml": self._parse_atlas,
-            "arxiv_atom": self._parse_arxiv,
+            "arxiv_search_json": self._parse_arxiv_search,
             "crossref_json": self._parse_crossref,
+            "crossref_trend_json": self._parse_crossref_publication_trends,
         }.get(spec.parser)
         if parser is None:
             raise Stage0ValidationError(f"No parser implemented for {spec.parser!r}")
@@ -633,19 +708,30 @@ class EvidenceCorpusBuilder:
         if count == 0:
             raise Stage0ValidationError("ATLAS parser produced zero records")
 
-    def _parse_arxiv(self, spec: ArtifactSpec, path: Path, publication_date: str, available_at: str) -> None:
-        root = ET.parse(path).getroot()
-        atom_ns = "{http://www.w3.org/2005/Atom}"
+    def _parse_arxiv_search(self, spec: ArtifactSpec, path: Path, publication_date: str, available_at: str) -> None:
+        payload = json.loads(path.read_text(encoding="utf-8"))
         count = 0
-        for query_node in root.findall("query"):
-            feed = next(iter(query_node), None)
-            if feed is None:
+        for query in payload.get("queries", []):
+            html = str(query.get("html") or "")
+            if not html:
                 continue
-            for entry in feed.findall(f"{atom_ns}entry"):
-                title = self._clean_text(entry.findtext(f"{atom_ns}title") or "")
-                summary = self._clean_text(entry.findtext(f"{atom_ns}summary") or "")
-                identifier = (entry.findtext(f"{atom_ns}id") or "").strip()
-                published = (entry.findtext(f"{atom_ns}published") or "")[:10]
+            soup = BeautifulSoup(html, "html.parser")
+            for result in soup.select("li.arxiv-result"):
+                title_node = result.select_one("p.title")
+                id_node = result.select_one('p.list-title a[href*="/abs/"]')
+                abstract_node = result.select_one("span.abstract-full") or result.select_one("span.abstract-short")
+                date_node = result.select_one("p.is-size-7")
+                title = self._clean_text(title_node.get_text(" ", strip=True) if title_node else "")
+                summary = self._clean_text(abstract_node.get_text(" ", strip=True) if abstract_node else "")
+                identifier = str(id_node.get("href") or "").strip() if id_node else ""
+                date_text = date_node.get_text(" ", strip=True) if date_node else ""
+                submitted = re.search(r"Submitted\s+(\d{1,2}\s+[A-Za-z]+,\s+\d{4})", date_text)
+                published = ""
+                if submitted:
+                    try:
+                        published = datetime.strptime(submitted.group(1), "%d %B, %Y").date().isoformat()
+                    except ValueError:
+                        published = ""
                 if not title:
                     continue
                 content = self._clean_text(f"{title} | {summary}")
@@ -661,7 +747,7 @@ class EvidenceCorpusBuilder:
                 )
                 count += 1
         if count == 0:
-            raise Stage0ValidationError("arXiv parser produced zero records")
+            raise Stage0ValidationError("arXiv search parser produced zero records")
 
     def _parse_crossref(self, spec: ArtifactSpec, path: Path, publication_date: str, available_at: str) -> None:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -676,15 +762,85 @@ class EvidenceCorpusBuilder:
                 container = "; ".join(item.get("container-title") or [])
                 abstract = BeautifulSoup(item.get("abstract") or "", "html.parser").get_text(" ", strip=True)
                 pub = self._crossref_date(item) or publication_date
+                created = self._crossref_created_date(item) or pub
+                record_available_at = max(pub, created)
                 content = self._clean_text(f"{title} | DOI={doi} | venue={container} | {abstract}")
                 self._add_record(
                     spec,
                     pub,
-                    pub,
+                    record_available_at,
                     source_locator=f"Crossref:{doi or hashlib.sha1(title.encode()).hexdigest()[:12]}",
                     content=content,
                     pmt_ids=(pmt_id,),
                 )
+
+    def _parse_crossref_publication_trends(
+        self,
+        spec: ArtifactSpec,
+        path: Path,
+        publication_date: str,
+        available_at: str,
+    ) -> None:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        cutoff_date = str(payload["forecast_origin_cutoff"])
+        years = [int(year) for year in payload.get("lookback_years", [])]
+        if len(years) != PUBLICATION_TREND_LOOKBACK_YEARS:
+            raise Stage0ValidationError(
+                f"Crossref publication trend requires {PUBLICATION_TREND_LOOKBACK_YEARS} annual counts, got {years}"
+            )
+
+        parsed = 0
+        for query in payload.get("queries", []):
+            pmt_id = str(query["pmt_id"])
+            pmt_name = str(query["pmt_name"])
+            annual_counts = {int(year): int(count) for year, count in query.get("annual_counts", {}).items()}
+            if sorted(annual_counts) != years:
+                raise Stage0ValidationError(
+                    f"Crossref publication trend year coverage mismatch for {pmt_id}: {sorted(annual_counts)} != {years}"
+                )
+            values = [annual_counts[year] for year in years]
+            total_results = int(query.get("total_results") or 0)
+            # A query with no observed Crossref works cannot establish a flat
+            # publication trajectory. Keep the zero-result query in the frozen
+            # raw artifact for audit, but do not expose it as directional evidence.
+            if total_results == 0 or not any(values):
+                continue
+            mean_value = sum(values) / len(values)
+            mean_year = sum(years) / len(years)
+            denominator = sum((year - mean_year) ** 2 for year in years)
+            slope = (
+                sum((year - mean_year) * (count - mean_value) for year, count in zip(years, values)) / denominator
+                if denominator
+                else 0.0
+            )
+            counts_text = ", ".join(f"{year}={annual_counts[year]}" for year in years)
+            content = self._clean_text(
+                "Crossref cutoff-constrained PMT publication trend. "
+                f"PMT={pmt_name}; query.title={query['title_query']!r}; "
+                f"query.bibliographic={query['bibliographic_query']!r}; annual publication counts: {counts_text}; "
+                f"OLS_slope={slope:.6f} works/year; first_to_last_delta={values[-1] - values[0]}; "
+                f"total_results={total_results}. "
+                f"The query is restricted to Crossref records first deposited on or before {cutoff_date}, so "
+                "post-cutoff deposits of older publications are excluded. This is an external publication-activity "
+                "validation axis independent of the Scopus-derived NoP model input. It does not establish deployment "
+                "maturity, operational effectiveness, or causal mitigation effectiveness."
+            )
+            self._add_record(
+                spec,
+                cutoff_date,
+                cutoff_date,
+                evidence_date=cutoff_date,
+                evidence_chain_id=f"crossref-publication-trend:{pmt_id}",
+                source_locator=(
+                    f"Crossref:publication-trend:{pmt_id}:{years[0]}-{years[-1]}:created<={cutoff_date}"
+                ),
+                content=content,
+                pmt_ids=(pmt_id,),
+            )
+            parsed += 1
+
+        if parsed == 0:
+            raise Stage0ValidationError("Crossref publication trend parser produced zero directional records")
 
     def _add_record(
         self,
@@ -908,6 +1064,27 @@ class EvidenceCorpusBuilder:
             except ValueError:
                 return date(year, month, 1).isoformat()
         return None
+
+    @staticmethod
+    def _crossref_created_date(item: dict[str, Any]) -> str | None:
+        value = item.get("created")
+        if not isinstance(value, dict):
+            return None
+        date_time = value.get("date-time")
+        if date_time:
+            match = re.match(r"(\d{4}-\d{2}-\d{2})", str(date_time))
+            if match:
+                return match.group(1)
+        parts = value.get("date-parts")
+        if not parts or not parts[0]:
+            return None
+        year = int(parts[0][0])
+        month = int(parts[0][1]) if len(parts[0]) > 1 else 1
+        day = int(parts[0][2]) if len(parts[0]) > 2 else 1
+        try:
+            return date(year, month, day).isoformat()
+        except ValueError:
+            return date(year, month, 1).isoformat()
 
     @staticmethod
     def _load_json(path: Path) -> Any:

@@ -105,7 +105,11 @@ class PaperForecastMigrator:
         self.forecast_dir = self.root / "B-MTGNN/model/Bayesian/forecast/data"
         self.source_path = self.root / "Data_Preparation/Smoothed_CyberTrend_Forecasting_All.csv"
         self.stale_source_path = self.root / "B-MTGNN/data/data.csv"
-        self.output_dir = Path(output_dir).resolve() if output_dir else self.root / "Data/Forecast"
+        self.output_dir = (
+            Path(output_dir).resolve()
+            if output_dir
+            else self.root / "Multi-Agent/Results/Stage0/Forecast"
+        )
         self._files = list(self.forecast_dir.glob("*.txt"))
         self._cache: dict[str, dict[str, list[float]]] = {}
 

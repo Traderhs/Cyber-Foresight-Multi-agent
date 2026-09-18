@@ -117,10 +117,10 @@ _EVIDENCE_SLOT_CLAIM_TYPES: dict[str, frozenset[str]] = {
             "doi_verification",
             "publisher_metadata",
             "publication_metadata",
+            "directional_publication_trend",
         }
     ),
 }
-
 
 def _sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()

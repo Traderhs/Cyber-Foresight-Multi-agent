@@ -55,10 +55,19 @@ def load_data_node(state: AgentState) -> AgentState:
             f"Main-set evidence qualification failed for {case_id}: "
             f"source_family_count={retrieval.get('source_family_count', 0)} < {min_families}"
         )
+    resolved_config = {
+        **explicit,
+        "snapshot_id": snapshot_id,
+        "threat": threat,
+        "pmt": pmt,
+        "analysis_cutoff_date": analysis_cutoff,
+        "evaluation_mode": evaluation_mode.value,
+        "case_id": case_id,
+    }
     print(f"Stage 0 EvidencePack loaded: {case_id} ({len(pack_dict['evidence'])} evidence records)\n")
     return {
+        "stage0_config": resolved_config,
         "forecast_data": agent_input["forecast_data"],
         "evidence_pack": pack_dict,
-        "iteration_count": 0,
         "messages": [],
     }

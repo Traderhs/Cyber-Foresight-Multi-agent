@@ -18,7 +18,12 @@ from Stage1.prompts import (
     STAGE1_EVALUATION_USER_PROMPT,
 )
 from Stage1.runtime import LlamaCppChatClient, assert_llama_server_ready
-from Stage1.schema import CriticAssessment, CriticType, validate_critic_assessment
+from Stage1.schema import (
+    CriticAssessment,
+    CriticType,
+    build_constrained_critic_response_schema,
+    validate_critic_assessment,
+)
 
 
 def _project_root() -> Path:
@@ -27,7 +32,7 @@ def _project_root() -> Path:
 
 def get_llm() -> LlamaCppChatClient:
     assert_llama_server_ready()
-    return LlamaCppChatClient()
+    return LlamaCppChatClient(request_concurrency=2)
 
 
 def prepare_stage1_node(state: AgentState) -> AgentState:
@@ -108,6 +113,15 @@ async def _run_stage1_critic(
         CriticAssessment,
         method="json_schema",
         progress_label=progress_label,
+        response_schema=build_constrained_critic_response_schema(
+            evidence_pack=evidence_pack,
+            expected_critic_type=critic_type,
+        ),
+        semantic_validator=lambda assessment: validate_critic_assessment(
+            assessment,
+            evidence_pack=evidence_pack,
+            expected_critic_type=critic_type,
+        ),
     )
     raw_assessment = await structured_llm.ainvoke(
         [
@@ -115,12 +129,7 @@ async def _run_stage1_critic(
             HumanMessage(content=STAGE1_EVALUATION_USER_PROMPT),
         ]
     )
-    assessment = validate_critic_assessment(
-        raw_assessment,
-        evidence_pack=evidence_pack,
-        expected_critic_type=critic_type,
-    )
-    return assessment.model_dump(mode="json")
+    return raw_assessment.model_dump(mode="json")
 
 
 async def attack_feasibility_critic_node(state: AgentState) -> AgentState:

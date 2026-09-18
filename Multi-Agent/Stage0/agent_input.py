@@ -63,8 +63,8 @@ def build_agent_input(
     """Build the Agent-facing Stage 0 payload from existing experiment artifacts only."""
     root = Path(project_root).resolve()
     builder = Stage0Builder(
-        root / "Data/Forecast",
-        root / "Data/Evidence/snapshots" / snapshot_id,
+        root / "Multi-Agent/Results/Stage0/Forecast",
+        root / "Multi-Agent/Results/Stage0/Evidence/snapshots" / snapshot_id,
     )
     pack = builder.build(
         case_id=case_id or f"{threat}__{pmt}",
@@ -96,6 +96,7 @@ def build_agent_input(
             "gap_slope_per_year": summary["gap_slope_per_year"],
             "gap_direction": summary["gap_direction"],
             "gap_semantics": summary["gap_semantics"],
+            "gap_direction_semantics": summary.get("gap_direction_semantics"),
             "predictive_uncertainty": summary["predictive_uncertainty"],
             "forecast_field_ids": summary["forecast_field_ids"],
         },

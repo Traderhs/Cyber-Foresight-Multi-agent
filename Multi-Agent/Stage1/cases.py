@@ -5,7 +5,7 @@ from typing import Any
 
 
 MAIN_CASE_SET_VERSION = "stage1-main-cases-v1"
-MAIN_SNAPSHOT_ID = "stage0-2026-09-12-v2"
+MAIN_SNAPSHOT_ID = "stage0-2026-09-13-v4"
 MAIN_ANALYSIS_CUTOFF = "2024-12-31"
 MAIN_EVALUATION_MODE = "ex_ante_replay"
 

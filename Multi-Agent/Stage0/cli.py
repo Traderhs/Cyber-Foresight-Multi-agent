@@ -37,6 +37,10 @@ def main() -> int:
     ingest.add_argument("--snapshot-date", required=True, help="ISO YYYY-MM-DD")
     ingest.add_argument("--snapshot-id", default=None)
     ingest.add_argument("--project-root", default=str(_project_root()))
+    build = sub.add_parser("build-stage0")
+    build.add_argument("--snapshot-date", required=True, help="ISO YYYY-MM-DD")
+    build.add_argument("--snapshot-id", default=None)
+    build.add_argument("--project-root", default=str(_project_root()))
     args = parser.parse_args()
 
     if args.command == "validate-registry":
@@ -52,18 +56,29 @@ def main() -> int:
         return 0
     if args.command == "create-empty-snapshot":
         root = Path(args.project_root)
-        writer = EvidenceSnapshotWriter(root / "Data/Evidence", args.snapshot_id)
+        writer = EvidenceSnapshotWriter(root / "Multi-Agent/Results/Stage0/Evidence", args.snapshot_id)
         path = writer.finalize()
         print(path)
         return 0
     if args.command == "validate-evidence":
         root = Path(args.project_root)
-        store = EvidenceStore(root / "Data/Evidence/snapshots" / args.snapshot_id)
+        store = EvidenceStore(root / "Multi-Agent/Results/Stage0/Evidence/snapshots" / args.snapshot_id)
         print(json.dumps({"status": "PASS", "snapshot_id": store.snapshot_id, "record_count": len(store.records)}, indent=2))
         return 0
     if args.command == "ingest-evidence":
         audit = build_evidence_snapshot(args.project_root, args.snapshot_date, args.snapshot_id)
         print(json.dumps(audit, indent=2, ensure_ascii=False))
+        return 0
+    if args.command == "build-stage0":
+        forecast_audit = PaperForecastMigrator(args.project_root).run()
+        evidence_audit = build_evidence_snapshot(args.project_root, args.snapshot_date, args.snapshot_id)
+        print(
+            json.dumps(
+                {"status": "PASS", "forecast": forecast_audit, "evidence": evidence_audit},
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
         return 0
     raise AssertionError(args.command)
 
