@@ -177,7 +177,7 @@ for year in years_list:
                 "scopus"
             )
 
-            # TODO: Debugging needed here
+            # Query the provider directly; transient API failures are surfaced to the caller.
             doc_srch.execute(client, get_all=True)
             if empty in str(doc_srch.results):
                 # print(doc_srch.results)

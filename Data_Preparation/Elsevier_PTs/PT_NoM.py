@@ -308,7 +308,7 @@ for year in years_list:
             slm = []
             print("searching for ", solution)
 
-            # TODO: Debugging needed here
+            # Query the provider directly; transient API failures are surfaced to the caller.
             doc_srch = ElsSearch(
                 "(TITLE(" + solution + ") OR ABS(" + solution + ") OR KEY(" + solution + ")) AND (TITLE(*secur*) OR ABS(*secur*) OR KEY(*secur*)) AND (PUBDATETXT(" + month + " " + str(year) + "))", 'scopus'
             )

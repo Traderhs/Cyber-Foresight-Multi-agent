@@ -44,18 +44,43 @@ For agent contracts, artifact schemas, runtime details, validation rules, and ex
 
 ## Installation
 
-For a single environment covering the repository:
+The unified environment, B-MTGNN, and the active Multi-Agent pipeline are tested with **Python 3.11**.
+
+For a single Python 3.11 environment covering the repository:
 
 ```bash
+# Windows
+py -3.11 -m venv .venv
+.venv\Scripts\activate
+
+# Linux/macOS
+# python3.11 -m venv .venv
+# source .venv/bin/activate
+
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-For stricter module-level reproducibility, install only the dependencies required by the component you are running:
+For module-level reproducibility, install only the dependencies required by the component you are running:
 
 ```bash
-pip install -r Data_Preparation/requirements.txt
 pip install -r B-MTGNN/requirements.txt
 pip install -r Multi-Agent/requirements.txt
+```
+
+The historical data-preparation environment uses older scientific-package pins and should be run under **Python 3.9**:
+
+```bash
+# Windows
+py -3.9 -m venv .venv-data
+.venv-data\Scripts\activate
+
+# Linux/macOS
+# python3.9 -m venv .venv-data
+# source .venv-data/bin/activate
+
+python -m pip install --upgrade pip
+pip install -r Data_Preparation/requirements.txt
 ```
 
 ## Forecasting
@@ -124,6 +149,13 @@ For a small critic smoke test:
 
 ```powershell
 py -3 -m Pipeline.main --smoke-critics 3 --smoke-seed 202609131
+```
+
+### Run the Multi-Agent Regression Suite
+
+```powershell
+cd Multi-Agent
+py -3.11 -m pytest Stage0/tests Stage1/tests Stage2/tests Stage3/tests Stage4/tests Stage5/tests Stage6/tests Stage7/tests -q
 ```
 
 ## Data and Reproducibility

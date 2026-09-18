@@ -6,6 +6,8 @@
 
 This repository contains the legacy multi-agent collaborative framework plus the redesigned Stage 0 data/evidence boundary, Stage 1 independent forecast critics, Stage 2 evidence-grounded structured debate, Stage 3 Common Decision Object builder, Stage 4 parallel strategic value-lens evaluation, Stage 5 deterministic disagreement/evidence diagnostics, Stage 6 disagreement-preserving synthesis, and the separate Stage 7 Agent-layer validation harness. The active graph stops after the frozen Stage 6 artifact; Stage 7 validates those frozen outputs rather than acting as another runtime decision Agent.
 
+The active Multi-Agent environment is tested with **Python 3.11**. Install it with `pip install -r requirements.txt` from this directory; the requirements file includes the Stage 0 document-parsing dependencies and the regression-test runner.
+
 ### Stage 1 LLM runtime
 
 The active Stage 1 runtime uses the local `Qwen3.8-27B-Q6_K_L` GGUF through a pinned llama.cpp CUDA server rather than Ollama. On an artifact miss, start the server with `Stage1/start_qwen38.ps1`; then run the implemented pipeline from the `Multi-Agent/` directory with `python -m Pipeline.main`. An exact frozen-artifact hit does not require the LLM server because no model call is made.
