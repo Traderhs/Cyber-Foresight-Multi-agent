@@ -4,6 +4,8 @@ This repository contains the forecasting and multi-agent decision-support pipeli
 
 ![Framework Architecture](figure/framework.png)
 
+![Multi-Agent Pipeline](figure/multi_agent_pipeline.png)
+
 ## Overview
 
 The project has two main layers:
