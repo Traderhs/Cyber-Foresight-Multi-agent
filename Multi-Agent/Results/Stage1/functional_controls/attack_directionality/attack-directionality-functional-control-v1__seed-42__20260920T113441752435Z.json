@@ -1,0 +1,208 @@
+{
+  "artifact_sha256": "2558f6c46fed4abf8b9058964054728df8311cb571259e26c165374236b933aa",
+  "case_id": "functional_control__ddos_noi_directionality",
+  "created_at": "2026-09-20T11:34:41.751492+00:00",
+  "design": {
+    "control_version": "attack-directionality-functional-control-v1",
+    "design_validation": "PASS",
+    "paired_prompt_differences": [
+      "forecast_summary.threat_state.direction"
+    ],
+    "synthetic_evidence_id": "E_SYNTH_DDOS_NOI_TREND",
+    "synthetic_evidence_sha256": "b7ecec8fdab85f73446bc83a51e367819f03f04b89d17b2cb3577dbfdde59955"
+  },
+  "pair_invariant": "The two agent-facing prompt payloads differ only at forecast_summary.threat_state.direction.",
+  "pair_passed": true,
+  "prompt_sha256": "49ec516d07355d1939571df13a9809c3da768d37bb2a09e00b3250dbea8371ae",
+  "purpose": "Synthetic functional control only. It tests whether the Attack Feasibility critic can emit opposite directional stances when supplied modality-matched directional evidence. It is not part of the seven empirical evaluation cases and must not be pooled with empirical results.",
+  "results": [
+    {
+      "assessment": {
+        "case_id": "functional_control__ddos_noi_directionality",
+        "claims": [
+          {
+            "claim_id": "C1",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "THREAT_TRAJECTORY",
+            "forecast_relation": "SUPPORTS_FORECAST",
+            "statement": "The supplied evidence reports that, under unchanged reporting coverage, DDoS incidents increased from 100 in 2022 to 130 in 2023 and to 160 in 2024, reporting incident count/frequency only."
+          },
+          {
+            "claim_id": "C2",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "CONTEXT",
+            "forecast_relation": "NEUTRAL_CONTEXT",
+            "statement": "The supplied record is expressly a synthetic functional-control record and not empirical evidence."
+          },
+          {
+            "claim_id": "C3",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "CONTEXT",
+            "forecast_relation": "NEUTRAL_CONTEXT",
+            "statement": "The supplied record permits directional threat trend claims and prohibits claims about attack magnitude, attack severity, tactic prevalence, and causal attribution."
+          }
+        ],
+        "critic_type": "attack_feasibility",
+        "evidence_sufficiency": "PARTIAL",
+        "stance": 1,
+        "stance_basis": {
+          "challenging_claim_ids": [],
+          "decision": "SUPPORT_DOMINATES",
+          "rationale": "The only directional evidence in the payload explicitly reports an increasing DDoS incident count/frequency through 2024, which directly matches the forecasted NoI threat state direction. No supplied evidence contradicts that directional threat trend, although the evidence base is synthetic, partial, and does not establish attack magnitude, severity, causal drivers, or post-2024 outcomes.",
+          "supporting_claim_ids": [
+            "C1"
+          ]
+        },
+        "unresolved_questions": [
+          "Whether the synthetic functional-control trend corresponds to independent empirical DDoS incident-count trends after the 2024-12-31 cutoff.",
+          "What DDoS incident count/frequency values will occur from 2025 through the forecast horizon, because the supplied evidence reports only through 2024.",
+          "What attack magnitude, attack severity, tactic prevalence, mitigation effectiveness, or causal drivers exist, because the supplied record prohibits those claim types and no other evidence is supplied.",
+          "What directional publication-activity trend, if any, exists for PMT_NLP_LLM, since no supplied evidence reports a temporal publication trend for that PMT.",
+          "How the forecast should be treated given that its predictive_uncertainty status is marked FUNCTIONAL_CONTROL_NOT_A_FORECAST_EVALUATION."
+        ],
+        "unsupported_specificity_detected": false
+      },
+      "direction": "increasing",
+      "expected": {
+        "decision": "SUPPORT_DOMINATES",
+        "relation": "SUPPORTS_FORECAST",
+        "stance": 1
+      },
+      "passed": true
+    },
+    {
+      "assessment": {
+        "case_id": "functional_control__ddos_noi_directionality",
+        "claims": [
+          {
+            "claim_id": "ATTACK_CLAIM_001",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "THREAT_TRAJECTORY",
+            "forecast_relation": "CHALLENGES_FORECAST",
+            "statement": "The supplied synthetic record reports DDoS incident count/frequency increasing from 100 in 2022 to 130 in 2023 and 160 in 2024, under unchanged reporting coverage."
+          },
+          {
+            "claim_id": "ATTACK_CLAIM_002",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "CONTEXT",
+            "forecast_relation": "NEUTRAL_CONTEXT",
+            "statement": "The record reports incident count/frequency only and does not report attack size, bandwidth, severity, tactic prevalence, mitigation effectiveness, or causal attribution."
+          },
+          {
+            "claim_id": "ATTACK_CLAIM_003",
+            "evidence_ids": [
+              "E_SYNTH_DDOS_NOI_TREND"
+            ],
+            "forecast_component": "CONTEXT",
+            "forecast_relation": "NEUTRAL_CONTEXT",
+            "statement": "The record is a synthetic functional-control source, not empirical evidence, and its contract permits directional threat trend while prohibiting attack magnitude, severity, tactic prevalence, and causal attribution."
+          }
+        ],
+        "critic_type": "attack_feasibility",
+        "evidence_sufficiency": "PARTIAL",
+        "stance": -1,
+        "stance_basis": {
+          "challenging_claim_ids": [
+            "ATTACK_CLAIM_001"
+          ],
+          "decision": "CHALLENGE_DOMINATES",
+          "rationale": "The only supplied directional threat-trajectory evidence reports an increasing NoI incident count trend, which directly contradicts the forecasted decreasing threat direction. The evidence is synthetic and scoped to incident count/frequency only, so sufficiency remains PARTIAL, but the directional challenge is direct.",
+          "supporting_claim_ids": []
+        },
+        "unresolved_questions": [
+          "No independent empirical evidence is supplied for the real-world DDoS incident count/frequency trajectory after the 2024-12-31 cutoff, so the forecasted decreasing NoI direction for the forecast horizon remains unresolved.",
+          "No PMT NLP/LLM publication-activity evidence is supplied, so the PMT state and any threat–PMT gap direction cannot be independently assessed.",
+          "The supplied evidence does not report attack magnitude, severity, tactic prevalence, mitigation effectiveness, or causal attribution, so operational feasibility beyond incident count/frequency is unresolved."
+        ],
+        "unsupported_specificity_detected": false
+      },
+      "direction": "decreasing",
+      "expected": {
+        "decision": "CHALLENGE_DOMINATES",
+        "relation": "CHALLENGES_FORECAST",
+        "stance": -1
+      },
+      "passed": true
+    }
+  ],
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 1,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "attack-directionality-functional-control-v1",
+  "semantic_validation_version": "stage1-semantic-validation-v4",
+  "synthetic_evidence": {
+    "allowed_claim_types": [
+      "directional_threat_trend"
+    ],
+    "available_at": "2024-12-31",
+    "content": "Under unchanged reporting coverage, the number of DDoS incidents increased from 100 in 2022 to 130 in 2023 and 160 in 2024. This record reports incident count/frequency only; it does not report attack size, bandwidth, severity, tactic prevalence, mitigation effectiveness, or causal attribution.",
+    "content_hash": "synthetic-functional-control-not-source-derived",
+    "evidence_chain_id": "synthetic-ddos-noi-directional-trend-v1",
+    "evidence_date": "2024-12-31",
+    "evidence_id": "E_SYNTH_DDOS_NOI_TREND",
+    "evidence_type": "synthetic_directional_threat_trend",
+    "pmt_ids": [],
+    "prohibited_claim_types": [
+      "attack_magnitude",
+      "attack_severity",
+      "tactic_prevalence",
+      "causal_attribution"
+    ],
+    "publication_date": "2024-12-31",
+    "retrieval_role": "functional_control",
+    "source": "Synthetic functional-control record; not empirical evidence",
+    "source_document_id": "synthetic-ddos-noi-directional-trend-v1",
+    "source_family": "synthetic_functional_control",
+    "source_locator": "functional-control://attack-directionality",
+    "source_registry_id": "SYNTHETIC_FUNCTIONAL_CONTROL",
+    "source_snapshot_id": "attack-directionality-functional-control-v1",
+    "threat_ids": [
+      "THREAT_DDOS"
+    ]
+  },
+  "user_prompt_sha256": "9a3058bf0340fe8b3346e7410195f297d60731817473b481bbd8e7a5640d1b55"
+}
