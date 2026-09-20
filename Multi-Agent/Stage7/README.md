@@ -12,6 +12,10 @@ Stage 7 reports exactly three validation axes:
 
 Grounding and Mediator-fidelity semantic checks remain internal integrity audits. They verify agent-layer claim/evidence behavior and are not promoted to independent paper experiments.
 
+### Statistical reporting
+
+Paper-facing confidence intervals for the A prompt-paraphrase, B architecture, and C contextualized-path comparison means use a **case-cluster bootstrap** rather than resampling the 18/21 scenario-comparison rows as independent observations. The bootstrap resamples case_id clusters with replacement and carries all jurisdiction/variant rows from each sampled case together. This preserves the point estimates while accounting for the dependence among KR/EU/US scenarios derived from the same Threat-PMT case. The frozen statistical contract uses 2,000 repetitions, seed 20260916, and a 95% interval.
+
 ## Commands
 
 Run from `Multi-Agent/`:
@@ -38,4 +42,4 @@ The completed A prompt-robustness artifacts retain their frozen `stage7-decision
 
 ## Reproducibility
 
-Variant artifacts are content-addressed and bound to exact source Stage 3/Stage 6 hashes, prompt hashes, structured-output schemas, runtime configuration, and runner identity. Completed LLM assessments are preserved byte-for-byte at the assessment level whenever only axis/path metadata is re-frozen; assessment hashes remain the integrity anchor.
+Variant artifacts are content-addressed and bound to exact source Stage 3/Stage 6 hashes, prompt hashes, structured-output schemas, runtime configuration, and runner identity. Completed LLM assessments are preserved byte-for-byte at the assessment level whenever only axis/path/statistical-reporting metadata is re-frozen; assessment hashes remain the integrity anchor.

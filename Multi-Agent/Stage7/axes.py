@@ -8,7 +8,7 @@ from Stage7.config import DECISION_POLICY_VARIANTS
 from Stage7.loaders import CaseBundle
 from Stage7.logmetrics import aggregate_completion_events, latest_successful_main_log
 from Stage7.metrics import (
-    bootstrap_mean_ci,
+    cluster_bootstrap_mean_ci,
     mean,
     median,
     pairwise_mean_jaccard,
@@ -124,15 +124,23 @@ def _variant_result(
             continue
         comparisons.append(compare_variant_to_baseline(record, main))
 
-    stance_values = [float(row["stance_agreement"]) for row in comparisons if row["stance_agreement"] is not None]
-    evidence_values = [float(row["evidence_overlap"]) for row in comparisons if row["evidence_overlap"] is not None]
-    direction_values = [
-        float(row["claim_direction_overlap"])
-        for row in comparisons
-        if row["claim_direction_overlap"] is not None
-    ]
+    stance_rows = [row for row in comparisons if row["stance_agreement"] is not None]
+    evidence_rows = [row for row in comparisons if row["evidence_overlap"] is not None]
+    direction_rows = [row for row in comparisons if row["claim_direction_overlap"] is not None]
+    stance_values = [float(row["stance_agreement"]) for row in stance_rows]
+    evidence_values = [float(row["evidence_overlap"]) for row in evidence_rows]
+    direction_values = [float(row["claim_direction_overlap"]) for row in direction_rows]
     recommendation_values = [1.0 if row["recommendation_consistent"] else 0.0 for row in comparisons]
     d_values = [float(row["d_lens_abs_delta"]) for row in comparisons]
+    stance_clusters = [str(row["case_id"]) for row in stance_rows]
+    evidence_clusters = [str(row["case_id"]) for row in evidence_rows]
+    direction_clusters = [str(row["case_id"]) for row in direction_rows]
+    recommendation_clusters = [str(row["case_id"]) for row in comparisons]
+    bootstrap_note = (
+        "95% case-cluster bootstrap CI: resample case_id clusters with replacement "
+        "(2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not "
+        "treated as independent observations."
+    )
     status = EvaluationStatus.EVALUATED if comparisons and not missing_baseline else EvaluationStatus.PARTIAL
 
     return (
@@ -146,25 +154,32 @@ def _variant_result(
                     "stance_agreement_mean",
                     mean(stance_values),
                     n=len(stance_values),
-                    ci=bootstrap_mean_ci(stance_values),
+                    ci=cluster_bootstrap_mean_ci(stance_values, stance_clusters),
+                    notes=bootstrap_note,
                 ),
                 _metric(
                     "evidence_id_overlap_mean",
                     mean(evidence_values),
                     n=len(evidence_values),
-                    ci=bootstrap_mean_ci(evidence_values),
+                    ci=cluster_bootstrap_mean_ci(evidence_values, evidence_clusters),
+                    notes=bootstrap_note,
                 ),
                 _metric(
                     "claim_direction_overlap_mean",
                     mean(direction_values),
                     n=len(direction_values),
-                    ci=bootstrap_mean_ci(direction_values),
+                    ci=cluster_bootstrap_mean_ci(direction_values, direction_clusters),
+                    notes=bootstrap_note,
                 ),
                 _metric(
                     "recommendation_consistency_rate",
                     mean(recommendation_values),
                     n=len(recommendation_values),
-                    ci=bootstrap_mean_ci(recommendation_values),
+                    ci=cluster_bootstrap_mean_ci(
+                        recommendation_values,
+                        recommendation_clusters,
+                    ),
+                    notes=bootstrap_note,
                 ),
                 _metric("d_lens_abs_delta_median", median(d_values), n=len(d_values)),
             ],
@@ -179,6 +194,14 @@ def _variant_result(
             provenance={
                 "axis_name": axis_name,
                 "variant_ids": sorted({record.variant_id for record in selected}),
+                "bootstrap": {
+                    "method": "case_cluster_bootstrap",
+                    "cluster_key": "case_id",
+                    "repetitions": 2000,
+                    "seed": 20260916,
+                    "alpha": 0.05,
+                    "unique_case_count": len({str(row["case_id"]) for row in comparisons}),
+                },
             },
         ),
         comparisons,

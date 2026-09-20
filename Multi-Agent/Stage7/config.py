@@ -3,14 +3,14 @@ from __future__ import annotations
 from typing import Any
 
 
-STAGE7_HARNESS_VERSION = "stage7-validation-harness-v10"
+STAGE7_HARNESS_VERSION = "stage7-validation-harness-v11"
 STAGE7_ARTIFACT_SCHEMA_VERSION = "stage7-validation-artifact-v6"
-STAGE7_EXPERIMENT_MANIFEST_VERSION = "stage7-experiment-manifest-v11"
+STAGE7_EXPERIMENT_MANIFEST_VERSION = "stage7-experiment-manifest-v12"
 STAGE7_GROUNDING_VERIFIER_VERSION = "stage7-grounding-verifier-v1"
 STAGE7_MEDIATOR_VERIFIER_VERSION = "stage7-mediator-verifier-v1"
 STAGE7_VARIANT_RECORD_VERSION = "stage7-variant-result-v1"
 STAGE7_INPUT_CONTRACT_VERSION = "stage7-validation-inputs-v2"
-STAGE7_STATISTICAL_CONTRACT_VERSION = "stage7-statistical-reporting-v1"
+STAGE7_STATISTICAL_CONTRACT_VERSION = "stage7-statistical-reporting-v2"
 STAGE7_MANUAL_AUDIT_SAMPLE_VERSION = "stage7-manual-audit-sample-v1"
 STAGE7_MEDIATOR_AUDIT_SAMPLE_VERSION = "stage7-mediator-audit-sample-v1"
 
@@ -106,6 +106,7 @@ def experiment_manifest() -> dict[str, Any]:
     return {
         "manifest_version": STAGE7_EXPERIMENT_MANIFEST_VERSION,
         "harness_version": STAGE7_HARNESS_VERSION,
+        "statistical_contract_version": STAGE7_STATISTICAL_CONTRACT_VERSION,
         "prompt_paraphrase_variants": list(PROMPT_PARAPHRASE_VARIANTS),
         "sensitivity_case_ids": list(SENSITIVITY_CASE_IDS),
         "decision_architecture_variants": list(DECISION_ARCHITECTURE_VARIANTS),

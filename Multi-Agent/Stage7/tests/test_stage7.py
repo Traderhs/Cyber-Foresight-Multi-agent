@@ -14,6 +14,7 @@ from Stage7.config import (
     SENSITIVITY_CASE_IDS,
     experiment_manifest,
 )
+from Stage7.metrics import cluster_bootstrap_mean_ci
 from Stage7.loaders import load_main_case_bundles
 from Stage7.runner import run_stage7_validation
 from Stage7.variant_generation import (
@@ -70,6 +71,7 @@ class Stage7HarnessTests(unittest.TestCase):
         assert set(manifest) == {
             "manifest_version",
             "harness_version",
+            "statistical_contract_version",
             "prompt_paraphrase_variants",
             "sensitivity_case_ids",
             "decision_architecture_variants",
@@ -81,6 +83,13 @@ class Stage7HarnessTests(unittest.TestCase):
             "mediator_audit_include_all_followup_rounds",
             "experiments",
         }
+
+    def test_case_cluster_bootstrap_resamples_cases_not_scenarios(self) -> None:
+        values = [0.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+        clusters = ["case_a", "case_a", "case_a", "case_b", "case_b", "case_b"]
+        ci = cluster_bootstrap_mean_ci(values, clusters, seed=7, repetitions=2000)
+        assert ci is not None
+        self.assertEqual(ci, (0.0, 1.0))
 
     def test_variant_runner_versions_preserve_completed_generation_contracts(self) -> None:
         assert FROZEN_A1_VARIANT_RUNNER_VERSION == "stage7-decision-variant-runner-v1"
@@ -112,6 +121,14 @@ class Stage7HarnessTests(unittest.TestCase):
         self.assertAlmostEqual(b_metrics["single_agent_baseline.recommendation_consistency_rate"], 2 / 7)
         self.assertAlmostEqual(c_metrics["contextualized_path.recommendation_consistency_rate"], 2 / 7)
         assert c_metrics["scenario_provenance.scenario_contract_violation_count"] == 0
+        b_metric_records = {item["name"]: item for item in by_axis["B"]["metrics"]}
+        c_metric_records = {item["name"]: item for item in by_axis["C"]["metrics"]}
+        assert "case-cluster bootstrap" in b_metric_records[
+            "single_agent_baseline.stance_agreement_mean"
+        ]["notes"]
+        assert "case-cluster bootstrap" in c_metric_records[
+            "contextualized_path.stance_agreement_mean"
+        ]["notes"]
         # Existing frozen semantic audit checkpoints are bound into the final
         # artifact without issuing any new LLM request.
         assert len(artifact["grounding_audits"]) in {0, 70}

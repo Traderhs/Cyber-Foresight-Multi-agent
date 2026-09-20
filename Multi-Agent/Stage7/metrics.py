@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import math
 import random
@@ -156,6 +156,42 @@ def bootstrap_mean_ci(
     for _ in range(repetitions):
         sample = [values[rng.randrange(len(values))] for _ in values]
         means.append(statistics.mean(sample))
+    means.sort()
+    low_idx = max(0, int((alpha / 2) * repetitions))
+    high_idx = min(repetitions - 1, int((1 - alpha / 2) * repetitions) - 1)
+    return means[low_idx], means[high_idx]
+
+
+def cluster_bootstrap_mean_ci(
+    values: Sequence[float],
+    cluster_ids: Sequence[str],
+    *,
+    seed: int = 20260916,
+    repetitions: int = 2000,
+    alpha: float = 0.05,
+) -> tuple[float, float] | None:
+    if not values:
+        return None
+    if len(values) != len(cluster_ids):
+        raise ValueError("values and cluster_ids must have the same length")
+
+    grouped: dict[str, list[float]] = {}
+    for value, cluster_id in zip(values, cluster_ids, strict=True):
+        grouped.setdefault(str(cluster_id), []).append(float(value))
+
+    clusters = list(grouped)
+    if not clusters:
+        return None
+
+    rng = random.Random(seed)
+    means: list[float] = []
+    for _ in range(repetitions):
+        sampled_values: list[float] = []
+        for _ in clusters:
+            sampled_cluster = clusters[rng.randrange(len(clusters))]
+            sampled_values.extend(grouped[sampled_cluster])
+        means.append(statistics.mean(sampled_values))
+
     means.sort()
     low_idx = max(0, int((alpha / 2) * repetitions))
     high_idx = min(repetitions - 1, int((1 - alpha / 2) * repetitions) - 1)
