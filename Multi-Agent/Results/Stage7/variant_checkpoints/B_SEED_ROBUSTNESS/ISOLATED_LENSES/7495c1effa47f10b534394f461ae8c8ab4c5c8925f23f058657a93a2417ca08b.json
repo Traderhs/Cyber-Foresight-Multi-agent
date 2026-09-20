@@ -1,0 +1,143 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST key-management guidance specifies institutional accountability and traceability controls for cryptographic keys, including identification of entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs key actions; auditing key-access logs; and making access to plaintext cryptographic keys traceable to the accessing entity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG guidance identifies strong and agile encryption as a recommended action aimed at maintaining confidentiality of sensitive data and integrity of IT and OT traffic, with elements including properly configured and up-to-date SSL/TLS when technically feasible, planning to update outdated or weak encryption, and considering post-quantum cryptography implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST cryptographic-transition guidance imposes algorithm-level compliance constraints relevant to cryptography implementation: two-key TDEA encryption is disallowed, SKIPJACK encryption is disallowed, three-key TDEA encryption is disallowed after December 31, 2023 unless specifically allowed by other NIST guidance, and AES-128, AES-192, and AES-256 encryption and decryption are acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure across differing risk profiles, notes that such enterprises may face regulatory burdens, and notes that some safeguards depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional feasibility judgment requires jurisdiction-specific regulatory_applicability evidence for the frozen masked region.",
+      "Feasibility should be conditioned on assessment of existing cryptographic assets against the NIST algorithm-transition statuses, including disallowed legacy algorithms and post-2023 restrictions on three-key TDEA encryption.",
+      "Feasibility should be conditioned on confirmation that key-management controls can identify authorized key entities, record key actions, and audit key access.",
+      "Feasibility should be conditioned on the organization's ability to follow the CPG strong and agile encryption recommended action, including current SSL/TLS where feasible and weak-encryption remediation."
+    ],
+    "constraints": [
+      "Implementation of CRYPTOGRAPHY must be compatible with algorithm-transition constraints that disallow certain legacy encryption algorithms and restrict or disallow others after specified dates.",
+      "Key-management practice must provide accountability and traceability, including identification of key-authorized entities, recording of key actions, and auditability of key access.",
+      "A governance-aligned implementation should follow the CPG recommended action for strong and agile encryption, including current SSL/TLS where technically feasible and remediation of weak or outdated encryption.",
+      "The reference profile's possible regulatory burdens and possible dependency on enterprise-grade technology or specialized expertise are profile-level conditions, not confirmed deployment-specific constraints for the frozen organization."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the masked region, so deployment-specific legal, data-sovereignty, cross-border, or jurisdiction-specific compliance obligations cannot be assessed.",
+      "No supplied record establishes the frozen enterprise's actual existing cryptographic algorithm inventory, key-management maturity, staffing or expertise levels, budget, or procurement capacity.",
+      "No supplied record establishes that the generic CPG strong and agile encryption recommended action is specifically institutionalized for the frozen insider-threat scenario rather than as general encryption guidance.",
+      "No supplied record establishes jurisdiction-specific applicability of the NIST or CISA guidance to the frozen masked deployment context."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records contain both institutional/governance enablement and compliance constraints for CRYPTOGRAPHY. DE_DE08_031120C53EF050F3 provides a general governance-enablement basis by specifying key-management accountability, traceability, recording, and auditing controls. E_23_534489D29C38B327 provides another general governance-enablement basis by describing strong and agile encryption as a recommended action with SSL/TLS, weak-encryption update, and post-quantum consideration elements. DE_DE09_6719137897848A9E provides a general compliance-constraint basis by imposing algorithm-transition statuses that require avoidance or remediation of disallowed or post-cutoff disallowed cryptographic algorithms. The frozen region is masked and no jurisdiction-specific regulatory_applicability evidence is supplied, so a DEPLOYMENT_SPECIFIC regional or legal feasibility direction cannot be grounded. The missing jurisdiction-specific detail is recorded as a gap rather than converted into a directional stance. Because a grounded GENERAL SUPPORTS_FEASIBILITY direction and a grounded GENERAL CHALLENGES_FEASIBILITY direction both survive, the institutional/regional feasibility question is mixed rather than decisively supported or challenged.",
+    "stance": 0
+  },
+  "assessment_sha256": "0b4ec48e9e617088edb4e35ce487dd4bc9d98ce3e0f540bde879874d6a08485e",
+  "checkpoint_sha256": "4cfd77a648b5c7f9c86b27d40b9539a28504c0649dcde9add319e6477df81f6d",
+  "created_at": "2026-09-20T09:07:02.012957+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE08_031120C53EF050F3",
+        "DE_DE09_6719137897848A9E",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "7495c1effa47f10b534394f461ae8c8ab4c5c8925f23f058657a93a2417ca08b",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c"
+    ],
+    "payload_sha256": "0b27822363c46d73a4bd891b6bcebcd6ceb72b68f6add37d989df111851c9f45",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "7ccb2cc5408cbecdbba5fe14804c6d911eadb3e00ae9d54a96c59cc1cf12bcc0",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "9cab1c48d1e382f37614084c8376c40ef18132a56319ec4ebef9339467ddab10",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

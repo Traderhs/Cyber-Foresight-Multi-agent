@@ -1,0 +1,147 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CLM_001",
+        "evidence_ids": [
+          "AE06S_407DDF87C86BB41B"
+        ],
+        "scope": "GENERAL",
+        "statement": "An action-specific technical enablement record reports that an evaluated ATT&CK-informed zero-trust risk model for APTs, integrated with centralized access-control decisions, improved the ability to respond to sophisticated multi-stage threats and directly supports adaptive access control as a targeted-attack defense mechanism.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_002",
+        "evidence_ids": [
+          "AE06C_8C41709C0D8EE834"
+        ],
+        "scope": "GENERAL",
+        "statement": "An action-specific technical limitation record states that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone, challenging feasibility of static or perimeter-only access control without that continuous context.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_003",
+        "evidence_ids": [
+          "DE_DE12_6509E7A6D8467E38",
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplementary deployment-maturity records describe ZTA candidate-solution considerations such as client installation, resource location, logging, protocol/application support, subject behavior, and pilots, and state that the path to zero trust is incremental and may take years; these records qualify implementation complexity but do not establish a feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLM_004",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise context is CIS IG2, described as a multi-department enterprise with personnel responsible for managing and protecting infrastructure, where some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure; this is profile context only and does not establish PMT effectiveness or deployment burden by itself.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific conclusion requires evidence of the local identity/access architecture and integration points for centralized access-control decisions [AE06C_8C41709C0D8EE834].",
+      "A deployment-specific conclusion requires confirmation that continuously updated threat/risk context can be ingested and maintained for access-control decisions [AE06C_8C41709C0D8EE834].",
+      "If zero-trust/access-control maturity guidance is used, the implementation plan must assess candidate workflow/pilot scope, logging/monitoring, protocol/application coverage, and client or subject behavior impacts [DE_DE12_6509E7A6D8467E38].",
+      "For a 2025-2027 horizon, current maturity and implementation schedule are required because the path to zero trust may take years [DE_DE17_429D17A4E11A72C3].",
+      "For IG2-specific fit, availability of enterprise-grade technology and specialized expertise must be confirmed where relevant safeguards require them [CTX_CIS_IG2_9F94838146D9C3A4]."
+    ],
+    "constraints": [
+      "Access-control feasibility is conditional on continuously updated threat/risk context; static or perimeter-only access-control assumptions are insufficient for evolving APT behavior [AE06C_8C41709C0D8EE834].",
+      "The positive feasibility signal is grounded in an evaluated model/study record, so it does not report confirmed local deployment or forecast-period operational effectiveness in the frozen enterprise [AE06S_407DDF87C86BB41B].",
+      "Deployment-maturity guidance indicates implementation may be incremental, may take years, and depends on candidate-solution fit factors such as client installation, resource location, logging, protocol/application support, and subject behavior [DE_DE12_6509E7A6D8467E38, DE_DE17_429D17A4E11A72C3].",
+      "The CIS IG2 profile notes possible dependence on enterprise-grade technology and specialized expertise for some safeguards; exact deployment burden remains unknown in the frozen context [CTX_CIS_IG2_9F94838146D9C3A4]."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "evidence_gaps": [
+      "Current or planned access-control deployment, maturity, and implementation status for 2025-2027 in the frozen CIS IG2 enterprise are missing.",
+      "Current local identity, directory, authorization, application, and network architecture needed to judge compatibility with centralized access-control decisions or zero-trust integration are missing.",
+      "Evidence that the frozen enterprise can maintain continuously updated threat/risk context feeding access-control decisions is missing.",
+      "Deployment-specific measured technical effectiveness of the ACCESS CONTROL action against the Targeted Attack forecast horizon is missing."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The directionally eligible action-specific technical evidence contains one enablement record and one limitation record. AE06S_407DDF87C86BB41B supports general technical feasibility by reporting that an evaluated ATT&CK-informed zero-trust risk model for APTs, integrated with centralized access-control decisions, improved the ability to respond to sophisticated multi-stage threats and directly supports adaptive access control as a targeted-attack defense mechanism. AE06C_8C41709C0D8EE834 provides a grounded challenge by stating that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior and that effective access control depends on continuously updated threat/risk context rather than the control category alone. This challenge is material for static or perimeter-only implementations, but it is framed as a dependency and operating condition rather than as proof that access control cannot be technically implemented or integrated. Deployment-maturity records DE_DE12_6509E7A6D8467E38 and DE_DE17_429D17A4E11A72C3 are supplementary only: they describe candidate-solution fit and an incremental zero-trust path that may take years, but they cannot create a directional conclusion by themselves. The frozen CIS IG2 context identifies possible enterprise-grade technology and specialized-expertise dependencies but does not supply exact local architecture, so a deployment-specific compatibility conclusion is not supported. On balance, the surviving grounded GENERAL direction is that technical feasibility is supported, conditionally and with partial sufficiency because deployment-specific and forecast-period effectiveness evidence are missing.",
+    "stance": 1
+  },
+  "assessment_sha256": "0178241796a19cfa777f23e16a1258fa69a2dfc684202d84df8a0c22c37e4780",
+  "checkpoint_sha256": "32358c696d5d47499016db177ead44aa816e83c9c55a48f891c70ee3711c6478",
+  "created_at": "2026-09-20T09:32:25.193983+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE06C_8C41709C0D8EE834",
+        "AE06S_407DDF87C86BB41B",
+        "DE_DE12_6509E7A6D8467E38",
+        "DE_DE17_429D17A4E11A72C3"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "961f4112654ee44a174b7bd80e092e029b176b512528034c2993f4f44099fa35",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "e9470d69c41ba62f9ea39a2be7d73b327e9d7c6141ebeb8107ab02744e85a495",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "5a46c5f5a8f8d4547fc6f879c11e124f4f5ef241d741a0ab9bec7ceba7d8ca10",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "458cddbdcf3a6cdcc46bbabb8a9ced929fe133fdec3445e4218ffe0dcf3b097d",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

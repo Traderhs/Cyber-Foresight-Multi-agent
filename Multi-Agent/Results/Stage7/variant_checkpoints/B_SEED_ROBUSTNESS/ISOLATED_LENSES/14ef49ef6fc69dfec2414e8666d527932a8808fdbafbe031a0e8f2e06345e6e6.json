@@ -1,0 +1,151 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA-C1",
+        "evidence_ids": [
+          "DE_DE04_DB6B29C9BE1B0F05"
+        ],
+        "scope": "GENERAL",
+        "statement": "Direct IDPS integration can provide significant time savings to administrators and users by streamlining work, and data sharing can speed the analysis process and help users better prioritize threats.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C2",
+        "evidence_ids": [
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A SIEM can import logs from multiple systems, integrate IDS/IPS information, speed data processing and formatting time, and make review of functional, operational, and security data cheaper and easier.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C3",
+        "evidence_ids": [
+          "DE_DE07_86DF83870E0A768D"
+        ],
+        "scope": "GENERAL",
+        "statement": "Organizations seek automated solutions to lower costs, enhance efficiency, and improve reliability, and automation can reduce the time security professionals spend on redundant tasks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C4",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "scope": "GENERAL",
+        "statement": "IDPS implementation, operation, and maintenance require varied skills, including system administration, network administration, information security, incident response, network protocols, applications, operating systems, and possibly programming; update testing, tuning, and alert management are part of the operational burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA-C5",
+        "evidence_ids": [
+          "DE_DE04_0B017D64401987E4"
+        ],
+        "scope": "GENERAL",
+        "statement": "IDPS planning involves integration options, requirements definition, understanding of the organization’s system and network environment, and potential SIEM complementarity; this is deployment-planning context rather than a standalone financial feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial feasibility conclusion would require bounded budget or cost data, existing integration/SIEM status, staffing/training capacity, and expected time-savings or review-effort reduction for the actual deployment.",
+      "A deployment-specific burden conclusion would require evidence about whether the organization already has, or lacks, the required IDPS skills, update-testing environment, tuning capacity, and alert-management process."
+    ],
+    "constraints": [
+      "The time-saving and integration benefits are conditional on using integrated or complementary IDPS/SIEM pathways; the same integration record notes that a failure or compromise could endanger all integrated IDPS technologies.",
+      "The cheaper-and-easier review benefit is about review efficiency and integration, not exact affordability, procurement cost, ROI, or budget fit.",
+      "The skill and maintenance burden is documented but unquantified in the supplied records; exact staffing count, training cost, alert volume, and implementation timeline are not established."
+    ],
+    "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+    "evidence_gaps": [
+      "No exact budget, price, ROI, TCO, payback period, staffing count, procurement ceiling, or integration cost is supplied for the frozen deployment scenario.",
+      "The actual existing SIEM/IDPS integration maturity, update-testing capacity, alert-management capacity, and skill availability are not specified.",
+      "No jurisdiction-specific financial or regulatory cost evidence is supplied, and the jurisdiction is intentionally masked for this lens."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The frozen records provide grounded general support for IDS/IPS adoption feasibility through direct resource-saving and cost-relevant pathways: direct IDPS integration can provide significant time savings, shared data can speed analysis and prioritization, SIEM integration of IDS/IPS information can make review cheaper and easier, and automation is associated with lower costs and reduced redundant analyst time. They also provide a grounded general challenge: IDPS implementation, operation, maintenance, testing, tuning, alert management, and skill development impose a real adoption burden. On balance, the support is stronger because the benefit evidence is directly tied to time, cost, and review efficiency, whereas the burden evidence is unquantified and does not establish infeasibility. Exact budget, staffing, procurement, integration cost, and payback data remain unavailable, so the support is general and conditional rather than deployment-specific.",
+    "stance": 1
+  },
+  "assessment_sha256": "8d1928a3ac7d5dec4a0dd4a16196aa8698b90674892528ae5268ff372b7be861",
+  "checkpoint_sha256": "955fe9271b79cc1b6a0e0d616409e3ec8c42e45fe9e271d71bb5bbee703fd6c9",
+  "created_at": "2026-09-20T12:08:53.198289+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__brute_force__ids_ips",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B017D64401987E4",
+        "DE_DE04_C6F46FCDE66BFAC7",
+        "DE_DE04_DB6B29C9BE1B0F05",
+        "DE_DE07_86DF83870E0A768D",
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "14ef49ef6fc69dfec2414e8666d527932a8808fdbafbe031a0e8f2e06345e6e6",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf"
+    ],
+    "payload_sha256": "ef3f49718079eea99cff3249c8de5d6a98a7101c602bd1ff06cf41ffaff66fa9",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "ce17ca640d56c5b1a7241141657b6b4aef815174210d9ca11c5c4b3645e75c25",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "1d0034a665b85947fadbb6c4c562dbce2e44b60d52c8cd40c0e8e2f23a7b53cc",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

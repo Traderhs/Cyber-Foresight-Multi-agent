@@ -1,0 +1,277 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA-SUPPORT-1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B",
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS client-authentication guidance and IPSec configuration guidance describe adoptable cryptographic mechanisms that can provide authentication, integrity, and confidentiality benefits; under the financial_adoption contract these are adoption_benefit context, not numeric financial proof.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-CHALLENGE-1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CPG guidance makes encryption deployment conditional on technical feasibility, requires identifying and updating outdated or weak encryption, asks organizations to consider post-quantum implications, and notes OT latency/availability impacts; these are adoption burdens for financial_adoption evaluation.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA-NEUTRAL-1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "The SSL/TLS, IPSec, and CPG guidance records provide deployment-maturity context for cryptographic configurations, but they do not establish numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Numeric financial-adoption feasibility would require a future quantitative estimate of implementation, update, key-management, and operational burden before it can be assessed; current evidence only supports qualitative adoption benefit and burden."
+      ],
+      "constraints": [
+        "Adoption is constrained by technical feasibility, identification and update of outdated or weak encryption, and consideration of post-quantum implications.",
+        "The CIS IG2 reference profile indicates that some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is established by the supplied evidence."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No supplied evidence provides numeric budget, price, ROI, TCO, staffing count, or procurement ceiling for cryptography adoption.",
+        "No supplied evidence provides measured adoption cost or benefit in the frozen EU CIS IG2 scenario.",
+        "No supplied evidence establishes the resource impact of key-management, algorithm update, or post-quantum planning."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Adoption_benefit support from TLS client-authentication and IPSec configuration guidance is mixed with adoption_burden challenge from CPG feasibility, weak-encryption update, post-quantum planning, and OT impact guidance. The supplied financial_adoption evidence does not establish numeric budget, price, ROI, TCO, staffing count, or procurement ceiling, so the lens remains materially mixed rather than affirmatively adoptable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR-SUPPORT-1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance requires traceability of access to plaintext and ciphertext keys and access-control mechanisms to help prevent key compromises and reduce impact after detection; CPG guidance recommends effective encryption to maintain confidentiality of sensitive data and integrity of IT and OT traffic. These support governance enablement for cryptographic deployment.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-CHALLENGE-1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST transition guidance imposes compliance constraints on cryptographic algorithm selection: two-key TDEA encryption is disallowed, three-key TDEA encryption is deprecated through 2023 and disallowed after 2023 for new use unless specifically allowed, and Skipjack encryption is disallowed. These constrain institutional feasibility through algorithm compliance.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR-DS-NEUTRAL-1",
+          "evidence_ids": [
+            "E_31_A0893427DD4F5B04",
+            "E_31_6BBE82F2BAC198B3",
+            "E_31_C1CFA326F0420DCA"
+          ],
+          "scope": "DEPLOYMENT_SPECIFIC",
+          "statement": "EU primary-law records place encryption within an EU regulatory context for personal-data processing, special-category data safeguards, and national cybersecurity strategy/public-procurement policies. They establish regulatory-applicability context for the EU-scoped frozen scenario but do not by themselves establish exact legal applicability to the reference enterprise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional feasibility is conditional on selecting allowed algorithms, implementing key-access traceability, and verifying EU regulatory applicability for the actual processing and asset scope."
+      ],
+      "constraints": [
+        "Cryptography deployment would need to respect algorithm-transition constraints for encryption algorithms.",
+        "Key-management practice would need traceability of key access and appropriate access-control mechanisms.",
+        "EU regulatory applicability remains conditional on organization-specific processing and asset scope, which is not established by the supplied evidence."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No supplied evidence establishes exact EU legal applicability to the frozen CIS IG2 reference enterprise.",
+        "No supplied evidence establishes that a specific cryptography deployment would satisfy the EU regulatory requirements described in the cited primary-law records.",
+        "No supplied evidence establishes measured compliance effect or jurisdiction-specific implementation obligation for the frozen experimental scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Governance_enablement support from key-management accountability and CPG encryption guidance is mixed with compliance_constraint from algorithm-transition statuses. EU primary-law records supply deployment-specific regulatory-applicability context, but they do not by themselves establish exact legal applicability to the frozen reference enterprise. The result is a materially mixed institutional_regional judgment.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF-SUPPORT-1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A Securecipher prototype is explicitly designed to use cryptographic protection against insider-threat data leakage; the evaluated prototype passed most of the reported NIST randomness tests and included context-based key generation and file marking, providing direct evidence that cryptography can be engineered for this threat model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-CHALLENGE-1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "In the insider-threat setting, an authorized attacker has stronger capabilities, including opportunities for known- or chosen-plaintext style attacks; the paper motivates a specialized construction rather than treating conventional encryption as automatically sufficient, so effectiveness depends on cryptographic design and insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF-NEUTRAL-1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276",
+            "DE_DE18_CDC975345637E009",
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS/CISA encryption-primer and CPG guidance describe SSL/TLS, IPSec, and encryption deployment practices, but under the technical_feasibility contract they are treated as deployment-maturity context rather than as measured technical enablement or technical limitation for the frozen insider-threat objective.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "A feasible deployment would require a cryptographic design that accounts for insider access, key generation, file marking, and algorithm strength before the action can be treated as technically feasible for this threat model."
+      ],
+      "constraints": [
+        "Feasibility is conditional on specifying a cryptographic design and insider-access model that addresses authorized-attacker capabilities rather than assuming conventional encryption is sufficient.",
+        "Deployment-maturity guidance alone does not establish measured operational effectiveness for the frozen 2025-2027 forecast horizon."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No supplied evidence establishes deployment-specific technical enablement or limitation for a CIS IG2 enterprise in the EU.",
+        "No supplied evidence establishes measured operational effectiveness of cryptography against insider threat over the frozen forecast horizon.",
+        "No supplied evidence reconciles the Stage 0 PMT historical NoP direction with the Crossref publication trend, so PMT-side maturity or research activity is not used as technical-feasibility evidence."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Grounded support and grounded challenge are both present. AE04S_2674461DBC059388 provides technical_enablement for cryptography engineered against insider-threat data leakage, while AE04C_F084D028D8E2AE06 provides a technical_limitation by showing that insider access models reduce the sufficiency of conventional encryption and make effectiveness design-dependent. The mixed grounding requires stance 0 rather than +1 or -1.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "f48dae22bfc1851e9066447a7bdd4f4cf3c8e4b83162488114d3926d2bd7f869",
+  "checkpoint_sha256": "fa0463867e41f821f76eb3dfaf6b7203343c7cdc87d5fc2185c684a071dd6b11",
+  "created_at": "2026-09-20T08:23:57.458769+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE04C_F084D028D8E2AE06",
+          "AE04S_2674461DBC059388",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_BOUND",
+        "EU",
+        [
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "E_23_534489D29C38B327",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        [
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "27440a744cc8b1f0dc2e4263cca83fed8c96f325c4ccd9ff9d47b32f0b4b0d0f",
+    "jurisdiction_neutral": false,
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944"
+    ],
+    "payload_sha256": "9ca0333f3890bec2c930a27129de10028c2afdcd0efd40270f911b4f49a2da18",
+    "repeat_index": 43,
+    "response_schema_sha256": "672739311131cde6f99ee588d8d3fffec974c7889601d69a16c3e5a39e466389",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "433ffa9823946c6780765041146105c65784e738e9bda4bb1c120ba4f2343248",
+    "variant_id": "JOINT_SINGLE_AGENT"
+  }
+}

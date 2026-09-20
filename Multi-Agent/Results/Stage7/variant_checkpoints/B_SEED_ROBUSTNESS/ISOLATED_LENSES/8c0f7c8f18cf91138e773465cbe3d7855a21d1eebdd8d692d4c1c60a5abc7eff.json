@@ -1,0 +1,144 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_SUPPORT_GENERAL_1",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied TLS implementation guidance identifies a Raw Public Key option that reduces the size of the public key structure and simplifies processing, subject to out-of-band binding between the public key and entity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_SUPPORT_GENERAL_2",
+        "evidence_ids": [
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied control-systems communications encryption guidance identifies a transport-mode IPSec option with less per-packet overhead than tunnel mode because it does not add an additional tunnel header for each packet, making the added overhead unnecessary for node-to-node communications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CHALLENGE_GENERAL_1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CPG encryption goal imposes documented adoption scope and operational constraints: use properly configured and current TLS/SSL for data in transit where technically feasible, identify and update outdated or weak encryption, consider post-quantum cryptography implications, and use OT encryption when feasible to minimize latency and availability impact across all IT traffic and remote OT assets.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CONTEXT_DEPLOYMENT_1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is a CIS IG2 multi-department enterprise IT context in which some safeguards address increased operational complexity and may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A support direction would require evidence that the frozen enterprise's resources can absorb the documented encryption scope, maintenance, and OT availability constraints without material unquantified resource burden.",
+      "A challenge direction would require evidence that the frozen enterprise's staffing, infrastructure, or budget cannot meet the documented encryption scope, maintenance, and OT availability constraints.",
+      "Deployment-specific financial feasibility would require explicit budget, staffing, vendor/product, architecture, current-state, and procurement-timing evidence."
+    ],
+    "constraints": [
+      "Exact budget, price, ROI, TCO, payback period, staffing count, vendor, product version, sector, and architecture are not supplied, so no deployment-specific affordability or payback conclusion is asserted.",
+      "Jurisdiction is masked and no jurisdiction-specific financial evidence is supplied for this lens; the direction is evaluated generally under the frozen non-jurisdiction scenario.",
+      "The supplied support evidence documents implementation options and overhead/processing tradeoffs, but it does not quantify organizational cost, staffing, or affordability.",
+      "The supplied challenge evidence documents deployment scope and operational constraints, but it does not quantify exact resource consumption, cost, or feasibility failure."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "No supplied record quantifies the budget, staffing, or resource consumption required to deploy and maintain the cited encryption controls in the frozen enterprise.",
+      "No supplied record quantifies the efficiency or resource-saving magnitude of the Raw Public Key or transport-mode IPSec options in the frozen deployment.",
+      "No supplied record establishes the current encryption baseline, weak-encryption inventory, OT latency/availability exposure, or post-quantum transition requirements.",
+      "No supplied record provides procurement timing, contract terms, or implementation timeline."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "Under the financial/adoption lens, the supplied action-specific decision evidence contains both a grounded adoption-benefit direction and a grounded adoption-burden direction. The benefit evidence documents implementation options with operational simplification or lower communication overhead. The burden evidence documents broad encryption deployment scope, algorithm-maintenance requirements, and operational availability/latency constraints. Because the benefit evidence is general technical/efficiency guidance while the burden evidence is broad operational scope, and because the frozen scenario supplies no numeric budget, staffing, ROI, TCO, or procurement timing, the general financial/adoption direction is mixed. Deployment-specific affordability remains conditional on missing resource and current-state data.",
+    "stance": 0
+  },
+  "assessment_sha256": "dfa446f414c51124c3571191849a2c7a7aabc068803c2a18b1a83a5512fcc9bc",
+  "checkpoint_sha256": "eaa0a6a4319418a0e9aa597d51d691d07f1c054425fdcd86f840f75075d0bb3a",
+  "created_at": "2026-09-20T11:26:57.020488+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "8c0f7c8f18cf91138e773465cbe3d7855a21d1eebdd8d692d4c1c60a5abc7eff",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "a12e0bd7f0313e3a6ec54c653d90d0c73930a444367d26b499b62ebcbb2e59f8",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "5dcdceae150a18267dbb8adebde09abf878d10145ada5d48eb0b0421473e6d5c",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "429ae8c7a46c85a3bb86d266902d4fd0a99aa2f4b4c14edb249b4e4674716a4f",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

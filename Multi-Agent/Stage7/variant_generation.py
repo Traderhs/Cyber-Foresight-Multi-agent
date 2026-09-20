@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 from copy import deepcopy
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from statistics import pvariance
@@ -44,6 +44,7 @@ from Stage4.context_schema import (
 from Stage4.schema import DecisionLensEvaluation, LensType
 from Stage6.builder import _decision_recommendation
 from Stage7.config import (
+    ARCHITECTURE_ROBUSTNESS_SEEDS,
     SENSITIVITY_CASE_IDS,
     STAGE7_VARIANT_RECORD_VERSION,
 )
@@ -59,6 +60,9 @@ STAGE7_DECISION_VARIANT_RUNNER_VERSION = "stage7-decision-variant-runner-v3"
 FROZEN_A1_VARIANT_RUNNER_VERSION = "stage7-decision-variant-runner-v1"
 STAGE7_VARIANT_CLIENT_CONCURRENCY = 2
 CONTEXT_FREE_VARIANT_ID = "CONTEXT_FREE_STAGE4_V1"
+SEED_ROBUSTNESS_AXIS = "B_SEED_ROBUSTNESS"
+SEED_ISOLATED_VARIANT_ID = "ISOLATED_LENSES"
+SEED_JOINT_VARIANT_ID = "JOINT_SINGLE_AGENT"
 
 # P1 is the frozen main prompt and is represented by the main artifact rather than
 # regenerated. P2/P3 preserve the exact evidence/schema boundary while changing
@@ -94,8 +98,11 @@ def _runtime_profile(config, *, runner_version: str) -> dict[str, Any]:
 def _variant_client(
     *,
     runner_version: str = STAGE7_DECISION_VARIANT_RUNNER_VERSION,
+    seed: int | None = None,
 ) -> tuple[LlamaCppChatClient, dict[str, Any]]:
     config = get_runtime_config()
+    if seed is not None:
+        config = replace(config, seed=int(seed))
     assert_llama_server_ready(
         expected_context_size=65536,
         expected_parallel_slots=2,
@@ -343,10 +350,16 @@ def _clone_single_agent_response(
 async def run_single_agent_baseline(
     root: Path,
     bundles: list[CaseBundle],
+    *,
+    axis: str = "B_STAGE4_ARCHITECTURE_BASELINE",
+    variant_id: str = "SINGLE_AGENT_BASELINE",
+    repeat_index: int | None = None,
+    seed: int | None = None,
+    runner_version: str = STAGE7_DECISION_VARIANT_RUNNER_VERSION,
 ) -> Path:
     """Run one joint three-lens agent while preserving main jurisdiction equivalence."""
 
-    client, runtime = _variant_client()
+    client, runtime = _variant_client(runner_version=runner_version, seed=seed)
     pending: asyncio.Queue[
         tuple[CaseBundle, tuple[Any, ...], list[ContextualDecisionObject]]
     ] = asyncio.Queue()
@@ -403,9 +416,9 @@ async def run_single_agent_baseline(
                 )
             )
             identity = {
-                "runner_version": STAGE7_DECISION_VARIANT_RUNNER_VERSION,
-                "axis": "B_STAGE4_ARCHITECTURE_BASELINE",
-                "variant_id": "SINGLE_AGENT_BASELINE",
+                "runner_version": runner_version,
+                "axis": axis,
+                "variant_id": variant_id,
                 "case_id": bundle.case_id,
                 "equivalence_key": group_key,
                 "member_decision_object_ids": [member.decision_object_id for member in members],
@@ -417,11 +430,13 @@ async def run_single_agent_baseline(
                 "runtime": runtime,
                 "source_stage3_context_artifact_sha256": bundle.stage3_context["artifact_sha256"],
             }
+            if repeat_index is not None:
+                identity["repeat_index"] = repeat_index
             identity["input_fingerprint"] = sha256_json(identity)
             path = _checkpoint_path(
                 root,
-                axis="B_STAGE4_ARCHITECTURE_BASELINE",
-                variant_id="SINGLE_AGENT_BASELINE",
+                axis=axis,
+                variant_id=variant_id,
                 fingerprint=identity["input_fingerprint"],
             )
             identity_key = (bundle.case_id, group_hash)
@@ -448,7 +463,9 @@ async def run_single_agent_baseline(
             canonical_job_count += 1
 
     print(
-        f"Stage 7 B/SINGLE_AGENT_BASELINE: {pending.qsize()} missing canonical jobs "
+        f"Stage 7 {axis}/{variant_id}"
+        f"{'' if repeat_index is None else f'/repeat-{repeat_index}'}: "
+        f"{pending.qsize()} missing canonical jobs "
         f"from {canonical_job_count}; {STAGE7_VARIANT_CLIENT_CONCURRENCY} workers / 2 llama.cpp slots.",
         flush=True,
     )
@@ -481,7 +498,8 @@ async def run_single_agent_baseline(
                 SingleAgentThreeLensResponse,
                 method="json_schema",
                 progress_label=(
-                    f"Stage7-B-Single-W{worker_index}-{bundle.case_id}-{group_hash}"
+                    f"Stage7-{axis}-W{worker_index}-{variant_id}-"
+                    f"{bundle.case_id}-{group_hash}"
                 ),
                 response_schema=response_schema,
                 semantic_validator=semantic_validator,
@@ -527,8 +545,9 @@ async def run_single_agent_baseline(
             }
             records.append(
                 VariantResultRecord(
-                    axis="B_STAGE4_ARCHITECTURE_BASELINE",
-                    variant_id="SINGLE_AGENT_BASELINE",
+                    axis=axis,
+                    variant_id=variant_id,
+                    repeat_index=repeat_index,
                     case_id=bundle.case_id,
                     scenario_id=obj.scenario_id,
                     decision_object_id=obj.decision_object_id,
@@ -548,7 +567,7 @@ async def run_single_agent_baseline(
                     },
                     runtime=runtime,
                     provenance={
-                        "runner_version": STAGE7_DECISION_VARIANT_RUNNER_VERSION,
+                        "runner_version": runner_version,
                         "single_agent_joint_three_lens": True,
                         "sibling_lens_information_isolation": False,
                         "jurisdiction_equivalence_dedup_preserved": True,
@@ -559,9 +578,9 @@ async def run_single_agent_baseline(
             )
     return _freeze_variant_records(
         root,
-        axis="B_STAGE4_ARCHITECTURE_BASELINE",
-        variant_id="SINGLE_AGENT_BASELINE",
-        repeat_index=None,
+        axis=axis,
+        variant_id=variant_id,
+        repeat_index=repeat_index,
         records=records,
         provenance={
             "case_ids": [bundle.case_id for bundle in bundles],
@@ -570,6 +589,7 @@ async def run_single_agent_baseline(
             "jurisdiction_equivalence_dedup_preserved": True,
             "canonical_job_count": canonical_job_count,
         },
+        runner_version=runner_version,
     )
 
 
@@ -642,8 +662,10 @@ async def _run_one_case_variant(
     variant_id: str,
     repeat_index: int | None,
     prompt_variant: str,
+    seed: int | None = None,
+    runner_version: str = FROZEN_A1_VARIANT_RUNNER_VERSION,
 ) -> tuple[list[VariantResultRecord], dict[str, Any]]:
-    client, runtime = _variant_client(runner_version=FROZEN_A1_VARIANT_RUNNER_VERSION)
+    client, runtime = _variant_client(runner_version=runner_version, seed=seed)
     objects = [ContextualDecisionObject.model_validate(item) for item in bundle.contextual_objects]
 
     # Reproduce the active Stage 4 equivalence-class behavior exactly: same-lens
@@ -708,7 +730,7 @@ async def _run_one_case_variant(
             {"system": system_prompt, "user": user_prompt}
         )
         identity = {
-            "runner_version": FROZEN_A1_VARIANT_RUNNER_VERSION,
+            "runner_version": runner_version,
             "axis": axis,
             "variant_id": variant_id,
             "repeat_index": repeat_index,
@@ -848,7 +870,7 @@ async def _run_one_case_variant(
         "canonical_job_prompt_set_sha256": sha256_json(prompt_hash_accumulator),
     }
     provenance = {
-        "runner_version": FROZEN_A1_VARIANT_RUNNER_VERSION,
+        "runner_version": runner_version,
         "runtime_variant": "MAIN",
         "prompt_variant": prompt_variant,
         "canonical_job_count": len(order),
@@ -907,6 +929,78 @@ async def run_prompt_paraphrase_variants(root: Path, bundles: list[CaseBundle]) 
                 runner_version=FROZEN_A1_VARIANT_RUNNER_VERSION,
             )
         )
+    return paths
+
+
+async def _run_isolated_seed_variant(
+    root: Path,
+    bundles: list[CaseBundle],
+    *,
+    seed: int,
+) -> Path:
+    records: list[VariantResultRecord] = []
+    provenance_by_case: dict[str, Any] = {}
+    for bundle in bundles:
+        case_records, provenance = await _run_one_case_variant(
+            root,
+            bundle=bundle,
+            axis=SEED_ROBUSTNESS_AXIS,
+            variant_id=SEED_ISOLATED_VARIANT_ID,
+            repeat_index=seed,
+            prompt_variant="P1_CANONICAL",
+            seed=seed,
+            runner_version=STAGE7_DECISION_VARIANT_RUNNER_VERSION,
+        )
+        records.extend(case_records)
+        provenance_by_case[bundle.case_id] = provenance
+    return _freeze_variant_records(
+        root,
+        axis=SEED_ROBUSTNESS_AXIS,
+        variant_id=SEED_ISOLATED_VARIANT_ID,
+        repeat_index=seed,
+        records=records,
+        provenance={
+            "seed": seed,
+            "case_ids": [bundle.case_id for bundle in bundles],
+            "scenario_count": len(records),
+            "architecture": "information_isolated_three_lens",
+            "by_case": provenance_by_case,
+        },
+    )
+
+
+async def run_architecture_seed_robustness(
+    root: Path,
+    bundles: list[CaseBundle],
+) -> list[Path]:
+    """Generate only the missing non-main seeds for the B architecture robustness check.
+
+    Seed 42 is represented by the frozen main Stage 4 outputs plus the existing
+    SINGLE_AGENT_BASELINE artifact. Additional seeds are generated under a
+    separate Stage 7 axis so the original B baseline remains immutable.
+    """
+
+    paths: list[Path] = []
+    main_seed = ARCHITECTURE_ROBUSTNESS_SEEDS[0]
+    additional_seeds = ARCHITECTURE_ROBUSTNESS_SEEDS[1:]
+    print(
+        "Stage 7 B seed robustness: reusing frozen seed "
+        f"{main_seed}; generating seeds {list(additional_seeds)} with the existing "
+        "global two-slot inference limit.",
+        flush=True,
+    )
+    for seed in additional_seeds:
+        isolated_task = _run_isolated_seed_variant(root, bundles, seed=seed)
+        joint_task = run_single_agent_baseline(
+            root,
+            bundles,
+            axis=SEED_ROBUSTNESS_AXIS,
+            variant_id=SEED_JOINT_VARIANT_ID,
+            repeat_index=seed,
+            seed=seed,
+        )
+        isolated_path, joint_path = await asyncio.gather(isolated_task, joint_task)
+        paths.extend([isolated_path, joint_path])
     return paths
 
 
@@ -1146,7 +1240,18 @@ async def run_final_variants(
     if "A" in requested:
         paths.extend(await run_prompt_paraphrase_variants(root, bundles))
     if "B" in requested:
-        paths.append(await run_single_agent_baseline(root, bundles))
+        # Preserve the original B baseline command contract, then extend the
+        # same command with the predeclared three-seed stochastic robustness
+        # check. The frozen seed-42 baseline is reused; only seeds 43/44 can
+        # create new LLM work.
+        paths.append(
+            await run_single_agent_baseline(
+                root,
+                bundles,
+                seed=ARCHITECTURE_ROBUSTNESS_SEEDS[0],
+            )
+        )
+        paths.extend(await run_architecture_seed_robustness(root, bundles))
     if "C" in requested:
         paths.extend(await run_contextualized_path_comparison(root, bundles))
     return paths
@@ -1156,6 +1261,7 @@ __all__ = [
     "STAGE7_DECISION_VARIANT_RUNNER_VERSION",
     "run_final_variants",
     "run_prompt_paraphrase_variants",
+    "run_architecture_seed_robustness",
     "run_contextualized_path_comparison",
     "run_single_agent_baseline",
 ]

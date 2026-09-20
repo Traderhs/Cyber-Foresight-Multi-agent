@@ -1,0 +1,142 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "F-A1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "Behavioral anomaly detection is documented as supporting adoption-relevant operational outcomes, including resource oversight, real-time monitoring, faster incident-response times, fewer incidents, and shorter downtimes.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "F-A2",
+        "evidence_ids": [
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        "scope": "GENERAL",
+        "statement": "Centralized log aggregation and alerting associated with the supplied anomaly-detection mitigation are described as eliminating time and effort required for manual log reviews and making review of functional, operational, and security data cheaper and easier.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "F-A3",
+        "evidence_ids": [
+          "DE_DE04_C6F46FCDE66BFAC7"
+        ],
+        "scope": "GENERAL",
+        "statement": "Implementation, tuning, and operation of detection systems require administrators to possess system, network, security, incident-response, protocol, application, and operating-system skills, and programming skills or training may also be needed, which creates a documented adoption burden.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "F-A4",
+        "evidence_ids": [
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A supplied decision-guidance record documents behavioral anomaly detection being configured to receive packet streams and associated with test results in an industrial-control-system context, but this deployment-maturity context does not by itself establish financial feasibility or affordability.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial/adoption conclusion requires evidence that budget or resource capacity can cover acquisition, integration, staffing, training, and ongoing maintenance of anomaly detection.",
+      "A deployment-specific conclusion requires evidence that the target environment’s architecture and existing tools allow integration without an unquantified prohibitive resource burden.",
+      "A deployment-specific conclusion requires evidence of operational ownership, tuning capacity, alert-response capacity, and incident-response maintenance capability."
+    ],
+    "constraints": [
+      "The financial/adoption assessment is general, not deployment-specific, because the frozen scenario supplies no numeric budget, price, ROI, TCO, payback period, staffing count, vendor, product version, architecture, or procurement ceiling.",
+      "The supporting benefit evidence is operational and resource-saving in nature; it does not quantify monetary savings or demonstrate that all implementation and maintenance costs would be offset.",
+      "The documented adoption burden is skill, tuning, training, and maintenance-related; it conditions deployment-specific feasibility on available expertise and maintenance capacity, but the supplied evidence does not show that adoption is financially infeasible."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "Missing exact budget, funding availability, price, ROI, TCO, payback period, or procurement ceiling for the reference enterprise.",
+      "Missing actual staffing count, security-team composition, existing detection tooling, integration architecture, and log-source inventory needed to convert efficiency benefits into deployment-specific cost savings.",
+      "Missing evidence that the required specialized expertise can be staffed, trained, or maintained without prohibitive cost or operational disruption."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied directional decision evidence for the financial/adoption lens contains grounded adoption benefits that support general feasibility of ANOMALY DETECTION. One benefit record describes behavioral anomaly detection as supporting resource oversight, real-time monitoring, faster incident-response times, fewer incidents, and shorter downtimes. Another describes centralized log aggregation, IDS/IPS integration, and alert generation as eliminating manual log-review time and making review cheaper and easier. These are direct operational resource-saving pathways relevant to adoption feasibility. The evidence also contains a grounded adoption burden: implementation, tuning, and operation of detection systems require multiple administrator skills, incident-response knowledge, and possibly programming or training. No exact budget, price, ROI, TCO, payback period, staffing count, vendor, product version, architecture, or procurement timing is supplied, so deployment-specific affordability cannot be concluded. Weighing the supplied evidence without assuming equal counts or equal strength, the documented resource-saving benefits provide a stronger general feasibility direction than the documented skill/maintenance burden, while exact financial fit remains conditional.",
+    "stance": 1
+  },
+  "assessment_sha256": "07266b8e24ed9bfc2f51c3c26daf21681301f45614ab47a524b6191b6e1c3770",
+  "checkpoint_sha256": "51b06d6f0db8ebeb97a55e3162ecd4694d2bf8f576c986173691efc44304a216",
+  "created_at": "2026-09-20T08:13:47.311737+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_C6F46FCDE66BFAC7",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "e7feb401a9ddc0637e2cca31639103f44c4099ff18c125fe7c978ef52aa6ee7c",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "d4da70620005a0811b31e1ca3b600d02611a3ad544ed6c3180511e8e76832892",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "c5a711609b6676a53fe6406bffa491511dc493d4cc30db5bdf6d8d7ea5429121",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "5742d23e9d5c2b05850142e0439033c766ae0c8388ee9ec7de2a8175e14a8e60",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_1",
+        "evidence_ids": [
+          "DE_DE01_0B9728FE19095FD0"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported because the supplied AI risk-management framework record defines GOVERN functions for AI risk management, including ongoing monitoring/review, AI-system inventory, safe decommissioning, accountability structures, documented roles and responsibilities, risk-management training, and executive responsibility for AI development/deployment decisions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_2",
+        "evidence_ids": [
+          "DE_DE15_271AFADC7B3D5999"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported because the supplied secure-AI-development record calls for documentation of security-relevant AI information, including training/fine-tuning/operational feedback data sources, intended scope and limitations, guardrails, cryptographic hashes or signatures, retention time, suggested review frequency, potential failure modes, and structures such as model cards, data cards, and SBOMs to support transparency and accountability.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_3",
+        "evidence_ids": [
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "GENERAL institutional feasibility is supported because the supplied secure-operation record provides monitoring and audit pathways, including measuring model/system behavior and outputs, monitoring and logging inputs to enable compliance obligations, audit, investigation, and remediation, and managing updates so model/data/prompt changes can be evaluated.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_4",
+        "evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "scope": "GENERAL",
+        "statement": "A GENERAL institutional compliance constraint exists because the supplied GAI profile record states that GAI incidents must be reported in compliance with legal and regulatory requirements, and it includes named reporting examples. The record does not establish that those examples apply to the frozen masked jurisdiction.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_5",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is a CIS IG2 multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure; the profile states such enterprises often process sensitive information, may face regulatory burdens, and can tolerate short service interruptions, while some safeguards may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "For any DEPLOYMENT_SPECIFIC legal/regional conclusion, obtain jurisdiction-specific regulatory_applicability evidence for the exact frozen jurisdiction and evidence that NLP/LLM/GAI incident handling, data logging, or AI governance triggers those requirements.",
+      "Before institutional adoption, define AI risk roles, inventory, decommissioning process, accountability, training, and executive responsibility. (DE_DE01_0B9728FE19095FD0)",
+      "Prepare AI documentation covering data sources, scope/limitations, guardrails, hashes/signatures, retention, review frequency, and failure modes, using model cards, data cards, or SBOMs as appropriate. (DE_DE15_271AFADC7B3D5999)",
+      "Implement monitoring and logging of AI inputs and behavior to support compliance, audit, investigation, remediation, and evaluation of model/data/prompt changes. (DE_DE15_7C1849B1FD93975C)",
+      "Establish an incident-response process to report GAI incidents in compliance with applicable legal and regulatory requirements. (DE_DE02_007F05150CB46131)"
+    ],
+    "constraints": [
+      "Cited governance guidance requires defined AI risk-management mechanisms: ongoing monitoring/review, AI-system inventory, decommissioning, accountability structures, roles and responsibilities, training, and executive responsibility. (DE_DE01_0B9728FE19095FD0)",
+      "Cited secure-development guidance requires documentation of AI system security-relevant information, including data sources, scope/limitations, guardrails, hashes/signatures, retention, review frequency, and failure modes, using structures such as model cards, data cards, and SBOMs. (DE_DE15_271AFADC7B3D5999)",
+      "Cited secure-operation guidance requires monitoring and logging of AI system inputs and behavior to support compliance obligations, audit, investigation, remediation, and evaluation of model/data/prompt changes. (DE_DE15_7C1849B1FD93975C)",
+      "Cited GAI profile guidance requires incident reporting in compliance with legal and regulatory requirements; the named examples in the record do not establish exact applicability to the frozen masked jurisdiction. (DE_DE02_007F05150CB46131)",
+      "The reference profile adds institutional complexity: multi-department IT, possible sensitive information processing, possible regulatory burdens, and possible dependence on enterprise-grade technology and specialized expertise for some safeguards. (CTX_CIS_IG2_9F94838146D9C3A4)"
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked jurisdiction; exact legal obligations, data-sovereignty constraints, cross-border constraints, and applicability of the GAI incident-reporting constraint cannot be determined. (DE_DE02_007F05150CB46131; CTX_CIS_IG2_9F94838146D9C3A4)",
+      "No evidence is supplied that the cited governance, documentation, monitoring, logging, or incident-reporting controls are already implemented, resourced, or staffed in the frozen enterprise.",
+      "No numeric budget, staffing count, procurement ceiling, or resource-capacity evidence is supplied beyond the CIS IG2 reference profile. (CTX_CIS_IG2_9F94838146D9C3A4)",
+      "No evidence is supplied that the named legal/regulatory reporting examples in the GAI profile apply to the frozen scenario or to the specific NLP/LLM DDoS control context. (DE_DE02_007F05150CB46131)"
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "At GENERAL scope, the supplied decision-evidence records support institutional feasibility of the frozen NLP/LLM action because they define concrete governance, accountability, documentation, monitoring, and audit pathways for AI/GAI systems. A compliance constraint also exists for legal/regulatory incident-reporting requirements, but the frozen jurisdiction is masked and no jurisdiction-specific regulatory applicability evidence is supplied. The constraint is therefore conditional and does not materially outweigh the institutional enablement evidence under this lens.",
+    "stance": 1
+  },
+  "assessment_sha256": "9e50d0efd1d293cff153be7620d3a7372656d38055619336cfcee949e7a062da",
+  "checkpoint_sha256": "06b0292d30c39aebf54e008349511dd79cccbd81f5036cfcd7c7a96b573b0314",
+  "created_at": "2026-09-20T10:00:49.277036+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_0B9728FE19095FD0",
+        "DE_DE02_007F05150CB46131",
+        "DE_DE15_271AFADC7B3D5999",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "6dbeb68d5f7df8726ab6fa8db81630b3ea7fae5a50f1821bfaef7bcb5685a505",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "fc89ade14bc934fe6fc0c0ea471cce486176f605af227dc7bb1203680708b08d",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "2765ceeab5b9512e5881af286dbd75df1553f279b395dc9b7c1582f9af16fbc4",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "d603bdd9e7fa17bc5abd50f64ddc69a3a0436469f7daff9cfc36e29185d79dc0",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

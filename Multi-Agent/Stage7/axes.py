@@ -4,7 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from Stage7.config import DECISION_POLICY_VARIANTS
+from Stage7.config import ARCHITECTURE_ROBUSTNESS_SEEDS, DECISION_POLICY_VARIANTS
 from Stage7.loaders import CaseBundle
 from Stage7.logmetrics import aggregate_completion_events, latest_successful_main_log
 from Stage7.metrics import (
@@ -232,6 +232,193 @@ def axis_b1_single_agent(
         bundles=bundles,
         variants=variants,
         variant_ids={"SINGLE_AGENT_BASELINE"},
+    )
+
+
+def _variant_record_map(
+    records: list[VariantResultRecord],
+) -> dict[tuple[str, str], VariantResultRecord]:
+    output: dict[tuple[str, str], VariantResultRecord] = {}
+    for record in records:
+        key = (record.case_id, record.scenario_id)
+        if key in output:
+            raise ValueError(f"Duplicate Stage 7 variant record for comparison: {key}")
+        output[key] = record
+    return output
+
+
+def _record_set_comparison(
+    left: dict[tuple[str, str], VariantResultRecord],
+    right: dict[tuple[str, str], VariantResultRecord],
+) -> dict[str, Any]:
+    common = sorted(set(left) & set(right))
+    if set(left) != set(right):
+        missing_left = sorted(set(right) - set(left))
+        missing_right = sorted(set(left) - set(right))
+        raise ValueError(
+            "Seed-robustness record sets are not aligned: "
+            f"missing_left={missing_left}, missing_right={missing_right}"
+        )
+    rows = [compare_variant_to_baseline(left[key], right[key]) for key in common]
+    stance = [float(row["stance_agreement"]) for row in rows if row["stance_agreement"] is not None]
+    evidence = [float(row["evidence_overlap"]) for row in rows if row["evidence_overlap"] is not None]
+    direction = [
+        float(row["claim_direction_overlap"])
+        for row in rows
+        if row["claim_direction_overlap"] is not None
+    ]
+    recommendation = [1.0 if row["recommendation_consistent"] else 0.0 for row in rows]
+    d_values = [float(row["d_lens_abs_delta"]) for row in rows]
+    return {
+        "n": len(rows),
+        "stance_agreement_mean": mean(stance),
+        "evidence_id_overlap_mean": mean(evidence),
+        "claim_direction_overlap_mean": mean(direction),
+        "recommendation_consistency_rate": mean(recommendation),
+        "d_lens_abs_delta_median": median(d_values),
+    }
+
+
+def axis_b5_seed_robustness(
+    bundles: list[CaseBundle],
+    variants: list[VariantResultRecord],
+) -> AxisResult:
+    main_seed = ARCHITECTURE_ROBUSTNESS_SEEDS[0]
+    isolated_by_seed: dict[int, dict[tuple[str, str], VariantResultRecord]] = {
+        main_seed: baseline_record_map(bundles)
+    }
+    main_joint_records = [
+        record
+        for record in variants
+        if record.axis == "B_STAGE4_ARCHITECTURE_BASELINE"
+        and record.variant_id == "SINGLE_AGENT_BASELINE"
+        and record.repeat_index is None
+    ]
+    if main_joint_records:
+        joint_by_seed: dict[int, dict[tuple[str, str], VariantResultRecord]] = {
+            main_seed: _variant_record_map(main_joint_records)
+        }
+    else:
+        joint_by_seed = {}
+
+    for seed in ARCHITECTURE_ROBUSTNESS_SEEDS[1:]:
+        isolated_records = [
+            record
+            for record in variants
+            if record.axis == "B_SEED_ROBUSTNESS"
+            and record.variant_id == "ISOLATED_LENSES"
+            and record.repeat_index == seed
+        ]
+        joint_records = [
+            record
+            for record in variants
+            if record.axis == "B_SEED_ROBUSTNESS"
+            and record.variant_id == "JOINT_SINGLE_AGENT"
+            and record.repeat_index == seed
+        ]
+        if isolated_records:
+            isolated_by_seed[seed] = _variant_record_map(isolated_records)
+        if joint_records:
+            joint_by_seed[seed] = _variant_record_map(joint_records)
+
+    completed_seeds = [
+        seed
+        for seed in ARCHITECTURE_ROBUSTNESS_SEEDS
+        if seed in isolated_by_seed and seed in joint_by_seed
+    ]
+    architecture_by_seed: list[dict[str, Any]] = []
+    for seed in completed_seeds:
+        architecture_by_seed.append(
+            {
+                "seed": seed,
+                **_record_set_comparison(joint_by_seed[seed], isolated_by_seed[seed]),
+            }
+        )
+
+    def within_architecture(
+        records_by_seed: dict[int, dict[tuple[str, str], VariantResultRecord]],
+    ) -> tuple[list[dict[str, Any]], dict[str, float | None]]:
+        pair_results: list[dict[str, Any]] = []
+        seeds = [seed for seed in ARCHITECTURE_ROBUSTNESS_SEEDS if seed in records_by_seed]
+        for index, left_seed in enumerate(seeds):
+            for right_seed in seeds[index + 1 :]:
+                pair_results.append(
+                    {
+                        "seed_pair": [left_seed, right_seed],
+                        **_record_set_comparison(
+                            records_by_seed[right_seed],
+                            records_by_seed[left_seed],
+                        ),
+                    }
+                )
+        summary = {
+            "stance_agreement_mean": mean(
+                [float(item["stance_agreement_mean"]) for item in pair_results]
+            ) if pair_results else None,
+            "evidence_id_overlap_mean": mean(
+                [float(item["evidence_id_overlap_mean"]) for item in pair_results]
+            ) if pair_results else None,
+            "claim_direction_overlap_mean": mean(
+                [float(item["claim_direction_overlap_mean"]) for item in pair_results]
+            ) if pair_results else None,
+            "recommendation_consistency_rate": mean(
+                [float(item["recommendation_consistency_rate"]) for item in pair_results]
+            ) if pair_results else None,
+        }
+        return pair_results, summary
+
+    isolated_pairs, isolated_summary = within_architecture(isolated_by_seed)
+    joint_pairs, joint_summary = within_architecture(joint_by_seed)
+    complete = len(completed_seeds) == len(ARCHITECTURE_ROBUSTNESS_SEEDS)
+    status = EvaluationStatus.EVALUATED if complete else EvaluationStatus.PARTIAL
+    missing = sorted(set(ARCHITECTURE_ROBUSTNESS_SEEDS) - set(completed_seeds))
+    return AxisResult(
+        experiment_id="B5",
+        name="Architecture stochastic-seed robustness",
+        status=status,
+        scope=(
+            f"{len(completed_seeds)}/{len(ARCHITECTURE_ROBUSTNESS_SEEDS)} predeclared seeds "
+            "for isolated-versus-joint Stage 4"
+        ),
+        metrics=[
+            _metric("completed_seed_count", len(completed_seeds), n=len(ARCHITECTURE_ROBUSTNESS_SEEDS)),
+            _metric("architecture_metrics_by_seed", architecture_by_seed, n=len(architecture_by_seed)),
+            _metric("within_isolated_seed_pair_metrics", isolated_pairs, n=len(isolated_pairs)),
+            _metric("within_joint_seed_pair_metrics", joint_pairs, n=len(joint_pairs)),
+            _metric("within_isolated_stance_agreement_mean", isolated_summary["stance_agreement_mean"]),
+            _metric("within_joint_stance_agreement_mean", joint_summary["stance_agreement_mean"]),
+            _metric("within_isolated_evidence_overlap_mean", isolated_summary["evidence_id_overlap_mean"]),
+            _metric("within_joint_evidence_overlap_mean", joint_summary["evidence_id_overlap_mean"]),
+            _metric(
+                "within_isolated_claim_direction_overlap_mean",
+                isolated_summary["claim_direction_overlap_mean"],
+            ),
+            _metric(
+                "within_joint_claim_direction_overlap_mean",
+                joint_summary["claim_direction_overlap_mean"],
+            ),
+            _metric(
+                "within_isolated_recommendation_consistency_rate",
+                isolated_summary["recommendation_consistency_rate"],
+            ),
+            _metric(
+                "within_joint_recommendation_consistency_rate",
+                joint_summary["recommendation_consistency_rate"],
+            ),
+        ],
+        findings=[
+            "Architecture differences are reported per seed and alongside within-architecture seed variation; the seed check is a robustness diagnostic, not a performance ranking."
+        ],
+        limitations=(
+            []
+            if complete
+            else [f"Seed robustness is incomplete; missing paired seed outputs: {missing}"]
+        ),
+        provenance={
+            "seeds": list(ARCHITECTURE_ROBUSTNESS_SEEDS),
+            "main_seed_reuses_frozen_outputs": main_seed,
+            "additional_seed_axis": "B_SEED_ROBUSTNESS",
+        },
     )
 
 

@@ -1,0 +1,143 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-1",
+        "evidence_ids": [
+          "AE04S_2674461DBC059388"
+        ],
+        "scope": "GENERAL",
+        "statement": "An action-specific technical-enablement record reports an evaluated cryptographic prototype designed for insider-threat data leakage, with context-based key generation, file marking, and reported passing of most NIST randomness tests, supporting the general feasibility of engineering cryptography for this threat model.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-2",
+        "evidence_ids": [
+          "AE04C_F084D028D8E2AE06"
+        ],
+        "scope": "GENERAL",
+        "statement": "An action-specific technical-limitation record states that insider-threat settings can give an authorized attacker stronger capabilities, including known- or chosen-plaintext-style attack opportunities, and that conventional encryption should not be treated as automatically sufficient because effectiveness depends on cryptographic design and the insider-access model.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-3",
+        "evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied deployment-maturity guidance describes TLS/SSL protocol operation, certificate-based authentication, client/server key exchange, and IPSec transport/tunnel modes with ISAKMP-based key negotiation for control-system communications.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-4",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "A supplied CPG excerpt recommends strong and agile encryption, including properly configured and up-to-date SSL/TLS for data in transit when technically feasible, and notes that encryption is used when feasible in OT contexts to minimize latency and availability impact.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC feasibility conclusion would require supplied evidence on the reference enterprise's exact IT/OT architecture, existing cryptographic and key-management capabilities, access-control boundaries, and latency/availability constraints.",
+      "The selected cryptographic construction must be configured for the target insider-access model and not assumed to be a generic conventional-encryption deployment if the environment exposes stronger insider access.",
+      "If encryption is applied to latency-sensitive or OT-related traffic, feasibility must be conditioned on supplied evidence that the deployment can tolerate the associated technical trade-offs."
+    ],
+    "constraints": [
+      "Cryptography for insider-threat data leakage must be treated as design-dependent; the supplied limitation record challenges reliance on conventional encryption alone and requires attention to the insider-access model and potential known- or chosen-plaintext-style opportunities.",
+      "Cryptographic communications protections involve protocol, authentication, key exchange, and configuration choices; in OT or latency-sensitive contexts, the supplied CPG excerpt indicates feasibility may depend on technical-feasibility, latency, and availability trade-offs."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+    "evidence_gaps": [
+      "No supplied record provides the exact reference-enterprise architecture, existing cryptographic services, key-management infrastructure, data-flow boundaries, product/version details, or integration points needed for a DEPLOYMENT_SPECIFIC compatibility conclusion.",
+      "No supplied record measures operational effectiveness, adoption, scalability, maintainability, or production deployment of the evaluated prototype or comparable insider-threat cryptography within the 2025-2027 frozen horizon.",
+      "No supplied record directly links the evaluated cryptographic mechanism to the specific insider-threat mechanisms, access paths, or exfiltration channels in the frozen threat forecast beyond the general design-dependence finding."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied action-specific technical-enablement record supports general technical feasibility by describing an evaluated cryptographic prototype designed for insider-threat data leakage, including context-based key generation, file marking, and reported passing of most NIST randomness tests. The action-specific technical-limitation record challenges a naive or conventional deployment by stating that insider-threat settings can expose stronger attacker capabilities and that effectiveness depends on cryptographic design and the insider-access model. On balance, the support claim is more directly affirmative for the feasibility of engineering cryptography for the threat model, while the challenge claim is a design dependency rather than a demonstrated inability to deploy, operate, or integrate cryptography generally. Supplementary deployment-maturity guidance describes TLS/SSL, IPSec, and CPG encryption practices, but it does not establish deployment-specific fit because exact reference-enterprise architecture, key-management, integration, and operational-effectiveness evidence are missing. Therefore, the GENERAL technical-feasibility direction is positive, with PARTIAL sufficiency.",
+    "stance": 1
+  },
+  "assessment_sha256": "8d7daec7b03f67b85711769b413cdd0ef09bc51a15ed899fa03603a2b43c6610",
+  "checkpoint_sha256": "82c1b2b8fc492d3f817b224d191ad0b1a8437d8b533277bd309a52921bb656eb",
+  "created_at": "2026-09-20T08:59:14.709135+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE04C_F084D028D8E2AE06",
+        "AE04S_2674461DBC059388",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "258c0e341fd11ef11222ef34ff3eb4a4d44781c66ef26f625f03bab12a60c9f5",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c"
+    ],
+    "payload_sha256": "389e8f636881810d77bd72701b6282716cf509753ebb04831e7eedc228c5ecfd",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "f5bae54638c7c06390dccefb71cf29b6ec66eec14aac147897f8564dfd509acc",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "4cfe7323bf7d1186689782252dc4e9c1261fb816620a16f58a92df33e2456d41",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

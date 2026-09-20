@@ -1,0 +1,132 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-GEN-SUPPORT-1",
+        "evidence_ids": [
+          "AE05S_CCD7CA4B2AE10DC9"
+        ],
+        "scope": "GENERAL",
+        "statement": "A 2024 case study directly applies IDS components including Snort and Fail2Ban to brute-force defense, combined with a honeypot and alerting workflow, and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-GEN-CHALLENGE-1",
+        "evidence_ids": [
+          "AE05C_2D35A464AD6F0FAE"
+        ],
+        "scope": "GENERAL",
+        "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules; TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern, documenting a direct limitation of conventional IDS/IPS use.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-GEN-CONTEXT-1",
+        "evidence_ids": [
+          "DE_DE04_0B017D64401987E4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST IDPS guidance chunk states that organizations planning multiple IDPS technologies or products should consider integration, define requirements, understand the organization's system and network environment, and articulate goals to select a compatible IDPS.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific Technical Feasibility conclusion would require supplied evidence about the actual or assumed architecture, compatible IDPS product/version, integration with existing monitoring/authentication systems, and operational capacity to tune and maintain IDPS.",
+      "If the threat mix is dominated by distributed low-rate, disciplined-IP brute-force patterns, feasibility of ordinary IDS/IPS rule-based mitigation would require additional supplied evidence of supplementary detection or correlation logic sufficient to address that pattern.",
+      "If the threat mix is dominated by repeated authentication attacks, the AE05S_CCD7CA4B2AE10DC9 implementation pathway would need to be reconciled with the frozen deployment context before a deployment-specific support conclusion can be made."
+    ],
+    "constraints": [
+      "AE05S_CCD7CA4B2AE10DC9 supports a general implementation pathway for IDS/IPS against brute-force authentication attacks, but it does not establish exact product compatibility, deployment scale, integration with existing authentication systems, or operational effectiveness in the frozen environment.",
+      "AE05C_2D35A464AD6F0FAE establishes a direct technical limitation of ordinary IDS/IPS security rules for distributed low-rate, disciplined-IP brute-force patterns, which constrains threat-mitigation fit if that attack pattern is relevant to the forecasted threat.",
+      "DE_DE04_0B017D64401987E4 supplies supplementary deployment-maturity context about IDPS selection, integration, and requirements definition; under the supplied grounding contract it is not direction-carrying for Technical Feasibility."
+    ],
+    "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+    "evidence_gaps": [
+      "No supplied evidence specifies the frozen enterprise's network architecture, segmentation, product/vendor, IDPS version, existing SIEM/authentication controls, or integration points required for a deployment-specific IDS/IPS feasibility conclusion.",
+      "No supplied evidence establishes whether the forecast Brute Force Attack threat for 2025-2027 includes distributed low-rate, disciplined-IP patterns that would trigger the limitation documented in AE05C_2D35A464AD6F0FAE.",
+      "No supplied evidence establishes operational tuning, alert-volume, maintenance, or scalability requirements in the frozen CIS IG2 reference environment beyond the general NIST guidance in DE_DE04_0B017D64401987E4."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied Technical Feasibility evidence is genuinely mixed. AE05S_CCD7CA4B2AE10DC9 is eligible as technical_enablement and supports general technical feasibility by documenting an implementable IDS/IPS-style response to brute-force authentication attacks, specifically using Snort and Fail2Ban with a honeypot and alerting workflow. AE05C_2D35A464AD6F0FAE is eligible as technical_limitation and challenges general threat-mitigation fit by documenting that distributed low-rate, disciplined-IP brute-force attacks can evade ordinary IDS/IPS security rules, with TOPASE proposed because existing countermeasures were ineffective against that pattern. DE_DE04_0B017D64401987E4 is only deployment_maturity/supplementary under the supplied grounding contract and cannot by itself support or challenge feasibility. The support is direct for implementation pathway, while the challenge is direct for a relevant but scoped evasion pattern. The frozen DecisionObject does not establish whether the forecast brute-force threat will be dominated by distributed low-rate patterns, and the deployment context lacks the architecture, product/version, integration, and operational-capacity details needed for a deployment-specific conclusion. Therefore the evidence does not permit a decisive +1 or -1 Technical Feasibility direction; stance 0 with PARTIAL sufficiency is appropriate.",
+    "stance": 0
+  },
+  "assessment_sha256": "69d25cb1c1c44fed8e589de16eb97758b31edaff4906a01eebf09475a36312b9",
+  "checkpoint_sha256": "5d369855fd7bad0af4a0be441466163195286eae623d6404322d7c7dea8e1d8c",
+  "created_at": "2026-09-20T12:00:41.322381+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__brute_force__ids_ips",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE05C_2D35A464AD6F0FAE",
+        "AE05S_CCD7CA4B2AE10DC9",
+        "DE_DE04_0B017D64401987E4"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b5b8f7d1a9d93388bd4f6dea2f8a7e93b7b30f51bd077135892efacca99ed1ac",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf"
+    ],
+    "payload_sha256": "03a169290d888d8f1da47ccaad3e0add134219b9b7062fd286349a9481a68f62",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "d9c914cbc2c8f663162963312a739d874597c7e41f5a3637d99ea9c1eb434e87",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "3a0e5b9625fb489ad0d40249c8ff2fb51b5967ecb151b6247754d3b8e72fbd47",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

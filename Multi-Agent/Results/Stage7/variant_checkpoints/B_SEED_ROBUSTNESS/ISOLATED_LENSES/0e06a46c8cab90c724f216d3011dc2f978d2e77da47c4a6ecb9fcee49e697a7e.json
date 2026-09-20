@@ -1,0 +1,148 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLAIM_01",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CPG encryption record identifies a concrete adoption/implementation burden: properly configured and up-to-date SSL/TLS is to be used to protect data in transit when technically feasible; organizations should plan to identify outdated or weak encryption, update these to sufficiently strong algorithms, and consider managing implications of post-quantum cryptography; the stated scope includes all IT traffic and remote OT assets.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_02",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied TLS and IPSec guidance records provide implementation pathways for cryptographic controls: TLS implementation guidance includes certificate-based client authentication and path-validation mechanisms, and the IPSec primer notes that transport mode has less overhead than tunnel mode because it does not add an additional header to each packet.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_03",
+        "evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276"
+        ],
+        "scope": "GENERAL",
+        "statement": "The TLS/SSL primer describes TLS as the IETF standard for SSL and describes application-level confidentiality, integrity, and authentication by means of encryption; this is supplementary maturity context and does not by itself establish financial or adoption feasibility.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLAIM_04",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen reference-enterprise profile is CIS IG2: a multi-department enterprise IT environment with personnel responsible for managing and protecting infrastructure, where safeguards address increased operational complexity and some depend on enterprise-grade technology and specialized expertise; this is a scenario profile and not evidence of actual budget, staffing, or procurement capacity.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific supportable financial/adoption conclusion requires evidence of adequate budget, staffing or expertise, procurement path, and expected efficiency or cost offset for the cryptographic controls in scope.",
+      "A deployment-specific challenge conclusion would be strengthened by evidence of unaffordable cost, staffing shortage, long procurement, high integration complexity, or unmanaged weak-encryption exposure across IT or OT assets.",
+      "If exact deployment cost, staffing, or procurement data remain unavailable, retain the GENERAL direction and treat affordability as conditional rather than asserting deployment-specific infeasibility."
+    ],
+    "constraints": [
+      "No numeric budget, price, ROI, TCO, payback period, staffing count, vendor, product version, procurement ceiling, or exact implementation timeline is supplied, so exact financial feasibility cannot be established.",
+      "The support-side evidence establishes implementation guidance and a possible lower-overhead IPSec transport mode, but does not establish realized financial benefit, budget fit, or organizational readiness.",
+      "The challenge-side evidence establishes expected encryption scope and update work, but does not prove that adoption is unaffordable or infeasible.",
+      "The jurisdiction is masked and no lens-specific jurisdictional evidence is supplied; therefore the GENERAL direction is not derived from a jurisdiction label.",
+      "CIS IG2 profile details are a frozen reference-enterprise scenario condition, not evidence that an observed organization has those properties."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "Missing exact or relative cost, budget fit, TCO, ROI, or payback period for implementing/updating TLS/SSL, IPSec, key management, and post-quantum readiness in the frozen scenario.",
+      "Missing staffing count, security-team capacity, availability of specialized expertise, and OT integration capacity for the CIS IG2 reference enterprise.",
+      "Missing current cryptographic asset inventory, number of systems or applications in scope, weak-encryption exposure, and procurement or contract dependencies.",
+      "Missing deployment-specific evidence that the lower-overhead IPSec transport mode or standardization guidance translates into resource savings for this organization.",
+      "Missing jurisdiction-specific financial or regulatory cost drivers; no such evidence is supplied in this masked equivalence class.",
+      "Missing implementation timing or procurement schedule evidence for the cryptographic controls in scope."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "On balance, the supplied records materially challenge the financial/adoption feasibility of the frozen CRYPTOGRAPHY action under the frozen scenario. The challenge-side adoption-burden evidence identifies a concrete operational adoption scope and workload: CPG encryption guidance calls for properly configured and up-to-date SSL/TLS where technically feasible, planning to identify and update outdated or weak encryption, considering post-quantum implications, and a scope covering all IT traffic and remote OT assets. The support-side evidence supplies implementation guidance for TLS and IPSec and notes that IPSec transport mode has less overhead than tunnel mode, which are adoption enablers and a possible efficiency pathway. However, the support evidence does not establish affordability, budget fit, ROI, staffing relief, procurement timing, or realized resource savings. Because exact financial and deployment-specific capacity data are unavailable, the judgment remains GENERAL and evidence sufficiency is PARTIAL, but the direct operational burden outweighs the unquantified implementation-guidance benefits for this lens.",
+    "stance": -1
+  },
+  "assessment_sha256": "e42fac4311d0898711ebdcdde621a3f446677122d3c897e45ac7cd2e2370a17e",
+  "checkpoint_sha256": "2a99dd99a1615d894355c5b550629620bcf86fad46d78208c086a47c16283f9f",
+  "created_at": "2026-09-20T08:44:18.607866+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "0e06a46c8cab90c724f216d3011dc2f978d2e77da47c4a6ecb9fcee49e697a7e",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "a12e0bd7f0313e3a6ec54c653d90d0c73930a444367d26b499b62ebcbb2e59f8",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "5dcdceae150a18267dbb8adebde09abf878d10145ada5d48eb0b0421473e6d5c",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "429ae8c7a46c85a3bb86d266902d4fd0a99aa2f4b4c14edb249b4e4674716a4f",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

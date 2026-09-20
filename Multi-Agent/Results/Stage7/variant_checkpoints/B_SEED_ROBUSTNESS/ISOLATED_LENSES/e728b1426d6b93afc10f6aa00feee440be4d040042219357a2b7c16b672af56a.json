@@ -1,0 +1,145 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_S1",
+        "evidence_ids": [
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The eligible governance record defines governance as enforcing cybersecurity policies, procedures, and processes and calls for monitoring and assessing security capabilities, infrastructure, and policies to detect unauthorized access and changes, which supports a GENERAL governance pathway for access-control implementation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_S2",
+        "evidence_ids": [
+          "DE_DE12_E6F93E4AB8722379"
+        ],
+        "scope": "GENERAL",
+        "statement": "The eligible zero-trust architecture record describes a policy enforcement point controlling connections and an industry compliance system as a policy input that helps an enterprise remain compliant with the regulatory regime it may fall under, supporting GENERAL regulatory compatibility for policy-driven access decisions.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_S3",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7"
+        ],
+        "scope": "GENERAL",
+        "statement": "The eligible attribute-based access-control record supports GENERAL institutional policy consistency and auditability by requiring local access policies to reflect enterprise policy, consistent attribute values, lifecycle responsibility for attributes, documentation of attribute meanings, and procedures for access failures.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The eligible authentication/session-management record challenges GENERAL feasibility by imposing compliance constraints on access/session handling, including authenticated protected channels, session timeouts, prohibition of insecure fallback, verified session identifiers, and secure cookie handling.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "If jurisdiction-specific regulatory_applicability evidence is supplied, reassess DEPLOYMENT_SPECIFIC institutional/regional feasibility.",
+      "If attribute-based access decisions are adopted, implement enterprise/local policy alignment, attribute lifecycle management, attribute documentation, and access-failure procedures per DE_DE11_1E4AAE06CC3795D7.",
+      "If authentication/session mechanisms are in scope, enforce the session and token protection requirements per DE_DE13_055FC5E35FA61DD5.",
+      "If policy-engine-based access decisions are adopted, maintain compliance data integration per DE_DE12_E6F93E4AB8722379.",
+      "Maintain governance policies, procedures, processes, and monitoring/assessment for the access-control regime per DE_DE17_567DDA7CFBC62829."
+    ],
+    "constraints": [
+      "Access-control implementations must satisfy the session/authentication protection requirements in DE_DE13_055FC5E35FA61DD5, including protected-channel, timeout, no-insecure-fallback, session-identifier, and cookie-security requirements.",
+      "If attribute-based access decisions are used, local policies must align with enterprise policy and attribute lifecycle, documentation, and failure-handling processes must be maintained as described in DE_DE11_1E4AAE06CC3795D7.",
+      "Policy-engine-based access decisions should incorporate compliance data sources and policy rules as described in DE_DE12_E6F93E4AB8722379.",
+      "Governance of the access-control regime requires defined cybersecurity policies, procedures, processes, and monitoring/assessment as described in DE_DE17_567DDA7CFBC62829."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "evidence_gaps": [
+      "No eligible jurisdiction-specific regulatory_applicability evidence for the frozen masked region is present in the directional grounding contract, so DEPLOYMENT_SPECIFIC regional/legal feasibility cannot be grounded.",
+      "No supplied evidence addresses data sovereignty, cross-border data-transfer constraints, or region-specific compliance obligations for the frozen masked region.",
+      "No deployment-specific evidence establishes which governance owners, audit obligations, or regulatory scopes apply to the frozen CIS IG2 reference enterprise.",
+      "No supplied evidence reports realized institutional adoption, operational effectiveness, or 2025-2027 deployment of access-control controls in the frozen scenario."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The frozen region is masked and the supplied directional grounding contract contains no jurisdiction-specific regulatory_applicability record eligible for this lens, so only GENERAL institutional feasibility is grounded. The eligible decision-evidence records support institutional enablement for access-control implementation: governance policy enforcement and monitoring, policy-engine integration with compliance data, and policy/attribute governance for access decisions. The eligible compliance-constraint record challenges feasibility by imposing mandatory session/authentication protection requirements and associated conformance burden. On balance, the enablement evidence establishes a workable GENERAL governance pathway, while the constraint is a compliance burden rather than a grounded jurisdiction-specific or deployment-specific barrier to institutional feasibility.",
+    "stance": 1
+  },
+  "assessment_sha256": "1dea4aaffa4ba14246d02884d7987673295f6bffe70c976a01154d6c109f2a92",
+  "checkpoint_sha256": "691e3027ac57f6ac0833ea45c799261401eb8b61e2894ed5b547de0806039848",
+  "created_at": "2026-09-20T09:31:22.337522+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE11_1E4AAE06CC3795D7",
+        "DE_DE12_E6F93E4AB8722379",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE17_567DDA7CFBC62829"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "e728b1426d6b93afc10f6aa00feee440be4d040042219357a2b7c16b672af56a",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "29b0fd903712987100560e410492453e5eb11cf605a1675a52697313ddf337c7",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "cd71144e405d3cdb1ce1ab64c94d5e734f4d97d763cee3d77298f7928f757ed0",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "5be8258beaeab9225e1f1a0618e0484270945eec85c55d80881cf79233089375",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

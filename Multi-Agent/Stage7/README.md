@@ -28,6 +28,8 @@ py -3 -m Stage7 --run-decision-variants A,B,C
 
 The expensive variant families execute sequentially, while each family uses exactly two workers against the existing two-slot llama.cpp runtime. All Stage 7 outputs are written under `Results/Stage7/`; Stage 1–6 artifacts are never overwritten.
 
+The existing `--run-decision-variants B` command also performs the architecture seed-robustness check. Seed 42 reuses the frozen main isolated output and frozen joint baseline. Only seeds 43 and 44 generate new inference, and both isolated and joint jobs share the same global two-request limit so the existing two-slot parallelism is preserved. Seed-specific outputs are stored under the separate `B_SEED_ROBUSTNESS` axis and never overwrite the original B baseline.
+
 The completed A prompt-robustness artifacts retain their frozen `stage7-decision-variant-runner-v1` identity. The B joint-three-lens baseline and C contextualized-path comparison use `stage7-decision-variant-runner-v3`. The B single-agent prompt explicitly preserves Stage 4's GENERAL-versus-DEPLOYMENT_SPECIFIC grounding contract so a contextual scenario label does not by itself promote a general evidence claim to deployment-specific direction.
 
 ## Validation boundary

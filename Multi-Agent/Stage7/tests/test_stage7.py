@@ -10,6 +10,7 @@ from Stage7.audits import (
     select_mediator_audit_sample,
 )
 from Stage7.config import (
+    ARCHITECTURE_ROBUSTNESS_SEEDS,
     DECISION_ARCHITECTURE_VARIANTS,
     SENSITIVITY_CASE_IDS,
     experiment_manifest,
@@ -75,6 +76,7 @@ class Stage7HarnessTests(unittest.TestCase):
             "prompt_paraphrase_variants",
             "sensitivity_case_ids",
             "decision_architecture_variants",
+            "architecture_robustness_seeds",
             "decision_policy_variants",
             "manual_audit_selection_seed",
             "manual_audit_per_stratum",
@@ -83,6 +85,7 @@ class Stage7HarnessTests(unittest.TestCase):
             "mediator_audit_include_all_followup_rounds",
             "experiments",
         }
+        assert ARCHITECTURE_ROBUSTNESS_SEEDS == (42, 43, 44)
 
     def test_case_cluster_bootstrap_resamples_cases_not_scenarios(self) -> None:
         values = [0.0, 0.0, 0.0, 1.0, 1.0, 1.0]
@@ -98,11 +101,13 @@ class Stage7HarnessTests(unittest.TestCase):
     def test_variant_inventory_uses_final_a_b_c_axis_names(self) -> None:
         variants = load_variant_records(ROOT)
         axes = {record.axis for record in variants}
-        assert axes == {
+        required_axes = {
             "A1_PROMPT_PARAPHRASE",
             "B_STAGE4_ARCHITECTURE_BASELINE",
             "C2_CONTEXTUALIZED_PATH_COMPARISON",
         }
+        assert required_axes <= axes
+        assert axes <= required_axes | {"B_SEED_ROBUSTNESS"}
 
     def test_deterministic_runner_freezes_three_axis_inventory(self) -> None:
         artifact, path = run_stage7_validation(ROOT, with_llm_audits=False)

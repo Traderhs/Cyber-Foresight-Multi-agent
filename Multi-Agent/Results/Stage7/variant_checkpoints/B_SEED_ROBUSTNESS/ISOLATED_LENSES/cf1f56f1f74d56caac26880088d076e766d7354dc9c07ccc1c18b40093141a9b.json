@@ -1,0 +1,167 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TFEAS_001",
+        "evidence_ids": [
+          "AE03S_C5AF41A880A404C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CipherTrace finding supports the technical feasibility of the frozen CRYPTOGRAPHY action for the Ransomware threat by showing that cryptographic-primitive analysis can identify cipher classes and extract cryptographic keys or state from execution traces across evaluated ransomware specimens, materially supporting ransomware neutralization and reverse engineering.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TFEAS_002",
+        "evidence_ids": [
+          "AE03C_E5522A35F4981027"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied entropy-sharing finding challenges the technical feasibility of relying on cryptography-related entropy detection alone because ransomware can deliberately alter observable entropy patterns to evade detectors that treat high entropy as the key signal, and some existing approaches impose nontrivial computational cost.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TFEAS_003",
+        "evidence_ids": [
+          "E_23_534489D29C38B327",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "Deployment-related guidance in the supplied records describes operational cryptography mechanisms and recommended deployment considerations, including SSL/TLS for data in transit when technically feasible, IPSec key negotiation and identity proofing for control-system communications, and planning to identify and update outdated or weak encryption.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TFEAS_004",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST key-management guidance describes accountability and traceability requirements for cryptographic key access, including identifying entities authorized to generate, access, destroy, or use keys, recording who or what performs these actions, and auditing logs for security violations.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TFEAS_005",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST SP 800-53A excerpt provides assessment objectives and methods for cryptographic key physical control and cryptographic protection, including examination of policies, procedures, documentation, configuration settings, audit records, and testing of mechanisms supporting cryptographic key establishment, management, and protection.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TFEAS_006",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, where some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific technical-feasibility conclusion would require evidence that the frozen CIS IG2 reference-enterprise environment can integrate and operate the chosen cryptography capabilities with documented performance, cost, latency, availability, expertise, and maintainability characteristics.",
+      "If entropy-based detection is part of the deployed technical design, a deployment-specific conclusion would require evidence that the detection approach is robust to entropy manipulation or is supplemented by other cryptographic-primitive analysis or controls.",
+      "A deployment-specific conclusion would require evidence that key-management accountability, traceability, algorithm selection, and control-assessment practices can be implemented in the reference-enterprise profile without unresolved technical barriers.",
+      "A deployment-specific conclusion would require evidence that the selected cryptography capabilities can be maintained and updated across the 2025-2027 timing window."
+    ],
+    "constraints": [
+      "The SUPPORTS_FEASIBILITY direction is bounded to CipherTrace-style cryptographic-primitive analysis for ransomware neutralization and reverse engineering; it does not by itself establish enterprise-wide deployment maturity, operational adoption, or realized mitigation effectiveness.",
+      "The CHALLENGES_FEASIBILITY direction is bounded to cryptography-related entropy-based detection and its computational cost; it does not establish that all cryptographic capabilities or all cryptography-based ransomware defenses are technically infeasible.",
+      "Deployment-maturity guidance, key-management guidance, control-assessment guidance, and the CIS IG2 reference profile are supplementary context for operability and implementation complexity, but they cannot create a directional technical-feasibility conclusion by themselves.",
+      "The jurisdiction is masked and no jurisdiction-specific technical evidence is supplied, so the technical feasibility direction must remain jurisdiction-invariant."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "Missing exact local IT/OT architecture, product or version, vendor, integration points, and existing cryptography controls needed to convert the GENERAL technical-feasibility direction into a DEPLOYMENT_SPECIFIC conclusion.",
+      "Missing operational staffing, expertise availability, budget, cost, performance, scalability, maintainability, and production deployment evidence for CipherTrace-style cryptographic-primitive analysis or related cryptography controls.",
+      "Missing evidence that the entropy-based detection limitation applies to the specific cryptography components, detectors, or configurations that would be deployed in the frozen scenario.",
+      "Missing evidence that the enabling cryptographic analysis capability remains available, maintainable, and updatable through the 2025-2027 forecast horizon.",
+      "Missing jurisdiction-specific technical or regulatory evidence; the masked jurisdiction prevents a region-driven technical-feasibility change."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The supplied action-specific technical_enablement record directly supports the general technical feasibility of the frozen CRYPTOGRAPHY action against the Ransomware threat: CipherTrace is reported to use cryptographic-primitive analysis to identify cipher classes and extract cryptographic keys or state from execution traces, materially supporting ransomware neutralization and reverse engineering. The supplied action-specific technical_limitation record challenges a narrower part of the technical space: entropy-based cryptography-related detection is not universally robust because ransomware can alter observable entropy patterns, and some approaches impose nontrivial computational cost. Deployment-maturity, key-management, assessment, and reference-profile records provide supplementary context about operational cryptography, enterprise complexity, and implementation considerations, but they cannot create a directional conclusion by themselves. On balance, the direct ransomware-neutralization enablement is stronger than the narrower entropy-detection limitation, so the technical feasibility stance is positive at the GENERAL level. The assessment remains PARTIAL because exact local architecture, integration, staffing/expertise, cost, performance, scalability, maintainability, and horizon-persistence evidence are missing for a deployment-specific conclusion.",
+    "stance": 1
+  },
+  "assessment_sha256": "91ff99db714bb40793976eaa3bfef048d3f72b812f1fb21cb2dfab28e9dc33ec",
+  "checkpoint_sha256": "67a57228340c99c60cf3eee4298518bd4f56bc27bc3221f04885bea031c5da69",
+  "created_at": "2026-09-20T11:10:28.626993+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE03C_E5522A35F4981027",
+        "AE03S_C5AF41A880A404C2",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "cf1f56f1f74d56caac26880088d076e766d7354dc9c07ccc1c18b40093141a9b",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "656699338f8eb5b7720dd165af0cd067c986fb9f033db3fe3f1950eb2a430509",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "90e44c5022b58d5deafe69c799889679bb546f899367d7e03ea79534b067ad2c",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "fe0e0241552868da31197486888d97b8fe1f510d5a10f4f2fcbbc4ec0439723e",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_DB6B29C9BE1B0F05"
+          ],
+          "scope": "GENERAL",
+          "statement": "Direct IDPS integration or data sharing can streamline administrator work, save time, speed analysis, and help users prioritize threats.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE07_86DF83870E0A768D"
+          ],
+          "scope": "GENERAL",
+          "statement": "Automation in security monitoring can lower costs, enhance efficiency, improve reliability, and reduce time spent on redundant analyst tasks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_SUPPORT_3",
+          "evidence_ids": [
+            "DE_DE16_E455D97291B61E2A"
+          ],
+          "scope": "GENERAL",
+          "statement": "SIEM integration of IDS/IPS information can make functional, operational, and security data review cheaper and easier, and can support compliance reporting, root-cause analysis, and incident detection.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE04_C6F46FCDE66BFAC7"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS implementation, tuning, operation, update testing, and maintenance require administrative, network, security, protocol, incident-response, and possibly programming skills and training.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "IDPS selection and adoption require defining requirements, understanding the organization's system and network environment, considering integration, and reviewing relevant oversight and policy context.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial/adoption feasibility is conditional on managing the skilled-labor, training, and update-testing burden associated with IDPS operation.",
+        "Financial/adoption feasibility is conditional on realizing integration, automation, or SIEM-supported review benefits."
+      ],
+      "constraints": [
+        "No numeric financial quantities are supplied, so adoption benefit and burden cannot be quantified in this payload.",
+        "The financial/adoption direction remains GENERAL because no deployment-specific adoption scope slots are established for this masked scenario."
+      ],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No supplied evidence provides budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+        "No supplied evidence establishes deployment-specific adoption burden or benefit for this frozen experimental scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Financial/adoption feasibility is mixed because the supplied evidence contains grounded adoption_benefit signals from integration, automation, and SIEM-supported review, but also a grounded adoption_burden signal from the skills, training, update testing, and operational knowledge required for IDPS implementation and maintenance. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE04_0B77B88875745973"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance assigns administrative responsibilities for IDPS security, ongoing monitoring, update testing, and consideration of multiple IDPS technology types, providing an organizational practice framework for IDPS use.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE07_E2C403C2FF05BA09"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST ISCM guidance describes an organization-wide continuous monitoring approach that supports risk-related decision making at organization, mission/business-process, and information-system tiers.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_SUPPORT_3",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA ICS defense-in-depth guidance frames IDS/HIDS as warning or audit capabilities within broader monitoring and detection methods, supporting integration into organizational security governance while noting that IDS is not a silver bullet.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE16_CEA1C38E613068F8"
+          ],
+          "scope": "GENERAL",
+          "statement": "The same CISA ICS record cautions that HIDS incurs a computer-resource penalty and that IDS is not a silver bullet, so institutional use must be framed within broader monitoring and detection practices rather than as a standalone institutional guarantee.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional feasibility is conditional on embedding IDPS in organizational risk management, continuous monitoring, and IDPS security administration.",
+        "Any deployment-specific institutional-regional conclusion would require jurisdiction-specific regulatory_applicability evidence, which is not present in this payload."
+      ],
+      "constraints": [
+        "The institutional-regional direction remains GENERAL because no jurisdiction-specific regulatory_applicability evidence is supplied.",
+        "No jurisdiction-specific compliance constraint or permission is established for this masked scenario."
+      ],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No supplied evidence establishes regulatory_applicability for the masked jurisdiction.",
+        "No supplied evidence establishes a jurisdiction-specific institutional or regulatory barrier to IDS/IPS adoption."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Institutional feasibility is supported by grounded governance_enablement evidence showing that IDPS can be integrated into organizational security administration, continuous monitoring, and broader defense-in-depth governance. No supplied evidence establishes a compliance_constraint or jurisdiction-specific regulatory_applicability, and the missing jurisdiction-specific context is not treated as a challenge.",
+      "stance": 1
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE05S_CCD7CA4B2AE10DC9"
+          ],
+          "scope": "GENERAL",
+          "statement": "A 2024 case study applies IDS components to brute-force defense and treats IDS/IPS-style monitoring and blocking as an implementable response to repeated authentication attacks.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE05C_2D35A464AD6F0FAE"
+          ],
+          "scope": "GENERAL",
+          "statement": "Distributed low-rate brute-force attacks can stay below per-host login thresholds and evade ordinary IDS/IPS security rules, documenting a direct limitation of conventional IDS/IPS use.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE04_0B017D64401987E4"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST IDPS guidance requires organizations to define requirements, understand the relevant system and network environment, consider IDPS integration, and manage IDPS operations within an oversight and policy context.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Technical feasibility is conditional on detecting or preventing brute-force activity beyond ordinary IDS/IPS thresholds and signature rules.",
+        "Technical feasibility is conditional on implementing IDS/IPS monitoring or blocking suitable for repeated authentication attacks."
+      ],
+      "constraints": [
+        "Deployment feasibility is conditional on addressing low-rate, distributed brute-force patterns that ordinary per-host thresholds and rules may miss.",
+        "The implementability of IDS/IPS for brute-force defense is supported only as a general technical enablement signal, not as a deployment-specific guarantee for this frozen scenario."
+      ],
+      "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "evidence_gaps": [
+        "No supplied evidence establishes deployment-specific technical effectiveness of IDS/IPS against the frozen brute-force threat in this masked scenario.",
+        "No supplied evidence resolves whether the ordinary IDS/IPS limitation documented in AE05C_2D35A464AD6F0FAE is overcome by the implementation approach described in AE05S_CCD7CA4B2AE10DC9."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Technical feasibility is mixed because the supplied evidence contains both a grounded technical_enablement signal and a grounded technical_limitation signal for IDS/IPS against brute force. The enabling case study supports implementation, while the limitation evidence shows that ordinary IDS/IPS rules can be evaded by distributed low-rate brute-force patterns.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "3e67f9d90f1415481c73282b70068697d672c83430d80c01b00f77d5abfde61b",
+  "checkpoint_sha256": "46bb13c44426fc6e014c12adda2cfe85550c9cb69304e7716a1b19aa8e37da2f",
+  "created_at": "2026-09-20T08:35:43.109842+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__brute_force__ids_ips",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE05C_2D35A464AD6F0FAE",
+          "AE05S_CCD7CA4B2AE10DC9",
+          "DE_DE04_0B017D64401987E4"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE04_0B77B88875745973",
+          "DE_DE07_E2C403C2FF05BA09",
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE04_0B017D64401987E4",
+          "DE_DE04_C6F46FCDE66BFAC7",
+          "DE_DE04_DB6B29C9BE1B0F05",
+          "DE_DE07_86DF83870E0A768D",
+          "DE_DE16_E455D97291B61E2A"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "f34c0f846fa66c152e3952b39c5045b1a4029ea7df399f307699ef6fb5bffbfb",
+    "jurisdiction_neutral": true,
+    "member_decision_object_ids": [
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf"
+    ],
+    "payload_sha256": "26d336cca850bc9e41d816100e53db79690b26e8b92d7b875454bd780dae5877",
+    "repeat_index": 43,
+    "response_schema_sha256": "55778460f38745f65c30e3e995cbecd83f77e3f5c128d74709925338a84be011",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "948909351219a1767940aa164c405bf47bf5adbeb211b6fa117ff39c7fd4b114",
+    "variant_id": "JOINT_SINGLE_AGENT"
+  }
+}

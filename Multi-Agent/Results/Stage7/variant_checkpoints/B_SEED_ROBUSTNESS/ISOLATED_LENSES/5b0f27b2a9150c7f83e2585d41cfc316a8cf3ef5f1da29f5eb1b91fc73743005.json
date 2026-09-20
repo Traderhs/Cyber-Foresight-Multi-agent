@@ -1,0 +1,129 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GEN_SUPPORT_1",
+        "evidence_ids": [
+          "DE_DE14_575D613F0598EF5E",
+          "DE_DE18_20A979A3238D1DE6"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied decision-guidance records describe institutional enablement pathways for TLS/HTTPS-related deployments: lifecycle governance such as event logging, prototype/pilot testing, phased migration, technical documentation, and ongoing monitoring or certificate renewal, together with SSL/TLS retrofitting prerequisites such as trusted CA deployment and DNS reliability. These support GENERAL institutional feasibility by providing implementation and accountability practices.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GEN_CHALLENGE_1",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5",
+          "DE_DE10_4BE87A62A6676C99"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance-constraint records impose obligations on HTTPS/session deployments: session cookies must be restricted to HTTPS and controlled by path, HttpOnly, and expiration practices; authenticated sessions must not fall back from HTTPS to HTTP; session identifiers and timeouts must be managed; and TLS implementation must satisfy specified extension and cipher-suite configuration requirements. These create GENERAL compliance and audit burdens that challenge the feasibility of adopting HTTPS without absorbing related session and TLS control requirements.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "Any DEPLOYMENT_SPECIFIC institutional/regional direction is conditional on supplied jurisdiction-specific regulatory-applicability evidence for the frozen masked region.",
+      "GENERAL institutional support would require adopting the lifecycle governance practices described in the SSL/HTTPS decision-guidance records.",
+      "GENERAL institutional challenge constraints would require implementing HTTPS-only session cookie controls, no insecure transport fallback, session identifier/timeout management, and TLS extension/configuration compliance."
+    ],
+    "constraints": [
+      "DE_DE14_575D613F0598EF5E conditions SSL/HTTPS-related deployment governance on logging, prototype/pilot testing, phased migration, documentation, and ongoing monitoring, upgrading, and certificate renewal.",
+      "DE_DE18_20A979A3238D1DE6 conditions SSL/TLS retrofitting on trusted CA deployment, DNS reliability/security, and per-application configuration.",
+      "DE_DE13_055FC5E35FA61DD5 imposes HTTPS-only cookie accessibility, no HTTPS-to-HTTP fallback after authentication, and session identifier/timeout controls.",
+      "DE_DE10_4BE87A62A6676C99 imposes TLS extension and cipher-suite configuration obligations for specified TLS versions and cipher suites."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory-applicability evidence is supplied for the masked region, so DEPLOYMENT_SPECIFIC regional legal/regulatory feasibility is undetermined.",
+      "No supplied evidence addresses data sovereignty, cross-border data-transfer constraints, or jurisdiction-specific regulatory compatibility for the masked region.",
+      "No supplied record establishes the frozen enterprise's exact budget, staffing, existing HTTPS/TLS coverage, architecture, or jurisdiction-specific regulatory obligations.",
+      "The governance_enablement records are generic to SSL/TLS/SSL VPN deployment and do not directly establish session-hijacking-specific institutional adoption feasibility for HTTPS.",
+      "The compliance_constraint records establish obligations but do not establish whether the reference enterprise can absorb those obligations."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the frozen jurisdiction-neutral scenario, the supplied Institutional/Regional decision-evidence contains both grounded GENERAL enablement and GENERAL constraint directions. DE_DE14_575D613F0598EF5E and DE_DE18_20A979A3238D1DE6 provide lifecycle and deployment pathways for SSL/TLS/HTTPS-related controls, supporting general institutional feasibility by describing implementation, accountability, documentation, testing, and ongoing operations practices. DE_DE13_055FC5E35FA61DD5 and DE_DE10_4BE87A62A6676C99 impose session and TLS compliance obligations, creating implementation and audit burdens that can challenge feasibility if the enterprise does not absorb related controls. The support records are not session-hijacking-specific institutional adoption evidence, while the constraint records do not demonstrate actual inability to implement HTTPS. No jurisdiction-specific regulatory-applicability evidence is supplied for the masked region, so a DEPLOYMENT_SPECIFIC regional legal direction is not grounded. On balance, the surviving GENERAL directions are mixed rather than decisively supportive or challenging.",
+    "stance": 0
+  },
+  "assessment_sha256": "fb60ab18b9c1be6fa2cbb1f80b5b6c70e52ca2c2c00c4fba4e85efc08852288f",
+  "checkpoint_sha256": "1745ef466918f7d0b963f527b5298dce9588e1e5a311046ee444faf1350d1e70",
+  "created_at": "2026-09-20T12:32:06.006086+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_4BE87A62A6676C99",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE14_575D613F0598EF5E",
+        "DE_DE18_20A979A3238D1DE6"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "5b0f27b2a9150c7f83e2585d41cfc316a8cf3ef5f1da29f5eb1b91fc73743005",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "c1cf5c69175c60e5dcb4a8f6d97116aad5f23cac868608b21ee566b381ad9825",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "97f8c458eaa0e68f3f93c07b0bb2cbb2e813715c199b81a479238bc03a1bc2c5",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "d27e5742db3c12db49a4e77aa12d3960d98c6fa8f9d6e9ec0fd59bf3cc0b5a4e",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

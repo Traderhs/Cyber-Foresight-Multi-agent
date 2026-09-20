@@ -1,0 +1,144 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-SUPP-1",
+        "evidence_ids": [
+          "AE02S_61C8065AA576E7C5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Anomaly-oriented malware detection on Android has been directly evaluated as reporting high malware detection rates, including temporally different and previously unseen APKs, and is reported as implementing anomaly-style behavioral detection as an on-device malware defense.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-CHALL-1",
+        "evidence_ids": [
+          "AE02C_E333FEC17F65B4E1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Anomaly-based algorithms can consume substantial energy and computing resources on constrained devices, and the cited on-device malware-detection design required feature reduction and server-side training before on-device use.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-CTX-1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, describing multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-MAT-1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC",
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied deployment-maturity records report behavioral anomaly-detection approaches in ICS/manufacturing contexts, including use of commercially available products and a configured behavior anomaly detection that detected file-transfer activity and generated an alert.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC technical feasibility conclusion requires exact infrastructure architecture, endpoint or edge-device resource constraints, telemetry availability, and existing control integration points.",
+      "If constrained devices are in scope, require evidence that the actual anomaly-detection design’s resource requirements, feature reduction, and server-side training are compatible with those devices.",
+      "If ICS/manufacturing systems are included in the deployment scope, require evidence that the supplied ICS behavioral anomaly-detection demonstrations are applicable to those systems."
+    ],
+    "constraints": [
+      "AE02C_E333FEC17F65B4E1 reports that anomaly-based algorithms can consume substantial energy and computing resources on constrained devices, with feature reduction and server-side training required in the cited on-device design.",
+      "CTX_CIS_IG2_9F94838146D9C3A4 indicates that the frozen CIS IG2 enterprise profile may involve increased operational complexity and safeguards that depend on enterprise-grade technology and specialized expertise.",
+      "DE_DE05_105D0030778F41BC and DE_DE06_0380E777894ACF9A provide ICS/manufacturing deployment-maturity context and do not state compatibility with the exact frozen CIS IG2 enterprise architecture."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "No supplied evidence identifies the endpoint, edge-device, or constrained-device resource profile for the frozen CIS IG2 reference enterprise, so the applicability of the AE02C_E333FEC17F65B4E1 resource limitation to the actual deployment is not established.",
+      "No supplied evidence reports the current security architecture, telemetry sources, log availability, or integration points required to deploy anomaly detection in the frozen context.",
+      "No supplied evidence reports scalability, maintainability, or operational effectiveness of anomaly detection across the specific frozen multi-department enterprise IT estate; the supplied records cover an Android on-device evaluation and ICS/manufacturing demonstrations.",
+      "No supplied evidence specifies the product, version, or architecture that would implement PMT_ANOMALY_DETECTION in the frozen deployment context."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The action-specific technical-enablement record directly supports technical feasibility for the frozen ANOMALY DETECTION × MALWARE pair: it reports that anomaly-oriented malware detection on Android achieved high malware detection rates, including temporally different and previously unseen APKs, and that anomaly-style behavioral detection can be implemented as an on-device malware defense. The action-specific technical-limitation record reports a resource-dependent deployment constraint: anomaly-based algorithms can consume substantial energy and computing resources on constrained devices, and the evaluated design required feature reduction and server-side training before on-device use. The support is direct and empirical for implementability and unknown-threat detection fit; the limitation is a resource condition that may constrain some deployments but does not establish technical impossibility. The ICS/manufacturing deployment-maturity records provide supplementary operability context, and the CIS IG2 profile supplies frozen enterprise-profile context, but neither creates a separate technical direction. Because the frozen deployment context does not specify the exact architecture, endpoint or edge-device resource constraints, telemetry availability, or existing integration points, the grounded direction is retained as GENERAL supported, with deployment-specific feasibility conditional.",
+    "stance": 1
+  },
+  "assessment_sha256": "40a32e9580958e766b63143cd4bd2209de4ca0b10d6a838726a7d6f6a0d49985",
+  "checkpoint_sha256": "66919a5dd1e8cbc1ee557907ce8b20307c8a4c93a9a9bca3f605825781facac5",
+  "created_at": "2026-09-20T10:36:07.235998+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE02C_E333FEC17F65B4E1",
+        "AE02S_61C8065AA576E7C5",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "429a6c8b0235e94745dea6ba6cdd829713592437fce3d6e3140489ac6d738d1f",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "e77e8944ad2f18475351594774f39c6a068dfce2618431d7c03708fb42d689c8",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "03165dfbbbed623db79f36e9f8f2456a9d56eeb41d5d3795653a5934d4e43248",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "d1ae1309d5121688f5ed2dde39da255965d15565123b5708f46fb3152398267b",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

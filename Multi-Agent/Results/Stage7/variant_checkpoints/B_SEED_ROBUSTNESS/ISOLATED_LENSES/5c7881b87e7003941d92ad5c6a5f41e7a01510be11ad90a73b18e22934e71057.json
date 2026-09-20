@@ -1,0 +1,133 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "INST_GENERAL_SUPPORT_CPG_ENCRYPTION",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG 2.I supplies a recommended strong and agile encryption control, including properly configured and up-to-date SSL/TLS where technically feasible, planning to identify and update outdated or weak encryption, and considering post-quantum implications; it states an outcome of effective encryption for confidentiality of sensitive data and integrity of IT/OT traffic, with scope over all IT traffic and remote OT assets. This provides an institutional governance pathway for implementing PMT_CRYPTOGRAPHY.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "INST_GENERAL_SUPPORT_KEYMGMT_GOVERNANCE",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 Part 1 Rev. 5 describes accountability/traceability for cryptographic key management, including identifying entities authorized to generate, access, destroy, or use keys; recording who or what performs key actions; auditing logs for security violations; employing access-control mechanisms; and making access to plaintext keys, ciphertext keys, and key shares traceable to accessing entities. This supports governance, accountability, and auditability for cryptographic deployment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "INST_GENERAL_CHALLENGE_ALGORITHM_COMPLIANCE",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 provides algorithm approval-status constraints for symmetric encryption/decryption, including disallowed statuses for two-key TDEA encryption and SKIPJACK encryption, deprecation and post-2023 disallowance for three-key TDEA encryption, and legacy-use limitations for decryption. This creates a compliance constraint for cryptographic algorithm selection and transition, adding implementation and compliance obligations to PMT_CRYPTOGRAPHY.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "To support a DEPLOYMENT_SPECIFIC regional/legal feasibility claim, require jurisdiction-specific regulatory_applicability evidence for the frozen jurisdiction.",
+      "Require deployment-specific evidence that cryptographic algorithms in use can be mapped to the algorithm-status constraints and that disallowed or deprecated algorithms can be identified and replaced where required.",
+      "Require deployment-specific evidence that key-management roles, access-control mechanisms, and audit logging are present or can be implemented for the frozen enterprise.",
+      "Require deployment-specific evidence on resource capacity, technology inventory, or expertise if feasibility is to be assessed beyond the GENERAL institutional direction."
+    ],
+    "constraints": [
+      "Adoption of PMT_CRYPTOGRAPHY would need to align with the CPG 2.I encryption control scope covering IT traffic and remote OT assets and with the requirement to plan for identification and update of outdated or weak encryption.",
+      "Cryptographic deployment would need to incorporate key-management accountability/traceability, including identification of authorized entities, recording key actions, access controls, and audit log review.",
+      "Cryptographic deployment would need to satisfy algorithm-status constraints from NIST SP 800-131A Rev. 2, such as avoiding disallowed or deprecated encryption algorithms for new use and managing legacy decryption allowances."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE deployment, so a DEPLOYMENT_SPECIFIC regional/legal feasibility direction cannot be assessed.",
+      "No supplied evidence establishes whether the CIS IG2 reference enterprise profile has the exact staffing, expertise, budget, or technology inventory needed to meet the supplied key-management and algorithm-transition requirements.",
+      "No supplied evidence addresses data sovereignty, cross-border constraints, or region-specific compliance obligations for cryptographic deployment in the frozen scenario.",
+      "No supplied evidence links the CPG/NIST governance pathways to actual deployment maturity, operational adoption, or effectiveness of PMT_CRYPTOGRAPHY in the frozen enterprise."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied institutional decision evidence contains two governance-enablement records and one compliance-constraint record. E_23_534489D29C38B327 provides a recommended encryption control with an expected outcome and deployment scope, and DE_DE08_031120C53EF050F3 provides key-management accountability, traceability, and audit mechanisms. These directly support the institutional feasibility of implementing PMT_CRYPTOGRAPHY. DE_DE09_6719137897848A9E imposes algorithm-status constraints that create a compliance obligation for cryptographic algorithm selection and transition, but it does not by itself establish a jurisdiction-specific prohibition or inability to implement the action. Because the frozen region is jurisdiction-masked and no regulatory_applicability evidence is supplied for a deployment-specific legal conclusion, regional legal feasibility remains unresolved; the surviving GENERAL institutional direction is supportive.",
+    "stance": 1
+  },
+  "assessment_sha256": "087fc41492e53af8a55f84efc7625327dbf78a9e89b54f4c45b5a7ee25d14805",
+  "checkpoint_sha256": "50d5fe1f10cbc0671c08711adcb1fa432567b26e330c7239a571c77a6fd43c0e",
+  "created_at": "2026-09-20T08:30:26.548893+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE08_031120C53EF050F3",
+        "DE_DE09_6719137897848A9E",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "5c7881b87e7003941d92ad5c6a5f41e7a01510be11ad90a73b18e22934e71057",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "aee60b42212bd31a6f867fa30073d79b211d428ab7ebe0d17543736734714ca5",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "cb8f97f1a80e2a0fb9296704a764151bf550e9b3d2aa11ffeeee7a7930f8e1a3",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "475644d19029a78af1ae11ccca28d713d869ece9124389385cd55028340f1c9c",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

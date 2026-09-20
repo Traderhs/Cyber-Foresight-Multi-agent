@@ -1,0 +1,257 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FIN-S-1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS implementation guidance supports certificate-based client authentication where strong cryptographic authentication is required, providing an adoption benefit for cryptography-enabled access control.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN-S-2",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS control-systems encryption primer recommends IPSec configurations and states that encryption should be used when data is sensitive, providing an adoption benefit path for protecting sensitive communications.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FIN-C-1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG Strong and Agile Encryption imposes adoption burdens: properly configured and up-to-date SSL/TLS where technically feasible, plans to identify and update outdated or weak encryption, consideration of post-quantum implications, and OT constraints where latency or availability make encryption feasible only in limited scope.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Financial adoption is conditional on unknown budget and resource capacity, because the scenario supplies no numeric quantities.",
+        "Adoption path is conditional on data sensitivity and operational feasibility, as reflected in the IPSec sensitive-data guidance and CPG encryption feasibility constraints."
+      ],
+      "constraints": [
+        "The frozen scenario assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+        "Exact financial quantities remain unknown; resource capacity is represented only by the CIS IG2 reference profile."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No surfaced evidence observes financial adoption, budget, procurement, cost, or ROI for cryptography in this scenario.",
+        "No surfaced evidence supplies adoption observations during the 2025-2027 forecast horizon."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "DE_DE10_A086B3193CD6440B and DE_DE18_CDC975345637E009 provide grounded adoption-benefit support by describing cryptographic authentication and sensitive-data encryption paths. E_23_534489D29C38B327 provides a grounded adoption-burden challenge by describing configuration, update, feasibility, and post-quantum planning requirements. Because the frozen scenario supplies no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling, and no adoption observations are supplied for the 2025-2027 horizon, the financial/adoption stance is mixed rather than clearly favorable or unfavorable.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "INST-S-1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance describes roles, responsibilities, accountability, and traceability for entities that generate, access, destroy, or otherwise use cryptographic keys, enabling governance for cryptographic use.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST-S-2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG Strong and Agile Encryption frames effective encryption as an organizational outcome for maintaining confidentiality of sensitive data and integrity of IT/OT traffic, supporting governance adoption.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "INST-C-1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST SP 800-131A Rev.2 sets disallowed or deprecated statuses for certain cryptographic algorithms and modes, including two-key TDEA encryption disallowed, three-key TDEA encryption disallowed after 2023, and SKIPJACK encryption disallowed, creating compliance constraints for algorithm selection and transition.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Institutional feasibility is conditional on confirming whether the EU entity processes personal data or otherwise falls within the cited EU regulatory scope.",
+        "Algorithm compliance is conditional on avoiding disallowed or deprecated cryptographic algorithms identified in NIST SP 800-131A Rev.2."
+      ],
+      "constraints": [
+        "The scenario region is EU, but exact legal applicability of the cited EU provisions to the fictional CIS IG2 enterprise is not supplied.",
+        "Deployment-specific institutional direction requires regulatory-applicability grounding; the cited EU primary-law chunks satisfy that scope slot but do not by themselves establish compliance outcomes."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No surfaced evidence establishes organization-specific applicability of GDPR, NIS2, or NIST algorithm-transition compliance obligations to the fictional CIS IG2 enterprise.",
+        "No surfaced evidence measures institutional adoption, governance performance, or compliance outcomes for cryptography during the 2025-2027 horizon."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "DE_DE08_031120C53EF050F3 and E_23_534489D29C38B327 provide grounded governance-enablement support for cryptographic use. DE_DE09_6719137897848A9E provides a grounded compliance-constraint challenge by establishing algorithm approval-status constraints. EU primary-law records E_31_A0893427DD4F5B04, E_31_6BBE82F2BAC198B3, and E_31_C1CFA326F0420DCA supply regional regulatory applicability context, but they do not by themselves establish organization-specific legal applicability to the fictional CIS IG2 enterprise. The combination of grounded governance enablement and grounded compliance constraint, together with conditional EU applicability, yields a mixed institutional/regional stance.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TECH-S-1",
+          "evidence_ids": [
+            "AE04S_2674461DBC059388"
+          ],
+          "scope": "GENERAL",
+          "statement": "A published encryption system is explicitly designed for insider-threat data leakage protection, and its reported prototype includes context-based key generation, file marking, and passage of most reported NIST randomness tests, indicating that cryptography can be engineered for the insider-threat model.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TECH-C-1",
+          "evidence_ids": [
+            "AE04C_F084D028D8E2AE06"
+          ],
+          "scope": "GENERAL",
+          "statement": "The insider-threat setting gives an authorized attacker stronger capabilities, including known- or chosen-plaintext-style attacks; conventional encryption is not automatically sufficient, so effectiveness depends on cryptographic design and the insider-access model.",
+          "status": "CHALLENGES_FEASIBILITY"
+        }
+      ],
+      "conditional_requirements": [
+        "Technical feasibility is conditional on a cryptographic design that accounts for insider-access capabilities and is not treated as automatically sufficient by conventional encryption."
+      ],
+      "constraints": [
+        "No deployment-specific operational-effectiveness evidence for cryptography is supplied for the 2025-2027 forecast horizon.",
+        "The deployment context is a frozen experimental CIS IG2 reference enterprise rather than an observed real organization."
+      ],
+      "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "evidence_gaps": [
+        "No surfaced evidence establishes that the described cryptography design would be deployable or operationally effective in the specific EU CIS IG2 deployment context.",
+        "The payload does not reconcile the Stage 0 PMT NoP recent_direction recorded as decreasing with E_33_CDE0F421E4D797ED's increasing Crossref publication trend."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "AE04S_2674461DBC059388 provides grounded technical enablement by describing an encryption system explicitly designed for insider-threat data leakage and a reported prototype with context-based key generation and file marking. AE04C_F084D028D8E2AE06 provides a grounded technical limitation by stating that conventional encryption is not automatically sufficient in insider-threat settings and that effectiveness depends on cryptographic design and insider-access model. Because the directional support and challenge are both grounded and no deployment-specific operational effectiveness is supplied for the 2025-2027 horizon, the technical stance is mixed rather than clearly feasible or infeasible.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "8251ea8ff4f34541dd10dd35dd457cf5d6a3b4a93b38290ef93011bf01d3b2c5",
+  "checkpoint_sha256": "5304aa6c00ddd6d9ec18101c848b8c79eb4e63df33276145120cd7f4a8dc6294",
+  "created_at": "2026-09-20T10:48:49.443801+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE04C_F084D028D8E2AE06",
+          "AE04S_2674461DBC059388",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_BOUND",
+        "EU",
+        [
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "E_23_534489D29C38B327",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        [
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_A0893427DD4F5B04",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "cf3146005d097217a4292d693bb1087fa3153d23d7dd70115ba40de7407523f2",
+    "jurisdiction_neutral": false,
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944"
+    ],
+    "payload_sha256": "9ca0333f3890bec2c930a27129de10028c2afdcd0efd40270f911b4f49a2da18",
+    "repeat_index": 44,
+    "response_schema_sha256": "672739311131cde6f99ee588d8d3fffec974c7889601d69a16c3e5a39e466389",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "433ffa9823946c6780765041146105c65784e738e9bda4bb1c120ba4f2343248",
+    "variant_id": "JOINT_SINGLE_AGENT"
+  }
+}

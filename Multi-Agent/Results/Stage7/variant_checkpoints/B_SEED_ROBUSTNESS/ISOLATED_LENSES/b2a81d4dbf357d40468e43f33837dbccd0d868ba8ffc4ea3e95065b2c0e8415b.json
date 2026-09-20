@@ -1,0 +1,135 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE01_0B9728FE19095FD0",
+          "DE_DE15_271AFADC7B3D5999",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied AI-risk and secure-AI decision-guidance records support institutional enablement for NLP/LLM deployment by documenting governance roles and responsibilities, executive accountability, human-AI oversight, transparency/accountability documentation, and secure-operation practices such as monitoring, logging, update management, lessons learned, and issue escalation/remediation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C2",
+        "evidence_ids": [
+          "DE_DE02_007F05150CB46131"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied generative AI profile identifies reporting GAI incidents in compliance with legal and regulatory requirements, together with information security and data privacy tasks, as a compliance consideration that adds institutional burden for NLP/LLM use.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C3",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CIS IG2 context record describes the reference-enterprise profile as multi-department enterprise IT with personnel responsible for managing and protecting infrastructure, often processing sensitive client or enterprise information, potentially facing regulatory burdens, and sometimes requiring enterprise-grade technology and specialized expertise for safeguards.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC regional/legal feasibility conclusion requires jurisdiction-specific regulatory applicability evidence in addition to governance-enablement or compliance-constraint evidence.",
+      "GENERAL institutional support is conditional on implementing or integrating the governance, accountability, documentation, monitoring/logging, update, and issue-remediation practices described in the supplied AI-risk and secure-AI records.",
+      "The compliance burden is conditional on identifying which legal and regulatory incident-reporting and data-privacy requirements apply in the frozen jurisdiction."
+    ],
+    "constraints": [
+      "Institutional enablement requires governance roles, accountability, oversight, documentation, and secure-operation practices for NLP/LLM systems as described in the supplied AI-risk and secure-AI records.",
+      "Institutional compliance burden includes GAI incident reporting under legal and regulatory requirements, together with information security and data privacy tasks, as described in the supplied generative AI profile.",
+      "The reference-enterprise context indicates possible regulatory burdens and enterprise-grade or specialized-expertise needs, but does not itself establish a specific legal obligation."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory applicability evidence is supplied for the frozen masked jurisdiction, so DEPLOYMENT_SPECIFIC regional legal feasibility cannot be determined.",
+      "No supplied record establishes whether the CIS IG2 reference organization already has AI governance, AI inventory, GAI incident reporting, logging/monitoring, or data-privacy controls in place.",
+      "No supplied record establishes data sovereignty or cross-border data transfer constraints for NLP/LLM deployment."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Claims IR_C1 and IR_C2 synthesize the supplied institutional evidence. IR_C1 provides governance-enablement support for institutional adoption by documenting accountability, oversight, transparency, and secure-operation practices for AI/NLP-LLM systems. IR_C2 identifies a bounded compliance constraint related to GAI incident reporting and data privacy/information security tasks. The enablement evidence is broader and more directly relevant to institutional feasibility than the single compliance constraint, so the balance supports GENERAL institutional feasibility. Because the frozen scenario masks jurisdiction and supplies no jurisdiction-specific regulatory applicability evidence, a DEPLOYMENT_SPECIFIC regional/legal conclusion is not grounded and is recorded as an evidence gap rather than a directional stance.",
+    "stance": 1
+  },
+  "assessment_sha256": "017b9e2733f6508911853d92b9308a09d03e28e07a14dbbc9efec68f3bfc710d",
+  "checkpoint_sha256": "cb05fea4e75b5e630339b08d58a52f168b8fbcec7086782900084ca5adacb863",
+  "created_at": "2026-09-20T07:32:34.687459+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_0B9728FE19095FD0",
+        "DE_DE02_007F05150CB46131",
+        "DE_DE15_271AFADC7B3D5999",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b2a81d4dbf357d40468e43f33837dbccd0d868ba8ffc4ea3e95065b2c0e8415b",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "fc89ade14bc934fe6fc0c0ea471cce486176f605af227dc7bb1203680708b08d",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "2765ceeab5b9512e5881af286dbd75df1553f279b395dc9b7c1582f9af16fbc4",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "d603bdd9e7fa17bc5abd50f64ddc69a3a0436469f7daff9cfc36e29185d79dc0",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

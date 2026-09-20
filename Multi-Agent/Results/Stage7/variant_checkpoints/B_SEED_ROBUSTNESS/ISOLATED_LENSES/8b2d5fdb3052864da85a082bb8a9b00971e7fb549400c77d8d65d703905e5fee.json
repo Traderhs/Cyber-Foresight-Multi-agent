@@ -1,0 +1,193 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-1",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The CISA CPG record defines 'Strong and Agile Encryption' as a recommended action with an outcome of effective encryption for confidentiality of sensitive data and integrity of IT and OT traffic, with scope covering all IT traffic and remote OT assets that communicate with external entities, and recommended actions including using properly configured and up-to-date SSL/TLS when technically feasible, identifying and updating outdated or weak encryption, and considering post-quantum implications.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-2",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 Part 1 Rev. 5 describes accountability/traceability for key management, including identifying entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs those actions; auditing logs for security violations; and making access to plaintext cryptographic keys traceable to the accessing entity.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-3",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 designates two-key TDEA encryption as disallowed, three-key TDEA encryption as deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance, and SKIPJACK encryption as disallowed, while AES-128, AES-192, and AES-256 encryption and decryption are acceptable. This creates an algorithm-selection and migration constraint for cryptographic controls relevant to the frozen 2025-2027 timing window.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-4",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "EU GDPR Article 32 establishes that controllers and processors must implement appropriate technical and organizational measures to ensure a level of security appropriate to risk, including as appropriate pseudonymisation and encryption of personal data, the ability to ensure ongoing confidentiality, integrity, availability, and resilience, timely restoration of availability and access after physical or technical incidents, and a process for regularly testing, assessing, and evaluating the effectiveness of those measures.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-5",
+        "evidence_ids": [
+          "E_31_C1CFA326F0420DCA",
+          "E_31_6BBE82F2BAC198B3"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "EU NIS2 records place encryption within the EU institutional and supervisory context: national cybersecurity strategies should include policies on cybersecurity requirements for ICT products and services in public procurement, including encryption; processing of special categories of personal data should be accompanied by suitable and specific measures, including state-of-the-art security and privacy-preserving measures such as pseudonymisation or encryption where anonymisation may significantly affect the purpose pursued; and the Directive contemplates supervisory measures for essential and important entities.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-6",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "E_23_534489D29C38B327",
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "For the frozen EU/CIS IG2 scenario, GDPR Article 32 places encryption/pseudonymisation and risk-appropriate security testing within the EU regulatory scope for processing personal data, while the CISA CPG Strong and Agile Encryption record and the NIST key-management accountability record provide a governance pathway for selecting, deploying, and auditing cryptographic controls. This combination supports a bounded EU-specific institutional feasibility direction for CRYPTOGRAPHY as a governance-managed control, not as a guarantee that the organization will satisfy all EU obligations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-7",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E",
+          "E_31_A0893427DD4F5B04",
+          "E_31_6BBE82F2BAC198B3"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "In the EU deployment scenario, the NIST algorithm-transition constraint creates a conditional challenge because GDPR Article 32 requires risk-appropriate, state-of-the-art technical and organizational measures, including encryption as appropriate, and the NIS2 recital references state-of-the-art privacy-preserving measures such as pseudonymisation or encryption. If the enterprise's cryptographic estate includes or relies on disallowed or deprecated algorithms, it must manage retirement, migration, and compliance evidence. The supplied records do not establish that such legacy algorithms exist in the reference profile.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-8",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, which often processes sensitive client or enterprise information, may face regulatory burdens, and whose IG2 safeguards address increased operational complexity; some safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Confirm EU legal applicability before treating the EU-specific direction as sufficient, including GDPR controller/processor status and NIS2/sector entity status (E_31_A0893427DD4F5B04; E_31_C1CFA326F0420DCA; E_31_6BBE82F2BAC198B3).",
+      "Inventory cryptographic algorithms and define a migration plan for any disallowed or deprecated algorithms identified by NIST SP 800-131Ar2 (DE_DE09_6719137897848A9E).",
+      "Implement key-management accountability/traceability: identify authorized entities for key generation, access, destruction, and use; record key lifecycle actions; enforce access control; and audit logs (DE_DE08_031120C53EF050F3).",
+      "Define encryption controls for sensitive data and IT/OT traffic where technically feasible, update outdated or weak encryption, and test/evaluate effectiveness as required by GDPR Article 32 and the CPG Strong and Agile Encryption record (E_23_534489D29C38B327; E_31_A0893427DD4F5B04).",
+      "If special-category data or cross-border processing is in scope, apply appropriate pseudonymisation/encryption measures and document supervisory cooperation obligations (E_31_A0893427DD4F5B04; E_31_6BBE82F2BAC198B3)."
+    ],
+    "constraints": [
+      "Cryptography must be governed through defined control objectives, scope, and key-lifecycle accountability/traceability (E_23_534489D29C38B327; DE_DE08_031120C53EF050F3).",
+      "Algorithm selection and migration must account for NIST SP 800-131Ar2 statuses: two-key TDEA encryption disallowed; three-key TDEA encryption disallowed after 2023; SKIPJACK encryption disallowed; AES-128, AES-192, and AES-256 acceptable (DE_DE09_6719137897848A9E).",
+      "EU GDPR Article 32 requires risk-based technical and organizational security measures, including pseudonymisation/encryption as appropriate, ongoing confidentiality, integrity, availability, and resilience, timely restoration, and regular testing/assessment (E_31_A0893427DD4F5B04).",
+      "EU NIS2 records place encryption within public-procurement policy and special-category/state-of-the-art supervisory and security context (E_31_C1CFA326F0420DCA; E_31_6BBE82F2BAC198B3).",
+      "The CIS IG2 reference profile indicates multi-department IT, sensitive information, possible regulatory burdens, and possible dependence on enterprise-grade technology and specialized expertise, so implementation should account for governance and expertise requirements (CTX_CIS_IG2_9F94838146D9C3A4)."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+    "evidence_gaps": [
+      "Current cryptographic inventory is not supplied, including whether two-key TDEA, three-key TDEA, SKIPJACK, or other disallowed/deprecated algorithms are in use (DE_DE09_6719137897848A9E).",
+      "Enterprise-specific EU applicability is not confirmed: whether the reference enterprise is a GDPR controller/processor of personal data, whether it is an NIS2 essential or important entity, and whether sector-specific obligations apply (E_31_A0893427DD4F5B04; E_31_C1CFA326F0420DCA; E_31_6BBE82F2BAC198B3; CTX_CIS_IG2_9F94838146D9C3A4).",
+      "Data sovereignty, cross-border data transfers, special-category data processing, and supervisory-authority interactions are not specified for the frozen deployment (E_31_A0893427DD4F5B04; E_31_6BBE82F2BAC198B3).",
+      "Exact staffing, budget, enterprise-grade technology availability, and expertise capacity are not supplied in the evaluation evidence payload.",
+      "No supplied record links the governance/algorithm evidence to ransomware-specific cryptographic deployment maturity or operational effectiveness, which would be needed for a full action-specific implementation conclusion (E_23_534489D29C38B327; DE_DE08_031120C53EF050F3; DE_DE09_6719137897848A9E)."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records provide a grounded GENERAL institutional-support direction for CRYPTOGRAPHY. CISA CPG defines a Strong and Agile Encryption recommended action with an outcome, scope, TTP coverage, and implementation guidance, while NIST key-management guidance provides an accountability/traceability pathway for key lifecycle operations. A GENERAL compliance constraint is also grounded in NIST SP 800-131Ar2 algorithm-transition statuses, but it is a conditional migration/legacy-use burden rather than a material infeasibility finding. For the frozen EU deployment, EU GDPR Article 32 and NIS2 records establish jurisdictional relevance of encryption, state-of-the-art security expectations, and supervisory context. Combined with the governance-enablement records, this supports a bounded EU-specific institutional feasibility direction. A bounded EU-specific challenge exists if the enterprise must manage disallowed or deprecated cryptographic algorithms while meeting EU risk-appropriate security expectations. Sufficiency is PARTIAL because enterprise-specific EU applicability, cryptographic inventory, data flows, supervisory scope, and resource capacity are not supplied.",
+    "stance": 1
+  },
+  "assessment_sha256": "eb0c045446fc3f8b047eff30d2c5d936fbc2874746312fd324c196e586625e0b",
+  "checkpoint_sha256": "a92723b04cad4072cd2430c5515e75c57125e2c43879283310c4306fd5c90ab7",
+  "created_at": "2026-09-20T11:32:39.843841+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_BOUND",
+      "EU",
+      [
+        "DE_DE08_031120C53EF050F3",
+        "DE_DE09_6719137897848A9E",
+        "E_23_534489D29C38B327",
+        "E_31_6BBE82F2BAC198B3",
+        "E_31_A0893427DD4F5B04",
+        "E_31_C1CFA326F0420DCA"
+      ],
+      [
+        "E_31_6BBE82F2BAC198B3",
+        "E_31_A0893427DD4F5B04",
+        "E_31_C1CFA326F0420DCA"
+      ],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "8b2d5fdb3052864da85a082bb8a9b00971e7fb549400c77d8d65d703905e5fee",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67"
+    ],
+    "payload_sha256": "9b0e86132b220de85ed4028d6ec5732d7d96cc5f578ea608eeff000ac646b072",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "b929252cbe4c01170a6cb8666704d1a48dbbaf2fe909a1a3767fc9b017699461",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "585d90805083fd49fdca4ce132f40eb0c12b1678404b35145de73f514a4fc466",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

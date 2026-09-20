@@ -1,0 +1,2739 @@
+{
+  "artifact_sha256": "814c10d0ac1f00494625a9d328532d4f9bb8288c0792232a9011f8ea6e963e87",
+  "axes": [
+    {
+      "experiment_id": "A",
+      "findings": [
+        "prompt_paraphrase: Compared 18 frozen variant outputs to their exact main scenario outputs."
+      ],
+      "limitations": [],
+      "metrics": [
+        {
+          "ci_high": 1.0,
+          "ci_low": 0.5,
+          "n": 18,
+          "name": "prompt_paraphrase.stance_agreement_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.7777777777777778
+        },
+        {
+          "ci_high": 0.8674603174603175,
+          "ci_low": 0.6666666666666666,
+          "n": 18,
+          "name": "prompt_paraphrase.evidence_id_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.7778439153439154
+        },
+        {
+          "ci_high": 1.0,
+          "ci_low": 0.9444444444444444,
+          "n": 18,
+          "name": "prompt_paraphrase.claim_direction_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.9814814814814815
+        },
+        {
+          "ci_high": 1.0,
+          "ci_low": 0.5,
+          "n": 18,
+          "name": "prompt_paraphrase.recommendation_consistency_rate",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.6666666666666666
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 18,
+          "name": "prompt_paraphrase.d_lens_abs_delta_median",
+          "notes": null,
+          "unit": null,
+          "value": 0.0
+        }
+      ],
+      "name": "Robustness",
+      "provenance": {
+        "components": [
+          {
+            "name": "prompt_paraphrase",
+            "provenance": {
+              "axis_name": "A1_PROMPT_PARAPHRASE",
+              "bootstrap": {
+                "alpha": 0.05,
+                "cluster_key": "case_id",
+                "method": "case_cluster_bootstrap",
+                "repetitions": 2000,
+                "seed": 20260916,
+                "unique_case_count": 3
+              },
+              "variant_ids": [
+                "P2_EVIDENCE_FIRST",
+                "P3_DECISION_FIRST"
+              ]
+            },
+            "scope": "18 variant-scenario comparisons",
+            "status": "EVALUATED"
+          }
+        ]
+      },
+      "scope": "Prompt-paraphrase robustness on the fixed representative three-case subset.",
+      "status": "EVALUATED"
+    },
+    {
+      "experiment_id": "B",
+      "findings": [
+        "single_agent_baseline: Compared 21 frozen variant outputs to their exact main scenario outputs.",
+        "seed_robustness: Architecture differences are reported per seed and alongside within-architecture seed variation; the seed check is a robustness diagnostic, not a performance ranking.",
+        "decision_policy: Policy-sensitive recommendations are reported as dependence on the explicit decision rule, not hidden as model failures.",
+        "compute: The frozen runtime identity records the model, quantization, llama.cpp build, context allocation, parallel slots, seed, decoding parameters, and repair policy.",
+        "deployment_boundary: Without practitioner/deployment study data, the framework is bounded to evidence-grounded strategic decision support."
+      ],
+      "limitations": [
+        "seed_robustness: Seed robustness is incomplete; missing paired seed outputs: [43, 44]",
+        "compute: The latest successful run reused five Stage 6 case artifacts and therefore is not a clean from-scratch full-pipeline cost benchmark.",
+        "compute: Peak VRAM/memory is not reconstructed from the existing log and requires a dedicated clean cost run if needed."
+      ],
+      "metrics": [
+        {
+          "ci_high": 0.5714285714285714,
+          "ci_low": 0.2698412698412698,
+          "n": 21,
+          "name": "single_agent_baseline.stance_agreement_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.42857142857142855
+        },
+        {
+          "ci_high": 0.886734693877551,
+          "ci_low": 0.6904761904761905,
+          "n": 21,
+          "name": "single_agent_baseline.evidence_id_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.7939153439153439
+        },
+        {
+          "ci_high": 0.9629629629629629,
+          "ci_low": 0.7804232804232804,
+          "n": 21,
+          "name": "single_agent_baseline.claim_direction_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.8862433862433862
+        },
+        {
+          "ci_high": 0.5714285714285714,
+          "ci_low": 0.0,
+          "n": 21,
+          "name": "single_agent_baseline.recommendation_consistency_rate",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.2857142857142857
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "single_agent_baseline.d_lens_abs_delta_median",
+          "notes": null,
+          "unit": null,
+          "value": 0.222222
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 3,
+          "name": "seed_robustness.completed_seed_count",
+          "notes": null,
+          "unit": null,
+          "value": 1
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 1,
+          "name": "seed_robustness.architecture_metrics_by_seed",
+          "notes": null,
+          "unit": null,
+          "value": [
+            {
+              "claim_direction_overlap_mean": 0.8862433862433862,
+              "d_lens_abs_delta_median": 0.222222,
+              "evidence_id_overlap_mean": 0.7939153439153439,
+              "n": 21,
+              "recommendation_consistency_rate": 0.2857142857142857,
+              "seed": 42,
+              "stance_agreement_mean": 0.42857142857142855
+            }
+          ]
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 0,
+          "name": "seed_robustness.within_isolated_seed_pair_metrics",
+          "notes": null,
+          "unit": null,
+          "value": []
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 0,
+          "name": "seed_robustness.within_joint_seed_pair_metrics",
+          "notes": null,
+          "unit": null,
+          "value": []
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_isolated_stance_agreement_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_joint_stance_agreement_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_isolated_evidence_overlap_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_joint_evidence_overlap_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_isolated_claim_direction_overlap_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_joint_claim_direction_overlap_mean",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_isolated_recommendation_consistency_rate",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "seed_robustness.within_joint_recommendation_consistency_rate",
+          "notes": null,
+          "unit": null,
+          "value": null
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "decision_policy.policy_invariant_rate",
+          "notes": null,
+          "unit": null,
+          "value": 0.42857142857142855
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "decision_policy.policy_sensitive_count",
+          "notes": null,
+          "unit": null,
+          "value": 12
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "decision_policy.scenario_policy_results",
+          "notes": null,
+          "unit": null,
+          "value": [
+            {
+              "case_id": "main__ddos__nlp_llm",
+              "main": "DO_NOT_RECOMMEND",
+              "permissive": "DO_NOT_RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": -1
+              },
+              "strict": "DO_NOT_RECOMMEND"
+            },
+            {
+              "case_id": "main__ddos__nlp_llm",
+              "main": "DO_NOT_RECOMMEND",
+              "permissive": "DO_NOT_RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": -1
+              },
+              "strict": "DO_NOT_RECOMMEND"
+            },
+            {
+              "case_id": "main__ddos__nlp_llm",
+              "main": "DO_NOT_RECOMMEND",
+              "permissive": "DO_NOT_RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": -1
+              },
+              "strict": "DO_NOT_RECOMMEND"
+            },
+            {
+              "case_id": "main__malware__anomaly_detection",
+              "main": "RECOMMEND",
+              "permissive": "RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "RECOMMEND"
+            },
+            {
+              "case_id": "main__malware__anomaly_detection",
+              "main": "RECOMMEND",
+              "permissive": "RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "RECOMMEND"
+            },
+            {
+              "case_id": "main__malware__anomaly_detection",
+              "main": "RECOMMEND",
+              "permissive": "RECOMMEND",
+              "policy_invariant": true,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "RECOMMEND"
+            },
+            {
+              "case_id": "main__ransomware__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__ransomware__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__ransomware__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__insider_threat__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__insider_threat__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__insider_threat__cryptography",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__brute_force__ids_ips",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__brute_force__ids_ips",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__brute_force__ids_ips",
+              "main": "RECOMMEND_PILOT",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__targeted_attack__access_control",
+              "main": "HOLD",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": -1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__targeted_attack__access_control",
+              "main": "HOLD",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": -1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__targeted_attack__access_control",
+              "main": "HOLD",
+              "permissive": "RECOMMEND_PILOT",
+              "policy_invariant": false,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": -1,
+                "institutional_regional": 1,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__session_hijacking__https",
+              "main": "HOLD",
+              "permissive": "HOLD",
+              "policy_invariant": true,
+              "scenario_id": "KR__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 0,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__session_hijacking__https",
+              "main": "HOLD",
+              "permissive": "HOLD",
+              "policy_invariant": true,
+              "scenario_id": "EU__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 0,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            },
+            {
+              "case_id": "main__session_hijacking__https",
+              "main": "HOLD",
+              "permissive": "HOLD",
+              "policy_invariant": true,
+              "scenario_id": "US__CIS_IG2",
+              "stances": {
+                "financial_adoption": 0,
+                "institutional_regional": 0,
+                "technical_feasibility": 1
+              },
+              "strict": "HOLD"
+            }
+          ]
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 0,
+          "name": "compute.llm_completion_event_count",
+          "notes": null,
+          "unit": null,
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 0,
+          "name": "compute.repair_completion_event_count",
+          "notes": null,
+          "unit": null,
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "compute.prompt_tokens",
+          "notes": null,
+          "unit": "tokens",
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "compute.completion_tokens",
+          "notes": null,
+          "unit": "tokens",
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "compute.total_tokens",
+          "notes": null,
+          "unit": "tokens",
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "compute.summed_request_elapsed_seconds",
+          "notes": null,
+          "unit": "seconds",
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": null,
+          "name": "compute.by_stage",
+          "notes": null,
+          "unit": null,
+          "value": {}
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "deployment_boundary.deployment_overclaim_hit_count",
+          "notes": null,
+          "unit": null,
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 0,
+          "name": "deployment_boundary.overclaim_hits",
+          "notes": null,
+          "unit": null,
+          "value": []
+        }
+      ],
+      "name": "Decision architecture and cost",
+      "provenance": {
+        "components": [
+          {
+            "name": "single_agent_baseline",
+            "provenance": {
+              "axis_name": "B_STAGE4_ARCHITECTURE_BASELINE",
+              "bootstrap": {
+                "alpha": 0.05,
+                "cluster_key": "case_id",
+                "method": "case_cluster_bootstrap",
+                "repetitions": 2000,
+                "seed": 20260916,
+                "unique_case_count": 7
+              },
+              "variant_ids": [
+                "SINGLE_AGENT_BASELINE"
+              ]
+            },
+            "scope": "21 variant-scenario comparisons",
+            "status": "EVALUATED"
+          },
+          {
+            "name": "seed_robustness",
+            "provenance": {
+              "additional_seed_axis": "B_SEED_ROBUSTNESS",
+              "main_seed_reuses_frozen_outputs": 42,
+              "seeds": [
+                42,
+                43,
+                44
+              ]
+            },
+            "scope": "1/3 predeclared seeds for isolated-versus-joint Stage 4",
+            "status": "PARTIAL"
+          },
+          {
+            "name": "decision_policy",
+            "provenance": {
+              "policy_variants": [
+                {
+                  "description": "Technical and Institutional are critical feasibility gates; Financial is the adoption gate.",
+                  "policy_id": "MAIN_ROLE_BASED_GATE_V1"
+                },
+                {
+                  "description": "Critical gates retain the main semantics, but unresolved Financial/Adoption yields HOLD instead of RECOMMEND_PILOT.",
+                  "policy_id": "ALT_STRICT_ADOPTION_V1"
+                },
+                {
+                  "description": "If both critical gates are supported, Financial/Adoption challenge or unresolved status is limited to RECOMMEND_PILOT rather than HOLD.",
+                  "policy_id": "ALT_PERMISSIVE_PILOT_V1"
+                }
+              ]
+            },
+            "scope": "21 main DecisionObjects x 3 predeclared policies",
+            "status": "EVALUATED"
+          },
+          {
+            "name": "compute",
+            "provenance": {
+              "run_log": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage6\\logs\\stage1-main-cases-v1__2026-09-16_23-21-20.log",
+              "runtime_profiles": {
+                "main__brute_force__ids_ips": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__ddos__nlp_llm": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__insider_threat__cryptography": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__malware__anomaly_detection": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__ransomware__cryptography": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__session_hijacking__https": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                },
+                "main__targeted_attack__access_control": {
+                  "batch_size": 2048,
+                  "client_request_concurrency": 2,
+                  "draft_kv_type": "q8_0",
+                  "draft_v_type": "q8_0",
+                  "expected_context_size": 65536,
+                  "expected_gpu_layers": "all",
+                  "expected_llama_build": "b10919",
+                  "expected_llama_commit": "d3146f2b5",
+                  "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+                  "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+                  "expected_model_size_bytes": 24958908128,
+                  "expected_parallel_slots": 2,
+                  "flash_attention": true,
+                  "frequency_penalty": 0.0,
+                  "min_p": 0.0,
+                  "model": "Qwen3.8-27B-Q6_K_L",
+                  "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+                  "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+                  "mtp_draft_n_max": 4,
+                  "mtp_draft_p_min": 0.05,
+                  "mtp_enabled": true,
+                  "presence_penalty": 0.0,
+                  "quantization": "Q6_K_L",
+                  "reasoning_budget": -1,
+                  "reasoning_effort": "xhigh",
+                  "repeat_penalty": 1.0,
+                  "seed": 42,
+                  "server_total_context_size": 131072,
+                  "stage6_runtime_profile_version": "stage6-synthesis-runtime-128k-total-2slot-v1",
+                  "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+                  "structured_validation_retries": 1,
+                  "target_kv_type": "q8_0",
+                  "target_v_type": "q8_0",
+                  "temperature": 1.0,
+                  "top_k": 20,
+                  "top_p": 0.95,
+                  "ubatch_size": 512
+                }
+              }
+            },
+            "scope": "latest successful resume run",
+            "status": "PARTIAL"
+          },
+          {
+            "name": "deployment_boundary",
+            "provenance": {},
+            "scope": "21 final strategic reports",
+            "status": "EVALUATED"
+          }
+        ]
+      },
+      "scope": "Information-isolated contextual Stage 4 lenses versus one joint three-lens Stage 4 agent, with the frozen upstream Stage 1-3 chain and deterministic downstream policy held fixed; decision-policy dependence and compute/deployment boundaries are reported separately.",
+      "status": "PARTIAL"
+    },
+    {
+      "experiment_id": "C",
+      "findings": [
+        "jurisdiction: Within-scenario D_lens is kept separate from cross-jurisdiction stance/evidence sensitivity.",
+        "contextualized_path: Compared 21 frozen variant outputs to their exact main scenario outputs.",
+        "scenario_provenance: Scenario definition, exact KR/EU/US jurisdiction set, fixed candidate action, and CIS_IG2 reference-enterprise profile are provenance-bound; scenario changes require a new version rather than silent reuse."
+      ],
+      "limitations": [
+        "jurisdiction: Three predeclared jurisdictions under one reference-enterprise profile do not establish generalizability beyond those frozen scenarios."
+      ],
+      "metrics": [
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 7,
+          "name": "jurisdiction.cases_with_stance_sensitivity",
+          "notes": null,
+          "unit": null,
+          "value": 0
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 7,
+          "name": "jurisdiction.cases_with_evidence_sensitivity",
+          "notes": null,
+          "unit": null,
+          "value": 3
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 7,
+          "name": "jurisdiction.case_details",
+          "notes": null,
+          "unit": null,
+          "value": [
+            {
+              "any_evidence_sensitivity": false,
+              "any_stance_sensitivity": false,
+              "case_id": "main__brute_force__ids_ips",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": false,
+              "any_stance_sensitivity": false,
+              "case_id": "main__ddos__nlp_llm",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    -1,
+                    -1,
+                    -1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": true,
+              "any_stance_sensitivity": false,
+              "case_id": "main__insider_threat__cryptography",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": true,
+                  "pairwise_mean_evidence_jaccard": 0.5555555555555556,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": false,
+              "any_stance_sensitivity": false,
+              "case_id": "main__malware__anomaly_detection",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": true,
+              "any_stance_sensitivity": false,
+              "case_id": "main__ransomware__cryptography",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": true,
+                  "pairwise_mean_evidence_jaccard": 0.6666666666666666,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": false,
+              "any_stance_sensitivity": false,
+              "case_id": "main__session_hijacking__https",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "any_evidence_sensitivity": true,
+              "any_stance_sensitivity": false,
+              "case_id": "main__targeted_attack__access_control",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "lens_results": {
+                "financial_adoption": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    -1,
+                    -1,
+                    -1
+                  ]
+                },
+                "institutional_regional": {
+                  "evidence_sensitive": true,
+                  "pairwise_mean_evidence_jaccard": 0.6190476190476191,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "technical_feasibility": {
+                  "evidence_sensitive": false,
+                  "pairwise_mean_evidence_jaccard": 1.0,
+                  "stance_sensitive": false,
+                  "stance_variance": 0.0,
+                  "stances": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ci_high": 0.47619047619047616,
+          "ci_low": 0.19047619047619047,
+          "n": 21,
+          "name": "contextualized_path.stance_agreement_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.3333333333333333
+        },
+        {
+          "ci_high": 0.0445970695970696,
+          "ci_low": 0.0007936507936507937,
+          "n": 21,
+          "name": "contextualized_path.evidence_id_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.018040293040293042
+        },
+        {
+          "ci_high": 0.6984126984126984,
+          "ci_low": 0.492063492063492,
+          "n": 21,
+          "name": "contextualized_path.claim_direction_overlap_mean",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.5873015873015872
+        },
+        {
+          "ci_high": 0.5714285714285714,
+          "ci_low": 0.0,
+          "n": 21,
+          "name": "contextualized_path.recommendation_consistency_rate",
+          "notes": "95% case-cluster bootstrap CI: resample case_id clusters with replacement (2,000 repetitions; seed=20260916) so KR/EU/US scenarios from one case are not treated as independent observations.",
+          "unit": null,
+          "value": 0.2857142857142857
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 21,
+          "name": "contextualized_path.d_lens_abs_delta_median",
+          "notes": null,
+          "unit": null,
+          "value": 0.222222
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 1,
+          "name": "scenario_provenance.scenario_set_version_count",
+          "notes": null,
+          "unit": null,
+          "value": 1
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 1,
+          "name": "scenario_provenance.scenario_manifest_hash_count",
+          "notes": null,
+          "unit": null,
+          "value": 1
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 7,
+          "name": "scenario_provenance.case_contract_details",
+          "notes": null,
+          "unit": null,
+          "value": [
+            {
+              "candidate_action_ids": [
+                "PMT_NLP_LLM"
+              ],
+              "case_id": "main__ddos__nlp_llm",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_ANOMALY_DETECTION"
+              ],
+              "case_id": "main__malware__anomaly_detection",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_CRYPTOGRAPHY"
+              ],
+              "case_id": "main__ransomware__cryptography",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_CRYPTOGRAPHY"
+              ],
+              "case_id": "main__insider_threat__cryptography",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_IDS_IPS"
+              ],
+              "case_id": "main__brute_force__ids_ips",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_ACCESS_CONTROL"
+              ],
+              "case_id": "main__targeted_attack__access_control",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            },
+            {
+              "candidate_action_ids": [
+                "PMT_HTTPS"
+              ],
+              "case_id": "main__session_hijacking__https",
+              "jurisdictions": [
+                "EU",
+                "KR",
+                "US"
+              ],
+              "reference_profiles": [
+                "CIS_IG2"
+              ],
+              "scenario_count": 3
+            }
+          ]
+        },
+        {
+          "ci_high": null,
+          "ci_low": null,
+          "n": 7,
+          "name": "scenario_provenance.scenario_contract_violation_count",
+          "notes": null,
+          "unit": null,
+          "value": 0
+        }
+      ],
+      "name": "Context contribution",
+      "provenance": {
+        "components": [
+          {
+            "name": "jurisdiction",
+            "provenance": {},
+            "scope": "7 cases x KR/EU/US under fixed CIS IG2 reference profile",
+            "status": "EVALUATED"
+          },
+          {
+            "name": "contextualized_path",
+            "provenance": {
+              "axis_name": "C2_CONTEXTUALIZED_PATH_COMPARISON",
+              "bootstrap": {
+                "alpha": 0.05,
+                "cluster_key": "case_id",
+                "method": "case_cluster_bootstrap",
+                "repetitions": 2000,
+                "seed": 20260916,
+                "unique_case_count": 7
+              },
+              "variant_ids": [
+                "CONTEXT_FREE_STAGE4_V1"
+              ]
+            },
+            "scope": "21 variant-scenario comparisons",
+            "status": "EVALUATED"
+          },
+          {
+            "name": "scenario_provenance",
+            "provenance": {},
+            "scope": "main contextual scenario manifests",
+            "status": "EVALUATED"
+          }
+        ]
+      },
+      "scope": "Observed jurisdiction sensitivity plus a context-free versus contextualized decision-path comparison; because the contextual path also changes the Stage 3/4 evidence and validation contract, this is not interpreted as a single-factor causal context-only ablation.",
+      "status": "EVALUATED"
+    }
+  ],
+  "created_at": "2026-09-20T07:15:02.792206+00:00",
+  "evaluation_state_sha256": "df1675e9c4a3c4309fbf619cb91b9c3df316f93183cb09a4690d5053ec83e2f3",
+  "experiment_manifest_sha256": "72fe270b892ee54cbc2ee3f99b6de96b5934f24dec84d0fd2465d5d9cea67b84",
+  "experiment_manifest_version": "stage7-experiment-manifest-v13",
+  "grounding_audits": [
+    {
+      "audit_id": "5eb5b36e36e69bb36785f0ae",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_02_669F59880AF52688"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited DBIR chunk directly reports 1,997 basic web application attack incidents and 881 with confirmed data disclosure. It also states that threat actors continue to take advantage of assets with default, simplistic, and easily guessable credentials via brute forcing, which directly supports the claim's wording.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "e3f4b88259d28675b8207680",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_03_F2B2EBA86BEEFDC5"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited Mandiant M-Trends 2024 record directly lists Brute Force among the 2023 initial infection vector categories, together with Exploit, Phishing, Prior Compromise, and Stolen Credentials.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "4b8d40edba84c82e29dc7e16",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_03_06E6ABC42DA3AC77",
+        "E_03_F13F996D181217BA"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited Mandiant M-Trends 2023 records directly support the claim. One record defines 'Destructive Operations' as an assessed threat-group goal and gives DDoS as an example. Another record describes hacktivist personas/self-proclaimed hacktivist groups claiming DDoS attacks, website defacements, and hack-and-leak operations. The claim preserves the source, scope, and descriptive nature of the evidence.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "1d395277f588c735e6321a8f",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_08_3453329306E149CB"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA KEV evidence directly states that CVE-2023-44487 is an HTTP/2 rapid reset vulnerability that allows a distributed denial-of-service attack, and the supplied evidence record is explicitly typed as a confirmed exploitation record from CISA KEV. The counter-evidence is unrelated publication-trend context and does not contradict the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "ab5a9abc5eaedd0c760d3e65",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_20_913B6F999A0F1458"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-161 Rev.1 C-SCRM chunk directly states that predefined frequencies for data collection should be less predictable in order to reduce the risk of an insider threat bypassing security mechanisms, within the system component inventory automated maintenance context.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "126642e3f6b057df490d26a8",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_15_0A98378FC609EF7E"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST AI 100-2 record explicitly states: 'Unlike cryptography, there are no information-theoretic security proofs for the widely used machine learning algorithms.' This directly supports the claim that NIST AI 100-2 contrasts widely used machine learning algorithms with cryptography by stating that the machine learning algorithms lack information-theoretic security proofs.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "99abfe857bd45b5667966c4b",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_08_197B243FDF3AA15A",
+        "E_08_FEE46219AABDA967"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "Both supplied records are CISA KEV confirmed-exploitation records. The first directly ties CVE-2017-8540 to Microsoft Malware Protection Engine, and the second directly ties CVE-2013-7331 to Internet Explorer and states the vulnerability could allow an attacker to detect anti-malware applications. The claim's characterization of the latter as 'allowing detection of anti-malware applications' is a capability description supported by the record's 'could allow an attacker to detect anti-malware applications', without adding actual exploitation of that specific capability.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "0c8cc098690745c43d3d25db",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_33_D28EA285670B0D01"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited Crossref evidence explicitly states that records first deposited on or before 2024-12-31 show annual publication counts of 1431 in 2021 and 2496 in 2024, with counts increasing across the intervening years, and an OLS slope of 366.20 works/year. This directly supports the claim's scope, temporality, population, numerical values, and positive trend. No material contradictory evidence is supplied.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "b3efc19da6271b45041e6b95",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_03_0BAA7B22596028F4"
+      ],
+      "direct_support": false,
+      "overgeneralization": false,
+      "rationale": "The cited M-Trends 2023 passage directly supports the 2022 global median dwell time of 16 days, the decrease from 21 days, the 9-day median dwell time for ransomware intrusions in 2022, and the statement that ransomware is credited as a driving factor in reducing dwell time. However, the passage attributes the prior 21-day figure to the M-Trends 2022 report, not explicitly to 2021. Therefore, the claim’s specific attribution of the 21-day baseline to 2021 is not directly supported by the supplied evidence.",
+      "unsupported_specificity": true,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "ee4dada2caa3aa77e26626fe",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_23_AC2A498B747552DF"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA CPG letter directly states that the Cross-Sector Cybersecurity Performance Goals address the need for organizations to identify and prioritize important cybersecurity practices and secure adequate resources. It frames this challenge in the context of national cyber threats including ransomware and describes organizations across the spectrum, including state and local governments, critical infrastructure entities, and hospitals, which supports the claim's inclusion of healthcare as an in-scope population.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "d6d73b8a32d3d402624b99c7",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_04_B9A3190D9CA152A3"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited IBM X-Force 2024 evidence directly supports each material part of the claim: security misconfigurations were the most observed OWASP web application security risk in penetration-testing findings; allowing concurrent user sessions could weaken MFA through session hijacking; and exploitation of public-facing applications was identified in 29% of incidents, slightly higher than in 2022.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "03a662d3d97fb26a9d773f6a",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_10_AC5A58AF5E015229",
+        "E_04_B9A3190D9CA152A3"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "E_10_AC5A58AF5E015229 directly reports a cross-site scripting vulnerability in Siemens SCALANCE switches that could allow session cookie stealing and session hijacking. E_04_B9A3190D9CA152A3 directly reports web-application security misconfiguration findings, including allowing concurrent user sessions, that could weaken MFA through session hijacking. The claim only states that the supplied threat records report these mechanisms and does not add unsupported prevalence, causal effectiveness, or deployment-maturity claims. The supplied counter-evidence records do not materially conflict with the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "3bb9518665f7f89a093a9574",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_25_8F4D567857A97316"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-53 Rev. 5 glossary record directly supports the claim by defining access control in terms of granting or denying specific requests for information and related information processing services and entry to physical facilities, and by defining advanced persistent threat as a sophisticated, well-resourced adversary that uses multiple attack vectors repeatedly over an extended period.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "f29c668f9951aec9893f1ff3",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_33_F4FC25CE90264812"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited Crossref record reports annual counts 2023=1115 and 2024=1070, while also reporting a positive OLS slope of 20.000000 works/year. This directly shows that the 2024 count is lower than the 2023 count and that a positive trend slope can coexist with a year-over-year decline, so it directly supports the claim that the positive OLS slope does not imply a monotonic year-over-year increase.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "d29c53947467a9f1e427c237",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE16_E455D97291B61E2A"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The CISA record directly supports the claim: it states that porting logs into one solution eliminates the time and effort of manual log reviews, that a SIEM can integrate IDS/IPS information, and that a SIEM's analysis engine makes review of functional, operational, and security data cheaper and easier. The counter-evidence record discusses IDPS update testing and administrator skills, but it does not materially contradict or limit the claim as written.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "fb9703f745a9508198cc781a",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE07_86DF83870E0A768D"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited evidence directly supports the benefit claim: it states that organizations seek automated solutions to lower costs, enhance efficiency, and improve the reliability of monitoring security-related information, and that automation may reduce time security professionals spend on redundant tasks. The claim preserves the modal strength by using “can,” does not assert exact costs, budgets, staffing counts, or universal effectiveness, and its IDS/IPS scope is consistent with the supplied evidence record’s PMT mapping. The counter-evidence record discusses IDPS testing and skill requirements but does not materially contradict the claim’s limited benefit statement.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "a48ca2e98253cc1ac88dca14",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE04_0B77B88875745973"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST IDPS guidance directly supports each enumerated practice: considering multiple IDPS technology types, creating separate protected IDPS user/administrator accounts, protecting IDPS management communications, ongoing monitoring and verification, regular vulnerability assessment, testing and deploying updates, and backing up configuration settings.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "74ce3d548bf6d00bc1bca2cb",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CIS IG2 context record directly supports the claim’s neutral-context description. It states that CIS Implementation Group 2 describes an enterprise responsible for managing and protecting IT infrastructure across multiple departments, that such enterprises may face regulatory burdens, and that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The claim restates these context attributes without adding unsupported numerical, product, budget, staffing, legal-applicability, or deployment-specific details. The supplied counter-evidence records concern NIST ISCM and IDPS guidance and do not materially contradict the CIS IG2 context description.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "dcac9dd454f2d962d847b265",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE05C_2D35A464AD6F0FAE"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied evidence record AE05C_2D35A464AD6F0FAE directly states that distributed low-rate brute-force attacks can remain below per-host login thresholds and evade ordinary IDS/IPS security rules, and that TOPASE was proposed because existing countermeasures were ineffective against this disciplined-IP pattern. The claim preserves this scope, including the qualifiers 'distributed low-rate,' 'per-host login thresholds,' 'ordinary IDS/IPS security rules,' and 'disciplined-IP pattern,' so it does not overgeneralize to all brute-force attacks or all IDS/IPS controls. No unsupported numbers, products, versions, or deployment specifics are added. The counter-evidence record shows IDS-related components can be implemented for brute-force defense, but it does not materially contradict the narrower limitation described in the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "a783b0313a4f4e924cda16ae",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited context evidence directly identifies CIS Implementation Group 2 as the enterprise profile and states that it describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The supplied counter-evidence is about IDS/IPS brute-force limitations and does not materially contradict this neutral context statement.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "68470399b4707320c7ca61e9",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NCSC record directly states that following secure-by-design principles requires significant resources throughout a system’s life cycle. The cited NIST AI RMF record directly states that AI risk management involves gauging resources needed, such as staffing and funding. Together these support the general financial/adoption burden or constraint described in the claim. The supplied counter-evidence records are topically relevant but do not materially contradict or materially limit the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "05858c64c0692a996eda26b3",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "DE_DE15_1AEC6DDD669756FF directly states that following 'secure by design' principles requires significant resources throughout a system's life cycle, supporting the general resource/burden part of the claim. DE_DE01_E85CB6412740EF20 directly states that AI risk management involves gauging needed resources, explicitly including staffing and funding, supporting the financial/resourcing part of the claim. The supplied counter-evidence discusses security practices and possible automation but does not materially contradict the general resource requirement. The claim remains general and does not add unsupported exact numbers, budgets, staffing counts, or product-specific details.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "1f8a14a62e9488408e8323b1",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE15_271AFADC7B3D5999"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited UK NCSC guidance directly supports that model cards, data cards, and SBOMs are useful documentation structures and that comprehensive documentation supports transparency and accountability. It does not explicitly state that these practices support institutional auditability, so the claim makes an inferential extension beyond the cited evidence. The NLP/LLM population is not the main issue, but the institutional auditability conclusion is not directly grounded in the supplied text.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "683e5c93666cbca5adc08944",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE02_007F05150CB46131"
+      ],
+      "direct_support": true,
+      "overgeneralization": true,
+      "rationale": "The supplied evidence directly supports that the Generative AI Risk Profile identifies a requirement to report GAI incidents in compliance with legal and regulatory requirements and provides sector-specific examples such as HIPAA/OCR and NHTSA. However, the record does not explicitly state that this constitutes an institutional feasibility challenge or that it adds a feasibility burden; the claim extends the source by characterizing the compliance requirement as challenging institutional feasibility.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "9d3303175740f14ca700879b",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The two supplied AI deployment guidance records directly describe general AI/GAI monitoring, provenance, update management, and secure operation practices. Neither record establishes action-specific deployment maturity for NLP/LLM DDoS controls; their content is general AI/GAI deployment guidance rather than DDoS-specific control maturity evidence.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "10cc3501b7ef5ad755883fab",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited guidance records explicitly describe monitoring, provenance, update management, and secure operation/maintenance practices for AI/GAI systems. They are generic deployment and operations guidance and do not provide action-specific deployment maturity evidence for NLP/LLM DDoS controls. The counter-evidence DDoS action records do not contradict the claim because they are not the cited deployment guidance records and they do not establish turnkey production deployment maturity.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "304079d378e0d73052a6cfcc",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied records directly support the neutral context statement. The TLS/SSL evidence describes SSL/TLS as a client/server protocol that provides application-level confidentiality, integrity, and authentication through encryption, is optionally protected from replay attacks by MAC, and uses certificate-based authentication in server and mutual authentication cases. The CIS IG2 context record directly supports the described reference-enterprise profile: a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, possible regulatory burdens, and IG2 safeguards addressing increased operational complexity, some of which depend on enterprise-grade technology and specialized expertise. The statement does not assert a financial, ROI, budget, staffing, or adoption-outcome conclusion, and the supplied records contain no such determination, so the neutral claim that they add context without independently determining financial/adoption direction is supported.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "c85adafa33f45fca4f673149",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE18_CDC975345637E009"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The NIST TLS evidence directly supports that certificate-based TLS client authentication involves X.509 path validation and a trust anchor store. The DHS/CISA IPSec evidence directly supports that transport mode has less overhead than tunnel mode because it does not add an additional per-packet header. Together they support feasibility as implementation enablers and an operational resource-efficiency consideration. The supplied records do not quantify cost savings, ROI, payback period, or budget fit, and the counter-evidence does not materially contradict the claim’s scope.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "3605d90189c7895fa7c8f240",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4",
+        "E_22_C239828119FC69CD",
+        "E_26_92664A4339CF24C9"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The CIS IG2 context record directly supports the described multi-department enterprise IT environment, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise. The insider-threat guidance records directly support organization-wide program practices and responsible personnel. The cited records do not establish jurisdiction-specific legal feasibility, and the only quantitative insider-threat-related item is a cited cost-savings report rather than a direct measured effectiveness finding for the described practices. The supplied counter-evidence records do not materially contradict this neutral context.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "2865aaa661efa4b278b069f6",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE09_6719137897848A9E"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-131A Rev. 2 record explicitly assigns disallowed, deprecated, and acceptable statuses to specific cryptographic algorithms and states that three-key TDEA encryption is disallowed after December 31, 2023. This directly supports the claim that, if the guidance applies or is adopted, it creates an algorithm-selection and transition condition for the 2025-2027 timing window. The counter-evidence records are topically relevant to cryptography but do not materially contradict this conditional compliance framing.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "0f4a8e1fc04aa6a0a6427548",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE04C_F084D028D8E2AE06"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The claim restates the supplied action-specific limitation record almost verbatim, preserving its scope, qualifiers, and causality. It does not extend beyond the cited record, and the supplied counter-evidence does not materially contradict the limitation; it only indicates that a specialized cryptographic construction can be engineered for the threat model.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "afcd3fb6d45f63784bde6652",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE04S_2674461DBC059388"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied action-support evidence record explicitly states that Securecipher is designed to use cryptographic protection against insider-threat data leakage, includes context-based key generation and file marking, and that the evaluated prototype passed most of the reported NIST randomness tests. The claim closely paraphrases these facts and preserves the record's scope, including the qualifier 'most of the reported NIST randomness tests.' The counter-evidence record limits conventional encryption by noting dependence on design and insider-access model, but it does not materially conflict with the narrower claim that a cryptography-based prototype can be engineered for this threat model.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "119c2e28433600e594ef2df2",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE06_0380E777894ACF9A",
+        "DE_DE05_105D0030778F41BC"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "DE_DE06_0380E777894ACF9A directly supports that a behavior anomaly detection approach was configured to receive packet streams in a test context. DE_DE05_105D0030778F41BC directly supports the stated notes about commercially available products under collaborative agreements, absence of product endorsement or compliance guarantee, and the need for organizations to identify products that integrate with existing tools, processes, and infrastructure. The supplied records do not contain cost, budget, payback, or staffing quantification, and the counter-evidence records do not materially contradict this characterization.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "6dd8454501dc5450211d00f6",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CIS IG2 context record directly supports the claim's profile attributes: CIS IG2 describes enterprises with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles, possible processing of sensitive information, possible regulatory burdens, increased operational complexity, and some reliance on enterprise-grade technology and specialized expertise. The claim's neutral-context framing is consistent with the record's context definition role. The counter-evidence records concern ICS anomaly detection, SIEM, and IDPS guidance and do not materially contradict this organizational context.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "fa15125c4fd5e009d32ac362",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE04_0B77B88875745973"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST IDPS guidance explicitly identifies administrative and organizational controls, including separate user/administrator accounts, restricted network access to IDPS components, protected management communications, ongoing IDPS component security, periodic configuration backups, and organizational consideration of multiple IDPS technology types for more comprehensive detection. This directly supports the claim as written.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "38b3dd72abc2df4d8df64a0e",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_15_D3680C31BEE2C0F8"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied NIST AI 100-2 excerpt directly states that poisoning unsupervised learning models has been shown for clustering used in malware classification and network traffic anomaly detection. The same excerpt also directly documents evasion attacks for malware classification and evasion attacks in network intrusion detection. The supplied counter-evidence records are topically related to anomaly detection/IDS but do not materially contradict this document-summary claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "5f1118667f7d2b6ab1863d8d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE02S_61C8065AA576E7C5"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited evidence directly states that AProctor evaluated anomaly-oriented malware detection on Android, reported high malware detection rates, detected temporally different and previously unseen APKs, and demonstrated that anomaly-style behavioral detection can be implemented as an on-device malware defense. The claim preserves the same scope, population, and modality without adding unsupported numbers, vendor/version details, deployment guarantees, budget, staffing, or universal-effectiveness language. The counter-evidence notes resource-related deployment limitations, but it does not materially contradict the stated feasibility finding, and the claim does not assert that no limitations exist.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "00c23ab01d183e24f0e69ad4",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": false,
+      "overgeneralization": false,
+      "rationale": "The cited evidence directly supports the claim's core propositions: the CIS IG2 context profile is described as applying to an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments, and it states that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure. The claim's wording is materially narrower or equivalent to the evidence rather than broader, and the supplied counter-evidence records concern a separate malware-detection action and do not contradict or materially limit this neutral context statement.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "75b81b7e4f5bad87c91a2756",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA CPG record directly states the enumerated adoption expectations and feasibility qualifiers: properly configured and up-to-date SSL/TLS for data in transit when technically feasible, identifying and updating outdated or weak encryption, considering post-quantum cryptography implications, scope covering all IT traffic and remote OT assets, and OT encryption used when feasible to minimize latency and availability impact. The supplied counter-evidence discusses IPSec and TLS implementation details but does not materially conflict with or limit the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "619001888084272771cee54d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE18_CDC975345637E009",
+        "DE_DE10_A086B3193CD6440B"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The two decision-evidence records directly support the technical feasibility details in the claim: the IPsec record states that transport mode has less overhead than tunnel mode and that this overhead is not necessary for node-to-node communications, while the NIST TLS record supports certificate-based client authentication, path validation, revocation-status validation, and a minimum client-key security level of at least 112 bits. However, the supplied records do not document a financial pathway, cost implication, or financial adoption consideration. The claim’s “financial/operational pathway” characterization therefore broadens the evidence beyond what is supplied, while the specific operational and implementation mechanisms are supported.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "bf13f97cfab722c18a668a6d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE08_031120C53EF050F3"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-57 Part 1 Rev. 5 record explicitly describes key-management accountability and traceability controls, including identification of entities authorized to generate, access, destroy, or otherwise use keys; recording who or what performs key actions; auditing logs for security violations; and traceability for plaintext key access, with traceability also described for ciphertext keys and key shares. This directly supports the claim’s enumerated governance-control content. The counter-evidence record concerns cryptographic algorithm approval status and does not contradict the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "23ae3bb46de921586783159d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE08_031120C53EF050F3"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-57pt1r5 record directly describes accountability/traceability controls for cryptographic keys, including identifying authorized entities, recording key actions, auditing logs, and tracing access to plaintext keys, ciphertext keys, and key shares to accessing entities. This supports the claim's feasibility-relevant governance description. The counter-evidence is topically related to cryptographic algorithm approval but does not materially contradict this key-management traceability claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "ae93dcbbe70db82a23c56195",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE03C_E5522A35F4981027"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited evidence record AE03C_E5522A35F4981027 directly supports the claim's two material propositions: ransomware can deliberately alter observable entropy patterns to evade detectors relying on high entropy, and some cryptography-related detection approaches are not universally robust and impose nontrivial computational cost. The counter-evidence record concerns a different cryptographic-analysis technique and does not materially contradict the claim's limited scope.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "d18bb73cc49be70b8d3c3c6d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA CPG record directly supports the claim's scope and wording: it identifies a strong and agile encryption recommendation, states that properly configured and up-to-date SSL/TLS should be used for data in transit when technically feasible, and directs organizations to identify outdated or weak encryption, update to sufficiently strong algorithms, and consider post-quantum implications.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "b293304aed7d6cf41cc2e12d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE14_EDCA207577B4607A"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SSL VPN guidance directly states that SSL VPN performance involves session establishment time affected by back-end authentication demand and certificate key size, that SSL encapsulation can cause packet fragmentation and MTU-related issues, and that addressing performance problems can involve hardware upgrades/replacement, SSL accelerators, or reducing processing demands such as simultaneous users and encrypted application traffic.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "9a1beaf9e4aa909433fccf5d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE18_CDC975345637E009"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited decision-evidence record directly states that transport mode has less overhead because it does not add an additional header to each packet to describe the tunnel. The claim preserves this as a possible resource-efficiency consideration and explicitly does not assert quantified HTTPS-specific cost savings. The supplied counter-evidence discusses SSL VPN performance factors but does not materially conflict with the narrower transport-versus-tunnel overhead statement.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "791805b49e7c03507b6dfa4c",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "CTX_CIS_IG2_9F94838146D9C3A4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CIS IG2 context profile directly supports the stated enterprise description, including personnel managing and protecting IT infrastructure across multiple departments with differing risk profiles, processing sensitive information, possible regulatory burdens, and dependencies on enterprise-grade technology and specialized expertise. The evidence record is a context standard profile, supporting the claim’s framing that it supplies context only rather than establishing jurisdiction-specific regulatory applicability or a feasibility direction. The supplied counter-evidence records are topical but do not materially contradict the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "b761d3779539c2398cc57aba",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE10_4BE87A62A6676C99"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited evidence directly supports the enumerated normative requirements: HTTPS-only cookie accessibility, no authenticated fallback from HTTPS to HTTP, session identifier verification, Encrypt-then-MAC support when CBC cipher suites are negotiated, prohibition of truncated MAC tags with variable-length padding, and TLS 1.3 PSK exchange-mode extension requirements. However, the evidence does not state or directly support the broader inference that these records 'challenge GENERAL institutional feasibility' or establish a generalized increase in institutional implementation/compliance burden. The claim is therefore supported only for the narrower set of specific requirements, with the general feasibility-challenge characterization as an unsupported overextension. The counter-evidence does not materially contradict or materially limit the claim as written.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "a6e7b21facadaf3cf7936516",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied NIST SSL VPN case-study chunk directly supports the claim’s factual core: it presents an SSL VPN planning and implementation case study, explains architecture selection over alternatives, discusses design, and provides implementation-prototype configuration examples using commonly available equipment and software. The record also explicitly frames the case study as illustrative rather than a product endorsement and warns against deploying the sample entries as-is, supporting the characterization of the record as supplementary deployment-maturity context. Its scope is SSL VPN remote-access architecture and implementation, not HTTPS-specific session-hijacking mitigation; the separate counter-evidence records address HTTPS/TLS session-hijacking controls and limits but do not make this SSL VPN case study direct direction-carrying evidence for HTTPS as session-hijacking mitigation.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "a3d595cd3a710a90a699b411",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE07S_C1EF15B9628497F0"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited action-specific evidence directly states that HTTPS/TLS is supported as an important transport-layer control against interception-oriented session hijacking within a broader session-protection strategy. The claim preserves that scope and does not assert universal or standalone effectiveness. The counter-evidence limits HTTPS to not covering all session-hijacking paths, but this is consistent with the claim's qualified, interception-oriented framing and does not materially undermine it.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "0585dc143edd49921042122c",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE12_6509E7A6D8467E38"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-207 chunk directly describes implementation considerations for zero-trust candidate solutions: client-asset installation constraints, resource location, logging support, protocol/application support, subject behavior changes, and pilot programs. It does not itself provide a financial or adoption direction such as cost, ROI, budget, staffing, or adoption benefit. The counter-evidence records discuss cost and adoption barriers in related guidance, but the claim is scoped to the cited guidance acting 'by itself' and does not overextend to all supplied guidance.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "e2345a751101782a98c93d33",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE11_1ECA9795EEF89DFA",
+        "DE_DE17_429D17A4E11A72C3",
+        "DE_DE12_CBF6FBB1313D37AF"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "Each material clause of the claim is directly supported by the supplied evidence: DE_DE11_1ECA9795EEF89DFA states that ABAC development, deployment, and maintenance may exceed benefits, that application retrofitting costs are separate, and that attribute/policy management can offset maintenance savings. DE_DE17_429D17A4E11A72C3 states that zero trust implementation may take years and initially add costs. DE_DE12_CBF6FBB1313D37AF states that service-provider migration can involve extreme cost or a long transition program. The claim preserves the source modality ('may', 'can', 'initially') and does not add unsupported exact numbers, vendors, versions, legal applicability, or causal strength.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "7583aec13de1a53b424a1180",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST SP 800-63B record directly states normative session and token-handling requirements: authenticated protected channel transport, prohibition of insecure fallback, session timeout and non-acceptance, session-identifier verification, restrictions on placement in insecure locations, cookie security requirements, and a prohibition on interpreting OAuth access tokens as subscriber presence without other signals. The supplied counter-evidence records concern zero trust and ABAC topics and do not materially contradict these session-management requirements.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "0f7bf7d63cce0c60fd4a588a",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE12_E6F93E4AB8722379",
+        "DE_DE17_567DDA7CFBC62829",
+        "DE_DE11_1E4AAE06CC3795D7"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied records directly describe the institutional mechanisms named in the claim. NIST SP 800-207 describes the policy enforcement point as forwarding requests and receiving policy updates in the access-control path, and describes the industry compliance system as providing policy rules used by the policy engine for access decisions. CISA ZTMM v2 describes governance of cybersecurity policies, procedures, and processes and the need to monitor and assess security capabilities. NIST SP 800-162 describes ABAC policy alignment, consistent attribute values, attribute lifecycle management, and procedures for access failures. The supplied counter-evidence on session management is topically related but does not materially contradict the claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "fa545d68952239ef819cceea",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE17_429D17A4E11A72C3"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA Zero Trust Maturity Model chunk directly supports the claim. It states that zero trust may require a change in an organization’s cybersecurity philosophy and culture, that the path to zero trust is an incremental process that may take years to implement, and that initial implementation of required capabilities and services will often lead to additional costs. These points match the claim’s source attribution, scope, modality, and temporal framing. The supplied counter-evidence records concern a separate APT/zero-trust access-control study and do not materially contradict this CISA guidance statement.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "14d3a3f1368851ba3d83e27d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE06S_407DDF87C86BB41B"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited evidence directly matches the claim's core proposition: an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions is reported to improve response to sophisticated multi-stage threats and supports adaptive access control as a targeted-attack defense mechanism. The counter-evidence states that effective access control depends on continuously updated threat/risk context rather than control category alone, but the claim does not assert that the control category alone is sufficient and is framed around a risk-model-integrated adaptive control approach, so no material contradiction or omitted limitation is present.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "f87b4cb8e6c96df1eb225ed5",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA/ICS-CERT evidence directly states that using IDS is not a “silver bullet,” that an IDS is more of a warning or audit system, and that it often takes more than one method or device to provide the most complete information about an event. This matches the claim’s scope, polarity, and attribution to CISA. No supplied counter-evidence materially contradicts or omits a limitation that would make the claim misleading as written.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "48f1a2efc1309e338cb5d5bf",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_02_669F59880AF52688",
+        "E_03_F2B2EBA86BEEFDC5"
+      ],
+      "direct_support": false,
+      "overgeneralization": false,
+      "rationale": "The cited DBIR and Mandiant records contain explicit temporal incident-count and frequency material relevant to brute-force-related threat activity: DBIR reports 1,997 incidents and 881 confirmed breaches for basic web application attacks, and Mandiant reports 2023 initial infection vector percentages including brute force. This materially conflicts with the claim that the threat direction lacks direct temporal incident-count/frequency evidence. The claim also adds unsupported specificity by invoking undefined forecast terms and adjudication status, such as 'NoI direction', 'exploitation-signal slot', and 'after adjudication', none of which are stated in the supplied evidence records.",
+      "unsupported_specificity": true,
+      "verdict": "CONTRADICTS"
+    },
+    {
+      "audit_id": "d291f0bf964d25d8edf74801",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "AE01S_6E6099FA4C2D13D4"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited evidence directly states that direct DDoS experiments compared large language models with a conventional neural-network baseline, that fine-tuned LLM variants detected DDoS traffic on CICIDS 2017 and an Urban IoT dataset, that fine-tuned variants reported roughly mid-90-percent accuracy, and that they outperformed the compared MLP. The claim preserves the bounded, reported, experimental scope and does not introduce unsupported effectiveness, causality, deployment, or population claims. The supplied counter-evidence records concern secure AI development guidance and do not materially contradict this claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "b0e78d869d055601d2bf5ca8",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE01_E85CB6412740EF20"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The NCSC evidence directly states that following secure-by-design principles requires significant resources throughout a system's life cycle. The NIST AI RMF evidence directly identifies staffing and funding as examples of resources needed to achieve AI risk management goals. No supplied counter-evidence materially contradicts or limits these resource-burden statements.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "3a4ba60317fc1613b58b401d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "DE_DE18_CDC975345637E009",
+        "E_23_534489D29C38B327"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited evidence directly supports the enumerated technical descriptions: TLS/SSL protocol behavior, IPSec transport/tunnel mode behavior, and CPG guidance for agile encryption, weak-crypto remediation, and post-quantum planning. However, the supplied records do not establish that these records are specifically 'deployment-maturity' records; that qualifier overgeneralizes the evidentiary basis.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "20f2364bf146979f7158ec80",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_20_913B6F999A0F1458"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited NIST C-SCRM record explicitly recommends that predefined data-collection frequencies be less predictable to reduce insider-threat risk, directly supporting the claim that it provides operational-control guidance. The supplied record contains no threat-trajectory analysis and no measured or quantitative risk-reduction value, so the claim’s limitation is supported by the evidence.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "aa944de0d9033d264e25f196",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE16_CEA1C38E613068F8",
+        "DE_DE16_E455D97291B61E2A",
+        "E_20_BF167BDA75891A3B",
+        "E_15_D3680C31BEE2C0F8"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The supplied evidence directly supports several components of the claim: DE_DE16_CEA1C38E613068F8 supports anomaly-detection limitations including false-negative risk, sensitivity, subjectivity, and the need to trust the system completely; DE_DE16_E455D97291B61E2A supports not assuming vendor security practices and addressing security requirements early in procurement; and E_20_BF167BDA75891A3B supports supply-chain/maintenance-tool controls involving authorization, tracking, auditing, and function limitation. However, E_15_D3680C31BEE2C0F8 only documents that poisoning attacks have been shown for unsupervised learning/clustering used in malware classification and network traffic anomaly detection. It does not directly support the claim’s stronger framing of “ML-based clustering governance to address” that risk. Therefore the claim is partially supported but overextends the ML-clustering evidence into a governance-control requirement not present in the supplied records.",
+      "unsupported_specificity": true,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "6773d203e0dfb9bd7c84cf50",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE04_C6F46FCDE66BFAC7"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited NIST SP 800-94 evidence directly supports that IDPS implementation, operation, and maintenance require or involve system administration, network administration, information-security knowledge, IDPS principles, understanding of monitored protocols, applications, and operating systems, update testing, and possible programming skills. It also supports vendor training as a method for gaining product-specific knowledge. However, the claim overextends by stating that adoption burden is 'the main challenge,' which the cited evidence does not establish. It also strengthens several items into requirements that the source presents as recommended, optional, or method-specific, such as incident-response policy understanding and vendor training. No counter-evidence materially contradicts the claim as written.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "daa74219d8b3a62499b30064",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE18_EAA59A9B7CEAD276",
+        "DE_DE18_CDC975345637E009"
+      ],
+      "direct_support": false,
+      "overgeneralization": false,
+      "rationale": "The two cited DHS primer records directly support the implementation-context portions: TLS/SSL algorithm negotiation and key-exchange phases, and IPSec transport versus tunnel mode trade-offs. However, the supplied records do not explicitly establish the final negative limitation that the guidance does not establish compatibility with the exact enterprise architecture; that clause is not directly grounded by an explicit statement in the cited records. No supplied counter-evidence materially contradicts the claim.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "f01fcccaf6c1bb412550ec98",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_23_534489D29C38B327"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The cited CISA CPG chunk directly supports the claim by describing a recommended encryption pathway: use properly configured and current SSL/TLS where technically feasible, plan to identify and update outdated or weak encryption, consider post-quantum implications, and deploy effective encryption to maintain confidentiality and integrity for IT and OT traffic where feasible. No supplied counter-evidence materially contradicts or omits a necessary limitation.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "8e0f564ddbde3fe7aa9424f5",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE14_5FC183B8D7DD961A"
+      ],
+      "direct_support": false,
+      "overgeneralization": false,
+      "rationale": "The cited case-study evidence directly supports the portion of the claim about the IPsec remote-access context requiring significant IT labor to install and support client software. However, the evidence does not explicitly establish the broader meta-claim that the case study does not by itself create a directional financial or adoption conclusion; it only shows that this excerpt is contextual and does not contain such a conclusion. The supplied counter-evidence contains no material contradiction.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "512423fa6183fd7378d0a3ee",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE10_4BE87A62A6676C99"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited NIST SP 800-63B record directly supports the session-cookie HTTPS restriction, the prohibition on falling back to insecure transport after authentication, and the requirement that session identifiers be verified. The cited NIST SP 800-52 Rev. 2 record directly supports the TLS implementation constraints for Encrypt-then-MAC with CBC negotiation, the restriction on truncated MAC tags with variable-length padding, and the PSK exchange-mode requirements. However, the claim also asserts that these compliance constraints increase implementation and integration burden and that this grounds a challenge direction. The supplied records state the normative requirements but do not directly establish the burden/increase framing, so the claim overextends the directly evidenced proposition.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    },
+    {
+      "audit_id": "ef1b13033c2737554d05bbf1",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "E_03_F0CD4F1DE74CC7AD"
+      ],
+      "direct_support": true,
+      "overgeneralization": false,
+      "rationale": "The supplied Mandiant evidence explicitly states that Mandiant identified opportunistic compromise being leveraged as a source of targeted attack activity in 6% of intrusions in 2022, compared with 4% in 2021 and 3% in 2020. This directly supports the claim that the Mandiant record reports shares of intrusions associated with leveraged compromise/targeted-attack activity, and the denominator is intrusions rather than targeted-attack incident counts or frequency. The supplied counter-evidence records are implementation/governance sources and do not materially contradict this claim.",
+      "unsupported_specificity": false,
+      "verdict": "DIRECT_SUPPORT"
+    },
+    {
+      "audit_id": "ca7402ce3637999a357f238d",
+      "contradictory_evidence_omission": false,
+      "decisive_evidence_ids": [
+        "DE_DE13_055FC5E35FA61DD5"
+      ],
+      "direct_support": false,
+      "overgeneralization": true,
+      "rationale": "The cited NIST SP 800-63B excerpt directly supports several mandatory session and token handling controls: authenticated protected transport, session timeout and non-acceptance after defined periods, no fallback to insecure transport, session-identifier verification, core cookie restrictions, and a mandatory rule that OAuth access-token presence must not be interpreted as subscriber presence. However, the claim overgeneralizes by describing the full set as mandatory. Some cited controls are phrased as SHOULD rather than SHALL, including avoiding insecure local storage and certain cookie attributes such as HttpOnly or expiration timing. The excerpt also does not explicitly require “invalidation” beyond timeout-based non-acceptance. Therefore the evidence supports a narrower subset of the claim’s modality and scope.",
+      "unsupported_specificity": false,
+      "verdict": "PARTIAL_SUPPORT"
+    }
+  ],
+  "harness_version": "stage7-validation-harness-v12",
+  "input_fingerprint": "c83a6aa11c9d274df3176f467cc01436ebeedcdc9cf8781c7f9218fda7e6403a",
+  "main_case_count": 7,
+  "main_scenario_count": 21,
+  "manual_audit_sample_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage7\\manual_audit\\stage7-manual-audit-sample-v1.json",
+  "mediator_audit_sample_path": "C:\\Users\\Lab-AXIS\\Desktop\\Haseung Ryu\\Context-aware Cyber Foresight with Multi-agent Critique and Strategic Uncertainty\\Multi-Agent\\Results\\Stage7\\manual_audit\\stage7-mediator-audit-sample-v1.json",
+  "mediator_audits": [
+    {
+      "audit_id": "06fce663c181dd2c26ec63ca",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The core adjudication is defensible: the supplied Mandiant text supports the 16-day 2022 global median dwell time, the 21-day prior baseline in M-Trends 2022, the 9-day versus 5-day ransomware dwell-time comparison, and the ransomware attribution. It does not explicitly label the prior 21-day baseline as 2021, so Defense C04 is over-specific and a revision is reasonably supported. However, the required revision introduces an unsupported NoI framing that is not present in the supplied claims or evidence. Because the required revision adds a forecast-component scope constraint outside the supplied evidence boundary, required_revision_fidelity is false and unseen_fact_detected is true.",
+      "required_revision_fidelity": false,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "2ba09cae97008eb49621c84f",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The adjudication is faithful to the supplied evidence and claims. C4 accurately restates the annual counts and OLS slope in E_33_13A684B424C1D15B. D1’s directional claim is also supported by the positive OLS slope and counts. The rationale correctly limits the support to publication activity and does not overextend to deployment maturity, operational effectiveness, or causal mitigation. No unsupported revision is introduced, and STOP is consistent with the supplied dispute state and empty next_round_focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "379dfc9a87341a7a77cfdfc6",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The supplied NIST SP 800-53 chunk directly states that actual threat events include ransomware attacks that encrypt organizational data on servers, and it is situated within contingency-related control content. The ACCEPT_ATTACK outcome is supported because the attack claim accurately reflects the cited evidence and no defense claims were supplied.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "3b17b963bdca41bf629be7d5",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The adjudication correctly distinguishes the evidence: ITG23 is the group explicitly tied to distribution of Vidar, LummaC2, Nemesis, and Rhadamanthys, while LockBit is tied only to interest in Raccoon Stealer source code. The required revision is supported by the cited evidence and does not introduce new facts. The REVISE_ATTACK outcome is well grounded within the supplied evidence boundary, and STOP is consistent with the supplied empty next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "4d29333001c02c2bf9dd89d1",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The cited Crossref publication-trend record explicitly states that it is an external publication-activity validation axis and does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness. Defense claim D2 mirrors that limitation. With no attack claims and an empty next-round focus, ACCEPT_DEFENSE and STOP are consistent with the supplied evidence boundary, and no unsupported revision or external fact is introduced.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "53848e1152f9cf0863edeaea",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "A3 and D3 are faithful to the supplied Mandiant evidence: China-nexus attackers exploiting edge-device vulnerabilities, especially zero-days, deploying custom malware ecosystems, long undetected persistence, and limited off-the-shelf security support for edge devices. ACCEPT_DEFENSE is defensible because the evidence describes an observed trend and visibility gap rather than a quantified malware incident count or direct threat-minus-PMT measurement. However, the mediator rationale introduces an unsupported interpretive attribution: it describes the Defense as making a revision that A3 should be treated as operational context rather than direct threat-minus-PMT gap evidence, and it references NoI/NoP state labels not present in the supplied claim or evidence boundary. The core is grounded, but the added interpretive framing is a material scope weakness.",
+      "required_revision_fidelity": false,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "5452a4d072b0a06b52897c90",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The defense claim is closely supported by the cited NIST AI 100-2 excerpt: it accurately reflects the contrast with cryptography, the lack of information-theoretic security proofs for widely used ML algorithms, and the emergence of information-theoretic impossibility results limiting mitigation effectiveness. The claim remains within the supplied neutral adversarial-ML context and does not assert deployment maturity, ransomware-specific effectiveness, or other prohibited magnitude/effectiveness claims. Because no attack claims are supplied, ACCEPT_DEFENSE is consistent with the supplied boundary, and STOP is consistent with the empty next-round focus and absence of unresolved dispute.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "5dd99123975234587c24a98a",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "Both supplied claims accurately restate the 2021-2024 Crossref cutoff-constrained publication counts and OLS slope from E_33. The ACCEPT_BOTH outcome is supported within the supplied directional publication-trend evidence, no unsupported revision is introduced, and STOP is consistent with the supplied empty next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "742a140c4a6e541d9e5b3cfa",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The adjudication correctly recognizes that the cited CISA KEV record supports confirmed exploitation of CVE-2022-27593 in QNAP Photo Station in a Deadbolt ransomware campaign, and that the source contract restricts claims to confirmed_exploitation while prohibiting prevalence and severity claims. However, the required revision is not fully supported because the supplied Attack C3 text already states only confirmed exploitation and does not assert prevalence, severity, or directional NoI trajectory support. The revision therefore introduces an unsupported constraint beyond the supplied evidence boundary.",
+      "required_revision_fidelity": false,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "7db22c94471bfcd934c0e0fc",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "Both A5 and D1 are directly supported by E_33_A707006877BFD1C2, which reports the cited annual counts, OLS slope, and the explicit limitation that the publication trend does not establish deployment maturity, operational effectiveness, or causal effectiveness. ACCEPT_BOTH is appropriate because the claims are non-conflicting and bounded by the allowed directional publication-trend claim type. STOP is consistent with no unresolved dispute or next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "8d9dbd1b5ee7951ecbd81be1",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The supplied DBIR evidence directly supports the factual content required for the revised D9: 1,997 basic web application attack incidents, 881 with confirmed data disclosure, and a persistence statement about brute forcing, buying, or reusing default or guessable credentials. The evidence does not provide a temporal increase or decrease in brute-force-specific incident frequency, so the required revision away from a direct THREAT_TRAJECTORY / future NoI-increase reading is supported and does not add a new factual claim. The REVISE_DEFENSE outcome is therefore defensible, and STOP is consistent with the supplied empty next_round_focus. However, the rationale also relies on round-history propositions not present in the supplied claims or cited evidence, including that Round 1 produced REVISE_DEFENSE, that the Attack critic again requested revision in Round 2, and that the Defense critic explicitly conceded with a quoted statement. Those unseen factual dependencies prevent a fully SUPPORTED audit verdict.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "95cb6893fb0ae685662ef8ce",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The cited KEV record supports the core factual statement that CVE-2023-44487 is recorded as an HTTP/2 rapid reset vulnerability allowing DDoS and that it is a confirmed exploitation record. It also contains mitigation guidance, matching the defense claim. However, the mediator's rationale and required revision introduce an undefined NoI direction/trend dimension and add a negative-scope limitation that the evidence does not establish NoI direction. That limitation is not grounded in the supplied claims or evidence boundary, so the requested revision is only partially supported. STOP is consistent with the empty next-round focus.",
+      "required_revision_fidelity": false,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "9f783176ff6a9899eed3094d",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The adjudication correctly identifies that the supplied Mandiant evidence supports neutral initial-infection-vector context but does not establish a brute-force NoI trajectory sufficient for CHALLENGES_FORECAST. The requested revision is supported by the supplied evidence and does not add a new fact. However, the rationale relies on a quoted D10 critic response and prior-round critic consensus that are not present in the supplied frozen claim/evidence boundary.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "a13f7cca3d31abbbbe9e7726",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The cited evidence directly supplies the 2021-2024 publication counts and the positive OLS slope. It also shows 2024 (1070) is lower than 2023 (1115), which supports the Defense claim that the positive OLS slope does not imply monotonic year-over-year increase. ACCEPT_BOTH is explainable within the supplied boundary because the Attack claim accurately restates the trend data and the Defense claim only constrains the interpretation of that same data. No unsupported revision is introduced, and STOP is consistent with an empty next-round focus and no required revision.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "a9130069a74fe21a91528007",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The supplied CISA CPG and NIST SP 800-53 Rev.5 excerpts support the claimed controls and their brute-force relevance without asserting exact effectiveness. ACCEPT_BOTH and STOP are consistent because the claims are complementary, no revision is required, and the next-round focus is empty.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "b6c75f33beb101d292255e0f",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The supplied evidence directly supports the factual core of Attack C2: NIST SP 800-161 Rev. 1 C-SCRM guidance recommends less predictable predefined data-collection frequencies to reduce the risk of an insider threat bypassing security mechanisms. The adjudication’s core distinction is also defensible: the cited record is normative control guidance, not measured risk reduction or direct trajectory evidence. However, the required revision introduces and depends on trajectory-specific concepts not present in the supplied claims or evidence boundary, especially “NoP/NoI trajectory” and “PMT trajectory.” Because the requested correction relies on those external framework terms to assert a negative trajectory conclusion, the revision is not fully supported within the supplied evidence boundary. STOP is nevertheless consistent with the supplied dispute state because next_round_focus is empty and the requested correction is framed as a final post-assessment recast rather than a new evidence round.",
+      "required_revision_fidelity": false,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "c7341b6e66b59b916432b0d8",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": false,
+      "rationale": "Both the attack and defense statements are directly supported by E_33_ADC8BC66D812799F, which reports the 2021-2024 counts, OLS slope, and first-to-last delta. However, the adjudication's acceptance as a legitimate challenge to the forecast relies on the unstated factual proposition that the forecast PMT direction is decreasing, which is not available in the supplied claims or cited evidence. Therefore the factual core is supported, but the adjudication is not fully explainable within the supplied boundary.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": true,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "d1d1dc5b91f418e25caea3f9",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "Both A5 and D1 faithfully restate the supplied Crossref publication-trend evidence, including the annual counts, OLS slope, and publication-activity limitation. ACCEPT_BOTH is grounded because neither claim extends beyond the evidence into deployment maturity, operational effectiveness, or causal effectiveness. No revision is requested, and CONTINUE is consistent with the supplied next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "d1df3b584ebaa0b054fd4c63",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The cited IBM X-Force excerpt supports the core factual content of both claims: ransomware accounted for 17% of remediated incidents in 2022, the excerpt describes it as having held the top spot since at least 2020, and extortion/phishing are reported as contextual indicators. The adjudication's central observation that the evidence is an incident-share and enduring-threat observation rather than a direct incident-count/frequency trajectory is also well grounded. The REVISE_BOTH outcome is defensible because the required revision asks the claims to be framed as observed threat-pattern or contextual threat-reality support rather than as direct support for a trajectory reading. This does not introduce a new factual claim, and the STOP action is consistent with the supplied empty next-round focus. The only weakness is that the rationale's claim that the round responses \"converge\" is not fully visible from the supplied claim texts alone, but this does not materially undermine the evidentiary basis for the requested revision.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "PARTIAL"
+    },
+    {
+      "audit_id": "d8a25c7957d9f55712affe68",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "The cited CISA advisory directly supports both cited capability and point-in-time no-known-exploitation statements. The requested revision is limited to product-specific, point-in-time interpretation and does not introduce a new factual claim. STOP is consistent with the empty next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "da873ce13ccc7041c82ad194",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "Both attack and defense claims are directly supported by the cited CISA CPG excerpt. The excerpt names ransomware among unprecedented cyber threats and describes the CPGs as aimed at common and impactful cyber risks across organizations of different sizes, including state/local government, critical infrastructure, and hospitals. ACCEPT_BOTH is therefore well grounded, and STOP is consistent because no revision is required and no next-round focus is supplied.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "e00d31ea3df6fd3e0837bd91",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "Both adjudicated claims are grounded in the supplied CISA KEV confirmed-exploitation records. The CVE-2017-8540 record supports Microsoft Malware Protection Engine exploitation, and the CVE-2013-7331 record supports Internet Explorer exploitation and the anti-malware detection capability. ACCEPT_BOTH and STOP are consistent with the absence of a substantive dispute.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "audit_id": "f3fb636349af9354752a5404",
+      "claim_evidence_fidelity": true,
+      "outcome_supported_by_supplied_evidence": true,
+      "rationale": "C1 and C2 are faithful summaries of E_10_AC5A58AF5E015229 and E_04_B9A3190D9CA152A3. D4 as written only reports session-hijacking mechanisms and risk context, and the supplied evidence does not contain a session-hijacking-specific temporal NoP/NoI trend or exploitation signal sufficient to support CHALLENGES_FORECAST. The 29% public-facing application statistic is a separate web-application risk comparison, not a session-hijacking NoP trend. REVISE_DEFENSE and STOP are therefore consistent with the supplied dispute state and empty next-round focus.",
+      "required_revision_fidelity": true,
+      "round_action_fidelity": true,
+      "unseen_fact_detected": false,
+      "verdict": "SUPPORTED"
+    }
+  ],
+  "runtime": {
+    "batch_size": 2048,
+    "client_request_concurrency": 2,
+    "draft_kv_type": "q8_0",
+    "draft_v_type": "q8_0",
+    "expected_context_size": 65536,
+    "expected_gpu_layers": "all",
+    "expected_llama_build": "b10919",
+    "expected_llama_commit": "d3146f2b5",
+    "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+    "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+    "expected_model_size_bytes": 24958908128,
+    "expected_parallel_slots": 2,
+    "flash_attention": true,
+    "frequency_penalty": 0.0,
+    "min_p": 0.0,
+    "model": "Qwen3.8-27B-Q6_K_L",
+    "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+    "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+    "mtp_draft_n_max": 4,
+    "mtp_draft_p_min": 0.05,
+    "mtp_enabled": true,
+    "presence_penalty": 0.0,
+    "quantization": "Q6_K_L",
+    "reasoning_budget": -1,
+    "reasoning_effort": "xhigh",
+    "repeat_penalty": 1.0,
+    "seed": 42,
+    "server_total_context_size": 131072,
+    "stage7_runtime_profile_version": "stage7-validation-runtime-128k-total-2slot-v1",
+    "structured_repair_prompt_sha256": "ec2dc0427fe3e3298ae7224043e388ae51b3607c0009f9b0bfbc10dff4ddc065",
+    "structured_validation_retries": 1,
+    "target_kv_type": "q8_0",
+    "target_v_type": "q8_0",
+    "temperature": 1.0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "ubatch_size": 512
+  },
+  "schema_version": "stage7-validation-artifact-v6",
+  "source_stage6_artifact_sha256": {
+    "main__brute_force__ids_ips": "81d87427a309c8524fa4d06781e9e49f7ade0ffbc1ba5703a9af11afc10c6dcd",
+    "main__ddos__nlp_llm": "ea88e5903c1df4b55bd4d57a0614d8740ffe7cdb5b9193060f6109e7c48de4ed",
+    "main__insider_threat__cryptography": "37b347c8a4f93dbe5bae0f66037abd59c4c085642673b2cc7f66fc31c0c1fbd9",
+    "main__malware__anomaly_detection": "2eeab7d5a56d34e56ea72d3301d3e19210085f1ee85f86c1c89c92e05130f96f",
+    "main__ransomware__cryptography": "3dac0619643d45bf23d1490291d462419fa3416d25db7d7be4c374380f96ab1a",
+    "main__session_hijacking__https": "757f48ccd4a73ece35be9e98b1c5f50e8e25a376db1eaa66cf4e2e5c7ec7c3c3",
+    "main__targeted_attack__access_control": "ec942bd1085a56ecfa8a3e7863ae3ce4b7791dc5e1d96dd1f7a878f67d61e958"
+  }
+}

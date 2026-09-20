@@ -3,9 +3,9 @@ from __future__ import annotations
 from typing import Any
 
 
-STAGE7_HARNESS_VERSION = "stage7-validation-harness-v11"
+STAGE7_HARNESS_VERSION = "stage7-validation-harness-v12"
 STAGE7_ARTIFACT_SCHEMA_VERSION = "stage7-validation-artifact-v6"
-STAGE7_EXPERIMENT_MANIFEST_VERSION = "stage7-experiment-manifest-v12"
+STAGE7_EXPERIMENT_MANIFEST_VERSION = "stage7-experiment-manifest-v13"
 STAGE7_GROUNDING_VERIFIER_VERSION = "stage7-grounding-verifier-v1"
 STAGE7_MEDIATOR_VERIFIER_VERSION = "stage7-mediator-verifier-v1"
 STAGE7_VARIANT_RECORD_VERSION = "stage7-variant-result-v1"
@@ -16,6 +16,7 @@ STAGE7_MEDIATOR_AUDIT_SAMPLE_VERSION = "stage7-mediator-audit-sample-v1"
 
 EXPECTED_MAIN_CASE_COUNT = 7
 EXPECTED_MAIN_SCENARIO_COUNT = 21
+ARCHITECTURE_ROBUSTNESS_SEEDS = (42, 43, 44)
 
 MANUAL_AUDIT_SELECTION_SEED = 20260916
 MANUAL_AUDIT_PER_STRATUM = 2
@@ -110,6 +111,7 @@ def experiment_manifest() -> dict[str, Any]:
         "prompt_paraphrase_variants": list(PROMPT_PARAPHRASE_VARIANTS),
         "sensitivity_case_ids": list(SENSITIVITY_CASE_IDS),
         "decision_architecture_variants": list(DECISION_ARCHITECTURE_VARIANTS),
+        "architecture_robustness_seeds": list(ARCHITECTURE_ROBUSTNESS_SEEDS),
         "decision_policy_variants": list(DECISION_POLICY_VARIANTS),
         "manual_audit_selection_seed": MANUAL_AUDIT_SELECTION_SEED,
         "manual_audit_per_stratum": MANUAL_AUDIT_PER_STRATUM,

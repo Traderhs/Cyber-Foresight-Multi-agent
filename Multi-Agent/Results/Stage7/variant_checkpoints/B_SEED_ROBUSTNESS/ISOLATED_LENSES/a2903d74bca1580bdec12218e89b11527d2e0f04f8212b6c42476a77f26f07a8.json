@@ -1,0 +1,159 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "C1",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied decision guidance documents concrete implementation pathways for cryptography, including TLS client authentication with X.509 path validation and trust-anchor requirements, and IPSec configuration using ISAKMP key negotiation, certificate-based identity proofing, and two-factor authentication for remote access.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "C2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CPG record documents an adoption burden for encryption: organizations should use properly configured and up-to-date SSL/TLS when technically feasible, plan to identify outdated or weak encryption, update to sufficiently strong algorithms, consider post-quantum implications, and manage OT latency/availability impacts across all IT traffic and remote OT assets.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "C3",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "The frozen CIS IG2 reference profile describes a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure across differing risk profiles; the profile states that IG2 safeguards address increased operational complexity and that some safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C4",
+        "evidence_ids": [
+          "E_22_C239828119FC69CD"
+        ],
+        "scope": "GENERAL",
+        "statement": "The insider-threat mitigation record states that some mitigation measures are cost prohibitive and projected cost savings may be a significant determinant of an insider threat mitigation program's ROI, and cites a 2019 Ponemon report that organizations with active threat management programs averaged a cost savings of $1.2 million per incident prevented; this is program-level financial context, not cryptography-specific budget, TCO, payback, or ROI evidence.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "C5",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "The Crossref publication-trend record reports increasing annual cryptography publication counts from 210 in 2021 to 330 in 2024, with an OLS slope of 37.8 works/year, but states that this does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC financial/adoption conclusion requires supplied evidence linking the documented cryptography deployment burden to actual budget, staffing, procurement, or cost-outcome data for the frozen reference-enterprise profile.",
+      "If supplied evidence shows that the CPG encryption maintenance/update, weak-crypto remediation, and post-quantum planning burden exceeds available resources or required expertise, the GENERAL challenge is strengthened.",
+      "If supplied evidence shows cost offsets, avoided incident cost, or manageable implementation burden specifically attributable to cryptography, the GENERAL challenge may be revised.",
+      "OT deployment assessment requires supplied evidence on technical feasibility, latency, and availability impacts of encryption for remote or external OT communications.",
+      "Jurisdiction-specific legal/regulatory cost claims require exact supplied jurisdiction-specific evidence; the masked region blocks such a conclusion."
+    ],
+    "constraints": [
+      "No exact budget, price, ROI, TCO, payback period, staffing count, or procurement ceiling is supplied, so exact affordability cannot be assessed.",
+      "The support records are implementation guidance for TLS/IPSec cryptography; they do not provide measured cost savings, efficiency gains, or resource reduction.",
+      "The CPG burden record documents operational encryption maintenance, update, and feasibility tasks but does not quantify financial cost, staffing effort, or procurement timing.",
+      "The CIS IG2 profile facts are standardized reference-profile facts and do not by themselves establish legal/regulatory applicability, exact staffing burden, or cost.",
+      "The cited program-level insider-threat cost-savings figure is not attributed to cryptography and therefore cannot establish action-specific ROI."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+    "evidence_gaps": [
+      "Action-specific budget, TCO, price, payback period, ROI, and procurement ceiling for deploying cryptography in the frozen CIS IG2 reference enterprise.",
+      "Staffing or resource data for cryptographic engineering, certificate/PKI/key-management operations, and OT/IT traffic coverage.",
+      "Measured cost savings or risk reduction specifically attributable to cryptography for the frozen insider-threat scenario.",
+      "Current encryption inventory and weak/outdated algorithm usage needed to operationalize the CPG update burden.",
+      "Post-quantum planning status or requirements relevant to the 2025-2027 timing window.",
+      "Jurisdiction-specific regulatory financial obligations, if any; the region is masked and no jurisdiction-specific evidence for this lens is supplied."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The frozen financial/adoption evidence contains both support and challenge material, but the challenge side is more direct for adoption feasibility. The support records are standards-based implementation pathways for TLS and IPSec cryptography; they show that a technical adoption path exists, but they do not establish affordability, budget fit, ROI, TCO, payback, or measured resource savings. The challenge record documents concrete operational and maintenance burdens for encryption: keeping SSL/TLS properly configured and current, identifying and updating weak or outdated encryption, considering post-quantum implications, and managing OT latency/availability constraints across a broad scope including IT traffic and remote OT assets. The CIS IG2 profile adds neutral context that the reference enterprise has multi-department operational complexity and may require enterprise-grade technology or specialized expertise, but the profile record cannot by itself establish cost, staffing burden, or legal obligation. The available financial context is program-level insider-threat mitigation context, not cryptography-specific financial evidence. On balance, the supplied directional records therefore challenge general financial/adoption feasibility because the documented adoption burden is not offset by action-specific economic or resource-saving evidence.",
+    "stance": -1
+  },
+  "assessment_sha256": "b8e4e10e2570941df9e00e4a072815e58797f390f789d1b27a27aa36333bb0ae",
+  "checkpoint_sha256": "96dcb2297399bffdc609cfbd8472edefb7b523a10052ebb31f339996d8bce80c",
+  "created_at": "2026-09-20T11:46:55.480931+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "a2903d74bca1580bdec12218e89b11527d2e0f04f8212b6c42476a77f26f07a8",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__kr__cis_ig2__56c867d66a02c80f",
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__us__cis_ig2__d374108f130df77c"
+    ],
+    "payload_sha256": "056e722823624337a043de533e9061ed97b9078a919ffd2d323b8baf4c27165b",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "f12596606e9e4158931a5ce385568ec5c7a343d35234f98a6bb10222fade4627",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "e2c23cb88f477b834e0f1879ffc73dc05fe0a34032fed9d96e593563a706615e",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

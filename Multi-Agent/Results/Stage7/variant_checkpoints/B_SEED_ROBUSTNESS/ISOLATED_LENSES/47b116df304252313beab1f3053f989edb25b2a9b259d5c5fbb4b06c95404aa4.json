@@ -1,0 +1,136 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLAIM_SUPPORT_1",
+        "evidence_ids": [
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CISA Zero Trust Maturity Model record supports a contingent long-term adoption benefit for access-control-related zero-trust investment by stating that, in the long term, zero trust will enable a more prudent allocation of security investments.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_CHALLENGE_1",
+        "evidence_ids": [
+          "DE_DE17_429D17A4E11A72C3",
+          "DE_DE11_1ECA9795EEF89DFA",
+          "DE_DE12_CBF6FBB1313D37AF"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied records document access-control adoption burdens: the CISA record states that the path to zero trust is incremental, may take years, and initially often leads to additional costs; the NIST ABAC record states that for ABAC, development, deployment, and maintenance may exceed benefits in the long term, retrofitting applications is a separate cost, and maintenance savings may be offset by managing attributes, policies, and additional system support; and the NIST ZTA record states that provider migration can require extreme cost or a long transition program.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLAIM_MATURITY_CONTEXT_1",
+        "evidence_ids": [
+          "DE_DE12_6509E7A6D8467E38"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST ZTA record describes candidate-solution selection, pilot programs, and initial deployment/monitoring for access-control-related zero-trust deployment, but this is supplementary deployment-maturity context and does not by itself establish a financial benefit or burden.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC financial/adoption conclusion requires evidence of the reference enterprise's actual budget, staffing, existing infrastructure, vendor contracts, and implementation pathway, rather than the frozen profile alone.",
+      "A support stance would require evidence that the long-term allocation benefit and any maintenance savings are sufficiently large to cover the documented initial, maintenance, and transition burdens within the 2025-2027 window.",
+      "A deployment-specific challenge would require evidence that the documented cost or transition burdens exceed available resources, or that provider dependence creates an unavoidable transition constraint for the reference enterprise."
+    ],
+    "constraints": [
+      "Exact affordability, payback, ROI, TCO, or budget fit cannot be asserted unless numeric budget, price, ROI, TCO, staffing, or procurement evidence is supplied.",
+      "DE_DE12_6509E7A6D8467E38 is supplementary deployment-maturity context and cannot create a directional financial/adoption claim by itself.",
+      "The directional financial claims are grounded in guidance-based records and do not establish realized costs, staffing levels, observed adoption outcomes, or deployment-specific affordability for the CIS IG2 reference enterprise."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "evidence_gaps": [
+      "Missing organization-specific budget, funding, price, TCO, ROI, payback period, staffing, infrastructure, and procurement constraints for ACCESS CONTROL in the frozen CIS IG2 reference enterprise.",
+      "Missing evidence quantifying whether the long-term prudent allocation of security investments described in DE_DE17_429D17A4E11A72C3 is realized within the 2025-2027 window or offsets the documented initial, maintenance, and transition costs.",
+      "Missing evidence identifying the specific access-control implementation pathway, such as ABAC, zero-trust, or provider-dependent access control, and its associated resource or procurement requirements for the reference enterprise.",
+      "Missing jurisdiction-specific financial or regulatory cost evidence; jurisdiction is masked for this equivalence class."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied financial/adoption evidence contains one grounded benefit and multiple grounded burdens. The benefit is a contingent long-term allocation benefit in zero-trust/access-control investment, not a quantified near-term financial return. The burden evidence is more directly tied to implementation cost and timing within the frozen 2025-2027 window: initial additional costs, a multi-year incremental implementation path, ABAC transition and maintenance costs that may offset savings or exceed benefits, and potential extreme switching or long transition costs for provider-dependent zero-trust/access-control implementations. Missing budget, staffing, procurement, and exact cost data prevent a deployment-specific affordability or ROI conclusion, but the GENERAL direction is still supported by the supplied directional records. On balance, the documented near-term cost and transition burdens outweigh the unquantified long-term benefit, so the frozen action is materially challenged under this lens.",
+    "stance": -1
+  },
+  "assessment_sha256": "268db491c3fff11df277704c39ba03d29663c774207ecbad99cd83f649439380",
+  "checkpoint_sha256": "f6e86d5e3916e3268a55b674a73bb03f145a80edf1741a1f45d7d90cafbfd6df",
+  "created_at": "2026-09-20T09:39:47.203735+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE11_1ECA9795EEF89DFA",
+        "DE_DE12_6509E7A6D8467E38",
+        "DE_DE12_CBF6FBB1313D37AF",
+        "DE_DE17_429D17A4E11A72C3"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "47b116df304252313beab1f3053f989edb25b2a9b259d5c5fbb4b06c95404aa4",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "43c6c63c71b1ca7da0a209ee1a921416c5d88b783ebfb40516550ff9d46aa840",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "e6379006e60cc829ebed0703da462d0e6312e72f23c86527783adefa033f1fb4",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "4105944fe04552bfb082b77713af3ba27425b380af399632a652ae335d075570",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

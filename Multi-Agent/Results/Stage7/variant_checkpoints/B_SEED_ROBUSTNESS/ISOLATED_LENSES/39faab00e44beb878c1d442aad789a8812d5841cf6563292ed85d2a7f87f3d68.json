@@ -1,0 +1,143 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_C1",
+        "evidence_ids": [
+          "DE_DE04_0B77B88875745973"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST IDPS guidance describes institutionally relevant administrative practices for IDS/IPS, including separate IDPS user and administrator accounts, restricted network access to IDPS components, protected IDPS management communications, ongoing verification and monitoring of IDPS components, vulnerability assessment and response, update testing and deployment, periodic configuration backups, and technology selection using cost-benefit considerations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C2",
+        "evidence_ids": [
+          "DE_DE07_E2C403C2FF05BA09"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST ISCM guidance describes an organization-wide continuous monitoring approach that supports risk-related decision making at organization, mission/business-process, and information-system tiers, with oversight to ensure risk-management effectiveness; this record is supplied as IDS/IPS-relevant decision guidance.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C3",
+        "evidence_ids": [
+          "DE_DE16_CEA1C38E613068F8"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA/ICS-CERT guidance provides an operational governance frame for IDS/IPS by describing IDS/HIDS/ALDS monitoring, signature-versus-anomaly detection characteristics, and the need to gather and analyze information from multiple sources and methods for more complete event interpretation.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_C4",
+        "evidence_ids": [
+          "E_23_B21FAA9377991F05",
+          "E_25_FE58E4FCF044EDE3",
+          "E_23_312B9513BCEE9B9D",
+          "E_23_EBCAB9508641E703"
+        ],
+        "scope": "GENERAL",
+        "statement": "Supplied official guidance describes brute-force-relevant operational controls, including alerting after consecutive unsuccessful logins, system-enforced login prevention, automatic account lockout or delay, MFA prioritization for IT and OT accounts, and unique credential provisioning for IT and OT assets.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC institutional/regional conclusion would require exact jurisdiction-specific regulatory_applicability evidence for the frozen scenario plus direction-carrying governance_enablement or compliance_constraint evidence eligible under the provided grounding contract.",
+      "If the assessment is to move beyond GENERAL institutional feasibility, the frozen scenario would need deployment-specific governance pathways, accountability/auditability arrangements, and data sovereignty/cross-border constraint evidence.",
+      "CTX_CIS_IG2_9F94838146D9C3A4 indicates that CIS IG2 safeguards may depend on enterprise-grade technology and specialized expertise; exact staffing and resource context would be needed to confirm deployment-specific institutional readiness."
+    ],
+    "constraints": [
+      "DE_DE16_CEA1C38E613068F8 states that using IDS is not a 'silver bullet,' frames IDS as more of a warning or audit system, and notes a computer resource penalty for HIDS, so institutional feasibility remains conditional on alert management, tuning, and operational capacity.",
+      "DE_DE04_0B77B88875745973 requires ongoing IDPS security maintenance, testing, protection of management communications, vulnerability response, update deployment, and configuration backups, making feasibility dependent on institutional maintenance and account-management processes."
+    ],
+    "decision_object_id": "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+    "evidence_gaps": [
+      "No jurisdiction-specific regulatory_applicability evidence is supplied for the frozen masked region, so DEPLOYMENT_SPECIFIC regional/legal feasibility cannot be assessed.",
+      "No directionally eligible compliance_constraint Stage-4 decision-evidence record is supplied for this lens, so regulatory constraints cannot be directionally weighed against the governance_enablement support.",
+      "Deployment-specific governance ownership, data sovereignty, cross-border constraints, auditability arrangements, and exact staffing/resources are absent from the supplied material."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "Under the frozen Institutional/Regional lens, the supplied directionally eligible Stage-4 decision evidence for this object consists of governance_enablement records for IDS/IPS: DE_DE04_0B77B88875745973, DE_DE07_E2C403C2FF05BA09, and DE_DE16_CEA1C38E613068F8. These records support GENERAL institutional feasibility by describing governance and operational-management pathways: accountable IDPS administration, protection of management access, update testing and configuration backup, organization-wide information security continuous monitoring, and operational interpretation of detection methods. No directionally eligible compliance_constraint record is supplied for this lens, and the frozen region is JURISDICTION_MASKED_NO_LENS_SPECIFIC_EVIDENCE with no jurisdiction-specific regulatory_applicability evidence. Therefore the supplied material supports a GENERAL institutional direction but does not support a DEPLOYMENT_SPECIFIC regional/legal conclusion. Limitations noted in the same records, such as IDS not being a silver bullet and possible HIDS resource penalty, are preserved as constraints rather than being converted into a directional challenge because no eligible compliance_constraint grounding is supplied.",
+    "stance": 1
+  },
+  "assessment_sha256": "50028337e52713f9860396af5285b6d46e22ac59bba269426bea3b6320c00c63",
+  "checkpoint_sha256": "86f0baeae7a66e54ab4005555be4ee6a4f7f62ce5a74c732e64fb80310ab9c47",
+  "created_at": "2026-09-20T11:59:56.954956+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__brute_force__ids_ips",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE04_0B77B88875745973",
+        "DE_DE07_E2C403C2FF05BA09",
+        "DE_DE16_CEA1C38E613068F8"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "39faab00e44beb878c1d442aad789a8812d5841cf6563292ed85d2a7f87f3d68",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__kr__cis_ig2__34d0cb5b5b665cd6",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__eu__cis_ig2__273ea84f8eb197e7",
+      "contextual__decision__main__brute_force__ids_ips__pmt_ids_ips__689ac980fb89e61c__us__cis_ig2__d54d96d1e25889bf"
+    ],
+    "payload_sha256": "fa67b7cedb975bfddc3f87fc68ffb7db1274675558c4e3ae3ced08274d50aefa",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "15d05ce7aaa98f10bbeaa7b8cf8179204edd15f5ad289ba59c0b62ba3397bed1",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "bd5f1107fdb9230aa8eb019ff19a22e5bb051f27d6678207abd1a106f5502841",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "4226c40f7efd627bbf4f00b1501a0bd7fbe793a9b22a83eebed29a17c617a8bc",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

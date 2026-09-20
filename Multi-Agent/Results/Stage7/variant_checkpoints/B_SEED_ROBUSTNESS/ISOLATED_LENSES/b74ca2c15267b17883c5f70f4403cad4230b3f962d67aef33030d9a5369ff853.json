@@ -1,0 +1,147 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLAIM_01",
+        "evidence_ids": [
+          "DE_DE11_1E4AAE06CC3795D7",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE17_567DDA7CFBC62829"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied governance-enablement records describe institutional mechanisms that can enable access-control implementation, including enterprise-governed attribute and policy definitions, lifecycle management of attributes, procedures for access failures, policy enforcement points, compliance-system inputs to access decisions, and governance processes for defining and enforcing security policies and procedures.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_02",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied compliance-constraint record imposes specific access-token and session-management obligations, including authenticated protected channels, session identifier verification, timeout requirements, prohibition on fallback to insecure transport after authentication, and cookie restrictions, which can increase institutional implementation and compliance obligations for access-control deployment.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLAIM_03",
+        "evidence_ids": [
+          "E_33_F4FC25CE90264812",
+          "E_02_BE48A23ABD77A19C",
+          "E_12_F6120325C44B5EA9"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied publication-trend and control-context records show access-control publication activity and control association, but they do not establish institutional deployment readiness, accountability/auditability, or realized institutional effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR_CLAIM_04",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, described as a multi-department enterprise with personnel responsible for managing and protecting IT infrastructure, differing department risk profiles, possible sensitive information processing, possible regulatory burdens, and safeguards that may depend on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "Any DEPLOYMENT_SPECIFIC institutional/regional feasibility conclusion requires exact supplied jurisdiction-specific regulatory_applicability evidence that applies to the frozen CIS IG2 reference enterprise.",
+      "General institutional feasibility should be conditioned on evidence that the organization can establish and enforce access-control policies, attribute governance, access-failure procedures, policy enforcement, and session/access-token controls.",
+      "If a concrete jurisdiction is later supplied, regional feasibility must be re-evaluated only with jurisdiction-specific legal, data-sovereignty, and cross-border evidence from the supplied evidence universe."
+    ],
+    "constraints": [
+      "The frozen scenario does not supply numeric budget, staffing, procurement, architecture, or exact compliance-burden quantities, so deployment-specific institutional burden cannot be quantified from the supplied records.",
+      "The frozen jurisdiction is masked and the directional grounding contract does not supply an eligible regulatory_applicability record for the masked scenario; therefore a DEPLOYMENT_SPECIFIC legal/regional feasibility direction cannot be concluded.",
+      "The cited governance-enablement pathways are conditional on institutional capability to define and enforce policies, manage attribute lifecycle, handle access failures, operate policy enforcement, and satisfy session/access-token controls.",
+      "Publication, advisory, control-mapping, and mitigation-context records do not substitute for evidence of institutional adoption, auditability, accountability, or legal applicability."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "evidence_gaps": [
+      "No directionally eligible regulatory_applicability evidence for the masked jurisdiction is supplied, which is required for a DEPLOYMENT_SPECIFIC institutional/regional legal claim.",
+      "No deployment-specific evidence is supplied showing whether the reference enterprise currently has the governance roles, attribute lifecycle ownership, access-failure procedures, policy enforcement, compliance-system integration, session/access-token controls, or audit mechanisms described in the cited records.",
+      "No data-sovereignty or cross-border constraint evidence is supplied for the frozen scenario.",
+      "No evidence is supplied quantifying institutional compliance burden, budget, staffing, procurement, or implementation timelines for access-control deployment."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "On balance, the supplied records support general institutional feasibility of the frozen ACCESS CONTROL action because directionally eligible governance-enablement records describe institutional mechanisms that can underpin access-control deployment, including policy governance, attribute lifecycle responsibility, access-failure procedures, policy enforcement, compliance-system inputs, and governance processes for defining and enforcing security policies. A directionally eligible compliance-constraint record also identifies specific session and access-token obligations that can increase implementation and compliance burden, but it does not establish infeasibility. The frozen jurisdiction is masked and no directionally eligible regulatory_applicability record is supplied for the masked scenario, so any deployment-specific legal/regional conclusion remains conditional and is not asserted.",
+    "stance": 1
+  },
+  "assessment_sha256": "353bc66ce95cf33b7d9554153cc38c765f8f2a1b9131b5ecc5a1764d1a43c25e",
+  "checkpoint_sha256": "4b5fb21a4ca50007a0cd504e6f3d9e1987b3d1d0d15bce51718508ddf0e7cff2",
+  "created_at": "2026-09-20T12:15:10.051605+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE11_1E4AAE06CC3795D7",
+        "DE_DE12_E6F93E4AB8722379",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE17_567DDA7CFBC62829"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "b74ca2c15267b17883c5f70f4403cad4230b3f962d67aef33030d9a5369ff853",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "29b0fd903712987100560e410492453e5eb11cf605a1675a52697313ddf337c7",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "cd71144e405d3cdb1ce1ab64c94d5e734f4d97d763cee3d77298f7928f757ed0",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "5be8258beaeab9225e1f1a0618e0484270945eec85c55d80881cf79233089375",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

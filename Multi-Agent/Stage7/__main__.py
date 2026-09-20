@@ -22,7 +22,8 @@ def main() -> None:
         metavar="A,B,C",
         help=(
             "Run only the final paper-facing decision variants before scoring. "
-            "A runs the prompt-paraphrase robustness variants, B runs the single-agent architecture baseline, "
+            "A runs the prompt-paraphrase robustness variants, B runs the single-agent architecture baseline "
+            "plus the predeclared seed-42/43/44 architecture robustness check, "
             "and C runs the context-free baseline. Each family uses exactly two workers on the existing "
             "two-slot llama.cpp runtime."
         ),

@@ -1,0 +1,340 @@
+{
+  "assessment": {
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "financial_adoption": {
+      "claims": [
+        {
+          "claim_id": "FA_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE10_A086B3193CD6440B"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST TLS guidance describes certificate-based client authentication, path validation, and security-strength requirements, providing an adoption benefit for cryptographic protection of transactions.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_SUPPORT_2",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009"
+          ],
+          "scope": "GENERAL",
+          "statement": "DHS control-systems encryption guidance recommends encryption when data is sensitive and describes IPSec deployment options for protecting communications, providing an adoption benefit.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CHALLENGE_1",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance frames encryption as used when technically feasible, requires identifying and updating outdated or weak encryption, considers post-quantum implications, and notes OT latency and availability constraints, creating an adoption burden.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "FA_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "TLS/SSL guidance describes confidentiality, integrity, and authentication mechanisms but contains no numeric adoption cost, budget, or ROI in the supplied record.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "FA_CONSTRAINT_2",
+          "evidence_ids": [
+            "E_23_AC2A498B747552DF"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG introduction acknowledges that organizations may need to make progress with limited budgets, staffing, and expertise, providing general resource-constraint context.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "FA_CONSTRAINT_3",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes enterprise operational complexity, possible sensitive information processing, and possible enterprise-grade technology or specialized expertise.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Assess enterprise operational complexity and specialized-expertise needs before assuming adoption.",
+        "Account for updating weak or outdated encryption and considering post-quantum implications.",
+        "Implement TLS or IPSec cryptographic protections for authentication and sensitive data in transit."
+      ],
+      "constraints": [
+        "Financial feasibility is conditional on assessing enterprise operational complexity and the need for specialized expertise before assuming adoption.",
+        "Adoption must account for updating weak or outdated encryption and considering post-quantum implications.",
+        "Adoption benefits depend on implementing TLS or IPSec cryptographic protections for authentication and sensitive data in transit."
+      ],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence record provides numeric budget, price, ROI, TCO, staffing count, or procurement ceiling for PMT_CRYPTOGRAPHY.",
+        "No supplied evidence quantifies the financial adoption benefit or burden of cryptography in the CIS IG2 reference scenario."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "financial_adoption",
+      "rationale": "Grounded adoption benefit is present from TLS authentication guidance and IPSec encryption guidance. Grounded adoption burden is present from CPG guidance that conditions encryption on technical feasibility, requires updating weak or outdated encryption, and considers post-quantum and OT latency/availability implications. No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is supplied, so the financial-adoption direction remains mixed and GENERAL rather than DEPLOYMENT_SPECIFIC.",
+      "stance": 0
+    },
+    "institutional_regional": {
+      "claims": [
+        {
+          "claim_id": "IR_SUPPORT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST key-management guidance defines roles, accountability, and traceability for key generation, access, destruction, and use, enabling organizational governance of cryptographic keys.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_SUPPORT_2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "CISA CPG guidance frames strong and agile encryption as a recommended organizational control with defined scope, outcome, and addressed TTP or risk context.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CHALLENGE_1",
+          "evidence_ids": [
+            "DE_DE09_6719137897848A9E"
+          ],
+          "scope": "GENERAL",
+          "statement": "NIST algorithm-transition guidance imposes compliance constraints by disallowing two-key TDEA encryption, deprecating and then disallowing three-key TDEA encryption after 2023, disallowing SKIPJACK encryption, and listing AES-128, AES-192, and AES-256 as acceptable.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "IR_CONSTRAINT_1",
+          "evidence_ids": [
+            "E_31_6C5988FD2D0D8867"
+          ],
+          "scope": "GENERAL",
+          "statement": "The EU NIS2 recital provides primary-law context about an exponential increase in ransomware attacks and the need for Member States to address the rise in national cybersecurity strategy, but it does not establish applicability to the masked jurisdiction in this lens.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "IR_CONSTRAINT_2",
+          "evidence_ids": [
+            "CTX_CIS_IG2_9F94838146D9C3A4"
+          ],
+          "scope": "GENERAL",
+          "statement": "The CIS IG2 reference profile describes multi-department enterprises that may process sensitive information, may face regulatory burdens, and may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Establish regulatory applicability before making any deployment-specific institutional claim.",
+        "Maintain key-management accountability and traceability.",
+        "Conform algorithm selection to NIST transition statuses."
+      ],
+      "constraints": [
+        "Any DEPLOYMENT_SPECIFIC institutional feasibility conclusion is conditional on first establishing regulatory applicability for the actual jurisdiction.",
+        "Organizational adoption must maintain key-management accountability and traceability.",
+        "Algorithm selection must conform to NIST transition statuses for cryptographic algorithms and key lengths."
+      ],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied evaluation_evidence record satisfies the regulatory_applicability scope slot required for a DEPLOYMENT_SPECIFIC institutional claim in this masked-jurisdiction equivalence class.",
+        "No supplied evidence connects the key-management governance enablement or CPG encryption guidance to a specific jurisdictional legal requirement for this deployment."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "institutional_regional",
+      "rationale": "Grounded governance enablement is present from key-management guidance and CPG encryption guidance. Grounded compliance constraint is present from NIST algorithm-transition guidance, which disallows or deprecates certain algorithms and requires use of approved alternatives. Because the jurisdiction is masked and no supplied evidence establishes regulatory applicability for this deployment, the claims remain GENERAL rather than DEPLOYMENT_SPECIFIC. The support and challenge are materially mixed, so the stance is neutral.",
+      "stance": 0
+    },
+    "technical_feasibility": {
+      "claims": [
+        {
+          "claim_id": "TF_SUPPORT_1",
+          "evidence_ids": [
+            "AE03S_C5AF41A880A404C2"
+          ],
+          "scope": "GENERAL",
+          "statement": "Cryptographic-primitive analysis can identify cipher classes and extract cryptographic keys or state from execution traces, materially supporting ransomware neutralization and reverse engineering.",
+          "status": "SUPPORTS_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CHALLENGE_1",
+          "evidence_ids": [
+            "AE03C_E5522A35F4981027"
+          ],
+          "scope": "GENERAL",
+          "statement": "Ransomware can deliberately alter observable entropy patterns of cryptographic operations to evade detectors that treat high entropy as the key signal, and some existing cryptography-related detection approaches impose nontrivial computational cost.",
+          "status": "CHALLENGES_FEASIBILITY"
+        },
+        {
+          "claim_id": "TF_CONSTRAINT_1",
+          "evidence_ids": [
+            "DE_DE08_031120C53EF050F3"
+          ],
+          "scope": "GENERAL",
+          "statement": "Accountability and traceability for cryptographic keys require identifying entities authorized to generate, access, destroy, or otherwise use keys, and access controls should be employed to reduce key compromise risk.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "TF_CONSTRAINT_2",
+          "evidence_ids": [
+            "E_23_534489D29C38B327"
+          ],
+          "scope": "GENERAL",
+          "statement": "Properly configured and up-to-date SSL/TLS is recommended, and organizations should identify outdated or weak encryption, update it to sufficiently strong algorithms, and consider implications of post-quantum cryptography.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "TF_CONSTRAINT_3",
+          "evidence_ids": [
+            "E_26_A710FE8084614182"
+          ],
+          "scope": "GENERAL",
+          "statement": "Control-assessment context includes determining whether physical control of cryptographic keys is maintained and whether defined cryptographic uses are implemented.",
+          "status": "NEUTRAL_CONTEXT"
+        },
+        {
+          "claim_id": "TF_CONSTRAINT_4",
+          "evidence_ids": [
+            "DE_DE18_CDC975345637E009",
+            "DE_DE18_EAA59A9B7CEAD276"
+          ],
+          "scope": "GENERAL",
+          "statement": "IPSec and TLS/SSL guidance provide deployment and protocol context for cryptographic communications, including encryption for sensitive data and client/server authentication mechanisms.",
+          "status": "NEUTRAL_CONTEXT"
+        }
+      ],
+      "conditional_requirements": [
+        "Maintain key-management accountability, access control, and traceability.",
+        "Maintain properly configured and up-to-date encryption and address weak or outdated cryptographic implementations.",
+        "Account for detector evasion and computational cost when relying on cryptography-related ransomware detection."
+      ],
+      "constraints": [
+        "Technical feasibility is conditional on key-management accountability and traceability.",
+        "Technical feasibility is conditional on maintaining properly configured, up-to-date encryption and addressing weak or outdated cryptographic implementations.",
+        "Ransomware-specific technical feasibility is conditional on detector evasion behavior and computational cost of cryptographic-operation detection."
+      ],
+      "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "evidence_gaps": [
+        "No supplied evidence establishes deployment maturity, operational effectiveness, or causal mitigation effectiveness of cryptography in this scenario.",
+        "No supplied evidence validates whether CipherTrace-style analysis or entropy-evasion resistance is present or sufficient in the CIS IG2 reference enterprise profile."
+      ],
+      "evidence_sufficiency": "PARTIAL",
+      "lens_type": "technical_feasibility",
+      "rationale": "Grounded technical enablement is present because cryptographic-primitive analysis has been shown to materially support ransomware neutralization and reverse engineering. Grounded technical limitation is also present because ransomware can alter entropy patterns to evade entropy-based cryptographic-operation detection, and some detection approaches impose nontrivial computational cost. The support and challenge are materially relevant and mixed, so the stance is neutral rather than affirmatively feasible or infeasible. The directional claims remain GENERAL because the cited evidence does not establish deployment-specific maturity or deployment-specific validation in the supplied scenario.",
+      "stance": 0
+    }
+  },
+  "assessment_sha256": "2e865204d8e448d3874c419e143fa89d5602baa8f501267f2f22f41a3f1a52cd",
+  "checkpoint_sha256": "7422db1a86c86d01ee951835336c81a5d70e96cdf6f2a5ccc02e83e2b6c084be",
+  "created_at": "2026-09-20T07:57:59.261569+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "AE03C_E5522A35F4981027",
+          "AE03S_C5AF41A880A404C2",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE08_031120C53EF050F3",
+          "DE_DE09_6719137897848A9E",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ],
+      [
+        "JURISDICTION_NEUTRAL",
+        null,
+        [
+          "DE_DE10_A086B3193CD6440B",
+          "DE_DE18_CDC975345637E009",
+          "DE_DE18_EAA59A9B7CEAD276",
+          "E_23_534489D29C38B327"
+        ],
+        [],
+        [
+          "CIS_IG2_REFERENCE_ENTERPRISE",
+          "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+          "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+          "CIS_IG2"
+        ]
+      ]
+    ],
+    "input_fingerprint": "71b8fb23d92e73df09f534c0e7b17e95e7734f1cb399110b88d3f73e8586e830",
+    "jurisdiction_neutral": true,
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "b2fac6320f454865359ea5347887da3d8b2fa463814583a384ccbcb75bd5173d",
+    "repeat_index": 43,
+    "response_schema_sha256": "3ddf2999a3f36ea3e94e513588224922e8eab83b047a7dd363d6ace9f2e66679",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "2037281eed74f9ef229d7c8e5644166c9deee94262543ea9b73cd76207716159",
+    "user_prompt_sha256": "ff9aa8ac8913e8f73baa5e04ff1a44b3c6edb8ab3d7b162c3365102eaf115e42",
+    "variant_id": "JOINT_SINGLE_AGENT"
+  }
+}

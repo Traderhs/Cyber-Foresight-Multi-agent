@@ -1,0 +1,164 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FA_CLM_01",
+        "evidence_ids": [
+          "DE_DE03_912FC8A63179A943",
+          "DE_DE03_6786A7AB93821D48"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NIST guidance provides an adoption-benefit pathway for NLP/LLM adoption by documenting that secure-by-design software practices can improve development efficiency, that standardized security features and services can be used instead of proprietary implementations, and that automated code review/analysis can lower the effort and resources needed to detect vulnerabilities in AI model code.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLM_02",
+        "evidence_ids": [
+          "DE_DE15_1AEC6DDD669756FF",
+          "DE_DE01_E85CB6412740EF20"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied NCSC and NIST guidance provide an adoption-burden pathway for NLP/LLM adoption by documenting that secure-by-design AI principles require significant resources throughout the system lifecycle, that developers must invest in protective features, mechanisms, and tools, and that AI risk management requires staffing and funding resources.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FA_CLM_03",
+        "evidence_ids": [
+          "DE_DE02_CFF4EAB2C4BEC522",
+          "DE_DE15_7C1849B1FD93975C"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied GAI/AI operation guidance describes deployment-maturity requirements that would accompany adoption, including monitoring system capabilities and limitations, provenance, user feedback, incident disclosure, secure operation and maintenance, behavior monitoring, input logging, and update management.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLM_04",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, which describes an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments and notes that some IG2 safeguards depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FA_CLM_05",
+        "evidence_ids": [
+          "AE01C_A6798E23EEB1E487"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied LLM DDoS study record states that the study is benchmark-based rather than an enterprise operational deployment or cost study and does not establish turnkey production deployment; it also notes that performance depended on prompt context or fine-tuning and that few-shot results were materially weaker on the harder Urban IoT setting.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific financial conclusion would require evidence of budget fit, resource capacity, procurement constraints, and quantified implementation or operational cost.",
+      "A deployment-specific adoption conclusion would require evidence that the CIS IG2 reference enterprise can access or already has the enterprise-grade technology and specialized expertise needed for the relevant safeguards.",
+      "The adoption-burden direction would be strengthened if evidence showed that the required lifecycle resources, staffing, funding, monitoring, update management, provenance, input logging, or incident processes are disproportionate to available capacity.",
+      "The adoption-benefit direction would be strengthened if evidence showed measurable development efficiency, vulnerability-detection savings, standardized-security savings, or other resource reductions in an enterprise NLP/LLM deployment.",
+      "A production-deployment or pilot-cost study for NLP/LLM-based DDoS detection would be needed to move from general feasibility to deployment-specific financial feasibility."
+    ],
+    "constraints": [
+      "Exact affordability, budget fit, ROI, TCO, payback period, procurement timing, and staffing count cannot be inferred because the frozen deployment context assumes no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling.",
+      "The adoption-benefit evidence is general secure-development efficiency and resource-saving guidance; it does not establish measured DDoS-specific production savings, vendor pricing, or deployment-specific ROI.",
+      "The adoption-burden evidence establishes that lifecycle resource investment and staffing/funding resources are required, but it does not quantify exact cost, headcount, or budget impact.",
+      "Deployment-maturity evidence requires ongoing monitoring, update management, provenance, input logging, feedback, and incident processes, but these records are supplementary context and do not independently determine financial or adoption direction.",
+      "The LLM DDoS study evidence is benchmark-based and not an enterprise operational deployment or cost study, so it cannot support a deployment-specific financial conclusion by itself.",
+      "Jurisdiction is intentionally masked and no lens-specific jurisdictional evidence is supplied; therefore, no jurisdiction-specific financial, regulatory, or procurement conclusion is supported."
+    ],
+    "decision_object_id": "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+    "evidence_gaps": [
+      "No exact budget, price, ROI, TCO, payback period, procurement ceiling, or staffing count is supplied for the frozen deployment.",
+      "No evidence quantifies the financial cost of implementing the documented secure AI lifecycle, monitoring, update management, provenance, input logging, or incident processes.",
+      "No evidence establishes the organization's existing NLP/LLM capability, model hosting, compute resources, data access, integration architecture, or procurement constraints.",
+      "No evidence establishes the DDoS operational workload, traffic scale, detection task, performance requirements, or integration burden specific to this deployment.",
+      "No evidence establishes vendor, product, product version, license, contract, operational support, or procurement-timing details.",
+      "No jurisdiction-specific financial or regulatory obligation evidence is available because the scenario jurisdiction is masked and this lens has no jurisdiction-specific evidence."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "Under the Financial / Adoption Feasibility lens, the supplied records produce both grounded support and grounded challenge for the frozen NLP/LLM action. The NIST secure-development records eligible as adoption_benefit document efficiency and resource-saving pathways: secure-by-design practices can improve development efficiency, standardized security features can avoid proprietary implementations, and automated code review/analysis can lower the effort and resources needed to detect vulnerabilities. The NCSC and NIST records eligible as adoption_burden document resource burdens: secure-by-design AI practices require significant lifecycle resources and developer investment, and AI risk management requires staffing and funding resources. Deployment-maturity records describe ongoing monitoring, update management, provenance, feedback, and incident processes, but they are supplementary and cannot by themselves create direction. The frozen deployment context supplies no numeric budget, price, ROI, TCO, staffing count, or procurement ceiling, so exact affordability or payback cannot be established. Because the available directional evidence is genuinely mixed and no deployment-specific financial datum resolves the balance, stance=0 is appropriate.",
+    "stance": 0
+  },
+  "assessment_sha256": "f4faba2956ecc47d02d52c3a1a3798d122903afa538ad9aff8977010c7513c28",
+  "checkpoint_sha256": "46fa74e28a194b5dda58c1f9fb53046fa254956ea4d867d9eeac70370c1c0ff0",
+  "created_at": "2026-09-20T07:46:33.798139+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ddos__nlp_llm",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE01_E85CB6412740EF20",
+        "DE_DE02_CFF4EAB2C4BEC522",
+        "DE_DE03_6786A7AB93821D48",
+        "DE_DE03_912FC8A63179A943",
+        "DE_DE15_1AEC6DDD669756FF",
+        "DE_DE15_7C1849B1FD93975C"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "7901525444d11c228a88af4223c854769761d85112fc1d5d749169d150638b50",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__kr__cis_ig2__5ed48aebe577ad79",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__eu__cis_ig2__560f1ead343e1919",
+      "contextual__decision__main__ddos__nlp_llm__pmt_nlp_llm__f058f44d68a13272__us__cis_ig2__fec82e228776b427"
+    ],
+    "payload_sha256": "c766f34af179cb5226e01ecd12767a63f0793d57cbc720d5e4f1d05d86b7f389",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "893b19395ed63dd6e2cd8426e9fb08b77dad407ac78a44fdc9d85a1f97627789",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "401bc1677848243db55d746a426e60e55a0fad1a8d11390700cf7c441ee14fae",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "58b306186b200a0011dd17aa88f1f5b5a506ba6fbf2f794ba9ceecfb3609db45",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

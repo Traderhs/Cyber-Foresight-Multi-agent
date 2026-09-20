@@ -1,0 +1,131 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_GENERAL_SUPPORT_1",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied key-management guidance record supports GENERAL institutional feasibility by describing accountability/traceability mechanisms for cryptographic keys, including identification of authorized key users, recording who performs key actions, access-control mechanisms, and audit of logs for security violations.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GENERAL_SUPPORT_2",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied CPG excerpt supports GENERAL institutional feasibility by providing a recommended action and outcome for strong agile encryption, including use of properly configured and up-to-date SSL/TLS when technically feasible, identifying outdated or weak encryption, and updating to sufficiently strong algorithms.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_GENERAL_CHALLENGE_1",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied algorithm-transition record challenges GENERAL institutional feasibility by creating a compliance constraint for CRYPTOGRAPHY: algorithm selection is constrained by stated statuses that disallow or deprecate certain symmetric algorithms and identify others as acceptable.",
+        "status": "CHALLENGES_FEASIBILITY"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC regional/legal direction would require exact supplied jurisdiction-specific regulatory_applicability evidence for the frozen region plus matching governance_enablement or compliance_constraint evidence in the directional contract.",
+      "The GENERAL support is conditional on the deployment being able to implement the supplied key-management accountability/traceability expectations and the CPG encryption-deployment pathway; the payload does not evidence that implementation state.",
+      "The GENERAL compliance challenge is material only to the extent that disallowed or deprecated algorithms are present in the deployment; no algorithm inventory is supplied to quantify that burden."
+    ],
+    "constraints": [
+      "Algorithm selection is constrained by stated disallowed, deprecated, and acceptable symmetric-algorithm statuses (DE_DE09_6719137897848A9E).",
+      "Cryptographic key use is subject to accountability/traceability expectations, including traceable key access, access controls, and log audit (DE_DE08_031120C53EF050F3).",
+      "Encryption deployment is conditioned on technical feasibility, proper SSL/TLS configuration, and remediation of outdated or weak encryption (E_23_534489D29C38B327)."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "No eligible regulatory_applicability record is supplied for the masked frozen region, so DEPLOYMENT_SPECIFIC institutional/regional or legal feasibility cannot be established from this payload.",
+      "No supplied record establishes whether the supplied algorithm-transition or CPG materials create binding obligations for the frozen reference enterprise; they are treated only as GENERAL institutional evidence under the directional contract.",
+      "No supplied record provides the organization's actual algorithm inventory, key-management audit capability, encryption deployment state, cross-border data flows, data-sovereignty constraints, or exact resource capacity."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied decision-evidence records support GENERAL institutional enablement for the frozen CRYPTOGRAPHY action: the key-management record describes accountability/traceability mechanisms for cryptographic keys, and the CPG record provides a recommended action and outcome for strong agile encryption, including use of properly configured SSL/TLS when technically feasible and updating outdated or weak encryption. The algorithm-transition record introduces a GENERAL compliance constraint by stating disallowed, deprecated, and acceptable algorithm statuses, which would constrain algorithm selection and migration. On balance, the enablement records are directly relevant to governance pathways and implementation structure, while the compliance record identifies a bounded constraint without showing inability, absence of a pathway, or lack of necessary governance; therefore the action is supported at the GENERAL level. The frozen region is intentionally masked and no eligible regulatory_applicability record is supplied for this lens, so no DEPLOYMENT_SPECIFIC regional/legal direction is inferred; that narrower question remains an evidence gap.",
+    "stance": 1
+  },
+  "assessment_sha256": "fef971c8ec54365c168e496c263bb7e4c3fef077e79c92bfd31a4f6714ab8111",
+  "checkpoint_sha256": "52de2fb4b0acd89e956cb1b658cf290a2c79b85fbbce3cca3a8cac3d889169b6",
+  "created_at": "2026-09-20T11:10:09.298226+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE08_031120C53EF050F3",
+        "DE_DE09_6719137897848A9E",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "4c8f647851abc65fe2800ee2c9f42023c50699265d3c640a5cd8b4b4735de174",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "aee60b42212bd31a6f867fa30073d79b211d428ab7ebe0d17543736734714ca5",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "cb8f97f1a80e2a0fb9296704a764151bf550e9b3d2aa11ffeeee7a7930f8e1a3",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "475644d19029a78af1ae11ccca28d713d869ece9124389385cd55028340f1c9c",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

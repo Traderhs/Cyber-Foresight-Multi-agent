@@ -1,0 +1,149 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR-CLM-001",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3",
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied decision-guidance records provide an institutional governance pathway for cryptography by describing accountability/traceability for entities that generate, access, destroy, or use cryptographic keys and by recommending deployment and update of effective encryption.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLM-002",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied cryptographic algorithm transition record imposes compliance constraints on cryptography deployment by disallowing or deprecating specified encryption algorithms and limiting acceptable choices, including AES variants.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR-CLM-003",
+        "evidence_ids": [
+          "E_31_A0893427DD4F5B04",
+          "E_31_6BBE82F2BAC198B3",
+          "E_31_C1CFA326F0420DCA"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The EU primary-law records establish jurisdictional relevance for encryption or pseudonymisation in personal-data or special-category processing contexts and mention encryption in EU national cybersecurity strategy or public procurement policy, but they do not by themselves provide a positive or negative institutional feasibility direction.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "IR-CLM-004",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen CIS IG2 reference-enterprise profile describes a multi-department enterprise IT environment that may process sensitive information and face regulatory burdens, with some safeguards depending on enterprise-grade technology and specialized expertise.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific institutional/regional feasibility conclusion requires exact EU evidence that the relevant personal-data, special-category, or sector-specific obligations apply to the frozen reference enterprise and to the selected cryptography controls.",
+      "A deployment-specific assessment of the algorithm-transition constraint requires evidence of which cryptographic algorithms are in use and whether they are acceptable, deprecated, or disallowed under the supplied guidance.",
+      "A deployment-specific institutional enablement assessment requires evidence of organizational key-management accountability, traceability, and encryption update practices."
+    ],
+    "constraints": [
+      "Cryptography deployment must account for algorithm-approval constraints, including disallowed and deprecated encryption algorithms identified in the supplied algorithm-transition record.",
+      "The EU primary-law context is relevant to encryption or pseudonymisation as a security or privacy-preserving measure, but the supplied EU records do not by themselves determine feasibility direction.",
+      "The frozen reference-enterprise profile may require enterprise-grade technology and specialized expertise for some safeguards."
+    ],
+    "decision_object_id": "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944",
+    "evidence_gaps": [
+      "No supplied record establishes whether the frozen EU CIS IG2 reference enterprise processes personal data, is an essential or important entity under the supplied EU primary-law context, or is subject to sector-specific EU obligations that directly apply to PMT_CRYPTOGRAPHY.",
+      "No supplied record provides an inventory of existing cryptographic algorithms, key-management systems, or audit capabilities needed to evaluate the algorithm-transition constraint in this deployment.",
+      "No supplied EU-specific governance_enablement or compliance_constraint record directly connects the EU primary-law encryption context to insider-threat cryptography implementation."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied records provide a grounded GENERAL institutional support direction for CRYPTOGRAPHY. The governance_enablement records describe an accountability/traceability pathway for cryptographic key access and recommended encryption deployment/update practices, which support institutional adoption. The compliance_constraint record introduces an algorithm-compatibility constraint, but it is limited to disallowed or deprecated cryptographic choices and does not establish that the action cannot be deployed. The EU primary-law records are treated as jurisdictional scope: they identify encryption or pseudonymisation as an appropriate security or privacy-preserving measure and mention encryption in EU national strategy/procurement policy, but they do not by themselves create a positive or negative direction. Because exact EU-specific applicability to the frozen reference enterprise and to the selected insider-threat cryptography controls is not established, sufficiency is PARTIAL and the directional judgment is kept GENERAL.",
+    "stance": 1
+  },
+  "assessment_sha256": "8321c9bcead710ed6ce5b950e701a0b091c1bf77070ed3dbc2f816f6c6ef4399",
+  "checkpoint_sha256": "28b485c557168229c6419074a5dd8c991c2fffad04ff68888e3c0e228f5f4f15",
+  "created_at": "2026-09-20T09:12:58.473959+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__insider_threat__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_BOUND",
+      "EU",
+      [
+        "DE_DE08_031120C53EF050F3",
+        "DE_DE09_6719137897848A9E",
+        "E_23_534489D29C38B327",
+        "E_31_6BBE82F2BAC198B3",
+        "E_31_A0893427DD4F5B04",
+        "E_31_C1CFA326F0420DCA"
+      ],
+      [
+        "E_31_6BBE82F2BAC198B3",
+        "E_31_A0893427DD4F5B04",
+        "E_31_C1CFA326F0420DCA"
+      ],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "98006a764f672f28c41e76a83904a7804bf9bd8cb16bb87321f275f7c3129e24",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__insider_threat__cryptography__pmt_cryptography__61773f0bff5bf42f__eu__cis_ig2__f3fd6cd9bf90d944"
+    ],
+    "payload_sha256": "216f9b33e4e478ec74c85ee2b794e0e3e1e7e5cea07b2d9f2ac033692cea9e5c",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "f9463e986e5d99f6da5058dbb5bc32e968a234e124d1582abc072705088ec4b2",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "a1e4b672b4da8eea416b11dd6f1907ead73e9ef4147b402c062439c83cd7190b",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "0e83e53c03126e8c41904926fa6fc591261424e5b287ba88746a82e1dfe27d14",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

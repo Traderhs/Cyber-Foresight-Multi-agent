@@ -1,0 +1,185 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CLAIM_1",
+        "evidence_ids": [
+          "AE03S_C5AF41A880A404C2"
+        ],
+        "scope": "GENERAL",
+        "statement": "A ransomware-specific cryptographic-analysis technique can identify cipher classes and extract cryptographic keys or state from execution traces across evaluated ransomware specimens, materially supporting ransomware neutralization and reverse engineering.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLAIM_2",
+        "evidence_ids": [
+          "AE03C_E5522A35F4981027"
+        ],
+        "scope": "GENERAL",
+        "statement": "Ransomware can deliberately alter the observable entropy pattern of its cryptographic operations to evade detectors that treat high entropy as the key signal, and the study demonstrates that cryptography-related detection is not universally robust and that some existing approaches impose nontrivial computational cost.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLAIM_3",
+        "evidence_ids": [
+          "E_23_534489D29C38B327"
+        ],
+        "scope": "GENERAL",
+        "statement": "CISA CPG PR.DS-2 recommends strong and agile encryption to maintain confidentiality of sensitive data and integrity of IT and OT traffic, properly configured and up-to-date SSL/TLS for data in transit when technically feasible, identification and update of outdated or weak encryption, and consideration of post-quantum cryptography implications; for OT, encryption is used when feasible, usually for remote or external asset communications, to minimize latency and availability impact.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLAIM_4",
+        "evidence_ids": [
+          "DE_DE18_EAA59A9B7CEAD276",
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied communications-encryption guidance describes SSL/TLS as providing application-level confidentiality, integrity, and authentication through encryption, and provides IPSec implementation context including transport/tunnel modes, ISAKMP key negotiation, certificate or Kerberos/AD identity proofing, two-factor remote access, Perfect Forward Secrecy and replay protection, and avoidance of manual SA configuration in production.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLAIM_5",
+        "evidence_ids": [
+          "E_26_A710FE8084614182"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-53A Rev. 5 provides assessment objectives and methods for cryptographic key establishment and management physical control, SC-12(06), and cryptographic protection, SC-13, including examination of policies, procedures, design documents, configuration settings, FIPS-validated cryptographic modules, system audit records, interviews, and tests.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLAIM_6",
+        "evidence_ids": [
+          "DE_DE09_6719137897848A9E"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-131A Rev. 2 lists AES-128, AES-192, and AES-256 as acceptable for encryption and decryption, treats two-key TDEA encryption as disallowed, three-key TDEA encryption as deprecated through 2023 and disallowed after 2023 unless specifically allowed by other NIST guidance, and treats SKIPJACK encryption as disallowed.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLAIM_7",
+        "evidence_ids": [
+          "DE_DE08_031120C53EF050F3"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST SP 800-57 Part 1 Rev. 5 requires accountability and traceability for entities authorized to generate, access, destroy, or otherwise use cryptographic keys, including traceability of plaintext key access to the accessing entity, whether a human, device, application, or process.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLAIM_8",
+        "evidence_ids": [
+          "E_33_CDE0F421E4D797ED"
+        ],
+        "scope": "GENERAL",
+        "statement": "A cutoff-constrained Crossref trend reports increasing annual security-cryptography publication counts from 2021 to 2024, but the record explicitly does not establish deployment maturity, operational effectiveness, or causal mitigation effectiveness.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If entropy-based cryptographic detection is used, it must be hardened against or combined with countermeasures for the demonstrated entropy-pattern evasion, or feasibility for that detection path is conditional (AE03C_E5522A35F4981027).",
+      "Deployment should use accepted, up-to-date cryptographic algorithms and avoid disallowed or deprecated ciphers for new encryption, with legacy use only where permitted (DE_DE09_6719137897848A9E, E_23_534489D29C38B327).",
+      "Key generation, access, destruction, and use must have accountability and traceability, and cryptographic key/control and protection must be assessable through documented policies, configurations, and tests (DE_DE08_031120C53EF050F3, E_26_A710FE8084614182).",
+      "For latency- or availability-sensitive OT and remote or external assets, encryption should be applied only where technically feasible and with operational impact considered (E_23_534489D29C38B327, DE_DE18_CDC975345637E009)."
+    ],
+    "constraints": [
+      "Entropy-dependent cryptographic-operation detection is constrained by demonstrated ransomware evasion of entropy patterns and nontrivial computational cost in some existing approaches (AE03C_E5522A35F4981027).",
+      "Implementation guidance requires up-to-date strong encryption, remediation of outdated or weak encryption, and feasible use in OT environments with latency and availability considerations (E_23_534489D29C38B327).",
+      "TLS/IPSec implementation context includes key negotiation, identity proofing, remote-access authentication, Perfect Forward Secrecy, replay protection, and avoidance of manual SA configuration in production (DE_DE18_EAA59A9B7CEAD276, DE_DE18_CDC975345637E009).",
+      "Algorithm selection is constrained by transition guidance: AES-128, AES-192, and AES-256 are acceptable, while two-key TDEA encryption is disallowed, three-key TDEA encryption is disallowed after 2023 unless specifically allowed by other guidance, and SKIPJACK encryption is disallowed (DE_DE09_6719137897848A9E).",
+      "Operability requires key-management accountability and traceability, plus assessment of cryptographic key control and cryptographic protection (DE_DE08_031120C53EF050F3, E_26_A710FE8084614182)."
+    ],
+    "decision_object_id": "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+    "evidence_gaps": [
+      "No exact local architecture, product/version, cryptographic asset inventory, integration points, OT/IT network configuration, or latency constraints are supplied, so a DEPLOYMENT_SPECIFIC compatibility conclusion cannot be grounded.",
+      "No supplied evidence quantifies enterprise-scale scalability, maintainability, integration effort, or sustained operational effectiveness of the cryptographic-analysis capability across the 2025-2027 horizon.",
+      "No supplied evidence demonstrates integration with existing enterprise monitoring, forensic, or incident-response workflows at scale.",
+      "No supplied evidence directly links the Crossref publication trend to operational adoption or ransomware-specific mitigation effectiveness (E_33_CDE0F421E4D797ED).",
+      "No region-specific technical regulatory or implementation evidence is supplied in this equivalence class; no region-specific direction is inferred."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The general technical direction is supported. The action-specific technical_enablement record demonstrates a ransomware-specific cryptographic-analysis pathway that can identify ciphers and extract cryptographic keys or state from execution traces, materially supporting ransomware neutralization and reverse engineering (AE03S_C5AF41A880A404C2). The action-specific technical_limitation record shows a bounded but material barrier for entropy-dependent cryptography-related detection: ransomware can manipulate observable entropy patterns, and some existing approaches impose nontrivial computational cost (AE03C_E5522A35F4981027). The supplied guidance records provide implementation and operability context, including strong/agile encryption guidance, TLS/IPSec configuration context, key-management traceability, algorithm-transition status, and control-assessment methods, but they are supplementary context rather than independent directional evidence. On balance, the demonstrated ransomware-specific enablement is more direct to the frozen Threat×PMT action than the bounded detection limitation, so the records support general technical feasibility while the limitation imposes conditions and reduces sufficiency. No DEPLOYMENT_SPECIFIC direction is grounded because exact architecture, product/version, integration environment, and current cryptographic asset details are missing.",
+    "stance": 1
+  },
+  "assessment_sha256": "d343eeb567e8201091e636799f879ecab22d3618f8bafcf9c871e1c3d50badbd",
+  "checkpoint_sha256": "4d678f9d800ed19c92fb9b3d79c24b395a4bdc1c3583762c55582b9198d9d07b",
+  "created_at": "2026-09-20T08:26:10.840626+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__ransomware__cryptography",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE03C_E5522A35F4981027",
+        "AE03S_C5AF41A880A404C2",
+        "DE_DE18_CDC975345637E009",
+        "DE_DE18_EAA59A9B7CEAD276",
+        "E_23_534489D29C38B327"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "841aa40e3390c95a6964b7cffb66e53982200557419368da0fa86a224bd3f95a",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__kr__cis_ig2__6d6a788b3614d762",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__eu__cis_ig2__3ba36a931c4d6a67",
+      "contextual__decision__main__ransomware__cryptography__pmt_cryptography__63c7d9639e8abcdc__us__cis_ig2__11885d6e5dd87a51"
+    ],
+    "payload_sha256": "656699338f8eb5b7720dd165af0cd067c986fb9f033db3fe3f1950eb2a430509",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "90e44c5022b58d5deafe69c799889679bb546f899367d7e03ea79534b067ad2c",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "151f857657edd5948670a7ace43bb20946a0f4a36d44f071b6daca65f2f7b492",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "fe0e0241552868da31197486888d97b8fe1f510d5a10f4f2fcbbc4ec0439723e",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

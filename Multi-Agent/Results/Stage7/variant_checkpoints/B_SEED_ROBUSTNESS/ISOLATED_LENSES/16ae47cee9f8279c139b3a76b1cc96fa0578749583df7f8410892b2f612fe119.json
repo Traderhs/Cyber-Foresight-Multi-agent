@@ -1,0 +1,155 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "FAS_S1",
+        "evidence_ids": [
+          "DE_DE10_A086B3193CD6440B"
+        ],
+        "scope": "GENERAL",
+        "statement": "A supplied TLS implementation guidance record documents an adoption pathway for HTTPS/TLS, including certificate-based client authentication, path validation, trust anchor stores, and a Raw Public Keys alternative that reduces public-key structure size and simplifies processing while requiring out-of-band binding to preserve entity assurance.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAS_S2",
+        "evidence_ids": [
+          "DE_DE18_CDC975345637E009"
+        ],
+        "scope": "GENERAL",
+        "statement": "A supplied control-systems encryption primer documents a lower-overhead transport mode relative to tunnel mode because it does not add an additional per-packet tunnel header, providing an efficiency consideration for encrypted-transport deployment.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAS_C1",
+        "evidence_ids": [
+          "DE_DE14_EDCA207577B4607A"
+        ],
+        "scope": "GENERAL",
+        "statement": "A supplied SSL VPN guidance record documents performance burdens associated with SSL/TLS-encapsulated traffic: session establishment time can be affected by back-end authentication system demands and certificate key size, encapsulated traffic may cause packet fragmentation and slow network activity, and addressing performance problems generally involves upgrading or replacing hardware, using an SSL accelerator to offload processing, or reducing processing demands.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "FAS_N1",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The frozen reference-enterprise profile is CIS IG2, described as an enterprise with personnel responsible for managing and protecting IT infrastructure across multiple departments with differing risk profiles; IG2 safeguards address increased operational complexity, and some depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "FAS_N2",
+        "evidence_ids": [
+          "DE_DE14_5FC183B8D7DD961A"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "A supplied deployment-maturity case study describes a medium-sized organization whose existing IPsec remote-access solution required significant IT labor to install and support client software on user hosts and did not provide remote access for hosts in public locations.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A deployment-specific support conclusion would require evidence that the documented TLS/HTTPS implementation pathway and lower-overhead option translate into affordable implementation for the actual infrastructure, application scope, and available budget.",
+      "A deployment-specific challenge conclusion would require evidence that actual SSL/TLS performance impact in the frozen enterprise makes the documented remediation options—hardware upgrade or replacement, SSL accelerator or offloading, or reduced load—necessary and materially burdensome relative to available budget and staffing.",
+      "If actual performance impact is low or offloading and capacity are already available, the documented challenge burden is reduced; if unbudgeted hardware or load reduction is required, the documented challenge burden outweighs the documented support enablers."
+    ],
+    "constraints": [
+      "The SUPPORTS_FEASIBILITY direction is limited to documented implementation guidance and an overhead-reduction consideration; it does not establish affordability, budget fit, ROI, TCO, payback period, vendor terms, or actual staffing savings.",
+      "The CHALLENGES_FEASIBILITY direction is limited to documented performance and remediation considerations; it does not quantify cost, staffing burden, procurement timing, or whether remediation is required in the frozen CIS IG2 deployment.",
+      "The CIS IG2 reference profile and the deployment-maturity case study are supplementary context; they do not by themselves establish a directional financial or adoption conclusion.",
+      "No numeric budget, price, ROI, TCO, staffing count, procurement ceiling, vendor assumption, or exact implementation timeline is supplied for the frozen deployment scenario.",
+      "The region is masked and no jurisdiction-specific financial or adoption evidence is supplied, so no region-driven feasibility conclusion is made."
+    ],
+    "decision_object_id": "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+    "evidence_gaps": [
+      "Actual budget, price, TCO, ROI, payback period, and procurement ceiling for the frozen CIS IG2 enterprise.",
+      "Staffing and IT labor capacity, specialized expertise, and operational burden for HTTPS/TLS implementation, integration, maintenance, and performance remediation.",
+      "Current TLS/HTTPS coverage, application inventory, network performance baseline, and whether SSL offloading, hardware upgrades, or reduced load are needed.",
+      "Implementation timing, migration scope, vendor or contract terms, and opportunity cost relative to alternative session-protection controls.",
+      "Jurisdiction-specific financial, procurement, or regulatory cost factors, if any, because the region is masked and no jurisdiction-specific evidence is supplied."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "financial_adoption",
+    "rationale": "The supplied records contain grounded GENERAL adoption enablers and grounded GENERAL adoption burdens, but they do not supply the financial, staffing, procurement, or deployment-specific performance data needed for a deployment-specific conclusion. The support direction is grounded in documented TLS/HTTPS implementation guidance and a documented lower-overhead encrypted-transport consideration. The challenge direction is grounded in documented SSL/TLS performance constraints and remediation pathways that may require hardware changes, offloading, or reduced load. The CIS IG2 reference profile and the deployment-maturity case study provide context about enterprise operational complexity and prior IT labor burden, but they do not by themselves create a directional financial conclusion. Because exact budget, price, TCO, ROI, payback period, staffing capacity, procurement timing, and actual performance impact are absent, the general financial/adoption direction is mixed rather than clearly favorable or materially infeasible under the frozen scenario.",
+    "stance": 0
+  },
+  "assessment_sha256": "4b24011fe08f29de730d4d0a9ef210442b0ac67df83efb68e2df4826e015656e",
+  "checkpoint_sha256": "0f47c2d4d97946826f549520643b9607b301b4ad0c1c35c7452c1cb730781b03",
+  "created_at": "2026-09-20T09:52:57.594419+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__session_hijacking__https",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "DE_DE10_A086B3193CD6440B",
+        "DE_DE14_5FC183B8D7DD961A",
+        "DE_DE14_EDCA207577B4607A",
+        "DE_DE18_CDC975345637E009"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "16ae47cee9f8279c139b3a76b1cc96fa0578749583df7f8410892b2f612fe119",
+    "lens_type": "financial_adoption",
+    "member_decision_object_ids": [
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__kr__cis_ig2__6987fb305f2971e4",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__eu__cis_ig2__be2406ea37144a6c",
+      "contextual__decision__main__session_hijacking__https__pmt_https__0223194cb343c3d2__us__cis_ig2__54b2b8bdb7ec8051"
+    ],
+    "payload_sha256": "262b35e37b90bb31f7356c537907b37ecf1def9669d73cbec3ba4a5b8313d8a7",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "b0545cdd0e2cfc6469d2177f29a48152385ab8fb7d990acedf74355a2dd0c682",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "05db0a50d3c2fdb1ecedf0e876205c276bbd3455278ad1b77e0bf5ac183683d5",
+    "system_prompt_sha256": "f5ba9ad8c08248569237e79cb28a0aec0e7c1b9321fa56a266f27f6957f4f9db",
+    "user_prompt_sha256": "c85164cfe46078c0f5cd9c01ecef4fa7ed45985a09e0f3c9ba2e02d0bcae1d82",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

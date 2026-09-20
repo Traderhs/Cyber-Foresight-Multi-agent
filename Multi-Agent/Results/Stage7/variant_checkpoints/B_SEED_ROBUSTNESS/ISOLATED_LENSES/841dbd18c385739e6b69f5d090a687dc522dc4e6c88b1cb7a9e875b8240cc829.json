@@ -1,0 +1,138 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "IR_CLM_1",
+        "evidence_ids": [
+          "DE_DE17_567DDA7CFBC62829",
+          "DE_DE12_E6F93E4AB8722379",
+          "DE_DE11_1E4AAE06CC3795D7"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied access-control and zero-trust governance records provide GENERAL institutional enablement for ACCESS CONTROL through policy/procedure governance, visibility and analytics, automation and orchestration, compliance-system input to access decisions, attribute lifecycle management, documented attribute meanings, and access-failure procedures.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_2",
+        "evidence_ids": [
+          "DE_DE13_055FC5E35FA61DD5"
+        ],
+        "scope": "GENERAL",
+        "statement": "The supplied digital-identity guidance imposes prescriptive session, cookie, and access-token constraints that create a bounded compliance and implementation burden for ACCESS CONTROL, challenging but not defeating GENERAL institutional feasibility.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "IR_CLM_3",
+        "evidence_ids": [
+          "E_31_96F42990F3AEAC86",
+          "E_31_52DCE9554453ADEF"
+        ],
+        "scope": "DEPLOYMENT_SPECIFIC",
+        "statement": "The supplied EU primary-law excerpts provide jurisdiction-specific context by referencing access control policies and access management for essential or important entities and for providers of public electronic communications networks or publicly available electronic communications services, but they do not establish that the frozen CIS_IG2 reference enterprise is within that legal scope.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "A DEPLOYMENT_SPECIFIC EU feasibility direction would require evidence that the frozen enterprise is within the legal scope of the supplied EU primary-law excerpts and can implement the cited governance and compliance pathways.",
+      "If the frozen enterprise is within the legal scope of the supplied EU primary-law excerpts, access-control policies and access-management measures should be aligned with the referenced cybersecurity risk-management expectations.",
+      "If the prescriptive digital-identity/session constraints are not satisfiable in the deployment environment, the GENERAL institutional support would need to be reconsidered; no supplied evidence establishes that they are not satisfiable."
+    ],
+    "constraints": [
+      "Institutional implementation of ACCESS CONTROL must remain aligned with the governance and compliance functions identified in the supplied records, including policy/procedure enforcement, compliance-system input to access decisions, attribute lifecycle management, access-failure handling, and digital-identity/session constraints.",
+      "EU-specific legal applicability remains unresolved: the supplied EU primary-law excerpts are scoped to essential or important entities and public electronic communications network/service contexts, while the frozen scenario only fixes a CIS_IG2 reference-enterprise profile and EU jurisdiction."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+    "evidence_gaps": [
+      "No supplied evidence establishes whether the frozen CIS_IG2 reference enterprise is an essential or important entity under the supplied EU primary-law excerpts, or otherwise legally subject to those specific access-control expectations.",
+      "No supplied EU-specific evidence quantifies compliance burden, data-sovereignty obligations, cross-border constraints, audit requirements, enforcement exposure, or penalties related to ACCESS CONTROL in the frozen enterprise.",
+      "No supplied evidence shows that the frozen enterprise currently has the governance structures, systems, or expertise required to operationalize the cited access-control governance pathways."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "institutional_regional",
+    "rationale": "The supplied directional evidence supports GENERAL institutional feasibility of ACCESS CONTROL because governance-enablement records describe workable policy, procedure, compliance-integration, visibility/analytics, attribute-lifecycle, and access-failure pathways. A bounded compliance challenge exists from the supplied digital-identity/session constraints, but that record does not establish material infeasibility. The EU primary-law records provide jurisdiction-specific context about access control policies and access management for essential or important entities and public electronic communications network/service contexts, but they do not establish that the frozen CIS_IG2 reference enterprise is legally in scope. Therefore, the defensible direction is GENERAL institutional support with PARTIAL sufficiency, not a deployment-specific EU legal conclusion.",
+    "stance": 1
+  },
+  "assessment_sha256": "f0bd64b5a4417970b180d87b74296fc4ed5a17d86a63dc9aa266b1e38a929fee",
+  "checkpoint_sha256": "7db233927c85b916998bbce739773f1410befacef5d3af4797e5b6cb2f9b6121",
+  "created_at": "2026-09-20T09:39:09.657249+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_BOUND",
+      "EU",
+      [
+        "DE_DE11_1E4AAE06CC3795D7",
+        "DE_DE12_E6F93E4AB8722379",
+        "DE_DE13_055FC5E35FA61DD5",
+        "DE_DE17_567DDA7CFBC62829",
+        "E_31_52DCE9554453ADEF",
+        "E_31_96F42990F3AEAC86"
+      ],
+      [
+        "E_31_52DCE9554453ADEF",
+        "E_31_96F42990F3AEAC86"
+      ],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "841dbd18c385739e6b69f5d090a687dc522dc4e6c88b1cb7a9e875b8240cc829",
+    "lens_type": "institutional_regional",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9"
+    ],
+    "payload_sha256": "a66e02bd7148156c11390616eccab313d2afbb2d8bcabf7840f45b86a99b4b40",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "aca98e2635a038c811518ddf41a63c0c7cdb570bb22d6e2c9c7ef1de99459a6c",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "1493c0b718c2e91b9eed5d1db0426c486223b1f2bafc7ee87aa1f71628c086ab",
+    "user_prompt_sha256": "b28e8f3bbfcfafaeff9219326574c443fa0780a6977255f1c17361f12fc7dbf1",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

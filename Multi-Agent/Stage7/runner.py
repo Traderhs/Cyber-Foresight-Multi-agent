@@ -22,6 +22,7 @@ from Stage7.axes import (
     axis_b2_policy,
     axis_b3_compute,
     axis_b4_deployment_boundary,
+    axis_b5_seed_robustness,
     axis_c1_jurisdiction,
     axis_c2_contextualized_path,
     axis_c3_scenario_provenance,
@@ -142,6 +143,7 @@ def run_stage7_validation(
             "Information-isolated contextual Stage 4 lenses versus one joint three-lens Stage 4 agent, with the frozen upstream Stage 1-3 chain and deterministic downstream policy held fixed; decision-policy dependence and compute/deployment boundaries are reported separately.",
             [
                 ("single_agent_baseline", architecture_baseline),
+                ("seed_robustness", axis_b5_seed_robustness(bundles, variants)),
                 ("decision_policy", axis_b2_policy(bundles)),
                 ("compute", axis_b3_compute(root, bundles)),
                 ("deployment_boundary", axis_b4_deployment_boundary(bundles)),

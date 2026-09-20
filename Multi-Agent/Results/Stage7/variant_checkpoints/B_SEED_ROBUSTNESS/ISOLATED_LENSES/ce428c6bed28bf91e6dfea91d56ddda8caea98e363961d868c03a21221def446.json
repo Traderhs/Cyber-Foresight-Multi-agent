@@ -1,0 +1,142 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF-S1",
+        "evidence_ids": [
+          "AE02S_61C8065AA576E7C5"
+        ],
+        "scope": "GENERAL",
+        "statement": "Action-specific evidence shows that anomaly-oriented malware detection can be implemented as an on-device malware defense and reports high malware detection rates, including detection of temporally different and previously unseen APKs.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-C1",
+        "evidence_ids": [
+          "AE02C_E333FEC17F65B4E1"
+        ],
+        "scope": "GENERAL",
+        "statement": "Action-specific evidence identifies a direct deployment limitation in which anomaly-based algorithms can consume substantial energy and computing resources on constrained devices, requiring feature reduction and server-side training before on-device use.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF-N1",
+        "evidence_ids": [
+          "DE_DE05_105D0030778F41BC"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST behavioral-anomaly-detection guidance presents implementation approaches and states that an organization’s information security experts should identify the products that will best integrate with existing tools, processes, and system infrastructure.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF-N2",
+        "evidence_ids": [
+          "DE_DE06_0380E777894ACF9A"
+        ],
+        "scope": "GENERAL",
+        "statement": "NIST ICS-integrity test documentation reports a behavior-anomaly-detection configuration that received packet streams and generated an alert for file-transfer activity in a test environment.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "If constrained-device or on-device anomaly detection is intended, resource profiling and possible feature reduction or server-side training are required before assuming direct on-device feasibility.",
+      "If a DEPLOYMENT_SPECIFIC technical feasibility conclusion is required, the exact local architecture, device constraints, and monitoring/integration environment must be supplied and assessed.",
+      "For enterprise adoption, the candidate anomaly-detection approach must be validated for integration with existing tools, processes, and system infrastructure before deployment-specific feasibility can be determined."
+    ],
+    "constraints": [
+      "Constrained-device or on-device deployment of anomaly detection may be limited by substantial energy and computing-resource consumption, potentially requiring feature reduction and server-side training.",
+      "Integration with existing tools, processes, and system infrastructure is not predetermined and must be assessed by organizational information security experts.",
+      "The supplied NIST test evidence describes a specific test configuration and alerting result, not a general guarantee of effectiveness for the frozen enterprise environment."
+    ],
+    "decision_object_id": "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+    "evidence_gaps": [
+      "The exact local architecture, device classes, constrained edge/on-device assets, compute and energy capacity, monitoring pipeline, and integration interfaces are not supplied, so a DEPLOYMENT_SPECIFIC technical compatibility conclusion cannot be made.",
+      "No supplied evidence identifies the candidate product, model, implementation approach, or existing security tooling that would be used for ANOMALY DETECTION in this CIS IG2 reference enterprise.",
+      "No supplied evidence establishes whether the frozen enterprise environment includes the constrained-device conditions under which the AE02C resource-consumption limitation would materially apply."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The frozen action has a grounded GENERAL technical-support direction because the action-specific enablement record demonstrates that anomaly-oriented malware detection can be implemented as an on-device malware defense and reports high malware detection rates, including previously unseen APKs. A grounded GENERAL technical-challenge direction also exists because the same action-specific record identifies a deployment limitation in which anomaly-based algorithms may consume substantial energy and computing resources on constrained devices and may require feature reduction and server-side training before on-device use. The NIST records provide supplementary deployment-maturity context by showing implementation guidance and a tested behavior-anomaly-detection configuration, but they do not independently establish direction. The support is weighed as stronger for GENERAL feasibility because it establishes a concrete action-specific capability for malware anomaly detection, whereas the limitation is resource-conditioned and scoped to constrained-device deployment rather than demonstrating infeasibility in the frozen CIS IG2 enterprise profile. A DEPLOYMENT_SPECIFIC technical feasibility conclusion is not made because the supplied deployment context does not provide the exact local architecture, device classes, constrained-device scope, integration interfaces, or compute/energy capacity needed for that narrower judgment. Missing deployment detail is therefore recorded in evidence_gaps and conditional_requirements rather than converted into a neutral stance. The masked jurisdiction label has no lens-specific technical evidence and does not affect the GENERAL technical direction.",
+    "stance": 1
+  },
+  "assessment_sha256": "5934a6ad639a2560ecf503828e4d88ac5a971e1bb339a91eff72babe64e87853",
+  "checkpoint_sha256": "a1de618f4744ebba43137945a505fc3f45d866a96cbba0dd171d2b7112fe5bf9",
+  "created_at": "2026-09-20T07:58:19.746095+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__malware__anomaly_detection",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE02C_E333FEC17F65B4E1",
+        "AE02S_61C8065AA576E7C5",
+        "DE_DE05_105D0030778F41BC",
+        "DE_DE06_0380E777894ACF9A"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "ce428c6bed28bf91e6dfea91d56ddda8caea98e363961d868c03a21221def446",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__kr__cis_ig2__d9b61d83d8bd5f5c",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__eu__cis_ig2__7b3abb36d94e3682",
+      "contextual__decision__main__malware__anomaly_detection__pmt_anomaly_detection__e70e784a0dca6a28__us__cis_ig2__72ba6e0d3d843499"
+    ],
+    "payload_sha256": "e77e8944ad2f18475351594774f39c6a068dfce2618431d7c03708fb42d689c8",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 43,
+    "response_schema_sha256": "03165dfbbbed623db79f36e9f8f2456a9d56eeb41d5d3795653a5934d4e43248",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 43,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "0bd43f90aa983734cf92bca5f9d9b9f35d8d4a3ebe55a000a1a4e0e402dcbabe",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "d1ae1309d5121688f5ed2dde39da255965d15565123b5708f46fb3152398267b",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}

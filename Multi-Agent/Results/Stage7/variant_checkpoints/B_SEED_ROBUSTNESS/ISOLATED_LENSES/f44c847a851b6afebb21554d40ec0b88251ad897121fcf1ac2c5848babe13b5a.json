@@ -1,0 +1,153 @@
+{
+  "assessment": {
+    "claims": [
+      {
+        "claim_id": "TF_CLM_001",
+        "evidence_ids": [
+          "AE06S_407DDF87C86BB41B"
+        ],
+        "scope": "GENERAL",
+        "statement": "AE06S_407DDF87C86BB41B reports that an ATT&CK-informed zero-trust risk model integrated with centralized access-control decisions improved the ability to respond to sophisticated multi-stage threats, supporting the general technical feasibility of adaptive access control as a targeted-attack defense.",
+        "status": "SUPPORTS_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_002",
+        "evidence_ids": [
+          "AE06C_8C41709C0D8EE834"
+        ],
+        "scope": "GENERAL",
+        "statement": "AE06C_8C41709C0D8EE834 explains that conventional perimeter and static access-control assumptions are insufficient for evolving APT behavior and that existing risk assessment can miss dynamic attack progression, challenging the feasibility of treating access control as a static, context-independent mitigation for targeted attacks.",
+        "status": "CHALLENGES_FEASIBILITY"
+      },
+      {
+        "claim_id": "TF_CLM_003",
+        "evidence_ids": [
+          "DE_DE12_6509E7A6D8467E38"
+        ],
+        "scope": "GENERAL",
+        "statement": "DE_DE12_6509E7A6D8467E38 describes candidate-solution factors, deployment models, pilot programs, and initial deployment for zero-trust architecture, providing supplementary implementation context for access-control deployment.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLM_004",
+        "evidence_ids": [
+          "DE_DE17_429D17A4E11A72C3"
+        ],
+        "scope": "GENERAL",
+        "statement": "DE_DE17_429D17A4E11A72C3 describes the path to zero trust as incremental, potentially taking years, with initial additional costs, which is supplementary maturity/timing context rather than direct evidence of feasibility or infeasibility.",
+        "status": "NEUTRAL_CONTEXT"
+      },
+      {
+        "claim_id": "TF_CLM_005",
+        "evidence_ids": [
+          "CTX_CIS_IG2_9F94838146D9C3A4"
+        ],
+        "scope": "GENERAL",
+        "statement": "CTX_CIS_IG2_9F94838146D9C3A4 states that the CIS IG2 reference profile describes multi-department enterprises with personnel responsible for managing and protecting IT infrastructure, and that some IG2 safeguards may depend on enterprise-grade technology and specialized expertise to install and configure.",
+        "status": "NEUTRAL_CONTEXT"
+      }
+    ],
+    "conditional_requirements": [
+      "To convert the GENERAL support into a DEPLOYMENT_SPECIFIC conclusion, evidence must show that the frozen multi-department CIS IG2 environment can integrate the required identity/authorization and threat/risk data sources with centralized access-control decisions.",
+      "The technical design must provide continuously updated threat/risk context rather than relying solely on static perimeter or access-control assumptions, consistent with TF_CLM_002.",
+      "Evidence should show operability, scalability, and maintainability for the enterprise-grade technology and specialized expertise implied by the reference profile.",
+      "Evidence should show that the implementation or transition path can be achieved within the 2025-2027 horizon without unsupported timeline assumptions."
+    ],
+    "constraints": [
+      "TF_CLM_002 shows that feasibility should not be inferred for static or context-independent access control against evolving APT behavior; the cited evidence requires continuous threat/risk context for effective access control.",
+      "TF_CLM_004 supplies supplementary timing/resource context that zero-trust paths may be incremental and may initially involve additional costs, but it does not establish infeasibility or exact timelines/costs.",
+      "TF_CLM_005 indicates the reference profile may involve enterprise-grade technology and specialized expertise; exact architecture, product/version, and implementation detail are listed as evidence gaps below."
+    ],
+    "decision_object_id": "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+    "evidence_gaps": [
+      "Exact enterprise identity, directory, authorization, network segmentation, application integration, and threat/risk data-source architecture are not supplied, so deployment-specific compatibility cannot be concluded.",
+      "No supplied evidence reports 2025-2027 deployment, adoption, operational effectiveness, scalability, or maintainability of ACCESS CONTROL in the CIS IG2 reference-enterprise scenario.",
+      "No numeric budget, staffing, procurement, or cost evidence is supplied, so resource feasibility is not assessed.",
+      "No jurisdiction-specific technical evidence is supplied for this lens, so no jurisdiction-specific technical feasibility conclusion is made."
+    ],
+    "evidence_sufficiency": "PARTIAL",
+    "lens_type": "technical_feasibility",
+    "rationale": "The structured claims include one eligible technical-enablement claim and one eligible technical-limitation claim. TF_CLM_001 supports a GENERAL direction because it establishes a technical pathway for adaptive access control in the targeted-attack/APT context. TF_CLM_002 is treated as a material constraint rather than an independent barrier because it identifies that static or context-independent access-control assumptions are insufficient and that effective access control depends on continuously updated threat/risk context. TF_CLM_003 and TF_CLM_004 are supplementary deployment-maturity context and do not carry direction by themselves. TF_CLM_005 supplies reference-profile context but not deployment-specific compatibility. The frozen deployment context does not supply exact identity, authorization, directory, network, application, or integration architecture, so no DEPLOYMENT_SPECIFIC feasibility conclusion is made. On balance, the surviving grounded direction is GENERAL support, with constraints and missing deployment detail; therefore stance is +1 and evidence_sufficiency is PARTIAL. The general support does not establish that deployment will be complete by 2027; that narrower question is kept in conditional_requirements.",
+    "stance": 1
+  },
+  "assessment_sha256": "19309cd7be1232a85703d4ee899ba00b1ee956783e1ba3ae41e584f6517edf5e",
+  "checkpoint_sha256": "23fb12e59420b0c244d74c62938d5fa4d0d6dfac2c45bc2efff5865ea935505b",
+  "created_at": "2026-09-20T12:18:58.600873+00:00",
+  "identity": {
+    "axis": "B_SEED_ROBUSTNESS",
+    "case_id": "main__targeted_attack__access_control",
+    "equivalence_key": [
+      "JURISDICTION_NEUTRAL",
+      null,
+      [
+        "AE06C_8C41709C0D8EE834",
+        "AE06S_407DDF87C86BB41B",
+        "DE_DE12_6509E7A6D8467E38",
+        "DE_DE17_429D17A4E11A72C3"
+      ],
+      [],
+      [
+        "CIS_IG2_REFERENCE_ENTERPRISE",
+        "Multi-department enterprise IT with personnel responsible for managing and protecting infrastructure; the environment may require enterprise-grade technology and specialized expertise for some safeguards.",
+        "No numeric budget, price, ROI, TCO, staffing count, or procurement ceiling is assumed. Resource capacity is represented only by the frozen CIS IG2 reference profile; exact financial quantities remain unknown.",
+        "CIS_IG2"
+      ]
+    ],
+    "input_fingerprint": "f44c847a851b6afebb21554d40ec0b88251ad897121fcf1ac2c5848babe13b5a",
+    "lens_type": "technical_feasibility",
+    "member_decision_object_ids": [
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__kr__cis_ig2__52eb9ae5d34c4ac1",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__eu__cis_ig2__9a6841f1c75b18d9",
+      "contextual__decision__main__targeted_attack__access_control__pmt_access_control__11b0c5ab575f7567__us__cis_ig2__d250616bcf3e9606"
+    ],
+    "payload_sha256": "e9470d69c41ba62f9ea39a2be7d73b327e9d7c6141ebeb8107ab02744e85a495",
+    "payload_transform_id": null,
+    "prompt_variant": "P1_CANONICAL",
+    "repeat_index": 44,
+    "response_schema_sha256": "5a46c5f5a8f8d4547fc6f879c11e124f4f5ef241d741a0ab9bec7ceba7d8ca10",
+    "runner_version": "stage7-decision-variant-runner-v3",
+    "runtime": {
+      "batch_size": 2048,
+      "client_request_concurrency": 2,
+      "draft_kv_type": "q8_0",
+      "draft_v_type": "q8_0",
+      "expected_context_size": 65536,
+      "expected_gpu_layers": "all",
+      "expected_llama_build": "b10919",
+      "expected_llama_commit": "d3146f2b5",
+      "expected_model_filename": "Qwen3.8-27B-Q6_K_L.gguf",
+      "expected_model_sha256": "e8750bb81ba49f90eb68df99776b250dbc14666043098952de6422cbecd77a21",
+      "expected_model_size_bytes": 24958908128,
+      "expected_parallel_slots": 2,
+      "flash_attention": true,
+      "frequency_penalty": 0.0,
+      "min_p": 0.0,
+      "model": "Qwen3.8-27B-Q6_K_L",
+      "model_source_repo": "bartowski/Qwen3.8-27B-GGUF",
+      "model_source_revision": "e4cc3ff3b37f5aabf253d8583b0b0247e8b25b70",
+      "mtp_draft_n_max": 4,
+      "mtp_draft_p_min": 0.05,
+      "mtp_enabled": true,
+      "presence_penalty": 0.0,
+      "quantization": "Q6_K_L",
+      "reasoning_budget": -1,
+      "reasoning_effort": "xhigh",
+      "repeat_penalty": 1.0,
+      "seed": 44,
+      "server_total_context_size": 131072,
+      "structured_validation_retries": 1,
+      "target_kv_type": "q8_0",
+      "target_v_type": "q8_0",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95,
+      "ubatch_size": 512,
+      "variant_runner_version": "stage7-decision-variant-runner-v3"
+    },
+    "runtime_variant": "MAIN",
+    "source_stage3_context_artifact_sha256": "037517236fe187054d2187f71fbb64e69e12899c152b2f7ff714e0e83899bece",
+    "system_prompt_sha256": "15e1ab36e5c4615157ffa30b2a5f9a1894652a76e1346d42d14d5159aa0e7882",
+    "user_prompt_sha256": "458cddbdcf3a6cdcc46bbabb8a9ced929fe133fdec3445e4218ffe0dcf3b097d",
+    "variant_id": "ISOLATED_LENSES"
+  }
+}
